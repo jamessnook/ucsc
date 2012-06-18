@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'UCSC Base Web Application',
+	'name'=>'UCSC DRC-Etext Web Application',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -32,7 +32,8 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-    	),
+			'loginUrl'=>array('/login/login'),
+    ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -85,7 +86,7 @@ return array(
 			// the next steps set up Shibboleth Authentication if we are sing it
 			// the entity id for this app as registered with the Shibboleth 
 			//identity provider (authentication server):
-			'spIssuer'=>'base.phpfogapp.com/baseapp',
+			'spIssuer'=>'ucsc.phpfogapp.com/drc-etext',
 			// the controller and action pat hto call with the authorization response Post
 			'spReturnRoute'=>'login/shibbolethResponse',
 			// the xml tag used by the identity provider to identify the 
@@ -138,7 +139,7 @@ CERTIFICATE
 		'adminEmail'=>'webmaster@example.com',
 
 		// the next two set up the type of user authentication we are using
-		'useShibboleth'=>true,  // true if using shibboleth authentication
-		'useLocalLogin'=>true,	// true if using local authentication
-	),
+		'samlLogin'=>false,  // true if using shibboleth authentication
+		'localLogin'=>true,	// true if using local authentication
+		),
 );

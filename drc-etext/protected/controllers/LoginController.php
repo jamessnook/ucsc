@@ -1,4 +1,4 @@
-			<?php
+<?php
 
 class LoginController extends Controller
 {
@@ -87,8 +87,18 @@ class LoginController extends Controller
 	/**
 	 * Evaluates the response from the remote SAML2 authentication server
 	 * and logs the user on if they are OK.
+	 * Alias for actionSamlResponse
 	 */
 	public function actionShibbolethResponse()
+	{
+		$this->actionSamlResponse();
+	}
+
+	/**
+	 * Evaluates the response from the remote SAML2 authentication server
+	 * and logs the user on if they are OK.
+	 */
+	public function actionSamlResponse()
 	{
 		$username = Yii::app()->saml->getUsernameFromResponse($_POST['SAMLResponse']);
 		// need to add user authorization and verification of account in this app
