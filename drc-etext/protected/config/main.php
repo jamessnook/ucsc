@@ -88,7 +88,7 @@ return array(
 			//identity provider (authentication server):
 			'spIssuer'=>'ucsc.phpfogapp.com/drc-etext',
 			// the controller and action pat hto call with the authorization response Post
-			'spReturnRoute'=>'login/shibbolethResponse',
+			'spReturnRoute'=>'login/samlResponse',
 			// the xml tag used by the identity provider to identify the 
 			//users email address which is where we get their cuzId: 
 			'userEmailTag'=>'urn:oid:1.3.6.1.4.1.5923.1.1.1.6',
