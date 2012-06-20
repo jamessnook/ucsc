@@ -9,6 +9,10 @@
  * @property string $last_name
  * @property string $email
  * @property string $phone
+ *
+ * The followings are the available model relations:
+ * @property AuthItem[] $authItems
+ * @property File[] $files
  */
 class User extends CActiveRecord
 {
@@ -56,6 +60,8 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'authItems' => array(self::MANY_MANY, 'AuthItem', 'AuthAssignment(userid, itemname)'),
+			'files' => array(self::HAS_MANY, 'File', 'poster_id'),
 		);
 	}
 

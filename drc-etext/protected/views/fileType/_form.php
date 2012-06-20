@@ -11,14 +11,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>512)); ?>
+		<?php echo $form->textField($model,'name',array('size'=>32,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'shortName'); ?>
-		<?php echo $form->textField($model,'shortName',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'shortName'); ?>
+		<?php echo $form->labelEx($model,'caption'); ?>
+		<?php echo $form->textField($model,'caption',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'caption'); ?>
 	</div>
 
 	<div class="row buttons">

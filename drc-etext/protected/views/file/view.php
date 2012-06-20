@@ -10,6 +10,8 @@ $this->menu=array(
 	array('label'=>'Update File', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Delete File', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage File', 'url'=>array('admin')),
+	array('label'=>'Upload Files','url'=>array('upload')),
+	array('label'=>'Download Files','url'=>array('download')),
 );
 ?>
 
@@ -22,15 +24,10 @@ $this->menu=array(
 		'name',
 		'path',
 		'caption',
-		'text_id',
-		'format_id',
+		'parent_id',
 		'type_id',
 		'order_num',
-		'pages',
 		'post_date',
-		'voice',
-		'speed',
-		'source',
-		'notes',
+		'poster_id',
 	),
 )); ?>

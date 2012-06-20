@@ -8,8 +8,8 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('shortName')); ?>:</b>
-	<?php echo CHtml::encode($data->shortName); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('caption')); ?>:</b>
+	<?php echo CHtml::encode($data->caption); ?>
 	<br />
 
 

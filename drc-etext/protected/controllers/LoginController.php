@@ -12,11 +12,11 @@ class LoginController extends Controller
 	 */
 	public function actionLogin()
 	{
-		if(Yii::app()->params['useShibboleth'] == true){
-			$this->actionSamlAuthRequest();
+		if(Yii::app()->params['samlLogin'] == true){
+			$this->samlAuthRequest();
 		}
-		else if(Yii::app()->params['useLocalLogin'] == true){
-			$this->actionLoginLocal();
+		else if(Yii::app()->params['localLogin'] == true){
+			$this->loginLocal();
 		}
 		else {
 			$this->login('guest');
@@ -41,7 +41,7 @@ class LoginController extends Controller
 	/**
 	 * Displays the login page
 	 */
-	public function actionLoginLocal()
+	public function loginLocal()
 	{
 		$model=new LoginForm;
 
@@ -77,7 +77,7 @@ class LoginController extends Controller
 	/**
 	 * Redirects the user to the remote SAML2 authentication server.
 	 */
-	public function actionSamlAuthRequest()
+	public function samlAuthRequest()
 	{
 		//Yii::app()->saml->settings->spReturnUrl = $this->createAbsoluteUrl('login/samlResponse');
 		$this->redirect(Yii::app()->saml->getRedirectUrl()); // create url 
@@ -87,22 +87,22 @@ class LoginController extends Controller
 	/**
 	 * Evaluates the response from the remote SAML2 authentication server
 	 * and logs the user on if they are OK.
-	 * Alias for actionSamlResponse
-	 */
-	public function actionShibbolethResponse()
-	{
-		$this->actionSamlResponse();
-	}
-
-	/**
-	 * Evaluates the response from the remote SAML2 authentication server
-	 * and logs the user on if they are OK.
 	 */
 	public function actionSamlResponse()
 	{
 		$username = Yii::app()->saml->getUsernameFromResponse($_POST['SAMLResponse']);
 		// need to add user authorization and verification of account in this app
 		$this->login($username);
+	}
+
+	/**
+	 * Evaluates the response from the remote SAML2 authentication server
+	 * and logs the user on if they are OK.
+	 * Alias for actionSamlResponse
+	 */
+	public function actionShibbolethResponse()
+	{
+		$this->actionSamlResponse();
 	}
 
 	/**

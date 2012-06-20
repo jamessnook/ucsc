@@ -6,10 +6,7 @@
  * The followings are the available columns in table 'file_type':
  * @property integer $id
  * @property string $name
- * @property string $shortName
- *
- * The followings are the available model relations:
- * @property File[] $files
+ * @property string $caption
  */
 class FileType extends CActiveRecord
 {
@@ -39,12 +36,11 @@ class FileType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('name', 'length', 'max'=>512),
-			array('shortName', 'length', 'max'=>128),
+			array('name', 'length', 'max'=>32),
+			array('caption', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, shortName', 'safe', 'on'=>'search'),
+			array('id, name, caption', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,7 +52,6 @@ class FileType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'files' => array(self::HAS_MANY, 'File', 'type_id'),
 		);
 	}
 
@@ -68,7 +63,7 @@ class FileType extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
-			'shortName' => 'Short Name',
+			'caption' => 'Caption',
 		);
 	}
 
@@ -85,7 +80,7 @@ class FileType extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('shortName',$this->shortName,true);
+		$criteria->compare('caption',$this->caption,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

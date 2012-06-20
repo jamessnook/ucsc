@@ -46,7 +46,7 @@ return array(
 		),
 		*/
 		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/base.db',
+			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/etext.db',
 		),
 		// uncomment the following to use a MySQL database
 		/*

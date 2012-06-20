@@ -7,7 +7,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
+		<?php echo $form->textField($model,'id',array('size'=>32,'maxlength'=>32)); ?>
 	</div>
 
 	<div class="row">

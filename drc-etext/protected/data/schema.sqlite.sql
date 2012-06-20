@@ -15,6 +15,9 @@ drop table if exists section_text;
 drop table if exists text_type;
 drop table if exists file_type;
 drop table if exists download;
+drop table if exists book;
+drop table if exists request;
+drop table if exists book_request;
 
 -- Auth tables from yii schema
 -- modified from yii framework /web/auth
@@ -28,7 +31,6 @@ create table 'AuthItem'
    primary key ("name")
 );
 -- add in default roles, TYPE_ROLE=2
-INSERT INTO AuthItem (name, type) VALUES ('god', 2);
 INSERT INTO AuthItem (name, type) VALUES ('admin', 2);
 INSERT INTO AuthItem (name, type) VALUES ('maint', 2);
 INSERT INTO AuthItem (name, type) VALUES ('student', 2);
@@ -51,56 +53,76 @@ create table 'AuthAssignment'
    "data"                 text,
    primary key ("itemname","userid"),
    foreign key ("itemname") references 'AuthItem' ("name") on delete cascade on update cascade,
-   foreign key ("userid") references 'tbl_user' ("username") on delete cascade on update cascade
+   foreign key ("userid") references 'user' ("username") on delete cascade on update cascade
 );
 -- assign admin role to admin user
 INSERT INTO AuthAssignment (itemname, userid) VALUES ('admin', 'admin');
 
 CREATE TABLE user (
-    username VARCHAR(64) NOT NULL PRIMARY KEY, --cruzid
-    first_name VARCHAR(64),
-    last_name VARCHAR(64),
-    email VARCHAR(128),
-    phone VARCHAR(32)
+    username     VARCHAR(64) NOT NULL PRIMARY KEY,   -- cruzid
+    first_name   VARCHAR(64),
+    last_name    VARCHAR(64),
+    email        VARCHAR(128),
+    phone        VARCHAR(32)
 );
 INSERT INTO user (username) VALUES ('admin');
 
 CREATE TABLE file (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(128) NOT NULL, 
-    path VARCHAR(256),
-    caption VARCHAR(512),
-    text_id INTEGER,
-    format_id INTEGER,
-    type_id INTEGER,
-    order_num INTEGER,
-    pages INTEGER,
-    post_date DATE,
-    voice VARCHAR(128),
-    speed VARCHAR(128),
-    source VARCHAR(128),
-    notes VARCHAR(1000),
-    foreign key (text_id) references text (id) on delete cascade on update cascade
+    id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name         VARCHAR(128) NOT NULL, -- name of file
+    path         VARCHAR(256) NOT NULL DEFAULT '', -- path for file on server under file root
+    caption      VARCHAR(512),  -- optional for display purposes
+    parent_id    INTEGER,       -- optional parent object id, ie 'book' if files are chapters
+    type_id      INTEGER,       -- file type (reduntant with extension on path?)
+    order_num    INTEGER,       -- display or list order if member of a group (chapters in a book)
+    post_date    DATE,          -- date uploaded
+    poster_id 	 VARCHAR(64),   -- username who uploaded file
+    foreign key (poster_id) references user ("username")
 );
 
-CREATE TABLE text (
+CREATE TABLE file_type (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name         VARCHAR(32),    -- file extension, 
+    caption      VARCHAR(128)    -- optional for display 
+);
+
+
+CREATE TABLE request (  -- AIS feed
+    id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    term_id VARCHAR(32) NOT NULL,       -- AIS: STRM
+    class_id VARCHAR(32) NOT NULL,      -- AIS: CLASS_NBR
+    department VARCHAR(128) NOT NULL,   -- AIS: SUBJECT?, for bookstore class books request
+    course VARCHAR(32) NOT NULL,        -- AIS: COURSE_OFFER_NBR?, for bookstore class books request
+    section VARCHAR(32) NOT NULL,       -- AIS: CLASS_SECTION?, for bookstore class books request
+    instructor_id VARCHAR(32) NOT NULL, -- AIS: INSTRUCTOR_ID
+    username     VARCHAR(64),           -- AIS: EMPLID, identifies student
+    type_id     INTEGER,                -- AIS: ?, type of file for alternate text, might need translation table
+    course_name    VARCHAR(256)  
+);
+
+CREATE TABLE book (                 -- books or other items in drc library
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
+    global_id INTEGER NOT NULL,     -- most often isbn number
+    id_type VARCHAR(32) NOT NULL,   -- most often isbn, also issn, aisn, etc
     title VARCHAR(512) NOT NULL, 
     author VARCHAR(128),
     edition VARCHAR(128),
-    year_published INTEGER,
-    poster_id INTEGER,
-    post_date DATE,
-    type_id INTEGER,
     is_complete BOOLEAN DEFAULT 0,
-    is_viewable BOOLEAN DEFAULT 0,
-    description VARCHAR(512),
-    foreign key (poster_id ) references user (username) on delete cascade on update cascade,
-    foreign key (type_id) references file_type (id) on delete cascade on update cascade
+    is_viewable BOOLEAN DEFAULT 0
 );
 
-CREATE TABLE term(
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc or book table yet)
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
+    request_id    INTEGER,          -- identifies request in AIS
+    book_id    INTEGER,             -- optional, identifies book in drc library, once book is in library...
+    global_id INTEGER,              -- most often isbn number
+    id_type VARCHAR(32),            -- most often isbn, also issn, aisn, etc
+    notes VARCHAR(1024),
+    foreign key (request_id ) references request (id)
+);
+
+CREATE TABLE term(                 -- data for terms for display puposes
+    id VARCHAR(32) NOT NULL PRIMARY KEY ,       -- AIS: STRM
     name VARCHAR(512) NOT NULL, 
     quarter VARCHAR(128),
     year INTEGER,
@@ -108,53 +130,25 @@ CREATE TABLE term(
     end_date DATE
 );
 
-CREATE TABLE course (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(512) NOT NULL, 
-    major_code VARCHAR(32),
-    class_id VARCHAR(32),
-    course_number VARCHAR(32)
-);
-CREATE TABLE section (
-    id VARCHAR(32) NOT NULL PRIMARY KEY,  -- from AIS?
-    course_id INTEGER NOT NULL,
-    term_id INTEGER NOT NULL,
-    instructor_id VARCHAR(64),
-    name VARCHAR(512) NOT NULL,
-    foreign key (course_id) references course (id) on delete cascade on update cascade,
-    foreign key (term_id) references term (id) on delete cascade on update cascade
-);
-CREATE TABLE section_text (
-    section_id INTEGER,
-    text_id INTEGER,
-    primary key (section_id, text_id),
-    foreign key (section_id) references section (id) on delete cascade on update cascade,
-    foreign key (text_id) references text (id) on delete cascade on update cascade
-);
-CREATE TABLE format (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(512) NOT NULL, 
-    shortName VARCHAR(128)
-);
-CREATE TABLE format_text (
-    format_id INTEGER,
-    text_id INTEGER,
-    primary key (format_id, text_id),
-    foreign key (format_id) references format (id) on delete cascade on update cascade,
-    foreign key (text_id) references text (id) on delete cascade on update cascade
-);
-CREATE TABLE file_type (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name VARCHAR(512) NOT NULL, 
-    shortName VARCHAR(128)
-);
-CREATE TABLE download (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    file_id INTEGER,
-    username VARCHAR(64), --cruzid
-    date_time DATETIME
+-- The tables below may or may not be needed depending on requirements
+
+CREATE TABLE accommodation  (      -- AIS feed, may not need
+    username     VARCHAR(64),      -- identifies student
+    start_date    DATE,            -- start date for accommodation 
+    end_date      DATE,            -- end date for accommodation 
+    foreign key (username ) references user (username)
 );
 
--- waitlist?
+CREATE TABLE user_format (         -- AIS feed maps users to the file formats they get, may not need
+    username      VARCHAR(64),     -- identifies student
+    type_id     INTEGER,           -- type of file
+    foreign key (username ) references user (username),
+    foreign key (type_id ) references file_type (id)
+);
+
+-- active terms
+-- downloads
+-- waitlist
+
 
 

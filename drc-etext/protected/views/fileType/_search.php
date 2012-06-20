@@ -12,12 +12,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>512)); ?>
+		<?php echo $form->textField($model,'name',array('size'=>32,'maxlength'=>32)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'shortName'); ?>
-		<?php echo $form->textField($model,'shortName',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->label($model,'caption'); ?>
+		<?php echo $form->textField($model,'caption',array('size'=>60,'maxlength'=>128)); ?>
 	</div>
 
 	<div class="row buttons">

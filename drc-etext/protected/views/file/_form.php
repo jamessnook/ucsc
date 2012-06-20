@@ -28,27 +28,14 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'text_id'); ?>
-        <?php 	$options = CHtml::listData(Text::model()->findAll(), 'id', 'title');
-        		echo $form->dropDownList($model,'text_id', $options);
-        ?>
-		<?php echo $form->error($model,'text_id'); ?>
-
- 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'format_id'); ?>
-        <?php 	$options = CHtml::listData(Format::model()->findAll(), 'id', 'name');
-        		echo $form->dropDownList($model,'format_id', $options);
-        ?>
-		<?php echo $form->error($model,'format_id'); ?>
+		<?php echo $form->labelEx($model,'parent_id'); ?>
+		<?php echo $form->textField($model,'parent_id'); ?>
+		<?php echo $form->error($model,'parent_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'type_id'); ?>
-        <?php 	$options = CHtml::listData(FileType::model()->findAll(), 'id', 'name');
-        		echo $form->dropDownList($model,'type_id', $options);
-        ?>
+		<?php echo $form->textField($model,'type_id'); ?>
 		<?php echo $form->error($model,'type_id'); ?>
 	</div>
 
@@ -59,33 +46,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'pages'); ?>
-		<?php echo $form->textField($model,'pages'); ?>
-		<?php echo $form->error($model,'pages'); ?>
+		<?php echo $form->labelEx($model,'post_date'); ?>
+		<?php echo $form->textField($model,'post_date'); ?>
+		<?php echo $form->error($model,'post_date'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'voice'); ?>
-		<?php echo $form->textField($model,'voice',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'voice'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'speed'); ?>
-		<?php echo $form->textField($model,'speed',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'speed'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'source'); ?>
-		<?php echo $form->textField($model,'source',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'source'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'notes'); ?>
-		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1000)); ?>
-		<?php echo $form->error($model,'notes'); ?>
+		<?php echo $form->labelEx($model,'poster_id'); ?>
+		<?php echo $form->textField($model,'poster_id',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->error($model,'poster_id'); ?>
 	</div>
 
 	<div class="row buttons">

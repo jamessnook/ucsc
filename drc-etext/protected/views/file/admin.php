@@ -6,7 +6,9 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List File', 'url'=>array('index')),
-	array('label'=>'Create File', 'url'=>array('create', 'text_id'=>$model->text_id)),
+	array('label'=>'Create File', 'url'=>array('create')),
+	array('label'=>'Upload Files','url'=>array('upload')),
+	array('label'=>'Download Files','url'=>array('download')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -46,16 +48,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'name',
 		'path',
 		'caption',
-		'text_id',
+		'parent_id',
 		'type_id',
 		/*
 		'order_num',
-		'pages',
 		'post_date',
-		'voice',
-		'speed',
-		'source',
-		'notes',
+		'poster_id',
 		*/
 		array(
 			'class'=>'CButtonColumn',

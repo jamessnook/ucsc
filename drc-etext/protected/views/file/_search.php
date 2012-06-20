@@ -26,13 +26,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'text_id'); ?>
-		<?php echo $form->textField($model,'text_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'format_id'); ?>
-		<?php echo $form->textField($model,'format_id'); ?>
+		<?php echo $form->label($model,'parent_id'); ?>
+		<?php echo $form->textField($model,'parent_id'); ?>
 	</div>
 
 	<div class="row">
@@ -46,33 +41,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'pages'); ?>
-		<?php echo $form->textField($model,'pages'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'post_date'); ?>
 		<?php echo $form->textField($model,'post_date'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'voice'); ?>
-		<?php echo $form->textField($model,'voice',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'speed'); ?>
-		<?php echo $form->textField($model,'speed',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'source'); ?>
-		<?php echo $form->textField($model,'source',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'notes'); ?>
-		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1000)); ?>
+		<?php echo $form->label($model,'poster_id'); ?>
+		<?php echo $form->textField($model,'poster_id',array('size'=>60,'maxlength'=>64)); ?>
 	</div>
 
 	<div class="row buttons">

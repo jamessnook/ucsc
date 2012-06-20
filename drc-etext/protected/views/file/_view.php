@@ -16,45 +16,25 @@
 	<?php echo CHtml::encode($data->caption); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('text_id')); ?>:</b>
-	<?php echo CHtml::encode($data->text_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('format_id')); ?>:</b>
-	<?php echo CHtml::encode($data->format_id); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('parent_id')); ?>:</b>
+	<?php echo CHtml::encode($data->parent_id); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('type_id')); ?>:</b>
 	<?php echo CHtml::encode($data->type_id); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('order_num')); ?>:</b>
 	<?php echo CHtml::encode($data->order_num); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('pages')); ?>:</b>
-	<?php echo CHtml::encode($data->pages); ?>
-	<br />
-
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('post_date')); ?>:</b>
 	<?php echo CHtml::encode($data->post_date); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('voice')); ?>:</b>
-	<?php echo CHtml::encode($data->voice); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('speed')); ?>:</b>
-	<?php echo CHtml::encode($data->speed); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('source')); ?>:</b>
-	<?php echo CHtml::encode($data->source); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('notes')); ?>:</b>
-	<?php echo CHtml::encode($data->notes); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('poster_id')); ?>:</b>
+	<?php echo CHtml::encode($data->poster_id); ?>
 	<br />
 
 	*/ ?>

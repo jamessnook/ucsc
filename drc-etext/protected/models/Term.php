@@ -4,15 +4,12 @@
  * This is the model class for table "term".
  *
  * The followings are the available columns in table 'term':
- * @property integer $id
+ * @property string $id
  * @property string $name
  * @property string $quarter
  * @property integer $year
  * @property string $begin_date
  * @property string $end_date
- *
- * The followings are the available model relations:
- * @property Section[] $sections
  */
 class Term extends CActiveRecord
 {
@@ -42,8 +39,9 @@ class Term extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
+			array('id, name', 'required'),
 			array('year', 'numerical', 'integerOnly'=>true),
+			array('id', 'length', 'max'=>32),
 			array('name', 'length', 'max'=>512),
 			array('quarter', 'length', 'max'=>128),
 			array('begin_date, end_date', 'safe'),
@@ -61,7 +59,6 @@ class Term extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'sections' => array(self::HAS_MANY, 'Section', 'term_id'),
 		);
 	}
 
@@ -91,7 +88,7 @@ class Term extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('id',$this->id,true);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('quarter',$this->quarter,true);
 		$criteria->compare('year',$this->year);
