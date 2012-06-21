@@ -10,6 +10,8 @@ $this->menu=array(
 	array('label'=>'Create Book', 'url'=>array('create')),
 	array('label'=>'View Book', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Book', 'url'=>array('admin')),
+	array('label'=>'Upload Files','url'=>array('file/upload', 'book_id'=>$model->id)),
+	array('label'=>'Download Files','url'=>array('file/download', 'book_id'=>$model->id)),
 );
 ?>
 

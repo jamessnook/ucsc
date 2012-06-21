@@ -17,10 +17,17 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'notes'); ?>
-		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1000)); ?>
-		<?php echo $form->error($model,'notes'); ?>
-	</div>
+		<?php echo $form->labelEx($model,'parent_id', array('label'=>'Book this file is for:')); ?>
+        <?php 	$options = CHtml::listData(Book::model()->findAll(), 'id', 'title');
+        		echo $form->dropDownList($model,'parent_id', $options,
+        		array(
+                                          'empty'=>'Choose one', 
+                                          'onchange'=>"$('#File_path').val('book' + $('#File_parent_id').val());",  
+                                          )
+        		);
+        ?>
+		<?php echo $form->error($model,'parent_id'); ?>
+ 	</div>
 
 	<?php 
 		$allowedTypes = implode('|', CHtml::listData(FileType::model()->findAll(), 'id', 'name'));

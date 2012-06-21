@@ -173,6 +173,9 @@ class FileController extends Controller
 			echo $filecontent;
 			exit;
 		}
+		if(isset($_GET['book_id'])){
+			$model->parent_id=$_GET['book_id'];
+		}
 		$this->render('download',array(
 			'model'=>$model,
 		));
@@ -215,6 +218,7 @@ class FileController extends Controller
                         $file_add->name = $file->name; 
                         $file_add->type_id = $fileTypeId; 
                         $file_add->path = $model->path; 
+                        $file_add->parent_id = $model->parent_id; 
                         $file_add->post_date = new CDbExpression('DATE()');
                         $file_add->poster_id = Yii::app()->user->name;
                         $file_add->save(); // DONE
@@ -226,7 +230,11 @@ class FileController extends Controller
                 //$this->redirect(array('admin'));
             }
         }
-		
+		if(isset($_GET['book_id'])){
+			$model->parent_id=$_GET['book_id'];
+			$model->path='book' . $_GET['book_id'];
+		}
+        
        $this->render('upload',array('model'=>$model,));
        
 	}

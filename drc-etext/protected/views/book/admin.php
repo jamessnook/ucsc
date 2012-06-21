@@ -7,7 +7,9 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Book', 'url'=>array('index')),
 	array('label'=>'Create Book', 'url'=>array('create')),
-);
+	array('label'=>'Upload Files','url'=>array('file/upload', 'book_id'=>$model->id)),
+	array('label'=>'Download Files','url'=>array('file/download', 'book_id'=>$model->id)),
+	);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
