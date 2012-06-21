@@ -72,7 +72,7 @@ class SamlLogin extends CApplicationComponent
 
 		// The URL where to the SAML Response/SAML Assertion will be posted
 		//$settings->spReturnUrl = 'http://localhost/php-saml/consume.php';
-		$this->settings->spReturnUrl = Yii::app()->controller->createAbsoluteUrl($this->spReturnRoute);
+		$this->settings->spReturnUrl = Yii::app()->controller->createAbsoluteUrl($this->spReturnRoute, array(), 'https');
 		
 		// id Name of this application
 		$this->settings->spIssuer = $this->spIssuer;
