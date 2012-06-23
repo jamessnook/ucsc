@@ -87,7 +87,7 @@ return array(
 			// the entity id for this app as registered with the Shibboleth 
 			//identity provider (authentication server):
 			'spIssuer'=>'ucsc.phpfogapp.com/drc-etext',
-			// the controller and action pat hto call with the authorization response Post
+			// the controller and action path to call with the authorization response Post
 			'spReturnRoute'=>'login/samlResponse',
 			// the xml tag used by the identity provider to identify the 
 			//users email address which is where we get their cuzId: 
@@ -96,7 +96,7 @@ return array(
 			// We get this from the identity providers xml metadata file.  
 			// (provided by Jeffrey Crawford
 			'idpSingleSignOnUrl'=>'https://test-idp.ucsc.edu:444/idp/profile/SAML2/Redirect/SSO',
-			// this is the public key x509 certificate for th eidentity provider 
+			// this is the public key x509 certificate for the identity provider 
 			// so we can validate their response.  
 			// We get this from the identiy providers xml metadata file.  		
 			'idpPublicCertificate'=><<<CERTIFICATE
@@ -139,7 +139,7 @@ CERTIFICATE
 		'adminEmail'=>'webmaster@example.com',
 
 		// the next two set up the type of user authentication we are using
-		'samlLogin'=>true,  // true if using shibboleth authentication
+		'samlLogin'=>false,  // true if using shibboleth authentication
 		'localLogin'=>true,	// true if using local authentication
 		
 		// location for uploaded files

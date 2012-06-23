@@ -90,13 +90,20 @@ CREATE TABLE file_type (
 CREATE TABLE request (  -- AIS feed
     id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     term_id VARCHAR(32) NOT NULL,       -- AIS: STRM
-    class_id VARCHAR(32) NOT NULL,      -- AIS: CLASS_NBR
+    class_id VARCHAR(32) NOT NULL,      -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     department VARCHAR(128) NOT NULL,   -- AIS: SUBJECT?, for bookstore class books request
     course VARCHAR(32) NOT NULL,        -- AIS: COURSE_OFFER_NBR?, for bookstore class books request
     section VARCHAR(32) NOT NULL,       -- AIS: CLASS_SECTION?, for bookstore class books request
+    course_id INTEGER,        			-- AIS: CRSE_ID, may not need
+    session_code INTEGER,               -- AIS: SESSION_CODE, may not need
+    course_name VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.DESCR
+    subject VARCHAR(64),                -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.SUBJECT
+    catalog_nbr VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CATALOG_NBR
     instructor_id VARCHAR(32) NOT NULL, -- AIS: INSTRUCTOR_ID
-    username     VARCHAR(64),           -- AIS: EMPLID, identifies student
-    type_id     INTEGER,                -- AIS: ?, type of file for alternate text, might need translation table
+    student_id     VARCHAR(64),         -- AIS: EMPLID, identifies student, 7 digit number not cruzid
+    username     VARCHAR(64),           -- cruz id if possible to cross reference
+    type      VARCHAR(32),              -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
+    type_name     VARCHAR(32),          -- AIS: SYSADMIN.PS_SCR_DRC_ACCSETP.DESCR^) or , six letter code
     course_name    VARCHAR(256)  
 );
 
@@ -134,9 +141,17 @@ CREATE TABLE term(                 -- data for terms for display puposes
 
 CREATE TABLE accommodation  (      -- AIS feed, may not need
     username     VARCHAR(64),      -- identifies student
-    start_date    DATE,            -- start date for accommodation 
-    end_date      DATE,            -- end date for accommodation 
+    start_date    DATE,            -- AIS: SYSADMIN.PS_SCR_DRC_ACCOMOD.START_DATE,
+    end_date      DATE,            -- AIS: SYSADMIN.PS_SCR_DRC_ACCOMOD.END_DATE, end date for accommodation 
+    type      VARCHAR(32),         -- AIS: SYSADMIN.PS_SCR_DRC_ACCOMOD.ACCOMODATION_TYPE, six letter code
     foreign key (username ) references user (username)
+);
+
+CREATE TABLE accommodation_file_type  (      -- mapping since not always a one to one
+    accommodation_type     VARCHAR(16),      -- identifies accommodation type in AIS
+    file_type     VARCHAR(16),     -- identifies file_type
+    primary key (accommodation_type,file_type),
+    foreign key (file_type ) references file_type (id)
 );
 
 CREATE TABLE user_format (         -- AIS feed maps users to the file formats they get, may not need
