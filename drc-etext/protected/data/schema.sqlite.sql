@@ -73,7 +73,7 @@ CREATE TABLE file (
     path         VARCHAR(256) NOT NULL DEFAULT '', -- path for file on server under file root
     caption      VARCHAR(512),  -- optional for display purposes
     parent_id    INTEGER,       -- optional parent object id, ie 'book' if files are chapters
-    type_id      INTEGER,       -- file type (reduntant with extension on path?)
+    type_id      INTEGER,       -- file type (redundant with extension on path?)
     order_num    INTEGER,       -- display or list order if member of a group (chapters in a book)
     post_date    DATE,          -- date uploaded
     poster_id 	 VARCHAR(64),   -- username who uploaded file
@@ -91,17 +91,16 @@ CREATE TABLE request (  -- AIS feed
     id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     term_id VARCHAR(32) NOT NULL,       -- AIS: STRM
     class_id VARCHAR(32) NOT NULL,      -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
-    department VARCHAR(128) NOT NULL,   -- AIS: SUBJECT?, for bookstore class books request
     course VARCHAR(32) NOT NULL,        -- AIS: COURSE_OFFER_NBR?, for bookstore class books request
     section VARCHAR(32) NOT NULL,       -- AIS: CLASS_SECTION?, for bookstore class books request
     course_id INTEGER,        			-- AIS: CRSE_ID, may not need
     session_code INTEGER,               -- AIS: SESSION_CODE, may not need
     course_name VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.DESCR
-    subject VARCHAR(64),                -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.SUBJECT
+    subject VARCHAR(64),                -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.SUBJECT, is this department for bookstore class books request
     catalog_nbr VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CATALOG_NBR
     instructor_id VARCHAR(32) NOT NULL, -- AIS: INSTRUCTOR_ID
     student_id     VARCHAR(64),         -- AIS: EMPLID, identifies student, 7 digit number not cruzid
-    username     VARCHAR(64),           -- cruz id if possible to cross reference
+    username     VARCHAR(64),           -- cruzid needed to match to loged on user
     type      VARCHAR(32),              -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
     type_name     VARCHAR(32),          -- AIS: SYSADMIN.PS_SCR_DRC_ACCSETP.DESCR^) or , six letter code
     course_name    VARCHAR(256)  
@@ -118,12 +117,16 @@ CREATE TABLE book (                 -- books or other items in drc library
     is_viewable BOOLEAN DEFAULT 0
 );
 
-CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc or book table yet)
+CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc library and book table yet)
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
-    request_id    INTEGER,          -- identifies request in AIS
+    request_id    INTEGER,          -- drc-etext id, identifies request that came from AIS
+    username     VARCHAR(64),       -- cruz id identifies user, also in request but this book request could exist first...
     book_id    INTEGER,             -- optional, identifies book in drc library, once book is in library...
     global_id INTEGER,              -- most often isbn number
     id_type VARCHAR(32),            -- most often isbn, also issn, aisn, etc
+    title VARCHAR(512) NOT NULL, 
+    author VARCHAR(128),
+    edition VARCHAR(128),
     notes VARCHAR(1024),
     foreign key (request_id ) references request (id)
 );
