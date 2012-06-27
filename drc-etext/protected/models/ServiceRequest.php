@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "request".
+ * This is the model class for table "service_request".
  *
- * The followings are the available columns in table 'request':
+ * The followings are the available columns in table 'service_request':
  * @property integer $id
  * @property string $term_id
  * @property string $class_id
@@ -21,14 +21,14 @@
  * @property string $type_name
  *
  * The followings are the available model relations:
- * @property BookRequest[] $bookRequests
+ * @property User $username0
  */
-class Request extends CActiveRecord
+class ServiceRequest extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Request the static model class
+	 * @return ServiceRequest the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -40,7 +40,7 @@ class Request extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'request';
+		return 'service_request';
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Request extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'bookRequests' => array(self::HAS_MANY, 'BookRequest', 'request_id'),
+			'username0' => array(self::BELONGS_TO, 'User', 'username'),
 		);
 	}
 
@@ -127,5 +127,26 @@ class Request extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+	
+	/**
+	 * Override standard implementation to also create and save new users if defined.
+	 */
+	protected function afterSave()
+	{
+		if (isset($this->username)){
+	        $user=User::model()->find('LOWER(username)=?',array($this->username));
+	        // if user not found create a new one
+	        if($user===null){
+				$user = new User();
+				$user->username = $this->username;
+				$user->save();
+                // Assign student role to the user
+                Yii::app()->authManager->assign('student', $this->username);
+	        }
+		}
+		
+		 parent::afterSave();
+		
 	}
 }

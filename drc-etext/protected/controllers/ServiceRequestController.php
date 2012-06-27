@@ -1,6 +1,6 @@
 <?php
 
-class RequestController extends Controller
+class ServiceRequestController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -55,10 +55,6 @@ class RequestController extends Controller
 		));
 	}
 
-	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
-	 */
 	public function actionImport()
 	{
 		// import service requests form AIS
@@ -76,14 +72,14 @@ class RequestController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Request;
+		$model=new ServiceRequest;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Request']))
+		if(isset($_POST['ServiceRequest']))
 		{
-			$model->attributes=$_POST['Request'];
+			$model->attributes=$_POST['ServiceRequest'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -105,9 +101,9 @@ class RequestController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Request']))
+		if(isset($_POST['ServiceRequest']))
 		{
-			$model->attributes=$_POST['Request'];
+			$model->attributes=$_POST['ServiceRequest'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -142,7 +138,7 @@ class RequestController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Request');
+		$dataProvider=new CActiveDataProvider('ServiceRequest');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -153,10 +149,10 @@ class RequestController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Request('search');
+		$model=new ServiceRequest('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Request']))
-			$model->attributes=$_GET['Request'];
+		if(isset($_GET['ServiceRequest']))
+			$model->attributes=$_GET['ServiceRequest'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -170,7 +166,7 @@ class RequestController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Request::model()->findByPk($id);
+		$model=ServiceRequest::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -182,7 +178,7 @@ class RequestController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='request-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='service-request-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

@@ -7,6 +7,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Request', 'url'=>array('index')),
 	array('label'=>'Create Request', 'url'=>array('create')),
+	array('label'=>'Import Requests', 'url'=>array('import')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -45,14 +46,19 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
 		'term_id',
 		'class_id',
-		'department',
 		'course',
 		'section',
+		'course_id',
 		/*
-		'instructor_id',
-		'username',
-		'type_id',
+		'session_code',
 		'course_name',
+		'subject',
+		'catalog_nbr',
+		'instructor_id',
+		'student_id',
+		'username',
+		'type',
+		'type_name',
 		*/
 		array(
 			'class'=>'CButtonColumn',

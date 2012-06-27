@@ -1,17 +1,14 @@
 <?php
 $this->breadcrumbs=array(
-	'Books'=>array('index'),
+	'Service Requests'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Book', 'url'=>array('index')),
-	array('label'=>'Create Book', 'url'=>array('create')),
-	array('label'=>'Upload Files','url'=>array('file/upload', 'book_id'=>$model->id)),
-	array('label'=>'Download Files','url'=>array('file/download', 'book_id'=>$model->id)),
-	array('label'=>'My Books', 'url'=>array('myBooks')),
-	array('label'=>'Request a Book', 'url'=>array('bookRequest/create')),
-);
+	array('label'=>'List ServiceRequest', 'url'=>array('index')),
+	array('label'=>'Create ServiceRequest', 'url'=>array('create')),
+	array('label'=>'Import AIS Requests', 'url'=>array('import')),
+	);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -19,7 +16,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('book-grid', {
+	$.fn.yiiGridView.update('service-request-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -27,7 +24,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Books</h1>
+<h1>Manage Service Requests</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -42,19 +39,26 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'book-grid',
+	'id'=>'service-request-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'global_id',
-		'id_type',
-		'title',
-		'author',
-		'edition',
+		'term_id',
+		'class_id',
+		'course',
+		'section',
+		'course_id',
 		/*
-		'is_complete',
-		'is_viewable',
+		'session_code',
+		'course_name',
+		'subject',
+		'catalog_nbr',
+		'instructor_id',
+		'student_id',
+		'username',
+		'type',
+		'type_name',
 		*/
 		array(
 			'class'=>'CButtonColumn',

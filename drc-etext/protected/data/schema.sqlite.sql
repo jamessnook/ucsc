@@ -1,26 +1,8 @@
--- base app schema
-drop table if exists 'tbl_user';
-drop table if exists 'tbl_role';
-drop table if exists 'tbl_user_role';
-drop table if exists 'AuthAssignment';
-drop table if exists 'AuthItemChild';
-drop table if exists 'AuthItem';
-drop table if exists user;
-drop table if exists text;
-drop table if exists file;
-drop table if exists term;
-drop table if exists course;
-drop table if exists section;
-drop table if exists section_text;
-drop table if exists text_type;
-drop table if exists file_type;
-drop table if exists download;
-drop table if exists book;
-drop table if exists request;
-drop table if exists book_request;
+-- drc-etext app schema
 
 -- Auth tables from yii schema
 -- modified from yii framework /web/auth
+drop table if exists 'AuthItemChild';
 create table 'AuthItem'
 (
    "name"                 varchar(64) not null,
@@ -36,6 +18,7 @@ INSERT INTO AuthItem (name, type) VALUES ('maint', 2);
 INSERT INTO AuthItem (name, type) VALUES ('student', 2);
 INSERT INTO AuthItem (name, type) VALUES ('guest', 2);
 
+drop table if exists 'AuthItemChild';
 create table 'AuthItemChild'
 (
    "parent"               varchar(64) not null,
@@ -45,6 +28,7 @@ create table 'AuthItemChild'
    foreign key ("child") references 'AuthItem' ("name") on delete cascade on update cascade
 );
 
+drop table if exists 'AuthAssignment';
 create table 'AuthAssignment'
 (
    "itemname"             varchar(64) not null,
@@ -58,6 +42,7 @@ create table 'AuthAssignment'
 -- assign admin role to admin user
 INSERT INTO AuthAssignment (itemname, userid) VALUES ('admin', 'admin');
 
+drop table if exists user;
 CREATE TABLE user (
     username     VARCHAR(64) NOT NULL PRIMARY KEY,   -- cruzid
     first_name   VARCHAR(64),
@@ -67,6 +52,7 @@ CREATE TABLE user (
 );
 INSERT INTO user (username) VALUES ('admin');
 
+drop table if exists file;
 CREATE TABLE file (
     id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     name         VARCHAR(128) NOT NULL, -- name of file
@@ -80,14 +66,18 @@ CREATE TABLE file (
     foreign key (poster_id) references user ("username")
 );
 
+drop table if exists file_type;
 CREATE TABLE file_type (
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     name         VARCHAR(32),    -- file extension, 
+    accom_type   VARCHAR(16),    -- identifies accommodation type in AIS
     caption      VARCHAR(128)    -- optional for display 
 );
 
 
-CREATE TABLE request (  -- AIS feed
+drop table if exists request;
+drop table if exists service_request;
+CREATE TABLE service_request (  -- AIS feed
     id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     term_id VARCHAR(32) NOT NULL,       -- AIS: STRM
     class_id VARCHAR(32) NOT NULL,      -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
@@ -100,12 +90,13 @@ CREATE TABLE request (  -- AIS feed
     catalog_nbr VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CATALOG_NBR
     instructor_id VARCHAR(32) NOT NULL, -- AIS: INSTRUCTOR_ID
     student_id     VARCHAR(64),         -- AIS: EMPLID, identifies student, 7 digit number not cruzid
-    username     VARCHAR(64),           -- cruzid needed to match to loged on user
+    username     VARCHAR(64),           -- cruzid needed to match to logged on user
     type      VARCHAR(32),              -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
     type_name     VARCHAR(32),          -- AIS: SYSADMIN.PS_SCR_DRC_ACCSETP.DESCR^) or , six letter code
-    course_name    VARCHAR(256)  
+    foreign key (username ) references user (username)
 );
 
+drop table if exists book;
 CREATE TABLE book (                 -- books or other items in drc library
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
     global_id INTEGER NOT NULL,     -- most often isbn number
@@ -117,6 +108,7 @@ CREATE TABLE book (                 -- books or other items in drc library
     is_viewable BOOLEAN DEFAULT 0
 );
 
+drop table if exists book_request;
 CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc library and book table yet)
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
     request_id    INTEGER,          -- drc-etext id, identifies request that came from AIS
@@ -128,9 +120,13 @@ CREATE TABLE book_request (         -- maps requests to specific books (may not 
     author VARCHAR(128),
     edition VARCHAR(128),
     notes VARCHAR(1024),
-    foreign key (request_id ) references request (id)
+    foreign key (request_id ) references request (id),
+    foreign key (book_id ) references book (id)
+    foreign key (global_id ) references book (global_id)
+    foreign key (id_type ) references book (id_type)
 );
 
+drop table if exists term;
 CREATE TABLE term(                 -- data for terms for display puposes
     id VARCHAR(32) NOT NULL PRIMARY KEY ,       -- AIS: STRM
     name VARCHAR(512) NOT NULL, 
@@ -142,6 +138,8 @@ CREATE TABLE term(                 -- data for terms for display puposes
 
 -- The tables below may or may not be needed depending on requirements
 
+
+drop table if exists accommodation;
 CREATE TABLE accommodation  (      -- AIS feed, may not need
     username     VARCHAR(64),      -- identifies student
     start_date    DATE,            -- AIS: SYSADMIN.PS_SCR_DRC_ACCOMOD.START_DATE,
@@ -150,13 +148,15 @@ CREATE TABLE accommodation  (      -- AIS feed, may not need
     foreign key (username ) references user (username)
 );
 
-CREATE TABLE accommodation_file_type  (      -- mapping since not always a one to one
+drop table if exists accom_file_type;
+CREATE TABLE accom_file_type  (      -- mapping accompdation type to file  type since not always a one to one
     accommodation_type     VARCHAR(16),      -- identifies accommodation type in AIS
     file_type     VARCHAR(16),     -- identifies file_type
     primary key (accommodation_type,file_type),
     foreign key (file_type ) references file_type (id)
 );
 
+drop table if exists user_format;
 CREATE TABLE user_format (         -- AIS feed maps users to the file formats they get, may not need
     username      VARCHAR(64),     -- identifies student
     type_id     INTEGER,           -- type of file

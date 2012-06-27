@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Book Requests'=>array('index'),
-	$model->id,
+	$model->title,
 );
 
 $this->menu=array(
@@ -20,9 +20,13 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'request_id',
+		'username',
 		'book_id',
 		'global_id',
 		'id_type',
+		'title',
+		'author',
+		'edition',
 		'notes',
 	),
 )); ?>

@@ -1,7 +1,7 @@
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'request-form',
+	'id'=>'service-request-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 

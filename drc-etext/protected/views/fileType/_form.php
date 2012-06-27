@@ -16,6 +16,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'accom_type'); ?>
+		<?php echo $form->textField($model,'accom_type',array('size'=>16,'maxlength'=>16)); ?>
+		<?php echo $form->error($model,'accom_type'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'caption'); ?>
 		<?php echo $form->textField($model,'caption',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'caption'); ?>

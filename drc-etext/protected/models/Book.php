@@ -105,4 +105,30 @@ class Book extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function findForUser($username)
+	{
+		$books=Book::model()->with(array(
+		    'bookRequest'=>array(
+		        // we don't want to select posts
+		        'select'=>false,
+		        // but want to get only users with published posts
+		        'joinType'=>'INNER JOIN',
+		        'condition'=>'book.id=bookRequest.id OR (book.global_id=bookRequest.global_id AND book.id_type=bookRequest.id_type)',
+		    ),
+		))->findAll();
+		
+		$criteria=new CDbCriteria;
+		$criteria->join='INNER JOIN bookRequest ON book.id=bookRequest.id OR (book.global_id=bookRequest.global_id AND book.id_type=bookRequest.id_type)';                          
+		$criteria->condition="bookRequest.username='$username'";                           
+		//$criteria->params=array(':productId'=>$productId);                              
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
 }

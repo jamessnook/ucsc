@@ -33,10 +33,10 @@
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Users', 'url'=>array('/user/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 				array('label'=>'Books', 'url'=>array('/book/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
-				array('label'=>'Requests', 'url'=>array('/request/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+				array('label'=>'Requests', 'url'=>array('/serviceRequest/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 				array('label'=>'Book Requests', 'url'=>array('/bookRequest/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 				array('label'=>'File Types', 'url'=>array('/fileType/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
-				array('label'=>'Terms', 'url'=>array('/type/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+				array('label'=>'Import', 'url'=>array('/serviceRequest/import'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 				array('label'=>'Login', 'url'=>array('/login/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/login/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

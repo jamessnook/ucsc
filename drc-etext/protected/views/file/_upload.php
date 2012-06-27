@@ -21,16 +21,16 @@
         <?php 	$options = CHtml::listData(Book::model()->findAll(), 'id', 'title');
         		echo $form->dropDownList($model,'parent_id', $options,
         		array(
-                                          'empty'=>'Choose one', 
-                                          'onchange'=>"$('#File_path').val('book' + $('#File_parent_id').val());",  
-                                          )
+                         'empty'=>'Choose one', 
+                         'onchange'=>"$('#File_path').val('book' + $('#File_parent_id').val());",  
+                     )
         		);
         ?>
 		<?php echo $form->error($model,'parent_id'); ?>
  	</div>
 
 	<?php 
-		$allowedTypes = implode('|', CHtml::listData(FileType::model()->findAll(), 'id', 'name'));
+		$allowedTypes = implode('|', CHtml::listData(FileType::model()->findAll(array('distinct'=>true,)), 'id', 'name'));
 		$this->widget('CMultiFileUpload', array(
 	                'name' => 'files',
 	                'accept' => $allowedTypes, // useful for verifying files
