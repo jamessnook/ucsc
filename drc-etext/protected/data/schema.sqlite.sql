@@ -108,6 +108,17 @@ CREATE TABLE book (                 -- books or other items in drc library
     is_viewable BOOLEAN DEFAULT 0
 );
 
+drop table if exists book_accom_type;
+CREATE TABLE book_accom_type (      -- one to many associates a book with the accomodation types it is available in or other items in drc library
+    book_id INTEGER NOT NULL,  	    -- drc library id for book
+    accom_type VARCHAR(16) NOT NULL,     -- AIS accommodation type
+    is_complete BOOLEAN DEFAULT 0,
+    is_viewable BOOLEAN DEFAULT 0
+    primary key (accom_type, book_id),
+    foreign key (book_id ) references book (id),
+    foreign key (accom_type ) references file_type (accom_type)
+);
+
 drop table if exists book_request;
 CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc library and book table yet)
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
