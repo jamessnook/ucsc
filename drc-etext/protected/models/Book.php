@@ -10,8 +10,12 @@
  * @property string $title
  * @property string $author
  * @property string $edition
- * @property boolean $is_complete
- * @property boolean $is_viewable
+ *
+ * The followings are the available model relations:
+ * @property BookRequest[] $bookRequests
+ * @property BookRequest[] $bookRequests1
+ * @property BookRequest[] $bookRequests2
+ * @property FileType[] $fileTypes
  */
 class Book extends CActiveRecord
 {
@@ -46,10 +50,9 @@ class Book extends CActiveRecord
 			array('id_type', 'length', 'max'=>32),
 			array('title', 'length', 'max'=>512),
 			array('author, edition', 'length', 'max'=>128),
-			array('is_complete, is_viewable', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, global_id, id_type, title, author, edition, is_complete, is_viewable', 'safe', 'on'=>'search'),
+			array('id, global_id, id_type, title, author, edition', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,6 +64,10 @@ class Book extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'bookRequests' => array(self::HAS_MANY, 'BookRequest', 'id_type'),
+			'bookRequests1' => array(self::HAS_MANY, 'BookRequest', 'global_id'),
+			'bookRequests2' => array(self::HAS_MANY, 'BookRequest', 'book_id'),
+			'fileTypes' => array(self::MANY_MANY, 'FileType', 'book_type(book_id, type_id)'),
 		);
 	}
 
@@ -76,8 +83,6 @@ class Book extends CActiveRecord
 			'title' => 'Title',
 			'author' => 'Author',
 			'edition' => 'Edition',
-			'is_complete' => 'Is Complete',
-			'is_viewable' => 'Is Viewable',
 		);
 	}
 
@@ -98,35 +103,30 @@ class Book extends CActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('author',$this->author,true);
 		$criteria->compare('edition',$this->edition,true);
-		$criteria->compare('is_complete',$this->is_complete);
-		$criteria->compare('is_viewable',$this->is_viewable);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-	
+		
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function findForUser($username)
 	{
-		$books=Book::model()->with(array(
-		    'bookRequest'=>array(
-		        // we don't want to select posts
-		        'select'=>false,
-		        // but want to get only users with published posts
-		        'joinType'=>'INNER JOIN',
-		        'condition'=>'book.id=bookRequest.id OR (book.global_id=bookRequest.global_id AND book.id_type=bookRequest.id_type)',
-		    ),
-		))->findAll();
-		
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
 		$criteria=new CDbCriteria;
-		$criteria->join='INNER JOIN bookRequest ON book.id=bookRequest.id OR (book.global_id=bookRequest.global_id AND book.id_type=bookRequest.id_type)';                          
-		$criteria->condition="bookRequest.username='$username'";                           
-		//$criteria->params=array(':productId'=>$productId);                              
-		
+		//$criteria->join='INNER JOIN book_request ON (book.id = book_request.book_id)';                          
+		$criteria->join='INNER JOIN book_type ON (book.id=book_type.book_id) ' .
+			'INNER JOIN file_type ON (book_type.type_id = file_type.id) ' .
+			'JOIN service_request ON (file_type.name=service_request.accom_type OR file_type.accom_type=service_request.accom_type)' .
+			'JOIN book_request ON (service_request.id = book_request.request_id AND (book.id = book_request.book_id OR ' .
+				'(book.global_id = book_request.global_id AND book.id_type = book_request.id_type ))';                          
+		$criteria->condition="service_request.username=$username";                           
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

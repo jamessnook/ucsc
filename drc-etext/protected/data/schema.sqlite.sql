@@ -97,39 +97,39 @@ CREATE TABLE service_request (  -- AIS feed
 );
 
 drop table if exists book;
-CREATE TABLE book (                 -- books or other items in drc library
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
-    global_id INTEGER NOT NULL,     -- most often isbn number
-    id_type VARCHAR(32) NOT NULL,   -- most often isbn, also issn, aisn, etc
-    title VARCHAR(512) NOT NULL, 
-    author VARCHAR(128),
-    edition VARCHAR(128),
-    is_complete BOOLEAN DEFAULT 0,
-    is_viewable BOOLEAN DEFAULT 0
+CREATE TABLE book (                    -- books or other items in drc library
+    id         INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
+    global_id  INTEGER NOT NULL,       -- most often isbn number
+    id_type    VARCHAR(32) NOT NULL,   -- most often isbn, also issn, aisn, etc
+    title      VARCHAR(512) NOT NULL, 
+    author     VARCHAR(128),
+    edition    VARCHAR(128)
 );
 
-drop table if exists book_accom_type;
-CREATE TABLE book_accom_type (      -- one to many associates a book with the accomodation types it is available in or other items in drc library
-    book_id INTEGER NOT NULL,  	    -- drc library id for book
-    accom_type VARCHAR(16) NOT NULL,     -- AIS accommodation type
+drop table if exists book_type;
+CREATE TABLE book_type (            -- one to many associates a book with the file and accomodation types it is available in
+    book_id     INTEGER NOT NULL,   -- drc library id for book
+    type_id     VARCHAR(16),         -- identifies file_type
     is_complete BOOLEAN DEFAULT 0,
-    is_viewable BOOLEAN DEFAULT 0
-    primary key (accom_type, book_id),
-    foreign key (book_id ) references book (id),
-    foreign key (accom_type ) references file_type (accom_type)
+    is_viewable BOOLEAN DEFAULT 0,
+    primary key (type_id, book_id),
+    foreign key (book_id) references book (id),
+    foreign key (type_id) references file_type (id)
 );
 
 drop table if exists book_request;
 CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc library and book table yet)
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
     request_id    INTEGER,          -- drc-etext id, identifies request that came from AIS
-    username     VARCHAR(64),       -- cruz id identifies user, also in request but this book request could exist first...
+    username     VARCHAR(64),       -- optional cruz id identifies user, also in request but this book request could exist first...
     book_id    INTEGER,             -- optional, identifies book in drc library, once book is in library...
     global_id INTEGER,              -- most often isbn number
     id_type VARCHAR(32),            -- most often isbn, also issn, aisn, etc
     title VARCHAR(512) NOT NULL, 
     author VARCHAR(128),
     edition VARCHAR(128),
+    request_date    DATE,           -- date requested
+    class_name VARCHAR(256),        -- optional to identify class if studnet cant identify service request
     notes VARCHAR(1024),
     foreign key (request_id ) references request (id),
     foreign key (book_id ) references book (id)

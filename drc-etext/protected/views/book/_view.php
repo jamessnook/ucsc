@@ -24,15 +24,5 @@
 	<?php echo CHtml::encode($data->edition); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('is_complete')); ?>:</b>
-	<?php echo CHtml::encode($data->is_complete); ?>
-	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('is_viewable')); ?>:</b>
-	<?php echo CHtml::encode($data->is_viewable); ?>
-	<br />
-
-	*/ ?>
 
 </div>

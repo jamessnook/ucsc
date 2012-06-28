@@ -35,16 +35,6 @@
 		<?php echo $form->textField($model,'edition',array('size'=>60,'maxlength'=>128)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'is_complete'); ?>
-		<?php echo $form->checkBox($model,'is_complete'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'is_viewable'); ?>
-		<?php echo $form->checkBox($model,'is_viewable'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>
