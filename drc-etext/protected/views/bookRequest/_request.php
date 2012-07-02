@@ -11,10 +11,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'request_id'); ?>
-        <?php 	
+        <?php 	// drop down for selection of service request to associate with this book request
 			$criteria=new CDbCriteria;
 			$criteria->select="id, CONCAT(coure_name, ' ', type) AS name";   
-			$criteria->join='LEFT JOIN units ON units.id=products.id';                          
+			//$criteria->join='LEFT JOIN units ON units.id=products.id';                          
 			$criteria->condition="username='{Yii::app()->user->name}'";                           
 			//$criteria->params=array(':productId'=>$productId);                              
         	$options = CHtml::listData(ServiceRequest::model()->findAll($criteria), 'id', 'name');
@@ -37,7 +37,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_type'); ?>
-		<?php echo $form->textField($model,'id_type',array('size'=>32,'maxlength'=>32)); ?>
+        <?php 	$options = CHtml::listData(IdType::model()->findAll(), 'name', 'name');
+        		echo $form->dropDownList($model,'id_type', $options);
+        ?>
 		<?php echo $form->error($model,'id_type'); ?>
 	</div>
 
@@ -57,6 +59,12 @@
 		<?php echo $form->labelEx($model,'edition'); ?>
 		<?php echo $form->textField($model,'edition',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'edition'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'class_name'); ?>
+		<?php echo $form->textField($model,'class_name',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'class_name'); ?>
 	</div>
 
 	<div class="row">

@@ -11,7 +11,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'term_id'); ?>
-		<?php echo $form->textField($model,'term_id',array('size'=>32,'maxlength'=>32)); ?>
+        <?php 	$options = CHtml::listData(Term::model()->findAll(), 'id', 'name');
+        		echo $form->dropDownList($model,'term_id', $options);
+        ?>
 		<?php echo $form->error($model,'term_id'); ?>
 	</div>
 
@@ -19,12 +21,6 @@
 		<?php echo $form->labelEx($model,'class_id'); ?>
 		<?php echo $form->textField($model,'class_id',array('size'=>32,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'class_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'course'); ?>
-		<?php echo $form->textField($model,'course',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'course'); ?>
 	</div>
 
 	<div class="row">
@@ -64,21 +60,15 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'username'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'instructor_id'); ?>
 		<?php echo $form->textField($model,'instructor_id',array('size'=>32,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'instructor_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'student_id'); ?>
-		<?php echo $form->textField($model,'student_id',array('size'=>60,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'student_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">

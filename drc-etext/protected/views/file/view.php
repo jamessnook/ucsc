@@ -15,7 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View File: <?php echo $model->name; ?></h1>
+<h1>View File #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -25,7 +25,7 @@ $this->menu=array(
 		'path',
 		'caption',
 		'parent_id',
-		'type_id',
+		'type',
 		'order_num',
 		'post_date',
 		'poster_id',

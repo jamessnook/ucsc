@@ -27,6 +27,8 @@ $this->menu=array(
 		'title',
 		'author',
 		'edition',
+		'request_date',
+		'class_name',
 		'notes',
 	),
 )); ?>

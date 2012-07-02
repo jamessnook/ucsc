@@ -51,7 +51,7 @@ class ServiceRequest extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('term_id, class_id, course, section, instructor_id', 'required'),
+			array('term_id, class_id, section, instructor_id', 'required'),
 			array('course_id, session_code', 'numerical', 'integerOnly'=>true),
 			array('term_id, class_id, course, section, instructor_id, type, type_name', 'length', 'max'=>32),
 			array('course_name, subject, catalog_nbr, student_id, username', 'length', 'max'=>64),

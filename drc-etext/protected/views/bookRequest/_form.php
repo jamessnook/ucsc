@@ -58,6 +58,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'class_name'); ?>
+		<?php echo $form->textField($model,'class_name',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'class_name'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'notes'); ?>
 		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1024)); ?>
 		<?php echo $form->error($model,'notes'); ?>

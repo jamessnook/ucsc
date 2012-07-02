@@ -9,7 +9,7 @@
  * @property string $path
  * @property string $caption
  * @property integer $parent_id
- * @property integer $type_id
+ * @property string $type
  * @property integer $order_num
  * @property string $post_date
  * @property string $poster_id
@@ -46,15 +46,16 @@ class File extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('parent_id, type_id, order_num', 'numerical', 'integerOnly'=>true),
+			array('parent_id, order_num', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>128),
 			array('path', 'length', 'max'=>256),
 			array('caption', 'length', 'max'=>512),
+			array('type', 'length', 'max'=>32),
 			array('poster_id', 'length', 'max'=>64),
 			array('post_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, path, caption, parent_id, type_id, order_num, post_date, poster_id', 'safe', 'on'=>'search'),
+			array('id, name, path, caption, parent_id, type, order_num, post_date, poster_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,7 +82,7 @@ class File extends CActiveRecord
 			'path' => 'Path',
 			'caption' => 'Caption',
 			'parent_id' => 'Parent',
-			'type_id' => 'Type',
+			'type' => 'Type',
 			'order_num' => 'Order Num',
 			'post_date' => 'Post Date',
 			'poster_id' => 'Poster',
@@ -104,7 +105,7 @@ class File extends CActiveRecord
 		$criteria->compare('path',$this->path,true);
 		$criteria->compare('caption',$this->caption,true);
 		$criteria->compare('parent_id',$this->parent_id);
-		$criteria->compare('type_id',$this->type_id);
+		$criteria->compare('type',$this->type,true);
 		$criteria->compare('order_num',$this->order_num);
 		$criteria->compare('post_date',$this->post_date,true);
 		$criteria->compare('poster_id',$this->poster_id,true);

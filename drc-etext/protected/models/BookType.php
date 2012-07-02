@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'book_type':
  * @property integer $book_id
- * @property string $type_id
+ * @property string $type
  * @property boolean $is_complete
  * @property boolean $is_viewable
  */
@@ -39,11 +39,11 @@ class BookType extends CActiveRecord
 		return array(
 			array('book_id', 'required'),
 			array('book_id', 'numerical', 'integerOnly'=>true),
-			array('type_id', 'length', 'max'=>16),
+			array('type', 'length', 'max'=>32),
 			array('is_complete, is_viewable', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('book_id, type_id, is_complete, is_viewable', 'safe', 'on'=>'search'),
+			array('book_id, type, is_complete, is_viewable', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,7 +65,7 @@ class BookType extends CActiveRecord
 	{
 		return array(
 			'book_id' => 'Book',
-			'type_id' => 'Type',
+			'type' => 'Type',
 			'is_complete' => 'Is Complete',
 			'is_viewable' => 'Is Viewable',
 		);
@@ -83,7 +83,7 @@ class BookType extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('book_id',$this->book_id);
-		$criteria->compare('type_id',$this->type_id,true);
+		$criteria->compare('type',$this->type,true);
 		$criteria->compare('is_complete',$this->is_complete);
 		$criteria->compare('is_viewable',$this->is_viewable);
 

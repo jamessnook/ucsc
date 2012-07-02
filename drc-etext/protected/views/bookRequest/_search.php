@@ -51,6 +51,16 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'request_date'); ?>
+		<?php echo $form->textField($model,'request_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'class_name'); ?>
+		<?php echo $form->textField($model,'class_name',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'notes'); ?>
 		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1024)); ?>
 	</div>

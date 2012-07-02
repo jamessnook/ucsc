@@ -37,6 +37,14 @@
 	<?php echo CHtml::encode($data->edition); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('request_date')); ?>:</b>
+	<?php echo CHtml::encode($data->request_date); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('class_name')); ?>:</b>
+	<?php echo CHtml::encode($data->class_name); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('notes')); ?>:</b>
 	<?php echo CHtml::encode($data->notes); ?>
 	<br />

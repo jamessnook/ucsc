@@ -17,7 +17,10 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'id_type'); ?>
-		<?php echo $form->textField($model,'id_type',array('size'=>32,'maxlength'=>32)); ?>
+		<?php //echo $form->textField($model,'id_type',array('size'=>32,'maxlength'=>32)); 
+			$options = CHtml::listData(IdType::model()->findAll(), 'name', 'name');
+        	echo $form->dropDownList($model,'id_type', $options);
+        ?>
 	</div>
 
 	<div class="row">

@@ -4,10 +4,12 @@
  * This is the model class for table "file_type".
  *
  * The followings are the available columns in table 'file_type':
- * @property integer $id
  * @property string $name
  * @property string $accom_type
  * @property string $caption
+ *
+ * The followings are the available model relations:
+ * @property Book[] $books
  */
 class FileType extends CActiveRecord
 {
@@ -37,12 +39,13 @@ class FileType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('name', 'required'),
 			array('name', 'length', 'max'=>32),
 			array('accom_type', 'length', 'max'=>16),
 			array('caption', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, accom_type, caption', 'safe', 'on'=>'search'),
+			array('name, accom_type, caption', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +57,7 @@ class FileType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'books' => array(self::MANY_MANY, 'Book', 'book_type(type_id, book_id)'),
 		);
 	}
 
@@ -63,7 +67,6 @@ class FileType extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
 			'name' => 'Name',
 			'accom_type' => 'Accom Type',
 			'caption' => 'Caption',
@@ -81,7 +84,6 @@ class FileType extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('accom_type',$this->accom_type,true);
 		$criteria->compare('caption',$this->caption,true);

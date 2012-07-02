@@ -13,10 +13,12 @@
  * @property string $title
  * @property string $author
  * @property string $edition
+ * @property string $request_date
+ * @property string $class_name
  * @property string $notes
  *
  * The followings are the available model relations:
- * @property Book $idType
+ * @property IdType $idType
  * @property Book $global
  * @property Book $book
  * @property Request $request
@@ -55,10 +57,12 @@ class BookRequest extends CActiveRecord
 			array('id_type', 'length', 'max'=>32),
 			array('title', 'length', 'max'=>512),
 			array('author, edition', 'length', 'max'=>128),
+			array('class_name', 'length', 'max'=>256),
 			array('notes', 'length', 'max'=>1024),
+			array('request_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, request_id, username, book_id, global_id, id_type, title, author, edition, notes', 'safe', 'on'=>'search'),
+			array('id, request_id, username, book_id, global_id, id_type, title, author, edition, request_date, class_name, notes', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,7 +74,7 @@ class BookRequest extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'idType' => array(self::BELONGS_TO, 'Book', 'id_type'),
+			'idType' => array(self::BELONGS_TO, 'IdType', 'id_type'),
 			'global' => array(self::BELONGS_TO, 'Book', 'global_id'),
 			'book' => array(self::BELONGS_TO, 'Book', 'book_id'),
 			'request' => array(self::BELONGS_TO, 'Request', 'request_id'),
@@ -92,6 +96,8 @@ class BookRequest extends CActiveRecord
 			'title' => 'Title',
 			'author' => 'Author',
 			'edition' => 'Edition',
+			'request_date' => 'Request Date',
+			'class_name' => 'Class Name',
 			'notes' => 'Notes',
 		);
 	}
@@ -116,6 +122,8 @@ class BookRequest extends CActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('author',$this->author,true);
 		$criteria->compare('edition',$this->edition,true);
+		$criteria->compare('request_date',$this->request_date,true);
+		$criteria->compare('class_name',$this->class_name,true);
 		$criteria->compare('notes',$this->notes,true);
 
 		return new CActiveDataProvider($this, array(
