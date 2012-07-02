@@ -59,7 +59,7 @@ CREATE TABLE file (
     path         VARCHAR(256) NOT NULL DEFAULT '', -- path for file on server under file root
     caption      VARCHAR(512),  -- optional for display purposes
     parent_id    INTEGER,       -- optional parent object id, ie 'book' if files are chapters
-    type_id      INTEGER,       -- file type (redundant with extension on path?)
+    type         VARCHAR(32),       -- file type (redundant with extension on path?)
     order_num    INTEGER,       -- display or list order if member of a group (chapters in a book)
     post_date    DATE,          -- date uploaded
     poster_id 	 VARCHAR(64),   -- username who uploaded file
@@ -68,11 +68,15 @@ CREATE TABLE file (
 
 drop table if exists file_type;
 CREATE TABLE file_type (
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name         VARCHAR(32),    -- file extension, 
+    name         VARCHAR(32) NOT NULL,    -- file extension, 
     accom_type   VARCHAR(16),    -- identifies accommodation type in AIS
-    caption      VARCHAR(128)    -- optional for display 
+    caption      VARCHAR(128),    -- optional for display 
+    primary key (name)
 );
+INSERT INTO file_type (name) VALUES ('docx');
+INSERT INTO file_type (name) VALUES ('doc');
+INSERT INTO file_type (name) VALUES ('pdf');
+INSERT INTO file_type (name) VALUES ('txt');
 
 
 drop table if exists request;
@@ -103,19 +107,30 @@ CREATE TABLE book (                    -- books or other items in drc library
     id_type    VARCHAR(32) NOT NULL,   -- most often isbn, also issn, aisn, etc
     title      VARCHAR(512) NOT NULL, 
     author     VARCHAR(128),
-    edition    VARCHAR(128)
+    edition    VARCHAR(128),
+    foreign key (id_type ) references id_type (name)
 );
 
 drop table if exists book_type;
 CREATE TABLE book_type (            -- one to many associates a book with the file and accomodation types it is available in
     book_id     INTEGER NOT NULL,   -- drc library id for book
-    type_id     VARCHAR(16),         -- identifies file_type
+    type        VARCHAR(32),         -- identifies file or other type
     is_complete BOOLEAN DEFAULT 0,
     is_viewable BOOLEAN DEFAULT 0,
-    primary key (type_id, book_id),
+    primary key (type, book_id),
     foreign key (book_id) references book (id),
-    foreign key (type_id) references file_type (id)
+    foreign key (type) references file_type (name)
 );
+
+drop table if exists id_type;
+CREATE TABLE id_type (            -- for drop down list of id types for book ids 
+    name     VARCHAR(64) NOT NULL,   -- boomk id type
+    primary key (name)
+);
+INSERT INTO id_type (name) VALUES ('isbn');
+INSERT INTO id_type (name) VALUES ('other');
+INSERT INTO id_type (name) VALUES ('unknown');
+INSERT INTO id_type (name) VALUES ('none');
 
 drop table if exists book_request;
 CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc library and book table yet)
@@ -132,9 +147,9 @@ CREATE TABLE book_request (         -- maps requests to specific books (may not 
     class_name VARCHAR(256),        -- optional to identify class if studnet cant identify service request
     notes VARCHAR(1024),
     foreign key (request_id ) references request (id),
-    foreign key (book_id ) references book (id)
-    foreign key (global_id ) references book (global_id)
-    foreign key (id_type ) references book (id_type)
+    foreign key (book_id ) references book (id),
+    foreign key (global_id ) references book (global_id),
+    foreign key (id_type ) references id_type (name)
 );
 
 drop table if exists term;
@@ -146,6 +161,10 @@ CREATE TABLE term(                 -- data for terms for display puposes
     begin_date DATE,
     end_date DATE
 );
+INSERT INTO term (id, name) VALUES ('2124', 'Summer 2012');
+INSERT INTO term (id, name) VALUES ('2128', 'Fall 2012');
+INSERT INTO term (id, name) VALUES ('2130', 'Winter 2013');
+INSERT INTO term (id, name) VALUES ('2132', 'Spring 2013');
 
 -- The tables below may or may not be needed depending on requirements
 
