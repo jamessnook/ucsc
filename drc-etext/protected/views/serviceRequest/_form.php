@@ -18,27 +18,33 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'class_id'); ?>
-		<?php echo $form->textField($model,'class_id',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'class_id'); ?>
+		<?php echo $form->labelEx($model,'class_number'); ?>
+		<?php echo $form->textField($model,'class_number'); ?>
+		<?php echo $form->error($model,'class_number'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'section'); ?>
-		<?php echo $form->textField($model,'section',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'section'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'course_id'); ?>
-		<?php echo $form->textField($model,'course_id'); ?>
-		<?php echo $form->error($model,'course_id'); ?>
+		<?php echo $form->labelEx($model,'class_section'); ?>
+		<?php echo $form->textField($model,'class_section',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'class_section'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'session_code'); ?>
-		<?php echo $form->textField($model,'session_code'); ?>
+		<?php echo $form->textField($model,'session_code',array('size'=>32,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'session_code'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'course_offer_number'); ?>
+		<?php echo $form->textField($model,'course_offer_number'); ?>
+		<?php echo $form->error($model,'course_offer_number'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'course_id'); ?>
+		<?php echo $form->textField($model,'course_id',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'course_id'); ?>
 	</div>
 
 	<div class="row">
@@ -60,27 +66,63 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'instructor_id'); ?>
 		<?php echo $form->textField($model,'instructor_id',array('size'=>32,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'instructor_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'type'); ?>
-		<?php echo $form->textField($model,'type',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'type'); ?>
+		<?php echo $form->labelEx($model,'instructor_cruzid'); ?>
+		<?php echo $form->textField($model,'instructor_cruzid',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'instructor_cruzid'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'student_id'); ?>
+		<?php echo $form->textField($model,'student_id',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->error($model,'student_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->error($model,'username'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'accommodation_type'); ?>
+		<?php echo $form->textField($model,'accommodation_type',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'accommodation_type'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'type_name'); ?>
 		<?php echo $form->textField($model,'type_name',array('size'=>32,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'type_name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'effective_date'); ?>
+		<?php echo $form->textField($model,'effective_date'); ?>
+		<?php echo $form->error($model,'effective_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'created'); ?>
+		<?php echo $form->textField($model,'created'); ?>
+		<?php echo $form->error($model,'created'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'last_changed'); ?>
+		<?php echo $form->textField($model,'last_changed'); ?>
+		<?php echo $form->error($model,'last_changed'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'last_changed_by'); ?>
+		<?php echo $form->textField($model,'last_changed_by',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'last_changed_by'); ?>
 	</div>
 
 	<div class="row buttons">

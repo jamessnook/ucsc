@@ -16,18 +16,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'book_id'); ?>
-		<?php echo $form->textField($model,'book_id'); ?>
-		<?php echo $form->error($model,'book_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'global_id'); ?>
 		<?php echo $form->textField($model,'global_id'); ?>
 		<?php echo $form->error($model,'global_id'); ?>
@@ -58,15 +46,33 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'class_name'); ?>
-		<?php echo $form->textField($model,'class_name',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'class_name'); ?>
+		<?php echo $form->labelEx($model,'created'); ?>
+		<?php echo $form->textField($model,'created'); ?>
+		<?php echo $form->error($model,'created'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'last_changed'); ?>
+		<?php echo $form->textField($model,'last_changed'); ?>
+		<?php echo $form->error($model,'last_changed'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'last_changed_by'); ?>
+		<?php echo $form->textField($model,'last_changed_by',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'last_changed_by'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'notes'); ?>
 		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1024)); ?>
 		<?php echo $form->error($model,'notes'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'is_complete'); ?>
+		<?php echo $form->checkBox($model,'is_complete'); ?>
+		<?php echo $form->error($model,'is_complete'); ?>
 	</div>
 
 	<div class="row buttons">

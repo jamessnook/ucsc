@@ -82,23 +82,72 @@ INSERT INTO file_type (name) VALUES ('txt');
 drop table if exists request;
 drop table if exists service_request;
 CREATE TABLE service_request (  -- AIS feed
-    id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    term_id VARCHAR(32) NOT NULL,       -- AIS: STRM
-    class_id VARCHAR(32) NOT NULL,      -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
-    course VARCHAR(32) NOT NULL,        -- AIS: COURSE_OFFER_NBR?, for bookstore class books request
-    section VARCHAR(32) NOT NULL,       -- AIS: CLASS_SECTION?, for bookstore class books request
-    course_id INTEGER,        			-- AIS: CRSE_ID, may not need
-    session_code INTEGER,               -- AIS: SESSION_CODE, may not need
+    id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- (local, not from AIS)
+    term_id VARCHAR(32) NOT NULL,       -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
+    class_number INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
+    class_section VARCHAR(32),          -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CLASS_SECTION?, for bookstore class books request
+    session_code VARCHAR(32),           -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.SESSION_CODE, may not need
+    course_offer_number INTEGER,        -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.COURSE_OFFER_NBR?, for bookstore class books request
+    course_id VARCHAR(32),              -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CRSE_ID, may not need
     course_name VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.DESCR
     subject VARCHAR(64),                -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.SUBJECT, is this department for bookstore class books request
     catalog_nbr VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CATALOG_NBR
-    instructor_id VARCHAR(32) NOT NULL, -- AIS: INSTRUCTOR_ID
+    instructor_id VARCHAR(32),          -- AIS: INSTRUCTOR_ID, optional
+    instructor_cruzid VARCHAR(32),      -- AIS: instructor cruzid, used to build e-mail address
     student_id     VARCHAR(64),         -- AIS: EMPLID, identifies student, 7 digit number not cruzid
-    username     VARCHAR(64),           -- cruzid needed to match to logged on user
-    type      VARCHAR(32),              -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
-    type_name     VARCHAR(32),          -- AIS: SYSADMIN.PS_SCR_DRC_ACCSETP.DESCR^) or , six letter code
+    username     VARCHAR(64),           -- AIS: student cruzid needed to match to logged on user
+    accommodation_type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
+    type_name     VARCHAR(32),          -- AIS: SYSADMIN.PS_SCR_DRC_ACCSETP.DESCR) or , six letter code
+    effective_date DATE,                -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.EFFDT_FROM)
+    created    DATETIME,                -- when imported or requested (local, not from AIS)
+    last_changed    DATETIME,           -- date and time of last change (local, not from AIS)
+    last_changed_by    VARCHAR(32),     -- username of user who made last change (local, not from AIS)
     foreign key (username ) references user (username)
 );
+
+drop table if exists id_type;
+CREATE TABLE id_type (            -- for drop down list of id types for book ids 
+    name     VARCHAR(64) NOT NULL,   -- book id type
+    primary key (name)
+);
+INSERT INTO id_type (name) VALUES ('isbn');
+INSERT INTO id_type (name) VALUES ('other');
+INSERT INTO id_type (name) VALUES ('unknown');
+INSERT INTO id_type (name) VALUES ('none');
+
+drop table if exists book_request;
+CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc library and book table yet)
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
+    request_id    INTEGER,          -- drc-etext id, identifies request that came from AIS
+    global_id INTEGER,              -- most often isbn number
+    id_type VARCHAR(32),            -- most often isbn, also issn, aisn, etc
+    title VARCHAR(512) NOT NULL, 
+    author VARCHAR(128),
+    edition VARCHAR(128),
+    created    DATETIME,            -- when requested
+    last_changed    DATETIME,       -- date and time of last change
+    last_changed_by    VARCHAR(32), -- username of user who made last change 
+    notes VARCHAR(1024),
+    is_complete BOOLEAN DEFAULT 0,
+    foreign key (request_id ) references request (id),
+    foreign key (id_type ) references id_type (name)
+);
+
+drop table if exists term;
+CREATE TABLE term(                 -- data for terms for display puposes
+    id VARCHAR(32) NOT NULL PRIMARY KEY ,       -- AIS: STRM
+    name VARCHAR(512) NOT NULL, 
+    quarter VARCHAR(128),
+    year INTEGER,
+    begin_date DATE,
+    end_date DATE
+);
+INSERT INTO term (id, name) VALUES ('2124', 'Summer 2012');
+INSERT INTO term (id, name) VALUES ('2128', 'Fall 2012');
+INSERT INTO term (id, name) VALUES ('2130', 'Winter 2013');
+INSERT INTO term (id, name) VALUES ('2132', 'Spring 2013');
+
+-- The tables below may or may not be needed depending on requirements
 
 drop table if exists book;
 CREATE TABLE book (                    -- books or other items in drc library
@@ -121,52 +170,6 @@ CREATE TABLE book_type (            -- one to many associates a book with the fi
     foreign key (book_id) references book (id),
     foreign key (type) references file_type (name)
 );
-
-drop table if exists id_type;
-CREATE TABLE id_type (            -- for drop down list of id types for book ids 
-    name     VARCHAR(64) NOT NULL,   -- boomk id type
-    primary key (name)
-);
-INSERT INTO id_type (name) VALUES ('isbn');
-INSERT INTO id_type (name) VALUES ('other');
-INSERT INTO id_type (name) VALUES ('unknown');
-INSERT INTO id_type (name) VALUES ('none');
-
-drop table if exists book_request;
-CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc library and book table yet)
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
-    request_id    INTEGER,          -- drc-etext id, identifies request that came from AIS
-    username     VARCHAR(64),       -- optional cruz id identifies user, also in request but this book request could exist first...
-    book_id    INTEGER,             -- optional, identifies book in drc library, once book is in library...
-    global_id INTEGER,              -- most often isbn number
-    id_type VARCHAR(32),            -- most often isbn, also issn, aisn, etc
-    title VARCHAR(512) NOT NULL, 
-    author VARCHAR(128),
-    edition VARCHAR(128),
-    request_date    DATE,           -- date requested
-    class_name VARCHAR(256),        -- optional to identify class if studnet cant identify service request
-    notes VARCHAR(1024),
-    foreign key (request_id ) references request (id),
-    foreign key (book_id ) references book (id),
-    foreign key (global_id ) references book (global_id),
-    foreign key (id_type ) references id_type (name)
-);
-
-drop table if exists term;
-CREATE TABLE term(                 -- data for terms for display puposes
-    id VARCHAR(32) NOT NULL PRIMARY KEY ,       -- AIS: STRM
-    name VARCHAR(512) NOT NULL, 
-    quarter VARCHAR(128),
-    year INTEGER,
-    begin_date DATE,
-    end_date DATE
-);
-INSERT INTO term (id, name) VALUES ('2124', 'Summer 2012');
-INSERT INTO term (id, name) VALUES ('2128', 'Fall 2012');
-INSERT INTO term (id, name) VALUES ('2130', 'Winter 2013');
-INSERT INTO term (id, name) VALUES ('2132', 'Spring 2013');
-
--- The tables below may or may not be needed depending on requirements
 
 
 drop table if exists accommodation;

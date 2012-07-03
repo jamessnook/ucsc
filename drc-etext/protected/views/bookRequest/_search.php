@@ -16,16 +16,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>64)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'book_id'); ?>
-		<?php echo $form->textField($model,'book_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'global_id'); ?>
 		<?php echo $form->textField($model,'global_id'); ?>
 	</div>
@@ -51,18 +41,28 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'request_date'); ?>
-		<?php echo $form->textField($model,'request_date'); ?>
+		<?php echo $form->label($model,'created'); ?>
+		<?php echo $form->textField($model,'created'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'class_name'); ?>
-		<?php echo $form->textField($model,'class_name',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->label($model,'last_changed'); ?>
+		<?php echo $form->textField($model,'last_changed'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'last_changed_by'); ?>
+		<?php echo $form->textField($model,'last_changed_by',array('size'=>32,'maxlength'=>32)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'notes'); ?>
 		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1024)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'is_complete'); ?>
+		<?php echo $form->checkBox($model,'is_complete'); ?>
 	</div>
 
 	<div class="row buttons">

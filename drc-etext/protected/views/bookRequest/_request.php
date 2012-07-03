@@ -13,9 +13,12 @@
 		<?php echo $form->labelEx($model,'request_id'); ?>
         <?php 	// drop down for selection of service request to associate with this book request
 			$criteria=new CDbCriteria;
-			$criteria->select="id, CONCAT(coure_name, ' ', type) AS name";   
+			//$criteria->select="id, CONCAT(coure_name, ' ', type) AS name";   //mysql version
+			//$criteria->select="id, course_name || ' ' || type AS 'name'";     // sqlite version
 			//$criteria->join='LEFT JOIN units ON units.id=products.id';                          
-			$criteria->condition="username='{Yii::app()->user->name}'";                           
+			//$criteria->condition="username='{Yii::app()->user->name}'";  
+			$username = Yii::app()->user->name;                  
+			$criteria->condition="username='$username'";                           
 			//$criteria->params=array(':productId'=>$productId);                              
         	$options = CHtml::listData(ServiceRequest::model()->findAll($criteria), 'id', 'name');
         	echo $form->dropDownList($model,'request_id', $options);
@@ -71,6 +74,13 @@
 		<?php echo $form->labelEx($model,'notes'); ?>
 		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1024)); ?>
 		<?php echo $form->error($model,'notes'); ?>
+	</div>
+
+	<div class="row">
+		<?php 
+		$model->username = Yii::app()->user->name; 
+		echo $form->hiddenField($model, 'username'); 
+		?>
 	</div>
 
 	<div class="row buttons">

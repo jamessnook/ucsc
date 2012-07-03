@@ -8,7 +8,7 @@ $this->menu=array(
 	array('label'=>'List ServiceRequest', 'url'=>array('index')),
 	array('label'=>'Create ServiceRequest', 'url'=>array('create')),
 	array('label'=>'Import AIS Requests', 'url'=>array('import')),
-	);
+);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -45,20 +45,25 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'term_id',
-		'class_id',
-		'course',
-		'section',
-		'course_id',
-		/*
+		'class_number',
+		'class_section',
 		'session_code',
+		'course_offer_number',
+		/*
+		'course_id',
 		'course_name',
 		'subject',
 		'catalog_nbr',
 		'instructor_id',
+		'instructor_cruzid',
 		'student_id',
 		'username',
-		'type',
+		'accommodation_type',
 		'type_name',
+		'effective_date',
+		'created',
+		'last_changed',
+		'last_changed_by',
 		*/
 		array(
 			'class'=>'CButtonColumn',
