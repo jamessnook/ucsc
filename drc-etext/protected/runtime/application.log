@@ -1147,3 +1147,247 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php?r=serviceRequest/import
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=serviceRequest/view&id=2
 ---
+2012/07/04 02:06:50 [error] [exception.CException] exception 'CException' with message 'Property "BookRequest.book_id" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('book_id')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('book_id')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(BookRequest), 'book_id')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(BookRequest), 'book_id', Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CActiveForm.php(575): CHtml::activeTextField(Object(BookRequest), 'book_id', Array)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\_request.php(31): CActiveForm->textField(Object(BookRequest), 'book_id')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\create.php(15): CController->renderPartial('_request', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#14 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php(78): CController->render('create', Array)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): BookRequestController->actionCreate()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('create')
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('bookRequest/cre...')
+#26 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=bookRequest/create
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
+---
+2012/07/04 02:08:41 [error] [exception.CException] exception 'CException' with message 'Property "BookRequest.username" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(160): CComponent->__set('username', 'jsnook')
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\_request.php(69): CActiveRecord->__set('username', 'jsnook')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\create.php(15): CController->renderPartial('_request', Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php(78): CController->render('create', Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): BookRequestController->actionCreate()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('create')
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('bookRequest/cre...')
+#22 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=bookRequest/create
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
+---
+2012/07/04 02:28:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('myBooks')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('bookRequest/myB...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=bookRequest/myBooks
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
+---
+2012/07/04 02:29:19 [error] [exception.CException] exception 'CException' with message 'Property "Book.request_id" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('request_id')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('request_id')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(Book), 'request_id')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(Book), 'request_id', Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CActiveForm.php(575): CHtml::activeTextField(Object(Book), 'request_id', Array)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\_search.php(15): CActiveForm->textField(Object(Book), 'request_id')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php(41): CController->renderPartial('_search', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('myBooks', Array, true)
+#14 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php(163): CController->render('myBooks', Array)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): BookRequestController->actionMyBooks()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('myBooks')
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('bookRequest/myB...')
+#26 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=bookRequest/myBooks
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
+---
+2012/07/04 02:34:37 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT COUNT(*) FROM 'book_request' 't' WHERE username=jsnook AND term_id = 2124
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php (67)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (163)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/07/04 02:34:37 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: username. The SQL statement executed was: SELECT COUNT(*) FROM 'book_request' 't' WHERE username=jsnook AND term_id = 2124.
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php (67)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (163)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/07/04 02:34:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: username. The SQL statement executed was: SELECT COUNT(*) FROM 'book_request' 't' WHERE username=jsnook AND term_id = 2124' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(148): CGridView->init()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php(67): CBaseController->widget('zii.widgets.gri...', Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('myBooks', Array, true)
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php(163): CController->render('myBooks', Array)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): BookRequestController->actionMyBooks()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('myBooks')
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('bookRequest/myB...')
+#27 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=bookRequest/myBooks
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
+---
+2012/07/04 02:38:57 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT COUNT(*) FROM 'book_request' 't' JOIN serviceRequest ON (requestId = serviceRequest.id) WHERE username=jsnook AND term_id = 2124
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php (67)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (163)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/07/04 02:38:57 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: serviceRequest. The SQL statement executed was: SELECT COUNT(*) FROM 'book_request' 't' JOIN serviceRequest ON (requestId = serviceRequest.id) WHERE username=jsnook AND term_id = 2124.
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php (67)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (163)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/07/04 02:38:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: serviceRequest. The SQL statement executed was: SELECT COUNT(*) FROM 'book_request' 't' JOIN serviceRequest ON (requestId = serviceRequest.id) WHERE username=jsnook AND term_id = 2124' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(148): CGridView->init()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php(67): CBaseController->widget('zii.widgets.gri...', Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('myBooks', Array, true)
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php(163): CController->render('myBooks', Array)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): BookRequestController->actionMyBooks()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('myBooks')
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('bookRequest/myB...')
+#27 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=bookRequest/myBooks
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
+---
+2012/07/04 02:39:32 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT COUNT(*) FROM 'book_request' 't' JOIN service_request ON (requestId = service_request.id) WHERE username=jsnook AND term_id = 2124
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php (67)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (163)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/07/04 02:39:32 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: jsnook. The SQL statement executed was: SELECT COUNT(*) FROM 'book_request' 't' JOIN service_request ON (requestId = service_request.id) WHERE username=jsnook AND term_id = 2124.
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php (67)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (163)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/07/04 02:39:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: jsnook. The SQL statement executed was: SELECT COUNT(*) FROM 'book_request' 't' JOIN service_request ON (requestId = service_request.id) WHERE username=jsnook AND term_id = 2124' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(148): CGridView->init()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\bookRequest\myBooks.php(67): CBaseController->widget('zii.widgets.gri...', Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('myBooks', Array, true)
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php(163): CController->render('myBooks', Array)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): BookRequestController->actionMyBooks()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('myBooks')
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('bookRequest/myB...')
+#27 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=bookRequest/myBooks
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
+---

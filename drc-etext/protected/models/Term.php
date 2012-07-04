@@ -99,4 +99,78 @@ class Term extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	/**
+	 * get the id of the current term.
+	 */
+	public function getCurrentTermId()
+    {
+    	$date = getdate();
+    	return $this->getIdForDate($date);
+    }
+	
+	/**
+	 * get the id of a term.
+	 */
+	public function getIdForDate($date)
+    {
+    	if ($date['yday']>350 && $date['yday']<80 ) $quarter = 0;
+    	else if ($date['yday']<175 ) $quarter = 2;
+    	else if ($date['yday']<240 ) $quarter = 4;
+    	else  $quarter = 8;
+    	return (intval($date['year']/1000)*100 + $date['year']%100)*10 + $quarter;
+    }
+	
+	/**
+	 * get the name of a term.
+	 */
+	public function getNameForDate($date)
+    {
+    	if ($date['yday']>350 && $date['yday']<80 ) $quarter = 'Winter';
+    	else if ($date['yday']<175 ) $quarter = 'Spring';
+    	else if ($date['yday']<240 ) $quarter = 'Summer';
+    	else  $quarter = 'Fall';
+    	return $quarter . ' ' . $date['year'];
+    }
+	
+	/**
+	 * get the name of a term.
+	 */
+	public function getNameForTermId($termId)
+    {
+    	if ($termId % 10 < 2 ) $quarter = 'Winter';
+    	else if ($termId % 10 < 4 ) $quarter = 'Spring';
+    	else if ($termId % 10 < 8  ) $quarter = 'Summer';
+    	else  $quarter = 'Fall';
+    	if ($termId < 1000) {
+    		$century = '19';
+    	}else {
+    		 $century = '20';
+    	}
+   		return $quarter . ' ' . $century . intval(($termId % 1000)/10);
+    }
+	
+    /**
+	 * get array of name value paisa for nearby terms.
+	 */
+	public function getTerms()
+    {
+    	$terms = array();
+    	$termId = getCurrentTermId() - 20;
+    	for($i=0; i<12; $i++){
+    		$terms[$termId] = getNameForTermId($termId);
+    		$termId = getNextTermId($termId);
+    	}
+     	return $terms;
+    }
+        
+    /**
+	 * get next termId.
+	 */
+	public function getNextTermId($termId)
+    {
+    	$newTermId = $termId + 2;
+    	if ($newTermId % 10 == 6) $newTermId+=2;
+    	return $newTermId;
+    }
 }

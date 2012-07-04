@@ -83,7 +83,7 @@ drop table if exists request;
 drop table if exists service_request;
 CREATE TABLE service_request (  -- AIS feed
     id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- (local, not from AIS)
-    term_id VARCHAR(32) NOT NULL,       -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
+    term_id INTEGER NOT NULL,       -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
     class_number INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     class_section VARCHAR(32),          -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CLASS_SECTION?, for bookstore class books request
     session_code VARCHAR(32),           -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.SESSION_CODE, may not need
@@ -106,8 +106,8 @@ CREATE TABLE service_request (  -- AIS feed
 );
 
 drop table if exists id_type;
-CREATE TABLE id_type (            -- for drop down list of id types for book ids 
-    name     VARCHAR(64) NOT NULL,   -- book id type
+CREATE TABLE id_type (                  -- for drop down list of id types for book ids 
+    name     VARCHAR(64) NOT NULL,      -- book id type
     primary key (name)
 );
 INSERT INTO id_type (name) VALUES ('isbn');

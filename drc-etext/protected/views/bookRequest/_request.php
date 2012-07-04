@@ -27,12 +27,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'book_id'); ?>
-		<?php echo $form->textField($model,'book_id'); ?>
-		<?php echo $form->error($model,'book_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'global_id'); ?>
 		<?php echo $form->textField($model,'global_id'); ?>
 		<?php echo $form->error($model,'global_id'); ?>
@@ -65,22 +59,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'class_name'); ?>
-		<?php echo $form->textField($model,'class_name',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'class_name'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'notes'); ?>
 		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1024)); ?>
 		<?php echo $form->error($model,'notes'); ?>
-	</div>
-
-	<div class="row">
-		<?php 
-		$model->username = Yii::app()->user->name; 
-		echo $form->hiddenField($model, 'username'); 
-		?>
 	</div>
 
 	<div class="row buttons">

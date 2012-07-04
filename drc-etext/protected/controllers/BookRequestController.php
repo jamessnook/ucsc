@@ -35,7 +35,7 @@ class BookRequestController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete', 'myBooks'),
 				'roles'=>array('admin','student'),
 			),
 			array('deny',  // deny all users
@@ -144,6 +144,21 @@ class BookRequestController extends Controller
 			$model->attributes=$_GET['BookRequest'];
 
 		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
+	 * Display specific models for this user for upload.
+	 */
+	public function actionMyBooks()
+	{
+		$model=new BookRequest('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['BookRequest']))
+			$model->attributes=$_GET['BookRequest'];
+		
+		$this->render('myBooks',array(
 			'model'=>$model,
 		));
 	}

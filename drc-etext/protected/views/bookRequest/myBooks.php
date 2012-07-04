@@ -27,7 +27,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Book Requests</h1>
+<h1>My Book Requests</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -43,7 +43,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'book-request-grid',
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$model->findForUserAndTerm(Yii::app()->user->name, Term::model()->getCurrentTermId()),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
