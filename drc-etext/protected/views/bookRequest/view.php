@@ -30,5 +30,18 @@ $this->menu=array(
 		'last_changed_by',
 		'notes',
 		'is_complete',
+		'has_zip_file',
 	),
 )); ?>
+
+<h2>Download Files</h2>
+
+<?php 
+	$files = File::model()->findAllByAttributes(array('parent_id'=>$model->id), array('order'=>'type,name'));
+    foreach ($files as $file) {
+    	echo CHtml::link("$file->name, ", array('file/download', 'name'=>$file->name, 'path'=>$file->path),
+	      array('class'=>'donwload_link')
+	   );
+	   echo '<br/>';
+    }
+ ?>

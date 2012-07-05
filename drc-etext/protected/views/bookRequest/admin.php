@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'Download Files','url'=>array('file/download', 'bookRequest_id'=>$model->id)),
 	array('label'=>'My Books', 'url'=>array('myBooks')),
 	array('label'=>'Request a Book', 'url'=>array('create')),
-	);
+);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -48,6 +48,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'request_id',
+		'request.term_id',
+		'request.username',
+		//array(
+        //            'name' => 'request.term_id',
+        //            'value' => '$data->request->term_id'
+        //),
+		//array(
+        //            'name' => 'request.username',
+        //            'value' => '$data->request->username'
+        //),
 		'global_id',
 		'id_type',
 		'title',
@@ -59,9 +69,22 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'last_changed_by',
 		'notes',
 		'is_complete',
+		'has_zip_file',
 		*/
 		array(
 			'class'=>'CButtonColumn',
+			'buttons'=>array(
+				'upload'=>array(
+					'label'=>'Upload',     // text label of the button
+	    			//'url'=>Yii::app()->createAbsoluteUrl("file/download"),       // a PHP expression for generating the URL of the button
+	    			'url'=>'Yii::app()->createUrl("file/upload", array("parent_id"=>$data->id))',       // a PHP expression for generating the URL of the button
+					//'imageUrl'=>'...',  // image URL of the button. If not set or false, a text link is used
+	    			//'options'=>array(), // HTML options for the button tag
+	    			//'click'=>'...',     // a JS function to be invoked when the button is clicked
+	    			//'visible'=>'...',   // a PHP expression for determining whether the button is visible
+				),
+			),
+			'template'=>'{view}{update}{delete}{upload}',
 		),
 	),
 )); ?>

@@ -17,8 +17,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'parent_id', array('label'=>'Book this file is for:')); ?>
-        <?php 	$options = CHtml::listData(Book::model()->findAll(), 'id', 'title');
+		<?php echo $form->labelEx($model,'parent_id', array('label'=>'Book Request this file is for:')); ?>
+        <?php 	$options = CHtml::listData(BookRequest::model()->findAll(), 'id', 'title');
         		echo $form->dropDownList($model,'parent_id', $options,
         		array(
                          'empty'=>'Choose one', 
@@ -30,7 +30,7 @@
  	</div>
 
 	<?php 
-		$allowedTypes = implode('|', CHtml::listData(FileType::model()->findAll(array('distinct'=>true,)), 'id', 'name'));
+		$allowedTypes = implode('|', CHtml::listData(FileType::model()->findAll(array('distinct'=>true,)), 'name', 'name'));
 		$this->widget('CMultiFileUpload', array(
 	                'name' => 'files',
 	                'accept' => $allowedTypes, // useful for verifying files

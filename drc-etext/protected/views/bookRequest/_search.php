@@ -16,6 +16,28 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model->request,'username'); ?>
+		<?php echo $form->textField($model->request,'username'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model->request,'term_id'); ?>
+		<?php echo $form->textField($model->request,'term_id'); ?>
+	</div>
+	<div class="row">
+		<?php echo $form->label($model->request,'subject'); ?>
+		<?php echo $form->textField($model->request,'subject'); ?>
+	</div>
+	<div class="row">
+		<?php echo $form->label($model->request,'course_name'); ?>
+		<?php echo $form->textField($model->request,'course_name'); ?>
+	</div>
+	<div class="row">
+		<?php echo $form->label($model->request,'accommodation_type'); ?>
+		<?php echo $form->textField($model->request,'accommodation_type'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'global_id'); ?>
 		<?php echo $form->textField($model,'global_id'); ?>
 	</div>
@@ -36,33 +58,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'edition'); ?>
-		<?php echo $form->textField($model,'edition',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'last_changed'); ?>
-		<?php echo $form->textField($model,'last_changed'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'last_changed_by'); ?>
-		<?php echo $form->textField($model,'last_changed_by',array('size'=>32,'maxlength'=>32)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'notes'); ?>
-		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1024)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'is_complete'); ?>
 		<?php echo $form->checkBox($model,'is_complete'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'has_zip_file'); ?>
+		<?php echo $form->checkBox($model,'has_zip_file'); ?>
 	</div>
 
 	<div class="row buttons">

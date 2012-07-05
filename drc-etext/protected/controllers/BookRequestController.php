@@ -139,6 +139,7 @@ class BookRequestController extends Controller
 	public function actionAdmin()
 	{
 		$model=new BookRequest('search');
+		$model->request=new ServiceRequest('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['BookRequest']))
 			$model->attributes=$_GET['BookRequest'];

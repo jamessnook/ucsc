@@ -153,32 +153,41 @@ class FileController extends Controller
 	 */
 	public function actionDownload()
 	{
-		$model=new File;
-
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		
-		if(isset($_GET['name']))
+		if(isset($_GET['parent_id']))
+		{
+			$request = BookRequest::model()->findByPk($_GET['parent_id']);
+			if (isset($request) && $request->has_zip_file){
+				$this->download("zips/req{$_GET['parent_id']}.zip");
+			} else{
+				$files = File::model()->findAllByAttributes(array('parent_id'=>$_GET['parent_id']));
+				$fileCount = count($files);
+				if ($fileCount < 1 || !$request->is_complete){
+					// error
+				}
+				else if ($fileCount == 1){
+					$model = $files[0];
+					$this->download("$model->path . "/" . $model->name");
+				}
+				else {
+					$model=new File;
+					$model->parent_id=$_GET['parent_id'];
+					$this->render('download',array(
+						'model'=>$model,
+					));
+				}
+			}
+		}
+		else if(isset($_GET['name']))
 		{
 			$name = $_GET['name'];
 			$path = (isset($_GET['path']) ? rtrim($_GET['path'], '/') :'');
 			$path = (strlen($path)>0 ? $path . '/' : '');
-			$fileRoot = rtrim(Yii::app()->params->fileRoot, '/\\').'/';
-            $fullPath = $fileRoot . $path . $name;
-            $filecontent=file_get_contents($fullPath);
-			header("Content-Type: text/plain");
-			header("Content-disposition: attachment; filename=\"$name\"");
-			header("Pragma: no-cache");
-			echo $filecontent;
-			exit;
+			$this->download($path . $name);
 		}
-		if(isset($_GET['book_id'])){
-			$model->parent_id=$_GET['book_id'];
-		}
-		$this->render('download',array(
-			'model'=>$model,
-		));
 	}
 
 	/**
@@ -205,14 +214,11 @@ class FileController extends Controller
                 // go through each uploaded file
                 foreach ($files as $key => $file) {
                     // get file path from form if set
-                    $fileRoot = rtrim(Yii::app()->params->fileRoot, '/\\').'/';
-                    $dirPath = $fileRoot . rtrim($model->path, '/\\').'/';
-                    $extension = substr ( $file->name , strrpos($file->name, '.' )+1);
-                    $fileTypeId = FileType::model()->findByAttributes(array('name'=>$extension))->id;
-					if (!file_exists( $dirPath )){
+                    $fileTypeId = FileType::model()->findByAttributes(array('name'=>$file->extension))->id;
+					if (!file_exists( $file->dirPath )){
 						mkdir( $dirPath, 0775, true);
 		            }
-                    if ($file->saveAs($dirPath . $file->name)) {
+                    if ($file->saveAs($file->dirPath . $file->name)) {
                     	// add it to the main model now
                         $file_add = new File();
                         $file_add->name = $file->name; 
@@ -230,13 +236,47 @@ class FileController extends Controller
                 //$this->redirect(array('admin'));
             }
         }
-		if(isset($_GET['book_id'])){
-			$model->parent_id=$_GET['book_id'];
-			$model->path='book' . $_GET['book_id'];
+		if(isset($_GET['parent_id'])){
+			$model->parent_id=$_GET['parent_id'];
+			$model->path='book' . $_GET['parent_id'];
 		}
         
        $this->render('upload',array('model'=>$model,));
        
+	}
+
+	/**
+	 */
+	public function download($filePath)
+	{
+		$fileRoot = rtrim(Yii::app()->params->fileRoot, '/\\').'/';
+        $fullPath = $fileRoot . $filePath;
+        $filecontent=file_get_contents($fullPath);
+		header("Content-Type: text/plain");
+		header("Content-disposition: attachment; filename=\"$name\"");
+		header("Pragma: no-cache");
+		echo $filecontent;
+		exit;
+	}
+	
+	
+	/**
+	 */
+	public function createZip($parent_id)
+	{
+		$zip=new ZipArchive();
+		$fileRoot = rtrim(Yii::app()->params->fileRoot, '/\\').'/';
+		$destination=$fileRoot . "zips/req$parent_id.zip";
+		if($zip->open($destination,ZIPARCHIVE::CREATE) !== true) {
+		   return false;
+		}
+		
+		$files = File::model()->findAllByAttributes(array('parent_id'=>$_GET['parent_id']));
+		foreach($files as $model)
+		{
+		   $zip->addFile($model->fullPath);
+		}
+		$zip->close(); 
 	}
 	
 	/**

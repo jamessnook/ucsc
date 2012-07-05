@@ -114,4 +114,38 @@ class File extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 */
+	public function getFullPath()
+	{
+		$path = (isset($this->path) ? rtrim($this->path, '/') :'');
+		$path = (strlen($path)>0 ? $path . '/' : '');
+		$fileRoot = rtrim(Yii::app()->params->fileRoot, '/\\').'/';
+        return $fileRoot . $path . $this->name;
+	}
+	
+	/**
+	 */
+	public function getDirPath()
+	{
+		$fileRoot = rtrim(Yii::app()->params->fileRoot, '/\\').'/';
+        return $fileRoot . rtrim($this->path, '/\\').'/';
+	}
+	
+	/**
+	 */
+	public function getExtension()
+	{
+        return substr ( $this->name , strrpos($this->name, '.' )+1);
+	}
+	
+	/**
+	 */
+	public function getFileRoot()
+	{
+        return rtrim(Yii::app()->params->fileRoot, '/\\').'/';
+	}
+	
+	
 }

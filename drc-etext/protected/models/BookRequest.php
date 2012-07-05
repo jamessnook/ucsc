@@ -16,10 +16,11 @@
  * @property string $last_changed_by
  * @property string $notes
  * @property boolean $is_complete
+ * @property boolean $has_zip_file
  *
  * The followings are the available model relations:
  * @property IdType $idType
- * @property Request $request
+ * @property ServiceRequest $request
  */
 class BookRequest extends CActiveRecord
 {
@@ -55,10 +56,10 @@ class BookRequest extends CActiveRecord
 			array('title', 'length', 'max'=>512),
 			array('author, edition', 'length', 'max'=>128),
 			array('notes', 'length', 'max'=>1024),
-			array('created, last_changed, is_complete', 'safe'),
+			array('created, last_changed, is_complete, has_zip_file', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, request_id, global_id, id_type, title, author, edition, created, last_changed, last_changed_by, notes, is_complete', 'safe', 'on'=>'search'),
+			array('id, request_id, global_id, id_type, title, author, edition, created, last_changed, last_changed_by, notes, is_complete, has_zip_file', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,7 +72,7 @@ class BookRequest extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idType' => array(self::BELONGS_TO, 'IdType', 'id_type'),
-			'request' => array(self::BELONGS_TO, 'Request', 'request_id'),
+			'request' => array(self::BELONGS_TO, 'ServiceRequest', 'request_id'),
 		);
 	}
 
@@ -93,6 +94,7 @@ class BookRequest extends CActiveRecord
 			'last_changed_by' => 'Last Changed By',
 			'notes' => 'Notes',
 			'is_complete' => 'Is Complete',
+			'has_zip_file' => 'Has Zip File',
 		);
 	}
 
@@ -106,19 +108,21 @@ class BookRequest extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-
+		//$criteria->with=array('request',);
+		$criteria->join="JOIN service_request ON (request_id = service_request.id)";                           
 		$criteria->compare('id',$this->id);
 		$criteria->compare('request_id',$this->request_id);
+		$criteria->compare('service_request.term_id',$this->request->term_id);
+		$criteria->compare('service_request.username',$this->request->username);
+		$criteria->compare('service_request.accommodation_type',$this->request->accommodation_type);
+		$criteria->compare('service_request.subject',$this->request->subject);
+		$criteria->compare('service_request.course_name',$this->request->course_name);
 		$criteria->compare('global_id',$this->global_id);
 		$criteria->compare('id_type',$this->id_type,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('author',$this->author,true);
-		$criteria->compare('edition',$this->edition,true);
-		$criteria->compare('created',$this->created,true);
-		$criteria->compare('last_changed',$this->last_changed,true);
-		$criteria->compare('last_changed_by',$this->last_changed_by,true);
-		$criteria->compare('notes',$this->notes,true);
 		$criteria->compare('is_complete',$this->is_complete);
+		$criteria->compare('has_zip_file',$this->has_zip_file);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -135,7 +139,8 @@ class BookRequest extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-		$criteria->condition="username=$username";                           
+		$criteria->join="JOIN service_request ON (request_id = service_request.id)";                           
+		$criteria->condition="username='$username'";                           
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -75,6 +75,12 @@
 		<?php echo $form->error($model,'is_complete'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'has_zip_file'); ?>
+		<?php echo $form->checkBox($model,'has_zip_file'); ?>
+		<?php echo $form->error($model,'has_zip_file'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

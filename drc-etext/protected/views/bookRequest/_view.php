@@ -49,6 +49,10 @@
 	<?php echo CHtml::encode($data->is_complete); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('has_zip_file')); ?>:</b>
+	<?php echo CHtml::encode($data->has_zip_file); ?>
+	<br />
+
 	*/ ?>
 
 </div>

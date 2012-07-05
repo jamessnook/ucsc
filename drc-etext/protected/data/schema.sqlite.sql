@@ -129,7 +129,8 @@ CREATE TABLE book_request (         -- maps requests to specific books (may not 
     last_changed_by    VARCHAR(32), -- username of user who made last change 
     notes VARCHAR(1024),
     is_complete BOOLEAN DEFAULT 0,
-    foreign key (request_id ) references request (id),
+    has_zip_file BOOLEAN DEFAULT 0,
+    foreign key (request_id ) references service_request (id),
     foreign key (id_type ) references id_type (name)
 );
 
