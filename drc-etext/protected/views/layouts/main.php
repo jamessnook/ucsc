@@ -28,17 +28,17 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Users', 'url'=>array('/user/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
-				array('label'=>'Books', 'url'=>array('/book/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
-				array('label'=>'Requests', 'url'=>array('/serviceRequest/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
-				array('label'=>'Book Requests', 'url'=>array('/bookRequest/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+				//array('label'=>'Home', 'url'=>array('/site/index')),
+				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				//array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'Service Requests', 'url'=>array('/serviceRequest/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+				array('label'=>'Book Requests', 'url'=>array('/bookRequest/admin'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'File Types', 'url'=>array('/fileType/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
-				array('label'=>'Import', 'url'=>array('/serviceRequest/import'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+				array('label'=>'Users', 'url'=>array('/user/admin'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+				//array('label'=>'Import Files', 'url'=>array('/serviceRequest/import'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 				array('label'=>'Login', 'url'=>array('/login/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/login/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/login/logout'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Help', 'url'=>array('/site/page', 'view'=>'help'))
 			),
 		)); ?>
 	</div><!-- mainmenu -->

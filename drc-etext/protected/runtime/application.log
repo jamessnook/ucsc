@@ -1700,3 +1700,37 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php?r=file/upload&parent_id=1
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
 ---
+2012/07/12 00:15:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Linda\dev\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Linda\dev\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Linda\dev\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Linda\dev\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Linda\dev\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Linda\dev\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Linda\dev\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Linda\dev\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Linda\dev\ucsc\framework\web\CWebApplication.php(276): CController->run('import')
+#8 C:\Users\Linda\dev\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('serviceRequest/...')
+#9 C:\Users\Linda\dev\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Linda\dev\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php?r=serviceRequest/import
+HTTP_REFERER=http://localhost/drc-etext/index.php
+---
+2012/07/12 00:19:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Linda\dev\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Linda\dev\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Linda\dev\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Linda\dev\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Linda\dev\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Linda\dev\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Linda\dev\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Linda\dev\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Linda\dev\ucsc\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\Users\Linda\dev\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('fileType/admin')
+#9 C:\Users\Linda\dev\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Linda\dev\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php?r=fileType/admin
+HTTP_REFERER=http://localhost/drc-etext/index.php
+---
