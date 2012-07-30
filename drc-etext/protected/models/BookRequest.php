@@ -24,6 +24,9 @@
  */
 class BookRequest extends CActiveRecord
 {
+	public $term_id;
+	public $username;
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -56,7 +59,7 @@ class BookRequest extends CActiveRecord
 			array('title', 'length', 'max'=>512),
 			array('author, edition', 'length', 'max'=>128),
 			array('notes', 'length', 'max'=>1024),
-			array('created, last_changed, is_complete, has_zip_file', 'safe'),
+			array('created, last_changed, is_complete, has_zip_file, term_id, username', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, request_id, global_id, id_type, title, author, edition, created, last_changed, last_changed_by, notes, is_complete, has_zip_file', 'safe', 'on'=>'search'),
@@ -108,12 +111,14 @@ class BookRequest extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-		//$criteria->with=array('request',);
-		$criteria->join="JOIN service_request ON (request_id = service_request.id)";                           
-		$criteria->compare('id',$this->id);
+		$criteria->with=array('request',);
+		$criteria->join="JOIN service_request ON (request_id = service_request.id)";         
+		//$criteria->with = array( 'service_request' );   
+		//$criteria->alias="x";                
+		$criteria->compare('t.id',$this->id);
 		$criteria->compare('request_id',$this->request_id);
-		$criteria->compare('service_request.term_id',$this->request->term_id);
-		$criteria->compare('service_request.username',$this->request->username);
+		$criteria->compare('service_request.term_id',$this->term_id);
+		$criteria->compare('service_request.username',$this->username);
 		$criteria->compare('service_request.accommodation_type',$this->request->accommodation_type);
 		$criteria->compare('service_request.subject',$this->request->subject);
 		$criteria->compare('service_request.course_name',$this->request->course_name);

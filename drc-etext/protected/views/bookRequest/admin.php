@@ -48,8 +48,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'request_id',
-		'request.term_id',
-		'request.username',
+		array( 
+			'name'=>'term_id', 
+			'value'=>'$data->request->term_id', 
+			'filter' => CHtml::listData(Term::model()->findAll(), 'id', 'name'), 
+			'htmlOptions'=>array('width'=>'110px', 'class'=>'term'),
+		 ),
+		//array( 'name'=>'username', 'value'=>'$data->request->username' ),
+		array( 'name'=>'username', 'value'=>'$data->request->username', 'filter' => CHtml::listData(User::model()->findAll(), 'username', 'username'), 'htmlOptions'=>array('width'=>'90px', 'class'=>'username'), ),
+		//'request.>term_id',
+		//'request.username',
 		//array(
         //            'name' => 'request.term_id',
         //            'value' => '$data->request->term_id'
@@ -73,8 +81,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		*/
 		array(
 			'class'=>'CButtonColumn',
-			'buttons'=>array(
-				'upload'=>array(
+				'buttons'=>array(
+					'upload'=>array(
 						'label'=>'Upload',     // text label of the button
 						//'url'=>Yii::app()->createAbsoluteUrl("file/download"),       // a PHP expression for generating the URL of the button
 						'url'=>'Yii::app()->createUrl("file/upload", array("parent_id"=>$data->id))',       // a PHP expression for generating the URL of the button
@@ -82,19 +90,20 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 						//'options'=>array(), // HTML options for the button tag
 						//'click'=>'...',     // a JS function to be invoked when the button is clicked
 						//'visible'=>'...',   // a PHP expression for determining whether the button is visible
-				),
-				//'download'=>array(
-				//		'label'=>'Download',     // text label of the button
+					),
+					//'download'=>array(
+					//	'label'=>'Download',     // text label of the button
 						//'url'=>Yii::app()->createAbsoluteUrl("file/download"),       // a PHP expression for generating the URL of the button
-				//		'url'=>'Yii::app()->createUrl("file/download", array("parent_id"=>$data->id))',       // a PHP expression for generating the URL of the button
+					//	'url'=>'Yii::app()->createUrl("file/download", array("parent_id"=>$data->id))',       // a PHP expression for generating the URL of the button
 						//'imageUrl'=>'...',  // image URL of the button. If not set or false, a text link is used
 						//'options'=>array(), // HTML options for the button tag
 						//'click'=>'...',     // a JS function to be invoked when the button is clicked
 						//'visible'=>'...',   // a PHP expression for determining whether the button is visible
-				//),
+					//),
+				),
 				//'template'=>'{view}{update}{delete}{upload}{download}',
 				'template'=>'{view}{update}{delete}{upload}',
+				//'template'=>'{view}{update}{upload}',
 			),
-		),
 	),
 )); ?>
