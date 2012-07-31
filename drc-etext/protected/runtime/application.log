@@ -2162,3 +2162,54 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php?r=bookRequest/admin
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=user/admin
 ---
+2012/07/30 20:46:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('import')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('serviceRequest/...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=serviceRequest/import
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=serviceRequest/admin
+---
+2012/07/31 02:34:59 [error] [exception.CException] exception 'CException' with message 'Property "ServiceRequest.last_changed" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('last_changed')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('last_changed')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(ServiceRequest), 'last_changed')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(ServiceRequest), 'last_changed', Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CActiveForm.php(575): CHtml::activeTextField(Object(ServiceRequest), 'last_changed', Array)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\serviceRequest\_search.php(100): CActiveForm->textField(Object(ServiceRequest), 'last_changed')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\serviceRequest\admin.php(38): CController->renderPartial('_search', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#14 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\ServiceRequestController.php(159): CController->render('admin', Array)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ServiceRequestController->actionAdmin()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('admin')
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('serviceRequest/...')
+#26 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=serviceRequest/admin
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
+---

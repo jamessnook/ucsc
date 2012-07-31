@@ -137,13 +137,26 @@ class ServiceRequest extends CActiveRecord
 		$criteria->compare('type_name',$this->type_name,true);
 		$criteria->compare('effective_date',$this->effective_date,true);
 		$criteria->compare('created',$this->created,true);
-		$criteria->compare('last_changed',$this->last_changed,true);
-		$criteria->compare('last_changed_by',$this->last_changed_by,true);
+		$criteria->compare('modified',$this->last_changed,true);
+		$criteria->compare('modified_by',$this->last_changed_by,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Overrides parent to assign non input values.
+	 * @return boolean whether the saving should be executed. Defaults to true.
+	 */
+	public function beforeSave(){
+    	if ($this->isNewRecord)
+        	$this->created = new CDbExpression('NOW()');
+       	$this->modified = new CDbExpression('NOW()');
+		$this->modified_by = Yii::app()->user->name; 
+		return parent::beforeSave();
+	}
+
 	/**
 	 * Override standard implementation to also create and save new users if defined.
 	 */

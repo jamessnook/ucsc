@@ -59,18 +59,19 @@ CREATE TABLE file (
     path         VARCHAR(256) NOT NULL DEFAULT '', -- path for file on server under file root
     caption      VARCHAR(512),  -- optional for display purposes
     parent_id    INTEGER,       -- optional parent object id, ie 'book' if files are chapters
-    type         VARCHAR(32),       -- file type (redundant with extension on path?)
+    type         VARCHAR(32),   -- file type (redundant with extension on path?)
     order_num    INTEGER,       -- display or list order if member of a group (chapters in a book)
-    post_date    DATE,          -- date uploaded
-    poster_id 	 VARCHAR(64),   -- username who uploaded file
-    foreign key (poster_id) references user ("username")
+    created      DATETIME,      -- when requested
+    modified     DATETIME,      -- date and time of last change
+    modified_by   VARCHAR(32),  -- username of user who made last change 
+    foreign key (modified_by) references user ("username")
 );
 
 drop table if exists file_type;
 CREATE TABLE file_type (
     name         VARCHAR(32) NOT NULL,    -- file extension, 
     accom_type   VARCHAR(16),    -- identifies accommodation type in AIS
-    caption      VARCHAR(128),    -- optional for display 
+    caption      VARCHAR(128),   -- optional for display 
     primary key (name)
 );
 INSERT INTO file_type (name) VALUES ('docx');
@@ -100,8 +101,8 @@ CREATE TABLE service_request (  -- AIS feed
     type_name     VARCHAR(32),          -- AIS: SYSADMIN.PS_SCR_DRC_ACCSETP.DESCR) or , six letter code
     effective_date DATE,                -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.EFFDT_FROM)
     created    DATETIME,                -- when imported or requested (local, not from AIS)
-    last_changed    DATETIME,           -- date and time of last change (local, not from AIS)
-    last_changed_by    VARCHAR(32),     -- username of user who made last change (local, not from AIS)
+    modified    DATETIME,               -- date and time of last change (local, not from AIS)
+    modified_by    VARCHAR(32),         -- username of user who made last change (local, not from AIS)
     foreign key (username ) references user (username)
 );
 
@@ -116,17 +117,17 @@ INSERT INTO id_type (name) VALUES ('unknown');
 INSERT INTO id_type (name) VALUES ('none');
 
 drop table if exists book_request;
-CREATE TABLE book_request (         -- maps requests to specific books (may not be in drc library and book table yet)
+CREATE TABLE book_request (             -- maps requests to specific books (may not be in drc library and book table yet)
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
-    request_id    INTEGER,          -- drc-etext id, identifies request that came from AIS
-    global_id INTEGER,              -- most often isbn number
-    id_type VARCHAR(32),            -- most often isbn, also issn, aisn, etc
+    request_id    INTEGER,              -- drc-etext id, identifies request that came from AIS
+    global_id INTEGER,                  -- most often isbn number
+    id_type VARCHAR(32),                -- most often isbn, also issn, aisn, etc
     title VARCHAR(512) NOT NULL, 
     author VARCHAR(128),
     edition VARCHAR(128),
-    created    DATETIME,            -- when requested
-    last_changed    DATETIME,       -- date and time of last change
-    last_changed_by    VARCHAR(32), -- username of user who made last change 
+    created    DATETIME,                -- when requested
+    modified    DATETIME,               -- date and time of last change
+    modified_by    VARCHAR(32),         -- username of user who made last change 
     notes VARCHAR(1024),
     is_complete BOOLEAN DEFAULT 0,
     has_zip_file BOOLEAN DEFAULT 0,

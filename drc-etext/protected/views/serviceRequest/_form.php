@@ -107,24 +107,6 @@
 		<?php echo $form->error($model,'effective_date'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-		<?php echo $form->error($model,'created'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'last_changed'); ?>
-		<?php echo $form->textField($model,'last_changed'); ?>
-		<?php echo $form->error($model,'last_changed'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'last_changed_by'); ?>
-		<?php echo $form->textField($model,'last_changed_by',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'last_changed_by'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

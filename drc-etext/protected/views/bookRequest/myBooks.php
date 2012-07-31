@@ -41,39 +41,36 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+$model->username = Yii::app()->user->name;  // set up for current user
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'book-request-grid',
-	'dataProvider'=>$model->findForUserAndTerm(Yii::app()->user->name, Term::model()->getCurrentTermId()),
+	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
 		'request_id',
+		array( 
+			'name'=>'term_id', 
+			'value'=>'$data->request->term_id', 
+			'filter' => CHtml::listData(Term::model()->findAll(), 'id', 'name'), 
+			'htmlOptions'=>array('width'=>'110px', 'class'=>'term'),
+		 ),
 		'global_id',
 		'id_type',
 		'title',
 		'author',
-		/*
-		'edition',
-		'created',
-		'last_changed',
-		'last_changed_by',
-		'notes',
-		'is_complete',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 			'buttons'=>array(
 				'download'=>array(
 					'label'=>'Download',     // text label of the button
-	    			//'url'=>Yii::app()->createAbsoluteUrl("file/download"),       // a PHP expression for generating the URL of the button
-	    			'url'=>'Yii::app()->createUrl("file/download", array("parent_id"=>$data->id))',       // a PHP expression for generating the URL of the button
-					//'imageUrl'=>'...',  // image URL of the button. If not set or false, a text link is used
-	    			//'options'=>array(), // HTML options for the button tag
-	    			//'click'=>'...',     // a JS function to be invoked when the button is clicked
-	    			//'visible'=>'...',   // a PHP expression for determining whether the button is visible
+    				'url'=>'Yii::app()->createUrl("file/download", array("parent_id"=>$data->id))',       // a PHP expression for generating the URL of the button
 				),
 			),
 			'template'=>'{view}{update}{delete}{download}',
 		),
 	),
 )); ?>
+
+<?php echo $form->hiddenField($model,'username'); ?>

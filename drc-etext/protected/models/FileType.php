@@ -92,4 +92,17 @@ class FileType extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Overrides parent to assign non input values.
+	 * @return boolean whether the saving should be executed. Defaults to true.
+	 */
+	public function beforeSave(){
+    	if ($this->isNewRecord)
+        	$this->created = new CDbExpression('NOW()');
+       	$this->modified = new CDbExpression('NOW()');
+		$this->modified_by = Yii::app()->user->name; 
+		return parent::beforeSave();
+	}
+
 }
