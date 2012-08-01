@@ -20,8 +20,8 @@
 	<?php echo CHtml::encode($data->parent_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('type')); ?>:</b>
-	<?php echo CHtml::encode($data->type); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('type_id')); ?>:</b>
+	<?php echo CHtml::encode($data->type_id); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('order_num')); ?>:</b>
@@ -29,12 +29,16 @@
 	<br />
 
 	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('post_date')); ?>:</b>
-	<?php echo CHtml::encode($data->post_date); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('created')); ?>:</b>
+	<?php echo CHtml::encode($data->created); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('poster_id')); ?>:</b>
-	<?php echo CHtml::encode($data->poster_id); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('modified')); ?>:</b>
+	<?php echo CHtml::encode($data->modified); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('modified_by')); ?>:</b>
+	<?php echo CHtml::encode($data->modified_by); ?>
 	<br />
 
 	*/ ?>

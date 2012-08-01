@@ -73,12 +73,12 @@
 	<?php echo CHtml::encode($data->created); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('last_changed')); ?>:</b>
-	<?php echo CHtml::encode($data->last_changed); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('modified')); ?>:</b>
+	<?php echo CHtml::encode($data->modified); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('last_changed_by')); ?>:</b>
-	<?php echo CHtml::encode($data->last_changed_by); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('modified_by')); ?>:</b>
+	<?php echo CHtml::encode($data->modified_by); ?>
 	<br />
 
 	*/ ?>

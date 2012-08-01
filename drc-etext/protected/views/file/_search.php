@@ -31,8 +31,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'type'); ?>
-		<?php echo $form->textField($model,'type',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->label($model,'type_id'); ?>
+		<?php echo $form->textField($model,'type_id'); ?>
 	</div>
 
 	<div class="row">
@@ -41,13 +41,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'post_date'); ?>
-		<?php echo $form->textField($model,'post_date'); ?>
+		<?php echo $form->label($model,'created'); ?>
+		<?php echo $form->textField($model,'created'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'poster_id'); ?>
-		<?php echo $form->textField($model,'poster_id',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->label($model,'modified'); ?>
+		<?php echo $form->textField($model,'modified'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'modified_by'); ?>
+		<?php echo $form->textField($model,'modified_by',array('size'=>32,'maxlength'=>32)); ?>
 	</div>
 
 	<div class="row buttons">

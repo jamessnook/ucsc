@@ -34,9 +34,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'type'); ?>
-		<?php echo $form->textField($model,'type',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'type'); ?>
+		<?php echo $form->labelEx($model,'type_id'); ?>
+		<?php echo $form->textField($model,'type_id'); ?>
+		<?php echo $form->error($model,'type_id'); ?>
 	</div>
 
 	<div class="row">
@@ -46,15 +46,21 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'post_date'); ?>
-		<?php echo $form->textField($model,'post_date'); ?>
-		<?php echo $form->error($model,'post_date'); ?>
+		<?php echo $form->labelEx($model,'created'); ?>
+		<?php echo $form->textField($model,'created'); ?>
+		<?php echo $form->error($model,'created'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'poster_id'); ?>
-		<?php echo $form->textField($model,'poster_id',array('size'=>60,'maxlength'=>64)); ?>
-		<?php echo $form->error($model,'poster_id'); ?>
+		<?php echo $form->labelEx($model,'modified'); ?>
+		<?php echo $form->textField($model,'modified'); ?>
+		<?php echo $form->error($model,'modified'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'modified_by'); ?>
+		<?php echo $form->textField($model,'modified_by',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'modified_by'); ?>
 	</div>
 
 	<div class="row buttons">

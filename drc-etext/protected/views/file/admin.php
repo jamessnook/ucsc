@@ -9,7 +9,7 @@ $this->menu=array(
 	array('label'=>'Create File', 'url'=>array('create')),
 	array('label'=>'Upload Files','url'=>array('upload')),
 	array('label'=>'Download Files','url'=>array('download')),
-);
+	);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -49,11 +49,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'path',
 		'caption',
 		'parent_id',
-		'type',
+		'type_id',
 		/*
 		'order_num',
-		'post_date',
-		'poster_id',
+		'created',
+		'modified',
+		'modified_by',
 		*/
 		array(
 			'class'=>'CButtonColumn',

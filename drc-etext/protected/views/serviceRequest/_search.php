@@ -12,7 +12,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'term_id'); ?>
-		<?php echo $form->textField($model,'term_id',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->textField($model,'term_id'); ?>
 	</div>
 
 	<div class="row">
@@ -96,13 +96,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'last_changed'); ?>
-		<?php echo $form->textField($model,'last_changed'); ?>
+		<?php echo $form->label($model,'modified'); ?>
+		<?php echo $form->textField($model,'modified'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'last_changed_by'); ?>
-		<?php echo $form->textField($model,'last_changed_by',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->label($model,'modified_by'); ?>
+		<?php echo $form->textField($model,'modified_by',array('size'=>32,'maxlength'=>32)); ?>
 	</div>
 
 	<div class="row buttons">

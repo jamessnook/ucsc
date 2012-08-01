@@ -26,8 +26,8 @@ $this->menu=array(
 		'author',
 		'edition',
 		'created',
-		'last_changed',
-		'last_changed_by',
+		'modified',
+		'modified_by',
 		'notes',
 		'is_complete',
 		'has_zip_file',
@@ -37,7 +37,7 @@ $this->menu=array(
 <h2>Download Files</h2>
 
 <?php 
-	$files = File::model()->findAllByAttributes(array('parent_id'=>$model->id), array('order'=>'type,name'));
+	$files = File::model()->findAllByAttributes(array('parent_id'=>$model->id), array('order'=>'type_id,name'));
     foreach ($files as $file) {
     	echo CHtml::link("$file->name, ", array('file/download', 'name'=>$file->name, 'path'=>$file->path),
 	      array('class'=>'donwload_link')

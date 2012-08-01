@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table 'service_request':
  * @property integer $id
- * @property string $term_id
+ * @property integer $term_id
  * @property integer $class_number
  * @property string $class_section
  * @property string $session_code
@@ -22,10 +22,12 @@
  * @property string $type_name
  * @property string $effective_date
  * @property string $created
- * @property string $last_changed
- * @property string $last_changed_by
+ * @property string $modified
+ * @property string $modified_by
  *
  * The followings are the available model relations:
+ * @property BookRequest[] $bookRequests
+ * @property User $modifiedBy
  * @property User $username0
  */
 class ServiceRequest extends CActiveRecord
@@ -57,13 +59,13 @@ class ServiceRequest extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('term_id', 'required'),
-			array('class_number, course_offer_number', 'numerical', 'integerOnly'=>true),
-			array('term_id, class_section, session_code, course_id, instructor_id, instructor_cruzid, accommodation_type, type_name, last_changed_by', 'length', 'max'=>32),
+			array('term_id, class_number, course_offer_number', 'numerical', 'integerOnly'=>true),
+			array('class_section, session_code, course_id, instructor_id, instructor_cruzid, accommodation_type, type_name, modified_by', 'length', 'max'=>32),
 			array('course_name, subject, catalog_nbr, student_id, username', 'length', 'max'=>64),
-			array('effective_date, created, last_changed', 'safe'),
+			array('effective_date, created, modified', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, term_id, class_number, class_section, session_code, course_offer_number, course_id, course_name, subject, catalog_nbr, instructor_id, instructor_cruzid, student_id, username, accommodation_type, type_name, effective_date, created, last_changed, last_changed_by', 'safe', 'on'=>'search'),
+			array('id, term_id, class_number, class_section, session_code, course_offer_number, course_id, course_name, subject, catalog_nbr, instructor_id, instructor_cruzid, student_id, username, accommodation_type, type_name, effective_date, created, modified, modified_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,6 +77,8 @@ class ServiceRequest extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'bookRequests' => array(self::HAS_MANY, 'BookRequest', 'request_id'),
+			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
 			'username0' => array(self::BELONGS_TO, 'User', 'username'),
 		);
 	}
@@ -91,7 +95,7 @@ class ServiceRequest extends CActiveRecord
 			'class_section' => 'Class Section',
 			'session_code' => 'Session Code',
 			'course_offer_number' => 'Course Offer Number',
-			'course_id' => 'Course',
+			'course_id' => 'Course Id',
 			'course_name' => 'Course Name',
 			'subject' => 'Subject',
 			'catalog_nbr' => 'Catalog Nbr',
@@ -103,8 +107,8 @@ class ServiceRequest extends CActiveRecord
 			'type_name' => 'Type Name',
 			'effective_date' => 'Effective Date',
 			'created' => 'Created',
-			'last_changed' => 'Last Changed',
-			'last_changed_by' => 'Last Changed By',
+			'modified' => 'Modified',
+			'modified_by' => 'Modified By',
 		);
 	}
 
@@ -120,7 +124,7 @@ class ServiceRequest extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('term_id',$this->term_id,true);
+		$criteria->compare('term_id',$this->term_id);
 		$criteria->compare('class_number',$this->class_number);
 		$criteria->compare('class_section',$this->class_section,true);
 		$criteria->compare('session_code',$this->session_code,true);
@@ -137,22 +141,22 @@ class ServiceRequest extends CActiveRecord
 		$criteria->compare('type_name',$this->type_name,true);
 		$criteria->compare('effective_date',$this->effective_date,true);
 		$criteria->compare('created',$this->created,true);
-		$criteria->compare('modified',$this->last_changed,true);
-		$criteria->compare('modified_by',$this->last_changed_by,true);
+		$criteria->compare('modified',$this->modified,true);
+		$criteria->compare('modified_by',$this->modified_by,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-	
+
 	/**
 	 * Overrides parent to assign non input values.
 	 * @return boolean whether the saving should be executed. Defaults to true.
 	 */
 	public function beforeSave(){
     	if ($this->isNewRecord)
-        	$this->created = new CDbExpression('NOW()');
-       	$this->modified = new CDbExpression('NOW()');
+        	$this->created = new CDbExpression("datetime('now')");
+       	$this->modified = new CDbExpression("datetime('now')");
 		$this->modified_by = Yii::app()->user->name; 
 		return parent::beforeSave();
 	}
@@ -185,4 +189,5 @@ class ServiceRequest extends CActiveRecord
     {
     	return $this->course_name.', '.$this->type_name;
     }
+
 }

@@ -60,7 +60,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'notes'); ?>
-		<?php echo $form->textField($model,'notes',array('size'=>60,'maxlength'=>1024)); ?>
+		<?php echo CHtml::activeTextArea($model,'notes',array('rows'=>10, 'cols'=>70)); ?>
+		<p class="hint">You may use <a target="_blank" href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a>.</p>
 		<?php echo $form->error($model,'notes'); ?>
 	</div>
 

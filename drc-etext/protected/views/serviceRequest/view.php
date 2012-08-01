@@ -36,7 +36,7 @@ $this->menu=array(
 		'type_name',
 		'effective_date',
 		'created',
-		'last_changed',
-		'last_changed_by',
+		'modified',
+		'modified_by',
 	),
 )); ?>

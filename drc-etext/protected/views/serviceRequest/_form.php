@@ -103,10 +103,23 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'effective_date'); ?>
-		<?php echo $form->textField($model,'effective_date'); ?>
+		<?php 
+		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model'=>$model,
+			'attribute'=>'effective_date',	    
+			//'name'=>'publishDate',
+	    	// additional javascript options for the date picker plugin
+		    'options'=>array(
+		        'showAnim'=>'fold',
+		    ),
+		    'htmlOptions'=>array(
+		        'style'=>'height:20px;'
+		    ),
+		));
+		?>
 		<?php echo $form->error($model,'effective_date'); ?>
 	</div>
-
+	
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

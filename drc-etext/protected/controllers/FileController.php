@@ -214,19 +214,19 @@ class FileController extends Controller
                 // go through each uploaded file
                 foreach ($files as $key => $file) {
                     // get file path from form if set
-                    $fileTypeId = FileType::model()->findByAttributes(array('name'=>$file->extension))->id;
-					if (!file_exists( $file->dirPath )){
+                    //$fileExtension = substr ( $file->name , strrpos($file->name, '.' )+1);
+                    $fileTypeId = FileType::model()->findByAttributes(array('name'=>$file->extensionName))->id;
+                    $dirPath = Yii::app()->params['fileRoot'] . "/" . $model->path;
+					if (!file_exists( $dirPath )){
 						mkdir( $dirPath, 0775, true);
 		            }
-                    if ($file->saveAs($file->dirPath . $file->name)) {
+                    if ($file->saveAs($dirPath . "/" . $file->name)) {
                     	// add it to the main model now
                         $file_add = new File();
                         $file_add->name = $file->name; 
                         $file_add->type_id = $fileTypeId; 
                         $file_add->path = $model->path; 
                         $file_add->parent_id = $model->parent_id; 
-                        $file_add->post_date = new CDbExpression('DATE()');
-                        $file_add->poster_id = Yii::app()->user->name;
                         $file_add->save(); // DONE
                     }
                     else {

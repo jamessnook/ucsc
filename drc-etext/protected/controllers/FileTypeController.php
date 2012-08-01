@@ -70,7 +70,7 @@ class FileTypeController extends Controller
 		{
 			$model->attributes=$_POST['FileType'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->name));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -94,7 +94,7 @@ class FileTypeController extends Controller
 		{
 			$model->attributes=$_POST['FileType'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->name));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(

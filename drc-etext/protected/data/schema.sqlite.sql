@@ -59,20 +59,22 @@ CREATE TABLE file (
     path         VARCHAR(256) NOT NULL DEFAULT '', -- path for file on server under file root
     caption      VARCHAR(512),  -- optional for display purposes
     parent_id    INTEGER,       -- optional parent object id, ie 'book' if files are chapters
-    type         VARCHAR(32),   -- file type (redundant with extension on path?)
+    type_id      INTEGER,       -- file type (redundant with extension on path?)
     order_num    INTEGER,       -- display or list order if member of a group (chapters in a book)
     created      DATETIME,      -- when requested
     modified     DATETIME,      -- date and time of last change
     modified_by   VARCHAR(32),  -- username of user who made last change 
     foreign key (modified_by) references user ("username")
+    foreign key (parent_id) references book_request ("id")
+    foreign key (type_id) references file_type ("id")
 );
 
 drop table if exists file_type;
 CREATE TABLE file_type (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     name         VARCHAR(32) NOT NULL,    -- file extension, 
     accom_type   VARCHAR(16),    -- identifies accommodation type in AIS
-    caption      VARCHAR(128),   -- optional for display 
-    primary key (name)
+    caption      VARCHAR(128)   -- optional for display 
 );
 INSERT INTO file_type (name) VALUES ('docx');
 INSERT INTO file_type (name) VALUES ('doc');
@@ -104,6 +106,7 @@ CREATE TABLE service_request (  -- AIS feed
     modified    DATETIME,               -- date and time of last change (local, not from AIS)
     modified_by    VARCHAR(32),         -- username of user who made last change (local, not from AIS)
     foreign key (username ) references user (username)
+    foreign key (modified_by) references user ("username")
 );
 
 drop table if exists id_type;
@@ -133,6 +136,7 @@ CREATE TABLE book_request (             -- maps requests to specific books (may 
     has_zip_file BOOLEAN DEFAULT 0,
     foreign key (request_id ) references service_request (id),
     foreign key (id_type ) references id_type (name)
+    foreign key (modified_by) references user ("username")
 );
 
 drop table if exists term;

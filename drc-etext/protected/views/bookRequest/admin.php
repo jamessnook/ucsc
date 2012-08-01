@@ -56,27 +56,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		 ),
 		//array( 'name'=>'username', 'value'=>'$data->request->username' ),
 		array( 'name'=>'username', 'value'=>'$data->request->username', 'filter' => CHtml::listData(User::model()->findAll(), 'username', 'username'), 'htmlOptions'=>array('width'=>'90px', 'class'=>'username'), ),
-		//'request.>term_id',
-		//'request.username',
-		//array(
-        //            'name' => 'request.term_id',
-        //            'value' => '$data->request->term_id'
-        //),
-		//array(
-        //            'name' => 'request.username',
-        //            'value' => '$data->request->username'
-        //),
 		'global_id',
 		'id_type',
 		'title',
 		'author',
+		'is_complete',
 		/*
 		'edition',
-		'created',
-		'last_changed',
-		'last_changed_by',
 		'notes',
-		'is_complete',
 		'has_zip_file',
 		*/
 		array(
@@ -91,19 +78,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 						//'click'=>'...',     // a JS function to be invoked when the button is clicked
 						//'visible'=>'...',   // a PHP expression for determining whether the button is visible
 					),
-					//'download'=>array(
-					//	'label'=>'Download',     // text label of the button
-						//'url'=>Yii::app()->createAbsoluteUrl("file/download"),       // a PHP expression for generating the URL of the button
-					//	'url'=>'Yii::app()->createUrl("file/download", array("parent_id"=>$data->id))',       // a PHP expression for generating the URL of the button
-						//'imageUrl'=>'...',  // image URL of the button. If not set or false, a text link is used
-						//'options'=>array(), // HTML options for the button tag
-						//'click'=>'...',     // a JS function to be invoked when the button is clicked
-						//'visible'=>'...',   // a PHP expression for determining whether the button is visible
-					//),
 				),
-				//'template'=>'{view}{update}{delete}{upload}{download}',
 				'template'=>'{view}{update}{delete}{upload}',
-				//'template'=>'{view}{update}{upload}',
 			),
 	),
 )); ?>

@@ -12,15 +12,17 @@
  * @property string $author
  * @property string $edition
  * @property string $created
- * @property string $last_changed
- * @property string $last_changed_by
+ * @property string $modified
+ * @property string $modified_by
  * @property string $notes
  * @property boolean $is_complete
  * @property boolean $has_zip_file
  *
  * The followings are the available model relations:
+ * @property User $modifiedBy
  * @property IdType $idType
  * @property ServiceRequest $request
+ * @property File[] $files
  */
 class BookRequest extends CActiveRecord
 {
@@ -55,14 +57,14 @@ class BookRequest extends CActiveRecord
 		return array(
 			array('title', 'required'),
 			array('request_id, global_id', 'numerical', 'integerOnly'=>true),
-			array('id_type, last_changed_by', 'length', 'max'=>32),
+			array('id_type, modified_by', 'length', 'max'=>32),
 			array('title', 'length', 'max'=>512),
 			array('author, edition', 'length', 'max'=>128),
 			array('notes', 'length', 'max'=>1024),
-			array('created, last_changed, is_complete, has_zip_file, term_id, username', 'safe'),
+			array('created, modified, is_complete, has_zip_file', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, request_id, global_id, id_type, title, author, edition, created, last_changed, last_changed_by, notes, is_complete, has_zip_file', 'safe', 'on'=>'search'),
+			array('id, request_id, global_id, id_type, title, author, edition, created, modified, modified_by, notes, is_complete, has_zip_file', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,8 +76,10 @@ class BookRequest extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
 			'idType' => array(self::BELONGS_TO, 'IdType', 'id_type'),
 			'request' => array(self::BELONGS_TO, 'ServiceRequest', 'request_id'),
+			'files' => array(self::HAS_MANY, 'File', 'parent_id'),
 		);
 	}
 
@@ -93,14 +97,43 @@ class BookRequest extends CActiveRecord
 			'author' => 'Author',
 			'edition' => 'Edition',
 			'created' => 'Created',
-			'last_changed' => 'Last Changed',
-			'last_changed_by' => 'Last Changed By',
+			'modified' => 'Modified',
+			'modified_by' => 'Modified By',
 			'notes' => 'Notes',
 			'is_complete' => 'Is Complete',
 			'has_zip_file' => 'Has Zip File',
 		);
 	}
 
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	public function search()
+	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('id',$this->id);
+		$criteria->compare('request_id',$this->request_id);
+		$criteria->compare('global_id',$this->global_id);
+		$criteria->compare('id_type',$this->id_type,true);
+		$criteria->compare('title',$this->title,true);
+		$criteria->compare('author',$this->author,true);
+		$criteria->compare('edition',$this->edition,true);
+		$criteria->compare('created',$this->created,true);
+		$criteria->compare('modified',$this->modified,true);
+		$criteria->compare('modified_by',$this->modified_by,true);
+		$criteria->compare('notes',$this->notes,true);
+		$criteria->compare('is_complete',$this->is_complete);
+		$criteria->compare('has_zip_file',$this->has_zip_file);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+	 */
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -140,12 +173,12 @@ class BookRequest extends CActiveRecord
 	 */
 	public function beforeSave(){
     	if ($this->isNewRecord)
-        	$this->created = new CDbExpression('NOW()');
-       	$this->modified = new CDbExpression('NOW()');
+        	$this->created = new CDbExpression("datetime('now')");
+       	$this->modified = new CDbExpression("datetime('now')");
 		$this->modified_by = Yii::app()->user->name; 
 		return parent::beforeSave();
 	}
-
+	
 	/**
 	 * Retrieves a list of models associated wit hthe current user.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

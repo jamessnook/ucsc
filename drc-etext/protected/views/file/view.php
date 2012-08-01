@@ -12,7 +12,7 @@ $this->menu=array(
 	array('label'=>'Manage File', 'url'=>array('admin')),
 	array('label'=>'Upload Files','url'=>array('upload')),
 	array('label'=>'Download Files','url'=>array('download')),
-);
+	);
 ?>
 
 <h1>View File #<?php echo $model->id; ?></h1>
@@ -25,9 +25,10 @@ $this->menu=array(
 		'path',
 		'caption',
 		'parent_id',
-		'type',
+		'type_id',
 		'order_num',
-		'post_date',
-		'poster_id',
+		'created',
+		'modified',
+		'modified_by',
 	),
 )); ?>

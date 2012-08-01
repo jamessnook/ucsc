@@ -73,4 +73,3 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	),
 )); ?>
 
-<?php echo $form->hiddenField($model,'username'); ?>
