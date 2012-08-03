@@ -10,4 +10,3 @@ $this->breadcrumbs=array(
 <?php echo $this->renderPartial('_download', array('model'=>$model)); ?>
 
 
-?>

@@ -38,6 +38,10 @@ class FileController extends Controller
 				'actions'=>array('admin','delete', 'download', 'upload'),
 				'roles'=>array('admin'),
 			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('download'),
+				'roles'=>array('student'),
+			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -159,22 +163,26 @@ class FileController extends Controller
 		
 		if(isset($_GET['parent_id']))
 		{
-			$request = BookRequest::model()->findByPk($_GET['parent_id']);
+			$parentId = $_GET['parent_id'];
+			$request = BookRequest::model()->findByPk($parentId);
 			if (isset($request) && $request->has_zip_file){
-				$this->download("zips/req{$_GET['parent_id']}.zip");
+				$this->download("zips/req$parentId.zip");
 			} else{
-				$files = File::model()->findAllByAttributes(array('parent_id'=>$_GET['parent_id']));
+				$files = File::model()->findAllByAttributes(array('parent_id'=>$parentId));
 				$fileCount = count($files);
-				if ($fileCount < 1 || !$request->is_complete){
+				//if ($fileCount < 1 || !$request->is_complete){
+				if ($fileCount < 1 ){
 					// error
+					echo "Request not complete or no files found for book request #$parentId.";
+					
 				}
 				else if ($fileCount == 1){
 					$model = $files[0];
-					$this->download("$model->path . "/" . $model->name");
+					$this->download("$model->path" . "/" . "$model->name");
 				}
 				else {
 					$model=new File;
-					$model->parent_id=$_GET['parent_id'];
+					$model->parent_id=$parentId;
 					$this->render('download',array(
 						'model'=>$model,
 					));
@@ -253,7 +261,7 @@ class FileController extends Controller
         $fullPath = $fileRoot . $filePath;
         $filecontent=file_get_contents($fullPath);
 		header("Content-Type: text/plain");
-		header("Content-disposition: attachment; filename=\"$name\"");
+		header("Content-disposition: attachment; filename=\"$filePath\"");
 		header("Pragma: no-cache");
 		echo $filecontent;
 		exit;

@@ -2546,3 +2546,107 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php?r=file/upload&parent_id=1
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=file/upload&parent_id=1
 ---
+2012/08/01 19:18:01 [warning] [application] Failed to set unsafe attribute "term_id" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (161)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:18:05 [warning] [application] Failed to set unsafe attribute "term_id" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (161)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:18:11 [warning] [application] Failed to set unsafe attribute "term_id" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (161)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:18:16 [warning] [application] Failed to set unsafe attribute "term_id" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (161)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:18:22 [warning] [application] Failed to set unsafe attribute "term_id" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (161)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:18:30 [warning] [application] Failed to set unsafe attribute "term_id" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (161)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:21:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('download')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('file/download')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=file/download&parent_id=1
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/myBooks
+---
+2012/08/01 19:22:17 [warning] [application] Failed to set unsafe attribute "term_id" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (145)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:22:17 [warning] [application] Failed to set unsafe attribute "username" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (145)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:22:20 [warning] [application] Failed to set unsafe attribute "term_id" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (145)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:22:20 [warning] [application] Failed to set unsafe attribute "username" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (145)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:22:27 [warning] [application] Failed to set unsafe attribute "term_id" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (145)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 19:22:27 [warning] [application] Failed to set unsafe attribute "username" of "BookRequest".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\BookRequestController.php (145)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 20:47:33 [error] [php] Division by zero (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\FileController.php:181)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): FileController->runAction()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): FileController->filterAccessControl()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): FileController->runActionWithFilters()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): FileController->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php?r=file/download&parent_id=1
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\FileController.php (181)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 21:20:21 [error] [php] Undefined variable: name (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\FileController.php:264)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): FileController->runAction()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): FileController->filterAccessControl()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): FileController->runActionWithFilters()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): FileController->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php?r=file/download&parent_id=1
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\FileController.php (264)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\FileController.php (181)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/08/01 21:25:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('upload')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('file/upload')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=file/upload&parent_id=2
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=bookRequest/admin
+---
