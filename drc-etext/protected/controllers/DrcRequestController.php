@@ -1,6 +1,6 @@
 <?php
 
-class TermController extends Controller
+class DrcRequestController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -61,16 +61,16 @@ class TermController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Term;
+		$model=new DrcRequest;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Term']))
+		if(isset($_POST['DrcRequest']))
 		{
-			$model->attributes=$_POST['Term'];
+			$model->attributes=$_POST['DrcRequest'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->term_code));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -90,11 +90,11 @@ class TermController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Term']))
+		if(isset($_POST['DrcRequest']))
 		{
-			$model->attributes=$_POST['Term'];
+			$model->attributes=$_POST['DrcRequest'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->term_code));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(
@@ -127,7 +127,7 @@ class TermController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Term');
+		$dataProvider=new CActiveDataProvider('DrcRequest');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -138,10 +138,10 @@ class TermController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Term('search');
+		$model=new DrcRequest('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Term']))
-			$model->attributes=$_GET['Term'];
+		if(isset($_GET['DrcRequest']))
+			$model->attributes=$_GET['DrcRequest'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -155,7 +155,7 @@ class TermController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Term::model()->findByPk($id);
+		$model=DrcRequest::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -167,7 +167,7 @@ class TermController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='term-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='drc-request-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

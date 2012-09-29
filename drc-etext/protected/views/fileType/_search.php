@@ -16,8 +16,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'accom_type'); ?>
-		<?php echo $form->textField($model,'accom_type',array('size'=>16,'maxlength'=>16)); ?>
+		<?php echo $form->label($model,'accommodation_type'); ?>
+		<?php echo $form->textField($model,'accommodation_type',array('size'=>16,'maxlength'=>16)); ?>
 	</div>
 
 	<div class="row">

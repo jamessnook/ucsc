@@ -67,7 +67,7 @@ CREATE TABLE file_type (    -- AIS feed
 
 
 drop table if exists drc_request;
-CREATE TABLE drc_request (  -- AIS feed associates student and course approved for services
+CREATE TABLE drc_request (  -- AIS feed
     id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- (local, not from AIS)
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
     class_number INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
@@ -79,11 +79,12 @@ CREATE TABLE drc_request (  -- AIS feed associates student and course approved f
     foreign key (username ) references user (username)
  );
 
-drop table if exists accommodation;
-CREATE TABLE accommodation (  -- AIS feed  May not need
+drop table if exists accomodation;
+CREATE TABLE accomodation (  -- AIS feed  May not need
+    id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- (local, not from AIS)
     emplId     VARCHAR(32),             -- AIS: EMPLID, identifies student, 7 digit number not cruzid
     username     VARCHAR(64),           -- AIS: student cruzid needed to match to logged on user
-    accomodation_type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
+    accommodation_type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
     start_date DATE,                    -- AIS
     end_date DATE,                      -- AIS
     created    DATETIME,                -- when imported from AIS
@@ -104,8 +105,8 @@ CREATE TABLE course (  -- AIS feed
     primary key (term_code, class_number )
  );
 
-drop table if exists course_instructor;
-CREATE TABLE course_instructor (         -- AIS feed, one to many association possible
+drop table if exists courseInstructor;
+CREATE TABLE courseInstructor (         -- AIS feed, one to many association possible
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
     class_number INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     emplId     VARCHAR(32),             -- AIS: EMPLID, identifies instructor 7 digit number not cruzid
@@ -119,8 +120,8 @@ CREATE TABLE term(                 --  AIS feed, data for terms for display pupo
     start_date DATE,
     end_date DATE
 );
--- INSERT INTO term (term_code, description) VALUES ('2124', 'Summer 2012');
--- INSERT INTO term (term_code, description) VALUES ('2128', 'Fall 2012');
+-- INSERT INTO term (id, name) VALUES ('2124', 'Summer 2012');
+-- INSERT INTO term (id, name) VALUES ('2128', 'Fall 2012');
 
 drop table if exists file;
 CREATE TABLE file (

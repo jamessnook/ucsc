@@ -7,7 +7,7 @@
  * @property string $name
  *
  * The followings are the available model relations:
- * @property BookRequest[] $bookRequests
+ * @property Book[] $books
  */
 class IdType extends CActiveRecord
 {
@@ -53,7 +53,7 @@ class IdType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'bookRequests' => array(self::HAS_MANY, 'BookRequest', 'id_type'),
+			'books' => array(self::HAS_MANY, 'Book', 'id_type'),
 		);
 	}
 

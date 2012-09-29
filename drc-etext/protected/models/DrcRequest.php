@@ -1,23 +1,28 @@
 <?php
 
 /**
- * This is the model class for table "file_type".
+ * This is the model class for table "drc_request".
  *
- * The followings are the available columns in table 'file_type':
+ * The followings are the available columns in table 'drc_request':
  * @property integer $id
- * @property string $name
+ * @property integer $term_code
+ * @property integer $class_number
+ * @property string $emplId
+ * @property string $username
  * @property string $accommodation_type
- * @property string $caption
+ * @property string $effective_date
+ * @property string $created
  *
  * The followings are the available model relations:
- * @property File[] $files
+ * @property Assignment[] $assignments
+ * @property User $username0
  */
-class FileType extends CActiveRecord
+class DrcRequest extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return FileType the static model class
+	 * @return DrcRequest the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -29,7 +34,7 @@ class FileType extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'file_type';
+		return 'drc_request';
 	}
 
 	/**
@@ -40,13 +45,14 @@ class FileType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('name', 'length', 'max'=>32),
-			array('accommodation_type', 'length', 'max'=>16),
-			array('caption', 'length', 'max'=>128),
+			array('term_code', 'required'),
+			array('term_code, class_number', 'numerical', 'integerOnly'=>true),
+			array('emplId, accommodation_type', 'length', 'max'=>32),
+			array('username', 'length', 'max'=>64),
+			array('effective_date, created', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, accommodation_type, caption', 'safe', 'on'=>'search'),
+			array('id, term_code, class_number, emplId, username, accommodation_type, effective_date, created', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,7 +64,8 @@ class FileType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'files' => array(self::HAS_MANY, 'File', 'type_id'),
+			'assignments' => array(self::MANY_MANY, 'Assignment', 'assignment_type(accommodation_type, assignment_id)'),
+			'username0' => array(self::BELONGS_TO, 'User', 'username'),
 		);
 	}
 
@@ -69,9 +76,13 @@ class FileType extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'term_code' => 'Term Code',
+			'class_number' => 'Class Number',
+			'emplId' => 'Empl',
+			'username' => 'Username',
 			'accommodation_type' => 'Accommodation Type',
-			'caption' => 'Caption',
+			'effective_date' => 'Effective Date',
+			'created' => 'Created',
 		);
 	}
 
@@ -87,9 +98,13 @@ class FileType extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('term_code',$this->term_code);
+		$criteria->compare('class_number',$this->class_number);
+		$criteria->compare('emplId',$this->emplId,true);
+		$criteria->compare('username',$this->username,true);
 		$criteria->compare('accommodation_type',$this->accommodation_type,true);
-		$criteria->compare('caption',$this->caption,true);
+		$criteria->compare('effective_date',$this->effective_date,true);
+		$criteria->compare('created',$this->created,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

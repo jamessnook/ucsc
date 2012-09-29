@@ -8,8 +8,8 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('accom_type')); ?>:</b>
-	<?php echo CHtml::encode($data->accom_type); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('accommodation_type')); ?>:</b>
+	<?php echo CHtml::encode($data->accommodation_type); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('caption')); ?>:</b>

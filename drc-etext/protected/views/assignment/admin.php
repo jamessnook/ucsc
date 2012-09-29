@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'File Types'=>array('index'),
+	'Assignments'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List FileType', 'url'=>array('index')),
-	array('label'=>'Create FileType', 'url'=>array('create')),
+	array('label'=>'List Assignment', 'url'=>array('index')),
+	array('label'=>'Create Assignment', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -15,7 +15,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('file-type-grid', {
+	$.fn.yiiGridView.update('assignment-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -23,7 +23,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage File Types</h1>
+<h1>Manage Assignments</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -38,14 +38,22 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'file-type-grid',
+	'id'=>'assignment-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'name',
-		'accommodation_type',
-		'caption',
+		'term_code',
+		'class_number',
+		'book_id',
+		'created',
+		'modified',
+		/*
+		'modified_by',
+		'notes',
+		'is_complete',
+		'has_zip_file',
+		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

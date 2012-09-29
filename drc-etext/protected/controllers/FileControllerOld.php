@@ -35,8 +35,12 @@ class FileController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','upload','download'),
+				'actions'=>array('admin','delete', 'download', 'upload'),
 				'roles'=>array('admin'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('download'),
+				'roles'=>array('student'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -66,109 +70,18 @@ class FileController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['File'])===true)
+		if(isset($_POST['File']))
 		{
 			$model->attributes=$_POST['File'];
-			if($model->save()!==false)
+			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-		if(isset($_GET['text_id']))
-			$model->text_id=$_GET['text_id'];
-		
+
 		$this->render('create',array(
 			'model'=>$model,
 		));
 	}
 
-	/**
-	 * 
-	 */
-	public function actionDownload()
-	{
-		$model=new File;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		
-		//if(isset($_Get['download']) && isset($_Get['text_id']) && isset($_Get['name'] ) !== false)
-		if(isset($_GET['name']))
-		{
-            //echo 'found file<br />';
-			$name = $_GET['name'];
-			$text_id = $_GET['text_id'];
-			$filecontent=file_get_contents(Yii::getPathOfAlias('webroot').'/files/'. $text_id . '/' . $name);
-			header("Content-Type: text/plain");
-			header("Content-disposition: attachment; filename=$name");
-			header("Pragma: no-cache");
-			echo $filecontent;
-			exit;
-		}
-		if(isset($_GET['text_id']))
-		{
-            //echo 'found text_id<br />';
-			$model->text_id=$_GET['text_id'];
-		}
-		$this->render('download',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Uploads files and Creates new models.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionUpload()
-	{
-		$model=new File;
-		
-		// Uncomment the following line if AJAX validation is needed
-        //$this->performAjaxValidation($model);
- 
-        if(isset($_POST['File'])) {
- 
-            $model->attributes=$_POST['File'];
- 
-            // THIS is how you capture those uploaded images: remember that in your CMultiFile widget, you set 'name' => 'images'
-            $files = CUploadedFile::getInstancesByName('files');
-            //echo 'in file controller<br />';
-            
-            // proceed if the images have been set
-            if (isset($files) && count($files) > 0) {
-                //echo 'found files<br />';
-            	
-                // go through each uploaded image
-                foreach ($files as $key => $file) {
-                    //echo $file->name.'<br />';
-                    $dirPath = Yii::getPathOfAlias('webroot').'/files/'. $model->text_id . '/';
-					if (!file_exists( $dirPath )){
-						mkdir( $dirPath, 0775, true);
-		            }
-                    //if ($file->saveAs(Yii::getPathOfAlias('webroot').'/files/'.$file->name)) {
-                    if ($file->saveAs($dirPath . $file->name)) {
-                    	// add it to the main model now
-                        $file_add = new File();
-                        $file_add->name = $file->name; 
-                        $file_add->format_id = $model->format_id; 
-                        $file_add->text_id = $model->text_id; 
-                        $file_add->post_date = new CDbExpression('DATE()');
-                        $file_add->save(); // DONE
-                        //or// ($model->save())
-                    }
-                    else {
-						$this->render('login/loginFail');
-                   	}
-                }
-                $this->redirect(array('admin'));
-            }
-        }
-		if(isset($_GET['text_id']))
-			$model->text_id=$_GET['text_id'];
-		
-       $this->render('upload',array('model'=>$model,));
-       
-	}
-	
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
@@ -179,7 +92,7 @@ class FileController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);  
 
 		if(isset($_POST['File']))
 		{
@@ -233,15 +146,147 @@ class FileController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['File']))
 			$model->attributes=$_GET['File'];
-			//$model->setAttributes($_GET['File'], false);
-		if(isset($_GET['text_id']))
-			$model->text_id=$_GET['text_id'];
-			
+
 		$this->render('admin',array(
 			'model'=>$model,
 		));
 	}
 
+	/**
+	 * 
+	 */
+	public function actionDownload()
+	{
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		
+		if(isset($_GET['parent_id']))
+		{
+			$parentId = $_GET['parent_id'];
+			$request = BookRequest::model()->findByPk($parentId);
+			if (isset($request) && $request->has_zip_file){
+				$this->download("zips/req$parentId.zip");
+			} else{
+				$files = File::model()->findAllByAttributes(array('parent_id'=>$parentId));
+				$fileCount = count($files);
+				//if ($fileCount < 1 || !$request->is_complete){
+				if ($fileCount < 1 ){
+					// error
+					echo "Request not complete or no files found for book request #$parentId.";
+					
+				}
+				else if ($fileCount == 1){
+					$model = $files[0];
+					$this->download("$model->path" . "/" . "$model->name");
+				}
+				else {
+					$model=new File;
+					$model->parent_id=$parentId;
+					$this->render('download',array(
+						'model'=>$model,
+					));
+				}
+			}
+		}
+		else if(isset($_GET['name']))
+		{
+			$name = $_GET['name'];
+			$path = (isset($_GET['path']) ? rtrim($_GET['path'], '/') :'');
+			$path = (strlen($path)>0 ? $path . '/' : '');
+			$this->download($path . $name);
+		}
+	}
+
+	/**
+	 * Uploads files and Creates new models.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+	public function actionUpload()
+	{
+		$model=new File;
+		
+		// Uncomment the following line if AJAX validation is needed
+        //$this->performAjaxValidation($model);
+ 
+        if(isset($_POST['File'])) {
+        	
+            $model->attributes=$_POST['File'];
+ 
+            // THIS is how you capture those uploaded files: remember that in your CMultiFile widget, you set 'name' => 'images'
+            $files = CUploadedFile::getInstancesByName('files');
+            
+            // proceed if the images have been set
+            if (isset($files) && count($files) > 0) {
+            	
+                // go through each uploaded file
+                foreach ($files as $key => $file) {
+                    // get file path from form if set
+                    //$fileExtension = substr ( $file->name , strrpos($file->name, '.' )+1);
+                    $fileTypeId = FileType::model()->findByAttributes(array('name'=>$file->extensionName))->id;
+                    $dirPath = Yii::app()->params['fileRoot'] . "/" . $model->path;
+					if (!file_exists( $dirPath )){
+						mkdir( $dirPath, 0775, true);
+		            }
+                    if ($file->saveAs($dirPath . "/" . $file->name)) {
+                    	// add it to the main model now
+                        $file_add = new File();
+                        $file_add->name = $file->name; 
+                        $file_add->type_id = $fileTypeId; 
+                        $file_add->path = $model->path; 
+                        $file_add->parent_id = $model->parent_id; 
+                        $file_add->save(); // DONE
+                    }
+                    else {
+						$this->render('login/loginFail');
+                   	}
+                }
+                //$this->redirect(array('admin'));
+            }
+        }
+		if(isset($_GET['parent_id'])){
+			$model->parent_id=$_GET['parent_id'];
+			$model->path='book' . $_GET['parent_id'];
+		}
+        
+       $this->render('upload',array('model'=>$model,));
+       
+	}
+
+	/**
+	 */
+	public function download($filePath)
+	{
+		$fileRoot = rtrim(Yii::app()->params->fileRoot, '/\\').'/';
+        $fullPath = $fileRoot . $filePath;
+        $filecontent=file_get_contents($fullPath);
+		header("Content-Type: text/plain");
+		header("Content-disposition: attachment; filename=\"$filePath\"");
+		header("Pragma: no-cache");
+		echo $filecontent;
+		exit;
+	}
+	
+	
+	/**
+	 */
+	public function createZip($parent_id)
+	{
+		$zip=new ZipArchive();
+		$fileRoot = rtrim(Yii::app()->params->fileRoot, '/\\').'/';
+		$destination=$fileRoot . "zips/req$parent_id.zip";
+		if($zip->open($destination,ZIPARCHIVE::CREATE) !== true) {
+		   return false;
+		}
+		
+		$files = File::model()->findAllByAttributes(array('parent_id'=>$_GET['parent_id']));
+		foreach($files as $model)
+		{
+		   $zip->addFile($model->fullPath);
+		}
+		$zip->close(); 
+	}
+	
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

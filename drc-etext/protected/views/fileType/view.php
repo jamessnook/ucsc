@@ -20,7 +20,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'name',
-		'accom_type',
+		'accommodation_type',
 		'caption',
 	),
 )); ?>

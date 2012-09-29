@@ -1,6 +1,6 @@
 <?php
 
-class TermController extends Controller
+class BookController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -31,12 +31,12 @@ class TermController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','myBooks'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -61,16 +61,16 @@ class TermController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Term;
+		$model=new Book;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Term']))
+		if(isset($_POST['Book']))
 		{
-			$model->attributes=$_POST['Term'];
+			$model->attributes=$_POST['Book'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->term_code));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -90,11 +90,11 @@ class TermController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Term']))
+		if(isset($_POST['Book']))
 		{
-			$model->attributes=$_POST['Term'];
+			$model->attributes=$_POST['Book'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->term_code));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(
@@ -127,7 +127,7 @@ class TermController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Term');
+		$dataProvider=new CActiveDataProvider('Book');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -138,10 +138,25 @@ class TermController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Term('search');
+		$model=new Book('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Term']))
-			$model->attributes=$_GET['Term'];
+		if(isset($_GET['Book']))
+			$model->attributes=$_GET['Book'];
+
+		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
+	 * Display specific models for this user for upload.
+	 */
+	public function actionMyBooks()
+	{
+		$model=new Book('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Book']))
+			$model->attributes=$_GET['Book'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -155,7 +170,7 @@ class TermController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Term::model()->findByPk($id);
+		$model=Book::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -167,7 +182,7 @@ class TermController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='term-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='book-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

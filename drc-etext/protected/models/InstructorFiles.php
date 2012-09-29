@@ -1,24 +1,28 @@
 <?php
 
 /**
- * This is the model class for table "term".
+ * This is the model class for table "instructor_files".
  *
- * The followings are the available columns in table 'term':
- * @property string $term_code
- * @property string $description
- * @property string $start_date
- * @property string $end_date
+ * The followings are the available columns in table 'instructor_files':
+ * @property integer $file_id
+ * @property integer $term_code
+ * @property integer $class_number
+ * @property string $emplId
+ * @property string $notes
+ * @property boolean $is_syllabus
  *
  * The followings are the available model relations:
- * @property Assignment[] $assignments
- * @property InstructorFiles[] $instructorFiles
+ * @property User $empl
+ * @property Course $classNumber
+ * @property Term $termCode
+ * @property File $file
  */
-class Term extends CActiveRecord
+class InstructorFiles extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Term the static model class
+	 * @return InstructorFiles the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +34,7 @@ class Term extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'term';
+		return 'instructor_files';
 	}
 
 	/**
@@ -41,13 +45,14 @@ class Term extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('term_code, description', 'required'),
-			array('term_code', 'length', 'max'=>32),
-			array('description', 'length', 'max'=>512),
-			array('start_date, end_date', 'safe'),
+			array('term_code', 'required'),
+			array('term_code, class_number', 'numerical', 'integerOnly'=>true),
+			array('emplId', 'length', 'max'=>32),
+			array('notes', 'length', 'max'=>512),
+			array('is_syllabus', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('term_code, description, start_date, end_date', 'safe', 'on'=>'search'),
+			array('file_id, term_code, class_number, emplId, notes, is_syllabus', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,8 +64,10 @@ class Term extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'assignments' => array(self::HAS_MANY, 'Assignment', 'term_code'),
-			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'term_code'),
+			'empl' => array(self::BELONGS_TO, 'User', 'emplId'),
+			'classNumber' => array(self::BELONGS_TO, 'Course', 'class_number'),
+			'termCode' => array(self::BELONGS_TO, 'Term', 'term_code'),
+			'file' => array(self::BELONGS_TO, 'File', 'file_id'),
 		);
 	}
 
@@ -70,10 +77,12 @@ class Term extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'file_id' => 'File',
 			'term_code' => 'Term Code',
-			'description' => 'Description',
-			'start_date' => 'Start Date',
-			'end_date' => 'End Date',
+			'class_number' => 'Class Number',
+			'emplId' => 'Empl',
+			'notes' => 'Notes',
+			'is_syllabus' => 'Is Syllabus',
 		);
 	}
 
@@ -88,10 +97,12 @@ class Term extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('term_code',$this->term_code,true);
-		$criteria->compare('description',$this->description,true);
-		$criteria->compare('start_date',$this->start_date,true);
-		$criteria->compare('end_date',$this->end_date,true);
+		$criteria->compare('file_id',$this->file_id);
+		$criteria->compare('term_code',$this->term_code);
+		$criteria->compare('class_number',$this->class_number);
+		$criteria->compare('emplId',$this->emplId,true);
+		$criteria->compare('notes',$this->notes,true);
+		$criteria->compare('is_syllabus',$this->is_syllabus);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

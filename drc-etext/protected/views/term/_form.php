@@ -10,33 +10,21 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'id',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'id'); ?>
+		<?php echo $form->labelEx($model,'term_code'); ?>
+		<?php echo $form->textField($model,'term_code',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->error($model,'term_code'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>512)); ?>
-		<?php echo $form->error($model,'name'); ?>
+		<?php echo $form->labelEx($model,'description'); ?>
+		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>512)); ?>
+		<?php echo $form->error($model,'description'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'quarter'); ?>
-		<?php echo $form->textField($model,'quarter',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'quarter'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'year'); ?>
-		<?php echo $form->textField($model,'year'); ?>
-		<?php echo $form->error($model,'year'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'begin_date'); ?>
-		<?php echo $form->textField($model,'begin_date'); ?>
-		<?php echo $form->error($model,'begin_date'); ?>
+		<?php echo $form->labelEx($model,'start_date'); ?>
+		<?php echo $form->textField($model,'start_date'); ?>
+		<?php echo $form->error($model,'start_date'); ?>
 	</div>
 
 	<div class="row">

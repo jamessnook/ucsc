@@ -6,28 +6,18 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->label($model,'term_code'); ?>
+		<?php echo $form->textField($model,'term_code',array('size'=>32,'maxlength'=>32)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>512)); ?>
+		<?php echo $form->label($model,'description'); ?>
+		<?php echo $form->textField($model,'description',array('size'=>60,'maxlength'=>512)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'quarter'); ?>
-		<?php echo $form->textField($model,'quarter',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'year'); ?>
-		<?php echo $form->textField($model,'year'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'begin_date'); ?>
-		<?php echo $form->textField($model,'begin_date'); ?>
+		<?php echo $form->label($model,'start_date'); ?>
+		<?php echo $form->textField($model,'start_date'); ?>
 	</div>
 
 	<div class="row">
