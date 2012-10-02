@@ -120,31 +120,34 @@ class Course extends CActiveRecord
 	 * Updates Model from data in a SimpleXMLElement object.
 	 * @param SimpleXMLElement $elem the attribute name
 	 */
-	public static function updateFromSimpleXML($elem)
+	public static function updateFromSimpleXML($elem, $className = null)
 	{
-		if ($elem->getName() == 'course'){
-			$model = new Course();
-			// get children
-			//$attribs = array();
-			//try to load model with available id i.e. unique key
-			$model = self::findByPk(array('user_id'=>5, 'hobby_id'=>9));  
+		if (!$className){
+			$className = $elem->getName();
+		}
+		if (class_exists($className)) {
+			$model = new $className;
+			//$className = get_called_class();
+			//if ($elem->getName() == $className){
+			//$model = new $className;
+			//$model = new static();
 			
-			//now check if the model is null
-			if(!$model) $model = new someModel();
-			
-			//Apply you new changes
-			$model->attributes = $attributes;
-			
-			//save
+			//create model from new data
 			foreach ($elem->children() as $node) {
 				//$attribs[$node->getName()] = (string)$node;
 				//$this->{$node->getName()} = (string)$node;
 				$model->setAttribute($node->getName(),(string)$node); // safely returns false if attribute does not exist
 			}
-			$model2 = self::findByPk($model->getPrimaryKey());  
-			
-			$model->save();			
+			$modelPrior = $model->findByPk($model->getPrimaryKey());  
+			//now check if the model is null
+			if(!$modelPrior) {
+				$model->save();			
+			} else{
+				// update
+				$modelPrior->updateByPk($model->getPrimaryKey(), $model->getAttributes());			
+			}
 		}
 		// ......
 	}
+
 }
