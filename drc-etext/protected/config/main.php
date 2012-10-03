@@ -33,7 +33,7 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 			'loginUrl'=>array('/login/login'),
-    ),
+    	),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -79,6 +79,62 @@ return array(
 					'class'=>'CWebLogRoute',
 				),
 				*/
+			),
+		),
+		'updater'=>array(
+			//.....
+			'class'=>'XMLUpdater',
+			'servers'=>array(
+				// could get feeds from multiple servers or addresses
+				array(
+					'uri' =>  'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'j@bberw0cky',
+					// models map xml tag to model class
+					//'services' => array('students', 'classes'),
+					// models map xml tag to model class
+					'services' => array(
+						'name'=>'classes',
+						'elements' => array(
+							//'mapperClass'=>'classMapper', optional if mapping is hard coded
+							'modelClass' => array(  // if mapping is not hard coded use  this
+								//'name'=>'class',
+								'class'=>'Course',
+								'attributes' => array(
+									'term_code'=>'term_code',
+								),
+								'children' => array(
+									'req' => array(
+										'name'=>'req',
+										'class'=>'Req1',
+										'attributes' => array(
+											'term_code'=>'term_code',
+										),
+										'parentAttributes' => array(
+											'id'=>'classId',
+										),
+									),
+									'emplid' => array(
+										'name'=>'emplid',
+										'class'=>'CourseInstructor',
+										'parentAttributes' => array(
+											'term_code'=>'term_code',
+											'class_number'=>'class_number',
+											'emplid'=>'emplid',
+										),
+									),
+								),
+							),
+							'student'=>array(
+								'class'=>'User',
+								),
+							),
+						),
+					),
+				),
 			),
 		),
 		'saml'=>array(

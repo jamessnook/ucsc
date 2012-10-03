@@ -20,28 +20,55 @@ class XMLUpdater extends CController
 	 */
 	public $breadcrumbs=array();
 	
+    /**
+     * The configuration data for servers to call services on.
+     * @var string
+     */
+    public $servers = array();
+	
 	/**
 	 */
-    public function update()
+    public function update($service)
     {
     	// call service to get data
     	
     	// parse XML and create objects
     	
     	// iterate on objects and update appropriate model
-    		// fore each create new  look up call simple xml constructor -update...
+    		// for each create new  look up call simple xml constructor -update...
     }
 
 	/**
 	 */
+    public function updateAll()
+    {
+    	// get list of elements to look for from config and class mapping if avialable
+    	// call service to get data
+    	
+    	// parse XML and create objects
+    	
+    	// iterate on objects and update appropriate model
+    		// for each create new  look up call simple xml constructor -update...
+    }
+
+    /**
+	 */
     public function getDataFromService()
     {
     	// get uri from config
-    	
-    	// call service to get data
-		$test_uri = 'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?service=students';
-		$url = parse_url($test_uri);
-		$test_data = 'Operation=SCX_ETEXT.v1&From=SCX_ETEXT_NODE&To=PSFT_CSDEV&UserName=ETEXT&Password=j@bberw0cky';
+		$service = 'students';
+    	$uri =  'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector';
+    	$uri = uri . "?service=$service";
+    	$url = parse_url($uri);
+		
+		// get password from config or better??
+		$operation = 'SCX_ETEXT.v1';
+		$from = 'SCX_ETEXT_NODE';
+		$to = 'PSFT_CSDEV';
+		$uName = 'ETEXT';
+		$pWord = 'j@bberw0cky';
+		
+		$data = "Operation=$operation&From=$from&To=$to&UserName=$uName&Password=$pWord";
 		
 		$timeout=30;
 
@@ -70,18 +97,17 @@ class XMLUpdater extends CController
 		"Content-Length: ".strlen($test_data).$eol.
 		"Connection: close".$eol.$eol;
 		
-		//echo $headers;
-
 		$options = array(
 			'method' => 'POST',
 			'header' => $headers,
 			'timeout' => $timeout,
-			'content' => $test_data
+			'content' => $data
 		);
 		$context = stream_context_create(
 			array('http' => $options)
 		);
-
+		
+    	// call service to get data
 		$fp = fopen($test_uri,'r',false,$context);
 
 		if (!$fp) {
@@ -103,25 +129,32 @@ class XMLUpdater extends CController
 		    }
 	
 			if ($chunked) {
-				$response_content = $this->unchunk($response_content);
+				$response_content = $this->unchunkHttp11($response_content);
 			}
 			
-			//echo '<br>Integration Broker response<pre>';
-			//print_r(htmlspecialchars($response_content));
-			//echo '</pre>';
-
 			$xmlObj = simplexml_load_string($response_content);
-			echo '<pre>'.print_r(get_object_vars($xmlObj),1),'</pre>';
-			//return $xmlObj;
-
-		} //if($fp)
-    	
-    	// parse XML and create objects
-    	
-    	// iterate on objects and update appropriate model
-    		// fore each create new  look up call simple xml constructor -update...
+			
+			//echo '<pre>'.print_r(get_object_vars($xmlObj),1),'</pre>';
+			return $xmlObj;
+		} 
     }
 
+	/**
+	 */
+    public function unchunkHttp11($data) {
+	    $fp = 0;
+	    $outData = "";
+	    while ($fp < strlen($data)) {
+	        $rawnum = substr($data, $fp, strpos(substr($data, $fp), "\r\n") + 2);
+	        $num = hexdec(trim($rawnum));
+	        $fp += strlen($rawnum);
+	        $chunk = substr($data, $fp, $num);
+	        $outData .= $chunk;
+	        $fp += strlen($chunk);
+	    }
+	    return $outData;
+	}
+    
     /**
 	 * Updates Model from data in a SimpleXMLElement object.
 	 * @param SimpleXMLElement $elem the attribute name
