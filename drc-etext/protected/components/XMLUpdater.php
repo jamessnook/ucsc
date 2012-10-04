@@ -24,21 +24,87 @@ class XMLUpdater extends CController
      * The configuration data for servers to call services on.
      * @var string
      */
-    public $servers = array();
+    public $serverConfigs = array();
 	
 	/**
+	 * 
+	 * Enter description here ...
+	 * @param unknown_type $server
+	 * @param unknown_type $service
 	 */
-    public function update($service)
+    public function update($server, $service)
     {
     	// call service to get data
-    	
+    	$xml = getDataFromService($server, $service);
+    	// read config
+    	$elementConfigs = $serverConfigs[$server]['services'][$service];
     	// parse XML and create objects
-    	
-    	// iterate on objects and update appropriate model
-    		// for each create new  look up call simple xml constructor -update...
+		foreach ($xml->children() as $elem) {
+			// find config or set to null
+			$config = null;
+			if (isset($config[$elem->getName()])){
+				$config = $config[$elem->getName()];
+			}
+			$this->updateElement($elem, $config);  // recursive
+			
+		}
+			
     }
 
 	/**
+	 * 
+	 * Recursive...Enter description here ...
+	 * @param unknown_type $xml
+	 * @param unknown_type $config
+	 * @param unknown_type $parent
+	 */
+    public function updateElement($xml, $config = null, $parent = null)
+    {
+		// check for mapper
+		if (isset($config['mapper'])){
+			$model = new $config['mapper']($xml);
+		} else { // use config or defaults
+			if ($config && isset($config['model'])){
+				$model = new $config['model'];
+			} 
+			else if (class_exists($xml->getName())) {
+				$model = new $xml->getName();
+			} 
+			else {
+				return;
+			}
+			foreach ($elem->children() as $child) {
+				if ($config && isset($config['attributes'][$child->getName()])){
+					$model->setAttribute($config['attributes'][$child->getName()],(string)$child); // safely returns false if attribute does not exist
+				}
+				else if ($config && isset($config['children'][$child->getName()])){
+					$this->updateElement($child, $config['children'][$child->getName()], $elem);
+				}
+				else if ($config && isset($config['parentAttributes'][$child->getName()]) && $parent){
+					$model->setAttribute($config['attributes'][$child->getName()],(string)$parent->{$child->getName()}); // safely returns false if attribute does not exist
+				}
+				// if there is no config setting for this attribute see if the xml name matches a model attribute
+				else if (!$model->setAttribute($child->getName(),(string)$child)){ // safely returns false if attribute does not exist
+					// try converting the name to underscore syntax and see if there is a match
+					if (!$model->setAttribute($this->from_camel_case($child->getName()),(string)$child)){
+						// try matching ot a class 
+						
+					}
+				}
+			}
+	    }
+		// update or save model
+		$modelPrior = $model->findByPk($model->getPrimaryKey());  
+		//now check if the model is null
+		if(!$modelPrior) {
+			$model->save();			
+		} else{
+			// update
+			$modelPrior->updateByPk($model->getPrimaryKey(), $model->getAttributes());			
+		}
+    }
+    
+    /**
 	 */
     public function updateAll()
     {
@@ -53,7 +119,7 @@ class XMLUpdater extends CController
 
     /**
 	 */
-    public function getDataFromService()
+    public function getDataFromService($server, $service)
     {
     	// get uri from config
 		$service = 'students';
@@ -188,5 +254,30 @@ class XMLUpdater extends CController
 		}
 		// ......
 	}
-    
+
+	/**
+   	* Translates a camel case string into a string with underscores (e.g. firstName -&gt; first_name)
+   	* @param    string   $str    String in camel case format
+   	* @return    string            $str Translated into underscore format
+   	*/
+  	public function from_camel_case($str) {
+    	$str[0] = strtolower($str[0]);
+    	$func = create_function('$c', 'return "_" . strtolower($c[1]);');
+    	return preg_replace_callback('/([A-Z])/', $func, $str);
+  	}
+ 
+	/**
+	* Translates a string with underscores into camel case (e.g. first_name -&gt; firstName)
+	* @param    string   $str                     String in underscore format
+	* @param    bool     $capitalise_first_char   If true, capitalise the first char in $str
+	* @return   string                              $str translated into camel caps
+	*/
+	public function to_camel_case($str, $capitalise_first_char = false) {
+		if($capitalise_first_char) {
+			$str[0] = strtoupper($str[0]);
+		}
+		$func = create_function('$c', 'return strtoupper($c[1]);');
+		return preg_replace_callback('/_([a-z])/', $func, $str);
+   }
+	
 }

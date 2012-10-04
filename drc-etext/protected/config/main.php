@@ -84,9 +84,9 @@ return array(
 		'updater'=>array(
 			//.....
 			'class'=>'XMLUpdater',
-			'servers'=>array(
+			'serverConfigs'=>array(
 				// could get feeds from multiple servers or addresses
-				array(
+				'AIS' => array(
 					'uri' =>  'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?',
 					'operation' => 'SCX_ETEXT.v1',
 					'from' => 'SCX_ETEXT_NODE',
@@ -97,19 +97,16 @@ return array(
 					//'services' => array('students', 'classes'),
 					// models map xml tag to model class
 					'services' => array(
-						'name'=>'classes',
-						'elements' => array(
-							//'mapperClass'=>'classMapper', optional if mapping is hard coded
-							'modelClass' => array(  // if mapping is not hard coded use  this
-								//'name'=>'class',
-								'class'=>'Course',
+						'classes'  => array(
+							'class' => array(  // element is named 'class'
+								'model'=>'Course',
+								//'mapper'=>'CourseMapper',  optional mapper class skips rest of config for this model class
 								'attributes' => array(
 									'term_code'=>'term_code',
 								),
 								'children' => array(
 									'req' => array(
-										'name'=>'req',
-										'class'=>'Req1',
+										'model'=>'Req1',
 										'attributes' => array(
 											'term_code'=>'term_code',
 										),
@@ -118,8 +115,7 @@ return array(
 										),
 									),
 									'emplid' => array(
-										'name'=>'emplid',
-										'class'=>'CourseInstructor',
+										'model'=>'CourseInstructor',
 										'parentAttributes' => array(
 											'term_code'=>'term_code',
 											'class_number'=>'class_number',
@@ -128,8 +124,36 @@ return array(
 									),
 								),
 							),
-							'student'=>array(
+							'student'=>array(  // another element is named 'student'
 								'class'=>'User',
+							),
+						),
+						'students'  => array(
+							'student' => array(  // element is named 'class'
+								//'name'=>'class',
+								'model'=>'Course',
+								//'mapper'=>'CourseMapper',  optional mapper class skips rest of config for this model class
+								'attributes' => array(
+									'term_code'=>'term_code',
+								),
+								'children' => array(
+									'req' => array(
+										'model'=>'Req1',
+										'attributes' => array(
+											'term_code'=>'term_code',
+										),
+										'parentAttributes' => array(
+											'id'=>'classId',
+										),
+									),
+									'emplid' => array(
+										'model'=>'CourseInstructor',
+										'parentAttributes' => array(
+											'term_code'=>'term_code',
+											'class_number'=>'class_number',
+											'emplid'=>'emplid',
+										),
+									),
 								),
 							),
 						),
