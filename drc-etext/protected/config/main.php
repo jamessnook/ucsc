@@ -84,7 +84,7 @@ return array(
 		'updater'=>array(
 			//.....
 			'class'=>'XMLUpdater',
-			'serverConfigs'=>array(
+			'servers'=>array(
 				// could get feeds from multiple servers or addresses
 				'AIS' => array(
 					'uri' =>  'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?',
@@ -94,9 +94,7 @@ return array(
 					'uName' => 'ETEXT',
 					'pWord' => 'j@bberw0cky',
 					// models map xml tag to model class
-					//'services' => array('students', 'classes'),
-					// models map xml tag to model class
-					'services' => array(
+			    	'services' => array(
 						'classes'  => array(
 							'class' => array(  // element is named 'class'
 								'model'=>'Course',
@@ -125,7 +123,6 @@ return array(
 								),
 							),
 							'student'=>array(  // another element is named 'student'
-								'class'=>'User',
 							),
 						),
 						'students'  => array(

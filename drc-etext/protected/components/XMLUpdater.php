@@ -24,7 +24,7 @@ class XMLUpdater extends CController
      * The configuration data for servers to call services on.
      * @var string
      */
-    public $serverConfigs = array();
+    public $servers = array();
 	
 	/**
 	 * 
@@ -37,7 +37,7 @@ class XMLUpdater extends CController
     	// call service to get data
     	$xml = getDataFromService($server, $service);
     	// read config
-    	$elementConfigs = $serverConfigs[$server]['services'][$service];
+    	$elementConfigs = $servers[$server]['services'][$service];
     	// parse XML and create objects
 		foreach ($xml->children() as $elem) {
 			// find config or set to null
@@ -46,9 +46,7 @@ class XMLUpdater extends CController
 				$config = $config[$elem->getName()];
 			}
 			$this->updateElement($elem, $config);  // recursive
-			
 		}
-			
     }
 
 	/**
@@ -61,7 +59,7 @@ class XMLUpdater extends CController
     public function updateElement($xml, $config = null, $parent = null)
     {
 		// check for mapper
-		if (isset($config['mapper'])){
+		if ($config && isset($config['mapper'])){
 			$model = new $config['mapper']($xml);
 		} else { // use config or defaults
 			if ($config && isset($config['model'])){
@@ -72,6 +70,15 @@ class XMLUpdater extends CController
 			} 
 			else {
 				return;
+			}
+			// first assign any inherited parent attributes which might be inherited by default, will later be overridden if needed
+			if ($parent){
+				foreach ($parent->children() as $possibleAttribute) {
+					$this->setModelAttribute($model,$possibleAttribute->getName(),(string)$possibleAttribute);
+					if (strtolower($possibleAttribute->getName()) == "id" ){  // special case to get parent id as default
+						$this->setModelAttribute($model,$parent->getName()."Id",(string)$possibleAttribute);
+					}
+				}
 			}
 			foreach ($elem->children() as $child) {
 				if ($config && isset($config['attributes'][$child->getName()])){
@@ -84,12 +91,11 @@ class XMLUpdater extends CController
 					$model->setAttribute($config['attributes'][$child->getName()],(string)$parent->{$child->getName()}); // safely returns false if attribute does not exist
 				}
 				// if there is no config setting for this attribute see if the xml name matches a model attribute
-				else if (!$model->setAttribute($child->getName(),(string)$child)){ // safely returns false if attribute does not exist
-					// try converting the name to underscore syntax and see if there is a match
-					if (!$model->setAttribute($this->from_camel_case($child->getName()),(string)$child)){
-						// try matching ot a class 
-						
-					}
+				else if (!$this->setModelAttribute($model,$child->getName(),(string)$child)){ // safely returns false if attribute does not exist
+					// try matching to a class 
+					if (class_exists($child->getName())) {
+						$this->updateElement($child);
+					} 
 				}
 			}
 	    }
@@ -105,18 +111,33 @@ class XMLUpdater extends CController
     }
     
     /**
+     * 
+     * Checks for various  possible name mappings camelCase to underbar etc. ...
+     * @param unknown_type $model
+     * @param unknown_type $name
+     * @param unknown_type $value
 	 */
+    public function setModelAttribute($model, $name, $value)
+    {
+		if (!$model->setAttribute($name,$value)){ // safely returns false if attribute does not exist
+			// try converting the name to underscore syntax and see if there is a match
+			return $model->setAttribute($this->from_camel_case($name),$value);
+		}
+		return true;
+    }
+    
+     /**
+	 */
+
     public function updateAll()
     {
-    	// get list of elements to look for from config and class mapping if avialable
-    	// call service to get data
-    	
-    	// parse XML and create objects
-    	
-    	// iterate on objects and update appropriate model
-    		// for each create new  look up call simple xml constructor -update...
+		foreach ($servers as $serverName => $serverConfig) {
+			foreach ($serverConfig['services'] as $serviceName => $serviceConfig) {
+	    		update($serverName, $serviceName);
+			}
+    	}
     }
-
+    
     /**
 	 */
     public function getDataFromService($server, $service)
