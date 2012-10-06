@@ -82,4 +82,13 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+	/**
+	 * Logs out the current user and redirect to homepage.
+	 */
+	public function actionUpdate($server, $service)
+	{
+		Yii::app()->updater->update($server, $service);
+		//$this->redirect(Yii::app()->homeUrl);
+	}
 }
