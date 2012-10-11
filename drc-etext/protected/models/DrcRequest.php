@@ -17,7 +17,7 @@
  * @property Assignment[] $assignments
  * @property User $username0
  */
-class DrcRequest extends CActiveRecord
+class DrcRequest extends UCSCModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

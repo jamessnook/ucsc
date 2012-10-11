@@ -86,9 +86,13 @@ class SiteController extends Controller
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */
-	public function actionUpdate($server, $service)
+	public function actionUpdate($server='AIS', $service='classes')
 	{
-		Yii::app()->updater->update($server, $service);
+		$params = array();
+		if (isset($_GET['emplid'])){
+			$params['emplid']=$_GET['emplid'];
+		}
+		Yii::app()->updater->update($server, $service, $params);
 		//$this->redirect(Yii::app()->homeUrl);
 	}
 }

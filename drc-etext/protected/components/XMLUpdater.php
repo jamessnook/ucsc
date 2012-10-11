@@ -2,7 +2,7 @@
 /**
  * XMLUpdater handels calls to XML services to retreive data and updatelocal datastores.
  */
-class XMLUpdater extends CController
+class XMLUpdater extends CApplicationComponent
 {
 	/**
 	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
@@ -31,19 +31,20 @@ class XMLUpdater extends CController
 	 * Enter description here ...
 	 * @param unknown_type $server
 	 * @param unknown_type $service
+	 * @param array $params parameters to be added to service request.
 	 */
-    public function update($server, $service)
+    public function update($server, $service, $params=array())
     {
     	// call service to get data
-    	$xml = getDataFromService($server, $service);
+    	$xml = $this->getDataFromService($server, $service, $params);
     	// read config
-    	$elementConfigs = $servers[$server]['services'][$service];
+    	$elementConfigs = $this->servers[$server]['services'][$service];
     	// parse XML and create objects
 		foreach ($xml->children() as $elem) {
 			// find config or set to null
 			$config = null;
-			if (isset($config[$elem->getName()])){
-				$config = $config[$elem->getName()];
+			if (isset($elementConfigs[$elem->getName()])){
+				$config = $elementConfigs[$elem->getName()];
 			}
 			$this->updateElement($elem, $config);  // recursive
 		}
@@ -56,17 +57,18 @@ class XMLUpdater extends CController
 	 * @param unknown_type $config
 	 * @param unknown_type $parent
 	 */
-    public function updateElement($xml, $config = null, $parent = null)
+    public function updateElement($elem, $config = null, $parent = null)
     {
 		// check for mapper
 		if ($config && isset($config['mapper'])){
-			$model = new $config['mapper']($xml);
+			$model = new $config['mapper']($elem);
 		} else { // use config or defaults
 			if ($config && isset($config['model'])){
 				$model = new $config['model'];
 			} 
-			else if (class_exists($xml->getName())) {
-				$model = new $xml->getName();
+			else if (class_exists($elem->getName(), false)) {
+				$className = $elem->getName();
+				$model = new $className;
 			} 
 			else {
 				return;
@@ -74,11 +76,20 @@ class XMLUpdater extends CController
 			// first assign any inherited parent attributes which might be inherited by default, will later be overridden if needed
 			if ($parent){
 				foreach ($parent->children() as $possibleAttribute) {
-					$this->setModelAttribute($model,$possibleAttribute->getName(),(string)$possibleAttribute);
-					if (strtolower($possibleAttribute->getName()) == "id" ){  // special case to get parent id as default
-						$this->setModelAttribute($model,$parent->getName()."Id",(string)$possibleAttribute);
+					// first look for configured parent attributes
+					if ($config && isset($config['parentAttributes'][$possibleAttribute->getName()])){
+						$model->setAttribute($config['parentAttributes'][$possibleAttribute->getName()],(string)$possibleAttribute); // safely returns false if attribute does not exist
+					}
+					// try name matching 
+					else if (!$this->setModelAttribute($model,$possibleAttribute->getName(),(string)$possibleAttribute)){ 
+						if (strtolower($possibleAttribute->getName()) == "id" ){  // special case to get parent id as default
+							$this->setModelAttribute($model,$parent->getName()."Id",(string)$possibleAttribute);
+						}
 					}
 				}
+			}
+			if ($config && isset($config['thisAsAttribute'])){
+				$model->setAttribute($config['thisAsAttribute'],(string)$elem); // safely returns false if attribute does not exist
 			}
 			foreach ($elem->children() as $child) {
 				if ($config && isset($config['attributes'][$child->getName()])){
@@ -87,13 +98,10 @@ class XMLUpdater extends CController
 				else if ($config && isset($config['children'][$child->getName()])){
 					$this->updateElement($child, $config['children'][$child->getName()], $elem);
 				}
-				else if ($config && isset($config['parentAttributes'][$child->getName()]) && $parent){
-					$model->setAttribute($config['attributes'][$child->getName()],(string)$parent->{$child->getName()}); // safely returns false if attribute does not exist
-				}
 				// if there is no config setting for this attribute see if the xml name matches a model attribute
 				else if (!$this->setModelAttribute($model,$child->getName(),(string)$child)){ // safely returns false if attribute does not exist
 					// try matching to a class 
-					if (class_exists($child->getName())) {
+					if (class_exists($child->getName(), false)) {
 						$this->updateElement($child);
 					} 
 				}
@@ -139,25 +147,40 @@ class XMLUpdater extends CController
     }
     
     /**
+     * 
+     * Enter description here ...
+     * @param unknown_type $server
+     * @param unknown_type $service
+	 * @param array $params parameters to be added to service request.
+     * @return Ambiguous
 	 */
-    public function getDataFromService($server, $service)
+    public function getDataFromService($server, $service, $params=array())
     {
-    	// get uri from config
-		$service = 'students';
-    	$uri =  'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector';
-    	$uri = uri . "?service=$service";
-    	$url = parse_url($uri);
+		// get config data from config/main.php?
+    	$uri = $this->servers[$server]['uri'];
+    	$operation = $this->servers[$server]['operation'];
+    	$from = $this->servers[$server]['from'];
+    	$to = $this->servers[$server]['to'];
+    	$uName = $this->servers[$server]['uName'];
+    	$pWord = $this->servers[$server]['pWord'];
 		
-		// get password from config or better??
-		$operation = 'SCX_ETEXT.v1';
-		$from = 'SCX_ETEXT_NODE';
-		$to = 'PSFT_CSDEV';
-		$uName = 'ETEXT';
-		$pWord = 'j@bberw0cky';
+    	// set up uri
+		//$service = 'classes';
+    	$uri = $uri . "?service=$service";
+		foreach ($params as $name => $value) {
+			$uri .= "&$name=$value";
+    	}
+    	$url = parse_url($uri);
 		
 		$data = "Operation=$operation&From=$from&To=$to&UserName=$uName&Password=$pWord";
 		
-		$timeout=30;
+		//$test_uri = 'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?service=all';
+		//$uri = 'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?service=classes';
+		//$url = parse_url($uri);
+		//$data = 'Operation=SCX_ETEXT.v1&From=SCX_ETEXT_NODE&To=PSFT_CSDEV&UserName=ETEXT&Password=j@bberw0cky';
+		
+		$timeout=80;
+		set_time_limit ( 600 );
 
 		$path = $url['path'];
 		$host = $url['host'];
@@ -175,13 +198,13 @@ class XMLUpdater extends CController
 			}
 		}
 		
-		$uri = $protocol.$host.(!empty($port) ? ':'.$port : '').$path;
+		$newUri = $protocol.$host.(!empty($port) ? ':'.$port : '').$path;
 
 		$eol="\r\n";
 		
 		$headers = "Host: ".$host.$eol.
 		"Content-Type: application/x-www-form-urlencoded".$eol.
-		"Content-Length: ".strlen($test_data).$eol.
+		"Content-Length: ".strlen($data).$eol.
 		"Connection: close".$eol.$eol;
 		
 		$options = array(
@@ -195,7 +218,7 @@ class XMLUpdater extends CController
 		);
 		
     	// call service to get data
-		$fp = fopen($test_uri,'r',false,$context);
+		$fp = fopen($uri,'r',false,$context);
 
 		if (!$fp) {
 		

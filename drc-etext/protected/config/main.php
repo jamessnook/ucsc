@@ -87,7 +87,7 @@ return array(
 			'servers'=>array(
 				// could get feeds from multiple servers or addresses
 				'AIS' => array(
-					'uri' =>  'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?',
+					'uri' =>  'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
 					'operation' => 'SCX_ETEXT.v1',
 					'from' => 'SCX_ETEXT_NODE',
 					'to' => 'PSFT_CSDEV',
@@ -100,24 +100,18 @@ return array(
 								'model'=>'Course',
 								//'mapper'=>'CourseMapper',  optional mapper class skips rest of config for this model class
 								'attributes' => array(
-									'term_code'=>'term_code',
+									'termCode'=>'term_code',
+									'classNum'=>'class_number',
+									'catalogNum'=>'catalog_nbr',
+		
 								),
 								'children' => array(
-									'req' => array(
-										'model'=>'Req1',
-										'attributes' => array(
-											'term_code'=>'term_code',
-										),
-										'parentAttributes' => array(
-											'id'=>'classId',
-										),
-									),
 									'emplid' => array(
 										'model'=>'CourseInstructor',
+										'thisAsAttribute'=>'emplId',
 										'parentAttributes' => array(
-											'term_code'=>'term_code',
-											'class_number'=>'class_number',
-											'emplid'=>'emplid',
+											'termCode'=>'term_code',
+											'classNum'=>'class_number',
 										),
 									),
 								),
@@ -125,7 +119,27 @@ return array(
 							'student'=>array(  // another element is named 'student'
 							),
 						),
+						'terms'  => array(
+						),
+						'enrollments'  => array(
+							'drcRequest' => array(  // element is named 'person'
+								'attributes' => array(
+									'emplid'=>'emplId',
+								),
+							),
+						),
+						'accommodations'  => array(
+						),
 						'students'  => array(
+							'person' => array(  // element is named 'person'
+								'model'=>'User',
+								'attributes' => array(
+									'cruzid'=>'username',
+									'emplid'=>'emplId',
+								),
+							),
+						),
+						'xxstudents'  => array(
 							'student' => array(  // element is named 'class'
 								//'name'=>'class',
 								'model'=>'Course',
