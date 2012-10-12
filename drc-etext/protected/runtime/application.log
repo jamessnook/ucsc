@@ -2978,3 +2978,90 @@ REQUEST_URI=/ucsc/drc-etext/index.php?r=site/update&service=students&emplid=0150
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php (104)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php (49)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\SiteController.php (95)
+2012/10/12 00:53:57 [error] [php] Undefined index: term (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php:41)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): SiteController->runAction()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): SiteController->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php?r=site/update&service=term
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php (41)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\SiteController.php (95)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/10/12 02:27:54 [error] [exception.CException] exception 'CException' with message 'Property "CourseInstructor.class_number" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('class_number')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\validators\CNumberValidator.php(79): CActiveRecord->__get('class_number')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\validators\CValidator.php(197): CNumberValidator->validateAttribute(Object(CourseInstructor), 'class_number')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CModel.php(158): CValidator->validate(Object(CourseInstructor), NULL)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php(124): CActiveRecord->save()
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php(109): XMLUpdater->updateElement(Object(SimpleXMLElement), Array, Object(SimpleXMLElement))
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php(50): XMLUpdater->updateElement(Object(SimpleXMLElement), Array)
+#8 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\SiteController.php(95): XMLUpdater->update('AIS', 'classes', Array)
+#9 [internal function]: SiteController->actionUpdate('AIS', 'classes')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('update')
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('site/update')
+#17 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=site/update&service=classes
+---
+2012/10/12 02:31:32 [error] [exception.CException] exception 'CException' with message 'Property "CourseInstructor.class_number" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('class_number')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\validators\CNumberValidator.php(79): CActiveRecord->__get('class_number')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\validators\CValidator.php(197): CNumberValidator->validateAttribute(Object(CourseInstructor), 'class_number')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CModel.php(158): CValidator->validate(Object(CourseInstructor), NULL)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php(124): CActiveRecord->save()
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php(109): XMLUpdater->updateElement(Object(SimpleXMLElement), Array, Object(SimpleXMLElement))
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php(50): XMLUpdater->updateElement(Object(SimpleXMLElement), Array)
+#8 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\SiteController.php(95): XMLUpdater->update('AIS', 'classes', Array)
+#9 [internal function]: SiteController->actionUpdate('AIS', 'classes')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('update')
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('site/update')
+#17 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=site/update&service=classes
+---
+2012/10/12 02:36:36 [error] [exception.CException] exception 'CException' with message 'Property "CourseInstructor.class_number" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('class_number')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\validators\CNumberValidator.php(79): CActiveRecord->__get('class_number')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\validators\CValidator.php(197): CNumberValidator->validateAttribute(Object(CourseInstructor), 'class_number')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CModel.php(158): CValidator->validate(Object(CourseInstructor), NULL)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php(124): CActiveRecord->save()
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php(109): XMLUpdater->updateElement(Object(SimpleXMLElement), Array, Object(SimpleXMLElement))
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\XMLUpdater.php(50): XMLUpdater->updateElement(Object(SimpleXMLElement), Array)
+#8 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\SiteController.php(95): XMLUpdater->update('AIS', 'classes', Array)
+#9 [internal function]: SiteController->actionUpdate('AIS', 'classes')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('update')
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('site/update')
+#17 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=site/update&service=classes
+---

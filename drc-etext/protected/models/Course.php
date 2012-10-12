@@ -5,20 +5,20 @@
  *
  * The followings are the available columns in table 'course':
  * @property integer $term_code
- * @property integer $class_number
+ * @property integer $class_num
  * @property string $section
  * @property string $course_id
  * @property string $subject
  * @property string $description
  * @property string $title
- * @property string $catalog_nbr
+ * @property string $catalog_num
  * @property string $created
  *
  * The followings are the available model relations:
  * @property Assignment[] $assignments
  * @property InstructorFiles[] $instructorFiles
  */
-class Course extends CActiveRecord
+class Course extends UCSCModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -47,15 +47,15 @@ class Course extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('term_code', 'required'),
-			array('term_code, class_number', 'numerical', 'integerOnly'=>true),
+			array('term_code, class_num', 'numerical', 'integerOnly'=>true),
 			array('section, course_id', 'length', 'max'=>32),
-			array('subject, catalog_nbr', 'length', 'max'=>64),
+			array('subject, catalog_num', 'length', 'max'=>64),
 			array('description', 'length', 'max'=>512),
 			array('title', 'length', 'max'=>128),
 			array('created', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('term_code, class_number, section, course_id, subject, description, title, catalog_nbr, created', 'safe', 'on'=>'search'),
+			array('term_code, class_num, section, course_id, subject, description, title, catalog_num, created', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,13 +79,13 @@ class Course extends CActiveRecord
 	{
 		return array(
 			'term_code' => 'Term Code',
-			'class_number' => 'Class Number',
+			'class_num' => 'Class Num',
 			'section' => 'Section',
 			'course_id' => 'Course',
 			'subject' => 'Subject',
 			'description' => 'Description',
 			'title' => 'Title',
-			'catalog_nbr' => 'Catalog Nbr',
+			'catalog_num' => 'Catalog Num',
 			'created' => 'Created',
 		);
 	}
@@ -102,52 +102,17 @@ class Course extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('term_code',$this->term_code);
-		$criteria->compare('class_number',$this->class_number);
+		$criteria->compare('class_num',$this->class_num);
 		$criteria->compare('section',$this->section,true);
 		$criteria->compare('course_id',$this->course_id,true);
 		$criteria->compare('subject',$this->subject,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('title',$this->title,true);
-		$criteria->compare('catalog_nbr',$this->catalog_nbr,true);
+		$criteria->compare('catalog_num',$this->catalog_num,true);
 		$criteria->compare('created',$this->created,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-	
-	/**
-	 * Updates Model from data in a SimpleXMLElement object.
-	 * @param SimpleXMLElement $elem the attribute name
-	 */
-	public static function updateFromSimpleXML($elem, $className = null)
-	{
-		if (!$className){
-			$className = $elem->getName();
-		}
-		if (class_exists($className)) {
-			$model = new $className;
-			//$className = get_called_class();
-			//if ($elem->getName() == $className){
-			//$model = new $className;
-			//$model = new static();
-			
-			//create model from new data
-			foreach ($elem->children() as $node) {
-				//$attribs[$node->getName()] = (string)$node;
-				//$this->{$node->getName()} = (string)$node;
-				$model->setAttribute($node->getName(),(string)$node); // safely returns false if attribute does not exist
-			}
-			$modelPrior = $model->findByPk($model->getPrimaryKey());  
-			//now check if the model is null
-			if(!$modelPrior) {
-				$model->save();			
-			} else{
-				// update
-				$modelPrior->updateByPk($model->getPrimaryKey(), $model->getAttributes());			
-			}
-		}
-		// ......
-	}
-
 }

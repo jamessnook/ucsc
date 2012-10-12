@@ -37,16 +37,18 @@ class XMLUpdater extends CApplicationComponent
     {
     	// call service to get data
     	$xml = $this->getDataFromService($server, $service, $params);
-    	// read config
-    	$elementConfigs = $this->servers[$server]['services'][$service];
-    	// parse XML and create objects
-		foreach ($xml->children() as $elem) {
-			// find config or set to null
-			$config = null;
-			if (isset($elementConfigs[$elem->getName()])){
-				$config = $elementConfigs[$elem->getName()];
+    	// read config, if config not set do nothing
+		if (isset($this->servers[$server]['services'][$service])){
+    		$elementConfigs = $this->servers[$server]['services'][$service];
+    		// parse XML and create objects
+			foreach ($xml->children() as $elem) {
+				// find config or set to null
+				$config = null;
+				if (isset($elementConfigs[$elem->getName()])){
+					$config = $elementConfigs[$elem->getName()];
+				}
+				$this->updateElement($elem, $config);  // recursive
 			}
-			$this->updateElement($elem, $config);  // recursive
 		}
     }
 
@@ -66,10 +68,18 @@ class XMLUpdater extends CApplicationComponent
 			if ($config && isset($config['model'])){
 				$model = new $config['model'];
 			} 
-			else if (class_exists($elem->getName(), false)) {
+			else if (@class_exists($elem->getName())) {
 				$className = $elem->getName();
 				$model = new $className;
 			} 
+			//else if (class_exists(ucfirst($elem->getName()), false)) {
+			//	$className = ucfirst($elem->getName());
+			//	$model = new $className;
+			//} 
+			//else if (class_exists($this->from_camel_case($elem->getName()), false)) {
+			//	$className = $this->from_camel_case($elem->getName());
+			//	$model = new $className;
+			//} 
 			else {
 				return;
 			}

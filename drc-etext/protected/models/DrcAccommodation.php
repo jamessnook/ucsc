@@ -1,24 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "drc_request".
+ * This is the model class for table "drc_accommodation".
  *
- * The followings are the available columns in table 'drc_request':
- * @property integer $term_code
- * @property integer $class_num
- * @property string $course_id
+ * The followings are the available columns in table 'drc_accommodation':
  * @property string $emplid
+ * @property string $type
+ * @property string $start_date
+ * @property string $end_date
  * @property string $created
- *
- * The followings are the available model relations:
- * @property Assignment[] $assignments
  */
-class DrcRequest extends UCSCModel
+class DrcAccommodation extends UCSCModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return DrcRequest the static model class
+	 * @return DrcAccommodation the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +27,7 @@ class DrcRequest extends UCSCModel
 	 */
 	public function tableName()
 	{
-		return 'drc_request';
+		return 'drc_accommodation';
 	}
 
 	/**
@@ -41,13 +38,11 @@ class DrcRequest extends UCSCModel
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('term_code', 'required'),
-			array('term_code, class_num', 'numerical', 'integerOnly'=>true),
-			array('course_id, emplid', 'length', 'max'=>32),
-			array('created', 'safe'),
+			array('emplid, type', 'length', 'max'=>32),
+			array('start_date, end_date, created', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('term_code, class_num, course_id, emplid, created', 'safe', 'on'=>'search'),
+			array('emplid, type, start_date, end_date, created', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,7 +54,6 @@ class DrcRequest extends UCSCModel
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'assignments' => array(self::MANY_MANY, 'Assignment', 'assignment_type(accommodation_type, assignment_id)'),
 		);
 	}
 
@@ -69,10 +63,10 @@ class DrcRequest extends UCSCModel
 	public function attributeLabels()
 	{
 		return array(
-			'term_code' => 'Term Code',
-			'class_num' => 'Class Num',
-			'course_id' => 'Course',
 			'emplid' => 'Emplid',
+			'type' => 'Type',
+			'start_date' => 'Start Date',
+			'end_date' => 'End Date',
 			'created' => 'Created',
 		);
 	}
@@ -88,10 +82,10 @@ class DrcRequest extends UCSCModel
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('term_code',$this->term_code);
-		$criteria->compare('class_num',$this->class_num);
-		$criteria->compare('course_id',$this->course_id,true);
 		$criteria->compare('emplid',$this->emplid,true);
+		$criteria->compare('type',$this->type,true);
+		$criteria->compare('start_date',$this->start_date,true);
+		$criteria->compare('end_date',$this->end_date,true);
 		$criteria->compare('created',$this->created,true);
 
 		return new CActiveDataProvider($this, array(

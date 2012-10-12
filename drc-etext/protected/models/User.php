@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'user':
  * @property string $username
+ * @property string $emplid
  * @property string $first_name
  * @property string $last_name
  * @property string $email
@@ -12,7 +13,10 @@
  *
  * The followings are the available model relations:
  * @property AuthItem[] $authItems
+ * @property Assignment[] $assignments
+ * @property Book[] $books
  * @property File[] $files
+ * @property InstructorFiles[] $instructorFiles
  */
 class User extends CActiveRecord
 {
@@ -43,12 +47,12 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('username', 'required'),
-			array('username, first_name, last_name', 'length', 'max'=>64),
+			array('username, emplid, first_name, last_name', 'length', 'max'=>64),
 			array('email', 'length', 'max'=>128),
 			array('phone', 'length', 'max'=>32),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('username, first_name, last_name, email, phone', 'safe', 'on'=>'search'),
+			array('username, emplid, first_name, last_name, email, phone', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,7 +65,10 @@ class User extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'authItems' => array(self::MANY_MANY, 'AuthItem', 'AuthAssignment(userid, itemname)'),
-			'files' => array(self::HAS_MANY, 'File', 'poster_id'),
+			'assignments' => array(self::HAS_MANY, 'Assignment', 'modified_by'),
+			'books' => array(self::MANY_MANY, 'Book', 'book_purchase(username, book_id)'),
+			'files' => array(self::HAS_MANY, 'File', 'modified_by'),
+			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'emplId'),
 		);
 	}
 
@@ -72,6 +79,7 @@ class User extends CActiveRecord
 	{
 		return array(
 			'username' => 'Username',
+			'emplid' => 'Emplid',
 			'first_name' => 'First Name',
 			'last_name' => 'Last Name',
 			'email' => 'Email',
@@ -91,6 +99,7 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('username',$this->username,true);
+		$criteria->compare('emplid',$this->emplid,true);
 		$criteria->compare('first_name',$this->first_name,true);
 		$criteria->compare('last_name',$this->last_name,true);
 		$criteria->compare('email',$this->email,true);
@@ -100,4 +109,24 @@ class User extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	/**
+	 * Overrides parent to assign non input values.
+	 * @return boolean whether the saving should be executed. Defaults to true.
+	 */
+	public function afterSave(){
+		$now = date('Y-m-d H:i:s');
+    	if (isset($this->role)){
+	        // remove existing roles for user
+	        // assumes we allow only one role per user
+        	$userRoles = Yii::app()->authManager->getRoles($this->username);
+        	foreach ($userRoles as $name => $authItem){
+        		Yii::app()->authManager->revoke($name, $this->username);
+        	}
+            // Assign the role to the user 
+            Yii::app()->authManager->assign($this->role, $this->username);
+    	}
+		return parent::afterSave();
+	}
+	
 }

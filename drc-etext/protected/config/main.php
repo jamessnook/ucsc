@@ -61,6 +61,7 @@ return array(
 		'authManager'=>array(
             'class'=>'CDbAuthManager',
             'connectionID'=>'db',
+			'defaultRoles'=>array('student'),
         ),		
         'errorHandler'=>array(
 			// use 'site/error' action to display errors
@@ -99,34 +100,21 @@ return array(
 							'class' => array(  // element is named 'class'
 								'model'=>'Course',
 								//'mapper'=>'CourseMapper',  optional mapper class skips rest of config for this model class
-								'attributes' => array(
-									'termCode'=>'term_code',
-									'classNum'=>'class_number',
-									'catalogNum'=>'catalog_nbr',
-		
-								),
 								'children' => array(
 									'emplid' => array(
 										'model'=>'CourseInstructor',
 										'thisAsAttribute'=>'emplId',
 										'parentAttributes' => array(
 											'termCode'=>'term_code',
-											'classNum'=>'class_number',
+											'classNum'=>'class_num',
 										),
 									),
 								),
-							),
-							'student'=>array(  // another element is named 'student'
 							),
 						),
 						'terms'  => array(
 						),
 						'enrollments'  => array(
-							'drcRequest' => array(  // element is named 'person'
-								'attributes' => array(
-									'emplid'=>'emplId',
-								),
-							),
 						),
 						'accommodations'  => array(
 						),
@@ -135,36 +123,6 @@ return array(
 								'model'=>'User',
 								'attributes' => array(
 									'cruzid'=>'username',
-									'emplid'=>'emplId',
-								),
-							),
-						),
-						'xxstudents'  => array(
-							'student' => array(  // element is named 'class'
-								//'name'=>'class',
-								'model'=>'Course',
-								//'mapper'=>'CourseMapper',  optional mapper class skips rest of config for this model class
-								'attributes' => array(
-									'term_code'=>'term_code',
-								),
-								'children' => array(
-									'req' => array(
-										'model'=>'Req1',
-										'attributes' => array(
-											'term_code'=>'term_code',
-										),
-										'parentAttributes' => array(
-											'id'=>'classId',
-										),
-									),
-									'emplid' => array(
-										'model'=>'CourseInstructor',
-										'parentAttributes' => array(
-											'term_code'=>'term_code',
-											'class_number'=>'class_number',
-											'emplid'=>'emplid',
-										),
-									),
 								),
 							),
 						),

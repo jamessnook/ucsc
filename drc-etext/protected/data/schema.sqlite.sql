@@ -45,7 +45,7 @@ INSERT INTO AuthAssignment (itemname, userid) VALUES ('admin', 'admin');
 drop table if exists user;
 CREATE TABLE user (    -- AIS feed and creation by admins
     username     VARCHAR(64) NOT NULL PRIMARY KEY,   -- cruzid
-    emplId       VARCHAR(64) UNIQUE,  -- AIS user id
+    emplid       VARCHAR(64) UNIQUE,  -- AIS user id
     first_name   VARCHAR(64),
     last_name    VARCHAR(64),
     email        VARCHAR(128),
@@ -68,48 +68,44 @@ CREATE TABLE file_type (    -- AIS feed
 
 drop table if exists drc_request;
 CREATE TABLE drc_request (  -- AIS feed associates student and course approved for services
-    id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- (local, not from AIS)
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
-    class_number INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
-    emplId     VARCHAR(32),             -- AIS: EMPLID, identifies student, 7 digit number not cruzid
-    username     VARCHAR(64),           -- AIS: student cruzid needed to match to logged on user
-    accommodation_type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
-    effective_date DATE,                -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.EFFDT_FROM)
+    class_num INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
+    course_id VARCHAR(32),              -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CRSE_ID, may not need
+    emplid     VARCHAR(32),             -- AIS: EMPLID, identifies student, 7 digit number not cruzid
     created    DATETIME,                -- when imported from AIS
-    foreign key (username ) references user (username)
+    primary key (emplId, term_code, class_num )
  );
 
-drop table if exists accommodation;
-CREATE TABLE accommodation (  -- AIS feed  May not need
-    emplId     VARCHAR(32),             -- AIS: EMPLID, identifies student, 7 digit number not cruzid
-    username     VARCHAR(64),           -- AIS: student cruzid needed to match to logged on user
-    accomodation_type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
+drop table if exists drc_accommodation;
+CREATE TABLE drc_accommodation (  -- AIS feed  May not need
+    emplid     VARCHAR(32),             -- AIS: EMPLID, identifies student, 7 digit number not cruzid
+    type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
     start_date DATE,                    -- AIS
     end_date DATE,                      -- AIS
     created    DATETIME,                -- when imported from AIS
-    primary key (emplId, accomodation_type )
+    primary key (emplId, type )
 );
 
 drop table if exists course;
 CREATE TABLE course (  -- AIS feed
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
-    class_number INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
+    class_num INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     section VARCHAR(32),                -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CLASS_SECTION?, for bookstore class books request
     course_id VARCHAR(32),              -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CRSE_ID, may not need
     subject VARCHAR(64),                -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.SUBJECT, is this department for bookstore class books request
     description VARCHAR(512),           -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.DESC
     title VARCHAR(128),                 -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.TITLE
-    catalog_nbr VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CATALOG_NBR
+    catalog_num VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CATALOG_NBR
     created    DATETIME,                -- when imported or requested (local, not from AIS)
-    primary key (term_code, class_number )
+    primary key (term_code, class_num )
  );
 
 drop table if exists course_instructor;
 CREATE TABLE course_instructor (         -- AIS feed, one to many association possible
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
-    class_number INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
-    emplId     VARCHAR(32),             -- AIS: EMPLID, identifies instructor 7 digit number not cruzid
-    primary key (emplId, term_code, class_number )
+    class_num INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
+    emplid     VARCHAR(32),             -- AIS: EMPLID, identifies instructor 7 digit number not cruzid
+    primary key (emplId, term_code, class_num )
 );
 
 drop table if exists term;
