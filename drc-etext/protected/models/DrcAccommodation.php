@@ -9,6 +9,7 @@
  * @property string $start_date
  * @property string $end_date
  * @property string $created
+ * @property string $modified
  */
 class DrcAccommodation extends UCSCModel
 {
@@ -39,10 +40,10 @@ class DrcAccommodation extends UCSCModel
 		// will receive user inputs.
 		return array(
 			array('emplid, type', 'length', 'max'=>32),
-			array('start_date, end_date, created', 'safe'),
+			array('start_date, end_date, created, modified', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('emplid, type, start_date, end_date, created', 'safe', 'on'=>'search'),
+			array('emplid, type, start_date, end_date, created, modified', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,6 +69,7 @@ class DrcAccommodation extends UCSCModel
 			'start_date' => 'Start Date',
 			'end_date' => 'End Date',
 			'created' => 'Created',
+			'modified' => 'Modified',
 		);
 	}
 
@@ -87,6 +89,7 @@ class DrcAccommodation extends UCSCModel
 		$criteria->compare('start_date',$this->start_date,true);
 		$criteria->compare('end_date',$this->end_date,true);
 		$criteria->compare('created',$this->created,true);
+		$criteria->compare('modified',$this->modified,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

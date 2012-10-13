@@ -1,37 +1,23 @@
 <?php
 /**
- * XMLUpdater handels calls to XML services to retreive data and updatelocal datastores.
+ * XMLUpdater handels calls to XML services to retreive data and update local datastores.
  */
 class XMLUpdater extends CApplicationComponent
 {
-	/**
-	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
-	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
-	 */
-	public $layout='//layouts/column1';
-	/**
-	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
-	 */
-	public $menu=array();
-	/**
-	 * @var array the breadcrumbs of the current page. The value of this property will
-	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}
-	 * for more details on how to specify this property.
-	 */
-	public $breadcrumbs=array();
 	
     /**
      * The configuration data for servers to call services on.
-     * @var string
+     * This data comes from the config/main.php file
+     * @var array
      */
     public $servers = array();
 	
 	/**
 	 * 
-	 * Enter description here ...
-	 * @param unknown_type $server
-	 * @param unknown_type $service
-	 * @param array $params parameters to be added to service request.
+	 * This is a genreral purpose update function used to call an xml service and import and save data to the applications models.
+	 * @param string $server   Identifies the name of the server to call as used in the main/config.php file
+	 * @param string $service  Identifies the name of the service to call on the server as used in the main/config.php file
+	 * @param array $params    parameters to be added to service request sent to server.
 	 */
     public function update($server, $service, $params=array())
     {
@@ -54,43 +40,40 @@ class XMLUpdater extends CApplicationComponent
 
 	/**
 	 * 
-	 * Recursive...Enter description here ...
-	 * @param unknown_type $xml
-	 * @param unknown_type $config
-	 * @param unknown_type $parent
+	 * Recursive function to import the data in an individual xml element (node) into the local models
+	 * This method attempts t omatch the axml data to models using naimng congiured in the config/main.php.  
+	 * If there is no config information for a node the code attempts to match the node name to attributes or model names directly 
+	 * or by translating from camel case to underbar naming conventions.
+	 * @param SimpleXMLElement $xml  An object reperesentation of an xml node.
+	 * @param array $config an array holdong the config information from config/main.php providing needed information about the schema for the xml.
+	 * @param SimpleXMLElement $parent  An object reperesentation of the parent xml node. IF $xml has no parent then $parent is null.
 	 */
     public function updateElement($elem, $config = null, $parent = null)
     {
-		// check for mapper
+		// Check for mapper.  If a mapper class is configured for this node then it is called 
+		// to import the object rather then using the code below
 		if ($config && isset($config['mapper'])){
 			$model = new $config['mapper']($elem);
-		} else { // use config or defaults
-			if ($config && isset($config['model'])){
+		} else { // If no mapper class is set then use the config information or name matching to help import the object
+			if ($config && isset($config['model'])){  // see if a model class name is defined in the config
 				$model = new $config['model'];
 			} 
-			else if (@class_exists($elem->getName())) {
+			else if (@class_exists($elem->getName())) { // If no model class name is defined try to use the xml element name
+				// the @ in the call above suppresses warnings from the autoloader if the class is not found
 				$className = $elem->getName();
 				$model = new $className;
 			} 
-			//else if (class_exists(ucfirst($elem->getName()), false)) {
-			//	$className = ucfirst($elem->getName());
-			//	$model = new $className;
-			//} 
-			//else if (class_exists($this->from_camel_case($elem->getName()), false)) {
-			//	$className = $this->from_camel_case($elem->getName());
-			//	$model = new $className;
-			//} 
-			else {
+			else { // If no model class can be identified for this element do not import it
 				return;
 			}
-			// first assign any inherited parent attributes which might be inherited by default, will later be overridden if needed
+			// First assign any inherited parent attributes which might be inherited by default, these will later be overridden if needed
 			if ($parent){
 				foreach ($parent->children() as $possibleAttribute) {
 					// first look for configured parent attributes
 					if ($config && isset($config['parentAttributes'][$possibleAttribute->getName()])){
 						$model->setAttribute($config['parentAttributes'][$possibleAttribute->getName()],(string)$possibleAttribute); // safely returns false if attribute does not exist
 					}
-					// try name matching 
+					// try name matching any parent attributes to child attributes (often needed in many-many associatin tables.)
 					else if (!$this->setModelAttribute($model,$possibleAttribute->getName(),(string)$possibleAttribute)){ 
 						if (strtolower($possibleAttribute->getName()) == "id" ){  // special case to get parent id as default
 							$this->setModelAttribute($model,$parent->getName()."Id",(string)$possibleAttribute);
@@ -98,53 +81,62 @@ class XMLUpdater extends CApplicationComponent
 					}
 				}
 			}
+			// For child elements the which are multible elements with the same name 
+			// but where the child element is a single value, this value needs to be mapped to an attribute of the child.  
+			// This is common for many to many associations such as emplid for course instructors included in the class (course) element.
 			if ($config && isset($config['thisAsAttribute'])){
 				$model->setAttribute($config['thisAsAttribute'],(string)$elem); // safely returns false if attribute does not exist
 			}
+			// Now look at each of the child nodes of the current xml element and try to import them as attribute or child elements.
 			foreach ($elem->children() as $child) {
+				// see if there is an attriute name defined in the config for this node 
 				if ($config && isset($config['attributes'][$child->getName()])){
 					$model->setAttribute($config['attributes'][$child->getName()],(string)$child); // safely returns false if attribute does not exist
 				}
+				// if there is no attriute name defined in the config for this node see if it is configed 
+				// as a child element and call this method recursively
 				else if ($config && isset($config['children'][$child->getName()])){
 					$this->updateElement($child, $config['children'][$child->getName()], $elem);
 				}
-				// if there is no config setting for this attribute see if the xml name matches a model attribute
+				// if there is no config setting for this attribute see if the xml node name matches a model attribute
 				else if (!$this->setModelAttribute($model,$child->getName(),(string)$child)){ // safely returns false if attribute does not exist
-					// try matching to a class 
-					if (class_exists($child->getName(), false)) {
+					// IF there is still no match try matching the node name to a possible child element model class 
+					if (@class_exists($child->getName())) {
+						// the @ in the call above suppresses warnings from the autoloader if the class is not found
 						$this->updateElement($child);
 					} 
 				}
 			}
 	    }
 		// update or save model
+		// If there is already data in the database for this primary key then perform an update, other wise do a save
 		$modelPrior = $model->findByPk($model->getPrimaryKey());  
-		//now check if the model is null
-		if(!$modelPrior) {
+		if(!$modelPrior) {  // save
 			$model->save();			
-		} else{
-			// update
+		} else{  // update
 			$modelPrior->updateByPk($model->getPrimaryKey(), $model->getAttributes());			
 		}
     }
     
     /**
-     * 
+     * Assigns an attribute value in a model
      * Checks for various  possible name mappings camelCase to underbar etc. ...
-     * @param unknown_type $model
-     * @param unknown_type $name
-     * @param unknown_type $value
+     * @param CActiveRecord $model  Model object to have attribute assigned for
+     * @param string $name  Possible name of attribute
+     * @param String $value  Value to be assigned to attribute
 	 */
     public function setModelAttribute($model, $name, $value)
     {
 		if (!$model->setAttribute($name,$value)){ // safely returns false if attribute does not exist
-			// try converting the name to underscore syntax and see if there is a match
+			// if the is no exact name match then try converting the name to underscore syntax and see if there is a match
 			return $model->setAttribute($this->from_camel_case($name),$value);
 		}
 		return true;
     }
     
      /**
+      * 
+      * Updates alls ervers and services defined in the config/main.php file
 	 */
 
     public function updateAll()
@@ -158,11 +150,11 @@ class XMLUpdater extends CApplicationComponent
     
     /**
      * 
-     * Enter description here ...
-     * @param unknown_type $server
-     * @param unknown_type $service
-	 * @param array $params parameters to be added to service request.
-     * @return Ambiguous
+	 * This is a genreral purpose update function used to call an xml service and get data.
+	 * @param string $server   Identifies the name of the server to call as used in the main/config.php file
+	 * @param string $service  Identifies the name of the service to call on the server as used in the main/config.php file
+	 * @param array $params    parameters to be added to service request sent to server.
+     * @return SimpleXMLElement   An object holding the xml data retreived from the service.
 	 */
     public function getDataFromService($server, $service, $params=array())
     {
@@ -183,11 +175,6 @@ class XMLUpdater extends CApplicationComponent
     	$url = parse_url($uri);
 		
 		$data = "Operation=$operation&From=$from&To=$to&UserName=$uName&Password=$pWord";
-		
-		//$test_uri = 'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?service=all';
-		//$uri = 'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?service=classes';
-		//$url = parse_url($uri);
-		//$data = 'Operation=SCX_ETEXT.v1&From=SCX_ETEXT_NODE&To=PSFT_CSDEV&UserName=ETEXT&Password=j@bberw0cky';
 		
 		$timeout=80;
 		set_time_limit ( 600 );
@@ -231,10 +218,7 @@ class XMLUpdater extends CApplicationComponent
 		$fp = fopen($uri,'r',false,$context);
 
 		if (!$fp) {
-		
-			$errorArr['error_nbr'] = $errnbr;
-			$errorArr['error_str'] = $errstr;
-			return $errorArr;
+			// need to add error logging and reporting
 
 		} else {
 
@@ -254,12 +238,15 @@ class XMLUpdater extends CApplicationComponent
 			
 			$xmlObj = simplexml_load_string($response_content);
 			
-			//echo '<pre>'.print_r(get_object_vars($xmlObj),1),'</pre>';
 			return $xmlObj;
 		} 
     }
 
 	/**
+	 * 
+	 * Used for processing string data
+	 * @param string $data
+	 * @return string
 	 */
     public function unchunkHttp11($data) {
 	    $fp = 0;
@@ -275,40 +262,6 @@ class XMLUpdater extends CApplicationComponent
 	    return $outData;
 	}
     
-    /**
-	 * Updates Model from data in a SimpleXMLElement object.
-	 * @param SimpleXMLElement $elem the attribute name
-	 */
-	public static function updateFromSimpleXML($elem, $className = null)
-	{
-		if (!$className){
-			$className = $elem->getName();
-		}
-		if (class_exists($className)) {
-			$model = new $className;
-			//$className = get_called_class();
-			//if ($elem->getName() == $className){
-			//$model = new $className;
-			//$model = new static();
-			
-			//create model from new data
-			foreach ($elem->children() as $node) {
-				//$attribs[$node->getName()] = (string)$node;
-				//$this->{$node->getName()} = (string)$node;
-				$model->setAttribute($node->getName(),(string)$node); // safely returns false if attribute does not exist
-			}
-			$modelPrior = $model->findByPk($model->getPrimaryKey());  
-			//now check if the model is null
-			if(!$modelPrior) {
-				$model->save();			
-			} else{
-				// update
-				$modelPrior->updateByPk($model->getPrimaryKey(), $model->getAttributes());			
-			}
-		}
-		// ......
-	}
-
 	/**
    	* Translates a camel case string into a string with underscores (e.g. firstName -&gt; first_name)
    	* @param    string   $str    String in camel case format

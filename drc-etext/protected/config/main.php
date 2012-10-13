@@ -103,7 +103,7 @@ return array(
 								'children' => array(
 									'emplid' => array(
 										'model'=>'CourseInstructor',
-										'thisAsAttribute'=>'emplId',
+										'thisAsAttribute'=>'emplid',
 										'parentAttributes' => array(
 											'termCode'=>'term_code',
 											'classNum'=>'class_num',

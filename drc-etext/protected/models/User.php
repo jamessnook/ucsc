@@ -7,9 +7,15 @@
  * @property string $username
  * @property string $emplid
  * @property string $first_name
+ * @property string $middle_name
  * @property string $last_name
  * @property string $email
  * @property string $phone
+ * @property string $created
+ * @property string $modified
+ * @property string $password
+ * @property string $salt
+ * @property string $modified_by
  *
  * The followings are the available model relations:
  * @property AuthItem[] $authItems
@@ -18,7 +24,7 @@
  * @property File[] $files
  * @property InstructorFiles[] $instructorFiles
  */
-class User extends CActiveRecord
+class User extends UCSCModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -47,12 +53,13 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('username', 'required'),
-			array('username, emplid, first_name, last_name', 'length', 'max'=>64),
-			array('email', 'length', 'max'=>128),
+			array('username, emplid, first_name, middle_name, last_name, modified_by', 'length', 'max'=>64),
+			array('email, password, salt', 'length', 'max'=>128),
 			array('phone', 'length', 'max'=>32),
+			array('created, modified', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('username, emplid, first_name, last_name, email, phone', 'safe', 'on'=>'search'),
+			array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,9 +88,15 @@ class User extends CActiveRecord
 			'username' => 'Username',
 			'emplid' => 'Emplid',
 			'first_name' => 'First Name',
+			'middle_name' => 'Middle Name',
 			'last_name' => 'Last Name',
 			'email' => 'Email',
 			'phone' => 'Phone',
+			'created' => 'Created',
+			'modified' => 'Modified',
+			'password' => 'Password',
+			'salt' => 'Salt',
+			'modified_by' => 'Modified By',
 		);
 	}
 
@@ -101,15 +114,20 @@ class User extends CActiveRecord
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('emplid',$this->emplid,true);
 		$criteria->compare('first_name',$this->first_name,true);
+		$criteria->compare('middle_name',$this->middle_name,true);
 		$criteria->compare('last_name',$this->last_name,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('phone',$this->phone,true);
+		$criteria->compare('created',$this->created,true);
+		$criteria->compare('modified',$this->modified,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('salt',$this->salt,true);
+		$criteria->compare('modified_by',$this->modified_by,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
 	/**
 	 * Overrides parent to assign non input values.
 	 * @return boolean whether the saving should be executed. Defaults to true.

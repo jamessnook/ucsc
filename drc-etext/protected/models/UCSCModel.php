@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This is a base class for active record classes with usefull funtionality added".
+ * This is a base class for active record classes with usefull funtionality added.
  *
  */
 class UCSCModel extends CActiveRecord
@@ -22,17 +22,15 @@ class UCSCModel extends CActiveRecord
 
 	/**
 	 * Overrides parent to assign non input values.
+	 * Here we assign time stamps and user data to any tables that include it.
 	 * @return boolean whether the saving should be executed. Defaults to true.
 	 */
 	public function beforeSave(){
 		$now = date('Y-m-d H:i:s');
     	if ($this->isNewRecord){
-        	//$this->created = new CDbExpression("datetime('now')");
 			$this->setAttribute('created', $now); // safely returns false if attribute does not exist
 		}
-		//$this->modified = new CDbExpression("datetime('now')");
 		$this->setAttribute('modified', $now); // safely returns false if attribute does not exist
-		//$this->modified_by = Yii::app()->user->name; 
 		$this->setAttribute('modified_by', Yii::app()->user->name); // safely returns false if attribute does not exist
 		return parent::beforeSave();
 	}

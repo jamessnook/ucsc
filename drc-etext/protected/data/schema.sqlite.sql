@@ -44,20 +44,25 @@ INSERT INTO AuthAssignment (itemname, userid) VALUES ('admin', 'admin');
 
 drop table if exists user;
 CREATE TABLE user (    -- AIS feed and creation by admins
-    username     VARCHAR(64) NOT NULL PRIMARY KEY,   -- cruzid
-    emplid       VARCHAR(64) UNIQUE,  -- AIS user id
+    username     VARCHAR(64) NOT NULL PRIMARY KEY,   --  cruzid if available
+    emplid       VARCHAR(64) UNIQUE,     -- AIS user id
     first_name   VARCHAR(64),
+    middle_name   VARCHAR(64),
     last_name    VARCHAR(64),
     email        VARCHAR(128),
-    phone        VARCHAR(32)
+    phone        VARCHAR(32),
+    created      DATETIME,                -- when imported from AIS
+    modified     DATETIME,                -- when updated from AIS
+    password     VARCHAR(128),            -- optional for local login
+    salt         VARCHAR(128),            -- optional for local login
+    modified_by  VARCHAR(64)              -- when updated from AIS
 );
 INSERT INTO user (username) VALUES ('admin');
 
 drop table if exists file_type;
 CREATE TABLE file_type (    -- AIS feed
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name         VARCHAR(32) NOT NULL,    -- file extension, AIS accomodation Type
-    accommodation_type   VARCHAR(16),    -- identifies accommodation type in AIS
+    type         VARCHAR(32) NOT NULL,    -- file extension, AIS accomodation Type
     caption      VARCHAR(128)   -- optional for display 
 );
 -- INSERT INTO file_type (name) VALUES ('docx');
@@ -69,27 +74,33 @@ CREATE TABLE file_type (    -- AIS feed
 drop table if exists drc_request;
 CREATE TABLE drc_request (  -- AIS feed associates student and course approved for services
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
-    class_num INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
+    class_num INTEGER,                  -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     course_id VARCHAR(32),              -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CRSE_ID, may not need
     emplid     VARCHAR(32),             -- AIS: EMPLID, identifies student, 7 digit number not cruzid
+    type  VARCHAR(32),                  -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
     created    DATETIME,                -- when imported from AIS
-    primary key (emplId, term_code, class_num )
+    modified    DATETIME,               -- when updated from AIS
+    primary key (emplid, term_code, class_num ),
+    foreign key (type) references file_type (type),
+    foreign key (emplid) references user (emplid),
+    foreign key (term_code, class_num) references course (term_code, class_num)
  );
 
 drop table if exists drc_accommodation;
 CREATE TABLE drc_accommodation (  -- AIS feed  May not need
     emplid     VARCHAR(32),             -- AIS: EMPLID, identifies student, 7 digit number not cruzid
-    type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
+    type  VARCHAR(32),                  -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
     start_date DATE,                    -- AIS
     end_date DATE,                      -- AIS
     created    DATETIME,                -- when imported from AIS
+    modified    DATETIME,               -- when updated from AIS
     primary key (emplId, type )
 );
 
 drop table if exists course;
 CREATE TABLE course (  -- AIS feed
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
-    class_num INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
+    class_num INTEGER,                  -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     section VARCHAR(32),                -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CLASS_SECTION?, for bookstore class books request
     course_id VARCHAR(32),              -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CRSE_ID, may not need
     subject VARCHAR(64),                -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.SUBJECT, is this department for bookstore class books request
@@ -97,7 +108,9 @@ CREATE TABLE course (  -- AIS feed
     title VARCHAR(128),                 -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.TITLE
     catalog_num VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CATALOG_NBR
     created    DATETIME,                -- when imported or requested (local, not from AIS)
-    primary key (term_code, class_num )
+    modified    DATETIME,               -- when updated from AIS
+    primary key (term_code, class_num ),
+    foreign key (term_code) references term (term_code)
  );
 
 drop table if exists course_instructor;
@@ -105,7 +118,9 @@ CREATE TABLE course_instructor (         -- AIS feed, one to many association po
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
     class_num INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     emplid     VARCHAR(32),             -- AIS: EMPLID, identifies instructor 7 digit number not cruzid
-    primary key (emplId, term_code, class_num )
+    primary key (emplid, term_code, class_num ),
+    foreign key (emplid) references user ("emplid"),
+    foreign key (term_code, class_num) references course (term_code, class_num)
 );
 
 drop table if exists term;
@@ -129,7 +144,7 @@ CREATE TABLE file (
     order_num    INTEGER,       -- display or list order if member of a group (chapters in a book)
     created      DATETIME,      -- when requested
     modified     DATETIME,      -- date and time of last change
-    modified_by   VARCHAR(32),  -- username of user who made last change 
+    modified_by   VARCHAR(64),  -- username of user who made last change 
     foreign key (modified_by) references user ("username")
     foreign key (parent_id) references book_request ("id")
     foreign key (type_id) references file_type ("id")
@@ -149,16 +164,16 @@ drop table if exists assignment;
 CREATE TABLE assignment (               -- maps books and files to a course
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
-    class_number INTEGER NOT NULL,      -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
+    class_num INTEGER NOT NULL,      -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     book_id     INTEGER,                -- drc library id for book
     created    DATETIME,                -- when requested
     modified    DATETIME,               -- date and time of last change
-    modified_by    VARCHAR(32),         -- username of user who made last change 
+    modified_by    VARCHAR(64),         -- username of user who made last change 
     notes VARCHAR(1024),
     is_complete BOOLEAN DEFAULT 0,      -- not needed if tracked by type instead
     has_zip_file BOOLEAN DEFAULT 0,
     foreign key (term_code ) references term (term_code),
-    foreign key (class_number ) references course (class_number),
+    foreign key (term_code, class_num) references course (term_code, class_num)
     foreign key (modified_by) references user ("username")
 );
 
@@ -180,7 +195,11 @@ CREATE TABLE book (                    -- books or other items in drc library
     title      VARCHAR(512) NOT NULL, 
     author     VARCHAR(128),
     edition    VARCHAR(128),
-    foreign key (id_type ) references id_type (name)
+    created      DATETIME,      -- when requested
+    modified     DATETIME,      -- date and time of last change
+    modified_by   VARCHAR(64),  -- username of user who made last change 
+    foreign key (id_type ) references id_type (name),
+    foreign key (modified_by) references user ("username")
 );
 
 drop table if exists book_purchase;
@@ -189,23 +208,28 @@ CREATE TABLE book_purchase (          -- one to many associates a book with the 
     username    VARCHAR(64),          -- identifies file or other type
     start_date DATE,
     end_date DATE,
+    created      DATETIME,      -- when requested
+    modified     DATETIME,      -- date and time of last change
+    modified_by   VARCHAR(64),  -- username of user who made last change 
     primary key (book_id, username),
     foreign key (book_id) references book (id),
-    foreign key (username) references user (username)
+    foreign key (username) references user (username),
+    foreign key (modified_by) references user ("username")
 );
 
 drop table if exists instructor_files;
 CREATE TABLE instructor_files (              -- identifies files that are uploaded by instructor
     file_id     INTEGER NOT NULL,   -- 
     term_code   INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
-    class_number INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
+    class_num   INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     emplId      VARCHAR(32),             -- AIS: EMPLID, identifies instructor 7 digit number not cruzid
     notes       VARCHAR(512),         -- information about what assignmetn the file is for
     is_syllabus BOOLEAN DEFAULT 0,
+    created    DATETIME,                -- when requested
     primary key (file_id),
     foreign key (file_id) references file (id),
     foreign key (term_code ) references term (term_code),
-    foreign key (class_number ) references course (class_number),
+    foreign key (term_code, class_num) references course (term_code, class_num)
     foreign key (emplId) references user ("emplId")
 );
 

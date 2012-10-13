@@ -8,7 +8,9 @@
  * @property integer $class_num
  * @property string $course_id
  * @property string $emplid
+ * @property string $type
  * @property string $created
+ * @property string $modified
  *
  * The followings are the available model relations:
  * @property Assignment[] $assignments
@@ -43,11 +45,11 @@ class DrcRequest extends UCSCModel
 		return array(
 			array('term_code', 'required'),
 			array('term_code, class_num', 'numerical', 'integerOnly'=>true),
-			array('course_id, emplid', 'length', 'max'=>32),
-			array('created', 'safe'),
+			array('course_id, emplid, type', 'length', 'max'=>32),
+			array('created, modified', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('term_code, class_num, course_id, emplid, created', 'safe', 'on'=>'search'),
+			array('term_code, class_num, course_id, emplid, type, created, modified', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,7 +75,9 @@ class DrcRequest extends UCSCModel
 			'class_num' => 'Class Num',
 			'course_id' => 'Course',
 			'emplid' => 'Emplid',
+			'type' => 'Type',
 			'created' => 'Created',
+			'modified' => 'Modified',
 		);
 	}
 
@@ -92,7 +96,9 @@ class DrcRequest extends UCSCModel
 		$criteria->compare('class_num',$this->class_num);
 		$criteria->compare('course_id',$this->course_id,true);
 		$criteria->compare('emplid',$this->emplid,true);
+		$criteria->compare('type',$this->type,true);
 		$criteria->compare('created',$this->created,true);
+		$criteria->compare('modified',$this->modified,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

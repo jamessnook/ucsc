@@ -5,8 +5,13 @@
  *
  * The followings are the available columns in table 'course_instructor':
  * @property integer $term_code
- * @property integer $class_number
- * @property string $emplId
+ * @property integer $class_num
+ * @property string $emplid
+ *
+ * The followings are the available model relations:
+ * @property Course $termCode
+ * @property Course $classNum
+ * @property User $empl
  */
 class CourseInstructor extends CActiveRecord
 {
@@ -37,11 +42,11 @@ class CourseInstructor extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('term_code', 'required'),
-			array('term_code, class_number', 'numerical', 'integerOnly'=>true),
-			array('emplId', 'length', 'max'=>32),
+			array('term_code, class_num', 'numerical', 'integerOnly'=>true),
+			array('emplid', 'length', 'max'=>32),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('term_code, class_number, emplId', 'safe', 'on'=>'search'),
+			array('term_code, class_num, emplid', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,6 +58,9 @@ class CourseInstructor extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'termCode' => array(self::BELONGS_TO, 'Course', 'term_code'),
+			'classNum' => array(self::BELONGS_TO, 'Course', 'class_num'),
+			'empl' => array(self::BELONGS_TO, 'User', 'emplid'),
 		);
 	}
 
@@ -63,8 +71,8 @@ class CourseInstructor extends CActiveRecord
 	{
 		return array(
 			'term_code' => 'Term Code',
-			'class_number' => 'Class Number',
-			'emplId' => 'Empl',
+			'class_num' => 'Class Num',
+			'emplid' => 'Emplid',
 		);
 	}
 
@@ -80,8 +88,8 @@ class CourseInstructor extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('term_code',$this->term_code);
-		$criteria->compare('class_number',$this->class_number);
-		$criteria->compare('emplId',$this->emplId,true);
+		$criteria->compare('class_num',$this->class_num);
+		$criteria->compare('emplid',$this->emplid,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
