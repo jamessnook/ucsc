@@ -94,7 +94,8 @@ CREATE TABLE drc_accommodation (  -- AIS feed  May not need
     end_date DATE,                      -- AIS
     created    DATETIME,                -- when imported from AIS
     modified    DATETIME,               -- when updated from AIS
-    primary key (emplId, type )
+    primary key (emplId, type ),
+    foreign key (emplid) references user (emplid)
 );
 
 drop table if exists course;

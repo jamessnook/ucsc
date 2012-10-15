@@ -5,11 +5,11 @@
  *
  * The followings are the available columns in table 'file_type':
  * @property integer $id
- * @property string $name
- * @property string $accommodation_type
+ * @property string $type
  * @property string $caption
  *
  * The followings are the available model relations:
+ * @property DrcRequest[] $drcRequests
  * @property File[] $files
  */
 class FileType extends CActiveRecord
@@ -40,13 +40,12 @@ class FileType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('name', 'length', 'max'=>32),
-			array('accommodation_type', 'length', 'max'=>16),
+			array('type', 'required'),
+			array('type', 'length', 'max'=>32),
 			array('caption', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, accommodation_type, caption', 'safe', 'on'=>'search'),
+			array('id, type, caption', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,6 +57,7 @@ class FileType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'type'),
 			'files' => array(self::HAS_MANY, 'File', 'type_id'),
 		);
 	}
@@ -69,8 +69,7 @@ class FileType extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'accommodation_type' => 'Accommodation Type',
+			'type' => 'Type',
 			'caption' => 'Caption',
 		);
 	}
@@ -87,8 +86,7 @@ class FileType extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('accommodation_type',$this->accommodation_type,true);
+		$criteria->compare('type',$this->type,true);
 		$criteria->compare('caption',$this->caption,true);
 
 		return new CActiveDataProvider($this, array(

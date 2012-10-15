@@ -11,6 +11,7 @@
  *
  * The followings are the available model relations:
  * @property Assignment[] $assignments
+ * @property Course[] $courses
  * @property InstructorFiles[] $instructorFiles
  */
 class Term extends CActiveRecord
@@ -60,6 +61,7 @@ class Term extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'term_code'),
+			'courses' => array(self::HAS_MANY, 'Course', 'term_code'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'term_code'),
 		);
 	}

@@ -14,8 +14,12 @@
  *
  * The followings are the available model relations:
  * @property Assignment[] $assignments
+ * @property Course $termCode
+ * @property Course $classNum
+ * @property User $empl
+ * @property FileType $type0
  */
-class DrcRequest extends UCSCModel
+class DrcRequest extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -62,6 +66,10 @@ class DrcRequest extends UCSCModel
 		// class name for the relations automatically generated below.
 		return array(
 			'assignments' => array(self::MANY_MANY, 'Assignment', 'assignment_type(accommodation_type, assignment_id)'),
+			'termCode' => array(self::BELONGS_TO, 'Course', 'term_code'),
+			'course' => array(self::BELONGS_TO, 'Course', 'class_num, term_code'),
+			'empl' => array(self::BELONGS_TO, 'User', 'emplid'),
+			'type0' => array(self::BELONGS_TO, 'FileType', 'type'),
 		);
 	}
 

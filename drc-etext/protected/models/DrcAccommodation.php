@@ -10,8 +10,11 @@
  * @property string $end_date
  * @property string $created
  * @property string $modified
+ *
+ * The followings are the available model relations:
+ * @property User $empl
  */
-class DrcAccommodation extends UCSCModel
+class DrcAccommodation extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -55,6 +58,7 @@ class DrcAccommodation extends UCSCModel
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'empl' => array(self::BELONGS_TO, 'User', 'emplid'),
 		);
 	}
 
