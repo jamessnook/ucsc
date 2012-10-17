@@ -21,6 +21,8 @@
  */
 class DrcRequest extends CActiveRecord
 {
+	public $username; // for non emplid matches
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -68,7 +70,7 @@ class DrcRequest extends CActiveRecord
 			'assignments' => array(self::MANY_MANY, 'Assignment', 'assignment_type(accommodation_type, assignment_id)'),
 			'termCode' => array(self::BELONGS_TO, 'Course', 'term_code'),
 			'course' => array(self::BELONGS_TO, 'Course', 'class_num, term_code'),
-			'empl' => array(self::BELONGS_TO, 'User', 'emplid'),
+			'user' => array(self::BELONGS_TO, 'User', 'emplid'),
 			'type0' => array(self::BELONGS_TO, 'FileType', 'type'),
 		);
 	}
@@ -95,9 +97,6 @@ class DrcRequest extends CActiveRecord
 	 */
 	public function search()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
-
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('term_code',$this->term_code);
@@ -105,9 +104,24 @@ class DrcRequest extends CActiveRecord
 		$criteria->compare('course_id',$this->course_id,true);
 		$criteria->compare('emplid',$this->emplid,true);
 		$criteria->compare('type',$this->type,true);
-		$criteria->compare('created',$this->created,true);
-		$criteria->compare('modified',$this->modified,true);
+		$criteria->compare('user.username',$this->username);
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+	
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function getForUserAndTerm($username, $termCode)
+	{
+		$criteria=new CDbCriteria;
 
+		$criteria->compare('term_code',$term_code);
+		$criteria->compare('user.username',$username);
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

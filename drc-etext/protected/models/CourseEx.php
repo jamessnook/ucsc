@@ -24,7 +24,7 @@
  * @property DrcRequest[] $drcRequests1
  * @property InstructorFiles[] $instructorFiles
  */
-class Course extends CActiveRecord
+class CourseEx extends Course
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -36,54 +36,8 @@ class Course extends CActiveRecord
 		return parent::model($className);
 	}
 
-	/**
-	 * @return string the associated database table name
-	 */
-	public function tableName()
-	{
-		return 'Course';
-	}
 
 	/**
-	 * @return array validation rules for model attributes.
-	 */
-	public function rules()
-	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(
-			array('term_code', 'required'),
-			array('term_code, class_num', 'numerical', 'integerOnly'=>true),
-			array('section, course_id', 'length', 'max'=>32),
-			array('subject, catalog_num', 'length', 'max'=>64),
-			array('description', 'length', 'max'=>512),
-			array('title', 'length', 'max'=>128),
-			array('created, modified', 'safe'),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('term_code, class_num, section, course_id, subject, description, title, catalog_num, created, modified', 'safe', 'on'=>'search'),
-		);
-	}
-
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-			'assignments' => array(self::HAS_MANY, 'Assignment', 'class_num'),
-			'termCode' => array(self::BELONGS_TO, 'Term', 'term_code'),
-			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code'),
-			'drcRequests1' => array(self::HAS_MANY, 'DrcRequest', 'class_num'),
-			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'class_num'),
-            'instructors'=>array(self::MANY_MANY, 'User',
-                'course_instructors(emplid, term_code, class_ num)'),
-		);
-	}
-
-	/** 
 	 * @return array customized attribute labels (name=>label)
 	 */
 	public function attributeLabels()
@@ -95,7 +49,7 @@ class Course extends CActiveRecord
 			'course_id' => 'Course',
 			'subject' => 'Subject',
 			'description' => 'Description',
-			'title' => 'Course Name',
+			'title' => 'Title',
 			'catalog_num' => 'Catalog Num',
 			'created' => 'Created',
 			'modified' => 'Modified',
@@ -128,7 +82,8 @@ class Course extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-	
+
+
 	/**
 	 * Retrieves a list of faculty names.
 	 * @return string, the names of faculty for this course.
@@ -141,36 +96,6 @@ class Course extends CActiveRecord
 			$names .= $instructor->user->first_name . ' ' . $instructor->user->last_name . ', ';
 		}
 		return substr($names, 0, -2);
-	}
-	
-	/**
-	 * Retrieves a count of the assignemtns for this course.
-	 * @return integer, a count of the assignemtns for this course.
-	 */
-	public function assignmentCount()
-	{
-		return count($this->assignments);
-	}
-	
-	/**
-	 * Returns true if all assignemtns for this course are complete.
-	 * @return boolean, true if all assignemtns for this course are complete.
-	 */
-	public function completed()
-	{
-		foreach($this->assignments as $assignment){
-			if (!$assignment->is_complete) return false;
-		}
-		return true;
-	}
-	
-	/**
-	 * Retrieves descriptive id string for this course.
-	 * @return string, descriptive id string for this course.
-	 */
-	public function idString()
-	{
-		return $this->subject . ' ' . $this->course_id . ' - ' . $this->section;
 	}
 	
 }

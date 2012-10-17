@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
-	'Book Requests'=>array('index'),
-	'MyBooks',
+	'DRC Requests'=>array('index'),
+	'My Courses',
 );
 
 $this->menu=array(
@@ -27,7 +27,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>My Book Requests</h1>
+<h1>My Courses</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -48,29 +48,26 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'request_id',
-		array( 
-			'name'=>'term_id', 
-			'value'=>'$data->request->term_id', 
-			// 'value'=>'$data->a.\' \'.$data->b.\' \'.$data->c',
-			'filter' => CHtml::listData(Term::model()->findAll(), 'id', 'name'), 
-			'htmlOptions'=>array('width'=>'110px', 'class'=>'term'),
-		 ),
-		'global_id',
-		'id_type',
 		'title',
-		'author',
-		array(
-			'class'=>'CButtonColumn',
-			'buttons'=>array(
-				'download'=>array(
-					'label'=>'Download',     // text label of the button
-    				'url'=>'Yii::app()->createUrl("file/download", array("parent_id"=>$data->id))',       // a PHP expression for generating the URL of the button
-				),
-			),
-			'template'=>'{view}{update}{delete}{download}',
-		),
+		array( 
+			'name'=>'Class Id', 
+			'value'=>'$data->course->idString()', 
+			// 'value'=>'$data->a.\' \'.$data->b.\' \'.$data->c',
+			//'filter' => CHtml::listData(Term::model()->findAll(), 'id', 'name'), 
+			//'htmlOptions'=>array('width'=>'110px', 'class'=>'term'),
+		 ),
+		array( 
+			'name'=>'Faculty', 
+			'value'=>'$data->course->faculty()', 
+		 ),
+		array( 
+			'name'=>'Assignments', 
+			'value'=>'$data->course->assignmentCount()', 
+		 ),
+		 array( 
+			'name'=>'Status', 
+			'value'=>'$data->course->completed()', 
+		 ),
 	),
 )); ?>
 

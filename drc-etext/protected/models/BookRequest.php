@@ -198,7 +198,7 @@ class BookRequest extends CActiveRecord
 	}
 
 	/**
-	 * Retrieves a list of models associated wit hthe current user.
+	 * Retrieves a list of models associated with the current user.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function findForUserAndTerm($username, $termId)
