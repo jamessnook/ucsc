@@ -99,12 +99,14 @@ class DrcRequest extends CActiveRecord
 	{
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('term_code',$this->term_code);
-		$criteria->compare('class_num',$this->class_num);
-		$criteria->compare('course_id',$this->course_id,true);
-		$criteria->compare('emplid',$this->emplid,true);
-		$criteria->compare('type',$this->type,true);
-		$criteria->compare('user.username',$this->username);
+		$criteria->with=array('user',);
+		//$criteria->with('users');
+		//$criteria->compare('term_code',$this->term_code);
+		//$criteria->compare('class_num',$this->class_num);
+		//$criteria->compare('course_id',$this->course_id,true);
+		//$criteria->compare('emplid',$this->emplid,true);
+		//$criteria->compare('type',$this->type,true);
+		//$criteria->compare('user.username',$this->username);
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

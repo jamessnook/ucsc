@@ -79,7 +79,7 @@ class Course extends CActiveRecord
 			'drcRequests1' => array(self::HAS_MANY, 'DrcRequest', 'class_num'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'class_num'),
             'instructors'=>array(self::MANY_MANY, 'User',
-                'course_instructors(emplid, term_code, class_ num)'),
+                'course_instructor(emplid, term_code, class_num)'),
 		);
 	}
 
@@ -170,7 +170,7 @@ class Course extends CActiveRecord
 	 */
 	public function idString()
 	{
-		return $this->subject . ' ' . $this->course_id . ' - ' . $this->section;
+		return $this->subject . ' ' . $this->catalog_num . ' - ' . $this->section;
 	}
 	
 }

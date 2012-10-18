@@ -99,4 +99,23 @@ class Term extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * @return array customized attribute labels (name=>label)
+	 */
+	public static function currentAndPastTerms()
+	{
+		$now = date('Y-m-d');
+		return self::model()->findAll(array('order'=>'term_code DESC', 'condition'=>"start_date < $now") );
+	}
+
+		/**
+	 * @return array customized attribute labels (name=>label)
+	 */
+	public static function currentTermCode()
+	{
+		$now = date('Y-m-d');
+		return self::model()->find(array('order'=>'term_code DESC', 'condition'=>"start_date < $now"))->term_code;
+	}
+
 }

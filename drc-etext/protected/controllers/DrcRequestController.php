@@ -27,7 +27,7 @@ class DrcRequestController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','studentCourses'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -144,6 +144,33 @@ class DrcRequestController extends Controller
 			$model->attributes=$_GET['DrcRequest'];
 
 		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
+	 * Manages all models.
+	 */
+	public function actionStudentCourses()
+	{
+		$model=new DrcRequest('search');
+		$model->unsetAttributes();  // clear any default values
+		$model->username = Yii::app()->user->name;
+		//$model->term_code = Term::currentTermCode();
+		$model->term_code = '';
+		if(isset($_GET['username'])){
+			$model->username = $_GET['username'];
+			if ($model->username == 'all') {
+				$model->username == ''; // for all users
+			}
+		}
+		if(isset($_GET['termCode'])){
+			$model->term_code = $_GET['termCode'];
+		}
+		if(isset($_GET['DrcRequest']))
+			$model->attributes=$_GET['DrcRequest'];
+
+		$this->render('studentCourses',array(
 			'model'=>$model,
 		));
 	}

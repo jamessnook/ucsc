@@ -5,14 +5,23 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List BookRequest', 'url'=>array('index')),
-	array('label'=>'Create BookRequest', 'url'=>array('create')),
-	array('label'=>'Upload Files','url'=>array('file/upload', 'bookRequest_id'=>$model->id)),
-	array('label'=>'Download Files','url'=>array('file/download', 'bookRequest_id'=>$model->id)),
-	array('label'=>'My Books', 'url'=>array('myBooks')),
-	array('label'=>'Request a Book', 'url'=>array('create')),
+	//array('label'=>'List BookRequest', 'url'=>array('index')),
+	//array('label'=>'Create BookRequest', 'url'=>array('create')),
+	//array('label'=>'Upload Files','url'=>array('file/upload', 'bookRequest_id'=>$model->id)),
+	//array('label'=>'Download Files','url'=>array('file/download', 'bookRequest_id'=>$model->id)),
+	//array('label'=>'My Books', 'url'=>array('myBooks')),
+	//array('label'=>'Request a Book', 'url'=>array('create')),
 	);
 
+// make term list menu could make widget
+$now = date('Y-m-d');
+$terms =  Term::model()->findAll( "start_date < $now" );
+foreach($terms AS $term){
+	$this->menu['label'] = $term->description;
+	$this->menu['url'] = array('drcRequest/studentCourses', 'termCode'=>$term->term_code);
+}
+	
+	
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -44,28 +53,32 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 <?php 
 $model->username = Yii::app()->user->name;  // set up for current user
 $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'book-request-grid',
+	'id'=>'drc-request-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'title',
+		'course.title',
+		//array( 
+		//	'name'=>'Course Name', 
+		//	'value'=>'$data->course->title', 
+		 //),
 		array( 
-			'name'=>'Class Id', 
+			'name'=>'course.idString()', 
 			'value'=>'$data->course->idString()', 
 			// 'value'=>'$data->a.\' \'.$data->b.\' \'.$data->c',
 			//'filter' => CHtml::listData(Term::model()->findAll(), 'id', 'name'), 
 			//'htmlOptions'=>array('width'=>'110px', 'class'=>'term'),
 		 ),
 		array( 
-			'name'=>'Faculty', 
+			'name'=>'course.faculty()', 
 			'value'=>'$data->course->faculty()', 
 		 ),
 		array( 
-			'name'=>'Assignments', 
+			'name'=>'course.assignmentCount()', 
 			'value'=>'$data->course->assignmentCount()', 
 		 ),
 		 array( 
-			'name'=>'Status', 
+			'name'=>'course.completed()', 
 			'value'=>'$data->course->completed()', 
 		 ),
 	),
