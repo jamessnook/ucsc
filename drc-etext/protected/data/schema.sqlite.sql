@@ -112,6 +112,7 @@ CREATE TABLE course (  -- AIS feed
     modified    DATETIME,               -- when updated from AIS
     primary key (term_code, class_num ),
     foreign key (term_code) references term (term_code)
+    foreign key (term_code, class_num) references course_instructor (term_code, class_num)
  );
 
 drop table if exists course_instructor;
@@ -120,10 +121,14 @@ CREATE TABLE course_instructor (         -- AIS feed, one to many association po
     class_num INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     emplid     VARCHAR(32),             -- AIS: EMPLID, identifies instructor 7 digit number not cruzid
     primary key (emplid, term_code, class_num ),
-    foreign key (emplid) references user ("emplid"),
+    foreign key (emplid) references user (emplid),
     foreign key (term_code, class_num) references course (term_code, class_num)
 );
 
+INSERT OR IGNORE INTO user (username, emplid, first_name, last_name) 
+  SELECT 'em'||emplid, emplid, 'FN'||emplid, 'LN'||emplid
+  FROM course_instructor;
+  
 drop table if exists term;
 CREATE TABLE term(                 --  AIS feed, data for terms for display puposes
     term_code VARCHAR(32) NOT NULL PRIMARY KEY ,       -- AIS: STRM
