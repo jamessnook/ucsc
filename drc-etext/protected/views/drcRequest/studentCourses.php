@@ -84,3 +84,166 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	),
 )); ?>
 
+
+
+
+	
+	
+	
+	<div class="subnavbar">
+      <div class="subnavbar-inner">
+        <div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<ul class="nav nav-tabs">
+						<li>
+							<a href="index.html"><i class="icon-dashboard"></i> Dashboard</a>
+						</li>
+						<li class="active"><a href="courses.html">Courses</a></li>
+						<li><a href="requests.html">Assignments</a></li>
+						<li class="pull-right"><a href="reports.html"><i class="icon-wrench"></i> Reports</a></li>
+						<li class="pull-right"><a href="roles.html"><i class="icon-group"></i> Roles</a></li>
+						<li class="pull-right"><a href="users.html"><i class="icon-user"></i> Users</a></li>
+					</ul>
+				</div>
+				
+				
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span9">
+		  	<div class="page-unit">
+				<div class="page-head">
+					<div class="row-fluid">
+						<h1 class="pull-left">Courses</h1>
+						<ul class="nav nav-pills pull-right">
+						      <li><a href="#"><i class="icon-plus"></i> Add Course</a></li>
+						</ul>
+					</div><!--/row-->
+				</div><!--/head-->
+				<div class="row-fluid">
+		            <div class="span12">
+		            	<table class="table table-striped" id="example">
+							<thead>
+								<tr>
+									<th>Class Title</th>
+									<th>Class ID</th>
+									<th>Faculty</th>
+									<th>Requests</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-success">Completed</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+								<tr>
+									<td><a href="assignment.html">Photography and Anthropology</a></td>
+									<td>ANTH 132 - 01</td>
+									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Errington,S.E.</a></td>
+									<td><span class="badge">7</span></td>
+									<td><span class="badge badge-warning">Pending</span></td>
+								</tr>
+							</tbody>
+						</table>
+						
+				
+		            </div><!--/span-->
+		        </div><!--/row-->
+			</div><!--/page-unit-->
+		  
+
+        </div><!--/span-->
+		<div class="span3">
+          <div class="well">
+            <ul class="nav nav-list">
+              <li class="nav-header">Quarters Menu</li>
+              <li class="active"><a href="#">Summer I 2012</a></li>
+			  <li><a href="#">Spring 2012</a></li>
+              <li><a href="#">Winter 2012</a></li>
+              <li><a href="#">Fall 2011</a></li>
+              <li><a href="#">Spring 2011</a></li>
+
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
+    </div><!--/.fluid-container-->
