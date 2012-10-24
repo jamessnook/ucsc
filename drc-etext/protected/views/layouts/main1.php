@@ -67,12 +67,6 @@
 						jrosczyk
 						<b class="caret"></b>
 					</a>
-					<ul class="dropdown-menu">
-						<li><a href="<?php echo $this->createUrl('user/profile'); ?>">My Profile</a></li>
-						<li><a href="<?php echo $this->createUrl('user/groups'); ?>">My Groups</a></li>
-						<li class="divider"></li>
-						<li><a href="<?php echo $this->createUrl('site/logout'); ?>">Logout</a></li>
-					</ul>
 					<?php $this->widget('zii.widgets.CMenu',array(
 						'items'=>array(
 							array('label'=>'My Profile', 'url'=>array('/user/profile')),

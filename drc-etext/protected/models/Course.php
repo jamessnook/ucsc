@@ -73,13 +73,14 @@ class Course extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'assignments' => array(self::HAS_MANY, 'Assignment', 'class_num'),
+			'assignments' => array(self::HAS_MANY, 'Assignment', 'term_code, class_num'),
 			'termCode' => array(self::BELONGS_TO, 'Term', 'term_code'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code'),
 			'drcRequests1' => array(self::HAS_MANY, 'DrcRequest', 'class_num'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'class_num'),
             'instructors'=>array(self::MANY_MANY, 'User',
-                'course_instructor(emplid, term_code, class_num)'),
+                'course_instructor(term_code, class_num, emplid)'),
+            'courseInstructors'=>array(self::HAS_MANY, 'CourseInstructor', 'term_code, class_num'),
 		);
 	}
 
@@ -136,11 +137,16 @@ class Course extends CActiveRecord
 	public function faculty()
 	{
 		$names = '';
-		foreach($this->instructors as $instructor)
+		foreach($this->courseInstructors as $instructor)
 		{
 			$names .= $instructor->user->first_name . ' ' . $instructor->user->last_name . ', ';
 		}
-		return substr($names, 0, -2);
+		//foreach($this->instructors as $instructor)
+		//{
+		//	$names .= $instructor->first_name . ' ' . $instructor->last_name . ', ';
+		//}
+		if (strlen($names)>1 ) $names =  substr($names, 0, -2);
+		return $names;
 	}
 	
 	/**

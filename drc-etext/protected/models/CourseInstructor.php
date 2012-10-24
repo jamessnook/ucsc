@@ -60,7 +60,7 @@ class CourseInstructor extends CActiveRecord
 		return array(
 			'termCode' => array(self::BELONGS_TO, 'Course', 'term_code'),
 			'classNum' => array(self::BELONGS_TO, 'Course', 'class_num'),
-			'empl' => array(self::BELONGS_TO, 'User', 'emplid'),
+			'user' => array(self::BELONGS_TO, 'User', 'emplid'),
 		);
 	}
 
