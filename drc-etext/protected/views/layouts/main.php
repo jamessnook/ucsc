@@ -38,54 +38,51 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html"><?php echo CHtml::encode(Yii::app()->name); ?></a>
+          <a class="brand" href="<?php echo $this->createUrl('/site/index'); ?>"><?php echo CHtml::encode(Yii::app()->name); ?></a>
 		  
 		  
 		
           <div class="nav-collapse">
-            <ul class="nav">
-              <li><a href="#about"><i class="icon-info-sign"></i> About</a></li>
-              <li><a href="#contact"><i class="icon-envelope-alt"></i> Contact</a></li>
-            </ul>
-			<ul class="nav pull-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-cog"></i>
-						Settings
-						<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="javascript:;">Account Settings</a></li>
-						<li><a href="javascript:;">Privacy Settings</a></li>
-						<li class="divider"></li>
-						<li><a href="javascript:;">Help</a></li>
-					</ul>
-				</li>
-	            <li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="icon-user"></i> 
-						jrosczyk
-						<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="<?php echo $this->createUrl('user/profile'); ?>">My Profile</a></li>
-						<li><a href="<?php echo $this->createUrl('user/groups'); ?>">My Groups</a></li>
-						<li class="divider"></li>
-						<li><a href="<?php echo $this->createUrl('site/logout'); ?>">Logout</a></li>
-					</ul>
-					<?php $this->widget('zii.widgets.CMenu',array(
+			<?php 
+			$this->widget('zii.widgets.CMenu',array(
+				'itemOptions'=>array('class'=>'nav'), 
+				'items'=>array(
+					array('label'=>'<i class="icon-info-sign"></i> About', 'url'=>array('/site/about')),
+					array('label'=>'<i class="icon-envelope-alt"></i> Contact', 'url'=>array('/site/contact')),
+				), 
+			));
+			$this->widget('zii.widgets.CMenu',array(
+				'itemOptions'=>array('class'=>'nav pull-right'), 
+				'items'=>array(
+					array(
+						'itemOptions'=>array('class'=>'dropdown-menu'), 
+						'url'=>array('#'),
+						'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
+						'label'=> '<i class="icon-cog"></i> Settings <b class="caret"></b>',
+						'items'=>array(
+							array('label'=>'Account Settings', 'url'=>array('/user/profile')),
+							array('label'=>'Privacy Settings', 'url'=>array('/user/profile')),
+							array('itemOptions'=>array('class'=>'divider')),
+							array('label'=>'Help', 'url'=>array('/site/help')),
+						),
+					),
+					array(
+						'itemOptions'=>array('class'=>'dropdown-menu'), 
+						'url'=>array('#'),
+						'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
+						'label'=> '<i class="icon-user"></i>' . Yii::app()->user->name . '<b class="caret"></b>',
 						'items'=>array(
 							array('label'=>'My Profile', 'url'=>array('/user/profile')),
 							array('label'=>'My Groups', 'url'=>array('/user/groups')),
 							array('itemOptions'=>array('class'=>'divider')),
 							array('label'=>'Logout', 'url'=>array('/site/logout')),
 						),
-						'htmlOptions'=>array('class'=>'dropdown-menu'),
-					)); ?>
-				</li>
-	        </ul>
+					),
+				), 
+			));
+			?>
 			<form class="navbar-search pull-right">
-				<input type="text" class="search-query" placeholder="Search">
+				<input type="text" class="search-query" placeholder="Search"/>
 			</form>
           </div><!--/.nav-collapse -->
         </div>
