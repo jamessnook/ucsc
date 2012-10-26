@@ -12,43 +12,22 @@ $this->menu=array(
 	//array('label'=>'My Books', 'url'=>array('myBooks')),
 	//array('label'=>'Request a Book', 'url'=>array('create')),
 	);
-
-// make term list menu could make widget
-$now = date('Y-m-d');
-$terms =  Term::model()->findAll( "start_date < $now" );
-foreach($terms AS $term){
-	$this->menu['label'] = $term->description;
-	$this->menu['url'] = array('drcRequest/studentCourses', 'termCode'=>$term->term_code);
-}
 	
-	
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('book-request-grid', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
 <h1>My Courses</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span9">
+		  	<div class="page-unit">
+				<div class="page-head">
+					<div class="row-fluid">
+						<h1 class="pull-left"><?php echo $this->term; ?></h1>
+					</div><!--/row-->
+				</div><!--/head-->
+				<div class="row-fluid">
+		            <div class="span12">
 
 <?php 
 $model->username = Yii::app()->user->name;  // set up for current user
@@ -75,71 +54,15 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		 ),
 		array( 
 			'name'=>'course.assignmentCount()', 
-			'value'=>'$data->course->assignmentCount()', 
+			'value'=>'\'<span class="badge">\' . $data->course->assignmentCount() . \'</span>\'', 
 		 ),
 		 array( 
 			'name'=>'course.completed()', 
-			'value'=>'$data->course->completed()', 
+			'value'=>'$data->course->completed()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 		 ),
 	),
 )); ?>
 
-
-
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span9">
-		  	<div class="page-unit">
-				<div class="page-head">
-					<div class="row-fluid">
-						<h1 class="pull-left">Summer I 2012</h1>
-					</div><!--/row-->
-				</div><!--/head-->
-				<div class="row-fluid">
-		            <div class="span12">
-		            
-		            
-		            	<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>Course Name</th>
-									<th>Class ID</th>
-									<th>Faculty</th>
-									<th>Assignments</th>
-									<th>Status</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><a href="photography_and_anthropology.html">Photography and Anthropology</a></td>
-									<td>ANTH 132 - 01</td>
-									<td><a href="http://campusdirectory.ucsc.edu/detail.php?type=people&uid=sherring">Shelly Errington</a></td>
-									<td><span class="badge">13</span></td>
-									<td><span class="badge badge-warning">Pending</span></td>
-								</tr>
-								<tr>
-									<td><a href="#">Biology 101</a></td>
-									<td>ANTH 132 - 01</td>
-									<td><a href="#">John Smith</a>, <a href="#">Jane Doe</a></td>
-									<td><span class="badge">13</span></td>
-									<td><span class="badge badge-success">Completed</span></td>
-								</tr>
-								<tr>
-									<td><a href="#">Biology 101</a></td>
-									<td>ANTH 132 - 01</td>
-									<td><a href="#">John Smith</a>, <a href="#">Jane Doe</a></td>
-									<td><span class="badge">13</span></td>
-									<td><span class="badge badge-success">Completed</span></td>
-								</tr>
-								<tr>
-									<td><a href="#">Biology 101</a></td>
-									<td>ANTH 132 - 01</td>
-									<td><a href="#">John Smith</a>, <a href="#">Jane Doe</a></td>
-									<td><span class="badge">13</span></td>
-									<td><span class="badge badge-success">Completed</span></td>
-								</tr>
-							</tbody>
-						</table>
 				
 		            </div><!--/span-->
 		          </div><!--/row-->
@@ -149,15 +72,29 @@ $this->widget('zii.widgets.grid.CGridView', array(
         </div><!--/span-->
 		<div class="span3">
           <div class="well">
-            <ul class="nav nav-list">
-              <li class="nav-header">Quarters Menu</li>
-              <li class="active"><a href="#">Summer I 2012</a></li>
-			  <li><a href="#">Spring 2012</a></li>
-              <li><a href="#">Winter 2012</a></li>
-              <li><a href="#">Fall 2011</a></li>
-              <li><a href="#">Spring 2011</a></li>
-              
-            </ul>
+            
+        <?php
+
+			// make term list menu could make widget
+			$now = date('Y-m-d');
+			$terms =  Term::model()->findAll( "start_date < $now" );
+			foreach($terms AS $term){
+				$this->menu['label'] = $term->description;
+				$this->menu['url'] = $this->createUrl('drcRequest/studentCourses', array('termCode'=>$term->term_code));
+			}
+			
+        	$this->beginWidget('zii.widgets.CPortlet', array(
+				'title'=>'Quarters Menu',
+				'contentCssClass'=>'nav-header',
+			));
+			$this->widget('zii.widgets.CMenu', array(
+				'items'=>$this->menu,
+				'htmlOptions'=>array('class'=>'nav nav-list'),
+			));
+			$this->endWidget();
+		?>
+            
+            
           </div><!--/.well -->
         </div><!--/span-->
       </div><!--/row-->
