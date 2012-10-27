@@ -6,8 +6,10 @@ class DrcRequestController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column1';
+	public $layout='//layouts/allUsers';
 
+	//public $term=array();
+	
 	/**
 	 * @return array action filters
 	 */
@@ -154,10 +156,11 @@ class DrcRequestController extends Controller
 	public function actionStudentCourses()
 	{
 		$model=new DrcRequest('search');
+		//$this->term = $model->find();
 		$model->unsetAttributes();  // clear any default values
 		$model->username = Yii::app()->user->name;
-		//$model->term_code = Term::currentTermCode();
-		$model->term_code = '';
+		$model->term_code = Term::currentTermCode();
+		//$model->term_code = 2128;
 		if(isset($_GET['username'])){
 			$model->username = $_GET['username'];
 			if ($model->username == 'all') {

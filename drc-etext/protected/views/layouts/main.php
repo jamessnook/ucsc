@@ -39,42 +39,46 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="<?php echo $this->createUrl('/site/index'); ?>"><?php echo CHtml::encode(Yii::app()->name); ?></a>
-		  
-		  
 		
           <div class="nav-collapse">
 			<?php 
 			$this->widget('zii.widgets.CMenu',array(
-				'itemOptions'=>array('class'=>'nav'), 
+				'htmlOptions'=>array('class'=>'nav'), 
+				'encodeLabel'=>false,
 				'items'=>array(
 					array('label'=>'<i class="icon-info-sign"></i> About', 'url'=>array('/site/about')),
 					array('label'=>'<i class="icon-envelope-alt"></i> Contact', 'url'=>array('/site/contact')),
 				), 
 			));
 			$this->widget('zii.widgets.CMenu',array(
-				'itemOptions'=>array('class'=>'nav pull-right'), 
+				'htmlOptions'=>array('class'=>'nav pull-right'), 
+				'submenuHtmlOptions'=>array('class'=>'dropdown-menu'), 
+				'encodeLabel'=>false,
+				//'itemCssClass'=>'dropdown', 
 				'items'=>array(
 					array(
-						'itemOptions'=>array('class'=>'dropdown-menu'), 
-						'url'=>array('#'),
+						'itemOptions'=>array('class'=>'dropdown'), 
+						'url'=>'#',
 						'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
 						'label'=> '<i class="icon-cog"></i> Settings <b class="caret"></b>',
+						//'label'=> 'Fred',
 						'items'=>array(
 							array('label'=>'Account Settings', 'url'=>array('/user/profile')),
 							array('label'=>'Privacy Settings', 'url'=>array('/user/profile')),
-							array('itemOptions'=>array('class'=>'divider')),
+							array('label'=>'', 'itemOptions'=>array('class'=>'divider')),
 							array('label'=>'Help', 'url'=>array('/site/help')),
 						),
 					),
 					array(
-						'itemOptions'=>array('class'=>'dropdown-menu'), 
-						'url'=>array('#'),
+						'itemOptions'=>array('class'=>'dropdown'), 
+						'url'=>'#',
 						'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
 						'label'=> '<i class="icon-user"></i>' . Yii::app()->user->name . '<b class="caret"></b>',
+						//'label'=> 'Joe',
 						'items'=>array(
 							array('label'=>'My Profile', 'url'=>array('/user/profile')),
 							array('label'=>'My Groups', 'url'=>array('/user/groups')),
-							array('itemOptions'=>array('class'=>'divider')),
+							array('label'=>'', 'itemOptions'=>array('class'=>'divider')),
 							array('label'=>'Logout', 'url'=>array('/site/logout')),
 						),
 					),
@@ -100,7 +104,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="span12">
-	    			<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/ucsc_wordmark.png" />
+	    			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/ucsc_wordmark.png" />
 				</div>
 			</div>
 			<div class="row">

@@ -68,7 +68,7 @@ class DrcRequest extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'assignments' => array(self::MANY_MANY, 'Assignment', 'assignment_type(accommodation_type, assignment_id)'),
-			'termCode' => array(self::BELONGS_TO, 'Course', 'term_code'),
+			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
 			'course' => array(self::BELONGS_TO, 'Course', 'class_num, term_code'),
 			'user' => array(self::BELONGS_TO, 'User', 'emplid'),
 			'type0' => array(self::BELONGS_TO, 'FileType', 'type'),

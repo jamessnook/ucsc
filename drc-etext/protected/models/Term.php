@@ -115,7 +115,7 @@ class Term extends CActiveRecord
 	public static function currentTermCode()
 	{
 		$now = date('Y-m-d');
-		return self::model()->find(array('order'=>'term_code DESC', 'condition'=>"start_date < $now"))->term_code;
+		return self::model()->find(array('order'=>'term_code DESC', 'condition'=>"start_date < '$now'"))->term_code;
 	}
 
 }
