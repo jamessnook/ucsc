@@ -101,7 +101,7 @@ class DrcRequest extends CActiveRecord
 
 		$criteria->with=array('user',);
 		//$criteria->with('users');
-		//$criteria->compare('term_code',$this->term_code);
+		$criteria->compare('term_code',$this->term_code);
 		//$criteria->compare('class_num',$this->class_num);
 		//$criteria->compare('course_id',$this->course_id,true);
 		//$criteria->compare('emplid',$this->emplid,true);

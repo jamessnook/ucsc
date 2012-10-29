@@ -22,38 +22,38 @@
 			</div>
 		  </div>
 		</div>
-
-	    <div class="container-fluid">
-	      <div class="row-fluid">
-	        <div class="span9">
-			  <div class="page-unit">
-	
-				<?php echo $content; ?>
-		
-			  </div><!--/page-unit-->
-	        </div><!--/span-->
-			<div class="span3">
-	          <div class="well">
-	            
-		        <?php
-		        	// build up the side bar menu
-		        	$this->beginWidget('zii.widgets.CPortlet', array(
-						'title'=>'Quarters Menu',
-						'contentCssClass'=>'nav-header',
-					));
-					$this->widget('zii.widgets.CMenu', array(
-						'items'=>$this->menu,
-						'htmlOptions'=>array('class'=>'nav nav-list'),
-					));
-					$this->endWidget();
-				?>
-	            
-	            
-	          </div><!--/.well -->
-	        </div><!--/span-->
-	      </div><!--/row-->
-	    </div><!--/.fluid-container-->
       </div><!--/.subnavbar-inner-->
     </div><!--/.subnavbar-->
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span9">
+		  <div class="page-unit">
+
+			<?php echo $content; ?>
+	
+		  </div><!--/page-unit-->
+        </div><!--/span-->
+		<div class="span3">
+          <div class="well">
+            
+	        <?php
+	        	// build up the side bar menu
+	        	$this->beginWidget('zii.widgets.CPortlet', array(
+					'title'=>'Quarters Menu',
+					'contentCssClass'=>'nav-header',
+				));
+				$this->widget('zii.widgets.CMenu', array(
+					'items'=>$this->menu,
+					'htmlOptions'=>array('class'=>'nav nav-list'),
+				));
+				$this->endWidget();
+			?>
+            
+            
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
+    </div><!--/.fluid-container-->
 
 <?php $this->endContent(); ?>

@@ -29,7 +29,9 @@
 		'dataProvider'=>$model->search(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,
-		'itemsCssClass'=>"table table-striped",
+		'itemsCssClass'=>"table table-striped", 
+		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
+		'pagerCssClass'=>"pagination", 
 		'columns'=>array(
 			'course.title',
 			//array( 
