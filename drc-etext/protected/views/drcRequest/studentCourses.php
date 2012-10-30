@@ -23,6 +23,7 @@
     <div class="span12">
 
 	<?php 
+	
 	$model->username = Yii::app()->user->name;  // set up for current user
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'drc-request-grid',
@@ -33,12 +34,16 @@
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
 		'pagerCssClass'=>"pagination", 
 		'columns'=>array(
-			'course.title',
-			//array( 
-			//	'name'=>'Course Name', 
-			//	'value'=>'$data->course->title', 
-			 //),
 			array( 
+				'header'=>'Course Name', 
+				//'name'=>'course.title', 
+				//'value'=>'$data->course->title', 
+				'class'=>'CLinksColumn',
+				'labelExpression'=>'$data->course->title', 
+				'urlExpression'=>'array(\'course/view\', \'term_code\'=>$data->course->term_code, \'class_num\'=>$data->course->class_num)', 
+			),
+			array( 
+				'header'=>'Class Id', 
 				'name'=>'course.idString()', 
 				'value'=>'$data->course->idString()', 
 				// 'value'=>'$data->a.\' \'.$data->b.\' \'.$data->c',
@@ -46,16 +51,23 @@
 				//'htmlOptions'=>array('width'=>'110px', 'class'=>'term'),
 			 ),
 			array( 
-				'name'=>'course.faculty()', 
-				'value'=>'$data->course->faculty()', 
-			 ),
+				//'name'=>'course.facultyNames()', 
+				'header'=>'Faculty', 
+				'class'=>'CLinksColumn',
+				//'value'=>'$data->course->facultyNames()', 
+				'labelExpression'=>'$data->course->facultyNames()', 
+				'urlExpression'=>'$data->course->facultyUrls()', 
+				//'value'=>'$data->course->faculty()', 
+			),
 			array( 
+				'header'=>'Assignments', 
 				'name'=>'course.assignmentCount()', 
 				'type'=>'raw',
 				'value'=>'\'<span class="badge">\' . $data->course->assignmentCount() . \'</span>\'', 
 			 ),
 			 array( 
-				'name'=>'course.completed()', 
+				'header'=>'Status', 
+			 	'name'=>'course.completed()', 
 				'type'=>'raw',
 			 	'value'=>'$data->course->completed()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 			 ),

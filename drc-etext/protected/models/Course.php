@@ -134,19 +134,30 @@ class Course extends CActiveRecord
 	 * Retrieves a list of faculty names.
 	 * @return string, the names of faculty for this course.
 	 */
-	public function faculty()
+	public function facultyNames()
 	{
-		$names = '';
+		//$names = '';
+		$names = array();
 		foreach($this->courseInstructors as $instructor)
 		{
-			$names .= $instructor->user->first_name . ' ' . $instructor->user->last_name . ', ';
+			$names[] = $instructor->user->first_name . ' ' . $instructor->user->last_name;
 		}
-		//foreach($this->instructors as $instructor)
-		//{
-		//	$names .= $instructor->first_name . ' ' . $instructor->last_name . ', ';
-		//}
-		if (strlen($names)>1 ) $names =  substr($names, 0, -2);
 		return $names;
+	}
+	
+	/**
+	 * Retrieves a list of faculty names.
+	 * @return string, the names of faculty for this course.
+	 */
+	public function facultyUrls()
+	{
+		$urls = array();
+		foreach($this->courseInstructors as $instructor)
+		{
+			//$urls[] = 'http://campusdirectory.ucsc.edu/detail.php?type=people&uid='.$instructor->user->username;
+			$urls[] = "http://campusdirectory.ucsc.edu/detail.php?type=people&uid=" . 'jsnook';
+		}
+		return $urls;
 	}
 	
 	/**
