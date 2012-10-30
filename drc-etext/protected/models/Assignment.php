@@ -69,8 +69,10 @@ class Assignment extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
-			'termCode' => array(self::BELONGS_TO, 'Term', 'term_code'),
+			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
+			'book' => array(self::BELONGS_TO, 'Book', 'book_id'),
 			'course' => array(self::BELONGS_TO, 'Course', 'class_num, term_code'),
+            'assignmentTypes'=>array(self::HAS_MANY, 'AssignmentType', 'id'),
 			'drcRequests' => array(self::MANY_MANY, 'DrcRequest', 'assignment_type(assignment_id, accommodation_type)'),
 		);
 	}

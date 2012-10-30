@@ -179,6 +179,7 @@ CREATE TABLE assignment (               -- maps books and files to a course
     is_complete BOOLEAN DEFAULT 0,      -- not needed if tracked by type instead
     has_zip_file BOOLEAN DEFAULT 0,
     foreign key (term_code ) references term (term_code),
+    foreign key (book_id ) references book (id),
     foreign key (term_code, class_num) references course (term_code, class_num)
     foreign key (modified_by) references user ("username")
 );
