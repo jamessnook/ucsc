@@ -32,7 +32,7 @@
 		//'hideHeader'=>true,
 		'summaryText'=>'',
 		'enablePagination'=>false,
-		'itemsCssClass'=>"table table-striped table-bordered dataTable", 
+		'itemsCssClass'=>"table table-striped table-bordered data-table", 
 		'loadingCssClass'=>'',
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
 		'pagerCssClass'=>"pagination", 
@@ -43,7 +43,7 @@
 				//'value'=>'$data->course->title', 
 				'class'=>'CLinksColumn',
 				'labelExpression'=>'$data->course->title', 
-				'urlExpression'=>'array(\'course/view\', \'term_code\'=>$data->course->term_code, \'class_num\'=>$data->course->class_num)', 
+				'urlExpression'=>'array(\'assignment/studentAssignments\', \'term_code\'=>$data->course->term_code, \'class_num\'=>$data->course->class_num, \'username\'=>$data->username)', 
 			),
 			array( 
 				'header'=>'Class Id', 

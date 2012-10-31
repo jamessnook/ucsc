@@ -32,11 +32,14 @@
 	
 	//$model->username = Yii::app()->user->name;  // set up for current user
 	$this->widget('zii.widgets.grid.CGridView', array(
-		'id'=>'drc-request-grid',
+		'id'=>'studentAssignmentGrid',
 		'dataProvider'=>$model->searchForUser(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,
-		'itemsCssClass'=>"table table-striped table-bordered", 
+		'summaryText'=>'',
+		'enablePagination'=>false,
+		'loadingCssClass'=>'',
+		'itemsCssClass'=>"table table-striped table-bordered data-table", 
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
 		'pagerCssClass'=>"pagination", 
 		'columns'=>array(

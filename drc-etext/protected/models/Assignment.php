@@ -23,6 +23,8 @@
  */
 class Assignment extends CActiveRecord
 {
+	public $username;
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -141,13 +143,13 @@ class Assignment extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function searchForUser($username = null)
+	public function searchForUser()
 	{
-		if (!$username) $username = Yii::app()->user->name;
+		if (!$this->username) $this->username = Yii::app()->user->name;
 		$criteria=new CDbCriteria;
 		$criteria->with = array( 'drcRequests', 'assignmentTypes' );
 		//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
-		$criteria->compare('drcRequests.username',$username);
+		$criteria->compare('drcRequests.username',$this->username);
 		//$criteria->addCondition("drcRequests.username = $username");         
 		$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
 		
