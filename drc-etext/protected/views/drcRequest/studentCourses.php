@@ -33,6 +33,7 @@
 		'summaryText'=>'',
 		'enablePagination'=>false,
 		'itemsCssClass'=>"table table-striped table-bordered dataTable", 
+		'loadingCssClass'=>'',
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
 		'pagerCssClass'=>"pagination", 
 		'columns'=>array(
