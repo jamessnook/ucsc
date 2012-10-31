@@ -96,7 +96,7 @@ $.extend( $.fn.dataTableExt.oPagination, {
 
 /* Table initialisation */
 $(document).ready(function() {
-	$('#example').dataTable( {
+	$('#example, .grid-view table.dataTable').dataTable( {
 		"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
 		"sPaginationType": "bootstrap",
 		"bStateSave": true,

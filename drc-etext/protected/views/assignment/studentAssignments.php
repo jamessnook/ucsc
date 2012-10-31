@@ -30,52 +30,38 @@
 
 	<?php 
 	
-	$model->username = Yii::app()->user->name;  // set up for current user
+	//$model->username = Yii::app()->user->name;  // set up for current user
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'drc-request-grid',
-		'dataProvider'=>$model->search(),
+		'dataProvider'=>$model->searchForUser(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,
-		'itemsCssClass'=>"table table-striped", 
+		'itemsCssClass'=>"table table-striped table-bordered", 
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
 		'pagerCssClass'=>"pagination", 
 		'columns'=>array(
 			array( 
-				'header'=>'Course Name', 
-				//'name'=>'course.title', 
-				//'value'=>'$data->course->title', 
+				'header'=>'Assignment Title', 
 				'class'=>'CLinksColumn',
-				'labelExpression'=>'$data->course->title', 
-				'urlExpression'=>'array(\'course/view\', \'term_code\'=>$data->course->term_code, \'class_num\'=>$data->course->class_num)', 
+				'labelExpression'=>'$data->title', 
+				'urlExpression'=>'array(\'assignment/files\', \'id\'=>$data->id)', 
 			),
 			array( 
-				'header'=>'Class Id', 
-				'name'=>'course.idString()', 
-				'value'=>'$data->course->idString()', 
-				// 'value'=>'$data->a.\' \'.$data->b.\' \'.$data->c',
-				//'filter' => CHtml::listData(Term::model()->findAll(), 'id', 'name'), 
-				//'htmlOptions'=>array('width'=>'110px', 'class'=>'term'),
+				'header'=>'Book Title', 
+				'name'=>'book.title', 
+				'value'=>'$data->book->title', 
 			 ),
 			array( 
-				//'name'=>'course.facultyNames()', 
-				'header'=>'Faculty', 
-				'class'=>'CLinksColumn',
-				//'value'=>'$data->course->facultyNames()', 
-				'labelExpression'=>'$data->course->facultyNames()', 
-				'urlExpression'=>'$data->course->facultyUrls()', 
-				//'value'=>'$data->course->faculty()', 
-			),
-			array( 
-				'header'=>'Assignments', 
-				'name'=>'course.assignmentCount()', 
+				'header'=>'Files', 
+				'name'=>'fileCount()', 
 				'type'=>'raw',
-				'value'=>'\'<span class="badge">\' . $data->course->assignmentCount() . \'</span>\'', 
+				'value'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
 			 ),
 			 array( 
 				'header'=>'Status', 
-			 	'name'=>'course.completed()', 
+			 	'name'=>'completed()', 
 				'type'=>'raw',
-			 	'value'=>'$data->course->completed()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
+			 	'value'=>'$data->is_complete? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 			 ),
 		),
 	)); 

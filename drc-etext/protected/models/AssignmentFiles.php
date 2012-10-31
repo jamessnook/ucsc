@@ -1,19 +1,18 @@
 <?php
 
 /**
- * This is the model class for table "assignment_type".
+ * This is the model class for table "assignment_files".
  *
- * The followings are the available columns in table 'assignment_type':
+ * The followings are the available columns in table 'assignment_files':
  * @property integer $assignment_id
- * @property string $accommodation_type
- * @property boolean $is_complete
+ * @property integer $file_id
  */
-class AssignmentType extends CActiveRecord
+class AssignmentFiles extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return AssignmentType the static model class
+	 * @return AssignmentFiles the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -25,7 +24,7 @@ class AssignmentType extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'assignment_type';
+		return 'assignment_files';
 	}
 
 	/**
@@ -36,12 +35,11 @@ class AssignmentType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('assignment_id', 'numerical', 'integerOnly'=>true),
-			array('type', 'length', 'max'=>32),
-			array('is_complete', 'safe'),
+			array('assignment_id, file_id', 'required'),
+			array('assignment_id, file_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('assignment_id, type, is_complete', 'safe', 'on'=>'search'),
+			array('assignment_id, file_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +52,7 @@ class AssignmentType extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'file' => array(self::BELONGS_TO, 'File', 'file_id'),
+			'assignment' => array(self::BELONGS_TO, 'Assignment', 'assignment_id'),
 		);
 	}
 
@@ -64,8 +63,7 @@ class AssignmentType extends CActiveRecord
 	{
 		return array(
 			'assignment_id' => 'Assignment',
-			'type' => 'Accommodation Type',
-			'is_complete' => 'Is Complete',
+			'file_id' => 'File',
 		);
 	}
 
@@ -81,8 +79,7 @@ class AssignmentType extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('assignment_id',$this->assignment_id);
-		$criteria->compare('type',$this->type,true);
-		$criteria->compare('is_complete',$this->is_complete);
+		$criteria->compare('file_id',$this->file_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

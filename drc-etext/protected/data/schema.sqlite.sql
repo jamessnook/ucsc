@@ -172,6 +172,8 @@ CREATE TABLE assignment (               -- maps books and files to a course
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
     class_num INTEGER NOT NULL,      -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     book_id     INTEGER,                -- drc library id for book
+    description VARCHAR(512),           -- 
+    title VARCHAR(128),                 -- 
     created    DATETIME,                -- when requested
     modified    DATETIME,               -- date and time of last change
     modified_by    VARCHAR(64),         -- username of user who made last change 
@@ -187,11 +189,20 @@ CREATE TABLE assignment (               -- maps books and files to a course
 drop table if exists assignment_type;
 CREATE TABLE assignment_type (          -- tracks if assignment complete for this file type
     assignment_id INTEGER,  -- drc library id
-    accommodation_type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
+    type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
     is_complete BOOLEAN DEFAULT 0,
     foreign key (assignment_id ) references assignment (id),
-    foreign key (accommodation_type ) references drc_request (accommodation_type),
-    primary key (assignment_id, accommodation_type)
+    foreign key (type ) references drc_request (type),
+    primary key (assignment_id, type)
+);
+
+drop table if exists assignment_file;
+CREATE TABLE assignment_files (         -- maps assignments to files
+    assignment_id INTEGER NOT NULL,         -- 
+    file_id INTEGER NOT NULL,               --  
+    primary key (assignment_id, file_id),
+    foreign key (assignment_id) references assignment (id),
+    foreign key (file_id) references file (id)
 );
 
 drop table if exists book;

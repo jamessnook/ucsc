@@ -73,7 +73,9 @@ class Assignment extends CActiveRecord
 			'book' => array(self::BELONGS_TO, 'Book', 'book_id'),
 			'course' => array(self::BELONGS_TO, 'Course', 'class_num, term_code'),
             'assignmentTypes'=>array(self::HAS_MANY, 'AssignmentType', 'id'),
-			'drcRequests' => array(self::MANY_MANY, 'DrcRequest', 'assignment_type(assignment_id, accommodation_type)'),
+            'fileIds'=>array(self::HAS_MANY, 'AssignmentFile', 'id'),
+			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code, class_num'),
+			'drcRequests1' => array(self::MANY_MANY, 'DrcRequest', 'assignment_type(assignment_id, type)'),
 		);
 	}
 
@@ -139,26 +141,32 @@ class Assignment extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function search1()
+	public function searchForUser($username = null)
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
-
+		if (!$username) $username = Yii::app()->user->name;
 		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
+		$criteria->with = array( 'drcRequests', 'assignmentTypes' );
+		//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
+		$criteria->compare('drcRequests.username',$username);
+		//$criteria->addCondition("drcRequests.username = $username");         
+		$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
+		
 		$criteria->compare('term_code',$this->term_code);
 		$criteria->compare('class_num',$this->class_num);
-		$criteria->compare('book_id',$this->book_id);
-		$criteria->compare('created',$this->created,true);
-		$criteria->compare('modified',$this->modified,true);
-		$criteria->compare('modified_by',$this->modified_by,true);
-		$criteria->compare('notes',$this->notes,true);
-		$criteria->compare('is_complete',$this->is_complete);
-		$criteria->compare('has_zip_file',$this->has_zip_file);
-
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+		 	'pagination' => false,
 		));
 	}
+	/**
+	 * Retrieves a count of the assignemtns for this course.
+	 * @return integer, a count of the assignemtns for this course.
+	 */
+	public function fileCount()
+	{
+		return count($this->fileIds);
+	}
+	
+	
 }

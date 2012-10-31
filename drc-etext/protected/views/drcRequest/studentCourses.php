@@ -30,7 +30,9 @@
 		'dataProvider'=>$model->search(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,
-		'itemsCssClass'=>"table table-striped", 
+		'summaryText'=>'',
+		'enablePagination'=>false,
+		'itemsCssClass'=>"table table-striped table-bordered dataTable", 
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
 		'pagerCssClass'=>"pagination", 
 		'columns'=>array(

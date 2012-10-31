@@ -75,8 +75,7 @@ class Course extends CActiveRecord
 		return array(
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'term_code, class_num'),
 			'termCode' => array(self::BELONGS_TO, 'Term', 'term_code'),
-			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code'),
-			'drcRequests1' => array(self::HAS_MANY, 'DrcRequest', 'class_num'),
+			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code, class_num'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'class_num'),
             'instructors'=>array(self::MANY_MANY, 'User',
                 'course_instructor(term_code, class_num, emplid)'),
