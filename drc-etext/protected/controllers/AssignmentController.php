@@ -170,6 +170,27 @@ class AssignmentController extends Controller
 	}
 
 	/**
+	 * Manages all models.
+	 */
+	public function actionStudentAssignmentFiles($termCode=null, $classNum=null, $username=null)
+	{
+		$model=new Assignment('search');
+		//$this->term = $model->find();
+		$model->unsetAttributes();  // clear any default values
+		$model->term_code = Term::currentTermCode();
+		//$model->term_code = 2128;
+		if (!$username) $username = Yii::app()->user->name;
+		if (!$termCode) $termCode = Term::currentTermCode();
+		$model->username = $username;
+		$model->term_code = $termCode;
+		$model->class_num = $classNum;
+
+		$this->render('studentAssignmentFiles',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded

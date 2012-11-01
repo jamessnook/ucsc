@@ -197,7 +197,8 @@ CREATE TABLE assignment_type (          -- tracks if assignment complete for thi
 );
 
 drop table if exists assignment_file;
-CREATE TABLE assignment_files (         -- maps assignments to files
+drop table if exists assignment_files;
+CREATE TABLE assignment_file (         -- maps assignments to files
     assignment_id INTEGER NOT NULL,         -- 
     file_id INTEGER NOT NULL,               --  
     primary key (assignment_id, file_id),
