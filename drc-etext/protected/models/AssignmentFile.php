@@ -85,4 +85,26 @@ class AssignmentFile extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function studentAssignmentFiles()
+	{
+		$username = Yii::app()->user->name;
+		$criteria=new CDbCriteria;
+		$criteria->with = array( 'assignment', 'assignment.drcRequests');
+		//$criteria->together = array( 'assignmentIds.assignment', 'assignmentIds.assignment.drcRequests'); // might be needed
+		$criteria->compare('assignment.id',$this->assignemntId);
+		$criteria->compare('drcRequests.username',$username);
+		$criteria->addCondition("assignment.drcRequests.type = file.type");          
+		//$criteria->compare('assignmentIds.assignment.drcRequests.type',$this->type);
+		//$criteria->addCondition("drcRequests.username = $username");         
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
 }

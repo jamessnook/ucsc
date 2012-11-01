@@ -108,6 +108,9 @@ CREATE TABLE course (  -- AIS feed
     description VARCHAR(512),           -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.DESC
     title VARCHAR(128),                 -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.TITLE
     catalog_num VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CATALOG_NBR
+    schedule VARCHAR(128),              -- AIS: ?
+    romm VARCHAR(128),                  -- AIS: ?
+    dates VARCHAR(128),                 -- AIS: ?
     created    DATETIME,                -- when imported or requested (local, not from AIS)
     modified    DATETIME,               -- when updated from AIS
     primary key (term_code, class_num ),
@@ -144,7 +147,7 @@ CREATE TABLE file (
     id           INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     name         VARCHAR(128) NOT NULL, -- name of file
     path         VARCHAR(256) NOT NULL DEFAULT '', -- path for file on server under file root
-    caption      VARCHAR(512),  -- optional for display purposes
+    description  VARCHAR(512),  -- optional for display purposes
     parent_id    INTEGER,       -- optional parent object id, ie 'assignment' 
     type_id      INTEGER,       -- file type (redundant with extension on path?)
     order_num    INTEGER,       -- display or list order if member of a group (chapters in a book)

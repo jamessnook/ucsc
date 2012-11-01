@@ -2,12 +2,26 @@
 
 class CourseController extends Controller
 {
-	public function actionUpload()
+	/**
+	 * Display data about a course.
+	 */
+	public function actionDescription($termCode=null, $classNum=null)
 	{
-		$this->render('upload');
+		$model=new Course('search');
+		//$this->term = $model->find();
+		$model->unsetAttributes();  // clear any default values
+
+		if (!$termCode) $termCode = Term::currentTermCode();
+		if (!$classNum) {echo 'Error!'; return;}  //temp error code
+		$model->term_code = $termCode;
+		$model->class_num = $classNum;
+		
+		$this->render('description',array(
+			'model'=>$model,
+		));
 	}
 
-	// Uncomment the following methods and override them if needed
+		// Uncomment the following methods and override them if needed
 	/*
 	public function filters()
 	{

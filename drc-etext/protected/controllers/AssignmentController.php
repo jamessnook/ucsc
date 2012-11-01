@@ -174,7 +174,7 @@ class AssignmentController extends Controller
 	 */
 	public function actionStudentAssignmentFiles($termCode=null, $classNum=null, $username=null)
 	{
-		$model=new Assignment('search');
+		$model=new AssignmentFile('search');
 		//$this->term = $model->find();
 		$model->unsetAttributes();  // clear any default values
 		$model->term_code = Term::currentTermCode();

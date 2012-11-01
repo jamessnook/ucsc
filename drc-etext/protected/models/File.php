@@ -52,12 +52,12 @@ class File extends CActiveRecord
 			array('parent_id, type_id, order_num', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>128),
 			array('path', 'length', 'max'=>256),
-			array('caption', 'length', 'max'=>512),
+			array('description', 'length', 'max'=>512),
 			array('modified_by', 'length', 'max'=>32),
 			array('created, modified', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, path, caption, parent_id, type_id, order_num, created, modified, modified_by', 'safe', 'on'=>'search'),
+			array('id, name, path, description, parent_id, type_id, order_num, created, modified, modified_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,8 +70,8 @@ class File extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'type' => array(self::BELONGS_TO, 'FileType', 'type_id'),
-			'parent' => array(self::BELONGS_TO, 'BookRequest', 'parent_id'),
 			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
+			'assignmentIds' => array(self::HAS_MANY, 'AssignmentFile', 'file_id'),
 		);
 	}
 
@@ -84,7 +84,7 @@ class File extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'path' => 'Path',
-			'caption' => 'Caption',
+			'description' => 'Description',
 			'parent_id' => 'Parent',
 			'type_id' => 'Type',
 			'order_num' => 'Order Num',
@@ -108,7 +108,7 @@ class File extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('path',$this->path,true);
-		$criteria->compare('caption',$this->caption,true);
+		$criteria->compare('description',$this->description,true);
 		$criteria->compare('parent_id',$this->parent_id);
 		$criteria->compare('type_id',$this->type_id);
 		$criteria->compare('order_num',$this->order_num);
@@ -121,6 +121,27 @@ class File extends CActiveRecord
 		));
 	}
 
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function studentAssignmentFiles($assignemntId)
+	{
+		$username = Yii::app()->user->name;
+		$criteria=new CDbCriteria;
+		$criteria->with = array( 'assignmentIds.assignment', 'assignmentIds.assignment.drcRequests');
+		//$criteria->together = array( 'assignmentIds.assignment', 'assignmentIds.assignment.drcRequests'); // might be needed
+		$criteria->compare('assignmentIds.assignment.id',$assignemntId);
+		$criteria->compare('assignmentIds.assignment.drcRequests.username',$username);
+		$criteria->compare('assignmentIds.assignment.drcRequests.type',$this->type);
+		//$criteria->addCondition("drcRequests.username = $username");         
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+	
 	/**
 	 */
 	public function getFullPath()

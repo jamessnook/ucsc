@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "course".
+ * This is the model class for table "Course".
  *
- * The followings are the available columns in table 'course':
+ * The followings are the available columns in table 'Course':
  * @property integer $term_code
  * @property integer $class_num
  * @property string $section
@@ -12,14 +12,12 @@
  * @property string $description
  * @property string $title
  * @property string $catalog_num
- * @property string $schedule
- * @property string $romm
- * @property string $dates
  * @property string $created
  * @property string $modified
  *
  * The followings are the available model relations:
  * @property Assignment[] $assignments
+ * @property Term $termCode
  * @property CourseInstructor[] $courseInstructors
  * @property CourseInstructor[] $courseInstructors1
  * @property DrcRequest[] $drcRequests
@@ -43,7 +41,7 @@ class Course extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'course';
+		return 'Course';
 	}
 
 	/**
@@ -59,11 +57,11 @@ class Course extends CActiveRecord
 			array('section, course_id', 'length', 'max'=>32),
 			array('subject, catalog_num', 'length', 'max'=>64),
 			array('description', 'length', 'max'=>512),
-			array('title, schedule, romm, dates', 'length', 'max'=>128),
+			array('title', 'length', 'max'=>128),
 			array('created, modified', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('term_code, class_num, section, course_id, subject, description, title, catalog_num, schedule, romm, dates, created, modified', 'safe', 'on'=>'search'),
+			array('term_code, class_num, section, course_id, subject, description, title, catalog_num, created, modified', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -85,8 +83,7 @@ class Course extends CActiveRecord
 		);
 	}
 
-	
-	/**
+	/** 
 	 * @return array customized attribute labels (name=>label)
 	 */
 	public function attributeLabels()
@@ -98,11 +95,8 @@ class Course extends CActiveRecord
 			'course_id' => 'Course',
 			'subject' => 'Subject',
 			'description' => 'Description',
-			'title' => 'Title',
+			'title' => 'Course Name',
 			'catalog_num' => 'Catalog Num',
-			'schedule' => 'Schedule',
-			'romm' => 'Romm',
-			'dates' => 'Dates',
 			'created' => 'Created',
 			'modified' => 'Modified',
 		);
@@ -127,9 +121,6 @@ class Course extends CActiveRecord
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('catalog_num',$this->catalog_num,true);
-		$criteria->compare('schedule',$this->schedule,true);
-		$criteria->compare('romm',$this->romm,true);
-		$criteria->compare('dates',$this->dates,true);
 		$criteria->compare('created',$this->created,true);
 		$criteria->compare('modified',$this->modified,true);
 
