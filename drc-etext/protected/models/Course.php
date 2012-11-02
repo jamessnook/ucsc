@@ -154,7 +154,7 @@ class Course extends CActiveRecord
 	}
 	
 	/**
-	 * Retrieves a list of faculty names.
+	 * Retrieves a list of urls for faculty pages.
 	 * @return string, the names of faculty for this course.
 	 */
 	public function facultyUrls()

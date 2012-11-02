@@ -26,6 +26,8 @@
  */
 class User extends UCSCModel
 {
+	public $term_code; // for non emplid matches
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -72,6 +74,7 @@ class User extends UCSCModel
 		// class name for the relations automatically generated below.
 		return array(
 			'authItems' => array(self::MANY_MANY, 'AuthItem', 'AuthAssignment(userid, itemname)'),
+			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid', 'joinType' => 'INNER JOIN'),
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'modified_by'),
 			'books' => array(self::MANY_MANY, 'Book', 'book_purchase(username, book_id)'),
 			'files' => array(self::HAS_MANY, 'File', 'modified_by'),
@@ -128,6 +131,23 @@ class User extends UCSCModel
 			'criteria'=>$criteria,
 		));
 	}
+
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function drcStudents()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->with = array( 'drcRequests', 'drcRequests.course');
+		$criteria->compare('drcRequests.term_code',$this->termCode);
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+
 	/**
 	 * Overrides parent to assign non input values.
 	 * @return boolean whether the saving should be executed. Defaults to true.
@@ -147,4 +167,35 @@ class User extends UCSCModel
 		return parent::afterSave();
 	}
 	
+	/**
+	 * Retrieves a list of course names for the courses associate with a users drc requests.
+	 * @return string, the names of faculty for this course.
+	 */
+	public function drcRequestCourseNames()
+	{
+		//$names = '';
+		$names = array();
+		foreach($this->drcRequests as $request)
+		{
+			$names[] = $request->course->name;
+		}
+		return $names;
+	}
+	
+	/**
+	 * Returns true if all assignemtns for this course are complete.
+	 * @return boolean, true if all assignemtns for this course are complete.
+	 */
+	public function drcRequestsCompleted()
+	{
+		foreach($this->drcRequests as $request)
+		{
+			foreach($request->course->assignments as $assignment){
+				if (!$assignment->is_complete) return false;
+			}
+		}
+		return true;
+	}
+	
+		
 }

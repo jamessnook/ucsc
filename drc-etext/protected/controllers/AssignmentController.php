@@ -170,15 +170,14 @@ class AssignmentController extends Controller
 	}
 
 	/**
-	 * Manages all models.
+	 * Display file data for an assignment and student.
 	 */
 	public function actionStudentAssignmentFiles($termCode=null, $classNum=null, $username=null)
 	{
 		$model=new AssignmentFile('search');
 		//$this->term = $model->find();
 		$model->unsetAttributes();  // clear any default values
-		$model->term_code = Term::currentTermCode();
-		//$model->term_code = 2128;
+
 		if (!$username) $username = Yii::app()->user->name;
 		if (!$termCode) $termCode = Term::currentTermCode();
 		$model->username = $username;

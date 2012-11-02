@@ -152,6 +152,23 @@ class UserController extends Controller
 	}
 
 	/**
+	 * Display data for a drc student.
+	 */
+	public function actionDrcStudents($termCode=null)
+	{
+		$model=new User('search');
+		//$this->term = $model->find();
+		$model->unsetAttributes();  // clear any default values
+
+		if (!$termCode) $termCode = Term::currentTermCode();
+		$model->term_code = $termCode;
+
+		$this->render('drcStudents',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded

@@ -35,5 +35,16 @@ class UCSCModel extends CActiveRecord
 		return parent::beforeSave();
 	}
 	
-
+	/**
+	 * Retrieves a url parameter array using data from this object.
+	 * @return array of url params.
+	 */
+	public function urlParams($route, $paramMap)
+	{
+		$params = array();
+		foreach($paramMap as $name => $source) $params[$name]=$this->$source;
+		return array($route, $params);
+	}
+	
+	
 }
