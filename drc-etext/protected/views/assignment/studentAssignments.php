@@ -22,54 +22,11 @@
 
 <div class="page-head">
 	<div class="row-fluid">
-		<h1 class="pull-left"><?php echo $model->course->description; ?></h1>
+		<h1 class="pull-left"><?php echo $model->title .' (' .$model->idString().')'; ?></h1>
 	</div><!--/row-->
 </div><!--/head-->
-<div class="row-fluid">
-    <div class="span12">
 
-	<?php 
-	
-	//$model->username = Yii::app()->user->name;  // set up for current user
-	$this->widget('zii.widgets.grid.CGridView', array(
-		'id'=>'studentAssignmentGrid',
-		'dataProvider'=>$model->searchForUser(),
-		//'filter'=>$model,
-		//'hideHeader'=>true,
-		'summaryText'=>'',
-		'enablePagination'=>false,
-		'loadingCssClass'=>'',
-		'itemsCssClass'=>"table table-striped table-bordered data-table", 
-		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
-		'pagerCssClass'=>"pagination", 
-		'columns'=>array(
-			array( 
-				'header'=>'Assignment Title', 
-				'class'=>'CLinksColumn',
-				'labelExpression'=>'$data->title', 
-				'urlExpression'=>'array(\'assignmentFiles/studentAssignmentFiles\', \'assignmentId\'=>$data->id)', 
-			),
-			array( 
-				'header'=>'Book Title', 
-				'name'=>'book.title', 
-				'value'=>'$data->book->title', 
-			 ),
-			array( 
-				'header'=>'Files', 
-				'name'=>'fileCount()', 
-				'type'=>'raw',
-				'value'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
-			 ),
-			 array( 
-				'header'=>'Status', 
-			 	'name'=>'completed()', 
-				'type'=>'raw',
-			 	'value'=>'$data->is_complete? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
-			 ),
-		),
-	)); 
-	?>
+<?php echo $this->renderPartial('_assignments', array('model'=>$model)); // grid showong assignment list ?>
 
-		
-    </div><!--/span-->
-</div><!--/row-->
+
+

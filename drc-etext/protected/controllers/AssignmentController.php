@@ -151,22 +151,29 @@ class AssignmentController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionStudentAssignments($termCode=null, $classNum=null, $username=null)
+	public function actionCourseAssignments($termCode=null, $classNum=null, $username=null)
 	{
 		$model=new Assignment('search');
 		//$this->term = $model->find();
 		$model->unsetAttributes();  // clear any default values
-		$model->term_code = Term::currentTermCode();
-		//$model->term_code = 2128;
-		if (!$username) $username = Yii::app()->user->name;
+
 		if (!$termCode) $termCode = Term::currentTermCode();
 		$model->username = $username;
 		$model->term_code = $termCode;
 		$model->class_num = $classNum;
 
-		$this->render('studentAssignments',array(
+		$this->render('courseAssignments',array(
 			'model'=>$model,
 		));
+	}
+
+	/**
+	 * Manages all models.
+	 */
+	public function actionStudentAssignments($termCode=null, $classNum=null, $username=null)
+	{
+		if (!$username) $username = Yii::app()->user->name;
+		$this->actionCourseAssignments($termCode, $classNum, $username);
 	}
 
 	/**

@@ -30,26 +30,23 @@
         <div class="span9">
 		  <div class="page-unit">
 
-			<?php echo $content; ?>
+			<div class="page-head">
+				<div class="row-fluid">
+					<h1 class="pull-left"><?php echo $this->layoutOptions['title']; ?></h1>
+					<ul class="nav nav-pills pull-right">
+						<li><?php echo $this->layoutOptions['titleNavRight']; ?></li>
+					</ul>
+				</div><!--/row-->
+			</div><!--/head-->
+			
+			<?php echo $this->renderPartial($this->layoutOptions['contentView'], array('model'=>$this->layoutOptions['model'])); // grid showong assignment list ?>
 	
 		  </div><!--/page-unit-->
         </div><!--/span-->
 		<div class="span3">
           <div class="well">
-
-	        <?php
-	        	// build up the side bar menu
-	        	$this->beginWidget('zii.widgets.CPortlet', array(
-					'title'=>'Quarters Menu',
-					'contentCssClass'=>'nav-header',
-				));
-				$this->widget('zii.widgets.CMenu', array(
-					'items'=>$this->menu,
-					'htmlOptions'=>array('class'=>'nav nav-list'),
-				));
-				$this->endWidget();
-			?>
             
+			<?php echo $this->renderPartial($this->layoutOptions['menuView'], array('model'=>$this->layoutOptions['model'])); // grid showong assignment list ?>
             
           </div><!--/.well -->
         </div><!--/span-->

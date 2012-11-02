@@ -127,41 +127,6 @@ class Assignment extends CActiveRecord
 		));
 	}
 
-	// for student's course list
-	// SELECT title AS courseName,
-	// CONCAT(" ", subject, course_id, section) AS classId,
-	// GROUP_CONCAT( user.first_name || ' ' || user.last_name) AS faculty,
-	// COUNT(id) AS assignments, 
-	// MIN(is_complete) AS completed
-	// FROM user JOIN drc_request ON (user.emplid = drc_request.emplid 
-	// NATURAL JOIN assignment NATURAL JOIN course NATURAL JOIN course_instructor 
-	// JOIN user ON(course_instructor.emplid = user.emplid)
-	// WHERE user.username = $username
-	// GROUP BY term_code, class_num
-	
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
-	public function searchForUser()
-	{
-		if (!$this->username) $this->username = Yii::app()->user->name;
-		$criteria=new CDbCriteria;
-		$criteria->with = array( 'drcRequests', 'assignmentTypes' );
-		//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
-		$criteria->compare('drcRequests.username',$this->username);
-		//$criteria->addCondition("drcRequests.username = $username");         
-		$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
-		
-		$criteria->compare('term_code',$this->term_code);
-		$criteria->compare('class_num',$this->class_num);
-		
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
-
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
