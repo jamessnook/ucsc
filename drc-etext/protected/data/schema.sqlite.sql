@@ -173,10 +173,11 @@ drop table if exists assignment;
 CREATE TABLE assignment (               -- maps books and files to a course
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
-    class_num INTEGER NOT NULL,      -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
+    class_num INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     book_id     INTEGER,                -- drc library id for book
     description VARCHAR(512),           -- 
     title VARCHAR(128),                 -- 
+    due_date DATE,                      -- 
     created    DATETIME,                -- when requested
     modified    DATETIME,               -- date and time of last change
     modified_by    VARCHAR(64),         -- username of user who made last change 

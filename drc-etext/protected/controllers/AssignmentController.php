@@ -6,7 +6,7 @@ class AssignmentController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column1';
 
 	/**
 	 * @return array action filters
@@ -175,27 +175,6 @@ class AssignmentController extends Controller
 		if (!$username) $username = Yii::app()->user->name;
 		$this->actionCourseAssignments($termCode, $classNum, $username);
 	}
-
-	/**
-	 * Display file data for an assignment and student.
-	 */
-	public function actionStudentAssignmentFiles($termCode=null, $classNum=null, $username=null)
-	{
-		$model=new AssignmentFile('search');
-		//$this->term = $model->find();
-		$model->unsetAttributes();  // clear any default values
-
-		if (!$username) $username = Yii::app()->user->name;
-		if (!$termCode) $termCode = Term::currentTermCode();
-		$model->username = $username;
-		$model->term_code = $termCode;
-		$model->class_num = $classNum;
-
-		$this->render('studentAssignmentFiles',array(
-			'model'=>$model,
-		));
-	}
-
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
