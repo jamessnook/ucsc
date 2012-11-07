@@ -2,7 +2,7 @@
 
 	$layoutOptions = array(
 		'model' => $model,
-		'contentView' => '../assignment/_assignments',
+		'contentView' => '../assignment/_new',
 		'titleNavRight' => '<a href="' . $this->createUrl('assignment/create') . '"><i class="icon-plus"></i> Add Request</a>',
 	);	
 

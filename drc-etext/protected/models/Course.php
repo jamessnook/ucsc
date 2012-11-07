@@ -28,6 +28,8 @@
  */
 class Course extends CActiveRecord
 {
+	public $username;
+	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -138,6 +140,30 @@ class Course extends CActiveRecord
 		));
 	}
 	
+
+	/**
+	 * Retrieves a list of assignments for this course based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function courseAssignments()
+	{
+		$criteria=new CDbCriteria;
+		if ($this->username) {
+			$criteria->with = array( 'drcRequests', 'assignmentTypes' );
+			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
+			$criteria->compare('drcRequests.username',$this->username);
+			//$criteria->addCondition("drcRequests.username = $username");         
+			$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
+		}
+		$criteria->compare('term_code',$this->term_code);
+		$criteria->compare('class_num',$this->class_num);
+		
+		return new CActiveDataProvider('Assignment', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+
 	/**
 	 * Retrieves a list of faculty names.
 	 * @return string, the names of faculty for this course.

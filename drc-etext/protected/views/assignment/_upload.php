@@ -1,121 +1,5 @@
-<div class="form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'assignment-form',
-	'enableAjaxValidation'=>false,
-)); ?>
-
-		<div class="row-fluid">
-            <div class="span12">
-				<h2>Create Assignment</h2>
-				<br />
-				
-            	<form class="" action="request-edit.html">
-            	
-					<fieldset>
-			          <div class="control-group">
-			            <label class="control-label" for="input01">Title</label>
-			            <div class="controls">
-			            
-							<?php echo $form->textField($model,'title',array('class'=>"input-xxlarge",'maxlength'=>127)); // also? id="input01", type="text" ?>
-							<?php echo $form->error($model,'title'); ?>
-			              
-			            </div>
-			          </div>
-			          <div class="control-group">
-			            <label class="control-label" for="textarea">Book</label>
-						<?php echo $form->labelEx($model,'book_id'); ?>
-			            <div class="controls">
-							
-					        <?php 	$options = CHtml::listData(Book::model()->findAll(), 'id', 'title');
-					        		echo $form->dropDownList($model,'book_id', $options, array('class'=>"input-xxlarge"));
-					        ?>
-							<?php echo $form->error($model,'book_id'); ?>
-
-			            </div>
-			          </div>
-					  <div class="control-group">
-						<?php echo $form->labelEx($model,'description'); ?>
-			            <div class="controls">
-			            
-							<?php echo CHtml::activeTextArea($model,'description',array('rows'=>3, 'class'=>"input-xxlarge")); ?>
-							<?php echo $form->error($model,'description'); ?>
-			              
-			            </div>
-			          </div>
-					  <div class="control-group">
-			            <label class="control-label" for="input01">Due Date</label>
-						<?php echo $form->labelEx($model,'description'); ?>
-			            <div class="controls">
-			            
-							<?php echo $form->labelEx($model,'due_date'); ?>
-							<?php 
-							$this->widget('zii.widgets.jui.CJuiDatePicker', array(
-								'model'=>$model,
-								'attribute'=>'due_date',	    
-							    'options'=>array( 'showAnim'=>'fold',  ),
-							    'htmlOptions'=>array( 'style'=>'height:20px;', 'class'=>"input-xxlarge" ),
-							));
-							?>
-							<?php echo $form->error($model,'due_date'); ?>
-
-			            </div>
-			          </div>
-					  
-				
-					  <div class="alert alert-info">
-					  
-					        <button type="button" class="close" data-dismiss="alert">×</button>
-							<strong>Looking to attach files?</strong> Please fill out and save the new request form first.
-					</div>
-			          <div class="form-actions">
-			          
-						<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" )); ?>
-						<?php echo CHtml::button('Cancel', array( 'class'=>"btn", 'onclick'=> "history.back()" )); ?>
-			            
-			          </div>
-			        </fieldset>
-			      </form>
-		
-            </div><!--/span-->
-        </div><!--/row-->
-
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
     
-    
-    
-    				<div class="row-fluid">
-		            <div class="span12">
-						<h2>Chapters 2-5, Micro Cosmos</h2>
-						<br />
-		            	<form class="">
-							<fieldset>
-					          <div class="control-group">
-					            <label class="control-label" for="input01">Request Title</label>
-					            <div class="controls">
-					              <input type="text" class="input-xxlarge" id="input01" value="Chapters 2-5, Micro Cosmos">
-					            </div>
-					          </div>
-							  <div class="control-group">
-					            <label class="control-label" for="textarea">Description</label>
-					            <div class="controls">
-					              <textarea class="input-xxlarge" id="textarea" rows="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</textarea>
-					            </div>
-					          </div>
-							  <div class="control-group">
-					            <label class="control-label" for="textarea">Book</label>
-					            <div class="controls">
-					              	<select class="input-xxlarge">
-									  <option>Micro Cosmos by John Smith and Joan Doe; Edition 3.5</option>
-									  <option>2</option>
-									  <option>3</option>
-									  <option>4</option>
-									  <option>5</option>
-									</select>
-					            </div>
-					          </div>
+					          
 							  <div class="control-group">
 					            <label class="control-label" for="input01">Type</label>
 									<span class="label">PDF</span>
@@ -175,17 +59,49 @@
 
 								</tbody>
 							</table>
+							
+							
+								<?php 
+	
+	//$model->username = Yii::app()->user->name;  // set up for current user
+	$this->widget('zii.widgets.grid.CGridView', array(
+		'id'=>'assignmentFilesGrid',
+		'dataProvider'=>$model->studentAssignmentFiles(),
+		//'filter'=>$model,
+		//'hideHeader'=>true,
+		'summaryText'=>'',
+		'enablePagination'=>false,
+		'loadingCssClass'=>'',
+		'itemsCssClass'=>"table table-striped table-bordered data-table", 
+		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
+		'pagerCssClass'=>"pagination", 
+		'columns'=>array(
+			array( 
+				'header'=>'File', 
+				'class'=>'CLinksColumn',
+				'labelExpression'=>'$data->title', 
+				'urlExpression'=>'array(\'assignment/files\', \'id\'=>$data->id)', 
+			),
+			array( 
+				'header'=>'Type', 
+				'name'=>'book.title', 
+				'value'=>'$data->book->title', 
+			 ),
+			array( 
+				'header'=>'Description', 
+				'name'=>'fileCount()', 
+				'type'=>'raw',
+				'value'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
+			 ),
+		),
+	)); 
+	?>
+
+							
+							
 							  <br />
 					          <div class="form-actions">
 					            <button type="submit" class="btn btn-primary">Save request</button>
 					            <button class="btn">Cancel</button>
 								<button type="complete" class="btn btn-success pull-right disabled" disabled="disabled">Request Completed</button>
 					          </div>
-					        </fieldset>
-					      </form>
-						  
-					
-				
-		            </div><!--/span-->
-		        </div><!--/row-->
-        

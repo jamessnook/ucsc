@@ -7,7 +7,7 @@
 
 		<div class="row-fluid">
             <div class="span12">
-				<h2>Create Assignment</h2>
+				<h2><?php echo $title; ?></h2>
 				<br />
 				
             	<form class="" action="request-edit.html">
@@ -61,13 +61,15 @@
 
 			            </div>
 			          </div>
-					  
-				
-					  <div class="alert alert-info">
-					  
-					        <button type="button" class="close" data-dismiss="alert">×</button>
-							<strong>Looking to attach files?</strong> Please fill out and save the new request form first.
-					</div>
+			          
+			          <?php 
+			          	if (fileUpload){
+							echo $this->renderPartial('_upload', array('model'=>$model)); 
+			          	} else {
+							echo $this->renderPartial('_uploadAlert', array('model'=>$model)); 
+			          	}
+					  ?>
+
 			          <div class="form-actions">
 			          
 						<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" )); ?>
