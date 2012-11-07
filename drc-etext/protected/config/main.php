@@ -18,7 +18,12 @@ return array(
 		'application.components.*',
 	),
 
-    'modules'=>array(
+	'aliases' => array(
+	    //assuming you extracted the files to the extensions folder
+	    'xupload' => 'ext.xupload'
+	),
+	
+	'modules'=>array(
         'gii'=>array(
             'class'=>'system.gii.GiiModule',
             'password'=>'eggplant',

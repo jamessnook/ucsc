@@ -1,17 +1,35 @@
     
 					          
-							  <div class="control-group">
+							<div class="control-group">
 					            <label class="control-label" for="input01">Type</label>
-									<span class="label">PDF</span>
-									<span class="label">MP3</span>
-									<span class="label">TXT</span>
-									<p class="help-block"><small>Based on the students enrolled in this class, that requested Alt media for this class, these file types need to be included with this assignment request.</small></p>
-								</label>
+					            
+								<?php 
+									foreach ($model->drcRequests->type as $req){
+										echo '<span class="label">' . $req->type . '</span>';
+									}
+									if (count($model->drcRequests)>0){
+										echo '<p class="help-block"><small>Based on the students enrolled in this class, that requested Alt media for this class, these file types need to be included with this assignment request.</small></p>';
+									} else{
+										echo '<p class="help-block"><small>No students have yet requested Alt media types for this class.</small></p>';
+																			}
+								?>
+								
+								<p class="help-block"><small>Based on the students enrolled in this class, that requested Alt media for this class, these file types need to be included with this assignment request.</small></p>
 							</div>
 							  
 							<div class="page-header">
 							            <h2>File Upload</h2>
 							          </div>
+							          
+							   <?php
+								$this->widget('xupload.XUpload', array(
+								                    'url' => Yii::app()->createUrl("file/upload", array("parent_id" => $model->id)),
+								                    'model' => $model,
+								                    'attribute' => 'file',
+								                    'multiple' => true,
+								));
+								?>      
+							          
 							  <!-- The fileinput-button span is used to style the file input field as button -->
 			                <span class="btn btn-success fileinput-button">
 			                    <i class="icon-plus icon-white"></i>
