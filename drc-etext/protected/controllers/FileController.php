@@ -265,6 +265,89 @@ class FileController extends Controller
 	}
 
 	/**
+	 * Uploads files and Creates new models.
+	 * This version works with the yii xupload extension widget
+	 */
+	public function actionXUpload()
+	{
+	    //This is for IE which doens't handle 'Content-type: application/json' correctly
+	    header( 'Vary: Accept' );
+	    if( isset( $_SERVER['HTTP_ACCEPT'] ) 
+	        && (strpos( $_SERVER['HTTP_ACCEPT'], 'application/json' ) !== false) ) {
+	        header( 'Content-type: application/json' );
+	    } else {
+	        header( 'Content-type: text/plain' );
+	    }
+	 
+	    //Here we check if we are deleting and uploaded file
+	    if( isset( $_GET["_method"] ) ) {
+	        if( $_GET["_method"] == "delete" ) {
+	            if( $_GET["file"][0] !== '.' ) {
+	                $file = $path.$_GET["file"];
+	                if( is_file( $file ) ) {
+	                    unlink( $file );
+	                }
+	            }
+	            echo json_encode( true );
+	        }
+	    }
+		else {
+	        $file = CUploadedFile::getInstanceByName('file' );
+	        //We check that the file was successfully uploaded
+	        if( $file !== null ) {
+                $fileTypeId = FileType::model()->findByAttributes(array('name'=>$file->extensionName))->id;
+                $dirPath = Yii::app()->params['fileRoot'] . "/" . $model->path;
+				if (!file_exists( $dirPath )){
+					mkdir( $dirPath, 0775, true);
+		        }
+                if ($file->saveAs($dirPath . "/" . $file->name)) {                	
+                    // add it to the main model now
+                    $file_add = new File();
+                    $file_add->name = $file->name; 
+                    $file_add->type_id = $fileTypeId; 
+                    if(isset($_POST['assignment_id'])) {
+                    	$file_add->parent_id = $_POST['assignment_id']; 
+                    }
+                    $file_add->path = $model->path; 
+                    $file_add->parent_id = $model->parent_id; 
+                    $file_add->save(); // DONE
+                    if(isset($_POST['assignment_id'])) {
+                    	$assignmentFile = new AssignmentFile();
+                    	
+                    }
+                    
+	                //Now we need to tell our widget that the upload was succesfull
+	                //We do so, using the json structure defined in
+	                // https://github.com/blueimp/jQuery-File-Upload/wiki/Setup
+	                echo json_encode( array( array(
+	                        "name" => $model->name,
+	                        "type" => $model->mime_type,
+	                        "size" => $model->size,
+	                        "url" => $publicPath.$filename,
+	                        "thumbnail_url" => $publicPath."thumbs/$filename",
+	                        "delete_url" => $this->createUrl( "upload", array(
+	                            "_method" => "delete",
+	                            "file" => $filename
+	                        ) ),
+	                        "delete_type" => "POST"
+	                    ) ) );
+                }
+                else {
+	                //If the upload failed for some reason we log some data and let the widget know
+	                echo json_encode( array( 
+	                    array( "error" => $model->getErrors( 'file' ),
+	                ) ) );
+	                Yii::log( "XUploadAction: ".CVarDumper::dumpAsString( $model->getErrors( ) ),
+	                    CLogger::LEVEL_ERROR, "xupload.actions.XUploadAction" 
+	                );
+                }
+	        } else {
+	            throw new CHttpException( 500, "Could not upload file" );
+	        }
+		}       
+	}
+
+	/**
 	 */
 	public function download($filePath)
 	{

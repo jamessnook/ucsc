@@ -23,10 +23,10 @@
 							          
 							   <?php
 								$this->widget('xupload.XUpload', array(
-								                    'url' => Yii::app()->createUrl("file/upload", array("parent_id" => $model->id)),
+								                    'url' => Yii::app()->createUrl("file/upload", array("assignment_id" => $model->id)),
 								                    'model' => $model,
 								                    'attribute' => 'file',
-								                    'multiple' => true,
+								                    'multiple' => true, 
 								));
 								?>      
 							          
