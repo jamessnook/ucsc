@@ -24,7 +24,7 @@
 							   <?php
 								$this->widget('xupload.XUpload', array(
 								                    'url' => Yii::app()->createUrl("file/upload", array("assignment_id" => $model->id)),
-								                    'model' => $model,
+								                    //'model' => $model,
 								                    'attribute' => 'file',
 								                    'multiple' => true, 
 								));

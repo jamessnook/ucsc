@@ -295,37 +295,40 @@ class FileController extends Controller
 	        $file = CUploadedFile::getInstanceByName('file' );
 	        //We check that the file was successfully uploaded
 	        if( $file !== null ) {
-                $fileTypeId = FileType::model()->findByAttributes(array('name'=>$file->extensionName))->id;
-                $dirPath = Yii::app()->params['fileRoot'] . "/" . $model->path;
-				if (!file_exists( $dirPath )){
+                $fileTypeId = FileType::model()->findByAttributes(array('name'=>$file->getExtensionName()))->id;
+                $dirPath = Yii::app()->params['filePath'];
+                $publicPath = Yii::app()->params['publicFilePath'];
+            	$filename = $file->getName(). ".".$file->getExtensionName( );
+                if (!file_exists( $dirPath )){
 					mkdir( $dirPath, 0775, true);
 		        }
                 if ($file->saveAs($dirPath . "/" . $file->name)) {                	
                     // add it to the main model now
                     $file_add = new File();
-                    $file_add->name = $file->name; 
+                    $file_add->name = $file->getName(); 
                     $file_add->type_id = $fileTypeId; 
                     if(isset($_POST['assignment_id'])) {
                     	$file_add->parent_id = $_POST['assignment_id']; 
                     }
-                    $file_add->path = $model->path; 
-                    $file_add->parent_id = $model->parent_id; 
+                    //$file_add->path = $model->path; 
                     $file_add->save(); // DONE
-                    if(isset($_POST['assignment_id'])) {
+                    if(isset($_POST['assignment_id'])) { // save to assignemnt to file relation table
                     	$assignmentFile = new AssignmentFile();
-                    	
+                    	$assignmentFile->file_id = $file_add->id;
+                    	$assignmentFile->assignment_id = $_POST['assignment_id'];
+                    	$assignmentFile->save();
                     }
                     
 	                //Now we need to tell our widget that the upload was succesfull
 	                //We do so, using the json structure defined in
 	                // https://github.com/blueimp/jQuery-File-Upload/wiki/Setup
 	                echo json_encode( array( array(
-	                        "name" => $model->name,
-	                        "type" => $model->mime_type,
-	                        "size" => $model->size,
-	                        "url" => $publicPath.$filename,
+	                        "name" => $file_add->name,
+	                        "type" => $file->getType( ),
+	                        "size" => $file->getSize( ),
+	                        "url" => $publicPath.$file->getName(),
 	                        "thumbnail_url" => $publicPath."thumbs/$filename",
-	                        "delete_url" => $this->createUrl( "upload", array(
+	                        "delete_url" => $this->createUrl( "XUpload", array(
 	                            "_method" => "delete",
 	                            "file" => $filename
 	                        ) ),
@@ -338,7 +341,7 @@ class FileController extends Controller
 	                    array( "error" => $model->getErrors( 'file' ),
 	                ) ) );
 	                Yii::log( "XUploadAction: ".CVarDumper::dumpAsString( $model->getErrors( ) ),
-	                    CLogger::LEVEL_ERROR, "xupload.actions.XUploadAction" 
+	                    CLogger::LEVEL_ERROR, "FileController.actionXUpload" 
 	                );
                 }
 	        } else {

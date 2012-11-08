@@ -198,6 +198,8 @@ CERTIFICATE
 		
 		// location for uploaded files
 		'fileRoot'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'../files',
+	   	'filePath' => realpath( Yii::app( )->getBasePath( )."/../files/uploads/" )."/",
+    	'publicFilePath' => Yii::app( )->getBaseUrl( )."/files/uploads/",
 	
 	),
 );
