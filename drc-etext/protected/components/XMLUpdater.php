@@ -177,7 +177,7 @@ class XMLUpdater extends CApplicationComponent
 		$data = "Operation=$operation&From=$from&To=$to&UserName=$uName&Password=$pWord";
 		
 		$timeout=80;
-		set_time_limit ( 600 );
+		set_time_limit ( 3600 );
 
 		$path = $url['path'];
 		$host = $url['host'];

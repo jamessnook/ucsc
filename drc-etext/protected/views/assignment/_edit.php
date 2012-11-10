@@ -3,6 +3,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'assignment-form',
 	'enableAjaxValidation'=>false,
+	'action'=> $action,
 )); ?>
 
 		<div class="row-fluid">
@@ -63,10 +64,11 @@
 			          </div>
 			          
 			          <?php 
-			          	if (fileUpload){
-							echo $this->renderPartial('_upload', array('model'=>$model)); 
-			          	} else {
+			          	if ($createNew){
 							echo $this->renderPartial('_uploadAlert', array('model'=>$model)); 
+			          	} else {
+			          		echo $this->renderPartial('_uploadFiles', array('model'=>$model)); 
+			          		echo $this->renderPartial('_listFiles', array('model'=>$model)); 
 			          	}
 					  ?>
 
@@ -74,6 +76,7 @@
 			          
 						<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" )); ?>
 						<?php echo CHtml::button('Cancel', array( 'class'=>"btn", 'onclick'=> "history.back()" )); ?>
+						<button type="complete" class="btn btn-success pull-right disabled" disabled="disabled">Request Completed</button>
 			            
 			          </div>
 			        </fieldset>

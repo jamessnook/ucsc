@@ -84,7 +84,7 @@
 	//$model->username = Yii::app()->user->name;  // set up for current user
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'assignmentFilesGrid',
-		'dataProvider'=>$model->studentAssignmentFiles(),
+		'dataProvider'=>$model->assignmentFiles(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,
 		'summaryText'=>'',
@@ -95,21 +95,21 @@
 		'pagerCssClass'=>"pagination", 
 		'columns'=>array(
 			array( 
+				'header'=>'Type', 
+				'name'=>'file.type.type', 
+				'type'=>'raw',
+				'value'=>'\'<span class="badge">\' . $data->file->type->name . \'</span>\'', 
+			),
+			array( 
 				'header'=>'File', 
 				'class'=>'CLinksColumn',
-				'labelExpression'=>'$data->title', 
+				'labelExpression'=>'$data->file->name', 
 				'urlExpression'=>'array(\'assignment/files\', \'id\'=>$data->id)', 
 			),
 			array( 
-				'header'=>'Type', 
-				'name'=>'book.title', 
-				'value'=>'$data->book->title', 
-			 ),
-			array( 
 				'header'=>'Description', 
-				'name'=>'fileCount()', 
-				'type'=>'raw',
-				'value'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
+				'name'=>'file.description', 
+				'value'=> '$data->file->description', 
 			 ),
 		),
 	)); 

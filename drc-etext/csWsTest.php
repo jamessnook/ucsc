@@ -1,7 +1,7 @@
 <?php
 //$test_uri = 'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?service=all';
 //$test_uri = 'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?service=accomodations&emplid=0150172';
-$test_uri = 'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?service=enrollments';
+$test_uri = 'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector?service=students';
 $url = parse_url($test_uri);
 $test_data = 'Operation=SCX_ETEXT.v1&From=SCX_ETEXT_NODE&To=PSFT_CSDEV&UserName=ETEXT&Password=j@bberw0cky';
 

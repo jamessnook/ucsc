@@ -44,8 +44,9 @@ INSERT INTO AuthAssignment (itemname, userid) VALUES ('admin', 'admin');
 
 drop table if exists user;
 CREATE TABLE user (    -- AIS feed and creation by admins
-    username     VARCHAR(64) NOT NULL PRIMARY KEY,   --  cruzid if available
-    emplid       VARCHAR(64) UNIQUE,     -- AIS user id
+    count INTEGER,  -- drc library id
+    username     VARCHAR(64) PRIMARY KEY NOT NULL,   --  cruzid if available
+    emplid       VARCHAR(64),     -- AIS user id
     first_name   VARCHAR(64),
     middle_name   VARCHAR(64),
     last_name    VARCHAR(64),
@@ -58,6 +59,14 @@ CREATE TABLE user (    -- AIS feed and creation by admins
     modified_by  VARCHAR(64)              -- when updated from AIS
 );
 INSERT INTO user (username) VALUES ('admin');
+
+Update user set first_name = (Select first_name from user t1 where user.username != t1.username order by RANDOM() limit 1);
+Update user set middle_name = (Select middle_name from user t1 where user.username != t1.username order by RANDOM() limit 1);
+Update user set last_name = (Select first_name from user t1 where user.username != t1.username order by RANDOM() limit 1);
+Update user set username = (Select username from user t1 where user.emplid != t1.emplid order by RANDOM() limit 1);
+Update user set username = hex(randomblob(8));
+Update user set email = 'test@ucsc.edu';
+Update user set phone = '555-123-4567';
 
 drop table if exists file_type;
 CREATE TABLE file_type (    -- AIS feed
