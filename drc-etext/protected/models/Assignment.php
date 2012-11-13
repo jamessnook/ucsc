@@ -151,6 +151,7 @@ class Assignment extends CActiveRecord
 		));
 	}
 
+
 	/**
 	 * Retrieves a list of AssignemtnFile models for this Assignment based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

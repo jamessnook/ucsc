@@ -145,7 +145,7 @@ class Course extends CActiveRecord
 	 * Retrieves a list of assignments for this course based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function courseAssignments()
+	public function assignments()
 	{
 		$criteria=new CDbCriteria;
 		if ($this->username) {
@@ -164,6 +164,21 @@ class Course extends CActiveRecord
 		));
 	}
 
+	/**
+	 * Retrieves a list of assignments for this course based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function books()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->addCondition("id IN (SELECT book_id FROM assignment WHERE term_code ='$this->term_code' AND class_num='$this->class_num'");          
+		
+		return new CActiveDataProvider('Book', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+	
 	/**
 	 * Retrieves a list of faculty names.
 	 * @return string, the names of faculty for this course.

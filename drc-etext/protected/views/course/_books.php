@@ -1,14 +1,14 @@
 
 <div class="row-fluid">
     <div class="span12">
-		<h3>Assignments</h3>
+		<h3>Books</h3>
 
 	<?php 
 	
 	//$model->username = Yii::app()->user->name;  // set up for current user
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'assignmentGrid',
-		'dataProvider'=>$model->assignments(),
+		'dataProvider'=>$model->books(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,
 		'summaryText'=>'',
@@ -19,27 +19,42 @@
 		'pagerCssClass'=>"pagination", 
 		'columns'=>array(
 			array( 
-				'header'=>'Assignment Title', 
+				'header'=>'Book Title', 
 				'class'=>'CLinksColumn',
 				'labelExpression'=>'$data->title', 
 				'urlExpression'=>'array(\'assignmentFiles/studentAssignmentFiles\', \'assignmentId\'=>$data->id)', 
 			),
 			array( 
-				'header'=>'Book Title', 
-				'name'=>'book.title', 
-				'value'=>'$data->book->title', 
+				'header'=>'Author', 
+				'name'=>'author', 
+				'value'=>'$data->author', 
 			 ),
 			array( 
-				'header'=>'Files', 
-				'name'=>'fileCount()', 
-				'type'=>'raw',
-				'value'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
+				'header'=>'Publisher', 
+				'name'=>'author', 
+				'value'=>'$data->publisher', 
 			 ),
 			 array( 
-				'header'=>'Status', 
-			 	'name'=>'completed()', 
+				'header'=>'Year', 
+				'name'=>'author', 
+				'value'=>'$data->year', 
+			 ),
+			 array( 
+				'header'=>'Edition', 
+				'name'=>'author', 
+				'value'=>'$data->edition', 
+			 ),
+			 array( 
+				'header'=>'', 
+				'name'=>'edit', 
 				'type'=>'raw',
-			 	'value'=>'$data->is_complete? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
+				'value'=>'\'a href="#" class="btn">Edit</a>\'', 
+			 ),
+			 array( 
+				'header'=>'', 
+				'name'=>'delete', 
+				'type'=>'raw',
+				'value'=>'\'a href="#" class="btn">Remove</a>\'', 
 			 ),
 		),
 	)); 

@@ -38,7 +38,10 @@
 				</div><!--/row-->
 			</div><!--/head-->
 			
-			<?php echo $this->renderPartial($contentView, array('model'=>$contentModel)); // grid showong assignment list ?>
+			<?php 
+				if (!isset($contentModel)) $contentModel = $model;
+				echo $this->renderPartial($contentView, array('model'=>$contentModel)); // grid showong assignment list 
+			?>
 	
 		  </div><!--/page-unit-->
         </div><!--/span-->

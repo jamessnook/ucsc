@@ -226,7 +226,9 @@ CREATE TABLE book (                    -- books or other items in drc library
     id_type    VARCHAR(32) NOT NULL,   -- most often isbn, also issn, aisn, etc
     title      VARCHAR(512) NOT NULL, 
     author     VARCHAR(128),
+    publisher  VARCHAR(128),
     edition    VARCHAR(128),
+    year       INTEGER,
     created      DATETIME,      -- when requested
     modified     DATETIME,      -- date and time of last change
     modified_by   VARCHAR(64),  -- username of user who made last change 

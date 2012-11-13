@@ -21,6 +21,52 @@ class CourseController extends Controller
 		));
 	}
 
+	/**
+	 * Manages all models.
+	 */
+	public function actionAssignments($termCode=null, $classNum=null, $username=null)
+	{
+		$model=new Course('search');
+		//$this->term = $model->find();
+		$model->unsetAttributes();  // clear any default values
+
+		if (!$termCode) $termCode = Term::currentTermCode();
+		$model->username = $username;
+		$model->term_code = $termCode;
+		$model->class_num = $classNum;
+
+		$this->render('assignments',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
+	 * s.
+	 */
+	public function actionAssignmentsForUser($termCode=null, $classNum=null, $username=null)
+	{
+		if (!$username) $username = Yii::app()->user->name;
+		$this->actionAssignments($termCode, $classNum, $username);
+	}
+	
+	/**
+	 * .
+	 */
+	public function actionBooks($termCode=null, $classNum=null, $username=null)
+	{
+		$model=new Course('search');
+		//$this->term = $model->find();
+		$model->unsetAttributes();  // clear any default values
+
+		if (!$termCode) $termCode = Term::currentTermCode();
+		$model->username = $username;
+		$model->term_code = $termCode;
+		$model->class_num = $classNum;
+
+		$this->render('books',array(
+			'model'=>$model,
+		));
+	}
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

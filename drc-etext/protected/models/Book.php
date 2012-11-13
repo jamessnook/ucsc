@@ -47,10 +47,10 @@ class Book extends CActiveRecord
 			array('global_id', 'numerical', 'integerOnly'=>true),
 			array('id_type', 'length', 'max'=>32),
 			array('title', 'length', 'max'=>512),
-			array('author, edition', 'length', 'max'=>128),
+			array('author, publisher, edition', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, global_id, id_type, title, author, edition', 'safe', 'on'=>'search'),
+			array('id, global_id, id_type, title, author, publisher, edition, year', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,7 +78,9 @@ class Book extends CActiveRecord
 			'id_type' => 'Id Type',
 			'title' => 'Title',
 			'author' => 'Author',
+			'publisher' => 'Publisher',
 			'edition' => 'Edition',
+			'year' => 'Year',
 		);
 	}
 
@@ -105,3 +107,4 @@ class Book extends CActiveRecord
 		));
 	}
 }
+	

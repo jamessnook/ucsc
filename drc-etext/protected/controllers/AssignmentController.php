@@ -167,6 +167,7 @@ class AssignmentController extends Controller
 		));
 	}
 
+
 	/**
 	 * Manages all models.
 	 */
