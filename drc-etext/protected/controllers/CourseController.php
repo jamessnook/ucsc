@@ -50,6 +50,45 @@ class CourseController extends Controller
 	}
 	
 	/**
+	 * Creates a new Assignment model.
+	 */
+	public function actionCreateAssignment($termCode=null, $classNum=null)
+	{
+		$model=Course::model()->findByPk(array('term_code'=>$termCode, 'class_num'=>$classNum));
+		if($model===null)
+			throw new CHttpException(404,'The requested course does not exist.');
+				
+		$contentModel=new Assignment('search');
+		//$this->term = $model->find();
+		$contentModel->unsetAttributes();  // clear any default values
+
+		$contentModel->term_code = $termCode;
+		$contentModel->class_num = $classNum;
+
+		$this->render('newAssignment',array(
+			'model'=>$model,
+			'contentModel' => $contentModel,
+		));
+	}
+
+	/**
+	 * Updates a particular Assignment model.
+	 * @param integer $assignmentId the ID of the model to be updated
+	 */
+	public function actionUpdateAssignment($assignmentId)
+	{
+		$contentModel= Assignment::model()->findByPk($assignmentId);
+		$model=Course::model()->findByPk(array('term_code'=>$contentModel->term_code, 'class_num'=>$contentModel-class_num));
+		if($contentModel===null || $model===null)
+			throw new CHttpException(404,'The requested course and assignment do not exist.');
+
+		$this->render('updateAssignment',array(
+			'model'=>$model,
+			'contentModel' => $contentModel,
+		));
+	}
+
+	/**
 	 * .
 	 */
 	public function actionBooks($termCode=null, $classNum=null, $username=null)
@@ -67,6 +106,46 @@ class CourseController extends Controller
 			'model'=>$model,
 		));
 	}
+
+	/**
+	 * Creates a new Book model.
+	 */
+	public function actionCreateBook($termCode=null, $classNum=null)
+	{
+		$model=Course::model()->findByPk(array('term_code'=>$termCode, 'class_num'=>$classNum));
+		if($model===null)
+			throw new CHttpException(404,'The requested course does not exist.');
+		
+		$contentModel=new Book('search');
+		//$this->term = $model->find();
+		$contentModel->unsetAttributes();  // clear any default values
+
+		$this->render('newBook',array(
+			'model'=>$model,
+			'contentModel' => $contentModel,
+		));
+	}
+
+	/**
+	 * Updates a particular Book model.
+	 * @param integer $bookId the ID of the model to be updated
+	 */
+	public function actionUpdateBook($termCode=null, $classNum=null, $bookId)
+	{
+		$contentModel= Book::model()->findByPk($bookId);
+		$model=Course::model()->findByPk(array('term_code'=>$termCode, 'class_num'=>$classNum));
+		if($contentModel===null || $model===null)
+			throw new CHttpException(404,'The requested course and book do not exist.');
+
+		$this->render('updateBook',array(
+			'model'=>$model,
+			'contentModel' => $contentModel,
+		));
+	}
+
+	
+	
+	
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

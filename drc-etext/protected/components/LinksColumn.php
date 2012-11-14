@@ -32,11 +32,12 @@ class LinksColumn extends CLinkColumn
 	{
 		if($this->urlExpression!==null)
 			if(is_array($this->urlExpression)){
-				foreach($this->urlExpression['model'] as $model){
+				$models = $this->evaluateExpression($this->urlExpression['model'],array('data'=>$data,'row'=>$row));
+				foreach($models as $model){
 					$urlStr = '';
 					$urlStr = $this->urlExpression['route'] .'?';
 					foreach($this->urlExpression['params'] as $name=>$param){
-						$urlStr .= $name .'=' . $model->$param;
+						$urlStr .= $name .'=' . $model->{$param};
 					}
 					$url[] = $urlStr;
 				}

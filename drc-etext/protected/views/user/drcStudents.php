@@ -16,7 +16,7 @@
 
 <div class="page-head">
 	<div class="row-fluid">
-		<h1 class="pull-left"><?php echo 'DRC Users: ' . $model->term->description; ?></h1>
+		<h1 class="pull-left"><?php echo 'DRC Users: ' . Term::model()->findByPk($model->term_code)->description; ?></h1>
 	</div><!--/row-->
 </div><!--/head-->
 <div class="row-fluid">
@@ -56,7 +56,9 @@
 			 array( 
 				'header'=>'Courses', 
 				'class'=>'LinksColumn',
-				'labelExpression'=>'$data->drcRequestCourseNames()', 
+				//'labelExpression'=>'$data->course->facultyNames()', 
+				//'urlExpression'=>'$data->course->facultyUrls()', 
+			 	'labelExpression'=>'$data->drcRequestCourseNames()', 
 				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/description', 'params'=>array('termCode'=>'course->term_code', 'classNum'=>'course->class_num')), 
 			),
 			array( 
@@ -68,7 +70,7 @@
 			 array( 
 				'header'=>'Status', 
 				'class'=>'LinksColumn',
-			 	'type'=>'raw',
+			 	//'type'=>'raw',
 			 	'urlExpression'=>'array(\'drcRequest/studentCourses\', \'username\'=>$data->username)',
 			 	'label'=>'$data->drcRequestsCompleted()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 			 ),

@@ -140,7 +140,7 @@ class User extends UCSCModel
 	{
 		$criteria=new CDbCriteria;
 		$criteria->with = array( 'drcRequests', 'drcRequests.course');
-		$criteria->compare('drcRequests.term_code',$this->termCode);
+		$criteria->compare('drcRequests.term_code',$this->term_code);
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

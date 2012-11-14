@@ -74,8 +74,8 @@ class Book extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'global_id' => 'Global',
-			'id_type' => 'Id Type',
+			'global_id' => 'Book Number',
+			'id_type' => 'Book Number Type',
 			'title' => 'Title',
 			'author' => 'Author',
 			'publisher' => 'Publisher',
