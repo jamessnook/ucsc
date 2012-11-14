@@ -59,7 +59,7 @@
 				//'labelExpression'=>'$data->course->facultyNames()', 
 				//'urlExpression'=>'$data->course->facultyUrls()', 
 			 	'labelExpression'=>'$data->drcRequestCourseNames()', 
-				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/description', 'params'=>array('termCode'=>'course->term_code', 'classNum'=>'course->class_num')), 
+				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/description', 'params'=>array('termCode'=>'term_code', 'classNum'=>'class_num')), 
 			),
 			array( 
 				'header'=>'Type', 

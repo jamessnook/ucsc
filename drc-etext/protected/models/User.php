@@ -177,7 +177,7 @@ class User extends UCSCModel
 		$names = array();
 		foreach($this->drcRequests as $request)
 		{
-			$names[] = $request->course->name;
+			$names[] = $request->course->title;
 		}
 		return $names;
 	}
