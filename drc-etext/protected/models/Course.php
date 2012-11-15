@@ -29,6 +29,7 @@
 class Course extends CActiveRecord
 {
 	public $username;
+	public $emplid;
 	
 	/**
 	 * Returns the static model of the specified AR class.
@@ -151,12 +152,12 @@ class Course extends CActiveRecord
 		if ($this->username) {
 			$criteria->with = array( 'drcRequests', 'assignmentTypes' );
 			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
-			$criteria->compare('drcRequests.username',$this->username);
+			$criteria->compare('drcRequests.emplid',$this->emplid);
 			//$criteria->addCondition("drcRequests.username = $username");         
 			$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
 		}
-		$criteria->compare('term_code',$this->term_code);
-		$criteria->compare('class_num',$this->class_num);
+		$criteria->compare('t.term_code',$this->term_code);
+		$criteria->compare('t.class_num',$this->class_num);
 		
 		return new CActiveDataProvider('Assignment', array(
 			'criteria'=>$criteria,

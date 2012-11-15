@@ -1,17 +1,11 @@
 <?php
 	// Course Frame
 
-	$layoutOptions = array(
-		'model' => $model,
-		'menuView' =>'_courseMenu',
-		'contentView' => $contentView,
-		'contentModel' => $contentModel,
-		'title' => $model->title .' (' .$model->idString().')',
-		'titleNavRight' => $titleNavRight,
-	);	
+	$options['menuView'] = '../layouts/_courseMenu';
+	$options['title'] = $model->title .' (' .$model->idString().')';
 
-	echo $this->renderPartial('_allUsers', $layoutOptions); 
-	 
+	echo $this->renderPartial('../layouts/_allUsers',  array('options'=>$options, 'model' => $model,)); 
+	
 ?>
 
 

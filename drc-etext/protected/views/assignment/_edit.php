@@ -65,10 +65,10 @@
 			          
 			          <?php 
 			          	if ($createNew){
-							echo $this->renderPartial('_uploadAlert', array('model'=>$model)); 
+							echo $this->renderPartial('../assignment/_uploadAlert', array('model'=>$model)); 
 			          	} else {
-			          		echo $this->renderPartial('_uploadFiles', array('model'=>$model)); 
-			          		echo $this->renderPartial('_listFiles', array('model'=>$model)); 
+			          		echo $this->renderPartial('../assignment/_uploadFiles', array('model'=>$model)); 
+			          		echo $this->renderPartial('../assignment/_listFiles', array('model'=>$model)); 
 			          	}
 					  ?>
 

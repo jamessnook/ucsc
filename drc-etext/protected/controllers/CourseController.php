@@ -30,17 +30,17 @@ class CourseController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAssignments($termCode=null, $classNum=null, $username=null)
+	public function actionAssignments($termCode=null, $classNum=null, $username=null, $emplid=null)
 	{
-		$model=new Course('search');
-		//$this->term = $model->find();
-		$model->unsetAttributes();  // clear any default values
-
-		if (!$termCode) $termCode = Term::currentTermCode();
+		if ($termCode && $classNum){
+			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
+		} else {
+			$model=new Course('search');
+			$model->unsetAttributes();  // clear any default values
+		}
 		$model->username = $username;
-		$model->term_code = $termCode;
-		$model->class_num = $classNum;
-
+		$model->emplid = $emplid;
+		
 		$this->render('assignments',array(
 			'model'=>$model,
 		));
@@ -58,7 +58,7 @@ class CourseController extends Controller
 	/**
 	 * Creates a new Assignment model.
 	 */
-	public function actionCreateAssignment($termCode=null, $classNum=null)
+	public function actionNewAssignment($termCode=null, $classNum=null)
 	{
 		$model=Course::model()->findByPk(array('term_code'=>$termCode, 'class_num'=>$classNum));
 		if($model===null)

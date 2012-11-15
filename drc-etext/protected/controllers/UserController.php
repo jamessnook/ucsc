@@ -173,14 +173,18 @@ class UserController extends Controller
 	 */
 	public function actionCourses($termCode=null, $username=null, $emplid=null)
 	{
-		$model=new User('search');
-		//$this->term = $model->find();
-		$model->unsetAttributes();  // clear any default values
+		
+		if ($username){
+			$model=User::model()->findByPk($username);
+		} else if ($emplid) {
+			$model=User::model()->findByAttributes(array('emplid'=>$emplid));
+		} else {
+			$model=new User('search');
+			$model->unsetAttributes();  // clear any default values
+		}
 
 		if (!$termCode) $termCode = Term::currentTermCode();
 		$model->term_code = $termCode;
-		if ($username) $model->username = $username;
-		if ($emplid) $model->emplid = $emplid;
 		
 		$this->render('courses',array(
 			'model'=>$model,

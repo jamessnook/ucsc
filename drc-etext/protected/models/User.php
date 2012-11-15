@@ -157,11 +157,13 @@ class User extends UCSCModel
 	public function courses()
 	{
 		$criteria=new CDbCriteria; 
-		$criteria->compare('term_code',$this->term_code);
+		$criteria->compare('t.term_code',$this->term_code);
 		//$criteria->compare('emplid',$this->emplid);
 		//$criteria->compare('username',$this->username);
 		if ($this->emplid && strlen($this->emplid)>0) {
 			$criteria->with = array( 'drcRequests' );
+			$criteria->together = true;
+			
 			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
 			$criteria->compare('drcRequests.emplid',$this->emplid);
 			$criteria->compare('drcRequests.term_code',$this->term_code);

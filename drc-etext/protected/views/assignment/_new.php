@@ -6,7 +6,7 @@
 		'action'=>Yii::app()->createUrl("assignment/create", array("term_code" => $model->term_code, "class_num" => $model->class_num, )),
 	);	
 
-	echo $this->renderPartial('_edit', $layoutOptions); 
+	echo $this->renderPartial('../assignment/_edit', $layoutOptions); 
 	 
 ?>
 

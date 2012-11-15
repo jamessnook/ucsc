@@ -24,6 +24,7 @@
 class Assignment extends CActiveRecord
 {
 	public $username;
+	public $emplid;
 	
 	/**
 	 * Returns the static model of the specified AR class.
@@ -74,7 +75,7 @@ class Assignment extends CActiveRecord
 			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
 			'book' => array(self::BELONGS_TO, 'Book', 'book_id'),
 			'course' => array(self::BELONGS_TO, 'Course', 'class_num, term_code'),
-            'assignmentTypes'=>array(self::HAS_MANY, 'AssignmentType', 'id'),
+            'assignmentTypes'=>array(self::HAS_MANY, 'AssignmentType', 'assignment_id'),
 			'fileIds'=>array(self::HAS_MANY, 'AssignmentFile', 'id'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code, class_num'),
 			'drcRequests1' => array(self::MANY_MANY, 'DrcRequest', 'assignment_type(assignment_id, type)'),
@@ -127,30 +128,6 @@ class Assignment extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
-	public function courseAssignments()
-	{
-		$criteria=new CDbCriteria;
-		if ($this->username) {
-			$criteria->with = array( 'drcRequests', 'assignmentTypes' );
-			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
-			$criteria->compare('drcRequests.username',$this->username);
-			//$criteria->addCondition("drcRequests.username = $username");         
-			$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
-		}
-		$criteria->compare('term_code',$this->term_code);
-		$criteria->compare('class_num',$this->class_num);
-		
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
-
 
 	/**
 	 * Retrieves a list of AssignemtnFile models for this Assignment based on the current search/filter conditions.
