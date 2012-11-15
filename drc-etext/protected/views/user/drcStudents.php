@@ -72,7 +72,7 @@
 				'class'=>'LinksColumn',
 			 	//'type'=>'raw',
 			 	'urlExpression'=>'array(\'drcRequest/studentCourses\', \'username\'=>$data->username)',
-			 	'label'=>'$data->drcRequestsCompleted()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
+			 	'labelExpression'=>'$data->drcRequestsCompleted()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 			 ),
 		),
 	)); 

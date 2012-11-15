@@ -165,7 +165,7 @@ class Course extends CActiveRecord
 	}
 
 	/**
-	 * Retrieves a list of assignments for this course based on the current search/filter conditions.
+	 * Retrieves a list of books for this course based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function books()

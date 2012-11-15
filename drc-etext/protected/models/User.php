@@ -74,7 +74,8 @@ class User extends UCSCModel
 		// class name for the relations automatically generated below.
 		return array(
 			'authItems' => array(self::MANY_MANY, 'AuthItem', 'AuthAssignment(userid, itemname)'),
-			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid', 'joinType' => 'INNER JOIN'),
+			//'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid', 'joinType' => 'INNER JOIN'),
+			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid'),
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'modified_by'),
 			'books' => array(self::MANY_MANY, 'Book', 'book_purchase(username, book_id)'),
 			'files' => array(self::HAS_MANY, 'File', 'modified_by'),
@@ -143,6 +144,35 @@ class User extends UCSCModel
 		$criteria->compare('drcRequests.term_code',$this->term_code);
 		
 		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+
+
+	/**
+	 * Retrieves a list of assignments for this course based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function courses()
+	{
+		$criteria=new CDbCriteria; 
+		$criteria->compare('term_code',$this->term_code);
+		//$criteria->compare('emplid',$this->emplid);
+		//$criteria->compare('username',$this->username);
+		if ($this->emplid && strlen($this->emplid)>0) {
+			$criteria->with = array( 'drcRequests' );
+			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
+			$criteria->compare('drcRequests.emplid',$this->emplid);
+			$criteria->compare('drcRequests.term_code',$this->term_code);
+			//$criteria->addCondition("drcRequests.username = $username");         
+			//$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
+		}
+		//if ($this->term_code && $this->term_code>0) {
+		//	$criteria->compare('term_code',$this->term_code);
+		//}
+		
+		return new CActiveDataProvider('Course', array(
 			'criteria'=>$criteria,
 		 	'pagination' => false,
 		));
