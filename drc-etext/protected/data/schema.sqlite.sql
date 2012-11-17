@@ -222,7 +222,7 @@ CREATE TABLE assignment_file (         -- maps assignments to files
 drop table if exists book;
 CREATE TABLE book (                    -- books or other items in drc library
     id         INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  -- drc library id
-    global_id  INTEGER NOT NULL,       -- most often isbn number
+    global_id  VARCHAR(64) NOT NULL,       -- most often isbn number
     id_type    VARCHAR(32) NOT NULL,   -- most often isbn, also issn, aisn, etc
     title      VARCHAR(512) NOT NULL, 
     author     VARCHAR(128),

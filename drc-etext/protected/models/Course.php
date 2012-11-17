@@ -158,6 +158,8 @@ class Course extends CActiveRecord
 		}
 		$criteria->compare('t.term_code',$this->term_code);
 		$criteria->compare('t.class_num',$this->class_num);
+		//$criteria->together = true;
+		$criteria->together = array( 'book', ); // might be needed
 		
 		return new CActiveDataProvider('Assignment', array(
 			'criteria'=>$criteria,
@@ -172,7 +174,7 @@ class Course extends CActiveRecord
 	public function books()
 	{
 		$criteria=new CDbCriteria;
-		$criteria->addCondition("id IN (SELECT book_id FROM assignment WHERE term_code ='$this->term_code' AND class_num='$this->class_num'");          
+		//$criteria->addCondition("id IN (SELECT book_id FROM assignment WHERE term_code ='$this->term_code' AND class_num='$this->class_num')");          
 		
 		return new CActiveDataProvider('Book', array(
 			'criteria'=>$criteria,

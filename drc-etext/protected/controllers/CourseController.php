@@ -6,7 +6,7 @@ class CourseController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column1';
+	public $layout='//layouts/noLayout';
 
 	/**
 	 * Display data about a course.
@@ -81,10 +81,10 @@ class CourseController extends Controller
 	 * Updates a particular Assignment model.
 	 * @param integer $assignmentId the ID of the model to be updated
 	 */
-	public function actionUpdateAssignment($assignmentId)
+	public function actionUpdateAssignment($id)
 	{
-		$contentModel= Assignment::model()->findByPk($assignmentId);
-		$model=Course::model()->findByPk(array('term_code'=>$contentModel->term_code, 'class_num'=>$contentModel-class_num));
+		$contentModel= Assignment::model()->findByPk($id);
+		$model=Course::model()->findByPk(array('term_code'=>$contentModel->term_code, 'class_num'=>$contentModel->class_num));
 		if($contentModel===null || $model===null)
 			throw new CHttpException(404,'The requested course and assignment do not exist.');
 
@@ -95,19 +95,41 @@ class CourseController extends Controller
 	}
 
 	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+	public function actionSaveAssignment($termCode=null, $classNum=null, $id=null)
+	{
+		//$model=new Assignment;
+		if ($id) $model=Assignment::model()->findByPk($id);
+		if (!$model) $model=new Assignment;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Assignment']))
+		{
+			$model->attributes=$_POST['Assignment'];
+			if($model->save())
+				$this->redirect(array('assignments','termCode'=>$model->term_code,'classNum'=>$model->class_num));
+		}
+		$this->redirect(array('newAssignment','termCode'=>$model->term_code,'classNum'=>$model->class_num));
+	}
+
+	/**
 	 * .
 	 */
-	public function actionBooks($termCode=null, $classNum=null, $username=null)
+	public function actionBooks($termCode=null, $classNum=null, $username=null, $emplid=null)
 	{
-		$model=new Course('search');
-		//$this->term = $model->find();
-		$model->unsetAttributes();  // clear any default values
-
-		if (!$termCode) $termCode = Term::currentTermCode();
+		if ($termCode && $classNum){
+			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
+		} else {
+			$model=new Course('search');
+			$model->unsetAttributes();  // clear any default values
+		}
 		$model->username = $username;
-		$model->term_code = $termCode;
-		$model->class_num = $classNum;
-
+		$model->emplid = $emplid;
+		
 		$this->render('books',array(
 			'model'=>$model,
 		));
@@ -116,7 +138,7 @@ class CourseController extends Controller
 	/**
 	 * Creates a new Book model.
 	 */
-	public function actionCreateBook($termCode=null, $classNum=null)
+	public function actionNewBook($termCode=null, $classNum=null)
 	{
 		$model=Course::model()->findByPk(array('term_code'=>$termCode, 'class_num'=>$classNum));
 		if($model===null)
@@ -136,9 +158,9 @@ class CourseController extends Controller
 	 * Updates a particular Book model.
 	 * @param integer $bookId the ID of the model to be updated
 	 */
-	public function actionUpdateBook($termCode=null, $classNum=null, $bookId)
+	public function actionUpdateBook($termCode=null, $classNum=null, $id=null)
 	{
-		$contentModel= Book::model()->findByPk($bookId);
+		$contentModel= Book::model()->findByPk($id);
 		$model=Course::model()->findByPk(array('term_code'=>$termCode, 'class_num'=>$classNum));
 		if($contentModel===null || $model===null)
 			throw new CHttpException(404,'The requested course and book do not exist.');
@@ -147,6 +169,28 @@ class CourseController extends Controller
 			'model'=>$model,
 			'contentModel' => $contentModel,
 		));
+	}
+
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+	public function actionSaveBook($termCode=null, $classNum=null, $id=null)
+	{
+		//$model=new Book;
+		if ($id) $model=Book::model()->findByPk($id);
+		if (!$model) $model=new Book;
+		
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Book']))
+		{
+			$model->attributes=$_POST['Book'];
+			if($model->save())
+				$this->redirect(array('books','termCode'=>$termCode,'classNum'=>$classNum));
+		}
+		$this->redirect(array('newBook','termCode'=>$termCode,'classNum'=>$classNum));
 	}
 
 	

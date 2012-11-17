@@ -21,14 +21,18 @@
 			array( 
 				'header'=>'Assignment Title', 
 				'class'=>'CLinksColumn',
+				//'name'=>'title', 
+				//'value'=>'$data->title', 
 				'labelExpression'=>'$data->title', 
-				'urlExpression'=>'array(\'assignmentFiles/studentAssignmentFiles\', \'assignmentId\'=>$data->id)', 
+				'urlExpression'=>'array(\'course/updateAssignment\', \'id\'=>$data->id)', 
 			),
 			array( 
 				'header'=>'Book Title', 
 				'name'=>'book.title', 
-				'value'=>'$data->book->title', 
-			 ),
+				'value'=>'$data->book? $data->book->title : \' \'', 
+				//'type'=>'raw',
+				//'value'=>'$data->book->title', 
+			),
 			array( 
 				'header'=>'Files', 
 				'name'=>'fileCount()', 

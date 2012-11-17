@@ -3,10 +3,11 @@
 		'model' => $model,
 		'title' => 'Create Book',
 		'createNew'=>true,
-		'action'=>Yii::app()->createUrl("book/create", array("term_code" => $model->term_code, "class_num" => $model->class_num, )),
+		//'action'=>Yii::app()->createUrl("course/createBook", array('termCode'=>$_REQUEST['termCode'], 'classNum'=>$_REQUEST['classNum'])),
+		'action'=>$options['action'],
 	);	
 
-	echo $this->renderPartial('_edit', $layoutOptions); 
+	echo $this->renderPartial('../book/_edit', $layoutOptions); 
 	 
 ?>
 

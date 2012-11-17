@@ -33,14 +33,18 @@
 				<div class="row-fluid">
 					<h1 class="pull-left"><?php echo $options['title']; ?></h1>
 					<ul class="nav nav-pills pull-right">
-						<li><?php if (isset($options['$titleNavRight'])) echo $options['$titleNavRight']; ?></li>
+						<li><?php if (isset($options['titleNavRight'])) echo $options['titleNavRight']; ?></li>
 					</ul>
 				</div><!--/row-->
 			</div><!--/head-->
 			
 			<?php 
-				if (isset($options['contentModel']))  $model = $options['contentModel'];
-				echo $this->renderPartial($options['contentView'], array('model'=>$model)); // grid  
+				if (isset($options['contentModel'])){
+				  	$contentModel = $options['contentModel'];
+				} else {
+				  	$contentModel = $model;
+				}
+				echo $this->renderPartial($options['contentView'], array('options'=>$options, 'model'=>$contentModel)); // grid  
 			?>
 	
 		  </div><!--/page-unit-->
@@ -48,7 +52,7 @@
 		<div class="span3">
           <div class="well">
             
-			<?php echo $this->renderPartial($options['menuView'], array('model'=>$model)); // grid showong assignment list ?>
+			<?php echo $this->renderPartial($options['menuView'], array('options'=>$options, 'model'=>$model)); // grid showong assignment list ?>
             
           </div><!--/.well -->
         </div><!--/span-->

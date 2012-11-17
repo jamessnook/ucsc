@@ -4,6 +4,7 @@
 	'id'=>'assignment-form',
 	'enableAjaxValidation'=>false,
 	'action'=> $action,
+	'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
 		<div class="row-fluid">
@@ -71,6 +72,8 @@
 			          		echo $this->renderPartial('../assignment/_listFiles', array('model'=>$model)); 
 			          	}
 					  ?>
+					  <?php echo $form->hiddenField($model,'term_code'); ?>
+					  <?php echo $form->hiddenField($model,'class_num'); ?>
 
 			          <div class="form-actions">
 			          

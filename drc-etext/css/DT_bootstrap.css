@@ -45,3 +45,6 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 table.dataTable th:active {
 	outline: none;
 }
+.row{
+	margin-left: 0px;
+}

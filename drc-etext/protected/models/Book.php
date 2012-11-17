@@ -45,6 +45,7 @@ class Book extends CActiveRecord
 		return array(
 			array('global_id, id_type, title', 'required'),
 			array('global_id', 'numerical', 'integerOnly'=>true),
+			array('year', 'numerical', 'integerOnly'=>true),
 			array('id_type', 'length', 'max'=>32),
 			array('title', 'length', 'max'=>512),
 			array('author, publisher, edition', 'length', 'max'=>128),

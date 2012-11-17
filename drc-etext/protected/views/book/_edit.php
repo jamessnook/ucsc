@@ -48,7 +48,7 @@
 						<?php echo $form->labelEx($model, 'year', array('class'=>"control-label")); ?>
 			            <div class="controls">
 			            
-							<?php echo $form->textField($model,'year',array('class'=>"input-xxlarge",'maxlength'=>127)); // also? id="input01", type="text" ?>
+							<?php echo $form->textField($model,'year',array('class'=>"input-xxlarge",'maxlength'=>15)); // also? id="input01", type="text" ?>
 							<?php echo $form->error($model,'year'); ?>
 			              
 			            </div>
@@ -58,7 +58,7 @@
 						<?php echo $form->labelEx($model, 'edition', array('class'=>"control-label")); ?>
 			            <div class="controls">
 			            
-							<?php echo $form->textField($model,'edition',array('class'=>"input-xxlarge",'maxlength'=>127)); // also? id="input01", type="text" ?>
+							<?php echo $form->textField($model,'edition',array('class'=>"input-xxlarge",'maxlength'=>63)); // also? id="input01", type="text" ?>
 							<?php echo $form->error($model,'edition'); ?>
 			              
 			            </div>
@@ -68,7 +68,7 @@
 						<?php echo $form->labelEx($model, 'id_type', array('class'=>"control-label")); ?>
 			            <div class="controls">
 							
-					        <?php 	$options = CHtml::listData(IdType::model()->findAll(), 'id', 'type');
+					        <?php 	$options = CHtml::listData(IdType::model()->findAll(), 'name', 'name');
 					        		echo $form->dropDownList($model,'id_type', $options, array('class'=>"input-xxlarge"));
 					        ?>
 							<?php echo $form->error($model,'id_type'); ?>
@@ -86,6 +86,8 @@
 			            </div>
 			          </div>
 
+					  <?php //echo CHtml::hiddenField('termCode',$_REQUEST['termCode']); ?>
+					  <?php //echo CHtml::hiddenField('classNum',$_REQUEST['classNum']); ?>
 
 			          <div class="form-actions">
 			          

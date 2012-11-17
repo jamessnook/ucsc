@@ -56,10 +56,11 @@ class Assignment extends CActiveRecord
 			array('term_code, class_num, book_id', 'numerical', 'integerOnly'=>true),
 			array('modified_by', 'length', 'max'=>64),
 			array('notes', 'length', 'max'=>1024),
-			array('created, modified, is_complete, has_zip_file', 'safe'),
+			array('description', 'length', 'max'=>512),
+			array('created, modified, is_complete, has_zip_file, title, description, due_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, term_code, class_num, book_id, created, modified, modified_by, notes, is_complete, has_zip_file', 'safe', 'on'=>'search'),
+			array('id, term_code, class_num, book_id, created, modified, modified_by, notes, is_complete', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,10 +74,11 @@ class Assignment extends CActiveRecord
 		return array(
 			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
 			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
+			//'book' => array(self::BELONGS_TO, 'Book', 'book_id', 'joinType' => 'LEFT OUTER JOIN'),
 			'book' => array(self::BELONGS_TO, 'Book', 'book_id'),
 			'course' => array(self::BELONGS_TO, 'Course', 'class_num, term_code'),
             'assignmentTypes'=>array(self::HAS_MANY, 'AssignmentType', 'assignment_id'),
-			'fileIds'=>array(self::HAS_MANY, 'AssignmentFile', 'id'),
+			'fileIds'=>array(self::HAS_MANY, 'AssignmentFile', 'assignment_id'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code, class_num'),
 			'drcRequests1' => array(self::MANY_MANY, 'DrcRequest', 'assignment_type(assignment_id, type)'),
 		);
@@ -92,7 +94,8 @@ class Assignment extends CActiveRecord
 			'term_code' => 'Term Code',
 			'class_num' => 'Class Num',
 			'book_id' => 'Book',
-			'book_id' => 'Book',
+			'title' => 'Title',
+			'description' => 'Description',
 			'due_date' => 'Due Date',
 			'modified' => 'Modified',
 			'modified_by' => 'Modified By',
@@ -150,7 +153,7 @@ class Assignment extends CActiveRecord
 	 */
 	public function fileCount()
 	{
-		return count($this->fileIds);
+		return $this->fileIds? count($this->fileIds) : 0;
 	}
 	
 	

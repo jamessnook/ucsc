@@ -4,7 +4,7 @@
   <label class="control-label" for="input01">Type</label>
             
 	<?php 
-		foreach ($model->drcRequests->type as $req){
+		foreach ($model->drcRequests as $req){
 			echo '<span class="label">' . $req->type . '</span>';
 		}
 		if (count($model->drcRequests)>0){
@@ -23,9 +23,11 @@
    <?php
 	$this->widget('xupload.XUpload', array(
 	                    'url' => Yii::app()->createUrl("file/upload", array("assignment_id" => $model->id)),
-	                    //'model' => $model,
+	                    'model' => $model,
 	                    'attribute' => 'file',
 	                    'multiple' => true, 
+						//'formView' => 'application.views.somemodel._form','formView' => 'application.views.assignment._edit',
+						'htmlOptions' => array('id'=>'assignment-form'),
 	));
 	?>      
 
