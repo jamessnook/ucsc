@@ -62,11 +62,11 @@ class Course extends CActiveRecord
 			array('section, course_id', 'length', 'max'=>32),
 			array('subject, catalog_num', 'length', 'max'=>64),
 			array('description', 'length', 'max'=>512),
-			array('title, schedule, romm, dates', 'length', 'max'=>128),
+			array('title, schedule, room, dates', 'length', 'max'=>128),
 			array('created, modified', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('term_code, class_num, section, course_id, subject, description, title, catalog_num, schedule, romm, dates, created, modified', 'safe', 'on'=>'search'),
+			array('term_code, class_num, section, course_id, subject, description, title, catalog_num, schedule, room, dates, created, modified', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,7 +79,7 @@ class Course extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'term_code, class_num'),
-			'termCode' => array(self::BELONGS_TO, 'Term', 'term_code'),
+			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code, class_num'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'class_num'),
             'instructors'=>array(self::MANY_MANY, 'User',
@@ -104,7 +104,7 @@ class Course extends CActiveRecord
 			'title' => 'Title',
 			'catalog_num' => 'Catalog Num',
 			'schedule' => 'Schedule',
-			'romm' => 'Romm',
+			'room' => 'Room',
 			'dates' => 'Dates',
 			'created' => 'Created',
 			'modified' => 'Modified',
@@ -141,7 +141,23 @@ class Course extends CActiveRecord
 		));
 	}
 	
+	/**
+	 * Retrieves a list of courses based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function courses()
+	{
+		$criteria=new CDbCriteria;
 
+		$criteria->compare('term_code',$this->term_code);
+		$criteria->compare('class_num',$this->class_num);
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+	
 	/**
 	 * Retrieves a list of assignments for this course based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -174,7 +190,7 @@ class Course extends CActiveRecord
 	public function books()
 	{
 		$criteria=new CDbCriteria;
-		//$criteria->addCondition("id IN (SELECT book_id FROM assignment WHERE term_code ='$this->term_code' AND class_num='$this->class_num')");          
+		$criteria->addCondition("id IN (SELECT book_id FROM assignment WHERE term_code ='$this->term_code' AND class_num='$this->class_num')");          
 		
 		return new CActiveDataProvider('Book', array(
 			'criteria'=>$criteria,
@@ -182,6 +198,23 @@ class Course extends CActiveRecord
 		));
 	}
 	
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function students()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->with = array( 'drcRequests', 'drcRequests.course');
+		$criteria->compare('drcRequests.term_code',$this->term_code);
+		$criteria->compare('drcRequests.class_num',$this->class_num);
+		
+		return new CActiveDataProvider('User', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+
 	/**
 	 * Retrieves a list of faculty names.
 	 * @return string, the names of faculty for this course.

@@ -156,5 +156,33 @@ class Assignment extends CActiveRecord
 		return $this->fileIds? count($this->fileIds) : 0;
 	}
 	
+	/**
+	 * Retrieves a list of faculty names.
+	 * @return string, the names of faculty for this course.
+	 */
+	public function types()
+	{
+		$types = '';
+		foreach($this->assignmentTypes as $type)
+		{
+			$types .= $type . ' ';
+		}
+		return $types;
+	}
+	
+	/**
+	 * Retrieves a list of faculty names.
+	 * @return string, the names of faculty for this course.
+	 */
+	public function types2()
+	{
+		$types = '';
+		foreach($this->drcRequests as $request)
+		{
+			$types .= $request->type . ' ';
+		}
+		return $types;
+	}
+	
 	
 }

@@ -20,7 +20,7 @@
 				'header'=>'Course Name', 
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->title', 
-				'urlExpression'=>'array(\'assignment/studentAssignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num, \'username\'=>$data->username)', 
+				'urlExpression'=>'array(\'course/assignments\', \'termCode\'=>$data->term_code, \'classNum\'=>$data->class_num, \'username\'=>$data->username)', 
 			),
 			array( 
 				'header'=>'Class Id', 
@@ -41,9 +41,12 @@
 			 ),
 			 array( 
 				'header'=>'Status', 
-			 	'name'=>'course.completed()', 
-				'type'=>'raw',
-			 	'value'=>'$data->completed()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
+				'class'=>'LinksColumn',
+			 	//'name'=>'course.completed()', 
+				//'type'=>'raw',
+			 	//'value'=>'$data->completed()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
+			 	'labelExpression'=>'$data->completed()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
+				'urlExpression'=>'array(\'course/assignments\', \'termCode\'=>$data->term_code, \'classNum\'=>$data->class_num)', 
 			 ),
 		),
 	)); 

@@ -35,7 +35,7 @@ class FileController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete', 'download', 'upload'),
+				'actions'=>array('admin','delete', 'download', 'upload', 'xUpload'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -268,7 +268,7 @@ class FileController extends Controller
 	 * Uploads files and Creates new models.
 	 * This version works with the yii xupload extension widget
 	 */
-	public function actionXUpload()
+	public function actionXUpload($assignment_id=null)
 	{
 	    //This is for IE which doens't handle 'Content-type: application/json' correctly
 	    header( 'Vary: Accept' );
@@ -292,11 +292,12 @@ class FileController extends Controller
 	        }
 	    }
 		else {
-	        $file = CUploadedFile::getInstanceByName('file' );
+	        $file = CUploadedFile::getInstanceByName('Assignment[file]' );
 	        //We check that the file was successfully uploaded
 	        if( $file !== null ) {
                 $fileTypeId = FileType::model()->findByAttributes(array('name'=>$file->getExtensionName()))->id;
-                $dirPath = Yii::app()->params['filePath'];
+                //$dirPath = Yii::app()->params['filePath'];
+                $dirPath = Yii::app()->params['fileRoot'] . "/uploads";
                 $publicPath = Yii::app()->params['publicFilePath'];
             	$filename = $file->getName(). ".".$file->getExtensionName( );
                 if (!file_exists( $dirPath )){
@@ -307,15 +308,15 @@ class FileController extends Controller
                     $file_add = new File();
                     $file_add->name = $file->getName(); 
                     $file_add->type_id = $fileTypeId; 
-                    if(isset($_POST['assignment_id'])) {
-                    	$file_add->parent_id = $_POST['assignment_id']; 
+                    if(isset($_REQUEST['assignment_id'])) {
+                    	$file_add->parent_id = $_REQUEST['assignment_id']; 
                     }
                     //$file_add->path = $model->path; 
                     $file_add->save(); // DONE
-                    if(isset($_POST['assignment_id'])) { // save to assignemnt to file relation table
+                    if(isset($_REQUEST['assignment_id'])) { // save to assignemnt to file relation table
                     	$assignmentFile = new AssignmentFile();
                     	$assignmentFile->file_id = $file_add->id;
-                    	$assignmentFile->assignment_id = $_POST['assignment_id'];
+                    	$assignmentFile->assignment_id = $_REQUEST['assignment_id'];
                     	$assignmentFile->save();
                     }
                     

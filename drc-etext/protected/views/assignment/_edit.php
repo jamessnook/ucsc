@@ -16,7 +16,7 @@
             	
 					<fieldset>
 			          <div class="control-group">
-			            <label class="control-label" for="input01">Title</label>
+						<?php echo $form->labelEx($model,'title'); ?>
 			            <div class="controls">
 			            
 							<?php echo $form->textField($model,'title',array('class'=>"input-xxlarge",'maxlength'=>127)); // also? id="input01", type="text" ?>
@@ -25,7 +25,6 @@
 			            </div>
 			          </div>
 			          <div class="control-group">
-			            <label class="control-label" for="textarea">Book</label>
 						<?php echo $form->labelEx($model,'book_id'); ?>
 			            <div class="controls">
 							
@@ -46,11 +45,9 @@
 			            </div>
 			          </div>
 					  <div class="control-group">
-			            <label class="control-label" for="input01">Due Date</label>
-						<?php echo $form->labelEx($model,'description'); ?>
+						<?php echo $form->labelEx($model,'due_date'); ?>
 			            <div class="controls">
 			            
-							<?php echo $form->labelEx($model,'due_date'); ?>
 							<?php 
 							$this->widget('zii.widgets.jui.CJuiDatePicker', array(
 								'model'=>$model,
@@ -68,8 +65,8 @@
 			          	if ($createNew){
 							echo $this->renderPartial('../assignment/_uploadAlert', array('model'=>$model)); 
 			          	} else {
-			          		echo $this->renderPartial('../assignment/_uploadFiles', array('model'=>$model)); 
 			          		echo $this->renderPartial('../assignment/_listFiles', array('model'=>$model)); 
+			          		echo $this->renderPartial('../assignment/_uploadFiles', array('model'=>$model)); 
 			          	}
 					  ?>
 					  <?php echo $form->hiddenField($model,'term_code'); ?>

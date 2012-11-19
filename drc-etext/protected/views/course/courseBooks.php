@@ -2,11 +2,11 @@
 
 	$layoutOptions = array(
 		'model' => $model,
-		'contentView' => '../book/_books',
+		'contentView' => '../book/_list',
 		'titleNavRight' => '<a href="' . $this->createUrl('assignment/create') . '"><i class="icon-plus"></i> Add Request</a>',
 	);	
 
-	echo $this->renderPartial('_courseFrame', $layoutOptions); 
+	echo $this->renderPartial('_frame', $layoutOptions); 
 	 
 ?>
 

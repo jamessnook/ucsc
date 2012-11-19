@@ -1,7 +1,7 @@
 <?php
 
 	$options = array(
-		'contentView' => '../book/_new',
+		'contentView' => '../book/_create',
 		'contentModel' => $contentModel,
 		'action'=>Yii::app()->createUrl("course/saveBook", array('termCode'=>$model->term_code, 'classNum'=>$model->class_num)),
 		//'titleNavRight' => '<a href="' . $this->createUrl('book/create') . '"><i class="icon-plus"></i> Add Book</a>',

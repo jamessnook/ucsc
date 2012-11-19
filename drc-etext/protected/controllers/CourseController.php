@@ -13,14 +13,12 @@ class CourseController extends Controller
 	 */
 	public function actionDescription($termCode=null, $classNum=null)
 	{
-		$model=new Course('search');
-		//$this->term = $model->find();
-		$model->unsetAttributes();  // clear any default values
-
-		if (!$termCode) $termCode = Term::currentTermCode();
-		if (!$classNum) {echo 'Error!'; return;}  //temp error code
-		$model->term_code = $termCode;
-		$model->class_num = $classNum;
+		if ($termCode && $classNum){
+			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
+		} else {
+			$model=new Course('search');
+			$model->unsetAttributes();  // clear any default values
+		}
 		
 		$this->render('description',array(
 			'model'=>$model,
@@ -126,6 +124,7 @@ class CourseController extends Controller
 		} else {
 			$model=new Course('search');
 			$model->unsetAttributes();  // clear any default values
+			$model->class_num = $classNum;
 		}
 		$model->username = $username;
 		$model->emplid = $emplid;
@@ -193,6 +192,40 @@ class CourseController extends Controller
 		$this->redirect(array('newBook','termCode'=>$termCode,'classNum'=>$classNum));
 	}
 
+	/**
+	 * .
+	 */
+	public function actionStudents($termCode=null, $classNum=null)
+	{
+		if ($termCode && $classNum){
+			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
+		} else {
+			$model=new Course('search');
+			$model->unsetAttributes();  // clear any default values
+			//$model->term_code = $termCode;
+			//if (!$termCode) $model->term_code = Term::currentTermCode();
+		}
+		
+		$this->render('students',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
+	 * .
+	 */
+	public function actionCourses($termCode=null)
+	{
+		$model=new Course('search');
+		$model->unsetAttributes();  // clear any default values
+		$model->term_code = $termCode;
+		
+		$this->render('courses',array(
+			'model'=>$model,
+		));
+	}
+
+	
 	
 	
 	

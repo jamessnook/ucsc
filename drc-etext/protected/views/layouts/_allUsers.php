@@ -10,11 +10,11 @@
 					'encodeLabel'=>false,
 					'items'=>array(
 						array('label'=>'<i class="icon-dashboard"></i> Dashboard', 'url'=>array('/site/about'), 'visible'=>false),
-						array('label'=>'Courses', 'url'=>array('/course/view')),
-						array('label'=>'Assignments', 'url'=>array('/assignment/view'), 'visible'=>Yii::app()->user->checkAccess('admin')),
-						array('label'=>'<i class="icon-wrench"></i> Reports', 'url'=>array('/course/view'), 'itemOptions'=>array('class'=>'pull-right'), 'visible'=>Yii::app()->user->checkAccess('admin')),
-						array('label'=>'<i class="icon-group"></i> Roles', 'url'=>array('/user/view'), 'itemOptions'=>array('class'=>'pull-right'), 'visible'=>Yii::app()->user->checkAccess('admin')),
-						array('label'=>'<i class="icon-user"></i> Users', 'url'=>array('/user/view'), 'itemOptions'=>array('class'=>'pull-right'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+						array('label'=>'Courses', 'url'=>array('/course/courses')),
+						array('label'=>'Assignments', 'url'=>array('/assignment/manage'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+						array('label'=>'<i class="icon-wrench"></i> Reports', 'url'=>array('/course/courses'), 'itemOptions'=>array('class'=>'pull-right'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+						array('label'=>'<i class="icon-group"></i> Roles', 'url'=>array('/user/students'), 'itemOptions'=>array('class'=>'pull-right'), 'visible'=>Yii::app()->user->checkAccess('admin')),
+						array('label'=>'<i class="icon-user"></i> Users', 'url'=>array('/user/students'), 'itemOptions'=>array('class'=>'pull-right'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 					), 
 				));
 			  ?>

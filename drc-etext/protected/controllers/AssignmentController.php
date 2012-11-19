@@ -6,7 +6,7 @@ class AssignmentController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column1';
+	public $layout='//layouts/noLayout';
 
 	/**
 	 * @return array action filters
@@ -35,8 +35,8 @@ class AssignmentController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'actions'=>array('admin','delete', 'manage'),
+				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -136,14 +136,14 @@ class AssignmentController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionManage()
 	{
 		$model=new Assignment('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Assignment']))
 			$model->attributes=$_GET['Assignment'];
 
-		$this->render('admin',array(
+		$this->render('manage',array(
 			'model'=>$model,
 		));
 	}

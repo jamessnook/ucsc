@@ -54,7 +54,7 @@ class User extends UCSCModel
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username', 'required'),
+			//array('username', 'required'),
 			array('username, emplid, first_name, middle_name, last_name, modified_by', 'length', 'max'=>64),
 			array('email, password, salt', 'length', 'max'=>128),
 			array('phone', 'length', 'max'=>32),
@@ -151,7 +151,24 @@ class User extends UCSCModel
 
 
 	/**
-	 * Retrieves a list of assignments for this course based on the current search/filter conditions.
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function students()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->with = array( 'drcRequests', 'drcRequests.course');
+		$criteria->compare('drcRequests.term_code',$this->term_code);
+		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+
+	
+	/**
+	 * Retrieves a list of courses based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function courses()

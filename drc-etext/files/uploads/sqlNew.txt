@@ -1,0 +1,28 @@
+
+SELECT wordIndex FROM words
+ JOIN assignments ON (words.docId=assignments.docId AND assignments.id=12)
+ WHERE assignments.id=12 AND lemma LIKE 'crane';
+
+
+
+
+SELECT examAnswers.id FROM examLinkage JOIN examAnswers ON(examLinkage.childId = examAnswers.id)
+WHERE examLinkage.parentId = 3;
+
+
+SELECT words.word, wordIndex FROM words JOIN 
+ (SELECT  DISTINCT lemma, docId FROM words JOIN examWords USING (lemma) 
+ WHERE lemma IS NOT NULL AND type <3 AND examWords.id NOT IN 
+ (SELECT value from examResults JOIN events ON (examResults.eventId = events.id)
+ WHERE userId=79) AND examWords.id IN 
+ (SELECT wordId from wordAssignments where assignmentId=20)
+  AND docId=16 ) AS tmp USING (lemma, docId) order by words.word;
+
+SELECT count(*) FROM (SELECT DISTINCT lemma FROM words JOIN examWords USING (lemma) 
+ WHERE lemma IS NOT NULL AND type <3 AND examWords.id NOT IN 
+ (SELECT value from examResults JOIN events ON (examResults.eventId = events.id)
+ WHERE userId=79) AND examWords.id IN 
+ (SELECT wordId from wordAssignments where assignmentId=20)
+  AND docId=16) AS tmp;
+
+

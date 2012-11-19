@@ -71,13 +71,14 @@ Update user set phone = '555-123-4567';
 drop table if exists file_type;
 CREATE TABLE file_type (    -- AIS feed
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    type         VARCHAR(32) NOT NULL,    -- file extension, AIS accomodation Type
+    name         VARCHAR(32) NOT NULL,    -- file extension, AIS accomodation Type
     caption      VARCHAR(128)   -- optional for display 
 );
--- INSERT INTO file_type (name) VALUES ('docx');
--- INSERT INTO file_type (name) VALUES ('doc');
--- INSERT INTO file_type (name) VALUES ('pdf');
--- INSERT INTO file_type (name) VALUES ('txt');
+INSERT INTO file_type (name) VALUES ('docx');
+INSERT INTO file_type (name) VALUES ('doc');
+INSERT INTO file_type (name) VALUES ('pdf');
+INSERT INTO file_type (name) VALUES ('txt');
+INSERT INTO file_type (name) VALUES ('gif');
 
 
 drop table if exists drc_request;
@@ -118,7 +119,7 @@ CREATE TABLE course (  -- AIS feed
     title VARCHAR(128),                 -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.TITLE
     catalog_num VARCHAR(64),            -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CATALOG_NBR
     schedule VARCHAR(128),              -- AIS: ?
-    romm VARCHAR(128),                  -- AIS: ?
+    room VARCHAR(128),                  -- AIS: ?
     dates VARCHAR(128),                 -- AIS: ?
     created    DATETIME,                -- when imported or requested (local, not from AIS)
     modified    DATETIME,               -- when updated from AIS
@@ -126,6 +127,7 @@ CREATE TABLE course (  -- AIS feed
     foreign key (term_code) references term (term_code)
     foreign key (term_code, class_num) references course_instructor (term_code, class_num)
  );
+ALTER TABLE course ADD COLUMN room VARCHAR(128);
 
 drop table if exists course_instructor;
 CREATE TABLE course_instructor (         -- AIS feed, one to many association possible

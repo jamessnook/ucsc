@@ -35,7 +35,7 @@ class UserController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','create','update', 'drcStudents', 'courses'),
+				'actions'=>array('admin','delete','create','update', 'students', 'drcStudents', 'courses', 'save'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -56,10 +56,66 @@ class UserController extends Controller
 	}
 
 	/**
+	 * Creates a new User model.
+	 */
+	public function actionCreate()
+	{
+        $model = new User;
+        $this->render('create',array(
+                'model'=>$model,
+        ));
+	}
+
+	/**
+	 * Updates a particular Book model.
+	 * @param integer $bookId the ID of the model to be updated
+	 */
+	public function actionUpdate($username)
+	{
+	    $model = $this->loadModel($username);
+
+		$this->render('update',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionSave($username=null)
+	{
+		$model=new User;
+		if ($username) $model = $this->loadModel($username);
+		//if (!$model) $model=new User;
+		
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+	        if( $model->save()!==false )
+	        {
+	            // remove existing roles for user
+	            // assumes we allow only one role per user
+		        $userRoles = Yii::app()->authManager->getRoles($model->username);
+		        foreach ($userRoles as $name => $authItem){
+		        	Yii::app()->authManager->revoke($name, $model->username);
+		        }
+	            // Assign the role to the user 
+                Yii::app()->authManager->assign($_POST['roleName'], $model->username);
+                $this->redirect(array('students','username'=>$model->username));
+	        }
+		}
+		$this->redirect(array('create'));
+	}
+
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+	public function actionCreateOld()
 	{
 	        $model = new User;
 	        if( isset($_POST['User'])===true )
@@ -82,7 +138,7 @@ class UserController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdateOld($id)
 	{
 	        $model = $this->loadModel($id);
 	        if( isset($_POST['User'])===true )
@@ -169,6 +225,23 @@ class UserController extends Controller
 	}
 
 	/**
+	 * Display data for a drc student.
+	 */
+	public function actionStudents($termCode=null)
+	{
+		$model=new User('search');
+		//$this->term = $model->find();
+		$model->unsetAttributes();  // clear any default values
+
+		if (!$termCode) $termCode = Term::currentTermCode();
+		$model->term_code = $termCode;
+
+		$this->render('students',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
 	 * Display courses for a drc student.
 	 */
 	public function actionCourses($termCode=null, $username=null, $emplid=null)
@@ -192,15 +265,32 @@ class UserController extends Controller
 	}
 
 	/**
+	 * Display data about a student.
+	 */
+	public function actionProfile($username=null)
+	{
+		if ($termCode && $classNum){
+			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
+		} else {
+			$model=new Course('search');
+			$model->unsetAttributes();  // clear any default values
+		}
+		
+		$this->render('description',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded
 	 */
-	public function loadModel($id)
+	public function loadModel($username)
 	{
-		$model=User::model()->findByPk($id);
+		$model=User::model()->findByPk($username);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+			throw new CHttpException(404,'The requested user does not exist.');
 		return $model;
 	}
 

@@ -1,15 +1,15 @@
 <?php
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	'Create',
-);
 
-$this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
-);
+	$options = array(
+		'contentView' => '_create',
+		//'contentModel' => $contentModel,
+		'action'=>Yii::app()->createUrl("user/save"),
+		'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+		'menuView' => '../layouts/_userMenu',
+	);	
+
+	echo $this->renderPartial('_frame', array('options'=>$options, 'model' => $model,)); 
+	 
 ?>
 
-<h1>Create User</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

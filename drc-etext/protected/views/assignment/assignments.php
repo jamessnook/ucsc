@@ -1,13 +1,12 @@
 <?php
 
-	$layoutOptions = array(
-		'model' => $model,
-		'contentView' => '../assignment/_list',
+	$options = array(
+		'contentView' => '../assignment/_adminList',
 		'titleNavRight' => '<a href="' . $this->createUrl('assignment/create') . '"><i class="icon-plus"></i> Add Request</a>',
 	);	
 
-	echo $this->renderPartial('_courseFrame', $layoutOptions); 
-	 
+	echo $this->renderPartial('_frame', array('options'=>$options, 'model' => $model,)); 
+		 
 ?>
 
 
