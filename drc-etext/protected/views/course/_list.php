@@ -11,6 +11,7 @@
 		//'hideHeader'=>true,
 		'summaryText'=>'',
 		'enablePagination'=>false,
+		'showTableOnEmpty'=>false,
 		'itemsCssClass'=>"table table-striped table-bordered data-table", 
 		'loadingCssClass'=>'',
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 

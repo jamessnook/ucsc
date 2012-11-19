@@ -15,7 +15,11 @@
 		
 	foreach($terms AS $term){
 		$params['termCode'] = $term->term_code;
-		$menuItems[] = array('label'=>$term->description,'url'=> $this->createUrl(Yii::app()->request->getPathInfo(), $params));
+		$menuItems[] = array(
+			'label'=>$term->description,
+			'url'=> $this->createUrl(Yii::app()->request->getPathInfo(), $params), 
+			'active'=> $model->term_code == $term->term_code,
+		);
 	}
 
 

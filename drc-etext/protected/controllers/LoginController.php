@@ -33,7 +33,7 @@ class LoginController extends Controller
 		if ($identity->authenticate()){
 			Yii::app()->user->login($identity);
 			//$this->redirect(Yii::app()->homeUrl);
-			$this->redirect($this->createUrl('drcRequest/studentCourses'));
+			$this->redirect($this->createUrl('user/students'));
 		} else {
 			$this->render('loginFail');
 		}
@@ -60,7 +60,7 @@ class LoginController extends Controller
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
 				//$this->redirect(Yii::app()->user->returnUrl);
-				$this->redirect($this->createUrl('drcRequest/studentCourses'));
+				$this->redirect($this->createUrl('user/students'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

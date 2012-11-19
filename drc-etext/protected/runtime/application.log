@@ -9883,3 +9883,59 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php?r=course/view
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=drcRequest/studentCourses&termCode=2122
 ---
+2012/11/19 18:56:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('studentAssignme...')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/stud...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=assignment/studentAssignments&term_code=2122&class_num=61543&username=
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=drcRequest/studentCourses&termCode=2122
+---
+2012/11/19 18:57:15 [error] [exception.CException] exception 'CException' with message 'AssignmentController cannot find the requested view "_courseFrame".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\assignment\courseAssignments.php(9): CController->renderPartial('_courseFrame', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('courseAssignmen...', Array, true)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\AssignmentController.php(167): CController->render('courseAssignmen...', Array)
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\AssignmentController.php(177): AssignmentController->actionCourseAssignments(NULL, NULL, 'jsnook')
+#7 [internal function]: AssignmentController->actionStudentAssignments(NULL, NULL, '')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AssignmentController), Array)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AssignmentController), Object(ReflectionMethod), Array)
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('studentAssignme...')
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/stud...')
+#20 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=assignment/studentAssignments&term_code=2122&class_num=61543&username=
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=drcRequest/studentCourses&termCode=2122
+---
+2012/11/19 18:58:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('view')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('view')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/view')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/view
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=drcRequest/studentCourses&termCode=2122
+---

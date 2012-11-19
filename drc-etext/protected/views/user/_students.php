@@ -19,6 +19,8 @@
 		//'filter'=>$model,
 		//'hideHeader'=>true,
 		'summaryText'=>'',
+		//'emptyText'=>'Sorry, no data',
+		'showTableOnEmpty'=>false,
 		'enablePagination'=>false,
 		'itemsCssClass'=>"table table-striped table-bordered data-table", 
 		'loadingCssClass'=>'',
