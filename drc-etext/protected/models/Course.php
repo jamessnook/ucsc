@@ -165,12 +165,10 @@ class Course extends CActiveRecord
 	public function assignments()
 	{
 		$criteria=new CDbCriteria;
-		if ($this->username) {
+		if ($this->username) {  // comment out untill we have type data
 			$criteria->with = array( 'drcRequests', 'assignmentTypes' );
-			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
 			$criteria->compare('drcRequests.emplid',$this->emplid);
-			//$criteria->addCondition("drcRequests.username = $username");         
-			$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
+			$criteria->addCondition("assignmentTypes.type = drcRequests.type OR drcRequests.type is null");          
 		}
 		$criteria->compare('t.term_code',$this->term_code);
 		$criteria->compare('t.class_num',$this->class_num);

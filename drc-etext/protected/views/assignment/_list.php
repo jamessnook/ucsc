@@ -25,7 +25,7 @@
 				//'name'=>'title', 
 				//'value'=>'$data->title', 
 				'labelExpression'=>'$data->title', 
-				'urlExpression'=>'array(\'course/updateAssignment\', \'id\'=>$data->id)', 
+				'urlExpression'=>'array(\'course/updateAssignment\', \'id\'=>$data->id, \'username\'=>\''. $model->username . '\')',  
 			),
 			array( 
 				'header'=>'Book Title', 
@@ -41,7 +41,7 @@
 				//'type'=>'raw',
 				//'value'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
 				'labelExpression'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
-				'urlExpression'=>'array(\'course/assignmentFiles\', \'id\'=>$data->id)', 
+				'urlExpression'=>'array(\'course/assignmentFiles\', \'id\'=>$data->id, \'username\'=>\''. $model->username . '\')', 
 			),
 			 array( 
 				'header'=>'Status', 

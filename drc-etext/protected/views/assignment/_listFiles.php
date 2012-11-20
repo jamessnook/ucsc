@@ -1,5 +1,5 @@
 							
-<h3>Curent Files for this Assignment</h3>
+<h3>Curent Files for <?php echo $model->title ?></h3>
 
 <?php 
 

@@ -43,7 +43,7 @@
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->last_name . \', \' . $data->first_name', 
 				//'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username,' . $paramStr  .')', 
-				'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username)', 
+				'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'termCode\'=>\''. $model->term_code . '\')',  
 			 ),
 			 array( 
 				'header'=>'Courses', 

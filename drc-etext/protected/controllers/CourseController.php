@@ -11,7 +11,7 @@ class CourseController extends Controller
 	/**
 	 * Display data about a course.
 	 */
-	public function actionDescription($termCode=null, $classNum=null)
+	public function actionDescription($termCode=null, $classNum=null, $username=null, $emplid=null)
 	{
 		if ($termCode && $classNum){
 			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
@@ -19,6 +19,9 @@ class CourseController extends Controller
 			$model=new Course('search');
 			$model->unsetAttributes();  // clear any default values
 		}
+		$model->term_code = $termCode;
+		$model->username = $username;
+		$model->emplid = $emplid;
 		
 		$this->render('description',array(
 			'model'=>$model,
@@ -36,6 +39,7 @@ class CourseController extends Controller
 			$model=new Course('search');
 			$model->unsetAttributes();  // clear any default values
 		}
+		$model->term_code = $termCode;
 		$model->username = $username;
 		$model->emplid = $emplid;
 		
@@ -79,16 +83,24 @@ class CourseController extends Controller
 	 * Updates a particular Assignment model.
 	 * @param integer $assignmentId the ID of the model to be updated
 	 */
-	public function actionUpdateAssignment($id)
+	public function actionUpdateAssignment($id, $username=null)
 	{
 		$contentModel= Assignment::model()->findByPk($id);
 		$model=Course::model()->findByPk(array('term_code'=>$contentModel->term_code, 'class_num'=>$contentModel->class_num));
 		if($contentModel===null || $model===null)
 			throw new CHttpException(404,'The requested course and assignment do not exist.');
 
+		$model->username = $username;
+		$contentModel->username = $username;
+		
+		$contentView = '../assignment/_update';
+		if (!Yii::app()->user->checkAccess('admin'))
+			$contentView = '../assignment/_view';
+			
 		$this->render('updateAssignment',array(
 			'model'=>$model,
 			'contentModel' => $contentModel,
+			'contentView' => $contentView,
 		));
 	}
 
@@ -126,6 +138,7 @@ class CourseController extends Controller
 			$model->unsetAttributes();  // clear any default values
 			$model->class_num = $classNum;
 		}
+		$model->term_code = $termCode;
 		$model->username = $username;
 		$model->emplid = $emplid;
 		

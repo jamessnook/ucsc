@@ -136,13 +136,14 @@ class AssignmentController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionManage()
+	public function actionManage($termCode=null)
 	{
 		$model=new Assignment('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Assignment']))
-			$model->attributes=$_GET['Assignment'];
-
+		//if(isset($_GET['Assignment']))
+		//	$model->attributes=$_GET['Assignment'];
+		$model->term_code = $termCode;
+			
 		$this->render('manage',array(
 			'model'=>$model,
 		));

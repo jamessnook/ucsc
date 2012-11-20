@@ -21,7 +21,7 @@
 				'header'=>'Course Name', 
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->title', 
-				'urlExpression'=>'array(\'course/assignments\', \'termCode\'=>$data->term_code, \'classNum\'=>$data->class_num, \'username\'=>$data->username)', 
+				'urlExpression'=>'array(\'course/assignments\', \'termCode\'=>$data->term_code, \'classNum\'=>$data->class_num, \'username\'=>\''. $model->username . '\')', 
 			),
 			array( 
 				'header'=>'Class Id', 
@@ -30,16 +30,19 @@
 			 ),
 			array( 
 				'header'=>'Faculty', 
-				'class'=>'CLinksColumn',
+				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->facultyNames()', 
 				'urlExpression'=>'$data->facultyUrls()', 
 			),
 			array( 
 				'header'=>'Assignments', 
-				'name'=>'assignmentCount()', 
-				'type'=>'raw',
-				'value'=>'\'<span class="badge">\' . $data->assignmentCount() . \'</span>\'', 
-			 ),
+				'class'=>'LinksColumn',
+				//'name'=>'assignmentCount()', 
+				//'type'=>'raw',
+				//'value'=>'\'<span class="badge">\' . $data->assignmentCount() . \'</span>\'', 
+				'labelExpression'=>'\'<span class="badge">\' . $data->assignmentCount() . \'</span>\'', 
+				'urlExpression'=>'array(\'course/assignments\', \'termCode\'=>$data->term_code, \'classNum\'=>$data->class_num, \'username\'=>\''. $model->username . '\')', 
+						 ),
 			 array( 
 				'header'=>'Status', 
 				'class'=>'LinksColumn',
