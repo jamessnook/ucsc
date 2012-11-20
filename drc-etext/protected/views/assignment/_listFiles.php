@@ -28,7 +28,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'header'=>'File', 
 			'class'=>'CLinksColumn',
 			'labelExpression'=>'$data->file->name', 
-			'urlExpression'=>'array(\'course/assignmentFiles\', \'id\'=>$data->assignment_id, )', 
+			'urlExpression'=>'array(\'file/download\', \'id\'=>$data->file_id, )', 
 		),
 		array( 
 			'header'=>'Description', 

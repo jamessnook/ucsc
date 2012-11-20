@@ -98,7 +98,7 @@ class CourseController extends Controller
 	 */
 	public function actionSaveAssignment($termCode=null, $classNum=null, $id=null)
 	{
-		//$model=new Assignment;
+		$model=new Assignment;
 		if ($id) $model=Assignment::model()->findByPk($id);
 		if (!$model) $model=new Assignment;
 
@@ -225,7 +225,24 @@ class CourseController extends Controller
 		));
 	}
 
-	
+	/**
+	 * Display List of Files for an assignment and user.
+	 */
+	public function actionAssignmentFiles($id, $username=null)
+	{
+		$contentModel= Assignment::model()->findByPk($id);
+		$model=Course::model()->findByPk(array('term_code'=>$contentModel->term_code, 'class_num'=>$contentModel->class_num));
+		if($contentModel===null || $model===null)
+			throw new CHttpException(404,'The requested course and assignment do not exist.');
+
+		$model->username = $username;
+		$contentModel->username = $username;
+		$this->render('assignmentFiles',array(
+			'model'=>$model,
+			'contentModel' => $contentModel,
+		));
+	}
+
 	
 	
 	

@@ -8,7 +8,7 @@
 	//$model->username = Yii::app()->user->name;  // set up for current user
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'assignmentGrid',
-		'dataProvider'=>$model->assignments(),
+		'dataProvider'=>$model->assignmentFiles(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,
 		'summaryText'=>'',
@@ -19,6 +19,23 @@
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
 		'pagerCssClass'=>"pagination", 
 		'columns'=>array(
+			array( 
+				'header'=>'File', 
+				'class'=>'CLinksColumn',
+				'labelExpression'=>'$data->file->name', 
+				'urlExpression'=>'array(\'file/download\', \'id\'=>$data->file->id)', 
+			),
+			array( 
+				'header'=>'Type', 
+				'name'=>'file.type.name', 
+				'type'=>'raw',
+				'value'=>'\'<span class="label">\' . $data->file->type->name . \'</span>\'', 
+			 ),
+			array( 
+				'header'=>'Description', 
+				'name'=>'file.description', 
+				'value'=>'$data->file->description', 
+			 ),
 			array( 
 				'header'=>'Assignment Title', 
 				'class'=>'CLinksColumn',

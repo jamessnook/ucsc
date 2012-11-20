@@ -10,7 +10,7 @@
 					'encodeLabel'=>false,
 					'items'=>array(
 						array('label'=>'<i class="icon-dashboard"></i> Dashboard', 'url'=>array('/site/about'), 'visible'=>false),
-						array('label'=>'Courses', 'url'=>array('/course/courses')),
+						array('label'=>'Courses', 'url'=>array('/user/courses', 'username'=>$model->username, )),
 						array('label'=>'Assignments', 'url'=>array('/assignment/manage'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 						array('label'=>'<i class="icon-wrench"></i> Reports', 'url'=>array('/course/courses'), 'itemOptions'=>array('class'=>'pull-right'), 'visible'=>Yii::app()->user->checkAccess('admin')),
 						array('label'=>'<i class="icon-group"></i> Roles', 'url'=>array('/user/students'), 'itemOptions'=>array('class'=>'pull-right'), 'visible'=>Yii::app()->user->checkAccess('admin')),

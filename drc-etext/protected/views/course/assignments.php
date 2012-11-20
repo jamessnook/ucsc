@@ -2,7 +2,7 @@
 
 	$options = array(
 		'contentView' => '../assignment/_list',
-		'titleNavRight' => '<a href="' . $this->createUrl('assignment/create') . '"><i class="icon-plus"></i> Add Request</a>',
+		'titleNavRight' => '<a href="' . $this->createUrl('course/newAssignment', array('termCode'=> $model->term_code, 'classNum'=>$model->class_num)) . '"><i class="icon-plus"></i> Add Request</a>',
 	);	
 
 	echo $this->renderPartial('_frame', array('options'=>$options, 'model' => $model,)); 

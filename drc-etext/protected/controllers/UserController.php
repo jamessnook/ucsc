@@ -38,6 +38,10 @@ class UserController extends Controller
 				'actions'=>array('admin','delete','create','update', 'students', 'drcStudents', 'courses', 'save'),
 				'roles'=>array('admin'),
 			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('courses'),
+				'roles'=>array('student'),
+			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),

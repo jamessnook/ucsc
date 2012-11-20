@@ -166,7 +166,7 @@ class FileController extends Controller
 	/**
 	 * 
 	 */
-	public function actionDownload()
+	public function actionDownloadMultiple()
 	{
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -207,6 +207,16 @@ class FileController extends Controller
 			$path = (strlen($path)>0 ? $path . '/' : '');
 			$this->download($path . $name);
 		}
+	}
+
+	/**
+	 * 
+	 */
+	public function actionDownload($id)
+	{
+		$model=$this->loadModel($id);
+		$this->download("$model->path" . "/" . "$model->name");
+		
 	}
 
 	/**
@@ -270,7 +280,10 @@ class FileController extends Controller
 	 */
 	public function actionXUpload($assignment_id=null)
 	{
-	    //This is for IE which doens't handle 'Content-type: application/json' correctly
+		// in case of Post data
+		if (!$assignment_id) $assignment_id = $_REQUEST['assignment_id'];
+		$assignment = Assignment::model()->findByPk($assignment_id);
+		//This is for IE which doens't handle 'Content-type: application/json' correctly
 	    header( 'Vary: Accept' );
 	    if( isset( $_SERVER['HTTP_ACCEPT'] ) 
 	        && (strpos( $_SERVER['HTTP_ACCEPT'], 'application/json' ) !== false) ) {
@@ -297,7 +310,8 @@ class FileController extends Controller
 	        if( $file !== null ) {
                 $fileTypeId = FileType::model()->findByAttributes(array('name'=>$file->getExtensionName()))->id;
                 //$dirPath = Yii::app()->params['filePath'];
-                $dirPath = Yii::app()->params['fileRoot'] . "/uploads";
+                $path = "t$assignment->term_code/c$assignment->class_num/a$assignment_id";
+                $dirPath = Yii::app()->params['fileRoot'] . "/" . $path;
                 $publicPath = Yii::app()->params['publicFilePath'];
             	$filename = $file->getName(). ".".$file->getExtensionName( );
                 if (!file_exists( $dirPath )){
@@ -311,7 +325,7 @@ class FileController extends Controller
                     if(isset($_REQUEST['assignment_id'])) {
                     	$file_add->parent_id = $_REQUEST['assignment_id']; 
                     }
-                    //$file_add->path = $model->path; 
+                    $file_add->path = $path; 
                     $file_add->save(); // DONE
                     if(isset($_REQUEST['assignment_id'])) { // save to assignemnt to file relation table
                     	$assignmentFile = new AssignmentFile();

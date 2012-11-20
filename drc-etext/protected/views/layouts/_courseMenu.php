@@ -1,7 +1,7 @@
 <?php 
 
 	$menuItems=array(
-		array('label'=>'Assignments', 'url'=>array('course/assignments', 'termCode'=>$model->term_code, 'classNum'=>$model->class_num)),
+		array('label'=>'Assignments', 'url'=>array('course/assignments', 'termCode'=>$model->term_code, 'classNum'=>$model->class_num, 'username'=>$model->username, )),
 		array('label'=>'Description', 'url'=>array('course/description', 'termCode'=>$model->term_code, 'classNum'=>$model->class_num)),
 		array('label'=>'Books','url'=>array('course/books', 'termCode'=>$model->term_code, 'classNum'=>$model->class_num), 'visible'=>Yii::app()->user->checkAccess('admin')),
 		array('label'=>'Students', 'url'=>array('course/students', 'termCode'=>$model->term_code, 'classNum'=>$model->class_num), 'visible'=>Yii::app()->user->checkAccess('admin')),
