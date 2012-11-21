@@ -1,7 +1,7 @@
 <?php
 	// Course Frame
 
-	$options['menuView'] = '../layouts/_courseMenu';
+	$options['menuView'] = '../layouts/_termMenu';
 	$options['title'] = $model->title;
 	if (!$model->title || $model->title =='') {
 		$options['title'] = "Assignments";

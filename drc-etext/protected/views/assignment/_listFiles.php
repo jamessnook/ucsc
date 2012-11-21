@@ -13,6 +13,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'summaryText'=>'',
 	'enablePagination'=>false,
 	'loadingCssClass'=>'',
+	'showTableOnEmpty'=>false,
 	//'itemsCssClass'=>"table table-striped table-bordered data-table", 
 	'itemsCssClass'=>"table table-striped table-bordered", 
 	'pager'=>array('class'=>'CLinkPager', 'header'=>''), 

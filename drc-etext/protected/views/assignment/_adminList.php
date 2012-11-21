@@ -14,6 +14,7 @@
 		'summaryText'=>'',
 		'enablePagination'=>false,
 		'loadingCssClass'=>'',
+		'showTableOnEmpty'=>false,
 		'itemsCssClass'=>"table table-striped table-bordered data-table", 
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
 		'pagerCssClass'=>"pagination", 
