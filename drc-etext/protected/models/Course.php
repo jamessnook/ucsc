@@ -145,7 +145,7 @@ class Course extends CActiveRecord
 	 * Retrieves a list of courses based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function courses()
+	public function coursesOld()
 	{
 		$criteria=new CDbCriteria;
 
@@ -158,6 +158,32 @@ class Course extends CActiveRecord
 		));
 	}
 	
+	/**
+	 * Retrieves a list of courses based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function courses()
+	{
+		$criteria=new CDbCriteria; 
+		$criteria->compare('t.term_code',$this->term_code);
+		if ($this->username && strlen($this->username)>0) {
+		//if ($this->emplid && strlen($this->emplid)>0) {
+			$criteria->with = array( 'drcRequests' );
+			$criteria->together = true;
+			
+			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
+			$criteria->compare('drcRequests.user.uername',$this->username);
+			$criteria->compare('drcRequests.term_code',$this->term_code);
+			//$criteria->addCondition("drcRequests.username = $username");         
+			//$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
+		}
+		
+		return new CActiveDataProvider('Course', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+
 	/**
 	 * Retrieves a list of assignments for this course based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

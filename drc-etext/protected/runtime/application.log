@@ -284,3 +284,48 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php?r=user/courses&username=&termCode=2122
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=course/assignments&termCode=2122&classNum=60423&username=
 ---
+2012/11/21 08:40:01 [error] [php] Undefined variable: username (C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\UserController.php:256)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php?r=user/courses&termCode=2122
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (256)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/21 08:59:56 [error] [exception.CException] exception 'CException' with message 'Property "User.title" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('title')
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_frame.php(4): CActiveRecord->__get('title')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\courses.php(9): CController->renderPartial('_frame', Array)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('courses', Array, true)
+#10 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(258): CController->render('courses', Array)
+#11 [internal function]: CourseController->actionCourses('2122')
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(CourseController), Array)
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(CourseController), Object(ReflectionMethod), Array)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/courses')
+#19 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/courses&termCode=2122
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=user/courses&termCode=2122
+---

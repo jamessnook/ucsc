@@ -250,7 +250,10 @@ class UserController extends Controller
 	 */
 	public function actionCourses($termCode=null, $username=null, $emplid=null)
 	{
-		
+		if (!Yii::app()->user->checkAccess('admin')){
+			$username = Yii::app()->user->name;
+			$model=User::model()->findByPk($username);
+		}
 		if ($username){
 			$model=User::model()->findByPk($username);
 		} else if ($emplid) {

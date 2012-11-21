@@ -3,7 +3,7 @@
 	if (!isset($options['menuView'])) $options['menuView'] = '../layouts/_courseMenu';  // default
 	$options['title'] = $model->title .' (' .$model->idString().')';
 	if (!$model->title || $model->title ==''){
-		$options['title'] = "Courses";
+		$options['title'] = "All Courses";
 		//if ($model->term_code){
 			//$term=Term::model()->findByPk($model->term_code);
 		//	$options['title'] = $model->term->description;

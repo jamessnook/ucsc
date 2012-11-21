@@ -225,12 +225,34 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * .
+	 * Display courses for a term.
 	 */
 	public function actionCourses($termCode=null)
 	{
 		$model=new Course('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->term_code = $termCode;
+		if (!Yii::app()->user->checkAccess('admin')){
+			$model->username = Yii::app()->user->name;
+		}
+		$this->render('courses',array(
+			'model'=>$model,
+		));
+	}
+	/**
+	 * Display courses for a term.
+	 */
+	public function actionCoursesOld($termCode=null) // , $username=null, $emplid=null)
+	{
+		if (!Yii::app()->user->checkAccess('admin')){
+			$username = Yii::app()->user->name;
+			$model=User::model()->findByPk($username);
+		} else {
+			$model=new User('search');
+			$model->unsetAttributes();  // clear any default values
+		}
+
+		if (!$termCode) $termCode = Term::currentTermCode();
 		$model->term_code = $termCode;
 		
 		$this->render('courses',array(
@@ -238,6 +260,7 @@ class CourseController extends Controller
 		));
 	}
 
+	
 	/**
 	 * Display List of Files for an assignment and user.
 	 */
