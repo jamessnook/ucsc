@@ -168,11 +168,11 @@ class Course extends CActiveRecord
 		$criteria->compare('t.term_code',$this->term_code);
 		if ($this->username && strlen($this->username)>0) {
 		//if ($this->emplid && strlen($this->emplid)>0) {
-			$criteria->with = array( 'drcRequests' );
+			$criteria->with = array( 'drcRequests', 'drcRequests.user' );
 			$criteria->together = true;
 			
 			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
-			$criteria->compare('drcRequests.user.uername',$this->username);
+			$criteria->compare('drcRequests.user.username',$this->username);
 			$criteria->compare('drcRequests.term_code',$this->term_code);
 			//$criteria->addCondition("drcRequests.username = $username");         
 			//$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
