@@ -48,9 +48,13 @@
 			 ),
 			 array( 
 				'header'=>'', 
-				'name'=>'edit', 
-				'type'=>'raw',
-				'value'=>'\'<a href="#" class="btn">Edit</a>\'', 
+				//'name'=>'edit', 
+				//'type'=>'raw',
+				//'value'=>'\'<a href="#" class="btn">Edit</a>\'', 
+				'class'=>'CLinksColumn',
+			 	'linkHtmlOptions'=>array('class'=>"btn"),
+				'labelExpression'=>'\'Edit\'', 
+				'urlExpression'=>'array(\'course/updateBook\', \'id\'=>$data->id, \'termCode\'=>\'' . $model->term_code . '\', \'classNum\'=>\'' . $model->class_num . '\')', 
 			 ),
 			 array( 
 				'header'=>'', 

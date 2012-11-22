@@ -62,9 +62,10 @@ class UserController extends Controller
 	/**
 	 * Creates a new User model.
 	 */
-	public function actionCreate()
+	public function actionCreate($termCode=null)
 	{
         $model = new User;
+		$model->term_code = $termCode;
         $this->render('create',array(
                 'model'=>$model,
         ));
@@ -74,10 +75,14 @@ class UserController extends Controller
 	 * Updates a particular Book model.
 	 * @param integer $bookId the ID of the model to be updated
 	 */
-	public function actionUpdate($username)
+	public function actionUpdate($username, $termCode=null)
 	{
 	    $model = $this->loadModel($username);
-
+		$model->term_code = $termCode;
+	    $view = 'update';
+	    if (!Yii::app()->user->checkAccess('admin'))
+			$view = 'view';
+	    
 		$this->render('update',array(
 			'model'=>$model,
 		));

@@ -24,19 +24,22 @@
 							'label'=>'Assignments', 
 							'url'=>array('/assignment/manage', 
 							'termCode'=>$model->term_code,), 
-							'visible'=>Yii::app()->user->checkAccess('admin')
+							'visible'=>Yii::app()->user->checkAccess('admin'),
+							'active'=> get_class($model) == 'Assignment',
 						),
 						array(
 							'label'=>'<i class="icon-wrench"></i> Reports', 
 							'url'=>array('/course/courses'), 
 							'itemOptions'=>array('class'=>'pull-right'), 
-							'visible'=>Yii::app()->user->checkAccess('admin')
+							'visible'=>Yii::app()->user->checkAccess('admin'),
+							'active'=> false,  // disable for now
 						),
 						array(
 							'label'=>'<i class="icon-group"></i> Roles', 
 							'url'=>array('/user/students', 'termCode'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
-							'visible'=>Yii::app()->user->checkAccess('admin')
+							'visible'=>Yii::app()->user->checkAccess('admin'),
+							'active'=> false,  // disable for now
 						),
 						array(
 							'label'=>'<i class="icon-user"></i> Users', 

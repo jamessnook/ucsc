@@ -1,7 +1,7 @@
 
 <div class="row-fluid">
     <div class="span12">
-		<h3>Assignments</h3>
+		<h3>Assignments: <?php if (isset($model->username) && strlen($model->username) > 0) echo 'For ' . $model->username; ?></h3>
 
 	<?php 
 	
@@ -40,7 +40,9 @@
 				//'name'=>'fileCount()', 
 				//'type'=>'raw',
 				//'value'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
-				'labelExpression'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
+				//'labelExpression'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
+				'labelExpression'=>'$data->fileCount()', 
+				'linkHtmlOptions'=>array('class'=>"badge"),
 				'urlExpression'=>'array(\'course/assignmentFiles\', \'id\'=>$data->id, \'username\'=>\''. $model->username . '\')', 
 			),
 			 array( 

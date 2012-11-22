@@ -51,7 +51,7 @@
 				//'labelExpression'=>'\'test\'', 
 				//'urlExpression'=>'\'test\'', 
 			 	'labelExpression'=>'$data->drcRequestCourseNames()', 
-				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/description', 'params'=>array('termCode'=>'term_code', 'classNum'=>'class_num')), 
+				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/assignments', 'params'=>array('termCode'=>'term_code', 'classNum'=>'class_num')), 
 			),
 			//array( 
 			//	'header'=>'Type', 
@@ -63,7 +63,7 @@
 				'header'=>'Status', 
 				'class'=>'LinksColumn',
 			 	//'type'=>'raw',
-			 	'urlExpression'=>'array(\'drcRequest/studentCourses\', \'username\'=>$data->username)',
+			 	'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'termCode\'=>\''. $model->term_code . '\')',  
 			 	'labelExpression'=>'$data->drcRequestsCompleted()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 			),
 		),

@@ -3,6 +3,7 @@
 	$options = array(
 		'contentView' => '../course/_list',
 		'menuView' => '../layouts/_termMenu',
+		'titleNavRight' => '<a href="' . $this->createUrl('user/update', array('termCode'=> $model->term_code, 'username'=>$model->username)) . '"><i class="icon-plus"></i> User Profile</a>',
 	);	
 
 	echo $this->renderPartial('_frame', array('options'=>$options, 'model' => $model,)); 

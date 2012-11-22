@@ -113,17 +113,16 @@ class CourseController extends Controller
 		$model=new Assignment;
 		if ($id) $model=Assignment::model()->findByPk($id);
 		if (!$model) $model=new Assignment;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
+		if(isset($_POST['Completed'])) {
+			$model->is_complete=true; // because it is not a form field in the post data
+			$model->attributes=$_POST['Completed'];
+		}
 		if(isset($_POST['Assignment']))
 		{
 			$model->attributes=$_POST['Assignment'];
-			if($model->save())
-				$this->redirect(array('assignments','termCode'=>$model->term_code,'classNum'=>$model->class_num));
 		}
-		$this->redirect(array('newAssignment','termCode'=>$model->term_code,'classNum'=>$model->class_num));
+		if(!$model->save()) echo "ERROR could not save assignment."; // temporary error code
+		$this->redirect(array('assignments','termCode'=>$model->term_code,'classNum'=>$model->class_num));
 	}
 
 	/**

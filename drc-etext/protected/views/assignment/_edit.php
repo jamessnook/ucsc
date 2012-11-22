@@ -76,7 +76,10 @@
 			          
 						<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" )); ?>
 						<?php echo CHtml::button('Cancel', array( 'class'=>"btn", 'onclick'=> "history.back()" )); ?>
-						<button type="complete" class="btn btn-success pull-right disabled" disabled="disabled">Request Completed</button>
+						<?php 
+							if (!$createNew)
+								echo CHtml::submitButton('Request Completed', array( 'class'=>"btn btn-success pull-right", 'name' => 'Completed', )); 
+						?>
 			            
 			          </div>
 			        </fieldset>
