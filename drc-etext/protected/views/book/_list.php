@@ -24,7 +24,6 @@
 				'class'=>'CLinksColumn',
 				'labelExpression'=>'$data->title', 
 				'urlExpression'=>'array(\'course/updateBook\', \'id\'=>$data->id, \'termCode\'=>\'' . $model->term_code . '\', \'classNum\'=>\'' . $model->class_num . '\')', 
-				//'urlExpression'=>"array('course/updateBook', 'id'=>\$data->id, 'termCode'=>$model->term_code, 'classNum'=>$model->class_num)", 
 			),
 			array( 
 				'header'=>'Author', 

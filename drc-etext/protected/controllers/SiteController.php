@@ -85,7 +85,7 @@ class SiteController extends Controller
 	}
 
 	/**
-	 * Logs out the current user and redirect to homepage.
+	 * Requests data from web service feed and updates local database.
 	 */
 	public function actionUpdate($server='AIS', $service='classes')
 	{

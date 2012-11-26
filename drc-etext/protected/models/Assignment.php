@@ -184,5 +184,28 @@ class Assignment extends CActiveRecord
 		return $types;
 	}
 	
+
+	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer the ID of the model to be loaded
+	 */
+	public function loadModel($id=null, $termCode=null, $classNum=null, $username=null, $emplid=null)
+	{
+		if ($id){
+			$model=Assignment::model()->findByPk($id);
+		}
+		if(!$id || $model===null){
+			$model=new Assignment('search');
+			$model->unsetAttributes();  // clear any default values
+	
+			$model->term_code = $termCode;
+			$model->class_num = $classNum;
+		}
+		$model->username = $username;
+		$model->emplid = $emplid;
+		return $model;
+	}
+	
 	
 }

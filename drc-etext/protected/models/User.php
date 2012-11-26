@@ -137,23 +137,6 @@ class User extends UCSCModel
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function drcStudents()
-	{
-		$criteria=new CDbCriteria;
-		$criteria->with = array( 'drcRequests', 'drcRequests.course');
-		$criteria->compare('drcRequests.term_code',$this->term_code);
-		
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
-
-
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
 	public function students()
 	{
 		$criteria=new CDbCriteria;

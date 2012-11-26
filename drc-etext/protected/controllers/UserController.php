@@ -26,21 +26,13 @@ class UserController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' actions
-				'actions'=>array('index'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+			array('allow', // allow authenticated user to perform 'courses' and 'view' actions
+				'actions'=>array('view', 'courses'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','create','update', 'students', 'drcStudents', 'courses', 'save'),
+				'actions'=>array('delete','create','update', 'students', 'courses', 'save'),
 				'roles'=>array('admin'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('courses'),
-				'roles'=>array('student'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -121,56 +113,6 @@ class UserController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionCreateOld()
-	{
-	        $model = new User;
-	        if( isset($_POST['User'])===true )
-	        {
-	                $model->attributes = $_POST['User'];
-	                if( $model->save()!==false )
-	                {
-	                        // Assign the role to the user
-	                        Yii::app()->authManager->assign($_POST['roleName'], $model->username);
-	                        $this->redirect(array('view','id'=>$model->username));
-	                }
-	        }
-	        $this->render('create',array(
-	                'model'=>$model,
-	        ));
-	}
-	
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-	public function actionUpdateOld($id)
-	{
-	        $model = $this->loadModel($id);
-	        if( isset($_POST['User'])===true )
-	        {
-	                $model->attributes = $_POST['User'];
-	                if( $model->save()!==false )
-	                {
-	                	// remove existing roles for user
-	                	// assumes we allow only one role per user
-		        		$userRoles = Yii::app()->authManager->getRoles($model->username);
-		        		foreach ($userRoles as $name => $authItem){
-		        			Yii::app()->authManager->revoke($name, $model->username);
-		        		}
-	                	// Assign the role to the user 
-                        Yii::app()->authManager->assign($_POST['roleName'], $model->username);
-                        $this->redirect(array('view','id'=>$model->username));
-	                }
-	        }
-	        $this->render('update',array(
-	                'model'=>$model,
-	        ));
-	}
-	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
@@ -190,48 +132,6 @@ class UserController extends Controller
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
-	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('User');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
-
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
-		$model=new User('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['User']))
-			$model->attributes=$_GET['User'];
-
-		$this->render('admin',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Display data for a drc student.
-	 */
-	public function actionDrcStudents($termCode=null)
-	{
-		$model=new User('search');
-		//$this->term = $model->find();
-		$model->unsetAttributes();  // clear any default values
-
-		if (!$termCode) $termCode = Term::currentTermCode();
-		$model->term_code = $termCode;
-
-		$this->render('drcStudents',array(
-			'model'=>$model,
-		));
-	}
 
 	/**
 	 * Display data for a drc student.

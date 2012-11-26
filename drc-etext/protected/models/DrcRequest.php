@@ -114,19 +114,4 @@ class DrcRequest extends CActiveRecord
 		));
 	}
 	
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
-	public function getForUserAndTerm($username, $termCode)
-	{
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('term_code',$term_code);
-		$criteria->compare('user.username',$username);
-		
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
 }

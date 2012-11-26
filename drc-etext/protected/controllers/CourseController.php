@@ -9,19 +9,43 @@ class CourseController extends Controller
 	public $layout='//layouts/noLayout';
 
 	/**
+	 * @return array action filters
+	 */
+	public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+		);
+	}
+
+	/**
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
+	 */
+	public function accessRules()
+	{
+		return array(
+			array('allow', // allow authenticated user to perform view type actions
+				'actions'=>array('description','assignments','assignmentsForUser','books','courses','students','assignmentFiles'),
+				'users'=>array('@'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('createAssignment','updateAssignment', 'saveAssignment', 'createBook','updateBook', 'saveABook', 'studentAssignments'),
+				'roles'=>array('admin'),
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
+		);
+	}
+
+	/**
 	 * Display data about a course.
 	 */
 	public function actionDescription($termCode=null, $classNum=null, $username=null, $emplid=null)
 	{
-		if ($termCode && $classNum){
-			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
-		} else {
-			$model=new Course('search');
-			$model->unsetAttributes();  // clear any default values
-		}
-		$model->term_code = $termCode;
-		$model->username = $username;
-		$model->emplid = $emplid;
+		$model = $this->loadModel($termCode, $classNum, $username, $emplid);
 		
 		$this->render('description',array(
 			'model'=>$model,
@@ -33,16 +57,8 @@ class CourseController extends Controller
 	 */
 	public function actionAssignments($termCode=null, $classNum=null, $username=null, $emplid=null)
 	{
-		if ($termCode && $classNum){
-			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
-		} else {
-			$model=new Course('search');
-			$model->unsetAttributes();  // clear any default values
-		}
-		$model->term_code = $termCode;
-		$model->username = $username;
-		$model->emplid = $emplid;
-		
+		$model = $this->loadModel($termCode, $classNum, $username, $emplid);
+				
 		$this->render('assignments',array(
 			'model'=>$model,
 		));
@@ -60,47 +76,36 @@ class CourseController extends Controller
 	/**
 	 * Creates a new Assignment model.
 	 */
-	public function actionNewAssignment($termCode=null, $classNum=null)
+	public function actionCreateAssignment($termCode=null, $classNum=null)
 	{
 		$model=Course::model()->findByPk(array('term_code'=>$termCode, 'class_num'=>$classNum));
 		if($model===null)
 			throw new CHttpException(404,'The requested course does not exist.');
 				
-		$contentModel=new Assignment('search');
-		//$this->term = $model->find();
-		$contentModel->unsetAttributes();  // clear any default values
+		$contentModel=Assignment::model()->loadModel(null, $termCode, $classNum);
 
-		$contentModel->term_code = $termCode;
-		$contentModel->class_num = $classNum;
-
-		$this->render('newAssignment',array(
+		$this->render('createAssignment',array(
 			'model'=>$model,
 			'contentModel' => $contentModel,
 		));
 	}
-
+	
 	/**
 	 * Updates a particular Assignment model.
 	 * @param integer $assignmentId the ID of the model to be updated
 	 */
 	public function actionUpdateAssignment($id, $username=null)
 	{
-		$contentModel= Assignment::model()->findByPk($id);
-		$model=Course::model()->findByPk(array('term_code'=>$contentModel->term_code, 'class_num'=>$contentModel->class_num));
-		if($contentModel===null || $model===null)
-			throw new CHttpException(404,'The requested course and assignment do not exist.');
-
-		$model->username = $username;
-		$contentModel->username = $username;
+		$contentModel=Assignment::model()->loadModel($id, null, null, $username);
+		$model = $this->loadModel($contentModel->term_code, $contentModel->class_num, $username);
 		
-		$contentView = '../assignment/_update';
+		$view = 'updateAssignment';
 		if (!Yii::app()->user->checkAccess('admin'))
-			$contentView = '../assignment/_view';
+			$view = 'updateAssignment';
 			
-		$this->render('updateAssignment',array(
+		$this->render($view,array(
 			'model'=>$model,
 			'contentModel' => $contentModel,
-			'contentView' => $contentView,
 		));
 	}
 
@@ -108,20 +113,18 @@ class CourseController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionSaveAssignment($termCode=null, $classNum=null, $id=null)
+	public function actionSaveAssignment($id=null, $termCode=null, $classNum=null)
 	{
-		$model=new Assignment;
-		if ($id) $model=Assignment::model()->findByPk($id);
-		if (!$model) $model=new Assignment;
+		$contentModel=Assignment::model()->loadModel($id, $termCode, $classNum);
 		if(isset($_POST['Completed'])) {
-			$model->is_complete=true; // because it is not a form field in the post data
-			$model->attributes=$_POST['Completed'];
+			$contentModel->is_complete=true; // because it is not a form field in the post data
+			$contentModel->attributes=$_POST['Completed'];
 		}
 		if(isset($_POST['Assignment']))
 		{
-			$model->attributes=$_POST['Assignment'];
+			$contentModel->attributes=$_POST['Assignment'];
 		}
-		if(!$model->save()) echo "ERROR could not save assignment."; // temporary error code
+		if(!$contentModel->save()) echo "ERROR could not save assignment."; // temporary error code
 		$this->redirect(array('assignments','termCode'=>$model->term_code,'classNum'=>$model->class_num));
 	}
 
@@ -130,17 +133,8 @@ class CourseController extends Controller
 	 */
 	public function actionBooks($termCode=null, $classNum=null, $username=null, $emplid=null)
 	{
-		if ($termCode && $classNum){
-			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
-		} else {
-			$model=new Course('search');
-			$model->unsetAttributes();  // clear any default values
-			$model->class_num = $classNum;
-		}
-		$model->term_code = $termCode;
-		$model->username = $username;
-		$model->emplid = $emplid;
-		
+		$model = $this->loadModel($termCode, $classNum, $username, $emplid);
+				
 		$this->render('books',array(
 			'model'=>$model,
 		));
@@ -149,7 +143,7 @@ class CourseController extends Controller
 	/**
 	 * Creates a new Book model.
 	 */
-	public function actionNewBook($termCode=null, $classNum=null)
+	public function actionCreateBook($termCode=null, $classNum=null)
 	{
 		$model=Course::model()->findByPk(array('term_code'=>$termCode, 'class_num'=>$classNum));
 		if($model===null)
@@ -159,12 +153,21 @@ class CourseController extends Controller
 		//$this->term = $model->find();
 		$contentModel->unsetAttributes();  // clear any default values
 
-		$this->render('newBook',array(
+		$this->render('createBook',array(
 			'model'=>$model,
 			'contentModel' => $contentModel,
 		));
 	}
-
+	
+	/**
+	 * Creates a new Book model. Alternate name
+	 */
+	public function actionNewBook($termCode=null, $classNum=null)
+	{
+		$this->actionCreateBook($termCode=null, $classNum=null);
+	}
+		
+	
 	/**
 	 * Updates a particular Book model.
 	 * @param integer $bookId the ID of the model to be updated
@@ -175,7 +178,7 @@ class CourseController extends Controller
 		$model=Course::model()->findByPk(array('term_code'=>$termCode, 'class_num'=>$classNum));
 		if($contentModel===null || $model===null)
 			throw new CHttpException(404,'The requested course and book do not exist.');
-
+			
 		$this->render('updateBook',array(
 			'model'=>$model,
 			'contentModel' => $contentModel,
@@ -209,15 +212,8 @@ class CourseController extends Controller
 	 */
 	public function actionStudents($termCode=null, $classNum=null)
 	{
-		if ($termCode && $classNum){
-			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
-		} else {
-			$model=new Course('search');
-			$model->unsetAttributes();  // clear any default values
-			//$model->term_code = $termCode;
-			//if (!$termCode) $model->term_code = Term::currentTermCode();
-		}
-		
+		$model = $this->loadModel($termCode, $classNum);
+				
 		$this->render('students',array(
 			'model'=>$model,
 		));
@@ -238,26 +234,6 @@ class CourseController extends Controller
 			'model'=>$model,
 		));
 	}
-	/**
-	 * Display courses for a term.
-	 */
-	public function actionCoursesOld($termCode=null) // , $username=null, $emplid=null)
-	{
-		if (!Yii::app()->user->checkAccess('admin')){
-			$username = Yii::app()->user->name;
-			$model=User::model()->findByPk($username);
-		} else {
-			$model=new User('search');
-			$model->unsetAttributes();  // clear any default values
-		}
-
-		if (!$termCode) $termCode = Term::currentTermCode();
-		$model->term_code = $termCode;
-		
-		$this->render('courses',array(
-			'model'=>$model,
-		));
-	}
 
 	
 	/**
@@ -266,11 +242,9 @@ class CourseController extends Controller
 	public function actionAssignmentFiles($id, $username=null)
 	{
 		$contentModel= Assignment::model()->findByPk($id);
-		$model=Course::model()->findByPk(array('term_code'=>$contentModel->term_code, 'class_num'=>$contentModel->class_num));
-		if($contentModel===null || $model===null)
-			throw new CHttpException(404,'The requested course and assignment do not exist.');
-
-		$model->username = $username;
+		if($contentModel===null)
+			throw new CHttpException(404,'The requested assignment does not exist.');
+		$model = $this->loadModel($contentModel->term_code, $contentModel->class_num, $username);
 		$contentModel->username = $username;
 		$this->render('assignmentFiles',array(
 			'model'=>$model,
@@ -278,33 +252,23 @@ class CourseController extends Controller
 		));
 	}
 
-	
-	
-	
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
+	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer the ID of the model to be loaded
+	 */
+	public function loadModel($termCode=null, $classNum=null, $username=null, $emplid=null)
 	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
+		if ($termCode && $classNum){
+			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
+		} else {
+			$model=new Course('search');
+			$model->unsetAttributes();  // clear any default values
+		}
+		$model->term_code = $termCode;
+		$model->username = $username;
+		$model->emplid = $emplid;
+		return $model;
 	}
 
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-	*/
 }
