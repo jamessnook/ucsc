@@ -17,8 +17,8 @@
  *
  * The followings are the available model relations:
  * @property User $modifiedBy
- * @property Term $termCode
- * @property Course $classNum
+ * @property Term $term_code
+ * @property Course $class_num
  * @property DrcRequest[] $drcRequests
  */
 class Assignment extends CActiveRecord
@@ -190,7 +190,7 @@ class Assignment extends CActiveRecord
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded
 	 */
-	public function loadModel($id=null, $termCode=null, $classNum=null, $username=null, $emplid=null)
+	public function loadModel($id=null, $term_code=null, $class_num=null, $username=null, $emplid=null)
 	{
 		if ($id){
 			$model=Assignment::model()->findByPk($id);
@@ -199,8 +199,8 @@ class Assignment extends CActiveRecord
 			$model=new Assignment('search');
 			$model->unsetAttributes();  // clear any default values
 	
-			$model->term_code = $termCode;
-			$model->class_num = $classNum;
+			$model->term_code = $term_code;
+			$model->class_num = $class_num;
 		}
 		$model->username = $username;
 		$model->emplid = $emplid;

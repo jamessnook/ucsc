@@ -14,7 +14,7 @@
 		$params['emplid'] = $model->emplid;
 		
 	foreach($terms AS $term){
-		$params['termCode'] = $term->term_code;
+		$params['term_code'] = $term->term_code;
 		$menuItems[] = array(
 			'label'=>$term->description,
 			'url'=> $this->createUrl(Yii::app()->request->getPathInfo(), $params), 

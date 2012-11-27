@@ -9,8 +9,8 @@
  * @property string $emplid
  *
  * The followings are the available model relations:
- * @property Course $termCode
- * @property Course $classNum
+ * @property Course $term_code
+ * @property Course $class_num
  * @property User $empl
  */
 class CourseInstructor extends CActiveRecord
@@ -58,8 +58,8 @@ class CourseInstructor extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'termCode' => array(self::BELONGS_TO, 'Course', 'term_code'),
-			'classNum' => array(self::BELONGS_TO, 'Course', 'class_num'),
+			'term_code' => array(self::BELONGS_TO, 'Course', 'term_code'),
+			'class_num' => array(self::BELONGS_TO, 'Course', 'class_num'),
 			'user' => array(self::BELONGS_TO, 'User', 'emplid'),
 		);
 	}

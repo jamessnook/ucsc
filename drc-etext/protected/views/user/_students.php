@@ -9,10 +9,10 @@
 	//$params = array();
 	$paramStr = '';
 	if ($model->term_code) {
-		//$params['termCode'] = $model->term_code;
-		$paramStr .=  '\'termCode\' =>' . $model->term_code; 
+		//$params['term_code'] = $model->term_code;
+		$paramStr .=  '\'term_code\' =>' . $model->term_code; 
 	}
-	//if ($model->class_num) $params['classNum'] = $model->class_num;
+	//if ($model->class_num) $params['class_num'] = $model->class_num;
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'drc-request-grid',
 		'dataProvider'=>$model->students(),
@@ -43,7 +43,7 @@
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->last_name . \', \' . $data->first_name', 
 				//'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username,' . $paramStr  .')', 
-				'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'termCode\'=>\''. $model->term_code . '\')',  
+				'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')',  
 			 ),
 			 array( 
 				'header'=>'Courses', 
@@ -51,7 +51,7 @@
 				//'labelExpression'=>'\'test\'', 
 				//'urlExpression'=>'\'test\'', 
 			 	'labelExpression'=>'$data->drcRequestCourseNames()', 
-				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/assignments', 'params'=>array('termCode'=>'term_code', 'classNum'=>'class_num')), 
+				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/assignments', 'params'=>array('term_code'=>'term_code', 'class_num'=>'class_num')), 
 			),
 			//array( 
 			//	'header'=>'Type', 
@@ -63,7 +63,7 @@
 				'header'=>'Status', 
 				'class'=>'LinksColumn',
 			 	//'type'=>'raw',
-			 	'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'termCode\'=>\''. $model->term_code . '\')',  
+			 	'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')',  
 			 	'labelExpression'=>'$data->drcRequestsCompleted()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 			),
 		),

@@ -14,8 +14,8 @@
  *
  * The followings are the available model relations:
  * @property Assignment[] $assignments
- * @property Course $termCode
- * @property Course $classNum
+ * @property Course $term_code
+ * @property Course $class_num
  * @property User $empl
  * @property FileType $type0
  */

@@ -23,7 +23,7 @@
 				'header'=>'Book Title', 
 				'class'=>'CLinksColumn',
 				'labelExpression'=>'$data->title', 
-				'urlExpression'=>'array(\'course/updateBook\', \'id\'=>$data->id, \'termCode\'=>\'' . $model->term_code . '\', \'classNum\'=>\'' . $model->class_num . '\')', 
+				'urlExpression'=>'array(\'course/updateBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
 			),
 			array( 
 				'header'=>'Author', 
@@ -53,7 +53,7 @@
 				'class'=>'CLinksColumn',
 			 	'linkHtmlOptions'=>array('class'=>"btn"),
 				'labelExpression'=>'\'Edit\'', 
-				'urlExpression'=>'array(\'course/updateBook\', \'id\'=>$data->id, \'termCode\'=>\'' . $model->term_code . '\', \'classNum\'=>\'' . $model->class_num . '\')', 
+				'urlExpression'=>'array(\'course/updateBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
 			 ),
 			 array( 
 				'header'=>'', 

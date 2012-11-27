@@ -54,10 +54,10 @@ class UserController extends Controller
 	/**
 	 * Creates a new User model.
 	 */
-	public function actionCreate($termCode=null)
+	public function actionCreate($term_code=null)
 	{
         $model = new User;
-		$model->term_code = $termCode;
+		$model->term_code = $term_code;
         $this->render('create',array(
                 'model'=>$model,
         ));
@@ -67,10 +67,10 @@ class UserController extends Controller
 	 * Updates a particular Book model.
 	 * @param integer $bookId the ID of the model to be updated
 	 */
-	public function actionUpdate($username, $termCode=null)
+	public function actionUpdate($username, $term_code=null)
 	{
 	    $model = $this->loadModel($username);
-		$model->term_code = $termCode;
+		$model->term_code = $term_code;
 	    $view = 'update';
 	    if (!Yii::app()->user->checkAccess('admin'))
 			$view = 'view';
@@ -136,14 +136,14 @@ class UserController extends Controller
 	/**
 	 * Display data for a drc student.
 	 */
-	public function actionStudents($termCode=null)
+	public function actionStudents($term_code=null)
 	{
 		$model=new User('search');
 		//$this->term = $model->find();
 		$model->unsetAttributes();  // clear any default values
 
-		if (!$termCode) $termCode = Term::currentTermCode();
-		$model->term_code = $termCode;
+		if (!$term_code) $term_code = Term::currentterm_code();
+		$model->term_code = $term_code;
 
 		$this->render('students',array(
 			'model'=>$model,
@@ -153,7 +153,7 @@ class UserController extends Controller
 	/**
 	 * Display courses for a drc student.
 	 */
-	public function actionCourses($termCode=null, $username=null, $emplid=null)
+	public function actionCourses($term_code=null, $username=null, $emplid=null)
 	{
 		if (!Yii::app()->user->checkAccess('admin')){
 			$username = Yii::app()->user->name;
@@ -168,8 +168,8 @@ class UserController extends Controller
 			$model->unsetAttributes();  // clear any default values
 		}
 
-		if (!$termCode) $termCode = Term::currentTermCode();
-		$model->term_code = $termCode;
+		if (!$term_code) $term_code = Term::currentterm_code();
+		$model->term_code = $term_code;
 		
 		$this->render('courses',array(
 			'model'=>$model,
@@ -181,8 +181,8 @@ class UserController extends Controller
 	 */
 	public function actionProfile($username=null)
 	{
-		if ($termCode && $classNum){
-			$model=Course::model()->findByAttributes(array('term_code'=>$termCode, 'class_num'=>$classNum,));
+		if ($term_code && $class_num){
+			$model=Course::model()->findByAttributes(array('term_code'=>$term_code, 'class_num'=>$class_num,));
 		} else {
 			$model=new Course('search');
 			$model->unsetAttributes();  // clear any default values

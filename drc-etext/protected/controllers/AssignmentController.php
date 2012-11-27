@@ -75,13 +75,13 @@ class AssignmentController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionManage($termCode=null)
+	public function actionManage($term_code=null)
 	{
 		$model=new Assignment('search');
 		$model->unsetAttributes();  // clear any default values
 		//if(isset($_GET['Assignment']))
 		//	$model->attributes=$_GET['Assignment'];
-		$model->term_code = $termCode;
+		$model->term_code = $term_code;
 			
 		$this->render('manage',array(
 			'model'=>$model,
@@ -93,9 +93,9 @@ class AssignmentController extends Controller
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded
 	 */
-	public function loadModel($id=null, $termCode=null, $classNum=null, $username=null, $emplid=null)
+	public function loadModel($id=null, $term_code=null, $class_num=null, $username=null, $emplid=null)
 	{
-		return Assignment::model()->loadModel($id, $termCode, $classNum, $username, $emplid);
+		return Assignment::model()->loadModel($id, $term_code, $class_num, $username, $emplid);
 	}
 	
 }

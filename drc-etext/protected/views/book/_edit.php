@@ -86,8 +86,8 @@
 			            </div>
 			          </div>
 
-					  <?php //echo CHtml::hiddenField('termCode',$_REQUEST['termCode']); ?>
-					  <?php //echo CHtml::hiddenField('classNum',$_REQUEST['classNum']); ?>
+					  <?php //echo CHtml::hiddenField('term_code',$_REQUEST['term_code']); ?>
+					  <?php //echo CHtml::hiddenField('class_num',$_REQUEST['class_num']); ?>
 
 			          <div class="form-actions">
 			          

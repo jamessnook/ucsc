@@ -13,8 +13,8 @@
  *
  * The followings are the available model relations:
  * @property User $empl
- * @property Course $classNumber
- * @property Term $termCode
+ * @property Course $class_number
+ * @property Term $term_code
  * @property File $file
  */
 class InstructorFiles extends CActiveRecord
@@ -65,8 +65,8 @@ class InstructorFiles extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'empl' => array(self::BELONGS_TO, 'User', 'emplId'),
-			'classNumber' => array(self::BELONGS_TO, 'Course', 'class_number'),
-			'termCode' => array(self::BELONGS_TO, 'Term', 'term_code'),
+			'class_number' => array(self::BELONGS_TO, 'Course', 'class_number'),
+			'term_code' => array(self::BELONGS_TO, 'Term', 'term_code'),
 			'file' => array(self::BELONGS_TO, 'File', 'file_id'),
 		);
 	}
