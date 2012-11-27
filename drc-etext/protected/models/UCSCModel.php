@@ -46,5 +46,40 @@ class UCSCModel extends CActiveRecord
 		return array($route, $params);
 	}
 	
-	
+	/**
+	 * Returns the data model based on the passed attributes.
+	 * Persues various ways of creating the model
+	 * @param array of parameters
+	 */
+	public static function getModel($params=null)
+	{
+		if (!$params) $params = $_REQUEST;
+		$className=get_called_class();
+		$model=new $className(null);
+		if(isset($_POST[$className]))
+		{
+			$model->attributes=$_POST[$className];
+		}
+		else if ($params){
+			if(!is_array($params)){
+				$model()->findByPk($params);
+				if($model===null)
+					throw new CHttpException(404,'The requested model does not exist.');
+				return $model;
+			} else {
+				$model=Course::model()->findByAttributes($params);
+				if($model!==null)
+					return $model;
+			}
+			$model->unsetAttributes();  // clear any default values
+			if(isset($_POST[$className]))
+			{
+				$model->attributes=$_POST[$className];
+			} else{
+				$model->attributes=$params;
+			}
+		}
+		return $model;
+	}
+
 }

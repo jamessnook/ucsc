@@ -25,20 +25,18 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded
 	 */
-	public function loadModel($id)
+	public static function getModel($class='UCSCModel', $params=array())
 	{
-		$model=static::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
+		$model=new $class(null);
+		if (isset($params['id']))
+			return $model()->findByPk($params['id']);
+		else 
+			return $model->getModel($params);
 	}
-	
-	
 
 }
