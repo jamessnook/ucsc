@@ -25,18 +25,30 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer the ID of the model to be loaded
-	 */
-	public static function getModel($class='UCSCModel', $params=array())
-	{
-		$model=new $class(null);
-		if (isset($params['id']))
-			return $model()->findByPk($params['id']);
-		else 
-			return $model->getModel($params);
-	}
 
+	/**
+	 * A generic entry point for very similar actions.
+	 */
+	public function actionIndex()
+	{
+		$view = 'index';
+		$content = null;
+		if(isset($_GET['view']))
+			$view = $_GET['view'];
+		$className = ucfirst($this->id);
+		$model = $className::loadModel();
+		// get optional content model for internal part of view
+		if (isset($_GET['content'])){
+			$className = ucfirst($_GET['content']);
+			if (class_exists($className)){
+				$content = $className::loadModel();
+			}
+		}
+		// pass model data and render the view file
+		$this->render($view,array(
+			'model'=>$model,
+			'contentModel' => $content,
+		));
+	}
+	
 }

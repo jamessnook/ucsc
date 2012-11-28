@@ -573,3 +573,82 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php?r=assignment/create
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=course/updateAssignment&id=6&username=
 ---
+2012/11/28 02:33:54 [error] [php] Declaration of LoginController::actionIndex() should be compatible with that of Controller::actionIndex() (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\LoginController.php:4)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php?r=login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\LoginController.php (4)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 02:39:06 [error] [php] Declaration of LoginController::actionIndex() should be compatible with that of Controller::actionIndex() (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\LoginController.php:4)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php?r=login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\LoginController.php (4)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 02:41:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "assignments".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('assignments')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('assignments')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/assignme...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/assignments&term_code=2122&class_num=61623
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=user/courses&username=0ED62EE28C3F7BBB&term_code=2122
+---
+2012/11/28 02:46:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "course".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('course')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('course')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/course')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=user/course&view=assignments&term_code=2122&class_num=61623
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=user/courses&username=0ED62EE28C3F7BBB&term_code=2122
+---
+2012/11/28 02:50:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('index')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/index')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/index&view=assignments&term_code=2122&class_num=61623
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=user/courses&username=0ED62EE28C3F7BBB&term_code=2122
+---
+2012/11/28 02:53:57 [error] [exception.CDbException] exception 'CDbException' with message 'Table "course" does not have a column named "r".' in C:\Users\jsnook\phpFog\ucsc\framework\db\schema\CDbCommandBuilder.php:570
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1454): CDbCommandBuilder->createColumnCriteria(Object(CDbTableSchema), Array, '', Array, ''t'.')
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php(61): CActiveRecord->findByAttributes(Array)
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(49): UCSCModel::loadModel()
+#3 [internal function]: CourseController->actionIndex('assignments', NULL)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(CourseController), Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(CourseController), Object(ReflectionMethod), Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('index')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/index')
+#16 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/index&view=assignments&term_code=2122&class_num=61623
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=user/courses&username=0ED62EE28C3F7BBB&term_code=2122
+---

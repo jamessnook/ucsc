@@ -142,7 +142,7 @@ class UserController extends Controller
 		//$this->term = $model->find();
 		$model->unsetAttributes();  // clear any default values
 
-		if (!$term_code) $term_code = Term::currentterm_code();
+		if (!$term_code) $term_code = Term::currentTermCode();
 		$model->term_code = $term_code;
 
 		$this->render('students',array(

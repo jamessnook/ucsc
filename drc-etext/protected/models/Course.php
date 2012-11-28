@@ -26,7 +26,7 @@
  * @property DrcRequest[] $drcRequests1
  * @property InstructorFiles[] $instructorFiles
  */
-class Course extends CActiveRecord
+class Course extends UCSCModel
 {
 	public $username;
 	public $emplid;

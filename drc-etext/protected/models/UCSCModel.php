@@ -48,7 +48,7 @@ class UCSCModel extends CActiveRecord
 	
 	/**
 	 * Returns the data model based on the passed attributes.
-	 * Persues various ways of creating the model
+	 * Persues various ways of finding and creating the model
 	 * @param array of parameters
 	 */
 	public static function loadModel($params=null)
@@ -57,25 +57,14 @@ class UCSCModel extends CActiveRecord
 		$className=get_called_class();
 		$model=new $className(null);
 		$model->unsetAttributes();  // clear any default values .. is this needed?
-		if(isset($_POST[$className]))
-		{
-			$model->attributes=$_POST[$className];
+		if ($params){
+			$newModel=$model->findByAttributes($params);
+			if($newModel)
+				$model = $newModel;
+			$model->attributes=$params; // or use setAttributes()
 		}
-		else if ($params){
-			if(!is_array($params)){ // special case only a single value is a single primary key
-				$model()->findByPk($params);
-				if($model===null)
-					throw new CHttpException(404,'The requested model does not exist.');
-				$model->attributes=$_REQUEST; // or use setAttributes()
-			} else {
-				$newModel=Course::model()->findByAttributes($params);
-				if($newModel)
-					$model = $newModel;
-				$model->attributes=$params; // or use setAttributes()
-			}
-			if(isset($_POST[$className])){
-				$model->attributes=$_POST[$className];
-			}
+		if(isset($_POST[$className])){
+			$model->attributes=$_POST[$className];
 		}
 		return $model;
 	}

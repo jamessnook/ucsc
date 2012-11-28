@@ -43,7 +43,7 @@
 				//'labelExpression'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 
 				'labelExpression'=>'$data->fileCount()', 
 				'linkHtmlOptions'=>array('class'=>"badge"),
-				'urlExpression'=>'array(\'course/assignmentFiles\', \'id\'=>$data->id, \'username\'=>\''. $model->username . '\')', 
+				'urlExpression'=>'array(\'course/assignemtnFiles\', \'id\'=>$data->id, \'username\'=>\''. $model->username . '\')', 
 			),
 			 array( 
 				'header'=>'Status', 

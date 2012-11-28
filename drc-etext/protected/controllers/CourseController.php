@@ -27,7 +27,7 @@ class CourseController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform view type actions
-				'actions'=>array('description','assignments','assignmentsForUser','books','courses','students','assignmentFiles'),
+				'actions'=>array('index','assignmentsForUser','books','courses','students','assignmentFiles'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -41,50 +41,27 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * Display data about a course.
+	 * A generic entry point for very similar action code.
 	 */
-	public function actionDescription()
+	public function actionIndex($view=null, $content=null)
 	{
+		if (!$view) $view = 'description';
 		$model = Course::loadModel();
-				
-		$this->render('description',array(
+		// take the 's' off of the view name to get a default content class name
+		if (!$content && substr($view, -1) =='s'){ 
+			$content = substr($view, 0, -1);
+		}
+		// get optional content model for internal part of view
+		if ($content ){
+			$className = ucfirst($content);
+			if (class_exists($className)){
+				$content = $className::loadModel();
+			}
+		}
+		// pass model data and render the view file
+		$this->render($view,array(
 			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Manages all models.
-	 */
-	public function actionAssignments()
-	{
-		$model = Course::loadModel();
-				
-		$this->render('assignments',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * s.
-	 */
-	public function actionAssignmentsForUser()
-	{
-		if (!$username) $username = Yii::app()->user->name;
-		$this->actionAssignments();
-	}
-	
-	/**
-	 * Creates a new Assignment model.
-	 */
-	public function actionCreateAssignment()
-	{
-		$model = Course::loadModel();
-						
-		$contentModel=Assignment::loadModel();
-
-		$this->render('createAssignment',array(
-			'model'=>$model,
-			'contentModel' => $contentModel,
+			'contentModel' => $content,
 		));
 	}
 	
@@ -99,7 +76,7 @@ class CourseController extends Controller
 		
 		$view = 'updateAssignment';
 		if (!Yii::app()->user->checkAccess('admin'))
-			$view = 'updateAssignment';
+			$view = 'view';
 			
 		$this->render($view,array(
 			'model'=>$model,
@@ -122,44 +99,6 @@ class CourseController extends Controller
 		$this->redirect(array('assignments','term_code'=>$model->term_code,'class_num'=>$model->class_num));
 	}
 
-	/**
-	 * .
-	 */
-	public function actionBooks()
-	{
-		$model = Course::loadModel();
-				
-		$this->render('books',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Creates a new Book model.
-	 */
-	public function actionCreateBook()
-	{
-		$model = Course::loadModel();
-		
-		$contentModel=new Book('search');
-		//$this->term = $model->find();
-		$contentModel->unsetAttributes();  // clear any default values
-
-		$this->render('createBook',array(
-			'model'=>$model,
-			'contentModel' => $contentModel,
-		));
-	}
-	
-	/**
-	 * Creates a new Book model. Alternate name
-	 */
-	public function actionNewBook($term_code=null, $class_num=null)
-	{
-		$this->actionCreateBook($term_code=null, $class_num=null);
-	}
-		
-	
 	/**
 	 * Updates a particular Book model.
 	 * @param integer $bookId the ID of the model to be updated
@@ -194,18 +133,6 @@ class CourseController extends Controller
 				$this->redirect(array('books','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
 		}
 		$this->redirect(array('newBook','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
-	}
-
-	/**
-	 * .
-	 */
-	public function actionStudents()
-	{
-		$model = Course::loadModel();
-						
-		$this->render('students',array(
-			'model'=>$model,
-		));
 	}
 
 	/**
