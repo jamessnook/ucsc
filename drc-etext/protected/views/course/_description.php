@@ -33,8 +33,8 @@
 				'class'=>'CLinksColumn',
 				'labelExpression'=>'$data->facultyNames()', 
 				'urlExpression'=>'$data->facultyUrls()', 
-			 			),
-			array( 
+			 ),
+			 array( 
 				'header'=>'Meeting Dates', 
 				'name'=>'dates', 
 				'value'=>'$data->dates', 

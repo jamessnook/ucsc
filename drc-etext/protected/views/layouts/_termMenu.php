@@ -7,7 +7,7 @@
 	$now = date('Y-m-d');
 	$terms =  Term::model()->findAll( "start_date < '$now' order by term_code desc  limit 10 " );
 	//$terms =  Term::model()->findAll("term_code < 2136 order by term_code desc  limit 10 " );
-	$params = array();
+	$params = $_GET;
 	if ($model->username && strlen($model->username)>0)
 		$params['username'] = $model->username;
 	if ($model->emplid && strlen($model->emplid)>0)

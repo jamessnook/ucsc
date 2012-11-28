@@ -36,7 +36,10 @@ class LinksColumn extends CLinkColumn
 				$models = $this->evaluateExpression($this->urlExpression['model'],array('data'=>$data,'row'=>$row));
 				foreach($models as $model){
 					$params = array();
-					foreach($this->urlExpression['params'] as $name=>$param){
+					if (isset($this->urlExpression['params'])){
+						$params = $this->urlExpression['params'];
+					}
+					foreach($this->urlExpression['modelParams'] as $name=>$param){
 						$params[$name] = $model->{$param};
 					}
 					$urlStr = Yii::app()->createUrl($this->urlExpression['route'], $params);

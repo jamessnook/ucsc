@@ -1,7 +1,7 @@
 <?php
 
 	$options = array(
-		'contentView' => $contentView,
+		'contentView' => '../assignment/_update',
 		'contentModel' => $contentModel,
 		'titleNavRight' => '<a href="' . $this->createUrl('assignment/create') . '"><i class="icon-plus"></i> Add Request</a>',
 		'titleNavRight' => '<a href="' . $this->createUrl('course/newAssignment', array('term_code'=> $model->term_code, 'class_num'=>$model->class_num)) . '"><i class="icon-plus"></i> Add Request</a>',

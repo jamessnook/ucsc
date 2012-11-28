@@ -41,38 +41,13 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * A generic entry point for very similar action code.
-	 */
-	public function actionIndex($view=null, $content=null)
-	{
-		if (!$view) $view = 'description';
-		$model = Course::loadModel();
-		// take the 's' off of the view name to get a default content class name
-		if (!$content && substr($view, -1) =='s'){ 
-			$content = substr($view, 0, -1);
-		}
-		// get optional content model for internal part of view
-		if ($content ){
-			$className = ucfirst($content);
-			if (class_exists($className)){
-				$content = $className::loadModel();
-			}
-		}
-		// pass model data and render the view file
-		$this->render($view,array(
-			'model'=>$model,
-			'contentModel' => $content,
-		));
-	}
-	
-	/**
 	 * Updates a particular Assignment model.
 	 * @param integer $assignmentId the ID of the model to be updated
 	 */
 	public function actionUpdateAssignment()
 	{
 		$contentModel=Assignment::loadModel();
-		$model = Course::loadModel($contentModel->attributes);
+		$model = Course::loadModel(array('term_code' => $contentModel->term_code, 'class_num' => $contentModel->class_num));
 		
 		$view = 'updateAssignment';
 		if (!Yii::app()->user->checkAccess('admin'))
@@ -123,9 +98,6 @@ class CourseController extends Controller
 	public function actionSaveBook()
 	{
 		$contentModel=Book::loadModel();
-		
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Book']))
 		{

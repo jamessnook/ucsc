@@ -168,7 +168,7 @@ class UserController extends Controller
 			$model->unsetAttributes();  // clear any default values
 		}
 
-		if (!$term_code) $term_code = Term::currentterm_code();
+		if (!$term_code) $term_code = Term::currentTermCode();
 		$model->term_code = $term_code;
 		
 		$this->render('courses',array(

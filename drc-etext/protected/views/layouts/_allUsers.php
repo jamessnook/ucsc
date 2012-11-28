@@ -17,13 +17,14 @@
 						array(
 							'label'=>'Courses', 
 							'url'=>array('/course/courses', 
-							'termCode'=>$model->term_code, ), 
+								'termCode'=>$model->term_code, ), 
 							'active'=> get_class($model) == 'Course',
 						),
 						array(
 							'label'=>'Assignments', 
-							'url'=>array('/assignment/manage', 
-							'termCode'=>$model->term_code,), 
+							'url'=>array('/assignment/', 
+								'view'=>'manage', 
+								'termCode'=>$model->term_code,), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
 							'active'=> get_class($model) == 'Assignment',
 						),

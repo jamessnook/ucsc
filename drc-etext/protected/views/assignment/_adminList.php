@@ -65,7 +65,7 @@
 				'type'=>'raw',
 				'value'=>'\'<a href="#" class="btn">Remove</a>\'', 
 			 ),
-			 ),
+		),
 	)); 
 	?>
 

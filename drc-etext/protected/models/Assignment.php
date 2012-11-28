@@ -21,7 +21,7 @@
  * @property Course $class_num
  * @property DrcRequest[] $drcRequests
  */
-class Assignment extends CActiveRecord
+class Assignment extends UCSCModel
 {
 	public $username;
 	public $emplid;
@@ -116,16 +116,16 @@ class Assignment extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		//$criteria->compare('id',$this->id);
 		$criteria->compare('term_code',$this->term_code);
-		$criteria->compare('class_num',$this->class_num);
-		$criteria->compare('book_id',$this->book_id);
-		$criteria->compare('created',$this->created,true);
-		$criteria->compare('modified',$this->modified,true);
-		$criteria->compare('modified_by',$this->modified_by,true);
-		$criteria->compare('notes',$this->notes,true);
-		$criteria->compare('is_complete',$this->is_complete);
-		$criteria->compare('has_zip_file',$this->has_zip_file);
+		//$criteria->compare('class_num',$this->class_num);
+		//$criteria->compare('book_id',$this->book_id);
+		//$criteria->compare('created',$this->created,true);
+		//$criteria->compare('modified',$this->modified,true);
+		//$criteria->compare('modified_by',$this->modified_by,true);
+		//$criteria->compare('notes',$this->notes,true);
+		//$criteria->compare('is_complete',$this->is_complete);
+		//$criteria->compare('has_zip_file',$this->has_zip_file);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -183,29 +183,5 @@ class Assignment extends CActiveRecord
 		}
 		return $types;
 	}
-	
-
-	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer the ID of the model to be loaded
-	 */
-	public function loadModel($id=null, $term_code=null, $class_num=null, $username=null, $emplid=null)
-	{
-		if ($id){
-			$model=Assignment::model()->findByPk($id);
-		}
-		if(!$id || $model===null){
-			$model=new Assignment('search');
-			$model->unsetAttributes();  // clear any default values
-	
-			$model->term_code = $term_code;
-			$model->class_num = $class_num;
-		}
-		$model->username = $username;
-		$model->emplid = $emplid;
-		return $model;
-	}
-	
 	
 }

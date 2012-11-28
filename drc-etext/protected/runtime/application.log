@@ -652,3 +652,875 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php?r=course/index&view=assignments&term_code=2122&class_num=61623
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=user/courses&username=0ED62EE28C3F7BBB&term_code=2122
 ---
+2012/11/28 06:16:23 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:16:23 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:16:23 [error] [php] Non-static method Assignment::loadModel() should not be called statically, assuming $this from incompatible context (C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:58)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/index&view=assignments&term_code=2122&class_num=61623
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (58)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:18:47 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:18:47 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:18:47 [error] [php] Non-static method Assignment::loadModel() should not be called statically, assuming $this from incompatible context (C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:58)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/index&view=assignments&term_code=2122&class_num=61623
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (58)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:22:03 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:22:03 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:22:03 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (58)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:22:03 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (58)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:22:45 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:22:45 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:22:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "course".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('course')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('course')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/course')
+#3 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/course&view=assignments&term_code=2122&class_num=61623&username=
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=course/index&view=assignments&term_code=2122&class_num=61623
+---
+2012/11/28 06:23:56 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:23:56 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:33 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:33 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:36 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:36 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:36 [warning] [application] Failed to set unsafe attribute "username" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:39 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:39 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:39 [warning] [application] Failed to set unsafe attribute "username" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:42 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:42 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:42 [warning] [application] Failed to set unsafe attribute "username" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:46 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:46 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:25:46 [warning] [application] Failed to set unsafe attribute "username" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:15 [warning] [application] Failed to set unsafe attribute "r" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:15 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:26:17 [error] [php] Undefined variable: contentView (C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\updateAssignment.php:4)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CourseController->renderFile()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CourseController->renderPartial()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(59): CourseController->render()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionUpdateAssignment()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/updateAssignment&id=6&username=
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\updateAssignment.php (4)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (59)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:29:04 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:42:21 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:43:52 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:46:00 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:25 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:25 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:25 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:26 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:26 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:26 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:26 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:26 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:26 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:47:26 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (72)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:48:15 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:50:00 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:52:57 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:53:44 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:54:46 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "book_id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "due_date" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "modified_by" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "notes" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "is_complete" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 06:55:33 [warning] [application] Failed to set unsafe attribute "has_zip_file" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (50)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 07:04:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "assignments".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('assignments')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('assignments')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/assignme...')
+#3 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course/assignments&term_code=2122&class_num=61623
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=course&view=students&term_code=2122&class_num=61623&username=
+---
+2012/11/28 07:07:07 [error] [exception.CException] exception 'CException' with message 'Property "DrcRequest.students" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('students')
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\LinksColumn.php(40): CActiveRecord->__get('students')
+#2 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridColumn.php(138): LinksColumn->renderDataCellContent(0, Object(User))
+#3 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(517): CGridColumn->renderDataCell(0)
+#4 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(490): CGridView->renderTableRow(0)
+#5 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(400): CGridView->renderTableBody()
+#6 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#7 [internal function]: CBaseListView->renderSection(Array)
+#8 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#9 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(174): CBaseListView->run()
+#11 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\user\_students.php(70): CBaseController->widget('zii.widgets.gri...', Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php(80): CController->renderPartial('../user/_studen...', Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#19 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_frame.php(9): CController->renderPartial('../layouts/_all...', Array)
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#23 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\students.php(6): CController->renderPartial('_frame', Array)
+#24 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#25 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#26 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#27 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('students', Array, true)
+#28 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php(51): CController->render('students', Array)
+#29 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): Controller->actionIndex()
+#30 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#31 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#32 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#33 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#34 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#35 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#36 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#37 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#38 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('')
+#39 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course')
+#40 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#41 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#42 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=course&view=students&term_code=2122&class_num=61623&username=
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=course&view=description&term_code=2122&class_num=61623&username=
+---
+2012/11/28 07:51:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment')
+#9 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=assignment&view=manage&termCode=2122
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=course&view=students&term_code=2122&class_num=61623
+---
+2012/11/28 07:53:10 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 07:53:10 [error] [exception.CException] exception 'CException' with message 'AssignmentController cannot find the requested view "index".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php(51): CController->render('index', Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): Controller->actionIndex()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('index')
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/inde...')
+#13 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=assignment/index&term_code=2124
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=assignment&view=manage&termCode=2122
+---
+2012/11/28 07:54:29 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 07:54:29 [error] [exception.CException] exception 'CException' with message 'AssignmentController cannot find the requested view "index".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php(51): CController->render('index', Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): Controller->actionIndex()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('index')
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/inde...')
+#13 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=assignment/index&term_code=2124
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=assignment&view=manage&termCode=2122
+---
+2012/11/28 07:55:25 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 07:55:25 [error] [exception.CException] exception 'CException' with message 'AssignmentController cannot find the requested view "index".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php(51): CController->render('index', Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): Controller->actionIndex()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('index')
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/inde...')
+#13 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php?r=assignment/index&term_code=2124
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php?r=assignment&view=manage&termCode=2122
+---
+2012/11/28 08:10:59 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:10:59 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:10:59 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:11:01 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:11:01 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:11:01 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:16:06 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:16:06 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:16:06 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:21:13 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:21:13 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:21:13 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:22:07 [warning] [application] Failed to set unsafe attribute "r" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:22:07 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 08:22:07 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
