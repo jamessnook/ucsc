@@ -229,5 +229,19 @@ class User extends UCSCModel
 		return true;
 	}
 	
-		
+	/**
+	 * Returns the data model based on the passed attributes.
+	 * Persues various ways of finding and creating the model
+	 * @param array of parameters
+	 */
+	public static function loadModel($params=null)
+	{
+		$aModel = parent::loadModel($params);
+		if (!$aModel->term_code) 
+			$aModel->term_code = Term::currentTermCode();
+		if (!$aModel->username) 
+			$aModel->username = Yii::app()->user->name;
+		return $aModel;
+	}
+	
 }

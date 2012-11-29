@@ -5,13 +5,13 @@
 
 	<?php 
 	
-	$model->username = Yii::app()->user->name;  // set up for current user
+	//$model->username = Yii::app()->user->name;  // set up for current user
 	//$params = array();
-	$paramStr = '';
-	if ($model->term_code) {
+	//$paramStr = '';
+	//if ($model->term_code) {
 		//$params['term_code'] = $model->term_code;
-		$paramStr .=  '\'term_code\' =>' . $model->term_code; 
-	}
+	//	$paramStr .=  '\'term_code\' =>' . $model->term_code; 
+	//}
 	//if ($model->class_num) $params['class_num'] = $model->class_num;
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'drc-request-grid',
