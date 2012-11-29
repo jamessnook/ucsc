@@ -51,7 +51,7 @@
 				//'labelExpression'=>'\'test\'', 
 				//'urlExpression'=>'\'test\'', 
 			 	'labelExpression'=>'$data->drcRequestCourseNames()', 
-				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/', 'params'=>array('view'=>'students',), 'modelParams'=>array('term_code'=>'term_code', 'class_num'=>'class_num')), 
+				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/students', 'modelParams'=>array('term_code'=>'term_code', 'class_num'=>'class_num')), 
 			),
 			//array( 
 			//	'header'=>'Type', 

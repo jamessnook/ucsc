@@ -22,8 +22,7 @@
 						),
 						array(
 							'label'=>'Assignments', 
-							'url'=>array('/assignment/', 
-								'view'=>'manage', 
+							'url'=>array('/assignment/manage', 
 								'termCode'=>$model->term_code,), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
 							'active'=> get_class($model) == 'Assignment',

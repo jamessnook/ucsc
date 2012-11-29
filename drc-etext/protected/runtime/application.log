@@ -1524,3 +1524,266 @@ in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/28 23:02:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "course".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('course')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('course')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/course')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/course?view=createAssignment&content=assignment&term_code=2122&class_num=60423
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/assignments?term_code=2122&class_num=60423
+---
+2012/11/28 23:03:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "course".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('course')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('course')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/course')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/course?view=createAssignment&content=assignment&term_code=2122&class_num=60423
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/assignments?term_code=2122&class_num=60423
+---
+2012/11/28 23:03:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "course".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('course')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('course')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/course')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/course?view=createAssignment&content=assignment&term_code=2122&class_num=60423
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/assignments?term_code=2122&class_num=60423
+---
+2012/11/28 23:09:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('view')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('view')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/view/ass...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/view/assignments/term_code/2122/class_num/60423/username
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/assignments?term_code=2122&class_num=60423
+---
+2012/11/28 23:19:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('view')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('view')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/view/ass...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/view/assignments/term_code/2122/class_num/60423/username
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/assignments?term_code=2122&class_num=60423
+---
+2012/11/28 23:35:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('view')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('view')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/view/stu...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/view/students/term_code/2122/class_num/62390
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/students?term_code=2122&class_num=62390&username=
+---
+2012/11/28 23:46:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:337
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/view...')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/assignment/view/manage/termCode/2122
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/students?term_code=2122&class_num=62390
+---
+2012/11/29 00:42:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "assignemtnFiles".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('assignemtnFiles')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('assignemtnFiles')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/assignem...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/assignemtnFiles/6?username=
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/assignments?term_code=2122&class_num=60423&username=
+---
+2012/11/29 01:49:59 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 01:49:59 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 01:50:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "newAssignment".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('newAssignment')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('newAssignment')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/newAssig...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/newAssignment?term_code=2122&class_num=60423
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/updateAssignment/6
+---
+2012/11/29 01:51:38 [error] [exception.CException] exception 'CException' with message 'Property "Course.book_id" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('book_id')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('book_id')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\helpers\CHtml.php(1402): CHtml::resolveValue(Object(Course), 'book_id')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CActiveForm.php(681): CHtml::activeDropDownList(Object(Course), 'book_id', Array, Array)
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\assignment\_edit.php(32): CActiveForm->dropDownList(Object(Course), 'book_id', Array, Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\assignment\_create.php(9): CController->renderPartial('../assignment/_...', Array)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php(80): CController->renderPartial('../assignment/_...', Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#16 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\course\_frame.php(9): CController->renderPartial('../layouts/_all...', Array)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#20 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\course\createAssignment.php(9): CController->renderPartial('_frame', Array)
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('createAssignmen...', Array, true)
+#25 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php(51): CController->render('createAssignmen...', Array)
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): Controller->actionIndex()
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#28 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#29 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#30 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#31 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#32 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#33 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#34 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#35 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('index')
+#36 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/index')
+#37 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#38 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#39 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/createAssignment?term_code=2122&class_num=60423
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/updateAssignment/6
+---
+2012/11/29 02:49:52 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:50:14 [warning] [application] Failed to set unsafe attribute "termCode" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:50:25 [warning] [application] Failed to set unsafe attribute "termCode" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:50:27 [warning] [application] Failed to set unsafe attribute "termCode" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:50:37 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:00 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:18 [warning] [application] Failed to set unsafe attribute "content" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:18 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:18 [warning] [application] Failed to set unsafe attribute "content" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:18 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:32 [warning] [application] Failed to set unsafe attribute "username" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:32 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:35 [warning] [application] Failed to set unsafe attribute "username" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:35 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:39 [warning] [application] Failed to set unsafe attribute "content" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:39 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:39 [warning] [application] Failed to set unsafe attribute "content" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:51:39 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:55:11 [warning] [application] Failed to set unsafe attribute "content" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:55:11 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:55:11 [warning] [application] Failed to set unsafe attribute "content" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:55:11 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:59:27 [warning] [application] Failed to set unsafe attribute "content" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:59:27 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:59:28 [warning] [application] Failed to set unsafe attribute "content" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 02:59:28 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)

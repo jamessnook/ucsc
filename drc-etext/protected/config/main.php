@@ -40,16 +40,15 @@ return array(
 			'loginUrl'=>array('/login/login'),
     	),
 		// uncomment the following to enable URLs in path-format
-		/*
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:(course|assignment)>/<view:(description|assignments|books|students|createAssignment|createBook|manage)>/*'=>'<controller>/index',
+    			'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+    			'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/etext.db',
 		),

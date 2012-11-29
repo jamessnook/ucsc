@@ -62,7 +62,7 @@ class AssignmentController extends Controller
 		if(Yii::app()->request->isPostRequest)
 		{
 			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+			Assignment::loadModel()->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
@@ -75,6 +75,7 @@ class AssignmentController extends Controller
 	/**
 	 * Manages all models.
 	 */
+	/*
 	public function actionManage($term_code=null)
 	{
 		$model=new Assignment('search');
@@ -87,15 +88,6 @@ class AssignmentController extends Controller
 			'model'=>$model,
 		));
 	}
-
-	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer the ID of the model to be loaded
-	 */
-	public function loadModel($id=null, $term_code=null, $class_num=null, $username=null, $emplid=null)
-	{
-		return Assignment::model()->loadModel($id, $term_code, $class_num, $username, $emplid);
-	}
+	*/
 	
 }
