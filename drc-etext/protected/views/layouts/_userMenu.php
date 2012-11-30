@@ -1,7 +1,7 @@
 <?php 
 
 	$menuItems=array(
-		array('label'=>'Courses', 'url'=>array('user/courses', 'username'=>$model->username, 'termCode'=>$model->term_code,)),
+		array('label'=>'Courses', 'url'=>array('user/courses', 'username'=>$model->username, 'term_code'=>$model->term_code,)),
 		array('label'=>'Profile', 'url'=>'#'),
 		);
 

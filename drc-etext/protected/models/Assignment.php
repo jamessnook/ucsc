@@ -57,7 +57,7 @@ class Assignment extends UCSCModel
 			array('modified_by', 'length', 'max'=>64),
 			array('notes', 'length', 'max'=>1024),
 			array('description', 'length', 'max'=>512),
-			array('created, modified, is_complete, has_zip_file, title, description, due_date', 'safe'),
+			array('created, modified, is_complete, has_zip_file, title, description, due_date, username, emplid', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, term_code, class_num, book_id, created, modified, modified_by, notes, is_complete', 'safe', 'on'=>'search'),

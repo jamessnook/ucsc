@@ -15,7 +15,7 @@
  * @property IdType $idType
  * @property User[] $users
  */
-class Book extends CActiveRecord
+class Book extends UCSCModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

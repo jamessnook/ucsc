@@ -1,7 +1,6 @@
 <?php
 	// User Frame
 
-	//$options['menuView'] = '../layouts/_termMenu';
 	$options['title'] = "($model->username) $model->first_name $model->last_name";
 	if (!$model->username || $model->username ==''){
 		$options['title'] = "Users";
@@ -11,7 +10,7 @@
 		}
 	}
 
-	echo $this->renderPartial('../layouts/_allUsers',  array('options'=>$options, 'model' => $model,)); 
+	echo $this->renderPartial('../layouts/_main',  array('options'=>$options, 'model' => $model,)); 
 	 
 ?>
 

@@ -58,7 +58,7 @@ class User extends UCSCModel
 			array('username, emplid, first_name, middle_name, last_name, modified_by', 'length', 'max'=>64),
 			array('email, password, salt', 'length', 'max'=>128),
 			array('phone', 'length', 'max'=>32),
-			array('created, modified', 'safe'),
+			array('created, modified, term_code', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by', 'safe', 'on'=>'search'),
@@ -234,14 +234,14 @@ class User extends UCSCModel
 	 * Persues various ways of finding and creating the model
 	 * @param array of parameters
 	 */
-	public static function loadModel($params=null)
+	/*public static function loadModel($params=null)
 	{
 		$aModel = parent::loadModel($params);
-		if (!$aModel->term_code) 
-			$aModel->term_code = Term::currentTermCode();
-		if (!$aModel->username) 
+		if (!isset($aModel->term_code)) 
+			//$aModel->term_code = Term::currentTermCode();
+		if (!isset($aModel->username)) 
 			$aModel->username = Yii::app()->user->name;
 		return $aModel;
-	}
+	}*/
 	
 }

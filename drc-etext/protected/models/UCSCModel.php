@@ -58,20 +58,19 @@ class UCSCModel extends CActiveRecord
 		$aModel=new $className(null);
 		$aModel->unsetAttributes();  // clear any default values .. is this needed?
 		if ($params){
-			$aModel->attributes=$params; // or use setAttributes()
+			$aModel->attributes =$params; // or use setAttributes()
 			$key = $aModel->getTableSchema()->primaryKey;
 			$tableParams = array();
 			// find primary key params that are in table model
 			foreach($params as $name=>$value){
-				if ($name == $primaryKey || (is_array($primaryKey) && in_array($name, $primaryKey))){
-				//if(($column=$table->getColumn($name))!==null){
+				if ($name == $key || (is_array($key) && in_array($name, $key))){
 					$tableParams[$name]= $value;
 				}
 			}
 			if (count($tableParams)>0){
 				$newModel=$aModel->findByAttributes($tableParams);
 				if($newModel)
-					$aModel = $newModel;
+					$aModel->attributes = $newModel->attributes;
 			}
 		}
 		if(isset($_POST[$className])){

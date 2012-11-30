@@ -1787,3 +1787,969 @@ in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:26:04 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:26:04 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:26:04 [error] [php] Undefined variable: primaryKey (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php:66)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): AssignmentController->runAction()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): AssignmentController->filterAccessControl()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): AssignmentController->runActionWithFilters()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): AssignmentController->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php/assignment/manage?termCode=2122
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (66)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:08 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:08 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:16 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:16 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:18 [warning] [application] Failed to set unsafe attribute "termCode" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:18 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:26 [warning] [application] Failed to set unsafe attribute "id" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:33 [warning] [application] Failed to set unsafe attribute "content" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:33 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:33 [warning] [application] Failed to set unsafe attribute "content" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:33 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:36 [warning] [application] Failed to set unsafe attribute "username" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:36 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:39 [warning] [application] Failed to set unsafe attribute "username" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:27:39 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:28:50 [warning] [application] Failed to set unsafe attribute "content" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:28:50 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:28:50 [warning] [application] Failed to set unsafe attribute "content" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:28:50 [warning] [application] Failed to set unsafe attribute "term_code" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:28:50 [warning] [application] Failed to set unsafe attribute "class_num" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:28:50 [warning] [application] Failed to set unsafe attribute "view" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:28:58 [warning] [application] Failed to set unsafe attribute "termCode" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:28:58 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:29:01 [warning] [application] Failed to set unsafe attribute "termCode" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:29:01 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:29:01 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:29:09 [warning] [application] Failed to set unsafe attribute "termCode" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:29:09 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:29:09 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:55:56 [warning] [application] Failed to set unsafe attribute "termCode" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:55:56 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:55:58 [warning] [application] Failed to set unsafe attribute "content" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:55:58 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:55:58 [warning] [application] Failed to set unsafe attribute "content" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:55:58 [warning] [application] Failed to set unsafe attribute "term_code" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:55:58 [warning] [application] Failed to set unsafe attribute "class_num" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:55:58 [warning] [application] Failed to set unsafe attribute "view" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 19:56:05 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:56:05 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:56:08 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 19:56:08 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:06:29 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:06:29 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:09:24 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:09:24 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:09:29 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:09:29 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:09:47 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:09:47 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:09:50 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:09:50 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:10:06 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:10:06 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:10:13 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:10:13 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:27:57 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:27:57 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (239)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+2012/11/29 20:32:16 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:32:16 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:32:33 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:32:33 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:45:24 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:45:24 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:45:24 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:45:36 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:45:36 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:45:36 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:47:01 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:47:01 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:51:24 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (60)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:51:24 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (60)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:51:24 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:51:24 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:52:11 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:52:11 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:52:34 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 20:52:34 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:00:35 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:00:35 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:00:35 [error] [php] Undefined index: term_code (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php:81)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php/user/students?term_code=2128&view=students&username=jsnook
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (81)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:01:25 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:01:25 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:02:48 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:02:48 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:02:48 [error] [php] Undefined index: term_code (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php:62)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php/user/students?term_code=2128&view=students&username=jsnook
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:10:29 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:10:29 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:10:29 [error] [php] Undefined index: term_code (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php:62)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php/user/students?term_code=2128&view=students&username=jsnook
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:11:03 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:11:03 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:11:03 [error] [exception.CException] exception 'CException' with message 'Property "User._attributes" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('_attributes')
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php(62): CActiveRecord->__get('_attributes')
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php(39): UCSCModel::loadModel()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): Controller->actionIndex()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('index')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/index')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/students?term_code=2128&view=students&username=jsnook
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/students?term_code=2122&view=students&username=jsnook
+---
+2012/11/29 21:11:33 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:11:33 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:13:26 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:13:26 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:14:47 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:14:47 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:14:52 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:14:52 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (62)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:15:23 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 21:15:23 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:48:40 [warning] [application] Failed to set unsafe attribute "term_code" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:48:40 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:50:01 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:51:16 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:51:16 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:51:42 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:51:42 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:55:12 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:55:21 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 22:55:28 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:02:40 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:02:50 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:03:29 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:03:33 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:03:41 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:03:44 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:01 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:06 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:06 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:10 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:10 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:13 [warning] [application] Failed to set unsafe attribute "content" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:13 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:13 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:13 [warning] [application] Failed to set unsafe attribute "content" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:13 [warning] [application] Failed to set unsafe attribute "term_code" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:13 [warning] [application] Failed to set unsafe attribute "class_num" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:13 [warning] [application] Failed to set unsafe attribute "view" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:18 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:18 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:22 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:04:22 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/29 23:06:18 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 00:19:01 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 00:23:38 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 00:25:56 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 00:26:05 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 00:26:32 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 00:27:47 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 00:27:54 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 00:28:14 [error] [exception.CException] exception 'CException' with message 'Property "UserController.username" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php(18): CComponent->__get('username')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php(88): CController->renderPartial('../layouts/_ter...', Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php(14): CController->renderPartial('../layouts/_all...', Array)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\courses.php(9): CController->renderPartial('_frame', Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('courses', Array, true)
+#17 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php(133): CController->render('courses', Array)
+#18 [internal function]: UserController->actionCourses('2122', '0ED62EE28C3F7BB...', NULL)
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#28 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#30 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/courses')
+#31 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/courses?username=0ED62EE28C3F7BBB&term_code=2122
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/students?term_code=2122
+---
+2012/11/30 00:28:49 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT DISTINCT term_code FROM 'drc_request' 't' WHERE drcRequests.user.username=:ycp3
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php (22)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php (14)
+2012/11/30 00:28:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: drcRequests.user.username' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:218
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php(273): CDbCommand->prepare()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\db\schema\CDbCommandBuilder.php(442): CDbCommand->bindValue(':ycp3', '0ED62EE28C3F7BB...')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\db\schema\CDbCommandBuilder.php(101): CDbCommandBuilder->bindValues(Object(CDbCommand), Array)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1286): CDbCommandBuilder->createFindCommand(Object(CDbTableSchema), Object(CDbCriteria))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php(88): CController->renderPartial('../layouts/_ter...', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php(14): CController->renderPartial('../layouts/_all...', Array)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#17 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\courses.php(9): CController->renderPartial('_frame', Array)
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('courses', Array, true)
+#22 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php(133): CController->render('courses', Array)
+#23 [internal function]: UserController->actionCourses('2122', '0ED62EE28C3F7BB...', NULL)
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#28 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#29 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#30 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#33 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#35 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/courses')
+#36 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#37 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#38 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/courses?username=0ED62EE28C3F7BBB&term_code=2122
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/students?term_code=2122
+---
+2012/11/30 00:29:15 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT DISTINCT term_code FROM 'drc_request' 't' WHERE user.username=:ycp3
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php (22)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php (14)
+2012/11/30 00:29:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: user.username' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:218
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php(273): CDbCommand->prepare()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\db\schema\CDbCommandBuilder.php(442): CDbCommand->bindValue(':ycp3', '0ED62EE28C3F7BB...')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\db\schema\CDbCommandBuilder.php(101): CDbCommandBuilder->bindValues(Object(CDbCommand), Array)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1286): CDbCommandBuilder->createFindCommand(Object(CDbTableSchema), Object(CDbCriteria))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php(22): CActiveRecord->findAll(Object(CDbCriteria))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php(88): CController->renderPartial('../layouts/_ter...', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php(14): CController->renderPartial('../layouts/_all...', Array)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#17 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\courses.php(9): CController->renderPartial('_frame', Array)
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('courses', Array, true)
+#22 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php(133): CController->render('courses', Array)
+#23 [internal function]: UserController->actionCourses('2122', '0ED62EE28C3F7BB...', NULL)
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#28 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#29 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#30 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#33 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#35 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/courses')
+#36 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#37 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#38 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/courses?username=0ED62EE28C3F7BBB&term_code=2122
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/students?term_code=2122
+---
+2012/11/30 00:53:29 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT DISTINCT 't'."term_code" AS "t0_c0", 't'."term_code" AS "t0_c0", 't'."class_num" AS "t0_c1", 't'."emplid" AS "t0_c3" FROM 'drc_request' 't'  INNER JOIN 'user' 'user' ON ('t'."emplid"='user'."emplid")  WHERE (user.username=0ED62EE28C3F7BBB)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php (30)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php (14)
+2012/11/30 00:53:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 unrecognized token: "0ED62EE28C3F7BBB". The SQL statement executed was: SELECT DISTINCT 't'."term_code" AS "t0_c0", 't'."term_code" AS "t0_c0", 't'."class_num" AS "t0_c1", 't'."emplid" AS "t0_c3" FROM 'drc_request' 't'  INNER JOIN 'user' 'user' ON ('t'."emplid"='user'."emplid")  WHERE (user.username=0ED62EE28C3F7BBB).
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php (30)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php (14)
+2012/11/30 00:53:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 unrecognized token: "0ED62EE28C3F7BBB". The SQL statement executed was: SELECT DISTINCT 't'."term_code" AS "t0_c0", 't'."term_code" AS "t0_c0", 't'."class_num" AS "t0_c1", 't'."emplid" AS "t0_c3" FROM 'drc_request' 't'  INNER JOIN 'user' 'user' ON ('t'."emplid"='user'."emplid")  WHERE (user.username=0ED62EE28C3F7BBB)' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php(30): CActiveRecord->findAll(Object(CDbCriteria))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php(88): CController->renderPartial('../layouts/_ter...', Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#14 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php(14): CController->renderPartial('../layouts/_all...', Array)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#18 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\courses.php(9): CController->renderPartial('_frame', Array)
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('courses', Array, true)
+#23 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php(133): CController->render('courses', Array)
+#24 [internal function]: UserController->actionCourses('2120', '0ED62EE28C3F7BB...', '1288282')
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#28 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#29 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#30 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#31 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#32 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#33 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#34 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#35 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#36 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/courses')
+#37 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#38 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#39 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/courses?username=0ED62EE28C3F7BBB&term_code=2120&emplid=1288282
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/courses?username=0ED62EE28C3F7BBB&term_code=2122&emplid=1288282
+---
+2012/11/30 01:46:06 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT DISTINCT term.term_code, term.description FROM term JOIN drc_request using (termcode)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php (14)
+2012/11/30 01:46:06 [error] [system.db.CDbCommand] CDbCommand::() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 cannot join using column termcode - column not present in both tables. The SQL statement executed was: SELECT DISTINCT term.term_code, term.description FROM term JOIN drc_request using (termcode).
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php (14)
+2012/11/30 01:46:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 cannot join using column termcode - column not present in both tables. The SQL statement executed was: SELECT DISTINCT term.term_code, term.description FROM term JOIN drc_request using (termcode)' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php(372): CDbCommand->queryInternal('', 0, Array)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php(49): CDbCommand->query()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php(88): CController->renderPartial('../layouts/_ter...', Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php(14): CController->renderPartial('../layouts/_all...', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\courses.php(9): CController->renderPartial('_frame', Array)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('courses', Array, true)
+#18 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php(133): CController->render('courses', Array)
+#19 [internal function]: UserController->actionCourses('2120', '0ED62EE28C3F7BB...', '1288282')
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#29 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#31 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/courses')
+#32 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#33 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/courses?username=0ED62EE28C3F7BBB&term_code=2120&emplid=1288282
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/courses?username=0ED62EE28C3F7BBB&term_code=2122&emplid=1288282
+---
+2012/11/30 01:49:15 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT DISTINCT term.term_code, term.description FROM term JOIN drc_request using (term_code) JOIN user WHERE drc_request.username = user.username
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php (52)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php (14)
+2012/11/30 01:49:15 [error] [system.db.CDbCommand] CDbCommand::() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: drc_request.username. The SQL statement executed was: SELECT DISTINCT term.term_code, term.description FROM term JOIN drc_request using (term_code) JOIN user WHERE drc_request.username = user.username.
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php (52)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php (14)
+2012/11/30 01:49:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: drc_request.username. The SQL statement executed was: SELECT DISTINCT term.term_code, term.description FROM term JOIN drc_request using (term_code) JOIN user WHERE drc_request.username = user.username' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php(372): CDbCommand->queryInternal('', 0, Array)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php(52): CDbCommand->query()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_allUsers.php(88): CController->renderPartial('../layouts/_ter...', Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php(14): CController->renderPartial('../layouts/_all...', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\courses.php(9): CController->renderPartial('_frame', Array)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('courses', Array, true)
+#18 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php(133): CController->render('courses', Array)
+#19 [internal function]: UserController->actionCourses('2120', '0ED62EE28C3F7BB...', '1288282')
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#29 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#31 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/courses')
+#32 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#33 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/courses?username=0ED62EE28C3F7BBB&term_code=2120&emplid=1288282
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/courses?username=0ED62EE28C3F7BBB&term_code=2122&emplid=1288282
+---
+2012/11/30 02:03:27 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 02:22:05 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 02:22:15 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 02:22:21 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 02:22:33 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 02:22:41 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 02:22:45 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 02:22:52 [warning] [application] Failed to set unsafe attribute "view" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)

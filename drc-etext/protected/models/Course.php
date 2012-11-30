@@ -63,7 +63,7 @@ class Course extends UCSCModel
 			array('subject, catalog_num', 'length', 'max'=>64),
 			array('description', 'length', 'max'=>512),
 			array('title, schedule, room, dates', 'length', 'max'=>128),
-			array('created, modified', 'safe'),
+			array('created, modified, username, emplid', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('term_code, class_num, section, course_id, subject, description, title, catalog_num, schedule, room, dates, created, modified', 'safe', 'on'=>'search'),

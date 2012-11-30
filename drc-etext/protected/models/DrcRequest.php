@@ -52,7 +52,7 @@ class DrcRequest extends CActiveRecord
 			array('term_code', 'required'),
 			array('term_code, class_num', 'numerical', 'integerOnly'=>true),
 			array('course_id, emplid, type', 'length', 'max'=>32),
-			array('created, modified', 'safe'),
+			array('created, modified, username', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('term_code, class_num, course_id, emplid, type, created, modified', 'safe', 'on'=>'search'),
