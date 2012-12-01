@@ -2753,3 +2753,62 @@ in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 20:48:28 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 20:49:06 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 20:49:06 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 20:49:38 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (115)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 20:59:00 [warning] [application] Failed to set unsafe attribute "view" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 20:59:00 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 23:33:51 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 23:34:04 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/11/30 23:34:07 [error] [exception.CException] exception 'CException' with message 'UserController and its behaviors do not have a method or closure named "loadModel".' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php(49): CComponent->__call('loadModel', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php(49): UserController->loadModel('0ED62EE28C3F7BB...')
+#2 [internal function]: UserController->actionUpdate('0ED62EE28C3F7BB...', NULL)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('update')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/update')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/update?username=0ED62EE28C3F7BBB
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/students?term_code=2122
+---
+2012/11/30 23:42:35 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (73)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)

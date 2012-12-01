@@ -41,13 +41,14 @@ class UserController extends Controller
 	}
 
 	/**
-	 * Updates a particular Book model.
-	 * @param integer $bookId the ID of the model to be updated
+	 * Updates a particular User model.
+	 * @param integer $username the username of the model to be updated
 	 */
-	public function actionUpdate($username, $term_code=null)
+	public function actionUpdate()
 	{
-	    $model = $this->loadModel($username);
-		$model->term_code = $term_code;
+		$model=User::loadModel();
+		if($model===null)
+			throw new CHttpException(404,'The requested user does not exist.');
 	    $view = 'update';
 	    if (!Yii::app()->user->checkAccess('admin'))
 			$view = 'view';

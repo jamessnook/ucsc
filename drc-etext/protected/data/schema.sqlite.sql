@@ -175,7 +175,10 @@ CREATE TABLE id_type (                  -- for drop down list of id types for bo
     name     VARCHAR(64) NOT NULL,      -- book id type
     primary key (name)
 );
-INSERT INTO id_type (name) VALUES ('isbn');
+INSERT INTO id_type (name) VALUES ('ISBN');
+INSERT INTO id_type (name) VALUES ('SBN');
+INSERT INTO id_type (name) VALUES ('pISSN');
+INSERT INTO id_type (name) VALUES ('e-ISSN');
 INSERT INTO id_type (name) VALUES ('other');
 INSERT INTO id_type (name) VALUES ('unknown');
 INSERT INTO id_type (name) VALUES ('none');
