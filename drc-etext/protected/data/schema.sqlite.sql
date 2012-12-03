@@ -72,7 +72,7 @@ drop table if exists file_type;
 CREATE TABLE file_type (    -- AIS feed
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     name         VARCHAR(32) NOT NULL,    -- file extension, AIS accomodation Type
-    caption      VARCHAR(128)   -- optional for display 
+    description      VARCHAR(128)   -- optional for display 
 );
 INSERT INTO file_type (name) VALUES ('docx');
 INSERT INTO file_type (name) VALUES ('doc');
@@ -160,7 +160,8 @@ CREATE TABLE file (
     path         VARCHAR(256) NOT NULL DEFAULT '', -- path for file on server under file root
     description  VARCHAR(512),  -- optional for display purposes
     parent_id    INTEGER,       -- optional parent object id, ie 'assignment' 
-    type_id      INTEGER,       -- file type (redundant with extension on path?)
+    type_id      INTEGER,       -- file type (redundant with extension on path?) not needed, use type
+    type         VARCHAR(32),       -- file type (redundant with extension on path?)
     order_num    INTEGER,       -- display or list order if member of a group (chapters in a book)
     created      DATETIME,      -- when requested
     modified     DATETIME,      -- date and time of last change
@@ -169,6 +170,8 @@ CREATE TABLE file (
     foreign key (parent_id) references book_request ("id")
     foreign key (type_id) references file_type ("id")
 );
+
+ALTER TABLE file ADD COLUMN type VARCHAR(32);
 
 drop table if exists id_type;
 CREATE TABLE id_type (                  -- for drop down list of id types for book ids 
@@ -221,6 +224,15 @@ CREATE TABLE assignment_file (         -- maps assignments to files
     file_id INTEGER NOT NULL,               --  
     primary key (assignment_id, file_id),
     foreign key (assignment_id) references assignment (id),
+    foreign key (file_id) references file (id)
+);
+
+drop table if exists file_association;
+CREATE TABLE file_association (         -- maps other models to files
+    file_id INTEGER NOT NULL,           --  
+    model_id INTEGER NOT NULL,         -- 
+    model_name VARCHAR(63) NOT NULL,         -- 
+    primary key (file_id, model_id, model_name),
     foreign key (file_id) references file (id)
 );
 

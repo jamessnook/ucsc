@@ -21,7 +21,7 @@
 		'columns'=>array(
 			array( 
 				'header'=>'Book Title', 
-				'class'=>'CLinksColumn',
+				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->title', 
 				'urlExpression'=>'array(\'course/updateBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
 			),
@@ -50,7 +50,7 @@
 				//'name'=>'edit', 
 				//'type'=>'raw',
 				//'value'=>'\'<a href="#" class="btn">Edit</a>\'', 
-				'class'=>'CLinksColumn',
+				'class'=>'LinksColumn',
 			 	'linkHtmlOptions'=>array('class'=>"btn"),
 				'labelExpression'=>'\'Edit\'', 
 				'urlExpression'=>'array(\'course/updateBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 

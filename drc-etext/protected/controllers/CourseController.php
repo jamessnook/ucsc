@@ -71,7 +71,7 @@ class CourseController extends Controller
 			$contentModel->attributes=$_POST['Completed'];
 		}
 		if(!$contentModel->save()) echo "ERROR could not save assignment."; // temporary error code
-		$this->redirect(array('assignments','term_code'=>$model->term_code,'class_num'=>$model->class_num));
+		$this->redirect(array('assignments','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
 	}
 
 	/**

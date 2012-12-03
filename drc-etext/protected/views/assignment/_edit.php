@@ -71,6 +71,7 @@
 					  ?>
 					  <?php echo $form->hiddenField($model,'term_code'); ?>
 					  <?php echo $form->hiddenField($model,'class_num'); ?>
+					  <?php echo $form->hiddenField($model,'id'); ?>
 
 			          <div class="form-actions">
 			          

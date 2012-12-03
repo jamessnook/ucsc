@@ -1,6 +1,6 @@
 <?php
 
-class AssignmentController extends Controller
+class AssignmentController extends FileController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -31,7 +31,7 @@ class AssignmentController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete', 'manage', 'index'),
+				'actions'=>array('delete', 'manage', 'index', 'uploadFile'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -40,6 +40,18 @@ class AssignmentController extends Controller
 		);
 	}
 
+    public function actions()
+    {
+        return array(
+            'uploadFile'=>array(
+                'class'=>'UploadAction',
+                'modelName'=>'Assignment',
+        		'path' =>'/../files/assignments',
+        		'subfolderVar' =>'id',
+        	),
+        );
+    }
+	
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
@@ -58,21 +70,23 @@ class AssignmentController extends Controller
 	}
 
 	/**
-	 * Manages all models.
+	 * Uploads files associated with assignemtn and Creates new models.
+	 * This version works with the yii xupload extension widget
 	 */
-	/*
-	public function actionManage($term_code=null)
+	/*public function actionUploadFile()
 	{
-		$model=new Assignment('search');
-		$model->unsetAttributes();  // clear any default values
-		//if(isset($_GET['Assignment']))
-		//	$model->attributes=$_GET['Assignment'];
-		$model->term_code = $term_code;
-			
-		$this->render('manage',array(
-			'model'=>$model,
-		));
+		$model = Assignment::loadModel();
+        $path = "t$model->term_code/c$model->class_num/a$model->id";
+        parent::actionXUpload('Assignment', $model->id, $path);
+        //if(isset($_REQUEST['id'])) { // save to assignemnt to file relation table
+        //if(isset($model->id) && $this->file) { // save to assignemnt to file relation table
+            $assignmentFile = new AssignmentFile();
+            $assignmentFile->file_id = $this->file->id;
+            $assignmentFile->assignment_id = $model->id;
+            //$assignmentFile->assignment_id = $_REQUEST['id'];
+            $assignmentFile->save();
+        //}
 	}
 	*/
-	
+		
 }

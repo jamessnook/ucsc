@@ -2,6 +2,8 @@
 
 class FileController extends Controller
 {
+	public $file = null;
+	
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
@@ -278,7 +280,87 @@ class FileController extends Controller
 	 * Uploads files and Creates new models.
 	 * This version works with the yii xupload extension widget
 	 */
-	public function actionXUpload($assignment_id=null)
+	public function actionXUpload($modelName=null, $parent_id=null, $path='')
+	{
+		//This is for IE which doens't handle 'Content-type: application/json' correctly
+	    header( 'Vary: Accept' );
+	    if( isset( $_SERVER['HTTP_ACCEPT'] ) 
+	        && (strpos( $_SERVER['HTTP_ACCEPT'], 'application/json' ) !== false) ) {
+	        header( 'Content-type: application/json' );
+	    } else {
+	        header( 'Content-type: text/plain' );
+	    }
+	 
+	    //Here we check if we are deleting and uploaded file
+	    if( isset( $_GET["_method"] ) ) {
+	        if( $_GET["_method"] == "delete" ) {
+	            if( $_GET["file"][0] !== '.' ) {
+	                $file = $path.$_GET["file"];
+	                if( is_file( $file ) ) {
+	                    unlink( $file );
+	                }
+	            }
+	            echo json_encode( true );
+	        }
+	    }
+		else {
+	        $file = CUploadedFile::getInstanceByName('file' );
+	        //We check that the file was successfully uploaded
+	        if( $file !== null ) {
+                $fileType = $file->getExtensionName();
+                $dirPath = Yii::app()->params['fileRoot'] . "/" . $path;
+                $publicPath = Yii::app()->params['publicFilePath'];
+            	$filename = $file->getName(). ".".$file->getExtensionName( );
+                if (!file_exists( $dirPath )){
+					mkdir( $dirPath, 0775, true);
+		        }
+                if ($file->saveAs($dirPath . "/" . $file->name)) {                	
+                    // add it to the main model now
+                    $file_add = new File();
+                    $file_add->name = $file->getName(); 
+                    $file_add->type = $fileType; 
+                    if(isset($_REQUEST['parent_id'])) {
+                    	$file_add->parent_id = $_REQUEST['parent_id']; 
+                    }
+                    $file_add->path = $path; 
+                    $file_add->save(); // DONE
+                    $this->file = $file_add;  //Copy to Object variable for use in other methods.
+	                //Now we need to tell our widget that the upload was succesfull
+	                //We do so, using the json structure defined in
+	                // https://github.com/blueimp/jQuery-File-Upload/wiki/Setup
+	                echo json_encode( array( array(
+	                        "name" => $file_add->name,
+	                        "type" => $file->getType( ),
+	                        "size" => $file->getSize( ),
+	                        "url" => $publicPath.$file->getName(),
+	                        "thumbnail_url" => $publicPath."thumbs/$filename",
+	                        "delete_url" => $this->createUrl( "XUpload", array(
+	                            "_method" => "delete",
+	                            "file" => $filename
+	                        ) ),
+	                        "delete_type" => "POST"
+	                    ) ) );
+                }
+                else {
+	                //If the upload failed for some reason we log some data and let the widget know
+	                echo json_encode( array( 
+	                    array( "error" => $model->getErrors( 'file' ),
+	                ) ) );
+	                Yii::log( "XUploadAction: ".CVarDumper::dumpAsString( $model->getErrors( ) ),
+	                    CLogger::LEVEL_ERROR, "FileController.actionXUpload" 
+	                );
+                }
+	        } else {
+	            throw new CHttpException( 500, "Could not upload file" );
+	        }
+		}       
+	}
+
+	/**
+	 * Uploads files and Creates new models.
+	 * This version works with the yii xupload extension widget
+	 */
+	public function actionXUploadOld($assignment_id=null)
 	{
 		// in case of Post data
 		if (!$assignment_id) $assignment_id = $_REQUEST['assignment_id'];

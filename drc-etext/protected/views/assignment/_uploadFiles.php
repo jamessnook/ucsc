@@ -22,11 +22,12 @@
           
    <?php
 	$this->widget('xupload.XUpload', array(
-	                    'url' => Yii::app()->createUrl("file/xUpload", array("assignment_id" => $model->id)),
+	                    'url' => Yii::app()->createUrl("assignment/uploadFile", array("id"=>$model->id)),
 	                    'model' => $model,
 	                    'attribute' => 'file',
 	                    'multiple' => true, 
-						'formView' => 'application.views.somemodel._form','formView' => 'application.views.assignment._xupload',
+						//'formView' => 'application.views.somemodel._form',
+						'formView' => 'application.views.assignment._xupload',
 						'htmlOptions' => array('id'=>'assignment-form'),
 	));
 	?>      

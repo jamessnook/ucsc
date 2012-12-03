@@ -21,7 +21,7 @@
 		'columns'=>array(
 			array( 
 				'header'=>'Assignment Title', 
-				'class'=>'CLinksColumn',
+				'class'=>'LinksColumn',
 				//'name'=>'title', 
 				//'value'=>'$data->title', 
 				'labelExpression'=>'$data->title', 
@@ -36,7 +36,7 @@
 			),
 			array( 
 				'header'=>'Files', 
-				'class'=>'CLinksColumn',
+				'class'=>'LinksColumn',
 				//'name'=>'fileCount()', 
 				//'type'=>'raw',
 				//'value'=>'\'<span class="badge">\' . $data->fileCount() . \'</span>\'', 

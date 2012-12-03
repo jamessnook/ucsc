@@ -69,7 +69,7 @@ class File extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'type' => array(self::BELONGS_TO, 'FileType', 'type_id'),
+			//'type' => array(self::BELONGS_TO, 'FileType', 'type_id'),
 			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
 			'assignmentIds' => array(self::HAS_MANY, 'AssignmentFile', 'file_id'),
 		);
@@ -174,4 +174,5 @@ class File extends CActiveRecord
         return rtrim(Yii::app()->params->fileRoot, '/\\').'/';
 	}
 
+	
 }
