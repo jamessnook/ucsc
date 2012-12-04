@@ -44,7 +44,7 @@ class BookUser extends UCSCModel
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			//array('book_id, username, start_date, end_date', 'safe', 'on'=>'search'),
-			array('book_id, username, start_date, end_date, is_purchased', 'safe'),
+			array('book_id, username, start_date, end_date, purchased', 'safe'),
 			);
 	}
 
@@ -67,7 +67,7 @@ class BookUser extends UCSCModel
 		return array(
 			'book_id' => 'Book',
 			'username' => 'Username',
-			'is_purchased' => 'Purchased',
+			'purchased' => 'Purchased',
 			'start_date' => 'Start Date',
 			'end_date' => 'End Date',
 		);

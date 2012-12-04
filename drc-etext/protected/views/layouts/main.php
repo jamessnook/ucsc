@@ -48,7 +48,7 @@
 				'encodeLabel'=>false,
 				'items'=>array(
 					array('label'=>'<i class="icon-info-sign"></i> About', 'url'=>array('/site/about')),
-					array('label'=>'<i class="icon-envelope-alt"></i> Contact', 'url'=>array('/site/contact')),
+					//array('label'=>'<i class="icon-envelope-alt"></i> Contact', 'url'=>array('/site/contact')),
 				), 
 			));
 			$this->widget('zii.widgets.CMenu',array(
@@ -57,10 +57,11 @@
 				'encodeLabel'=>false,
 				//'itemCssClass'=>'dropdown', 
 				'items'=>array(
-					array(
+					/*array(
 						'itemOptions'=>array('class'=>'dropdown'), 
 						'url'=>'#',
 						'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
+						
 						'label'=> '<i class="icon-cog"></i> Settings <b class="caret"></b>',
 						//'label'=> 'Fred',
 						'items'=>array(
@@ -69,7 +70,8 @@
 							array('label'=>'', 'itemOptions'=>array('class'=>'divider')),
 							array('label'=>'Help', 'url'=>array('/site/help')),
 						),
-					),
+						
+					),*/
 					array(
 						'itemOptions'=>array('class'=>'dropdown'), 
 						'url'=>'#',
@@ -78,7 +80,7 @@
 						//'label'=> 'Joe',
 						'items'=>array(
 							array('label'=>'My Profile', 'url'=>array('/user/profile')),
-							array('label'=>'My Groups', 'url'=>array('/user/groups')),
+							//array('label'=>'My Groups', 'url'=>array('/user/groups')),
 							array('label'=>'', 'itemOptions'=>array('class'=>'divider')),
 							array('label'=>'Logout', 'url'=>array('/site/logout')),
 						),
@@ -87,7 +89,7 @@
 			));
 			?>
 			<form class="navbar-search pull-right">
-				<input type="text" class="search-query" placeholder="Search"/>
+				<!--- <input type="text" class="search-query" placeholder="Search"/>  -->
 			</form>
           </div><!--/.nav-collapse -->
         </div>

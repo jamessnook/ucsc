@@ -17,6 +17,8 @@ INSERT INTO AuthItem (name, type) VALUES ('admin', 2);
 INSERT INTO AuthItem (name, type) VALUES ('maint', 2);
 INSERT INTO AuthItem (name, type) VALUES ('student', 2);
 INSERT INTO AuthItem (name, type) VALUES ('guest', 2);
+INSERT INTO AuthItem (name, type) VALUES ('staff', 2);
+INSERT INTO AuthItem (name, type) VALUES ('faculty', 2);
 
 drop table if exists 'AuthItemChild';
 create table 'AuthItemChild'

@@ -34,16 +34,24 @@
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
 							'active'=> false,  // disable for now
+							'visible'=>false,
 						),
 						array(
-							'label'=>'<i class="icon-group"></i> Roles', 
-							'url'=>array('/user/students', 'term_code'=>$model->term_code,), 
+							'label'=>'<i class="icon-user"></i> Staff', 
+							'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
 							'active'=> false,  // disable for now
 						),
 						array(
-							'label'=>'<i class="icon-user"></i> Users', 
+							'label'=>'<i class="icon-user"></i> Faculty', 
+							'url'=>array('/user/faculty', 'term_code'=>$model->term_code,), 
+							'itemOptions'=>array('class'=>'pull-right'), 
+							'visible'=>Yii::app()->user->checkAccess('admin'),
+							'active'=> false,  // disable for now
+						),
+						array(
+							'label'=>'<i class="icon-user"></i> Students', 
 							'url'=>array('/user/students', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'), 
@@ -78,8 +86,10 @@
 				} else {
 				  	$contentModel = $model;
 				}
-				echo $this->renderPartial($options['contentView'], array('options'=>$options, 'model'=>$contentModel)); // grid  
-			?>
+				$options['model'] = $contentModel;
+				//echo $this->renderPartial($options['contentView'], array('options'=>$options, 'model'=>$contentModel)); // grid  
+				echo $this->renderPartial($options['contentView'], $options); // grid  
+				?>
 	
 		  </div><!--/page-unit-->
         </div><!--/span-->

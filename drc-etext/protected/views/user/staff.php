@@ -1,8 +1,8 @@
 <?php
 	$options = array(
-		'contentView' => '../user/_list',
-		'dataProvider' => $model->students(),
-		'contentTitle' => 'DRC Students',
+		'contentView' => '../user/_staff',
+		//'dataProvider' => $model->staff(),
+		//'contentTitle' => 'DRC Students',
 		'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
 		'menuView' => '../layouts/_termMenu',
 	);	

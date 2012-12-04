@@ -31,11 +31,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'labelExpression'=>'$data->file->name', 
 			'urlExpression'=>'array(\'file/download\', \'id\'=>$data->file_id, )', 
 		),
-		array( 
+		/*array( 
 			'header'=>'Description', 
 			'name'=>'file.description', 
 			'value'=> '$data->file->description', 
-		 ),
+		 ),*/
 	),
 ));
 

@@ -46,7 +46,7 @@ return array(
 			'rules'=>array(
 				'<controller:(course)>/<view:(description|assignments|books|students|createAssignment|createBook)>/*'=>'<controller>/index',
 				'<controller:(assignment)>/<view:(manage)>/*'=>'<controller>/index',
-    			'<controller:(user)>/<view:(view|create|students)>/*'=>'<controller>/index',
+    			'<controller:(user)>/<view:(view|create|students|faculty|staff)>/*'=>'<controller>/index',
     			'<controller:(gii)>/*'=>'<controller>/index',
     			//'<controller:\w+>/<id:\d+>'=>'<controller>/view',
     			//'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

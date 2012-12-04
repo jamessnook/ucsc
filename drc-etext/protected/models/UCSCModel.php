@@ -59,6 +59,7 @@ class UCSCModel extends CActiveRecord
 		$aModel->unsetAttributes();  // clear any default values .. is this needed?
 		if ($params){
 			$aModel->attributes =$params; // or use setAttributes()
+			$aModel->setIsNewRecord(true);
 			$key = $aModel->getTableSchema()->primaryKey;
 			$tableParams = array();
 			// find primary key params that are in table model
@@ -69,9 +70,10 @@ class UCSCModel extends CActiveRecord
 			}
 			if (count($tableParams)>0){
 				$newModel=$aModel->findByAttributes($tableParams);
-				if($newModel)
+				if($newModel){
 					$aModel->attributes = $newModel->attributes;
 					$aModel->setIsNewRecord(false);
+				}
 			}
 		}
 		if(isset($_POST[$className])){

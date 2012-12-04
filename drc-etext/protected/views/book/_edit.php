@@ -91,6 +91,7 @@
 			          	if ($createNew){
 							echo $this->renderPartial('../file/_uploadAlert', array('model'=>$model)); 
 			          	} else {
+			          		echo $this->renderPartial('../book/_listStudents', array('model'=>$model)); 
 			          		echo $this->renderPartial('../file/_listFiles', array('model'=>$model)); 
 			          		echo $this->renderPartial('../book/_uploadFiles', array('model'=>$model)); 
 			          	}

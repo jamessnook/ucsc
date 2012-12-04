@@ -27,7 +27,7 @@ class BookController extends Controller
 	{
 		return array(
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete','uploadFile'),
+				'actions'=>array('delete','togglePurchased', 'uploadFile'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -57,7 +57,9 @@ class BookController extends Controller
 	{
 		$model = BookUser::loadModel();
 		$model->purchased = !$model->purchased;
+		//echo "p=$model->purchased n=$model->username book_id=$model->book_id";
 		$model->save();	
+		$this->redirect(Yii::app()->request->getUrlReferrer());
 	}
 
 	/**

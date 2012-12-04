@@ -51,7 +51,8 @@ class Book extends UCSCModel
 			array('author, publisher, edition', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, global_id, id_type, title, author, publisher, edition, year', 'safe', 'on'=>'search'),
+			//array('id, global_id, id_type, title, author, publisher, edition, year', 'safe', 'on'=>'search'),
+			array('id, global_id, id_type, title, author, publisher, edition, year', 'safe'),
 		);
 	}
 
@@ -132,11 +133,12 @@ class Book extends UCSCModel
 	{
 		// create sql to retieve students who will use this book and whether they have purchased it.
 		$sql = "SELECT DISTINCT user.username, user.first_name, user.last_name, book_user.purchased
-			FROM user JOIN drc_request USING (emplid) JOIN assignment USING (term_code, class_num) LEFT JOIN book_user USING (book_id)
-			WHERE assignment.book_id = $this->id";
+			FROM user JOIN drc_request USING (emplid) JOIN assignment USING (term_code, class_num) LEFT JOIN book_user USING (username, book_id)
+			WHERE assignment.book_id=" . $this->id;
 		
 		return new CSqlDataProvider($sql, array(
 		 	'pagination' => false,
+		 	'keyField' => 'username',
 		));
 	}
 

@@ -1,7 +1,7 @@
 
 <div class="row-fluid">
     <div class="span12">
-		<h3>Students</h3>
+		<h3><?php echo $contentTitle; 	?> </h3>
 
 	<?php 
 	
@@ -15,7 +15,7 @@
 	//if ($model->class_num) $params['class_num'] = $model->class_num;
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'drc-request-grid',
-		'dataProvider'=>$model->students(),
+		'dataProvider'=>$dataProvider,
 		//'filter'=>$model,
 		//'hideHeader'=>true,
 		'summaryText'=>'',
