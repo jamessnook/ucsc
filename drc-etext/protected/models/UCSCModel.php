@@ -71,6 +71,7 @@ class UCSCModel extends CActiveRecord
 				$newModel=$aModel->findByAttributes($tableParams);
 				if($newModel)
 					$aModel->attributes = $newModel->attributes;
+					$aModel->setIsNewRecord(false);
 			}
 		}
 		if(isset($_POST[$className])){

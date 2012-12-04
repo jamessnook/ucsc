@@ -107,5 +107,39 @@ class Book extends UCSCModel
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Retrieves a data provider that can provide list of files uploaded for this Assignment.
+	 * @return CActiveDataProvider the data provider that can return a list of File Association models.
+	 */
+	public function files()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->compare('model_id',$this->id);
+		$criteria->compare('model_name','Book');
+		
+		return new CActiveDataProvider('FileAssociation', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+
+		/**
+	 * Retrieves a data provider that can provide list of students for this Book.
+	 * @return CActiveDataProvider the data provider that can return a list of User models.
+	 */
+	public function students()
+	{
+		// create sql to retieve students who will use this book and whether they have purchased it.
+		$sql = "SELECT DISTINCT user.username, user.first_name, user.last_name, book_user.purchased
+			FROM user JOIN drc_request USING (emplid) JOIN assignment USING (term_code, class_num) LEFT JOIN book_user USING (book_id)
+			WHERE assignment.book_id = $this->id";
+		
+		return new CSqlDataProvider($sql, array(
+		 	'pagination' => false,
+		));
+	}
+
+	
 }
 	

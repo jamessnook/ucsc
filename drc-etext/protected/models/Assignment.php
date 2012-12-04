@@ -133,10 +133,10 @@ class Assignment extends UCSCModel
 	}
 
 	/**
-	 * Retrieves a list of AssignemtnFile models for this Assignment based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 * Retrieves a data provider that can provide list of files uploaded for this Book.
+	 * @return CActiveDataProvider the data provider that can return a list of File Association models.
 	 */
-	public function assignmentFiles()
+	public function files()
 	{
 		$criteria=new CDbCriteria;
 		$criteria->compare('model_id',$this->id);

@@ -1,6 +1,6 @@
 <?php
 
-class AssignmentController extends Controller
+class BookController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -26,12 +26,8 @@ class AssignmentController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('view'),
-				'users'=>array('@'),
-			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete', 'manage', 'index', 'uploadFile'),
+				'actions'=>array('delete','uploadFile'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -45,8 +41,8 @@ class AssignmentController extends Controller
         return array(
             'uploadFile'=>array(
                 'class'=>'UploadAction',
-                'modelName'=>'Assignment',
-        		'path' =>'/../files/assignments',
+                'modelName'=>'Book',
+        		'path' =>'/../files/books',
         		'subfolderVar' =>'id',
         	),
         );
@@ -57,36 +53,29 @@ class AssignmentController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
+	public function actionTogglePurchased()
+	{
+		$model = BookUser::loadModel();
+		$model->purchased = !$model->purchased;
+		$model->save();	
+	}
+
+	/**
+	 * Deletes a particular model.
+	 * If deletion is successful, the browser will be redirected to the 'admin' page.
+	 * @param integer $id the ID of the model to be deleted
+	 */
 	public function actionDelete($id)
 	{
 		if(Yii::app()->request->isPostRequest)
 		{
 			// we only allow deletion via POST request
-			Assignment::loadModel()->delete();
+			Book::loadModel()->delete();
 			$this->redirect(Yii::app()->request->url);
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
-	/**
-	 * Uploads files associated with assignemtn and Creates new models.
-	 * This version works with the yii xupload extension widget
-	 */
-	/*public function actionUploadFile()
-	{
-		$model = Assignment::loadModel();
-        $path = "t$model->term_code/c$model->class_num/a$model->id";
-        parent::actionXUpload('Assignment', $model->id, $path);
-        //if(isset($_REQUEST['id'])) { // save to assignemnt to file relation table
-        //if(isset($model->id) && $this->file) { // save to assignemnt to file relation table
-            $assignmentFile = new AssignmentFile();
-            $assignmentFile->file_id = $this->file->id;
-            $assignmentFile->assignment_id = $model->id;
-            //$assignmentFile->assignment_id = $_REQUEST['id'];
-            $assignmentFile->save();
-        //}
-	}
-	*/
-		
+	
 }

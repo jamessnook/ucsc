@@ -86,8 +86,16 @@
 			            </div>
 			          </div>
 
-					  <?php //echo CHtml::hiddenField('term_code',$_REQUEST['term_code']); ?>
-					  <?php //echo CHtml::hiddenField('class_num',$_REQUEST['class_num']); ?>
+			          <?php 
+			            // file upload section
+			          	if ($createNew){
+							echo $this->renderPartial('../file/_uploadAlert', array('model'=>$model)); 
+			          	} else {
+			          		echo $this->renderPartial('../file/_listFiles', array('model'=>$model)); 
+			          		echo $this->renderPartial('../book/_uploadFiles', array('model'=>$model)); 
+			          	}
+					  ?>
+					  <?php echo $form->hiddenField($model,'id'); ?>
 
 			          <div class="form-actions">
 			          

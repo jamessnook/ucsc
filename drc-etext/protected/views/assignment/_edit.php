@@ -63,9 +63,9 @@
 			          
 			          <?php 
 			          	if ($createNew){
-							echo $this->renderPartial('../assignment/_uploadAlert', array('model'=>$model)); 
+							echo $this->renderPartial('../file/_uploadAlert', array('model'=>$model)); 
 			          	} else {
-			          		echo $this->renderPartial('../assignment/_listFiles', array('model'=>$model)); 
+			          		echo $this->renderPartial('../file/_listFiles', array('model'=>$model)); 
 			          		echo $this->renderPartial('../assignment/_uploadFiles', array('model'=>$model)); 
 			          	}
 					  ?>
