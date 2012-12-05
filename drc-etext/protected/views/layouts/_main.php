@@ -41,21 +41,21 @@
 							'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=> false,  // disable for now
+							//'active'=> false,  // disable for now
 						),
 						array(
 							'label'=>'<i class="icon-user"></i> Faculty', 
 							'url'=>array('/user/faculty', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=> false,  // disable for now
+							//'active'=> false,  // disable for now
 						),
 						array(
 							'label'=>'<i class="icon-user"></i> Students', 
 							'url'=>array('/user/students', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'), 
-							'active'=> get_class($model) == 'User',
+							//'active'=> get_class($model) == 'User',
 						),
 					), 
 				));
@@ -96,7 +96,11 @@
 		<div class="span3">
           <div class="well">
             
-			<?php echo $this->renderPartial($options['menuView'], array('options'=>$options, 'model'=>$model)); // grid showong assignment list ?>
+			<?php 
+				if ($options['menuView'] != 'none' && strlen($options['menuView'])>2){
+			 		echo $this->renderPartial($options['menuView'], array('options'=>$options, 'model'=>$model)); // grid showong assignment list
+				} 
+			?>
             
           </div><!--/.well -->
         </div><!--/span-->

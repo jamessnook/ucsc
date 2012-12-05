@@ -60,10 +60,17 @@ class LinksColumn extends CLinkColumn
 		$options=$this->linkHtmlOptions;
 		if(is_string($this->imageUrl))
 			echo CHtml::link(CHtml::image($this->imageUrl,$label),$url,$options);
-		else if(is_array($url) && is_array($label)){
+		else if(is_array($label)){
 			$urlStr = '';
-			foreach($url as $i => $urlVal){
-				$urlStr .= CHtml::link($label[$i],$urlVal,$options). $this->separator;
+			if(is_array($url)){
+				foreach($url as $i => $urlVal){
+					$urlStr .= CHtml::link($label[$i],$urlVal,$options). $this->separator;
+				}
+			}
+			else {
+				foreach($label as $i => $labelVal){
+					$urlStr .= CHtml::link($labelVal,$url,$options). $this->separator;
+				}
 			}
 			if (strlen($urlStr)>1 ) $urlStr =  substr($urlStr, 0, -strlen($this->separator)); // trim last seperator
 			echo $urlStr;

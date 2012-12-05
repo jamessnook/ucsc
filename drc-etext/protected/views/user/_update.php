@@ -4,7 +4,7 @@
 		'title' => 'Update User Data',
 		'createNew'=>false,
 		//'action'=>Yii::app()->createUrl("book/update", array("id" => $model->id)),
-		'action'=>$options['action'],
+		'action'=>$action,
 	);	
 
 	echo $this->renderPartial('../user/_edit', $layoutOptions); 

@@ -1,7 +1,7 @@
 
 <div class="row-fluid">
     <div class="span12">
-		<h3>Students</h3>
+		<h3>Staff and Admin</h3>
 
 	<?php 
 	
@@ -33,11 +33,6 @@
 				'labelExpression'=>'$data->username',
 				'urlExpression'=>'array(\'user/update\', \'username\'=>$data->username)', 
 			),
-			array( 
-				'header'=>'EmplId', 
-				'name'=>'emplid', 
-				'value'=>'$data->emplid', 
-			 ),
 			 array( 
 				'header'=>'Name', 
 				'class'=>'LinksColumn',
@@ -46,26 +41,20 @@
 				'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')',  
 			 ),
 			 array( 
-				'header'=>'Courses', 
+				'header'=>'Roles', 
 				'class'=>'LinksColumn',
 				//'labelExpression'=>'\'test\'', 
 				//'urlExpression'=>'\'test\'', 
-			 	'labelExpression'=>'$data->drcRequestCourseNames()', 
-				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/students', 'modelParams'=>array('term_code'=>'term_code', 'class_num'=>'class_num')), 
+			 	'labelExpression'=>'$data->getRoles()', 
+				'urlExpression'=>'$data->getUrl()',
 			),
-			//array( 
-			//	'header'=>'Type', 
+			 //array( 
+			//	'header'=>'Authorization Level', 
 			//	'name'=>'drcRequests.type', 
 			//	'type'=>'raw',
 			//	'value'=>'\'<span class="badge">\' . $data->drcRequests[0]->type . \'</span>\'', 
+			//  Yii::app()->authManager->getRoles($username);
 			// ),
-			 array( 
-				'header'=>'Status', 
-				'class'=>'LinksColumn',
-			 	//'type'=>'raw',
-			 	'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')',  
-			 	'labelExpression'=>'$data->drcRequestsCompleted()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
-			),
 		),
 	)); 
 	?>

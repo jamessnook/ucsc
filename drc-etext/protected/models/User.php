@@ -73,7 +73,8 @@ class User extends UCSCModel
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'authItems' => array(self::MANY_MANY, 'AuthItem', 'AuthAssignment(userid, itemname)'),
+			//'authItems' => array(self::MANY_MANY, 'AuthItem', 'AuthAssignment(userid, itemname)'),
+			'authAssignments' => array(self::HAS_MANY,'AuthAssignment', 'userid, itemname'),
 			//'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid', 'joinType' => 'INNER JOIN'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid'),
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'modified_by'),
@@ -174,8 +175,10 @@ class User extends UCSCModel
 	public function staff()
 	{
 		$criteria=new CDbCriteria;
-		$criteria->with = array( 'drcRequests', 'drcRequests.course');
-		$criteria->compare('drcRequests.term_code',$this->term_code);
+		//$criteria->with = array( 'authAssignments');
+		$criteria->join = "JOIN AuthAssignment ON (username=userid)";
+		$criteria->addCondition("AuthAssignment.userid=t.username");
+		$criteria->addCondition("(AuthAssignment.itemname='staff' OR AuthAssignment.itemname='admin')");          
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -264,18 +267,22 @@ class User extends UCSCModel
 	}
 	
 	/**
-	 * Returns the data model based on the passed attributes.
-	 * Persues various ways of finding and creating the model
-	 * @param array of parameters
 	 */
-	/*public static function loadModel($params=null)
+	public function getRoles()
 	{
-		$aModel = parent::loadModel($params);
-		if (!isset($aModel->term_code)) 
-			//$aModel->term_code = Term::currentTermCode();
-		if (!isset($aModel->username)) 
-			$aModel->username = Yii::app()->user->name;
-		return $aModel;
-	}*/
+		$roles = array();
+		$items = Yii::app()->authManager->getRoles($this->username);
+		foreach($items as $name=>$item){
+			$roles[]=$name;
+		}
+		return $roles;
+	}
 	
+	/**
+	 */
+	public function getUrl()
+	{
+		return Yii::app()->createUrl('user/update', array('username'=>$this->username));
+	} 
+		
 }
