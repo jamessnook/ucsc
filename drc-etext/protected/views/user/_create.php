@@ -3,7 +3,7 @@
 		'model' => $model,
 		'title' => 'Create New User',
 		'createNew'=>true,
-		'action'=>$options['action'],
+		'action'=>$action,
 	);	
 
 	echo $this->renderPartial('../user/_edit', $layoutOptions); 

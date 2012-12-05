@@ -27,6 +27,7 @@
 class User extends UCSCModel
 {
 	public $term_code; // for non emplid matches
+	public $role;      // for authentication, to set user roles
 	
 	/**
 	 * Returns the static model of the specified AR class.
@@ -61,8 +62,9 @@ class User extends UCSCModel
 			array('created, modified, term_code', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by', 'safe', 'on'=>'search'),
-		);
+			//array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by', 'safe', 'on'=>'search'),
+			array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by, term_code, role', 'safe'),
+			);
 	}
 
 	/**
@@ -158,9 +160,11 @@ class User extends UCSCModel
 	public function faculty()
 	{
 		$criteria=new CDbCriteria;
-		$criteria->with = array( 'drcRequests', 'drcRequests.course');
-		$criteria->compare('drcRequests.term_code',$this->term_code);
-		
+		//$criteria->with = array( 'authAssignments');
+		$criteria->join = "JOIN AuthAssignment ON (username=userid)";
+		$criteria->addCondition("AuthAssignment.userid=t.username");
+		$criteria->addCondition("(AuthAssignment.itemname='faculty')");          
+				
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		 	'pagination' => false,

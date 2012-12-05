@@ -41,7 +41,7 @@ class XMLUpdater extends CApplicationComponent
 	/**
 	 * 
 	 * Recursive function to import the data in an individual xml element (node) into the local models
-	 * This method attempts t omatch the axml data to models using naimng congiured in the config/main.php.  
+	 * This method attempts to match the axml data to models using naming configured in the config/main.php.  
 	 * If there is no config information for a node the code attempts to match the node name to attributes or model names directly 
 	 * or by translating from camel case to underbar naming conventions.
 	 * @param SimpleXMLElement $xml  An object reperesentation of an xml node.
@@ -136,7 +136,7 @@ class XMLUpdater extends CApplicationComponent
     
      /**
       * 
-      * Updates alls ervers and services defined in the config/main.php file
+      * Updates all servers and services defined in the config/main.php file
 	 */
 
     public function updateAll()

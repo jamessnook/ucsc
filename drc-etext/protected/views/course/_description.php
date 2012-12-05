@@ -30,7 +30,7 @@
 			 ),
 			 array( 
 				'header'=>'Instructors', 
-				'class'=>'CLinksColumn',
+				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->facultyNames()', 
 				'urlExpression'=>'$data->facultyUrls()', 
 			 ),

@@ -62,7 +62,7 @@
 			          </div>
 
 			          <div class="control-group">
-        				<?php 	echo CHtml::label('Role', 'roleName'); ?>
+        				<?php 	echo CHtml::label('Role', 'role'); ?>
 			            <div class="controls">
 							
 					        <?php 	$username = $model->username;
@@ -73,7 +73,7 @@
 					        		foreach ($roles as $role){
 					        			$options[$role]=$role;
 					        		}
-					        		echo CHtml::dropDownList('roleName', $selected, $options);
+					        		echo CHtml::dropDownList('role', $selected, $options);
 					        ?>
 
 			            </div>

@@ -3,7 +3,7 @@
 		'model' => $model,
 		'title' => 'Create Book',
 		'createNew'=>true,
-		'action'=>$options['action'],
+		'action'=>$action,
 	);	
 
 	echo $this->renderPartial('../book/_edit', $layoutOptions); 

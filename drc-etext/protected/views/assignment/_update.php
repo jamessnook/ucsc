@@ -4,7 +4,7 @@
 		'title' => 'Update Assignment',
 		'createNew'=>false,
 		//'action'=>Yii::app()->createUrl("assignment/update", array("id" => $model->id)),
-		'action'=>$options['action'],
+		'action'=>$action,
 	);	
 
 	echo $this->renderPartial('../assignment/_edit', $layoutOptions); 

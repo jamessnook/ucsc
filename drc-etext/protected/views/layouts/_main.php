@@ -41,21 +41,21 @@
 							'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
-							//'active'=> false,  // disable for now
+							'active'=> get_class($model) == 'User' && (Yii::app()->authManager->checkAccess('staff', $model->username)||Yii::app()->authManager->checkAccess('admin', $model->username)),
 						),
 						array(
 							'label'=>'<i class="icon-user"></i> Faculty', 
 							'url'=>array('/user/faculty', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
-							//'active'=> false,  // disable for now
+							'active'=> get_class($model) == 'User' && Yii::app()->authManager->checkAccess('faculty', $model->username),
 						),
 						array(
 							'label'=>'<i class="icon-user"></i> Students', 
 							'url'=>array('/user/students', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'), 
-							//'active'=> get_class($model) == 'User',
+							'active'=> get_class($model) == 'User' && Yii::app()->authManager->checkAccess('student', $model->username),
 						),
 					), 
 				));
