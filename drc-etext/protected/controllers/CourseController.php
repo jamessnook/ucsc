@@ -31,7 +31,7 @@ class CourseController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('createAssignment','updateAssignment', 'saveAssignment', 'createBook','updateBook', 'saveABook', 'studentAssignments'),
+				'actions'=>array('createAssignment','updateAssignment', 'saveAssignment', 'createBook','updateBook', 'saveBook', 'studentAssignments', 'description', 'assignments', 'books', 'students', 'createAssignment', 'createBook'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -46,16 +46,17 @@ class CourseController extends Controller
 	 */
 	public function actionUpdateAssignment()
 	{
-		$contentModel=Assignment::loadModel();
-		$model = Course::loadModel(array('term_code' => $contentModel->term_code, 'class_num' => $contentModel->class_num));
-		
-		$view = 'updateAssignment';
-		if (!Yii::app()->user->checkAccess('admin'))
-			$view = 'view';
-			
-		$this->render($view,array(
-			'model'=>$model,
-			'contentModel' => $contentModel,
+	    if (!Yii::app()->user->checkAccess('admin')){
+			return $this->actionViewAssignment();
+	    }
+		$this->contentModel=Assignment::loadModel();
+		$this->model = Course::loadModel(array('term_code' => $this->contentModel->term_code, 'class_num' => $this->contentModel->class_num));
+		$this->renderView(array(
+			'contentView' => '../assignment/_edit',
+			'contentTitle' => 'Update Assignment',
+			'createNew'=>false,
+			'titleNavRight' => '<a href="' . $this->createUrl('course/createAssignment', array('content'=> 'assignment', 'term_code'=> $this->model->term_code, 'class_num'=>$this->model->class_num)) . '"><i class="icon-plus"></i> Add Request</a>',
+			'action'=>Yii::app()->createUrl("course/saveAssignment", array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num, 'id'=>$this->contentModel->id)),
 		));
 	}
 
@@ -83,14 +84,16 @@ class CourseController extends Controller
 	 */
 	public function actionUpdateBook()
 	{
-		$contentModel=Book::loadModel();
-		$model = Course::loadModel();
-		if($contentModel===null || $model===null)
-			throw new CHttpException(404,'The requested course and book do not exist.');
+		$this->contentModel=Book::loadModel();
+		if($this->contentModel===null)
+			throw new CHttpException(404,'The requested book does not exist here.');
 			
-		$this->render('updateBook',array(
-			'model'=>$model,
-			'contentModel' => $contentModel,
+		$this->renderView(array(
+			'contentView' => '../book/_edit',
+			'contentTitle' => 'Update Book',
+			'createNew'=>false,
+			'titleNavRight' => '<a href="' . $this->createUrl('book/create') . '"><i class="icon-plus"></i> Add Request</a>',
+			'action'=>Yii::app()->createUrl("course/saveBook", array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num, 'id'=>$this->contentModel->id)),
 		));
 	}
 
@@ -115,12 +118,15 @@ class CourseController extends Controller
 	 */
 	public function actionCourses($term_code=null)
 	{
-		$model = Course::loadModel();
-		if (!Yii::app()->user->checkAccess('admin')){
-			$model->username = Yii::app()->user->name;
+		// if you are not staf or admin you can only see your own courses
+		if (!Yii::app()->user->checkAccess('admin') && !Yii::app()->user->checkAccess('staff')){
+			$this->model->username = Yii::app()->user->name;
 		}
-		$this->render('courses',array(
-			'model'=>$model,
+		$this->renderView(array(
+			'contentView' => '../course/_list',
+			'menuView' => '../layouts/_termMenu',
+			'menuRoute' => 'course/courses',
+			'title' => 'All Courses',
 		));
 	}
 
@@ -130,21 +136,102 @@ class CourseController extends Controller
 	 */
 	public function actionAssignmentFiles()
 	{
-		$contentModel=Assignment::loadModel();
-		$model = Course::loadModel($contentModel->attributes);
-		$this->render('assignmentFiles',array(
-			'model'=>$model,
-			'contentModel' => $contentModel,
+		$this->contentModel=Assignment::loadModel();
+		$this->model = Course::loadModel($this->contentModel->attributes);
+		$this->renderView(array(
+			'contentView' => '../assignment/_listFiles',
 		));
 	}
 
 	/**
+	 * display students for the course.
+	 */
+	public function actionStudents()
+	{
+		$this->renderView(array(
+			'contentView' => '../user/_list',
+			'dataProvider' => $this->model->students(),
+			'contentTitle' => 'Course Students',
+		));
+	}
+	
+	/**
+	 * display students for the course.
+	 */
+	public function actionBooks()
+	{
+		$this->renderView(array(
+			'contentView' => '../book/_list',
+			'titleNavRight' => '<a href="' . $this->createUrl('course/createBook', array('content'=> 'book', 'term_code'=> $this->model->term_code, 'class_num'=>$this->model->class_num)) . '"><i class="icon-plus"></i> New Book </a>',
+		));
+	}
+	
+	/**
+	 * display students for the course.
+	 */
+	public function actionAssignments()
+	{
+		$this->renderView(array(
+			'contentView' => '../assignment/_list',
+			'titleNavRight' => '<a href="' . $this->createUrl('course/createAssignment', array('content'=> 'assignment', 'term_code'=> $this->model->term_code, 'class_num'=>$this->model->class_num)) . '"><i class="icon-plus"></i> Add Request</a>',
+		));
+	}
+	
+	/**
+	 * display students for the course.
+	 */
+	public function actionViewAssignment()
+	{
+		$this->contentModel=Assignment::loadModel();
+		$this->renderView(array(
+			'contentView' => '../assignment/_view',
+		));
+	}
+	
+	/**
+	 * display students for the course.
+	 */
+	public function actionCreateBook()
+	{
+		$this->renderView(array(
+			'contentView' => '../book/_edit',
+			'contentTitle' => 'Create Book',
+			'createNew'=>true,
+			'action'=>Yii::app()->createUrl("course/saveBook", array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num)),
+		));
+	}
+	
+	/**
+	 * display students for the course.
+	 */
+	public function actionCreateAssignment()
+	{
+		$this->renderView(array(
+			'contentView' => '../assignment/_edit',
+			'contentTitle' => 'Create Assignment',
+			'createNew'=>true,
+			'action'=>Yii::app()->createUrl("course/saveAssignment", array('term_code'=>$model->term_code, 'class_num'=>$model->class_num)),
+		));
+	}
+	
+	/**
+	 * display students for the course.
+	 */
+	public function actionDescription()
+	{
+		$this->renderView(array(
+			'contentView' => '_description',
+		));
+	}
+	
+	
+	/**
 	 * sets up default view options for rendering, called by super class render and passed to  view.
 	 */
-	public function setDefaultViewOptions($model)
+	public function setDefaultViewOptions()
 	{
 		$this->viewOptions['menuView'] = '../layouts/_courseMenu';  // default
-		$this->viewOptions['title'] = $model->title .' (' .$model->idString().')';
+		$this->viewOptions['title'] = $this->model->title .' (' .$this->model->idString().')';
 		$this->viewOptions['activeTab'] = "courses";
 	}
 	

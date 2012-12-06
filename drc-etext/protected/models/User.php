@@ -198,6 +198,9 @@ class User extends UCSCModel
 	public function courses()
 	{
 		$criteria=new CDbCriteria; 
+		if (!isset($this->term_code)) {
+			$this->term_code = Term::currentTermCode();
+		}
 		$criteria->compare('t.term_code',$this->term_code);
 		//$criteria->compare('emplid',$this->emplid);
 		//$criteria->compare('username',$this->username);

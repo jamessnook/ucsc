@@ -26,8 +26,8 @@ class Controller extends CController
 	public $breadcrumbs=array();
 
 	public $viewOptions = array();
-	public $model;
-	public $contentModel;
+	public $_model;
+	public $_contentModel;
 		
 	/**
 	 * A generic entry point for very similar actions.
@@ -38,8 +38,8 @@ class Controller extends CController
 		$content = null;
 		if(isset($_GET['view']))
 			$view = $_GET['view'];
-		$className = ucfirst($this->id);
-		$model = $className::loadModel();
+		//$className = ucfirst($this->id);
+		//$model = $className::loadModel();
 		// get optional content model for internal part of view
 		if (isset($_GET['content'])){
 			$className = ucfirst($_GET['content']);
@@ -49,7 +49,7 @@ class Controller extends CController
 		}
 		// pass model data and render the view file
 		$this->render($view,array(
-			'model'=>$model,
+			'model'=>$this->model,
 			'contentModel' => $content,
 		));
 	}
@@ -59,30 +59,64 @@ class Controller extends CController
 	 */
 	public function renderView($options=array())
 	{
-		if (!$this->model){
-			$className = ucfirst($this->id);
-			$this->model = $className::loadModel();
-		}
-		$this->render('../layouts/_main',array(
-			'options'=>$options,
-			'model'=>$this->model,
-		));
-	}
-	
-	/**
-	 * Add setting of default view options to render.
-	 */
-	public function render( $view, $params=array())
-	{
-		$this->setDefaultViewOptions($params['model']);
-		parent::render($view,$params);
+		$this->setDefaultViewOptions();
+		$this->viewOptions = array_merge ( $this->viewOptions, $options ); // note $options overide defaults
+		$this->viewOptions['model'] = $this->model;  // for convenience of access
+		$this->viewOptions['contentModel'] = $this->contentModel;  // for convenience of access
+		$this->render('../layouts/_main',$this->viewOptions);
 	}
 	
 	/**
 	 * does nothing, override in subclass.
 	 */
-	public function setDefaultViewOptions($model)
+	public function setDefaultViewOptions()
 	{
 	}
+	
+	/**
+	 * creates model if not yet sets.
+	 */
+	public function getModel()
+	{
+		if (!$this->_model){
+			$className = ucfirst($this->id);
+			$this->_model = $className::loadModel();
+		}
+		return $this->_model;
+	}
+	
+		/**
+	 * creates model if not yet sets.
+	 */
+	public function setModel($model)
+	{
+		$this->_model = $model;
+	}
+
+		/**
+	 * creates model if not yet sets.
+	 */
+	public function getContentModel()
+	{
+		if (!$this->_contentModel){
+			// get optional content model for internal part of view
+			if (isset($_GET['content'])){
+				$className = ucfirst($_GET['content']);
+				if (class_exists($className)){
+					$content = $className::loadModel();
+				}
+			}
+		}
+		return $this->_contentModel;
+	}
+	
+		/**
+	 * creates model if not yet sets.
+	 */
+	public function setContentModel($model)
+	{
+		$this->_contentModel = $model;
+	}
+	
 	
 }

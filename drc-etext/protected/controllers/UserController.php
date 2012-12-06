@@ -27,35 +27,17 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform 'courses' and 'view' actions
-				'actions'=>array('index', 'courses'),
+				'actions'=>array('index', 'courses', 'view'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete','save','update', 'courses', 'index'),
+				'actions'=>array('delete','save','update', 'courses', 'index', 'view', 'create', 'students', 'faculty', 'staff'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
-	}
-
-	/**
-	 * Updates a particular User model.
-	 * @param integer $username the username of the model to be updated
-	 */
-	public function actionUpdate()
-	{
-		$model=User::loadModel();
-		if($model===null)
-			throw new CHttpException(404,'The requested user does not exist.');
-	    $view = 'update';
-	    if (!Yii::app()->user->checkAccess('admin'))
-			$view = 'view';
-	    
-		$this->render('update',array(
-			'model'=>$model,
-		));
 	}
 
 	/**
@@ -91,60 +73,146 @@ class UserController extends Controller
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
+		/**
+	 * load form to update user data.
+	 */
+	public function actionView()
+	{
+		//$this->model = User::loadModel();
+		$this->renderView(array(
+			'contentView' => '../user/_view',
+			'menuView' => '../layouts/_userMenu',
+		));
+	}
+	
 
 	/**
-	 * Display courses for a drc student.
+	 * load form to update user data.
 	 */
-	public function actionCourses($term_code=null, $username=null, $emplid=null)
+	public function actionStudents()
 	{
-		if (!Yii::app()->user->checkAccess('admin')){
-			$username = Yii::app()->user->name;
-			$model=User::model()->findByPk($username);
-		}
-		if ($username){
-			$model=User::model()->findByPk($username);
-		} else if ($emplid) {
-			$model=User::model()->findByAttributes(array('emplid'=>$emplid));
-		} else {
-			$model=new User('search');
-			$model->unsetAttributes();  // clear any default values
-		}
-
-		if (!$term_code) $term_code = Term::currentTermCode();
-		$model->term_code = $term_code;
-		
-		$this->model = $model;
+		//$this->model = User::loadModel();
 		$this->renderView(array(
-			'contentView' => '../course/_list',
+			'contentView' => '../user/_list',
+			'dataProvider' => $this->model->students(),
+			'contentTitle' => 'DRC Students',
+			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'menuView' => '../layouts/_termMenu',
-			'menuRoute' => 'user/courses',
-			'titleNavRight' => '<a href="' . $this->createUrl('user/update', array('term_code'=> $model->term_code, 'username'=>$model->username)) . '"><i class="icon-plus"></i> User Profile</a>',
+			'menuRoute' => 'user/students',
 		));
 	}
 	
 	/**
-	 * sets up default view options for rendering, called by super class render and passed to  view.
+	 * load form to update user data.
 	 */
-	public function setDefaultViewOptions($model)
+	public function actionStaff()
 	{
-		$options['title']="($model->username) $model->first_name $model->last_name";
+		//$this->model = User::loadModel();
+		$this->renderView(array(
+			'contentView' => '../user/_staff',
+			'title' => 'Curent DRC User Accounts',
+			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'menuView' => '',
+			'activeTab' => 'staff',
+		));
+	}
+	
+		/**
+	 * load form to update user data.
+	 */
+	public function actionFaculty()
+	{
+		//$this->model = User::loadModel();
+		$this->renderView(array(
+			'contentView' => '../user/_list',
+			'dataProvider' => $this->model->faculty(),
+			'contentTitle' => 'Faculty',
+			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'menuView' => '../layouts/_termMenu',
+			'menuRoute' => 'user/faculty',
+			'activeTab' => 'faculty',
+		));
+	}
+	
+	/**
+	 * load form to update user data.
+	 */
+	public function actionUpdate()
+	{
+	    if (!Yii::app()->user->checkAccess('admin')){
+			return $this->actionView();
+	    }
+		$this->model = User::loadModel();
+		if($this->model===null)
+			throw new CHttpException(404,'The requested user does not exist.');
+		$this->renderView(array(
+			'contentView' => '../user/_edit',
+			'contentTitle' => 'Update User Data',
+			'createNew'=>false,
+			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'action'=>Yii::app()->createUrl("user/save", array('username'=>$this->model->username)),
+			'menuView' => '../layouts/_userMenu',
+		));
+	}
+	
+	/**
+	 * load form to create new user.
+	 */
+	public function actionCreate()
+	{
+		//$this->model = User::loadModel();
+		$this->renderView(array(
+			'contentView' => '../user/_edit',
+			'contentTitle' => 'Create New User',
+			'createNew'=>true,
+			'activeTab'=>'staff',
+			'action'=>$this->createUrl("user/save"),
+			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'menuView' => '../layouts/_userMenu',
+		));
+	}
+	
+	/**
+	 * Display courses for a drc student.
+	 */
+	public function actionCourses()
+	{
+		if (!Yii::app()->user->checkAccess('admin')){
+			$this->model=User::model()->findByPk(Yii::app()->user->name);
+		} else {
+			$this->model = User::loadModel();
+		}
+		$this->renderView(array(
+			'contentView' => '../course/_list',
+			'menuView' => '../layouts/_termMenu',
+			'menuRoute' => 'user/courses',
+			'titleNavRight' => '<a href="' . $this->createUrl('user/update', array('term_code'=> $this->model->term_code, 'username'=>$this->model->username)) . '"><i class="icon-plus"></i> User Profile</a>',
+		));
+	}
+	
+	/**
+	 * sets up default view options for rendering, called by super class renderView and passed to views.
+	 */
+	public function setDefaultViewOptions()
+	{
+		$model = $this->model;
+		$this->viewOptions['title']="($model->username) $model->first_name $model->last_name";
 		if (!$model->username || $model->username ==''){
-			$options['title'] = "Users";
+			$this->viewOptions['title'] = "Users";
 			if ($model->term_code){
 				$term=Term::model()->findByPk($model->term_code);
-				$options['title'] = $term->description;
+				$this->viewOptions['title'] = $term->description;
 			}
 		}
-		$options['activeTab'] = "students";
+		$this->viewOptions['activeTab'] = "students";
 		if ($model->username){
 			if(Yii::app()->authManager->checkAccess('staff', $model->username))
-				$options['activeTab'] = "staff";
+				$this->viewOptions['activeTab'] = "staff";
 			if (Yii::app()->authManager->checkAccess('admin', $model->username)) 
-				$options['activeTab'] = "staff";
+				$this->viewOptions['activeTab'] = "staff";
 			if (Yii::app()->authManager->checkAccess('faculty', $model->username)) 
-				$options['activeTab'] = "faculty";
+				$this->viewOptions['activeTab'] = "faculty";
 		}
-		$this->viewOptions = $options;
 	}
 	
 }

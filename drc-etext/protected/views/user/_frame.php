@@ -22,7 +22,10 @@
 		}
 	}
 	
-	echo $this->renderPartial('../layouts/_main',  array('options'=>$options, 'model' => $model,)); 
+	$this->viewOptions = $options;
+	$this->model = $model;
+	$options['model'] = $model;
+	echo $this->renderPartial('../layouts/_main', $options); 
 	 
 ?>
 

@@ -1,5 +1,8 @@
 <!--Main layout Frame for UCSC web app -->
-
+<?php 
+$options = $this->viewOptions;
+?>
+			  
 	<div class="subnavbar">
       <div class="subnavbar-inner">
         <div class="container-fluid">
@@ -41,7 +44,7 @@
 							'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=> $options['activeTab'] == 'staff',
+							'active'=> $activeTab == 'staff',
 							//'active'=> get_class($model) == 'User' && (Yii::app()->authManager->checkAccess('staff', $model->username)||Yii::app()->authManager->checkAccess('admin', $model->username)),
 						),
 						array(
@@ -49,14 +52,14 @@
 							'url'=>array('/user/faculty', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=>  $options['activeTab'] == 'faculty',
+							'active'=>  $activeTab == 'faculty',
 						),
 						array(
 							'label'=>'<i class="icon-user"></i> Students', 
 							'url'=>array('/user/students', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'), 
-							'active'=> $options['activeTab'] == 'students',
+							'active'=> $activeTab == 'students',
 						),
 					), 
 				));
@@ -74,23 +77,19 @@
 
 			<div class="page-head">
 				<div class="row-fluid">
-					<h1 class="pull-left"><?php echo $options['title']; ?></h1>
+					<h1 class="pull-left"><?php echo $title; ?></h1>
 					<ul class="nav nav-pills pull-right">
-						<li><?php if (isset($options['titleNavRight'])) echo $options['titleNavRight']; ?></li>
+						<li><?php if (isset($titleNavRight)) echo $titleNavRight; ?></li>
 					</ul>
 				</div><!--/row-->
 			</div><!--/head-->
 			
 			<?php 
-				if (isset($options['contentModel'])){
-				  	$contentModel = $options['contentModel'];
-				} else {
-				  	$contentModel = $model;
-				}
-				$options['model'] = $contentModel;
-				//echo $this->renderPartial($options['contentView'], array('options'=>$options, 'model'=>$contentModel)); // grid  
-				echo $this->renderPartial($options['contentView'], $options); // grid  
-				?>
+				if (isset($contentModel)){
+					$options['model'] = $contentModel; // use inner content model if it exists
+				} 
+				echo $this->renderPartial($contentView, $options); // grid  
+			?>
 	
 		  </div><!--/page-unit-->
         </div><!--/span-->
@@ -98,9 +97,9 @@
           <div class="well">
             
 			<?php 
-				if ($options['menuView'] != 'none' && strlen($options['menuView'])>2){
-					$options['model'] = $model; // use outer model not content model
-					echo $this->renderPartial($options['menuView'], $options); // grid showong assignment list
+				if ($menuView != 'none' && strlen($menuView) > 1){
+					$options['model'] = $model; // restore to use outer model not content model
+					echo $this->renderPartial($menuView, $options); // grid showong assignment list
 				} 
 			?>
             
