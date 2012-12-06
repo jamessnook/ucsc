@@ -25,7 +25,10 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
-
+	public $viewOptions = array();
+	public $model;
+	public $contentModel;
+		
 	/**
 	 * A generic entry point for very similar actions.
 	 */
@@ -49,6 +52,37 @@ class Controller extends CController
 			'model'=>$model,
 			'contentModel' => $content,
 		));
+	}
+
+	/**
+	 * Add setting of default view options to render.
+	 */
+	public function renderView($options=array())
+	{
+		if (!$this->model){
+			$className = ucfirst($this->id);
+			$this->model = $className::loadModel();
+		}
+		$this->render('../layouts/_main',array(
+			'options'=>$options,
+			'model'=>$this->model,
+		));
+	}
+	
+	/**
+	 * Add setting of default view options to render.
+	 */
+	public function render( $view, $params=array())
+	{
+		$this->setDefaultViewOptions($params['model']);
+		parent::render($view,$params);
+	}
+	
+	/**
+	 * does nothing, override in subclass.
+	 */
+	public function setDefaultViewOptions($model)
+	{
 	}
 	
 }

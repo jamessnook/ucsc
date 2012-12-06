@@ -1,8 +1,10 @@
 <?php
 
 	$options = array(
-		'contentView' => '../assignment/_create',
+		'contentView' => '../assignment/_edit',
 		'contentModel' => $contentModel,
+		'contentTitle' => 'Create Assignment',
+		'createNew'=>true,
 		'action'=>Yii::app()->createUrl("course/saveAssignment", array('term_code'=>$model->term_code, 'class_num'=>$model->class_num)),
 	);	
 

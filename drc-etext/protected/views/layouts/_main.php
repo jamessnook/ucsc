@@ -41,21 +41,22 @@
 							'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=> get_class($model) == 'User' && (Yii::app()->authManager->checkAccess('staff', $model->username)||Yii::app()->authManager->checkAccess('admin', $model->username)),
+							'active'=> $options['activeTab'] == 'staff',
+							//'active'=> get_class($model) == 'User' && (Yii::app()->authManager->checkAccess('staff', $model->username)||Yii::app()->authManager->checkAccess('admin', $model->username)),
 						),
 						array(
 							'label'=>'<i class="icon-user"></i> Faculty', 
 							'url'=>array('/user/faculty', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=> get_class($model) == 'User' && Yii::app()->authManager->checkAccess('faculty', $model->username),
+							'active'=>  $options['activeTab'] == 'faculty',
 						),
 						array(
 							'label'=>'<i class="icon-user"></i> Students', 
 							'url'=>array('/user/students', 'term_code'=>$model->term_code,), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'), 
-							'active'=> get_class($model) == 'User' && Yii::app()->authManager->checkAccess('student', $model->username),
+							'active'=> $options['activeTab'] == 'students',
 						),
 					), 
 				));
@@ -98,7 +99,8 @@
             
 			<?php 
 				if ($options['menuView'] != 'none' && strlen($options['menuView'])>2){
-			 		echo $this->renderPartial($options['menuView'], array('options'=>$options, 'model'=>$model)); // grid showong assignment list
+					$options['model'] = $model; // use outer model not content model
+					echo $this->renderPartial($options['menuView'], $options); // grid showong assignment list
 				} 
 			?>
             

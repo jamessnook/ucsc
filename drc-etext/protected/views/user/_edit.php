@@ -9,7 +9,7 @@
 
 		<div class="row-fluid">
             <div class="span12">
-				<h2><?php echo $title; ?></h2>
+				<h2><?php echo $contentTitle; ?></h2>
 				<br />
 				
             	<form class="" action="request-edit.html">
@@ -68,6 +68,8 @@
 					        <?php 	$username = $model->username;
 					        		$userRoles = Yii::app()->authManager->getRoles($username);
 					        		$selected = key($userRoles);
+					        		//if (!$username) $selected = rtrim($activeTab, 's');
+					        		if (!$username) $selected = 'staff';
 					        		$options = array();
 					        		$roles = array_keys (Yii::app()->authManager->getRoles());
 					        		foreach ($roles as $role){

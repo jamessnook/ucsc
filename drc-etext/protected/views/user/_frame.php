@@ -1,5 +1,5 @@
 <?php
-	// User Frame
+	// User Frame, set up defaults
 	if (!isset($options['title'])){
 		$options['title'] = "($model->username) $model->first_name $model->last_name";
 		if (!$model->username || $model->username ==''){
@@ -10,7 +10,18 @@
 			}
 		}
 	}
-
+	if (!isset($options['activeTab'])){
+		$options['activeTab'] = "students";
+		if ($model->username){
+			if(Yii::app()->authManager->checkAccess('staff', $model->username))
+				$options['activeTab'] = "staff";
+			if (Yii::app()->authManager->checkAccess('admin', $model->username)) 
+				$options['activeTab'] = "staff";
+			if (Yii::app()->authManager->checkAccess('faculty', $model->username)) 
+				$options['activeTab'] = "faculty";
+		}
+	}
+	
 	echo $this->renderPartial('../layouts/_main',  array('options'=>$options, 'model' => $model,)); 
 	 
 ?>

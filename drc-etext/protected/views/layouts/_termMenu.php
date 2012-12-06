@@ -26,10 +26,13 @@
 	// create menu item for each term
 	foreach($dataReader as $row) { 
 		$params['term_code'] = $row['term_code'];
+		$route = $this->route;
+		if (isset($menuRoute)) 
+			$route = $menuRoute;
 		$menuItems[] = array(
 			'label'=>$row['description'],
 			//'url'=> $this->createUrl(Yii::app()->request->getPathInfo(), $params), 
-			'url'=> $this->createUrl($this->route, $params), 
+			'url'=> $this->createUrl($route, $params), 
 			'active'=> $model->term_code == $row['term_code'],
 		);
 	}

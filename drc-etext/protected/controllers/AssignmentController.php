@@ -70,23 +70,16 @@ class AssignmentController extends Controller
 	}
 
 	/**
-	 * Uploads files associated with assignemtn and Creates new models.
-	 * This version works with the yii xupload extension widget
+	 * sets up default view options for rendering, called by super class render and passed to  view.
 	 */
-	/*public function actionUploadFile()
+	public function setDefaultViewOptions($model)
 	{
-		$model = Assignment::loadModel();
-        $path = "t$model->term_code/c$model->class_num/a$model->id";
-        parent::actionXUpload('Assignment', $model->id, $path);
-        //if(isset($_REQUEST['id'])) { // save to assignemnt to file relation table
-        //if(isset($model->id) && $this->file) { // save to assignemnt to file relation table
-            $assignmentFile = new AssignmentFile();
-            $assignmentFile->file_id = $this->file->id;
-            $assignmentFile->assignment_id = $model->id;
-            //$assignmentFile->assignment_id = $_REQUEST['id'];
-            $assignmentFile->save();
-        //}
+		$options['menuView'] = '../layouts/_termMenu';
+		$options['title'] = $model->title;
+		if (!$model->title || $model->title =='') {
+			$options['title'] = "Assignments";
+		}
+		$this->viewOptions['activeTab'] = "assignment";
 	}
-	*/
-		
+			
 }

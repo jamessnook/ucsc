@@ -70,7 +70,10 @@ class CourseController extends Controller
 			$contentModel->is_complete=true; // because it is not a form field in the post data
 			$contentModel->attributes=$_POST['Completed'];
 		}
-		if(!$contentModel->save()) echo "ERROR could not save assignment."; // temporary error code
+		if(isset($_POST['Completed'])||isset($_POST['Assignment'])) {
+			if(!$contentModel->save())
+				throw new CHttpException(404,'ERROR could not save assignment.'); // temporary error code
+		}
 		$this->redirect(array('assignments','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
 	}
 
@@ -101,10 +104,10 @@ class CourseController extends Controller
 
 		if(isset($_POST['Book']))
 		{
-			if($contentModel->save())
-				$this->redirect(array('books','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
+			if(!$contentModel->save())
+				throw new CHttpException(404,'ERROR could not save book.'); // temporary error code
 		}
-		$this->redirect(array('newBook','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
+		$this->redirect(array('books','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
 	}
 
 	/**
@@ -135,4 +138,15 @@ class CourseController extends Controller
 		));
 	}
 
+	/**
+	 * sets up default view options for rendering, called by super class render and passed to  view.
+	 */
+	public function setDefaultViewOptions($model)
+	{
+		$this->viewOptions['menuView'] = '../layouts/_courseMenu';  // default
+		$this->viewOptions['title'] = $model->title .' (' .$model->idString().')';
+		$this->viewOptions['activeTab'] = "courses";
+	}
+	
+	
 }

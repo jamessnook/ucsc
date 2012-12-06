@@ -6,6 +6,7 @@
 		//'contentTitle' => 'DRC Students',
 		'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
 		'menuView' => '',
+		'activeTab' => 'staff',
 	);	
 
 	echo $this->renderPartial('_frame', array('options'=>$options, 'model' => $model,)); 

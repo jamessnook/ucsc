@@ -7195,3 +7195,281 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php/user/save/username/5C363122591DF641
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/update/username/5C363122591DF641
 ---
+2012/12/05 20:20:45 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 20:24:23 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "index".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php(51): CController->render('index', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): Controller->actionIndex()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('index')
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/index/term...')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/index/term_code/2122
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/students
+---
+2012/12/05 20:25:02 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 21:23:13 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 21:23:37 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "index".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php(51): CController->render('index', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): Controller->actionIndex()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('index')
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/index/term...')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/user/index/term_code/2122
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/students/term_code
+---
+2012/12/05 21:23:39 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 21:26:59 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 21:27:53 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 21:28:06 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 21:30:43 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 21:32:44 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 21:32:50 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 22:58:06 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:02:41 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:02:45 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:07:04 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:07:11 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:07:14 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:14:31 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:14:36 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:16:17 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:16:26 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:16:27 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:16:29 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:16:37 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/05 23:16:48 [error] [php] Undefined index: view (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_main.php:44)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php(14): UserController->renderPartial()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): UserController->renderInternal()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): UserController->renderFile()
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\courses.php(10): UserController->renderPartial()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): UserController->renderInternal()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): UserController->renderFile()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): UserController->renderPartial()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php(118): UserController->render()
+#11 unknown(0): UserController->actionCourses()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#24 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/drc-etext/index.php/user/courses/username/842882F5D2B9440E/term_code/2122
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_main.php (44)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\_frame.php (14)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\user\courses.php (10)
+2012/12/06 00:46:23 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:00:08 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:00:12 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:00:15 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:00:30 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:00:38 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:00:48 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:07:20 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:07:25 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:07:29 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:07:52 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:10:06 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:11:11 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:15:04 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (49)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:15:58 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:16:11 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:16:20 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:20:08 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:21:15 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:28:54 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:28:57 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:29:00 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:29:12 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:29:15 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:31:18 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:31:29 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:31:43 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/06 01:48:02 [warning] [application] Failed to set unsafe attribute "view" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (61)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (39)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)

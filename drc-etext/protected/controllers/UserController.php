@@ -62,32 +62,16 @@ class UserController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionSave($username=null)
+	public function actionSave()
 	{
-		$model=new User;
-		if ($username) $model = $this->loadModel($username);
-		//if (!$model) $model=new User;
-		
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$model = User::loadModel();
 
-		if(isset($_POST['User']))
-		{
-			$model->attributes=$_POST['User'];
-	        if( $model->save()!==false )
-	        {
-	            // remove existing roles for user
-	            // assumes we allow only one role per user
-		        $userRoles = Yii::app()->authManager->getRoles($model->username);
-		        foreach ($userRoles as $name => $authItem){
-		        	Yii::app()->authManager->revoke($name, $model->username);
-		        }
-	            // Assign the role to the user 
-                Yii::app()->authManager->assign($_POST['roleName'], $model->username);
-                $this->redirect(array('students','username'=>$model->username));
-	        }
+		if(isset($_POST['User'])){
+			if(!$model->save()) {
+				throw new CHttpException(404,'ERROR could not save user data.'); // temporary error code
+			}
 		}
-		$this->redirect(array('create'));
+		$this->redirect(Yii::app()->request->getUrlReferrer()); // back from wence yee came
 	}
 
 	/**
@@ -129,9 +113,38 @@ class UserController extends Controller
 		if (!$term_code) $term_code = Term::currentTermCode();
 		$model->term_code = $term_code;
 		
-		$this->render('courses',array(
-			'model'=>$model,
+		$this->model = $model;
+		$this->renderView(array(
+			'contentView' => '../course/_list',
+			'menuView' => '../layouts/_termMenu',
+			'menuRoute' => 'user/courses',
+			'titleNavRight' => '<a href="' . $this->createUrl('user/update', array('term_code'=> $model->term_code, 'username'=>$model->username)) . '"><i class="icon-plus"></i> User Profile</a>',
 		));
 	}
-
+	
+	/**
+	 * sets up default view options for rendering, called by super class render and passed to  view.
+	 */
+	public function setDefaultViewOptions($model)
+	{
+		$options['title']="($model->username) $model->first_name $model->last_name";
+		if (!$model->username || $model->username ==''){
+			$options['title'] = "Users";
+			if ($model->term_code){
+				$term=Term::model()->findByPk($model->term_code);
+				$options['title'] = $term->description;
+			}
+		}
+		$options['activeTab'] = "students";
+		if ($model->username){
+			if(Yii::app()->authManager->checkAccess('staff', $model->username))
+				$options['activeTab'] = "staff";
+			if (Yii::app()->authManager->checkAccess('admin', $model->username)) 
+				$options['activeTab'] = "staff";
+			if (Yii::app()->authManager->checkAccess('faculty', $model->username)) 
+				$options['activeTab'] = "faculty";
+		}
+		$this->viewOptions = $options;
+	}
+	
 }

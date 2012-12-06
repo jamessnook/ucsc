@@ -9,7 +9,7 @@
 
 		<div class="row-fluid">
             <div class="span12">
-				<h2><?php echo $title; ?></h2>
+				<h2><?php echo $contentTitle; ?></h2>
 				<br />
 				
             	<form class="" action="request-edit.html">
