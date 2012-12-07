@@ -22,27 +22,27 @@
 			array( 
 				'header'=>'Subject', 
 				'name'=>'subject', 
-				'value'=>'$data->subject', 
+				'value'=>'$data[\'subject\']', 
 			 ),
 			array( 
 				'header'=>'Message', 
 				'name'=>'message', 
-				'value'=>'$data->message', 
+				'value'=>'$data[\'message\']', 
 			 ),
 			 array( 
 				'header'=>'Type', 
 				'name'=>'type', 
-				'value'=>'$data->type->name', 
+				'value'=>'$data[\'name\']', 
 			 ),
 			 array( 
 				'header'=>'Order', 
 				'name'=>'order', 
-				'value'=>'$data->type->sequence', 
+				'value'=>'$data[\'sequence\']', 
 			 ),
 			 array( 
 				'header'=>'Tone', 
 				'name'=>'tone', 
-				'value'=>'$data->type->tone', 
+				'value'=>'$data[\'tone\']', 
 			 ),
 			array( 
 				'header'=>'Status, click to send', 
@@ -55,14 +55,14 @@
 				'class'=>'LinksColumn',
 			 	'linkHtmlOptions'=>array('class'=>"btn"),
 				'labelExpression'=>'\'Edit\'', 
-				'urlExpression'=>'array(\'course/updateEmail\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
+				'urlExpression'=>'array(\'course/updateEmail\', \'id\'=>$data[\'id\'], \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
 			 ),
 			 array( 
 				'header'=>'', 
 				'class'=>'LinksColumn',
 			 	'linkHtmlOptions'=>array('class'=>"btn"),
 				'labelExpression'=>'\'Remove\'', 
-				'urlExpression'=>'array(\'course/removeEmail\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
+				'urlExpression'=>'array(\'course/removeEmail\', \'id\'=>$data[\'id\'], \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
 			 ),
 		),
 	)); 

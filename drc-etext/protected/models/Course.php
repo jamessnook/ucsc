@@ -214,14 +214,14 @@ class Course extends UCSCModel
 	public function emails()
 	{
 		// create sql to retieve students who will use this book and whether they have purchased it.
-		$sql = "SELECT DISTINCT email.id, email.subject, email.message, email_type.name, email_type.sequence, email_type.tone, email_sent.email_id>0 AS sent
+		$sql = "SELECT DISTINCT email.id, email.enabled, email.subject, email.message, email_type.name, email_type.sequence, email_type.tone, email_sent.term_code AS sent
 			FROM email JOIN email_type ON (email.type = email_type.name) 
 			LEFT JOIN email_sent ON (email_sent.email_id = email.id AND email_sent.term_code=$this->term_code AND email_sent.class_num=$this->class_num)
-			WHERE email.enabled=1 OR email_sent.email_id>0 ORDER BY email_type.sequence ASC";
+			WHERE email.enabled>0 OR email_sent.email_id>0 ORDER BY email_type.sequence ASC";
 		
 		return new CSqlDataProvider($sql, array(
 		 	'pagination' => false,
-		 	'keyField' => 'username',
+		 	'keyField' => 'id',
 		));
 	}
 

@@ -34,7 +34,7 @@ class CourseController extends Controller
 				'actions'=>array('createAssignment','updateAssignment', 'saveAssignment', 
 					'createBook','updateBook', 'saveBook', 'studentAssignments', 'description', 
 					'assignments', 'books', 'students', 'createAssignment', 'createBook',
-					'emails', 'saveEmail', 'updateEmail', 'createEmail',),
+					'emails', 'saveEmail', 'updateEmail', 'createEmail', 'sendEmail', 'removeEmail'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -74,10 +74,8 @@ class CourseController extends Controller
 			$contentModel->is_complete=true; // because it is not a form field in the post data
 			$contentModel->attributes=$_POST['Completed'];
 		}
-		if(isset($_POST['Completed'])||isset($_POST['Assignment'])) {
-			if(!$contentModel->save())
-				throw new CHttpException(404,'ERROR could not save assignment.'); // temporary error code
-		}
+		if(!$contentModel->save())
+			throw new CHttpException(404,'ERROR could not save assignment.'); // temporary error code
 		$this->redirect(array('assignments','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
 	}
 
@@ -115,18 +113,45 @@ class CourseController extends Controller
 
 	/**
 	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * If creation is successful, the browser will be redirected to a list page.
 	 */
-	public function actionSaveEmail()
+	public function actionSaveEmail($id=null)
 	{
 		$contentModel=Email::loadModel();
-
-		if(isset($_POST['Email']))
-		{
-			if(!$contentModel->save())
-				throw new CHttpException(404,'ERROR could not save email.'); // temporary error code
+		$contentModel->setIsNewRecord(true); // force save as a new version, we need to keep for reference but disable the old one
+		$contentModel->id = null;
+		$contentModel->enabled=1;
+		if(!$contentModel->save()){
+			throw new CHttpException(404,'ERROR could not save email.'); // temporary error code
 		}
-		$this->redirect(array('emails','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
+		$this->actionRemoveEmail($id);
+	}
+
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to a list page.
+	 */
+	public function actionRemoveEmail($id=null)
+	{
+		if (isset($id)){  // mark previous version as disabled
+			$oldEmail = Email::model()->findByPk($id);
+			$oldEmail->enabled=0;
+			$oldEmail->save();
+		}
+		$this->redirect(array('emails','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num));
+	}
+
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to a list page.
+	 */
+	public function actionSendEmail()
+	{
+		$contentModel=EmailSent::loadModel();
+		// add code to actually send the email here
+		if(!$contentModel->save())
+				throw new CHttpException(404,'ERROR could not send email.'); // temporary error code
+		$this->redirect(array('emails','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num));
 	}
 
 	/**
