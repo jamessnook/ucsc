@@ -79,6 +79,7 @@ class Course extends UCSCModel
 		// class name for the relations automatically generated below.
 		return array(
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'term_code, class_num'),
+			'emailsSent' => array(self::HAS_MANY, 'EmailSent', 'term_code, class_num'),
 			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code, class_num'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'class_num'),
@@ -205,7 +206,26 @@ class Course extends UCSCModel
 		));
 	}
 	
+	
 	/**
+	 * Retrieves a data provider that can provide list of emails for this Course.
+	 * @return CActiveDataProvider the data provider that can return a list of User models.
+	 */
+	public function emails()
+	{
+		// create sql to retieve students who will use this book and whether they have purchased it.
+		$sql = "SELECT DISTINCT email.id, email.subject, email.message, email_type.name, email_type.sequence, email_type.tone, email_sent.email_id>0 AS sent
+			FROM email JOIN email_type ON (email.type = email_type.name) 
+			LEFT JOIN email_sent ON (email_sent.email_id = email.id AND email_sent.term_code=$this->term_code AND email_sent.class_num=$this->class_num)
+			WHERE email.enabled=1 OR email_sent.email_id>0 ORDER BY email_type.sequence ASC";
+		
+		return new CSqlDataProvider($sql, array(
+		 	'pagination' => false,
+		 	'keyField' => 'username',
+		));
+	}
+
+			/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */

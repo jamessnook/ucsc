@@ -72,14 +72,25 @@ class AssignmentController extends Controller
 	/**
 	 * sets up default view options for rendering, called by super class render and passed to  view.
 	 */
-	public function setDefaultViewOptions($model)
+	public function setDefaultViewOptions()
 	{
-		$options['menuView'] = '../layouts/_termMenu';
-		$options['title'] = $model->title;
-		if (!$model->title || $model->title =='') {
-			$options['title'] = "Assignments";
+		$this->viewOptions['menuView'] = '../layouts/_termMenu';
+		$this->viewOptions['title'] = $this->model->title;
+		if (!$this->model->title || $this->model->title =='') {
+			$this->viewOptions['title'] = "Assignments";
 		}
 		$this->viewOptions['activeTab'] = "assignment";
 	}
-			
+
+		/**
+	 * display students for the course.
+	 */
+	public function actionManage()
+	{
+		$this->renderView(array(
+			'contentView' => '_adminList',
+		));
+	}
+	
+	
 }

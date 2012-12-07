@@ -125,7 +125,7 @@ class Book extends UCSCModel
 		));
 	}
 
-		/**
+	/**
 	 * Retrieves a data provider that can provide list of students for this Book.
 	 * @return CActiveDataProvider the data provider that can return a list of User models.
 	 */
