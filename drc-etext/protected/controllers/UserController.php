@@ -195,13 +195,17 @@ class UserController extends Controller
 	 */
 	public function setDefaultViewOptions()
 	{
+		if (!isset($this->model->term_code)){
+			$this->model->term_code = Term::currentTermCode();
+		}
+		//echo 'tc: ' . $this->model->term_code;
 		$model = $this->model;
 		$this->viewOptions['title']="($model->username) $model->first_name $model->last_name";
 		if (!$model->username || $model->username ==''){
 			$this->viewOptions['title'] = "Users";
 			if ($model->term_code){
-				$term=Term::model()->findByPk($model->term_code);
-				$this->viewOptions['title'] = $term->description;
+				//$term=Term::model()->findByPk($model->term_code);
+				//$this->viewOptions['title'] = $term->description;
 			}
 		}
 		$this->viewOptions['activeTab'] = "students";

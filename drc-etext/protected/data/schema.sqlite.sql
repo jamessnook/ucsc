@@ -95,7 +95,8 @@ CREATE TABLE drc_request (  -- AIS feed associates student and course approved f
     primary key (emplid, term_code, class_num ),
     foreign key (type) references file_type (type),
     foreign key (emplid) references user (emplid),
-    foreign key (term_code, class_num) references course (term_code, class_num)
+    foreign key (term_code, class_num) references course (term_code, class_num),
+    foreign key (term_code) references term (term_code)
  );
 
 drop table if exists drc_accommodation;

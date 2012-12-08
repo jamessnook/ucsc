@@ -11,6 +11,7 @@ $options = $this->viewOptions;
 			  <?php 
 				$this->widget('zii.widgets.CMenu',array(
 					'htmlOptions'=>array('class'=>'nav nav-tabs'), 
+					'submenuHtmlOptions'=>array('class'=>'dropdown-menu'), 
 					'encodeLabel'=>false,
 					'items'=>array(
 						array(
@@ -39,6 +40,7 @@ $options = $this->viewOptions;
 							'active'=> false,  // disable for now
 							'visible'=>false,
 						),
+						/*
 						array(
 							'label'=>'<i class="icon-user"></i> Staff', 
 							'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
@@ -60,6 +62,30 @@ $options = $this->viewOptions;
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'), 
 							'active'=> $activeTab == 'students',
+						),
+						*/
+						array(
+							'itemOptions'=>array('class'=>'dropdown pull-right'), 
+							'url'=>'#',
+							'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
+							'label'=>'<i class="icon-user"></i> Users <b class="caret"></b>', 
+							'visible'=>Yii::app()->user->checkAccess('admin'), 
+							'active'=>get_class($model) == 'User',
+							'items'=>array(
+								array(
+									'label'=>'Students', 
+									'url'=>array('/user/students', 'term_code'=>$model->term_code,),
+								),
+								array(
+									'label'=>'Faculty', 
+									'url'=>array('/user/faculty', 'term_code'=>$model->term_code,), 
+								),
+								array(
+									'label'=>'Staff', 
+									'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
+								),
+							),
+							
 						),
 					), 
 				));

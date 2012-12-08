@@ -24,6 +24,20 @@
 	$dataReader=$command->query();   // execute a query SQL
 	
 	// create menu item for each term
+	$terms = Term::currentTerms($model);
+	foreach($terms as $term_code => $description) { 
+		$params['term_code'] = $term_code;
+		$route = $this->route;
+		if (isset($menuRoute)) 
+			$route = $menuRoute;
+		$menuItems[] = array(
+			'label'=>$description,
+			//'url'=> $this->createUrl(Yii::app()->request->getPathInfo(), $params), 
+			'url'=> $this->createUrl($route, $params), 
+			'active'=> $model->term_code == $term_code,
+		);
+	}
+	/*
 	foreach($dataReader as $row) { 
 		$params['term_code'] = $row['term_code'];
 		$route = $this->route;
@@ -36,7 +50,7 @@
 			'active'=> $model->term_code == $row['term_code'],
 		);
 	}
-	
+	*/
 
 	// build up the side bar menu
     $this->beginWidget('zii.widgets.CPortlet', array(

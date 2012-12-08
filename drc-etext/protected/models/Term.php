@@ -63,6 +63,7 @@ class Term extends CActiveRecord
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'term_code'),
 			'courses' => array(self::HAS_MANY, 'Course', 'term_code'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'term_code'),
+			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code'),
 		);
 	}
 
@@ -103,19 +104,36 @@ class Term extends CActiveRecord
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
-	public static function currentAndPastTerms()
+	public static function currentTerms($model=null)
 	{
-		$now = date('Y-m-d');
-		return self::model()->findAll(array('order'=>'term_code DESC', 'condition'=>"start_date < $now") );
+		$terms = array();
+		// create sql to retieve term data for the current user (default is for all users who have drc requests)
+		$sql = "SELECT DISTINCT term.term_code, term.description FROM term JOIN drc_request using (term_code)";
+		if ($model && $model->username && strlen($model->username)>0){
+			$sql .= " JOIN user using (emplid) WHERE user.username = '$model->username'";
+		}
+		$sql .= " ORDER BY term_code DESC";
+		$command=Yii::app()->db->createCommand($sql);
+		$dataReader=$command->query();   // execute a query SQL
+		// create item for each term
+		foreach($dataReader as $row) { 
+			$terms[$row['term_code']] = $row['description'];
+			//echo "  tc=" . $row['term_code'] . ' desc=' . $row['description'];
+		}
+		return $terms;
 	}
 
-		/**
+	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
 	public static function currentTermCode()
 	{
-		$now = date('Y-m-d');
-		return self::model()->find(array('order'=>'term_code DESC', 'condition'=>"start_date < '$now'"))->term_code;
+		// get first ellement from array
+		$terms = Term::currentTerms();
+		//return  max(array_keys($terms));
+		foreach($terms as $code => $description) {
+			return $code; 
+		}
 	}
 
 }
