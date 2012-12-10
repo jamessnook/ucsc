@@ -176,9 +176,10 @@ class Course extends UCSCModel
 	{
 		$criteria=new CDbCriteria;
 		if ($this->username) {  // comment out untill we have type data
-			$criteria->with = array( 'drcRequests', 'assignmentTypes' );
-			$criteria->compare('drcRequests.emplid',$this->emplid);
-			$criteria->addCondition("assignmentTypes.type = drcRequests.type OR drcRequests.type is null");          
+			//$criteria->with = array( 'drcRequests', 'assignmentTypes' );
+			$criteria->with = array( 'drcRequests' );
+			$criteria->compare('drcRequests.user.username',$this->username);
+			//$criteria->addCondition("assignmentTypes.type = drcRequests.type OR drcRequests.type is null");          
 		}
 		$criteria->compare('t.term_code',$this->term_code);
 		$criteria->compare('t.class_num',$this->class_num);

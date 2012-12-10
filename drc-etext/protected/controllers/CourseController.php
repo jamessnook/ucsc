@@ -3,8 +3,9 @@
 class CourseController extends Controller
 {
 	/**
-	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
-	 * using two-column layout. See 'protected/views/layouts/column2.php'.
+	 * @var string the default layout for the views.  Set to use file with no layout.
+	 * Layout is instead provided by //layouts/_main which is container for all views in this app.
+	 * This is done so parameters can be passed to the layout without modifying standard Yii classes.
 	 */
 	public $layout='//layouts/noLayout';
 
@@ -33,7 +34,7 @@ class CourseController extends Controller
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('createAssignment','updateAssignment', 'saveAssignment', 
 					'createBook','updateBook', 'saveBook', 'studentAssignments', 'description', 
-					'assignments', 'books', 'students', 'createAssignment', 'createBook',
+					'assignments', 'books', 'students', 'createAssignment', 'createBook', 'manageBook',
 					'emails', 'saveEmail', 'updateEmail', 'createEmail', 'sendEmail', 'removeEmail'),
 				'roles'=>array('admin'),
 			),
@@ -44,8 +45,8 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * Updates a particular Assignment model.
-	 * @param integer $assignmentId the ID of the model to be updated
+	 * Displays a page to alow editing of an existing Assignment model. 
+	 * Get and Post parameters are obtained from request. 
 	 */
 	public function actionUpdateAssignment()
 	{
@@ -58,14 +59,17 @@ class CourseController extends Controller
 			'contentView' => '../assignment/_edit',
 			'contentTitle' => 'Update Assignment',
 			'createNew'=>false,
-			'titleNavRight' => '<a href="' . $this->createUrl('course/createAssignment', array('content'=> 'assignment', 'term_code'=> $this->model->term_code, 'class_num'=>$this->model->class_num)) . '"><i class="icon-plus"></i> Add Request</a>',
 			'action'=>Yii::app()->createUrl("course/saveAssignment", array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num, 'id'=>$this->contentModel->id)),
+			'navRight' => array(
+				'label'=>' Add Assignment',
+				'url'=>$this->createUrl('course/saveAssignment', array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num, 'content'=> 'assignment', )),
+			),
 		));
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * Saves a new Assignment model or updates an old Assignment model in the database. 
+	 * Get and Post parameters are obtained from request. 
 	 */
 	public function actionSaveAssignment()
 	{
@@ -80,8 +84,7 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * Updates a particular Book model.
-	 * @param integer $bookId the ID of the model to be updated
+	 * Displays a page to allow editing of an existing Book model. 
 	 */
 	public function actionUpdateBook()
 	{
@@ -90,14 +93,33 @@ class CourseController extends Controller
 			'contentView' => '../book/_edit',
 			'contentTitle' => 'Update Book',
 			'createNew'=>false,
-			'titleNavRight' => '<a href="' . $this->createUrl('course/createBook', array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num,)) . '"><i class="icon-plus"></i> New Book</a>',
+			'navRight' => array(
+				'label'=>' New Book',
+				'url'=>$this->createUrl('course/createBook', array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num,)),
+			),
 			'action'=>Yii::app()->createUrl("course/saveBook", array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num, 'id'=>$this->contentModel->id)),
 		));
 	}
 
 	/**
-	 * Updates a particular Book model.
-	 * @param integer $bookId the ID of the model to be updated
+	 * Displays page to manage files and book purchase records associated with a particular Book model.
+	 */
+	public function actionManageBook()
+	{
+		$this->contentModel=Book::loadModel();
+		$this->renderView(array(
+			'contentView' => '../book/_manage',
+			'contentTitle' => 'Manage Book: &nbsp;' . $this->contentModel->title,
+			'navRight' => array(
+				'label'=>' New Book',
+				'url'=>$this->createUrl('course/createBook', array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num,)),
+			),
+			'action'=>Yii::app()->createUrl("course/saveBook", array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num, 'id'=>$this->contentModel->id)),
+		));
+	}
+
+	/**
+	 * Displays a page to allow editing of an existing Email model. 
 	 */
 	public function actionUpdateEmail()
 	{
@@ -112,8 +134,7 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to a list page.
+	 * Saves a new Email model or updates an old Email model in the database. 
 	 */
 	public function actionSaveEmail($id=null)
 	{
@@ -128,8 +149,7 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to a list page.
+	 * Clears the enabled flag of an email in the database so it will not be offered for use any more.
 	 */
 	public function actionRemoveEmail($id=null)
 	{
@@ -142,8 +162,7 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to a list page.
+	 * Sends an email to the instructors of a course and records teh event in the database.
 	 */
 	public function actionSendEmail()
 	{
@@ -155,8 +174,7 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * Saves a new Book model or updates an old Book model in the database. 
 	 */
 	public function actionSaveBook()
 	{
@@ -167,11 +185,11 @@ class CourseController extends Controller
 			if(!$contentModel->save())
 				throw new CHttpException(404,'ERROR could not save book.'); // temporary error code
 		}
-		$this->redirect(array('books','term_code'=>$contentModel->term_code,'class_num'=>$contentModel->class_num));
+		$this->redirect(array('books','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num));
 	}
 
 	/**
-	 * Display courses for a term.
+	 * Display a list of courses for a term.
 	 */
 	public function actionCourses($term_code=null)
 	{
@@ -189,7 +207,7 @@ class CourseController extends Controller
 
 	
 	/**
-	 * Display List of Files for an assignment and user.
+	 * Display a list of Files for an assignment and user.
 	 */
 	public function actionAssignmentFiles()
 	{
@@ -201,7 +219,7 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * display students for the course.
+	 * display a lis t of students for a course.
 	 */
 	public function actionStudents()
 	{
@@ -213,7 +231,7 @@ class CourseController extends Controller
 	}
 	
 	/**
-	 * display students for the course.
+	 * display a list of emails sent or availabe to be sent for the course.
 	 */
 	public function actionEmails()
 	{
@@ -224,7 +242,7 @@ class CourseController extends Controller
 	}
 	
 	/**
-	 * display students for the course.
+	 * display a list of books associated with a course.
 	 */
 	public function actionBooks()
 	{
@@ -235,18 +253,18 @@ class CourseController extends Controller
 	}
 	
 	/**
-	 * display students for the course.
+	 * display a list of assignments associated with a course.
 	 */
 	public function actionAssignments()
 	{
 		$this->renderView(array(
 			'contentView' => '../assignment/_list',
-			'titleNavRight' => '<a href="' . $this->createUrl('course/createAssignment', array('content'=> 'assignment', 'term_code'=> $this->model->term_code, 'class_num'=>$this->model->class_num)) . '"><i class="icon-plus"></i> Add Request</a>',
+			'titleNavRight' => '<a href="' . $this->createUrl('course/createAssignment', array('content'=> 'assignment', 'term_code'=> $this->model->term_code, 'class_num'=>$this->model->class_num)) . '"><i class="icon-plus"></i> Add Assignment </a>',
 		));
 	}
 	
 	/**
-	 * display students for the course.
+	 * display data for an assignemnt associated with a course course.
 	 */
 	public function actionViewAssignment()
 	{
@@ -257,7 +275,7 @@ class CourseController extends Controller
 	}
 	
 	/**
-	 * display students for the course.
+	 * Displays a page to fill in the data and save a new Email model. 
 	 */
 	public function actionCreateEmail()
 	{
@@ -270,7 +288,7 @@ class CourseController extends Controller
 		));
 	}
 	/**
-	 * display students for the course.
+	 * Displays a page to fill in the data and save a new Book model. 
 	 */
 	public function actionCreateBook()
 	{
@@ -284,7 +302,7 @@ class CourseController extends Controller
 	}
 	
 	/**
-	 * display students for the course.
+	 * Displays a page to fill in the data and save a new Assignment model. 
 	 */
 	public function actionCreateAssignment()
 	{
@@ -298,7 +316,7 @@ class CourseController extends Controller
 	}
 	
 	/**
-	 * display students for the course.
+	 * display the description page for the course.
 	 */
 	public function actionDescription()
 	{
@@ -309,7 +327,7 @@ class CourseController extends Controller
 	
 	
 	/**
-	 * sets up default view options for rendering, called by super class render and passed to  view.
+	 * sets up default view options for rendering, called by super class render and passed to view.
 	 */
 	public function setDefaultViewOptions()
 	{

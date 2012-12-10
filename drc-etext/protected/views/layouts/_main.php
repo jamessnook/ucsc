@@ -105,7 +105,13 @@ $options = $this->viewOptions;
 				<div class="row-fluid">
 					<h1 class="pull-left"><?php echo $title; ?></h1>
 					<ul class="nav nav-pills pull-right">
-						<li><?php if (isset($titleNavRight)) echo $titleNavRight; ?></li>
+						<li><?php 
+							if (isset($titleNavRight)){ 
+								echo $titleNavRight; 
+							} else if (isset($navRight)){ 
+								echo '<a href="' . $navRight['url'] . '"><i class="icon-plus"></i>' . $navRight['label'] . '</a>';
+							}
+						?></li>
 					</ul>
 				</div><!--/row-->
 			</div><!--/head-->

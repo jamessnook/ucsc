@@ -3,8 +3,9 @@
 class UserController extends Controller
 {
 	/**
-	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
-	 * using two-column layout. See 'protected/views/layouts/column2.php'.
+	 * @var string the default layout for the views.  Set to use file with no layout.
+	 * Layout is instead provided by //layouts/_main which is container for all views in this app.
+	 * This is done so parameters can be passed to the layout without modifying standard Yii classes.
 	 */
 	public $layout='//layouts/noLayout';
 
@@ -41,8 +42,8 @@ class UserController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * Saves a new User model or updates an old User model in the database. 
+	 * Get and Post parameters are obtained from request. 
 	 */
 	public function actionSave()
 	{
@@ -57,8 +58,8 @@ class UserController extends Controller
 	}
 
 	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
+	 * Deletes a particular User model.
+	 * If deletion is successful, the browser will be redirected to the caller page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
 	public function actionDelete()
@@ -67,14 +68,14 @@ class UserController extends Controller
 		{
 			// we only allow deletion via POST request
 			User::loadModel()->delete();
-			$this->redirect(Yii::app()->request->url);
+			$this->redirect(Yii::app()->request->getUrlReferrer());
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
-		/**
-	 * load form to update user data.
+	/**
+	 * Displays data or a single user.
 	 */
 	public function actionView()
 	{
@@ -87,7 +88,7 @@ class UserController extends Controller
 	
 
 	/**
-	 * load form to update user data.
+	 * Displays a list of students for a specific term.
 	 */
 	public function actionStudents()
 	{
@@ -103,22 +104,22 @@ class UserController extends Controller
 	}
 	
 	/**
-	 * load form to update user data.
+	 * Displays a list of staff.
 	 */
 	public function actionStaff()
 	{
 		//$this->model = User::loadModel();
 		$this->renderView(array(
 			'contentView' => '../user/_staff',
-			'title' => 'Curent DRC User Accounts',
+			'title' => 'DRC User Accounts',
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'menuView' => '',
 			'activeTab' => 'staff',
 		));
 	}
 	
-		/**
-	 * load form to update user data.
+	/**
+	 * Displays a list of faculty for a specific term.
 	 */
 	public function actionFaculty()
 	{
@@ -135,7 +136,7 @@ class UserController extends Controller
 	}
 	
 	/**
-	 * load form to update user data.
+	 * Displays form to update data for an existing user.
 	 */
 	public function actionUpdate()
 	{
@@ -156,7 +157,7 @@ class UserController extends Controller
 	}
 	
 	/**
-	 * load form to create new user.
+	 * Displays form to create data for a new user.
 	 */
 	public function actionCreate()
 	{
@@ -173,7 +174,7 @@ class UserController extends Controller
 	}
 	
 	/**
-	 * Display courses for a drc student.
+	 * Displays a list of courses for a drc student or faculty and term.
 	 */
 	public function actionCourses()
 	{

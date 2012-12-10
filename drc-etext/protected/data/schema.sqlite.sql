@@ -211,7 +211,7 @@ CREATE TABLE assignment (               -- maps books and files to a course
 );
 
 drop table if exists assignment_type;
-CREATE TABLE assignment_type (          -- tracks if assignment complete for this file type
+CREATE TABLE assignment_type (          -- tracks if assignment complete for this file type, not currently used
     assignment_id INTEGER,  -- drc library id
     type  VARCHAR(32),    -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.ACCOMMODATION_TYPE, also ACCOMOD.ACCOMODATION_TYPE, six letter code
     is_complete BOOLEAN DEFAULT 0,
@@ -221,15 +221,6 @@ CREATE TABLE assignment_type (          -- tracks if assignment complete for thi
 );
 
 drop table if exists assignment_file;
-drop table if exists assignment_files;
-CREATE TABLE assignment_file (         -- maps assignments to files
-    assignment_id INTEGER NOT NULL,         -- 
-    file_id INTEGER NOT NULL,               --  
-    primary key (assignment_id, file_id),
-    foreign key (assignment_id) references assignment (id),
-    foreign key (file_id) references file (id)
-);
-
 drop table if exists file_association;
 CREATE TABLE file_association (         -- maps other models to files
     file_id INTEGER NOT NULL,           --  

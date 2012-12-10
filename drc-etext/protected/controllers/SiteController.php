@@ -34,8 +34,7 @@ class SiteController extends Controller
 	}
 
 	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
+	 * This dumps a big page of PHP config information.
 	 */
 	public function actionPhpinfo()
 	{
@@ -60,7 +59,7 @@ class SiteController extends Controller
 	}
 
 	/**
-	 * Displays the contact page
+	 * Displays the contact page / not currently used
 	 */
 	public function actionContact()
 	{

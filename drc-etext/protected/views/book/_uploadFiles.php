@@ -2,7 +2,7 @@
 					          
   
 <div class="page-header">
-   <h2>Upload Books for this Course</h2>
+   <h2>Upload Filess for this Book</h2>
 </div>
           
    <?php

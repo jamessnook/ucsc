@@ -8,6 +8,11 @@
  * @property string $accommodation_type
  * @property boolean $is_complete
  */
+/**
+ * Represents the association between an assignemtn 
+ * and a specific file type needed for that assignemnt.
+ * Is used to track completion of the assignment for each type
+ */
 class AssignmentType extends CActiveRecord
 {
 	/**

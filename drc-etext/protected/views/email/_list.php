@@ -2,7 +2,7 @@
 <div class="row-fluid">
     <div class="span12">
 		<h3>E-Mails</h3>
-
+		<h5>The string "#course#" will be replaced with the course name "<?php echo $title; ?>" when the e-mail is sent</h5>
 	<?php 
 	
 	//$model->username = Yii::app()->user->name;  // set up for current user

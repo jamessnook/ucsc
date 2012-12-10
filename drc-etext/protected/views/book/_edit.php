@@ -86,17 +86,10 @@
 			            </div>
 			          </div>
 
-			          <?php 
-			            // file upload section
-			          	if ($createNew){
-							echo $this->renderPartial('../file/_uploadAlert', array('model'=>$model)); 
-			          	} else {
-			          		echo $this->renderPartial('../book/_listStudents', array('model'=>$model)); 
-			          		echo $this->renderPartial('../file/_listFiles', array('model'=>$model)); 
-			          		echo $this->renderPartial('../book/_uploadFiles', array('model'=>$model)); 
-			          	}
-					  ?>
-					  <?php echo $form->hiddenField($model,'id'); ?>
+					  <div class="alert alert-info">
+						    <button type="button" class="close" data-dismiss="alert">×</button>
+							<strong>Looking to upload book files or record book purchase?</strong> Please select manage from the book list once this request is saved.
+					  </div>
 
 			          <div class="form-actions">
 			          

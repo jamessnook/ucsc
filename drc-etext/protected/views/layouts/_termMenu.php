@@ -14,43 +14,21 @@
 	if ($model->emplid && strlen($model->emplid)>0)
 		$params['emplid'] = $model->emplid;
 
-	// create sql to retieve term data for the current user (default is for all users who have drc requests)
-	$sql = "SELECT DISTINCT term.term_code, term.description FROM term JOIN drc_request using (term_code)";
-	if ($model->username && strlen($model->username)>0){
-		$sql .= " JOIN user using (emplid) WHERE user.username = '$model->username'";
-	}
-	$sql .= " ORDER BY term_code DESC";
-	$command=Yii::app()->db->createCommand($sql);
-	$dataReader=$command->query();   // execute a query SQL
-	
 	// create menu item for each term
-	$terms = Term::currentTerms($model);
-	foreach($terms as $term_code => $description) { 
-		$params['term_code'] = $term_code;
+	$terms = Term::terms($model);
+	//foreach($terms as $term_code => $description) { 
+	foreach($terms as $term) { 
+		$params['term_code'] = $term->term_code;
 		$route = $this->route;
 		if (isset($menuRoute)) 
 			$route = $menuRoute;
 		$menuItems[] = array(
-			'label'=>$description,
+			'label'=>$term->description,
 			//'url'=> $this->createUrl(Yii::app()->request->getPathInfo(), $params), 
 			'url'=> $this->createUrl($route, $params), 
-			'active'=> $model->term_code == $term_code,
+			'active'=> $model->term_code == $term->term_code,
 		);
 	}
-	/*
-	foreach($dataReader as $row) { 
-		$params['term_code'] = $row['term_code'];
-		$route = $this->route;
-		if (isset($menuRoute)) 
-			$route = $menuRoute;
-		$menuItems[] = array(
-			'label'=>$row['description'],
-			//'url'=> $this->createUrl(Yii::app()->request->getPathInfo(), $params), 
-			'url'=> $this->createUrl($route, $params), 
-			'active'=> $model->term_code == $row['term_code'],
-		);
-	}
-	*/
 
 	// build up the side bar menu
     $this->beginWidget('zii.widgets.CPortlet', array(

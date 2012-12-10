@@ -74,13 +74,10 @@ class Assignment extends UCSCModel
 		return array(
 			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
 			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
-			//'book' => array(self::BELONGS_TO, 'Book', 'book_id', 'joinType' => 'LEFT OUTER JOIN'),
 			'book' => array(self::BELONGS_TO, 'Book', 'book_id'),
 			'course' => array(self::BELONGS_TO, 'Course', 'class_num, term_code'),
-            'assignmentTypes'=>array(self::HAS_MANY, 'AssignmentType', 'assignment_id'),
-			'fileIds'=>array(self::HAS_MANY, 'AssignmentFile', 'assignment_id'),
+			'fileIds'=>array(self::HAS_MANY, 'FileAssociation', 'model_id'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code, class_num'),
-			'drcRequests1' => array(self::MANY_MANY, 'DrcRequest', 'assignment_type(assignment_id, type)'),
 		);
 	}
 
@@ -111,21 +108,10 @@ class Assignment extends UCSCModel
 	 */
 	public function search()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
 
 		$criteria=new CDbCriteria;
 
-		//$criteria->compare('id',$this->id);
 		$criteria->compare('term_code',$this->term_code);
-		//$criteria->compare('class_num',$this->class_num);
-		//$criteria->compare('book_id',$this->book_id);
-		//$criteria->compare('created',$this->created,true);
-		//$criteria->compare('modified',$this->modified,true);
-		//$criteria->compare('modified_by',$this->modified_by,true);
-		//$criteria->compare('notes',$this->notes,true);
-		//$criteria->compare('is_complete',$this->is_complete);
-		//$criteria->compare('has_zip_file',$this->has_zip_file);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -133,7 +119,7 @@ class Assignment extends UCSCModel
 	}
 
 	/**
-	 * Retrieves a data provider that can provide list of files uploaded for this Book.
+	 * Retrieves a data provider that can provide a list of files uploaded for this Book.
 	 * @return CActiveDataProvider the data provider that can return a list of File Association models.
 	 */
 	public function files()
@@ -149,7 +135,7 @@ class Assignment extends UCSCModel
 	}
 
 	/**
-	 * Retrieves a count of the assignemtns for this course.
+	 * Retrieves a count of the files for this assignment.
 	 * @return integer, a count of the assignemtns for this course.
 	 */
 	public function fileCount()
@@ -158,29 +144,15 @@ class Assignment extends UCSCModel
 	}
 	
 	/**
-	 * Retrieves a list of faculty names.
-	 * @return string, the names of faculty for this course.
+	 * Retrieves an array of file types needed for this assignment.
+	 * @return array, the names of file types for this course.
 	 */
 	public function types()
 	{
-		$types = '';
-		foreach($this->assignmentTypes as $type)
-		{
-			$types .= $type . ' ';
-		}
-		return $types;
-	}
-	
-	/**
-	 * Retrieves a list of faculty names.
-	 * @return string, the names of faculty for this course.
-	 */
-	public function types2()
-	{
-		$types = '';
+		$types = array();
 		foreach($this->drcRequests as $request)
 		{
-			$types .= $request->type . ' ';
+			$types[$request->type] = $request->type; // use value as key to prevent duplicates
 		}
 		return $types;
 	}

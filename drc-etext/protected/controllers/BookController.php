@@ -3,8 +3,9 @@
 class BookController extends Controller
 {
 	/**
-	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
-	 * using two-column layout. See 'protected/views/layouts/column2.php'.
+	 * @var string the default layout for the views.  Set to use file with no layout.
+	 * Layout is instead provided by //layouts/_main which is container for all views in this app.
+	 * This is done so parameters can be passed to the layout without modifying standard Yii classes.
 	 */
 	public $layout='//layouts/noLayout';
 
@@ -36,7 +37,10 @@ class BookController extends Controller
 		);
 	}
 
-    public function actions()
+	/**
+	 * Defines actions for this controller that will be handeled by code is seperate action classes.
+	 */
+	public function actions()
     {
         return array(
             'uploadFile'=>array(
@@ -49,8 +53,8 @@ class BookController extends Controller
     }
 	
 	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
+	 * Deletes a particular Book model.
+	 * If deletion is successful, the browser will be redirected to the page where the toggle button is.
 	 * @param integer $id the ID of the model to be deleted
 	 */
 	public function actionTogglePurchased()
@@ -64,7 +68,7 @@ class BookController extends Controller
 
 	/**
 	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
+	 * If deletion is successful, the browser will be redirected to the page that the delete request came from.
 	 * @param integer $id the ID of the model to be deleted
 	 */
 	public function actionDelete($id)
@@ -73,7 +77,7 @@ class BookController extends Controller
 		{
 			// we only allow deletion via POST request
 			Book::loadModel()->delete();
-			$this->redirect(Yii::app()->request->url);
+			$this->redirect(Yii::app()->request->getUrlReferrer());
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');

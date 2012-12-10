@@ -4,8 +4,8 @@
   <label class="control-label" for="input01">Type</label>
             
 	<?php 
-		foreach ($model->drcRequests as $req){
-			echo '<span class="label">' . $req->type . '</span>';
+		foreach ($model->types() as $type){
+			echo '<span class="label">' . $type . '</span>';
 		}
 		if (count($model->drcRequests)>0){
 			echo '<p class="help-block"><small>Based on the students enrolled in this class, that requested Alt media for this class, these file types need to be included with this assignment request.</small></p>';

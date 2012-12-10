@@ -14,7 +14,7 @@
  * @property Course[] $courses
  * @property InstructorFiles[] $instructorFiles
  */
-class Term extends CActiveRecord
+class Term extends UCSCModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -102,7 +102,27 @@ class Term extends CActiveRecord
 	}
 	
 	/**
-	 * @return array customized attribute labels (name=>label)
+	 * Retrieves a list of Term models which have data in the day=ta base for the model supplie.
+	 * @return an array of Term models.
+	 */
+	public static function terms($model=null)
+	{
+		$criteria=new CDbCriteria;
+		$criteria->join = 'JOIN drc_request USING (term_code) JOIN user USING(emplid)';
+		$criteria->distinct = true;
+		$criteria->select = 't.term_code, t.description';
+		if ($model && $model->username && strlen($model->username)>0){
+			$criteria->compare('user.username',$model->username);
+		}
+		$criteria->order = 'term_code DESC';
+		
+		return Term::model()->findAll($criteria);
+	}
+
+	/**
+	 * Retrieves a list of Term models which have data in the day=ta base for the model supplie.
+	 * An alternatre way of the above using straight SQL, returns data reader
+	 * @return an array of Term models.
 	 */
 	public static function currentTerms($model=null)
 	{
@@ -114,13 +134,7 @@ class Term extends CActiveRecord
 		}
 		$sql .= " ORDER BY term_code DESC";
 		$command=Yii::app()->db->createCommand($sql);
-		$dataReader=$command->query();   // execute a query SQL
-		// create item for each term
-		foreach($dataReader as $row) { 
-			$terms[$row['term_code']] = $row['description'];
-			//echo "  tc=" . $row['term_code'] . ' desc=' . $row['description'];
-		}
-		return $terms;
+		return $command->query();   // execute a query SQL and returns a data reader
 	}
 
 	/**
@@ -129,11 +143,8 @@ class Term extends CActiveRecord
 	public static function currentTermCode()
 	{
 		// get first ellement from array
-		$terms = Term::currentTerms();
-		//return  max(array_keys($terms));
-		foreach($terms as $code => $description) {
-			return $code; 
-		}
+		$terms = Term::terms();
+		return reset($terms)->term_code;
 	}
 
 }

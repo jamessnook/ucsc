@@ -71,7 +71,7 @@ class File extends CActiveRecord
 		return array(
 			//'type' => array(self::BELONGS_TO, 'FileType', 'type_id'),
 			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
-			'assignmentIds' => array(self::HAS_MANY, 'AssignmentFile', 'file_id'),
+			'assignmentIds' => array(self::HAS_MANY, 'FileAssociation', 'file_id'),
 		);
 	}
 

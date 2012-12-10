@@ -53,12 +53,14 @@
 			 	'labelExpression'=>'$data->drcRequestCourseNames()', 
 				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/students', 'modelParams'=>array('term_code'=>'term_code', 'class_num'=>'class_num')), 
 			),
-			//array( 
-			//	'header'=>'Type', 
-			//	'name'=>'drcRequests.type', 
-			//	'type'=>'raw',
-			//	'value'=>'\'<span class="badge">\' . $data->drcRequests[0]->type . \'</span>\'', 
-			// ),
+			
+			array( 
+				'header'=>'Type', 
+				'name'=>'drcRequests.type', 
+				'type'=>'raw',
+				'value'=>'\'<span class="badge">\' . $data->drcRequests[0]->type . \'</span>\'', 
+			 ),
+			 
 			 array( 
 				'header'=>'Status', 
 				'class'=>'LinksColumn',

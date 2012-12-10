@@ -161,6 +161,9 @@ class User extends UCSCModel
 	{
 		$criteria=new CDbCriteria;
 		//$criteria->with = array( 'authAssignments');
+		// need to add term code criteria once we have real data
+		//$criteria->with = array( 'drcRequests', 'drcRequests.course');
+		//$criteria->compare('drcRequests.term_code',$this->term_code);
 		$criteria->join = "JOIN AuthAssignment ON (username=userid)";
 		$criteria->addCondition("AuthAssignment.userid=t.username");
 		$criteria->addCondition("(AuthAssignment.itemname='faculty')");          
@@ -191,7 +194,7 @@ class User extends UCSCModel
 	}
 
 	
-/**
+	/**
 	 * Retrieves a list of courses based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
