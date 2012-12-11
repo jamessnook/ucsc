@@ -178,11 +178,11 @@ class UserController extends Controller
 	 */
 	public function actionCourses()
 	{
-		if (!Yii::app()->user->checkAccess('admin')){
-			$this->model=User::model()->findByPk(Yii::app()->user->name);
-		} else {
+		//if (!Yii::app()->user->checkAccess('admin')){
+		//	$this->model=User::model()->findByPk(Yii::app()->user->name);
+		//} else {
 			$this->model = User::loadModel();
-		}
+		//}
 		$this->renderView(array(
 			'contentView' => '../course/_list',
 			'menuView' => '../layouts/_termMenu',

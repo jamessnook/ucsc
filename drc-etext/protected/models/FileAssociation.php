@@ -58,6 +58,7 @@ class FileAssociation extends UCSCModel
 		// class name for the relations automatically generated below.
 		return array(
 			'file' => array(self::BELONGS_TO, 'File', 'file_id'),
+			//'filedata' => array(self::BELONGS_TO, 'File', 'file_id'),
 		);
 	}
 

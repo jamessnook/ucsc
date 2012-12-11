@@ -28,7 +28,7 @@ class CourseController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform view type actions
-				'actions'=>array('index','assignmentsForUser','books','courses','students','assignmentFiles'),
+				'actions'=>array('index','assignments','books','courses','students','assignmentFiles'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions

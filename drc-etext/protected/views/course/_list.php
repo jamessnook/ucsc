@@ -21,7 +21,7 @@
 				'header'=>'Course Name', 
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->title', 
-				'urlExpression'=>'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num)', 
+				'urlExpression'=>'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num, \'username\'=>\'' . $model->username . '\')', 
 			),
 			array( 
 				'header'=>'Class Id', 

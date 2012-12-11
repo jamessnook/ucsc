@@ -449,3 +449,104 @@ in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (57)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/11 08:13:20 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (184)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/11 08:13:25 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (184)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/11 08:14:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('assignments')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/assignme...')
+#9 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/courses/username/astudent/emplid/1196592/term_code/2122
+---
+2012/12/11 08:14:36 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (184)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/11 08:15:54 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (83)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/11 08:16:25 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (184)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/11 08:21:31 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (83)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/11 08:21:45 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (184)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/11 08:21:50 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (83)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/11 08:21:51 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT 't'."id" AS "t0_c0", 't'."term_code" AS "t0_c1", 't'."class_num" AS "t0_c2", 't'."book_id" AS "t0_c3", 't'."description" AS "t0_c4", 't'."title" AS "t0_c5", 't'."due_date" AS "t0_c6", 't'."created" AS "t0_c7", 't'."modified" AS "t0_c8", 't'."modified_by" AS "t0_c9", 't'."notes" AS "t0_c10", 't'."is_complete" AS "t0_c11", 't'."has_zip_file" AS "t0_c12", 'drcRequests'."term_code" AS "t1_c0", 'drcRequests'."class_num" AS "t1_c1", 'drcRequests'."course_id" AS "t1_c2", 'drcRequests'."emplid" AS "t1_c3", 'drcRequests'."type" AS "t1_c4", 'drcRequests'."created" AS "t1_c5", 'drcRequests'."modified" AS "t1_c6" FROM 'assignment' 't'  LEFT OUTER JOIN 'drc_request' 'drcRequests' ON ('drcRequests'."term_code"='t'."id") AND ('drcRequests'."class_num"='t'."id")  WHERE (((drcRequests.user.username=:ycp0) AND (t.term_code=:ycp1)) AND (t.class_num=:ycp2))
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\assignment\_list.php (55)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\layouts\_main.php (123)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (66)
+2012/12/11 08:21:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such column: drcRequests.user.username' in C:\Users\Jim\phpFog\ucsc\framework\db\CDbCommand.php:218
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\CDbCommand.php(273): CDbCommand->prepare()
+#1 C:\Users\Jim\phpFog\ucsc\framework\db\schema\CDbCommandBuilder.php(442): CDbCommand->bindValue(':ycp0', 'astudent')
+#2 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php(1358): CDbCommandBuilder->bindValues(Object(CDbCommand), Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php(817): CJoinQuery->createCommand(Object(CSqliteCommandBuilder))
+#4 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#5 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#6 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#7 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CActiveDataProvider.php(150): CActiveRecord->findAll(Object(CDbCriteria))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#10 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#11 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(148): CGridView->init()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#14 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\assignment\_list.php(55): CBaseController->widget('zii.widgets.gri...', Array)
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#18 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\layouts\_main.php(123): CController->renderPartial('../assignment/_...', Array)
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('../layouts/_mai...', Array, true)
+#23 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php(66): CController->render('../layouts/_mai...', Array)
+#24 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(263): Controller->renderView(Array)
+#25 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionAssignments()
+#26 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#27 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#28 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#29 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#30 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#31 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#32 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#33 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#34 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('assignments')
+#35 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/assignme...')
+#36 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#37 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#38 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username/astudent
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/courses/username/astudent/emplid/1196592/term_code/2122
+---
+2012/12/11 08:26:02 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (74)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\Controller.php (83)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)

@@ -142,35 +142,17 @@ class Assignment extends UCSCModel
 	{
 		$username = Yii::app()->user->name;
 		$criteria=new CDbCriteria;
-		$criteria->with = array( 'assignmentIds.assignment', 'assignmentIds.assignment.drcRequests');
-		//$criteria->together = array( 'assignmentIds.assignment', 'assignmentIds.assignment.drcRequests'); // might be needed
-		$criteria->compare('assignmentIds.assignment.id',$assignemntId);
-		$criteria->compare('assignmentIds.assignment.drcRequests.username',$username);
-		$criteria->compare('assignmentIds.assignment.drcRequests.type',$this->type);
+		$criteria->with = array( 'file');
 		//$criteria->addCondition("drcRequests.username = $username");         
-		
-		$criteria=new CDbCriteria;
 		$criteria->compare('model_id',$this->id);
+		//$criteria->compare('file.type',$this->id);
 		$criteria->compare('model_name','Assignment');
-		$criteria->addCondition("model_id IN(SELECT assignment.id FROM assignement 
-		      JOIN drc_request USING (term_code, class_num)JOIN user USING(emplid) 
-		      JOIN file ON ( file_id = file.id)
-		      WHERE user.username = $this->username AND drc_request.type=file.type)");         
+		$criteria->addCondition("file.type IN(SELECT drc_request.type FROM drc_request JOIN user USING(emplid) 
+		      WHERE user.username = $this->username)");         
 		
 		return new CActiveDataProvider('FileAssociation', array(
 					'criteria'=>$criteria,
 		 	'pagination' => false,
-		));
-
-	
-			// create sql to retieve students who will use this book and whether they have purchased it.
-		$sql = "SELECT DISTINCT user.username, user.first_name, user.last_name, book_user.purchased
-			FROM user JOIN drc_request USING (emplid) JOIN assignment USING (term_code, class_num) LEFT JOIN book_user USING (username, book_id)
-			WHERE assignment.book_id=" . $this->id;
-		
-		return new CSqlDataProvider($sql, array(
-		 	'pagination' => false,
-		 	'keyField' => 'username',
 		));
 	}
 	

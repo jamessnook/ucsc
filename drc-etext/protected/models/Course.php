@@ -170,8 +170,8 @@ class Course extends UCSCModel
 	public function assignments()
 	{
 		$criteria=new CDbCriteria;
-		if ($this->username) {  // comment out untill we have type data
-			$criteria->with = array( 'drcRequests' );
+		if ($this->username && strlen($this->username)>0) {  // comment out untill we have type data
+			$criteria->with = array( 'drcRequests',  'drcRequests.user');
 			$criteria->compare('drcRequests.user.username',$this->username);
 		}
 		$criteria->compare('t.term_code',$this->term_code);
