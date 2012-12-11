@@ -80,7 +80,7 @@ class User extends UCSCModel
 			//'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid', 'joinType' => 'INNER JOIN'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid'),
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'modified_by'),
-			'books' => array(self::MANY_MANY, 'Book', 'book_purchase(username, book_id)'),
+			'books' => array(self::MANY_MANY, 'Book', 'book_user(username, book_id)'),
 			'files' => array(self::HAS_MANY, 'File', 'modified_by'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'emplId'),
 		);

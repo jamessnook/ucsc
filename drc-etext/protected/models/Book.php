@@ -65,7 +65,7 @@ class Book extends UCSCModel
 		// class name for the relations automatically generated below.
 		return array(
 			'idType' => array(self::BELONGS_TO, 'IdType', 'id_type'),
-			'users' => array(self::MANY_MANY, 'User', 'book_purchase(book_id, username)'),
+			'users' => array(self::MANY_MANY, 'User', 'book_user(book_id, username)'),
 		);
 	}
 
@@ -110,7 +110,7 @@ class Book extends UCSCModel
 	}
 	
 	/**
-	 * Retrieves a data provider that can provide list of files uploaded for this Assignment.
+	 * Retrieves a data provider that can provide list of files uploaded for this Book.
 	 * @return CActiveDataProvider the data provider that can return a list of File Association models.
 	 */
 	public function files()

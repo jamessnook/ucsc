@@ -143,23 +143,18 @@ class Course extends UCSCModel
 	}
 	
 	/**
-	 * Retrieves a list of courses based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 * Provides an active data provider to provide a list of courses based on the request parameters.
+	 * @return CActiveDataProvider the data provider that can return the models based on the request parameters.
 	 */
 	public function courses()
 	{
 		$criteria=new CDbCriteria; 
 		$criteria->compare('t.term_code',$this->term_code);
 		if ($this->username && strlen($this->username)>0) {
-		//if ($this->emplid && strlen($this->emplid)>0) {
 			$criteria->with = array( 'drcRequests', 'drcRequests.user' );
 			$criteria->together = true;
-			
-			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
 			$criteria->compare('drcRequests.user.username',$this->username);
 			$criteria->compare('drcRequests.term_code',$this->term_code);
-			//$criteria->addCondition("drcRequests.username = $username");         
-			//$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
 		}
 		
 		return new CActiveDataProvider('Course', array(
@@ -169,21 +164,18 @@ class Course extends UCSCModel
 	}
 
 	/**
-	 * Retrieves a list of assignments for this course based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 *Provides an active data provider to provide a list of assignments for this course based on the request parameters.
+	 * @return CActiveDataProvider the data provider that can return the models based on the request parameters.
 	 */
 	public function assignments()
 	{
 		$criteria=new CDbCriteria;
 		if ($this->username) {  // comment out untill we have type data
-			//$criteria->with = array( 'drcRequests', 'assignmentTypes' );
 			$criteria->with = array( 'drcRequests' );
 			$criteria->compare('drcRequests.user.username',$this->username);
-			//$criteria->addCondition("assignmentTypes.type = drcRequests.type OR drcRequests.type is null");          
 		}
 		$criteria->compare('t.term_code',$this->term_code);
 		$criteria->compare('t.class_num',$this->class_num);
-		//$criteria->together = true;
 		$criteria->together = array( 'book', ); // might be needed
 		
 		return new CActiveDataProvider('Assignment', array(
@@ -193,8 +185,8 @@ class Course extends UCSCModel
 	}
 
 	/**
-	 * Retrieves a list of books for this course based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 * Retrieves a list of books for this course based on the current request parameters.
+	 * @return CActiveDataProvider the data provider that can return the models based on the request parameters.
 	 */
 	public function books()
 	{
@@ -210,11 +202,11 @@ class Course extends UCSCModel
 	
 	/**
 	 * Retrieves a data provider that can provide list of emails for this Course.
-	 * @return CActiveDataProvider the data provider that can return a list of User models.
+	 * @return CActiveDataProvider the data provider that can return a list of Email models.
 	 */
 	public function emails()
 	{
-		// create sql to retieve students who will use this book and whether they have purchased it.
+		// create sql to retieve emails sent or available to be sent ot istructors for this course.
 		$sql = "SELECT DISTINCT email.id, email.enabled, email.subject, email.message, email_type.name, email_type.sequence, email_type.tone, email_sent.term_code AS sent
 			FROM email JOIN email_type ON (email.type = email_type.name) 
 			LEFT JOIN email_sent ON (email_sent.email_id = email.id AND email_sent.term_code=$this->term_code AND email_sent.class_num=$this->class_num)
@@ -226,9 +218,9 @@ class Course extends UCSCModel
 		));
 	}
 
-			/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	/**
+	 * Retrieves a list of students for this course.
+	 * @return CActiveDataProvider the data provider that can return the models based on the request parameters (Which identify the course.)
 	 */
 	public function students()
 	{
@@ -245,7 +237,7 @@ class Course extends UCSCModel
 
 	/**
 	 * Retrieves a list of faculty names.
-	 * @return string, the names of faculty for this course.
+	 * @return array, the names of faculty for this course.
 	 */
 	public function facultyNames()
 	{
@@ -260,7 +252,7 @@ class Course extends UCSCModel
 	
 	/**
 	 * Retrieves a list of urls for faculty pages.
-	 * @return string, the names of faculty for this course.
+	 * @return array, the names of faculty for this course.
 	 */
 	public function facultyUrls()
 	{
