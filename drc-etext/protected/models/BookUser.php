@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "book_purchase".
+ * This is the model class for table "book_user".
  *
- * The followings are the available columns in table 'book_purchase':
+ * The followings are the available columns in table 'book_user':
  * @property integer $book_id
  * @property string $username
  * @property string $start_date
@@ -14,7 +14,7 @@ class BookUser extends UCSCModel
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return BookPurchase the static model class
+	 * @return BookUser the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

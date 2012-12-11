@@ -43,7 +43,7 @@ class AssignmentController extends Controller
 	
 	
 	/**
-	 * Defines actions for this controller that will be handeled by code is seperate action classes.
+	 * Defines actions for this controller that will be handeled by code in seperate action classes.
 	 */
 	public function actions()
     {

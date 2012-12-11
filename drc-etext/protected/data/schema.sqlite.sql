@@ -248,25 +248,10 @@ CREATE TABLE book (                    -- books or other items in drc library
 );
 
 drop table if exists book_purchase;
-CREATE TABLE book_purchase (          -- one to many associates a book with the file and accomodation types it is available in
-    book_id     INTEGER NOT NULL,     -- drc library id for book
-    username    VARCHAR(64),          -- identifies file or other type
-    start_date DATE,
-    end_date DATE,
-    created      DATETIME,      -- when requested
-    modified     DATETIME,      -- date and time of last change
-    modified_by   VARCHAR(64),  -- username of user who made last change 
-    primary key (book_id, username),
-    foreign key (book_id) references book (id),
-    foreign key (username) references user (username),
-    foreign key (modified_by) references user ("username")
-);
-
-
 drop table if exists book_user;
 CREATE TABLE book_user (          -- one to many associates a book with the file and accomodation types it is available in
     book_id     INTEGER NOT NULL,     -- drc library id for book
-    username    VARCHAR(64),          -- identifies file or other type
+    username    VARCHAR(64),          -- identifies user
     purchased   BOOLEAN DEFAULT 0,
     start_date  DATE,
     end_date    DATE,
