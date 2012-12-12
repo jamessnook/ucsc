@@ -1,3 +1,16 @@
+<?php
+/**
+ * The base view component file for managing a  book.
+ * Includes a sub-form for listing students and updating their purchase status
+ * and a file upload widget.
+ * Can be included in a composite view 
+ *
+ * @author Jim Snook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.views.book
+ */
+?>
+
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(

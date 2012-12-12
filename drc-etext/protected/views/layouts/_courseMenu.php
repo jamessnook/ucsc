@@ -1,3 +1,14 @@
+<?php
+/**
+ * The base view component file for displaying the course menu in the right side nav column.
+ * Can be included in a composite view 
+ *
+ * @author Jim Snook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.views.layout
+ */
+?>
+
 <?php 
 
 	$menuItems=array(

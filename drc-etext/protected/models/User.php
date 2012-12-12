@@ -137,14 +137,16 @@ class User extends UCSCModel
 	}
 
 	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 * Retrieves a list of USER models for students with active DRC requests for the term identified by $this->term_code.
+	 * @return CActiveDataProvider the data provider that can return the User models.
 	 */
 	public function students()
 	{
 		$criteria=new CDbCriteria;
 		$criteria->with = array( 'drcRequests', 'drcRequests.course');
-		$criteria->compare('drcRequests.term_code',$this->term_code);
+		$criteria->compare('drcRequests.term_code', $this->term_code);
+		//$criteria->addCondition("AuthAssignment.userid=t.username");
+		//$criteria->join = 'JOIN drcRequests USING (emplid)';
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -154,13 +156,14 @@ class User extends UCSCModel
 
 	
 	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 * Retrieves a list of USER models for faculty with active DRC requests for their courses in the term identified by $this->term_code.
+	 * Note: Temporarily does not filter by term because our test data does not include it yet
+	 * @return CActiveDataProvider the data provider that can return the User models.
 	 */
-	public function faculty()
+	public function faculty()  
 	{
 		$criteria=new CDbCriteria;
-		//$criteria->with = array( 'authAssignments');
+		// temporary coment out so gets all faculty for demo....
 		// need to add term code criteria once we have real data
 		//$criteria->with = array( 'drcRequests', 'drcRequests.course');
 		//$criteria->compare('drcRequests.term_code',$this->term_code);
@@ -175,9 +178,9 @@ class User extends UCSCModel
 	}
 
 	
-		/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	/**
+	 * Retrieves a list of USER models for staff with active DRC staff or admin accounts.
+	 * @return CActiveDataProvider the data provider that can return the User models.
 	 */
 	public function staff()
 	{
@@ -195,8 +198,8 @@ class User extends UCSCModel
 
 	
 	/**
-	 * Retrieves a list of courses based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 * Retrieves a list of course Models associated with the user and term defined by the current $this object.
+	 * @return CActiveDataProvider the data provider that can return the Course models.
 	 */
 	public function courses()
 	{
@@ -205,21 +208,12 @@ class User extends UCSCModel
 			$this->term_code = Term::currentTermCode();
 		}
 		$criteria->compare('t.term_code',$this->term_code);
-		//$criteria->compare('emplid',$this->emplid);
-		//$criteria->compare('username',$this->username);
 		if ($this->emplid && strlen($this->emplid)>0) {
 			$criteria->with = array( 'drcRequests' );
 			$criteria->together = true;
-			
-			//$criteria->together = array( 'drcRequests', 'assignmentTypes' ); // might be needed
 			$criteria->compare('drcRequests.emplid',$this->emplid);
 			$criteria->compare('drcRequests.term_code',$this->term_code);
-			//$criteria->addCondition("drcRequests.username = $username");         
-			//$criteria->addCondition("assignmentTypes.type = drcRequests.type");          
 		}
-		//if ($this->term_code && $this->term_code>0) {
-		//	$criteria->compare('term_code',$this->term_code);
-		//}
 		
 		return new CActiveDataProvider('Course', array(
 			'criteria'=>$criteria,
@@ -247,7 +241,23 @@ class User extends UCSCModel
 	}
 	
 	/**
-	 * Retrieves a list of course names for the courses associate with a users drc requests.
+	 * Returns the data model based on the passed attributes.
+	 * Persues various ways of finding and creating the model
+	 * Adds functionality to arent class method to insure term_code is set.
+	 * @param array of parameters
+	 * @return model instance of a UCSCModel subclass built using the url params.
+	 */
+	public static function loadModel($params=null)
+	{
+		$aModel = parent::loadModel($params);
+		if (!$aModel->term_code){
+			$aModel->term_code = Term::currentTermCode();
+		}
+		return $aModel;
+	}
+	
+	/**
+	 * Retrieves a list of course names for the courses associate with a users.
 	 * @return string, the names of faculty for this course.
 	 */
 	public function drcRequestCourseNames()
@@ -277,6 +287,8 @@ class User extends UCSCModel
 	}
 	
 	/**
+	 * Retrieves a list of authentication roles assigned to the user defined by $this object.
+	 * @return array, the roles for this user.
 	 */
 	public function getRoles()
 	{
@@ -289,6 +301,8 @@ class User extends UCSCModel
 	}
 	
 	/**
+	 * Retrieves a URl to call the update action for this user.
+	 * @return string, the url for the update action this user.
 	 */
 	public function getUrl()
 	{

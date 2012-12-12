@@ -75,7 +75,7 @@ class UserController extends Controller
 	}
 
 	/**
-	 * Displays data or a single user.
+	 * Displays data for a single user.
 	 */
 	public function actionView()
 	{

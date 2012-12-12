@@ -102,7 +102,8 @@ class Term extends UCSCModel
 	}
 	
 	/**
-	 * Retrieves a list of Term models which have data in the day=ta base for the model supplie.
+	 * Retrieves a list of Term models which have data in the data base 
+	 * for the user with the username in the model supplied.
 	 * @return an array of Term models.
 	 */
 	public static function terms($model=null)
@@ -120,7 +121,7 @@ class Term extends UCSCModel
 	}
 
 	/**
-	 * Retrieves a list of Term models which have data in the day=ta base for the model supplie.
+	 * Retrieves a list of Term models which have data in the data base for the model supplied.
 	 * An alternatre way of the above using straight SQL, returns data reader
 	 * @return an array of Term models.
 	 */
@@ -138,7 +139,8 @@ class Term extends UCSCModel
 	}
 
 	/**
-	 * @return array customized attribute labels (name=>label)
+	 * Get the term_code for the most recent term (Quarter) with data in the database.
+	 * @return integer, the term code for the most recent term with data in the database.
 	 */
 	public static function currentTermCode()
 	{

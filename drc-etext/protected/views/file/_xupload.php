@@ -1,3 +1,15 @@
+<?php
+/**
+ * The base view component file for displaying the xupload extension
+ * file upload widget.
+ * Can be included in a composite view 
+ *
+ * @author Jim Snook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.views.file
+ */
+?>
+
 <!-- The file upload form used as target for the file upload widget -->
 <?php //echo CHtml::beginForm($this -> url, 'post', $this -> htmlOptions);?>
 <div id="xupload" class="row fileupload-buttonbar">

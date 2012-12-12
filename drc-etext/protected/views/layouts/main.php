@@ -1,3 +1,15 @@
+<?php
+/**
+ * The top level view file container for all views.
+ * It only contains project wide non configurable content including title and top leve nav.
+ * Content that is configurable and varies across pages is in _main.php
+ *
+ * @author Jim Snook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.views.layout
+ */
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>

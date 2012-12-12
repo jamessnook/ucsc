@@ -50,6 +50,7 @@ class UCSCModel extends CActiveRecord
 	 * Returns the data model based on the passed attributes.
 	 * Persues various ways of finding and creating the model
 	 * @param array of parameters
+	 * @return model instance of a UCSCModel subclass built using the url params.
 	 */
 	public static function loadModel($params=null)
 	{

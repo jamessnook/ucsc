@@ -1,3 +1,14 @@
+<?php
+/**
+ * The base view component file for displaying a list of files.
+ * Can be included in a composite view 
+ *
+ * @author Jim Snook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.views.file
+ */
+?>
+
 							
 <h3>Curent Files for <?php echo $model->title ?></h3>
 

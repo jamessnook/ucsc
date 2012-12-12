@@ -1,3 +1,15 @@
+<?php
+/**
+ * The base view component file for page layout.
+ * This includes configurable content and is then contained in the main.php layout file whoch is just an outer non configurable frame
+ * Can be included in a composite view 
+ *
+ * @author Jim Snook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.views.layout
+ */
+?>
+
 <!--Main layout Frame for UCSC web app -->
 <?php 
 $options = $this->viewOptions;

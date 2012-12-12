@@ -179,4 +179,21 @@ class Assignment extends UCSCModel
 		return $types;
 	}
 	
+		/**
+	 * Retrieves an array of file types needed for this assignment.
+	 * @return array, the names of file types for this course.
+	 */
+	public function typesString()
+	{
+		$types = '';
+		foreach($this->drcRequests as $request)
+		{
+			if($types != ''){
+				$types .= ', ';
+			}
+			$types .= $request->type; // use value as key to prevent duplicates
+		}
+		return $types;
+	}
+	
 }

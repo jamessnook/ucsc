@@ -1,3 +1,14 @@
+<?php
+/**
+ * The base view component file for displaying a list of users.
+ * Can be included in a composite view 
+ *
+ * @author Jim Snook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.views.user
+ */
+?>
+
 
 <div class="row-fluid">
     <div class="span12">
@@ -5,21 +16,10 @@
 
 	<?php 
 	
-	//$model->username = Yii::app()->user->name;  // set up for current user
-	//$params = array();
-	//$paramStr = '';
-	//if ($model->term_code) {
-		//$params['term_code'] = $model->term_code;
-	//	$paramStr .=  '\'term_code\' =>' . $model->term_code; 
-	//}
-	//if ($model->class_num) $params['class_num'] = $model->class_num;
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'drc-request-grid',
 		'dataProvider'=>$dataProvider,
-		//'filter'=>$model,
-		//'hideHeader'=>true,
 		'summaryText'=>'',
-		//'emptyText'=>'Sorry, no data',
 		'showTableOnEmpty'=>false,
 		'enablePagination'=>false,
 		'itemsCssClass'=>"table table-striped table-bordered data-table", 
