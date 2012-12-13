@@ -3,6 +3,9 @@
 /**
  * This is the model class for table "book".
  *
+ * Represents a single book which is used by a course 
+ * which one or more DRC students have requested services for.
+ *
  * The followings are the available columns in table 'book':
  * @property integer $id
  * @property integer $global_id
@@ -14,6 +17,10 @@
  * The followings are the available model relations:
  * @property IdType $idType
  * @property User[] $users
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class Book extends UCSCModel
 {

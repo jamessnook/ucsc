@@ -3,6 +3,10 @@
 /**
  * This is the model class for table "term".
  *
+ * Identifies the set of terms (quarters) which can be associated with 
+ * courses, drcRequests and assignemtns.
+ * Is used to populate menu.
+ *
  * The followings are the available columns in table 'term':
  * @property string $term_code
  * @property string $description
@@ -13,6 +17,10 @@
  * @property Assignment[] $assignments
  * @property Course[] $courses
  * @property InstructorFiles[] $instructorFiles
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class Term extends UCSCModel
 {

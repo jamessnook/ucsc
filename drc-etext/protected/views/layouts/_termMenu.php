@@ -22,8 +22,8 @@
 	$params = array();
 	if ($model->username && strlen($model->username)>0)
 		$params['username'] = $model->username;
-	if ($model->emplid && strlen($model->emplid)>0)
-		$params['emplid'] = $model->emplid;
+	//if ($model->emplid && strlen($model->emplid)>0)
+	//	$params['emplid'] = $model->emplid;
 
 	// create menu item for each term
 	$terms = Term::terms($model);

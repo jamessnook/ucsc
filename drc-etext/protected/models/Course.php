@@ -3,6 +3,9 @@
 /**
  * This is the model class for table "course".
  *
+ * Represents a single course which one or more DRC students have requested services for.
+ * This is supplied by the data feed from AIS.
+ *
  * The followings are the available columns in table 'course':
  * @property integer $term_code
  * @property integer $class_num
@@ -21,16 +24,27 @@
  * The followings are the available model relations:
  * @property Assignment[] $assignments
  * @property CourseInstructor[] $courseInstructors
- * @property CourseInstructor[] $courseInstructors1
+ * @property EmailSent[] $emailsSent
  * @property DrcRequest[] $drcRequests
- * @property DrcRequest[] $drcRequests1
  * @property InstructorFiles[] $instructorFiles
+ * @property Term $term
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class Course extends UCSCModel
 {
+	/**
+	 * @var string (Non database atribute.)  Identifies optional user associated with the assignemt for the current action.
+	 */
 	public $username;
-	public $emplid;
 	
+	/**
+	 * @var string (Non database atribute.)  Identifies optional user associated with the assignemt for the current action.
+	 */
+	//public $emplid;
+		
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -83,8 +97,6 @@ class Course extends UCSCModel
 			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code, class_num'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'class_num'),
-            'instructors'=>array(self::MANY_MANY, 'User',
-                'course_instructor(term_code, class_num, emplid)'),
             'courseInstructors'=>array(self::HAS_MANY, 'CourseInstructor', 'term_code, class_num'),
 		);
 	}

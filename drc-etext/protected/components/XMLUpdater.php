@@ -1,6 +1,10 @@
 <?php
 /**
  * XMLUpdater handels calls to XML services to retreive data and update local datastores.
+ * 
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.components
  */
 class XMLUpdater extends CApplicationComponent
 {

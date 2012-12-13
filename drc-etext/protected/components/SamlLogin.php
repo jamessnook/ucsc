@@ -1,4 +1,9 @@
 <?php
+/**
+ * SamlLogin class file.
+ *
+ */
+
 // import SAML2 library for Shibboleth remote authentication
 Yii::import('application.vendors.onelogin.src.OneLogin.Saml.*');		
 Yii::import('application.vendors.onelogin.ext.xmlseclibs.*');	
@@ -14,11 +19,20 @@ require_once 'xmlseclibs.php';
  * SamlLogin encapsulates the configuration  and use of the OneLogin
  * open source libray for remote user authentication using the SAML xml protocol.
  * This includes Shibboleth authentication.
- */
+ * 
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.components
+*/
 class SamlLogin extends CApplicationComponent
 {
 
+    /**
+     * User Email tag.
+     * @var string
+     */
 	public $userEmailTag;
+	
     /**
      * The URL to submit SAML authentication requests to.
      * @var string

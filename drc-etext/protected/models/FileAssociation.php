@@ -3,6 +3,9 @@
 /**
  * This is the model class for table "file_association".
  *
+ * Represents the association between an file ane the book,
+ * assignment or other object it has been uploaded for. 
+ *
  * The followings are the available columns in table 'file_association':
  * @property integer $file_id
  * @property integer $model_id
@@ -10,6 +13,10 @@
  *
  * The followings are the available model relations:
  * @property File $file
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class FileAssociation extends UCSCModel
 {

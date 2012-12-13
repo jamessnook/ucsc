@@ -3,6 +3,8 @@
 /**
  * This is the model class for table "email".
  *
+ * Represents an email message which has been sent or is available to be sent to th einstructors of a course.
+
  * The followings are the available columns in table 'email':
  * @property integer $id
  * @property string $message
@@ -14,6 +16,10 @@
  * The followings are the available model relations:
  * @property User $modifiedBy
  * @property EmailSent[] $emailSents
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class Email extends UCSCModel
 {

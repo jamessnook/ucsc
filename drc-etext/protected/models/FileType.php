@@ -3,6 +3,9 @@
 /**
  * This is the model class for table "file_type".
  *
+ * Identifies a set of file types which can be assocaited with a file.
+ * Is used to populate drop down menu.
+ *
  * The followings are the available columns in table 'file_type':
  * @property integer $id
  * @property string $type
@@ -11,6 +14,10 @@
  * The followings are the available model relations:
  * @property DrcRequest[] $drcRequests
  * @property File[] $files
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class FileType extends CActiveRecord
 {

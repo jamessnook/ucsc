@@ -1,16 +1,20 @@
 <?php
+/**
+ * UploadAction class file.
+ *
+ */
+
 Yii::import( "xupload.models.XUploadForm" );
 Yii::import("xupload.actions.XUploadAction");
 /**
  * UploadAction
  * =============
  * Basic upload functionality for an action used by the xupload extension.
+ * This class extends the XUploadAction class provided with the xupload extension.
+ * It provides additional functionality to determine where to save files 
+ * It also saves metadata about the fiel to instances of the File and FIleAssocaiion models.
  *
- * XUploadAction is used together with XUpload and XUploadForm to provide file upload funcionality to any application
- *
- * You must configure properties of XUploadAction to customize the folders of the uploaded files.
- *
- * Using XUploadAction involves the following steps:
+ * Using UploadAction involves the following steps:
  *
  * 1. Override CController::actions() and register an action of class XUploadAction with ID 'upload', and configure its
  * properties:
@@ -22,7 +26,7 @@ Yii::import("xupload.actions.XUploadAction");
  *     {
  *         return array(
  *             'upload'=>array(
- *                 'class'=>'xupload.actions.XUploadAction',
+ *                 'class'=>'UploadAction',
  *                 'path' =>Yii::app() -> getBasePath() . "/../uploads",
  *                 'publicPath' => Yii::app() -> getBaseUrl() . "/uploads",
  *                 'subfolderVar' => "parent_id",
@@ -31,20 +35,19 @@ Yii::import("xupload.actions.XUploadAction");
  *     }
  * }
  *
- * 2. In the form model, declare an attribute to store the uploaded file data, and declare the attribute to be validated
- * by the 'file' validator.
- * 3. In the controller view, insert a XUpload widget.
+ * 2. In the controller view, insert a XUpload widget.
  *
  * ###Resources
  * - [xupload](http://www.yiiframework.com/extension/xupload)
  *
  * @version 0.3
  * @author JSnook based on example by Asgaroth (http://www.yiiframework.com/user/1883/)
+ * @package drc-etext.protected.components
  */
 class UploadAction extends XUploadAction {
 
     /**
-     * The name of the model to associate teh file with an instance of using 'id'.
+     * The name of the model to associate the file with an instance of using 'id'.
      *
      * @var string
      */

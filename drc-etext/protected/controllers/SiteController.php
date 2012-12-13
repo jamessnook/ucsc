@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * SiteController is the controller class for site wide actions not related to a specific model.
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.controllers
+ */
 class SiteController extends Controller
 {
 	/**

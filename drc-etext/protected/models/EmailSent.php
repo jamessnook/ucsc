@@ -3,6 +3,9 @@
 /**
  * This is the model class for table "email_sent".
  *
+ * Records when an email has been sent to teh instructors of a course.
+ * Associates the email with the course.
+ * 
  * The followings are the available columns in table 'email_sent':
  * @property integer $email_id
  * @property string $username
@@ -18,6 +21,10 @@
  * @property Course $classNum
  * @property Email $email
  * @property User $username0
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class EmailSent extends UCSCModel
 {

@@ -3,11 +3,19 @@
 /**
  * This is the model class for table "book_user".
  *
+ * Represents the association between a book 
+ * and a user who may need that book for that assignemnt.
+ * Is used to track purchase of the book for each user.
+ *
  * The followings are the available columns in table 'book_user':
  * @property integer $book_id
  * @property string $username
  * @property string $start_date
  * @property string $end_date
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class BookUser extends UCSCModel
 {

@@ -3,14 +3,17 @@
 /**
  * This is a base class for active record classes with usefull funtionality added.
  *
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class UCSCModel extends CActiveRecord
 {
-	public $term_id;
-	public $username;
-	
+
 	/**
 	 * Returns the static model of the specified AR class.
+	 * Must be overridden in each sub-class
 	 * @param string $className active record class name.
 	 * @return BookRequest the static model class
 	 */

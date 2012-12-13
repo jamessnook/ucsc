@@ -3,6 +3,9 @@
 /**
  * This is the model class for table "instructor_files".
  *
+ * Identifies files uploaded by an instructor for a specific course.
+ * Associates instructor, file and course
+ *
  * The followings are the available columns in table 'instructor_files':
  * @property integer $file_id
  * @property integer $term_code
@@ -16,6 +19,10 @@
  * @property Course $class_number
  * @property Term $term_code
  * @property File $file
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class InstructorFiles extends CActiveRecord
 {

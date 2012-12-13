@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * AssignmentController is the controller class for viewing and managing users and related data.
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.controllers
+ */
 class UserController extends Controller
 {
 	/**

@@ -1,6 +1,6 @@
 <?php
 /**
- * CLinksColumn class file.
+ * LinksColumn class file.
  *
  */
 
@@ -9,12 +9,16 @@ Yii::import('zii.widgets.grid.CLinkColumn');
 
 /**
  * LinksColumn represents a grid view column that renders one or more hyperlinks in each of its data cells.
+ * This class extens CLinkCollumn to allow more then one link in a cell.
  *
  * The {@link label} and {@link url} properties determine how each hyperlink will be rendered.
- * The {@link labelExpression}, {@link urlExpression} properties may be used instead if they are available.
+ * The {@link labelExpression}, {@link urlExpression} properties will be used instead if they are available.
  * In addition, if {@link imageUrl} is set, an image link will be rendered.
  *
- */
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.components
+*/
 class LinksColumn extends CLinkColumn
 {
 	/**

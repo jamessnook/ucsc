@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * AssignmentController is the controller class for managing user login and logout.
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.controllers
+ */
 class LoginController extends Controller
 {
 	public function actionIndex()

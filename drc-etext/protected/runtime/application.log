@@ -915,3 +915,54 @@ in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (75)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (83)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (228)
+2012/12/12 23:45:27 [error] [exception.CException] exception 'CException' with message 'Property "Assignment.emplid" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('emplid')
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_termMenu.php(25): CActiveRecord->__get('emplid')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_main.php(146): CController->renderPartial('../layouts/_ter...', Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('../layouts/_mai...', Array, true)
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php(86): CController->render('../layouts/_mai...', Array)
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\AssignmentController.php(97): Controller->renderView(Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): AssignmentController->actionManage()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('manage')
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/mana...')
+#23 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/assignment/manage/term_code/2122
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/students/term_code/2122/class_num/60423/username/astudent
+---
+2012/12/12 23:47:19 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (252)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/12 23:47:26 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/12 23:57:30 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (335)
+2012/12/12 23:57:36 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (251)
+2012/12/12 23:57:47 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (252)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)

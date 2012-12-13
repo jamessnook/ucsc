@@ -3,6 +3,10 @@
 /**
  * This is the model class for table "drc_request".
  *
+ * Represents a DRC request for alternate text for a student and a course.
+ * Associates a student with a course and the type of alternate text they need.
+ * This is supplied by the data feed from AIS.
+ *
  * The followings are the available columns in table 'drc_request':
  * @property integer $term_code
  * @property integer $class_num
@@ -18,6 +22,10 @@
  * @property Course $class_num
  * @property User $empl
  * @property FileType $type0
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class DrcRequest extends CActiveRecord
 {

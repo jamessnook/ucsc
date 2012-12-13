@@ -3,6 +3,8 @@
 /**
  * This is the model class for table "assignment".
  *
+ * Represents a single assignment in a course which one or more DRC students have requested services for.
+ *
  * The followings are the available columns in table 'assignment':
  * @property integer $id
  * @property integer $term_code
@@ -20,11 +22,22 @@
  * @property Term $term_code
  * @property Course $class_num
  * @property DrcRequest[] $drcRequests
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class Assignment extends UCSCModel
 {
+	/**
+	 * @var string (Non database atribute.)  Identifies optional user associated with the assignemt for the current action.
+	 */
 	public $username;
-	public $emplid;
+	
+	/**
+	 * @var string (Non database atribute.)  Identifies optional user associated with the assignemt for the current action.
+	 */
+	//public $emplid;
 	
 	/**
 	 * Returns the static model of the specified AR class.

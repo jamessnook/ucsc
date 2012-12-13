@@ -1,13 +1,13 @@
 <?php
-
+/**
+ * AssignmentController is the controller class for viewing and managing assignemtns and related data.
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.controllers
+ */
 class AssignmentController extends Controller
 {
-	/**
-	 * @var string the default layout for the views.  Set to use file with no layout.
-	 * Layout is instead provided by //layouts/_main which is container for all views in this app.
-	 * This is done so parameters can be passed to the layout without modifying standard Yii classes.
-	 */
-	public $layout='//layouts/noLayout';
 
 	/**
 	 * @return array action filters

@@ -3,11 +3,18 @@
 /**
  * This is the model class for table "id_type".
  *
+ * Identifies a set of book id types which can be assocaited with a book id.
+ * Is used to populate drop down menu.
+ *
  * The followings are the available columns in table 'id_type':
  * @property string $name
  *
  * The followings are the available model relations:
  * @property Book[] $books
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class IdType extends CActiveRecord
 {

@@ -3,6 +3,10 @@
 /**
  * This is the model class for table "course_instructor".
  *
+ * Represents the association between a course 
+ * and an instructor associated with that course.
+ * Is used to identify the instructors for a course.
+ *
  * The followings are the available columns in table 'course_instructor':
  * @property integer $term_code
  * @property integer $class_num
@@ -12,6 +16,10 @@
  * @property Course $term_code
  * @property Course $class_num
  * @property User $empl
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class CourseInstructor extends CActiveRecord
 {

@@ -3,6 +3,9 @@
 /**
  * This is the model class for table "user".
  *
+ * Represents a single user, student, faculty, staff or admin, who has
+ * an account to use the DRC application.
+ *
  * The followings are the available columns in table 'user':
  * @property string $username
  * @property string $emplid
@@ -18,11 +21,16 @@
  * @property string $modified_by
  *
  * The followings are the available model relations:
- * @property AuthItem[] $authItems
+ * @property AuthAssignment[] $authAssignments
  * @property Assignment[] $assignments
+ * @property DrcRequest[] $drcRequests
  * @property Book[] $books
  * @property File[] $files
  * @property InstructorFiles[] $instructorFiles
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class User extends UCSCModel
 {
@@ -75,9 +83,7 @@ class User extends UCSCModel
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			//'authItems' => array(self::MANY_MANY, 'AuthItem', 'AuthAssignment(userid, itemname)'),
 			'authAssignments' => array(self::HAS_MANY,'AuthAssignment', 'userid, itemname'),
-			//'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid', 'joinType' => 'INNER JOIN'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid'),
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'modified_by'),
 			'books' => array(self::MANY_MANY, 'Book', 'book_user(username, book_id)'),

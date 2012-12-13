@@ -3,6 +3,8 @@
 /**
  * This is the model class for table "file".
  *
+ * Represents a single file which has been uploaded and associated with a book or assignment.
+ *
  * The followings are the available columns in table 'file':
  * @property integer $id
  * @property string $name
@@ -19,6 +21,10 @@
  * @property FileType $type
  * @property BookRequest $parent
  * @property User $modifiedBy
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class File extends CActiveRecord
 {

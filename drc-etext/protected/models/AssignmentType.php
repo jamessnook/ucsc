@@ -3,15 +3,18 @@
 /**
  * This is the model class for table "assignment_type".
  *
+ * Represents the association between an assignment 
+ * and a specific file type needed for that assignemnt.
+ * Is used to track completion of the assignment for each type.
+ *
  * The followings are the available columns in table 'assignment_type':
  * @property integer $assignment_id
  * @property string $accommodation_type
  * @property boolean $is_complete
- */
-/**
- * Represents the association between an assignemtn 
- * and a specific file type needed for that assignemnt.
- * Is used to track completion of the assignment for each type
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class AssignmentType extends CActiveRecord
 {

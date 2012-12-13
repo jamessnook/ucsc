@@ -2,11 +2,18 @@
 
 /**
  * This is the model class for table "email_type".
+ * 
+ * Identifies a set of email types which can be assocaited with an email messsage.
+ * Is used to populate drop down menu.
  *
  * The followings are the available columns in table 'email_type':
  * @property string $name
  * @property integer $sequence
  * @property string $tone
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class EmailType extends UCSCModel
 {

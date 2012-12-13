@@ -2,22 +2,25 @@
 /**
  * Controller is the customized base controller class.
  * All controller classes for this application should extend from this base class.
+ * 
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.components
  */
 class Controller extends CController
 {
 	/**
-	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
-	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
+	 * @var string the default layout for the views.  Set to use file with no layout.
+	 * Layout is instead provided by //layouts/_main which is container for all views in this app.
+	 * This is done so parameters can be passed to the layout without modifying standard Yii classes.
 	 */
-	public $layout='//layouts/column1';
+	public $layout='//layouts/noLayout';
+	
 	/**
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
 	 */
 	public $menu=array();
-	/**
-	 * @var array layout config items.
-	 */
-	public $layoutOptions=array();
+	
 	/**
 	 * @var array the breadcrumbs of the current page. The value of this property will
 	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}
@@ -25,12 +28,26 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
+	/**
+	 * @var array view config items.
+	 */
 	public $viewOptions = array();
+	
+	/**
+	 * @var UCSCModel default model object for this controller, used fore most views.
+	 */
 	public $_model;
+	
+	/**
+	 * @var UCSCModel contained data model object for this controller, used for content in an inner section of the view.
+	 * If not set the data in $_model will be used for all content.
+	 */
 	public $_contentModel;
 		
 	/**
 	 * A generic entry point for very similar actions.
+	 * Not currently used this is an laternative approach 
+	 * where the view to use (and other configuration) can be specified in the request parameters.
 	 */
 	public function actionIndex()
 	{
@@ -55,7 +72,10 @@ class Controller extends CController
 	}
 
 	/**
-	 * Add setting of default view options to render.
+	 * Renders a view defined by the configuration in the $options array.
+	 * the layouts/main and layouts/_main views are containers for the view.
+	 * The specific contained view file to use is defined by the contentView
+	 * option.
 	 */
 	public function renderView($options=array())
 	{
@@ -74,7 +94,8 @@ class Controller extends CController
 	}
 	
 	/**
-	 * creates model if not yet sets.
+	 * Returns the model for this controller.
+	 * Creates model if not yet set.
 	 */
 	public function getModel()
 	{
@@ -85,16 +106,19 @@ class Controller extends CController
 		return $this->_model;
 	}
 	
-		/**
-	 * creates model if not yet sets.
+	/**
+	 * Assigns model object.
 	 */
 	public function setModel($model)
 	{
 		$this->_model = $model;
 	}
 
-		/**
-	 * creates model if not yet sets.
+	/**
+	 * Returns content model for this controller.
+	 * This is the model for the inner or contained view.
+	 * If not set the $this->model model will be used for all content
+	 * Creates model if not yet sets.
 	 */
 	public function getContentModel()
 	{
@@ -110,8 +134,8 @@ class Controller extends CController
 		return $this->_contentModel;
 	}
 	
-		/**
-	 * creates model if not yet sets.
+	/**
+	 * Assigns content model object.
 	 */
 	public function setContentModel($model)
 	{

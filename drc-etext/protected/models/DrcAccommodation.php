@@ -3,6 +3,11 @@
 /**
  * This is the model class for table "drc_accommodation".
  *
+ * Represents a global accomodation request for a student.
+ * This is in the data feed from AIS but is not currently being used by the app.
+ * The app uses the accomodation type associated with the DrcRequest object
+ * requesting service for a course.
+ *
  * The followings are the available columns in table 'drc_accommodation':
  * @property string $emplid
  * @property string $type
@@ -13,6 +18,10 @@
  *
  * The followings are the available model relations:
  * @property User $empl
+ *
+ * @author JSnook <jsnook@ucsc.edu>
+ * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @package drc-etext.protected.models
  */
 class DrcAccommodation extends CActiveRecord
 {
