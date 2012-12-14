@@ -966,3 +966,359 @@ in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (252)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 19:45:52 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:45:56 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:45:57 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (335)
+2012/12/13 19:45:59 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (251)
+2012/12/13 19:46:25 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:46:45 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (251)
+2012/12/13 19:46:47 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (335)
+2012/12/13 19:46:48 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:46:49 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 19:47:08 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:47:12 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 19:47:22 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:47:26 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 19:47:52 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:48:01 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:48:16 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (57)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:48:34 [warning] [application] Failed to set unsafe attribute "Assignment" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (76)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:48:34 [warning] [application] Failed to set unsafe attribute "yt0" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (76)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:48:34 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:48:37 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (57)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:48:41 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (240)
+2012/12/13 19:49:16 [warning] [application] Failed to set unsafe attribute "term_code" of "Email".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (126)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:49:16 [warning] [application] Failed to set unsafe attribute "class_num" of "Email".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (126)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:49:16 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (131)
+2012/12/13 19:49:16 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (131)
+2012/12/13 19:49:31 [warning] [application] Failed to set unsafe attribute "Email" of "Email".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (141)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:49:31 [warning] [application] Failed to set unsafe attribute "yt0" of "Email".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (141)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:49:31 [warning] [application] Failed to set unsafe attribute "term_code" of "Email".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (141)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:49:31 [warning] [application] Failed to set unsafe attribute "class_num" of "Email".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (141)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 19:49:32 [warning] [application] Failed to set unsafe attribute "Email" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (161)
+2012/12/13 19:49:32 [warning] [application] Failed to set unsafe attribute "yt0" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (161)
+2012/12/13 19:49:32 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (161)
+2012/12/13 19:49:32 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (161)
+2012/12/13 19:49:32 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (240)
+2012/12/13 19:49:44 [warning] [application] Failed to set unsafe attribute "email_id" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (173)
+2012/12/13 19:49:44 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (173)
+2012/12/13 19:49:44 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (240)
+2012/12/13 19:49:53 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (228)
+2012/12/13 19:50:08 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (228)
+2012/12/13 19:50:37 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 19:52:14 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 19:52:23 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 19:52:27 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (228)
+2012/12/13 19:52:37 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (153)
+2012/12/13 19:52:42 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 19:52:48 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 20:01:26 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (153)
+2012/12/13 20:01:32 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 20:01:37 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 20:01:55 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 20:02:25 [warning] [application] Failed to set unsafe attribute "content" of "Assignment".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (309)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2012/12/13 20:02:25 [warning] [application] Failed to set unsafe attribute "content" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (314)
+2012/12/13 20:02:25 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (314)
+2012/12/13 20:54:02 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 20:57:16 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 20:57:20 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 20:57:30 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 20:57:33 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 20:57:36 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 23:49:41 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 23:49:47 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\User.php (258)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\UserController.php (191)
+2012/12/13 23:50:05 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/13 23:50:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('updateAssignmen...')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/updateAs...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/updateAssignment/id/6/username
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423
+---
+2012/12/13 23:51:15 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (335)
+2012/12/13 23:51:15 [error] [exception.CException] exception 'CException' with message 'CourseController cannot find the requested view "../assignment/_listFiles".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\assignment\_view.php(31): CController->renderPartial('../assignment/_...', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\layouts\_main.php(135): CController->renderPartial('../assignment/_...', Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('../layouts/_mai...', Array, true)
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php(86): CController->render('../layouts/_mai...', Array)
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(274): Controller->renderView(Array)
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(54): CourseController->actionViewAssignment()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionUpdateAssignment()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('updateAssignmen...')
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/updateAs...')
+#23 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/updateAssignment/id/6/username
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423
+---
+2012/12/14 00:04:30 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (65)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (335)
+2012/12/14 00:12:51 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/14 00:16:33 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (272)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (54)
+2012/12/14 00:16:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('description')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/descript...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/course/description/term_code/2122/class_num/60423/username
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/updateAssignment/id/6/username
+---
+2012/12/14 00:17:17 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (336)
+2012/12/14 00:17:26 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (262)
+2012/12/14 00:17:29 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (198)
+2012/12/14 00:18:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "about".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('about')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('about')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('site/about')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ucsc/drc-etext/index.php/site/about
+HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/course/courses/term_code/2122
+---
+2012/12/14 00:18:38 [warning] [application] Failed to set unsafe attribute "romm" of "Course".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (78)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\Controller.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (198)

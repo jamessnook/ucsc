@@ -15,7 +15,9 @@
  *
  * The followings are the available model relations:
  * @property User $modifiedBy
+ * @property EmailType $type
  * @property EmailSent[] $emailSents
+ * @property EmailSent[] $emailsSent
  *
  * @author JSnook <jsnook@ucsc.edu>
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
@@ -71,6 +73,7 @@ class Email extends UCSCModel
 			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
 			'type' => array(self::BELONGS_TO, 'EmailType', 'type'),
 			'emailSents' => array(self::HAS_MANY, 'EmailSent', 'email_id'),
+			'emailsSent' => array(self::HAS_MANY, 'EmailSent', 'email_id'), // two names for the same thing to afford speeling ambiguity
 		);
 	}
 

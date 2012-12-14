@@ -19,9 +19,11 @@
  *
  * The followings are the available model relations:
  * @property User $modifiedBy
- * @property Term $term_code
- * @property Course $class_num
+ * @property Term $term
+ * @property Book $book
+ * @property Course $course
  * @property DrcRequest[] $drcRequests
+ * @property FileAssociation[] $fileIds
  *
  * @author JSnook <jsnook@ucsc.edu>
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz

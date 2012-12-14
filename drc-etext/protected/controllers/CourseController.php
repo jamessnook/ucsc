@@ -28,7 +28,7 @@ class CourseController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform view type actions
-				'actions'=>array('index','assignments','books','courses','students','assignmentFiles'),
+				'actions'=>array('index','assignments','books','courses','students','assignmentFiles', 'updateAssignment', 'description'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -269,6 +269,7 @@ class CourseController extends Controller
 	public function actionViewAssignment()
 	{
 		$this->contentModel=Assignment::loadModel();
+		$this->model = Course::loadModel(array('term_code' => $this->contentModel->term_code, 'class_num' => $this->contentModel->class_num));
 		$this->renderView(array(
 			'contentView' => '../assignment/_view',
 		));

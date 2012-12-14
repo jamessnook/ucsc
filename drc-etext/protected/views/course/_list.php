@@ -32,7 +32,7 @@
 				'header'=>'Course Name', 
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->title', 
-				'urlExpression'=>'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num, \'username\'=>\'' . $model->username . '\')', 
+				'urlExpression'=>'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num,)', 
 			),
 			array( 
 				'header'=>'Class Id', 
@@ -48,18 +48,12 @@
 			array( 
 				'header'=>'Assignments', 
 				'class'=>'LinksColumn',
-				//'name'=>'assignmentCount()', 
-				//'type'=>'raw',
-				//'value'=>'\'<span class="badge">\' . $data->assignmentCount() . \'</span>\'', 
 				'labelExpression'=>'\'<span class="badge">\' . $data->assignmentCount() . \'</span>\'', 
 				'urlExpression'=>'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num, \'username\'=>\''. $model->username . '\')', 
 			),
 			 array( 
 				'header'=>'Status', 
 				'class'=>'LinksColumn',
-			 	//'name'=>'course.completed()', 
-				//'type'=>'raw',
-			 	//'value'=>'$data->completed()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 			 	'labelExpression'=>'$data->completed()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 				'urlExpression'=>'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num, \'username\'=>\''. $model->username . '\')', 
 			 ),

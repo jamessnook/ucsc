@@ -18,9 +18,9 @@
  *
  * The followings are the available model relations:
  * @property Assignment[] $assignments
- * @property Course $term_code
- * @property Course $class_num
- * @property User $empl
+ * @property Term $term
+ * @property Course $course
+ * @property User $user
  * @property FileType $type0
  *
  * @author JSnook <jsnook@ucsc.edu>
