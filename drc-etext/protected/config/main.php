@@ -132,9 +132,23 @@ return array(
 								'attributes' => array(
 									'cruzid'=>'username',
 								),
+								'defaults' => array(
+									'role'=>'student',
+								),
 							),
 						),
-					),
+						'instructors'  => array(
+							'person' => array(  // element is named 'person'
+								'model'=>'User',
+								'attributes' => array(
+									'cruzid'=>'username',
+								),
+								'defaults' => array(
+									'role'=>'faculty',
+								),
+							),
+						),
+						),
 				),
 			),
 		),

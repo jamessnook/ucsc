@@ -91,6 +91,12 @@ class XMLUpdater extends CApplicationComponent
 			if ($config && isset($config['thisAsAttribute'])){
 				$model->setAttribute($config['thisAsAttribute'],(string)$elem); // safely returns false if attribute does not exist
 			}
+			// Now assign any hard coded defualts for child attributes.
+			if ($config && isset($config['defaults'])){
+				foreach ($config['defaults'] as $name=>$value) {
+					$model->setAttribute($name, $value); // safely returns false if attribute does not exist
+				}
+			}
 			// Now look at each of the child nodes of the current xml element and try to import them as attribute or child elements.
 			foreach ($elem->children() as $child) {
 				// see if there is an attriute name defined in the config for this node 
@@ -111,7 +117,7 @@ class XMLUpdater extends CApplicationComponent
 					} 
 				}
 			}
-	    }
+		}
 		// update or save model
 		// If there is already data in the database for this primary key then perform an update, other wise do a save
 		$modelPrior = $model->findByPk($model->getPrimaryKey());  
