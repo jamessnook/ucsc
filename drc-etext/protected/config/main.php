@@ -125,6 +125,9 @@ return array(
 						'enrollments'  => array(
 						),
 						'accommodations'  => array(
+							'drcAccommodation' => array(  // element is named 'person'
+								'model'=>'DrcAccommodation',
+							),
 						),
 						'students'  => array(
 							'person' => array(  // element is named 'person'

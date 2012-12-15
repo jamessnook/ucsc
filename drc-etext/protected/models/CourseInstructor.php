@@ -13,9 +13,8 @@
  * @property string $emplid
  *
  * The followings are the available model relations:
- * @property Course $term_code
- * @property Course $class_num
- * @property User $empl
+ * @property Course $course
+ * @property User $instructor
  *
  * @author JSnook <jsnook@ucsc.edu>
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
@@ -66,9 +65,8 @@ class CourseInstructor extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'term_code' => array(self::BELONGS_TO, 'Course', 'term_code'),
-			'class_num' => array(self::BELONGS_TO, 'Course', 'class_num'),
-			'user' => array(self::BELONGS_TO, 'User', 'emplid'),
+			'course' => array(self::BELONGS_TO, 'Course', 'term_code, class_num'),
+			'instructor' => array(self::BELONGS_TO, 'User', 'emplid'),
 		);
 	}
 

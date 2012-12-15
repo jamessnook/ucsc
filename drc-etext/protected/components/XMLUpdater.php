@@ -97,25 +97,13 @@ class XMLUpdater extends CApplicationComponent
 					$model->setAttribute($name, $value); // safely returns false if attribute does not exist
 				}
 			}
+			// Now look at each of the attributes of the current xml element and try to import them.
+			foreach ($elem->attributes() as $attribute) {
+				assignItem($attribute, $config);
+			}
 			// Now look at each of the child nodes of the current xml element and try to import them as attribute or child elements.
 			foreach ($elem->children() as $child) {
-				// see if there is an attriute name defined in the config for this node 
-				if ($config && isset($config['attributes'][$child->getName()])){
-					$model->setAttribute($config['attributes'][$child->getName()],(string)$child); // safely returns false if attribute does not exist
-				}
-				// if there is no attriute name defined in the config for this node see if it is configed 
-				// as a child element and call this method recursively
-				else if ($config && isset($config['children'][$child->getName()])){
-					$this->updateElement($child, $config['children'][$child->getName()], $elem);
-				}
-				// if there is no config setting for this attribute see if the xml node name matches a model attribute
-				else if (!$this->setModelAttribute($model,$child->getName(),(string)$child)){ // safely returns false if attribute does not exist
-					// IF there is still no match try matching the node name to a possible child element model class 
-					if (@class_exists($child->getName())) {
-						// the @ in the call above suppresses warnings from the autoloader if the class is not found
-						$this->updateElement($child);
-					} 
-				}
+				assignItem($child, $config);
 			}
 		}
 		// update or save model
@@ -128,6 +116,35 @@ class XMLUpdater extends CApplicationComponent
 		}
     }
     
+	/**
+	 * 
+	 * Trys to match up an attribute or node and assign it to the model
+	 * @param SimpleXMLElement $item  An object reperesentation of an xml node.
+	 * @param array $config an array holdong the config information from config/main.php providing needed information about the schema for the xml.
+	 * @param SimpleXMLElement $parent  An object reperesentation of the parent xml node. IF $xml has no parent then $parent is null.
+	 */
+    public function assignItem($item, $config = null, $parent = null)
+    {
+		// see if there is an attriute name defined in the config for this node 
+		if ($config && isset($config['attributes'][$item->getName()])){
+			$model->setAttribute($config['attributes'][$item->getName()],(string)$item); // safely returns false if attribute does not exist
+		}
+		// if there is no attriute name defined in the config for this node see if it is configed 
+		// as a child element and call this method recursively
+		else if ($config && isset($config['children'][$item->getName()])){
+			$this->updateElement($item, $config['children'][$item->getName()], $elem);
+		}
+		// if there is no config setting for this attribute see if the xml node name matches a model attribute
+		else if (!$this->setModelAttribute($model,$item->getName(),(string)$item)){ // safely returns false if attribute does not exist
+			// IF there is still no match try matching the node name to a possible child element model class 
+			if (@class_exists($item->getName())) {
+				// the @ in the call above suppresses warnings from the autoloader if the class is not found
+				$this->updateElement($item);
+			} 
+		}
+    }
+    
+    }
     /**
      * Assigns an attribute value in a model
      * Checks for various  possible name mappings camelCase to underbar etc. ...

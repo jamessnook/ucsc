@@ -194,7 +194,7 @@ class Assignment extends UCSCModel
 		return $types;
 	}
 	
-		/**
+	/**
 	 * Retrieves an array of file types needed for this assignment.
 	 * @return array, the names of file types for this course.
 	 */

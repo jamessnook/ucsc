@@ -27,6 +27,7 @@
  * @property Book[] $books
  * @property File[] $files
  * @property InstructorFiles[] $instructorFiles
+ * @property CourseInstructor[] $coursesAsInstructor
  *
  * @author JSnook <jsnook@ucsc.edu>
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
@@ -85,6 +86,7 @@ class User extends UCSCModel
 		return array(
 			'authAssignments' => array(self::HAS_MANY,'AuthAssignment', 'userid, itemname'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid'),
+			'coursesAsInstructor' => array(self::HAS_MANY, 'CourseInstructor', 'emplid'),
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'modified_by'),
 			'books' => array(self::MANY_MANY, 'Book', 'book_user(username, book_id)'),
 			'files' => array(self::HAS_MANY, 'File', 'modified_by'),
@@ -274,6 +276,10 @@ class User extends UCSCModel
 		{
 			$names[] = $request->course->title;
 		}
+		foreach($this->coursesAsInstructor as $instructedCourse)
+		{
+			$names[] = $instructedCourse->course->title;
+		}
 		return $names;
 	}
 	
@@ -314,5 +320,37 @@ class User extends UCSCModel
 	{
 		return Yii::app()->createUrl('user/update', array('username'=>$this->username));
 	} 
-		
+
+		/**
+	 * Retrieves an array of file types needed for this user.
+	 * @return array, the names of file types for this course.
+	 */
+	public function types()
+	{
+		$types = array();
+		foreach($this->drcRequests as $request)
+		{
+			$types[$request->type] = $request->type; // use value as key to prevent duplicates
+		}
+		return $types;
+	}
+	
+	/**
+	 * Retrieves an array of file types needed for this assignment.
+	 * @return array, the names of file types for this course.
+	 */
+	public function typesString()
+	{
+		$types = '';
+		foreach($this->drcRequests as $request)
+		{
+			if($types != ''){
+				$types .= ', ';
+			}
+			$types .= $request->type; // use value as key to prevent duplicates
+		}
+		return $types;
+	}
+	
+	
 }

@@ -58,7 +58,7 @@
 				'header'=>'Type', 
 				'name'=>'drcRequests.type', 
 				'type'=>'raw',
-				'value'=>'\'<span class="badge">\' . $data->drcRequests[0]->type . \'</span>\'', 
+				'value'=>'\'<span class="badge">\' . $data->typesString() . \'</span>\'', 
 			 ),
 			 
 			 array( 
