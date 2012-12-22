@@ -144,7 +144,7 @@ class Course extends UCSCModel
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('catalog_num',$this->catalog_num,true);
 		$criteria->compare('schedule',$this->schedule,true);
-		$criteria->compare('romm',$this->romm,true);
+		$criteria->compare('room',$this->room,true);
 		$criteria->compare('dates',$this->dates,true);
 		$criteria->compare('created',$this->created,true);
 		$criteria->compare('modified',$this->modified,true);
@@ -257,7 +257,7 @@ class Course extends UCSCModel
 		$names = array();
 		foreach($this->courseInstructors as $instructor)
 		{
-			$names[] = $instructor->user->first_name . ' ' . $instructor->user->last_name;
+			$names[] = $instructor->instructor->first_name . ' ' . $instructor->instructor->last_name;
 		}
 		return $names;
 	}

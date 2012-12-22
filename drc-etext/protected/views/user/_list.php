@@ -50,8 +50,8 @@
 				'class'=>'LinksColumn',
 				//'labelExpression'=>'\'test\'', 
 				//'urlExpression'=>'\'test\'', 
-			 	'labelExpression'=>'$data->drcRequestCourseNames()', 
-				'urlExpression'=>array('model'=>'$data->drcRequests', 'route'=>'course/students', 'modelParams'=>array('term_code'=>'term_code', 'class_num'=>'class_num')), 
+			 	'labelExpression'=>'$data->courseNames()', 
+				'urlExpression'=>array('model'=>'$data->courseList()', 'route'=>'course/students', 'modelParams'=>array('term_code'=>'term_code', 'class_num'=>'class_num')), 
 			),
 			
 			array( 

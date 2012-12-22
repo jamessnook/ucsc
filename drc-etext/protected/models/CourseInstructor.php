@@ -51,7 +51,7 @@ class CourseInstructor extends CActiveRecord
 			array('term_code', 'required'),
 			array('term_code, class_num', 'numerical', 'integerOnly'=>true),
 			array('emplid', 'length', 'max'=>32),
-			// The following rule is used by search().
+			// The following rule is used by search().   
 			// Please remove those attributes that should not be searched.
 			array('term_code, class_num, emplid', 'safe', 'on'=>'search'),
 		);

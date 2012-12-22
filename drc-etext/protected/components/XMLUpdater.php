@@ -144,7 +144,6 @@ class XMLUpdater extends CApplicationComponent
 		}
     }
     
-    }
     /**
      * Assigns an attribute value in a model
      * Checks for various  possible name mappings camelCase to underbar etc. ...
