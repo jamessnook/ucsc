@@ -276,11 +276,41 @@ class User extends UCSCModel
 		{
 			$names[] = $request->course->title;
 		}
+		return $names;
+	}
+	
+	/**
+	 * Retrieves a list of course names for the courses associate with a users.
+	 * @return string, the names of faculty for this course.
+	 */
+	public function courseNames()
+	{
+		//$names = '';
+		$names = $this->drcRequestCourseNames();
 		foreach($this->coursesAsInstructor as $instructedCourse)
 		{
 			$names[] = $instructedCourse->course->title;
 		}
 		return $names;
+	}
+	
+	/**
+	 * Retrieves a list of course names for the courses associate with a users.
+	 * @return string, the names of faculty for this course.
+	 */
+	public function courseList()
+	{
+		//$names = '';
+		$courses = array();
+		foreach($this->drcRequests as $request)
+		{
+			$courses[] = $request->course;
+		}
+		foreach($this->coursesAsInstructor as $instructedCourse)
+		{
+			$courses[] = $instructedCourse->course;
+		}
+		return $courses;
 	}
 	
 	/**
@@ -342,15 +372,34 @@ class User extends UCSCModel
 	public function typesString()
 	{
 		$types = '';
-		foreach($this->drcRequests as $request)
+		foreach($this->types() as $type)
 		{
 			if($types != ''){
 				$types .= ', ';
 			}
-			$types .= $request->type; // use value as key to prevent duplicates
+			$types .= $type; // use value as key to prevent duplicates
 		}
 		return $types;
 	}
 	
+	/**
+	 * Retrieves a data provider that can provide list of students for this Book.
+	 * @return CActiveDataProvider the data provider that can return a list of User models.
+	 */
+	public function books()
+	{
+		// create sql to retieve students who will use this book and whether they have purchased it.
+		$sql = "SELECT DISTINCT user.username, assignment.book_id, book.title, book.author, course.title AS courseTitle, term.description AS courseTerm, book_user.purchased
+			FROM user JOIN drc_request USING (emplid) JOIN assignment USING (term_code, class_num) 
+			JOIN course USING (term_code, class_num) JOIN term USING (term_code) 
+			JOIN book ON (assignment.book_id=book.id) LEFT JOIN book_user USING (username, book_id)
+			WHERE user.username='" . $this->username ."'";
+		
+		return new CSqlDataProvider($sql, array(
+		 	'pagination' => false,
+		 	'keyField' => 'username',
+		));
+	}
+
 	
 }

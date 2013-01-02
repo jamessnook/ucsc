@@ -98,6 +98,10 @@
 						<?php echo CHtml::button('Cancel', array( 'class'=>"btn", 'onclick'=> "history.back()" )); ?>
 			            
 			          </div>
+			          <?php 
+			            // book purchase section
+		          		echo $this->renderPartial('../user/_listBooks', array('model'=>$model)); 
+					  ?>
 			        </fieldset>
 			      </form>
 		

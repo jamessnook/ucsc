@@ -111,6 +111,8 @@ CREATE TABLE drc_accommodation (  -- AIS feed  May not need
     foreign key (emplid) references user (emplid)
 );
 
+ALTER TABLE course RENAME TO ctemp;
+
 drop table if exists course;
 CREATE TABLE course (  -- AIS feed
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
@@ -128,9 +130,13 @@ CREATE TABLE course (  -- AIS feed
     modified    DATETIME,               -- when updated from AIS
     primary key (term_code, class_num ),
     foreign key (term_code) references term (term_code)
-    foreign key (term_code, class_num) references course_instructor (term_code, class_num)
  );
+ 
+INSERT INTO course SELECT term_code, class_num, section, course_id, subject, description, title, catalog_num, schedule, room, dates, created, modified FROM ctemp;
+ 
 ALTER TABLE course ADD COLUMN room VARCHAR(128);
+
+ALTER TABLE course_instructor RENAME TO temp;
 
 drop table if exists course_instructor;
 CREATE TABLE course_instructor (         -- AIS feed, one to many association possible
@@ -141,6 +147,8 @@ CREATE TABLE course_instructor (         -- AIS feed, one to many association po
     foreign key (emplid) references user (emplid),
     foreign key (term_code, class_num) references course (term_code, class_num)
 );
+
+INSERT INTO course_instructor SELECT * FROM temp;
 
 INSERT OR IGNORE INTO user (username, emplid, first_name, last_name) 
   SELECT 'em'||emplid, emplid, 'FN'||emplid, 'LN'||emplid
