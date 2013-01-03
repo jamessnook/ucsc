@@ -24,11 +24,12 @@
 		//'hideHeader'=>true,
 		'summaryText'=>'',
 		'enablePagination'=>false,
+		'enableSorting'=>false,
 		'showTableOnEmpty'=>false,
 		'loadingCssClass'=>'',
 		'itemsCssClass'=>"table table-striped table-bordered data-table", 
-		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
-		'pagerCssClass'=>"pagination", 
+		//'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
+		//'pagerCssClass'=>"pagination", 
 		'columns'=>array(
 			array( 
 				'header'=>'Book Title', 

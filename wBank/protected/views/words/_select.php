@@ -11,19 +11,12 @@
 
 <div class="form">
 
-	<?php $form=$this->beginWidget('CActiveForm', array(
-		'id'=>'wordlistmenu-form',
-		'enableAjaxValidation'=>false,
-		//'action'=> $action,
-		//'htmlOptions' => array('enctype' => 'multipart/form-data'),
-	)); 
+	<?php  
 	// build up the side bar menu
     $this->beginWidget('zii.widgets.CPortlet', array(
 		'title'=>'<h3>Word Filter</h3>',
 		'contentCssClass'=>'nav-header',
 	));
-	
-	
 	?>
 
 	<fieldset>
@@ -127,14 +120,15 @@
 
           <div class="form-actions">
           
-			<?php echo CHtml::submitButton('Create List', array( 'class'=>"btn btn-primary" )); ?>
-			<?php //echo CHtml::submitButton('Add To List', array( 'class'=>"btn btn-primary", 'params'=>array('add'=>1) )); ?>
-            
+			<?php 
+			echo CHtml::submitButton('Create List', array( 'class'=>"btn btn-primary" )); 
+			//echo CHtml::submitButton('Add To List', array( 'class'=>"btn btn-primary", 'params'=>array('add'=>1) )); 
+			echo CHtml::submitButton('Add To List', array( 'class'=>"btn btn-success pull-right", 'name' => 'Words[addToList]', )); 
+            ?>
           </div>
         </fieldset>
 
 	<?php 
-		$this->endWidget();
 		$this->endWidget(); 
 	?>
 

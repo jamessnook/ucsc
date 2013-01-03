@@ -179,6 +179,12 @@ class WordsController extends Controller
 	 */
 	public function actionList()
 	{
+		if($this->model->saveNewList){
+			$this->model->createList();
+		}
+		elseif($this->model->saveOldList){
+			$this->model->updateList();
+		}
 		$this->renderView(array(
 			'title' => 'List Builder',
 			'contentView' => '../words/_list',

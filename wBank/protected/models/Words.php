@@ -27,9 +27,16 @@ class Words extends UCSCModel
 	public $exp = 0;        // expansion level to expand page range matches by
 	public $subjectId;      // class subject
 	public $grade;          // class grade
-	public $maxFrequency;   // word frequency
-	public $minFrequency;   // word frequency
+	public $maxFrequency=1000000;   // word frequency
+	public $minFrequency=1000;   // word frequency
 	public $topicId;   		// word frequency
+	public $addToList = false;    // true if add new search results to previous list
+	public $saveOldList = false;    // true if save list
+	public $saveNewList = false;    // true if save list to new name and Id
+	public $loadList = false;    // true if load old list from db
+	public $download = false;    // download file to users pc
+	public $listName = "default";    // save list as
+	public $listId = 0;    // save list as
 	
 	/**
 	 * Returns the static model of the specified AR class.
@@ -111,6 +118,8 @@ class Words extends UCSCModel
 			'concrete' => 'Conceteness',
 			'wordNetId' => 'Word Net Id',
 			'zenoFreq' => 'Frequency',
+			'listId' => 'Existing Lists',
+			'listName' => 'New List Name',
 		);
 	}
 
@@ -155,11 +164,22 @@ class Words extends UCSCModel
 		if ($this->topicId>0){
 			$criteria->addCondition("id IN (SELECT wordId FROM wordTopic WHERE  topicId =$this->topicId AND exp <=$this->exp)");          
 		}
-		foreach ($this->wid as $id){
-			$criteria->compare('id',$id);
+		//if(isset($_POST['addToList'])) {
+		if($this->addToList) {
+			foreach ($this->wid as $id){
+				$criteria->compare('id',$id, false, 'OR');
+			}
 		}
 		foreach ($this->tid as $id){
 			$criteria->addCondition("id IN (SELECT wordId FROM wordTopic WHERE topicId =$id AND exp <=$this->exp)");          
+		}
+		if($this->loadList) {
+			$criteria=new CDbCriteria;
+			if ($this->listId){
+				$criteria->addCondition("id IN (SELECT wordId FROM wordList WHERE listId =$this->listId)");   
+			} else {
+				$criteria->addCondition("id IN (SELECT wordId FROM wordList JOIN lists ON (id=listId) WHERE name ='$this->listName')");   
+			}       
 		}
 		
 		return new CActiveDataProvider($this, array(
@@ -169,6 +189,52 @@ class Words extends UCSCModel
 	}
 	
 	
+	/**
+	 * ---
+	 */
+	public function createList()
+	{
+		$list = new Lists();
+		$list->name = $this->listName;
+		$list->username = Yii::app()->user->name;
+		$list->save();
+		foreach ($this->wid as $id){
+			$item = new WordList();
+			$item->wordId = $id;
+			$item->listId = $list->id;
+			$item->save();
+		}
+	}
+
+	/**
+	 * ---
+	 */
+	public function updateList()
+	{
+		if ($this->listId) {
+			$list=Lists::model()->findByPk($this->listId);
+		} else{
+			$list=Lists::model()->findByAttributes(array('name'=>$this->listName));
+		}
+		if($list===null){
+			return;
+			$list = new Lists();  // set error
+		}
+		$list->name = $this->listName;
+		$list->username = Yii::app()->user->name;
+		$list->save();
+		foreach ($list->wordList as $item){ // delete old entries
+			$item->delete();
+		}
+		foreach ($this->wid as $id){
+			$item = new WordList();
+			$item->wordId = $id;
+			$item->listId = $list->id;
+			$item->save();
+		}
+	}
+
+
 	/**
 	 * Retrieves a data provider that can provide list of students for this Book.
 	 * @return CActiveDataProvider the data provider that can return a list of User models.

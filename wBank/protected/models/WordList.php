@@ -1,11 +1,11 @@
 <?php
 
 /**
- * This is the model class for table "wordList".
+ * This is the model class for table "wordlist".
  *
- * The followings are the available columns in table 'wordList':
+ * The followings are the available columns in table 'wordlist':
  * @property integer $wordId
- * @property integer $lsitId
+ * @property integer $listId
  */
 class WordList extends CActiveRecord
 {
@@ -24,7 +24,7 @@ class WordList extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'wordList';
+		return 'wordlist';
 	}
 
 	/**
@@ -35,10 +35,10 @@ class WordList extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('wordId, lsitId', 'numerical', 'integerOnly'=>true),
+			array('wordId, listId', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('wordId, lsitId', 'safe', 'on'=>'search'),
+			array('wordId, listId', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,7 +60,7 @@ class WordList extends CActiveRecord
 	{
 		return array(
 			'wordId' => 'Word',
-			'lsitId' => 'Lsit',
+			'listId' => 'List',
 		);
 	}
 
@@ -76,7 +76,7 @@ class WordList extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('wordId',$this->wordId);
-		$criteria->compare('lsitId',$this->lsitId);
+		$criteria->compare('listId',$this->listId);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

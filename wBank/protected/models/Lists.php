@@ -60,6 +60,7 @@ class Lists extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'words' => array(self::MANY_MANY, 'Words', 'wordlist(lsitId, wordId)'),
+			'wordList' => array(self::HAS_MANY, 'WordList', 'listId'),
 		);
 	}
 

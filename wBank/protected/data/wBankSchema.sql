@@ -1234,7 +1234,7 @@ DROP TABLE list;
 DROP TABLE lists;
 CREATE TABLE lists (
     id  INT PRIMARY KEY AUTO_INCREMENT,              -- Unique Id for each word list
-    name  VARCHAR(127),               			
+    name  VARCHAR(127) UNIQUE,               			
     description  VARCHAR(127),
     username   VARCHAR(63),             		
     type   INT DEFAULT 0,               			
@@ -1245,10 +1245,10 @@ CREATE TABLE lists (
 DROP TABLE wordList;
 CREATE TABLE wordList (
     wordId  INT,              -- Unique Id for each word
-    lsitId  INT,              -- Unique Id for each list
-    PRIMARY KEY (wordId, lsitId),
+    listId  INT,              -- Unique Id for each list
+    PRIMARY KEY (wordId, listId),
     foreign key (wordId) references words(id),
-    foreign key (lsitId) references lists(id)
+    foreign key (listId) references lists(id)
 );
 
 

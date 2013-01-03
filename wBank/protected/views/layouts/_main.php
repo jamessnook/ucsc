@@ -108,6 +108,14 @@ $options = $this->viewOptions;
       </div><!--/.subnavbar-inner-->
     </div><!--/.subnavbar-->
 
+ 	<?php $form=$this->beginWidget('CActiveForm', array(
+		'id'=>'wordlistmenu-form',
+		'enableAjaxValidation'=>false,
+		//'action'=> $action,
+		//'htmlOptions' => array('enctype' => 'multipart/form-data'),
+	)); 
+	$options['form'] = $form; // make accessible in contained views
+	?>
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span9">
@@ -151,4 +159,7 @@ $options = $this->viewOptions;
         </div><!--/span-->
       </div><!--/row-->
     </div><!--/.fluid-container-->
+	<?php 
+		$this->endWidget(); 
+	?>
 
