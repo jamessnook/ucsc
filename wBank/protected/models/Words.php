@@ -162,7 +162,7 @@ class Words extends UCSCModel
 			$criteria->addCondition("id IN (SELECT wordId FROM wordGrade WHERE grade =$this->grade)");          
 		}
 		if ($this->topicId>0){
-			$criteria->addCondition("id IN (SELECT wordId FROM wordTopic WHERE  topicId =$this->topicId AND exp <=$this->exp)");          
+			$criteria->addCondition("id IN (SELECT wordId FROM wordTopic JOIN topicMap USING (topicId) WHERE  parentId =$this->topicId AND exp <=$this->exp)");          
 		}
 		//if(isset($_POST['addToList'])) {
 		if($this->addToList) {

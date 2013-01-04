@@ -579,7 +579,8 @@ CREATE TABLE topics (
     typeId INT,
     inSubjectMap  BOOL DEFAULT FALSE,        -- 
     inPageMap  BOOL DEFAULT FALSE,        -- 
-    inUse     BOOL DEFAULT TRUE,        -- 
+    inUse     BOOL DEFAULT TRUE        -- 
+    --UNIQUE (lower, typeId)
 );
 
 Alter table topics add inSubjectMap  BOOL DEFAULT FALSE;
@@ -619,8 +620,9 @@ CREATE TABLE topicType (
     PRIMARY KEY (id) 
 );
 -- fill in initial default data
-INSERT INTO subjects VALUES(1, "Chapter or Unit", "");
-INSERT INTO subjects VALUES(2, "Bucket or Category", "");
+INSERT INTO topicType VALUES(1, "Chapter or Unit", "");
+INSERT INTO topicType VALUES(2, "Bucket or Category", "");
+INSERT INTO topicType VALUES(3, "Grouping (Meta Topic)", "");
 
 -- Create and fill table to map topics to topic groups
 DROP TABLE topicGroup;
@@ -1251,6 +1253,43 @@ CREATE TABLE wordList (
     foreign key (listId) references lists(id)
 );
 
+-- temp table for data in put
+DROP TABLE IF EXISTS topicsKms;
+CREATE TABLE topicsKms (
+    id INT,
+    notes  VARCHAR(255),
+    metaId INT,
+    metaTopic VARCHAR(255),
+    topic VARCHAR(255) NOT NULL,
+    lower VARCHAR(255) NOT NULL,
+    typeId INT
+);
+
+LOAD DATA INFILE 'c:/users/jim/documents/vase/wordBank/topicsKms.txt' INTO TABLE topicsKms
+LINES TERMINATED BY '\r\n' (id, notes, metaID, metaTopic, topic, lower, typeId);
+
+-- map table to associate topics with another topic as parent-child
+DROP TABLE IF EXISTS topicMap;
+CREATE TABLE topicMap (
+    topicId INT,
+    parentId INT,
+    PRIMARY KEY (topicId, parentId)
+);
+
+SELECT count(Distinct metaId) FROM topicsKms;
+SELECT count(Distinct metaTopic) FROM topicsKms;
+
+Alter table topics add metaId  INT DEFAULT 0;
+--INSERT INTO topics (id, topic, lower, typeId) VALUES(-1, "All Topics",  "all topics", -1);
+
+---- add meta topics to topic table
+INSERT INTO topics (metaId, topic, lower, typeId)
+    SELECT DISTINCT(metaId), metaTopic, LOWER(metaTopic), 3 
+      FROM topicsKms WHERE metaId>0;
+      
+INSERT INTO topicMap (topicId, parentId)
+    SELECT DISTINCT topicsKms.id, topics.id  
+      FROM topicsKms JOIN topics USING (metaId) WHERE metaId>0;
 
 
 

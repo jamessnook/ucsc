@@ -110,7 +110,7 @@
 			<?php echo $form->labelEx($model, 'topicId', array('class'=>"control-label")); ?>
             <div class="controls">
 				
-		        <?php 	$options = CHtml::listData(Topics::model()->findAll(array('distinct'=>true, 'order'=>'typeId, topic')), 'id', 'topic');
+		        <?php 	$options = CHtml::listData(Topics::model()->findAll(array('condition'=>'typeId=3 OR typeId=-1', 'distinct'=>true, 'order'=>'typeId, topic')), 'id', 'topic');
 	        		echo $form->dropDownList($model,'topicId', $options, array('class'=>"input-xlarge"));
 	        	?>
 				<?php echo $form->error($model,'topicId'); ?>
