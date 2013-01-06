@@ -51,8 +51,41 @@ table.dataTable th:active {
 .control-group {
   margin-bottom: 5px;
 }
-table .btn{
-  padding: 1px 5px 1px;
-  font-size: 8px;
-  margin-right: -3px;
+.btn{
+  vertical-align: middle;
+  margin:  2px 2px 9px;
+  padding: 3px 5px 3px;
 }
+table .btn{
+  padding: 1px 3px 1px;
+  font-size: 9px;
+  margin:  1px 2px 1px;
+}
+.input-mlarge {
+  width: 153px;
+}
+.input-mmlarge {
+  width: 163px;
+}
+.form-actions {
+  padding: 17px 0px 18px;
+}
+.list-actions {
+  padding: 3px 10px 10px;
+}
+.list-actions .btn{
+  margin:  2px 5px 9px;
+}
+.well {
+  padding: 10px;
+}
+
+.row-fluid .input-mlarge {
+  width: 95%;
+  *width: 95%;
+}
+.row-fluid .input-mmlarge {
+  width: 100%;
+  *width: 100%;
+}
+

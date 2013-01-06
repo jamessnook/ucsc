@@ -36,6 +36,7 @@ $options = $this->viewOptions;
 							//'url'=>array('/course/courses', 
 								//'term_code'=>$model->term_code, ), 
 							//'active'=> get_class($model) == 'Course',
+							'visible'=>false,
 						),
 						array(
 							'label'=>'Assignments', 
@@ -43,6 +44,7 @@ $options = $this->viewOptions;
 							//	'term_code'=>$model->term_code,), 
 							//'visible'=>Yii::app()->user->checkAccess('admin'),
 							//'active'=> get_class($model) == 'Assignment',
+							'visible'=>false,
 						),
 						array(
 							'label'=>'<i class="icon-wrench"></i> Reports', 
@@ -97,6 +99,7 @@ $options = $this->viewOptions;
 									//'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
 								),
 							),
+							'visible'=>false,
 							
 						),
 					), 
@@ -116,9 +119,21 @@ $options = $this->viewOptions;
 	)); 
 	$options['form'] = $form; // make accessible in contained views
 	?>
-    <div class="container-fluid">
+    <div class="container-fluid fix-nav">
       <div class="row-fluid">
-        <div class="span9">
+		<div class="span2">
+          <div class="well">
+            
+			<?php 
+				if ($menuView != 'none' && strlen($menuView) > 1){
+					$options['model'] = $model; // restore to use outer model not content model
+					echo $this->renderPartial($menuView, $options); // grid showong assignment list
+				} 
+			?>
+            
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span10">
 		  <div class="page-unit">
 
 			<div class="page-head">
@@ -144,18 +159,6 @@ $options = $this->viewOptions;
 			?>
 	
 		  </div><!--/page-unit-->
-        </div><!--/span-->
-		<div class="span3">
-          <div class="well">
-            
-			<?php 
-				if ($menuView != 'none' && strlen($menuView) > 1){
-					$options['model'] = $model; // restore to use outer model not content model
-					echo $this->renderPartial($menuView, $options); // grid showong assignment list
-				} 
-			?>
-            
-          </div><!--/.well -->
         </div><!--/span-->
       </div><!--/row-->
     </div><!--/.fluid-container-->

@@ -27,7 +27,7 @@ class WordsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','admin','list'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -35,7 +35,7 @@ class WordsController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','admin','list'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -185,12 +185,33 @@ class WordsController extends Controller
 		elseif($this->model->saveOldList){
 			$this->model->updateList();
 		}
-		$this->renderView(array(
-			'title' => 'List Builder',
-			'contentView' => '../words/_list',
-			'menuView' => '../words/_select',
-			'contentTitle' => 'Word List',
-		));
+		elseif($this->model->downloadTsv){
+			$this->renderPartial('delimitedList',array(
+				'model'=>$this->model,
+			));
+			exit;
+		}
+		elseif($this->model->downloadInflections){
+			$this->renderPartial('delimitedInflectionList',array(
+			'model'=>$this->model,
+			));
+			exit;
+		}
+		if($this->model->viewInflections){
+			$this->renderView(array(
+				'title' => 'List Builder',
+				'contentView' => '../words/_inflectionList',
+				'menuView' => '../words/_select',
+				'contentTitle' => 'Inflected Word List',
+			));
+		} else {
+			$this->renderView(array(
+				'title' => 'List Builder',
+				'contentView' => '../words/_list',
+				'menuView' => '../words/_select',
+				'contentTitle' => 'Word List',
+			));
+		}
 	}
 
 	/**

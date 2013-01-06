@@ -24,7 +24,7 @@ class WordList extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'wordlist';
+		return 'wordList';
 	}
 
 	/**

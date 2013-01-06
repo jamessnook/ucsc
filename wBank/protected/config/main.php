@@ -61,12 +61,13 @@ return array(
 		),
 		// uncomment the following to use a MySQL database
 		*/
+		//        self::$sql = new mysqli('localhost', 'wbank', '1Xbank', 'wordBankDeploy');
 		
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=wordBankDeploy',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'wbank',
+			'password' => '1Xbank',
 			'charset' => 'utf8',
 		),
 		'authManager'=>array(

@@ -28,16 +28,17 @@ class Words extends UCSCModel
 	public $subjectId;      // class subject
 	public $grade;          // class grade
 	public $maxFrequency=1000000;   // word frequency
-	public $minFrequency=1000;   // word frequency
+	public $minFrequency=100;   // word frequency
 	public $topicId;   		// word frequency
 	public $addToList = false;    // true if add new search results to previous list
 	public $saveOldList = false;    // true if save list
 	public $saveNewList = false;    // true if save list to new name and Id
 	public $loadList = false;    // true if load old list from db
-	public $download = false;    // download file to users pc
+	public $downloadTsv = false;    // download file to users pc
+	public $viewInflections = false;    // display page of inflected forms of words in list
+	public $downloadInflections = false;    // display page of inflected forms of words in list
 	public $listName = "default";    // save list as
 	public $listId = 0;    // save list as
-	
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -129,8 +130,6 @@ class Words extends UCSCModel
 	 */
 	public function search()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
 
 		$criteria=new CDbCriteria;
 	
@@ -143,8 +142,8 @@ class Words extends UCSCModel
 		$criteria->compare('isPubWord',$this->isPubWord);
 		$criteria->compare('lemmaId',$this->lemmaId);
 		$criteria->compare('head',$this->head,true);
-		$criteria->compare('headCnt',$this->headCnt);
-		$criteria->compare('polysemyCnt',$this->polysemyCnt);
+		//$criteria->compare('headCnt',$this->headCnt);
+		$criteria->compare('polysemyCnt','>' . $this->polysemyCnt);
 		$criteria->compare('concrete',$this->concrete);
 		$criteria->compare('senseNum',$this->senseNum);
 		$criteria->compare('zenoFreq','>=' . $this->minFrequency);
@@ -182,6 +181,65 @@ class Words extends UCSCModel
 			}       
 		}
 		
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+	
+	
+	/**
+	 * Retrieves a data provider that can provide list of emails for this Course.
+	 * @return CActiveDataProvider the data provider that can return a list of Email models.
+	 */
+	public function inflections()
+	{
+		$where = " WHERE inflection!='' AND inflection!='IRR' AND (";
+		foreach ($this->wid as $id){
+			$where .= "words.id=$id OR ";
+		} 
+		$where .= "words.id=-2)"; // terminate list with extra special case
+		// create sql to retieve emails sent or available to be sent ot istructors for this course.
+		$sql = "SELECT DISTINCT inflectedWord.word, head, transInfl, inflection, inflectedWord.zenoFreq
+			FROM words JOIN inflectedWord USING (lemmaId)" . $where;
+		
+		return new CSqlDataProvider($sql, array(
+		 	'pagination' => false,
+		 	'keyField' => 'word',
+		));
+	}
+
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function inflectionsOld1()
+	{
+		$criteria=new CDbCriteria;
+		foreach ($this->wid as $id){
+			$criteria->compare('words.id',$id, false, 'OR');
+		} 
+		$criteria->with = array( 'words' );
+		//$criteria->join = 'JOIN inflectedWord USING (lemmaId)';
+		//$criteria->select = 't.word, inflectedWord.word AS iWord, head, flectType, transInfl, inflection, lemmaId, celexWordId, inflectedWord.zenoFreq';
+		return new CActiveDataProvider('InflectedWord', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+	
+	/**
+	 * Retrieves a list of models based on the current search/filter conditions.
+	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 */
+	public function inflectionsOld()
+	{
+		$criteria=new CDbCriteria;
+		foreach ($this->wid as $id){
+			$criteria->compare('t.id',$id, false, 'OR');
+		} 
+		$criteria->join = 'JOIN inflectedWord USING (lemmaId)';
+		$criteria->select = 't.word, inflectedWord.word AS iWord, head, flectType, transInfl, inflection, lemmaId, celexWordId, inflectedWord.zenoFreq';
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		 	'pagination' => false,

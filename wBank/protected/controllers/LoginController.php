@@ -42,9 +42,10 @@ class LoginController extends Controller
 			//$this->redirect(Yii::app()->homeUrl);
 			//$this->redirect($this->createUrl('user/students'));
 			if (Yii::app()->user->checkAccess('admin')){
-				$this->redirect($this->createUrl('user/students'));
+				$this->redirect($this->createUrl('words/list'));
 			} else {
-				$this->redirect($this->createUrl('user/courses', array('username'=>Yii::app()->user->name,)));
+				$this->redirect($this->createUrl('words/list'));
+				//$this->redirect($this->createUrl('user/courses', array('username'=>Yii::app()->user->name,)));
 			}
 		} else {
 			$this->render('loginFail');
@@ -73,9 +74,10 @@ class LoginController extends Controller
 			if($model->validate() && $model->login())
 				//$this->redirect(Yii::app()->user->returnUrl);
 				if (Yii::app()->user->checkAccess('admin')){
-					$this->redirect($this->createUrl('user/students'));
+					$this->redirect($this->createUrl('words/list'));
 				} else {
-					$this->redirect($this->createUrl('user/courses', array('username'=>Yii::app()->user->name,)));
+					$this->redirect($this->createUrl('words/list'));
+					//$this->redirect($this->createUrl('user/courses', array('username'=>Yii::app()->user->name,)));
 				}
 		}
 		// display the login form

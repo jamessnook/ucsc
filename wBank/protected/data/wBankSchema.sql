@@ -1291,5 +1291,28 @@ INSERT INTO topicMap (topicId, parentId)
     SELECT DISTINCT topicsKms.id, topics.id  
       FROM topicsKms JOIN topics USING (metaId) WHERE metaId>0;
 
+DROP TABLE inflectedWord;
+CREATE TABLE inflectedWord (
+    id  INT NOT NULL AUTO_INCREMENT,              -- Unique Id for each word
+    word     VARCHAR(60),              -- the inflected word
+    flectType     VARCHAR(15),         -- the inflection pattern
+    transInfl     VARCHAR(15),         -- the inflection pattern
+    inflection     VARCHAR(15),        -- the inflection
+    celexWordId  INT DEFAULT 0,        -- word id from Celex or Vase if not in Celex
+    lemmaId  INT DEFAULT 0,            -- lemma id from Celex or Vase if not in Celex
+    zenoFreq  FLOAT DEFAULT 0,         -- zeno word frequency
+    PRIMARY KEY (id), 
+    UNIQUE (celexWordId) 
+);
 
+-- data to inflected words
+INSERT INTO inflectedWord (word, flectType, transInfl, celexWordId, lemmaId)
+  SELECT DISTINCT celex.WordMorph.word, celex.WordMorph.FlectType, celex.WordMorph.TransInfl, celex.WordMorph.IdNum, celex.WordMorph.IdNumLemma 
+    FROM words JOIN celex.WordMorph ON(words.lemmaId = celex.WordMorph.IdNumLemma)
+ON DUPLICATE KEY UPDATE word=celex.WordMorph.word;
 
+UPDATE inflectedWord SET inflection = SUBSTRING_INDEX(transInfl, '+', -1);
+UPDATE inflectedWord SET inflection = '' WHERE inflection ='@';
+-- Assign zeno word frequency to each word
+UPDATE inflectedWord SET zenoFreq = (SELECT U FROM zeno.rwords WHERE inflectedWord.word = rwords.Word);
+UPDATE inflectedWord SET zenoFreq =0 WHERE zenoFreq IS NULL;
