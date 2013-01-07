@@ -68,7 +68,7 @@ class UCSCModel extends CActiveRecord
 		if ($params){
 			// change alls to blanks and set values
 			foreach($params AS $name=>$value){
-				if ($value=='all' || $value=='All'|| $value=='-1'|| $value==-1){
+				if ($value=='all' || $value=='All'|| $value=='-1'|| $value==-1 ){
 	        		$value = "";
 				}
 				$aModel->$name=$value;

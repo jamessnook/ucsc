@@ -2,7 +2,7 @@
 
 -- Auth tables from yii schema
 -- modified from yii framework /web/auth
-drop table if exists 'AuthItemChild';
+drop table if exists 'AuthItem';
 create table authItem
 (
    name                 varchar(64) not null,

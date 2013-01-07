@@ -4872,3 +4872,93 @@ Stack trace:
 REQUEST_URI=/ucsc/wBank/index.php/words/list
 HTTP_REFERER=http://localhost/ucsc/wBank/index.php/login/login
 ---
+2013/01/06 20:14:26 [error] [php] PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] No connection could be made because the target machine actively refused it.
+ (trying to connect via tcp://localhost:3306) (C:\Users\Jim\phpFog\ucsc\framework\db\CDbConnection.php:422)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\Users\Jim\phpFog\ucsc\framework\db\CDbConnection.php(309): CDbConnection->setActive()
+#2 C:\Users\Jim\phpFog\ucsc\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CDbAuthManager.php(586): CWebApplication->getComponent()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CDbAuthManager.php(60): CDbAuthManager->getDbConnection()
+#5 C:\Users\Jim\phpFog\ucsc\framework\base\CModule.php(388): CDbAuthManager->init()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(179): CWebApplication->getComponent()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CWebUser.php(794): CWebApplication->getAuthManager()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(300): CWebUser->checkAccess()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(240): CAccessRule->isRoleMatched()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(116): CAccessRule->isUserAllowed()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): WordsController->filterAccessControl()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): WordsController->runActionWithFilters()
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): WordsController->run()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/wBank/index.php/words/list
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/06 20:43:26 [error] [php] Use of undefined constant value - assumed 'value' (C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php:71)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\WordsController.php(182): WordsController->__get()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): WordsController->actionList()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): WordsController->runAction()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): WordsController->filterAccessControl()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): WordsController->runActionWithFilters()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): WordsController->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/wBank/index.php/words/list
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (71)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php (104)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\WordsController.php (182)
+2013/01/07 00:10:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SOURCE C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\..\../wBank20130105.' at line 1. The SQL statement executed was: SOURCE C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\..\../wBank20130105.bak.
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\SiteController.php (127)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/07 00:10:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SOURCE C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\..\../wBank20130105.' at line 1. The SQL statement executed was: SOURCE C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\..\../wBank20130105.bak' in C:\Users\Jim\phpFog\ucsc\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\SiteController.php(127): CDbCommand->execute()
+#1 [internal function]: SiteController->actionImport('wBank20130105.b...', 'c:/xampp/mysql/...')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('import')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('site/import/fil...')
+#9 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/wBank/index.php/site/import/filename/wBank20130105.bak
+---
+2013/01/07 01:18:28 [error] [exception.CException] exception 'CException' with message 'Property "CDbConnection.port" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\YiiBase.php(222): CComponent->__set('port', 3306)
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CModule.php(387): YiiBase::createComponent(Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CDbAuthManager.php(586): CModule->getComponent('db')
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CDbAuthManager.php(60): CDbAuthManager->getDbConnection()
+#4 C:\Users\Jim\phpFog\ucsc\framework\base\CModule.php(388): CDbAuthManager->init()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(179): CModule->getComponent('authManager')
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CWebUser.php(794): CWebApplication->getAuthManager()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(300): CWebUser->checkAccess('admin')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(240): CAccessRule->isRoleMatched(Object(CWebUser))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(116): CAccessRule->isUserAllowed(Object(CWebUser), Object(WordsController), Object(CInlineAction), '::1', 'GET')
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('list')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('words/list')
+#18 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/ucsc/wBank/index.php/words/list
+---
