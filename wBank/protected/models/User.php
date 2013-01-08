@@ -35,7 +35,6 @@
  */
 class User extends UCSCModel
 {
-	public $term_code; // for non emplid matches
 	public $role;      // for authentication, to set user roles
 	
 	/**
@@ -85,12 +84,6 @@ class User extends UCSCModel
 		// class name for the relations automatically generated below.
 		return array(
 			'authAssignments' => array(self::HAS_MANY,'AuthAssignment', 'userid, itemname'),
-			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid'),
-			'coursesAsInstructor' => array(self::HAS_MANY, 'CourseInstructor', 'emplid'),
-			'assignments' => array(self::HAS_MANY, 'Assignment', 'modified_by'),
-			'books' => array(self::MANY_MANY, 'Book', 'book_user(username, book_id)'),
-			'files' => array(self::HAS_MANY, 'File', 'modified_by'),
-			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'emplId'),
 		);
 	}
 
@@ -145,16 +138,12 @@ class User extends UCSCModel
 	}
 
 	/**
-	 * Retrieves a list of USER models for students with active DRC requests for the term identified by $this->term_code.
+	 * Retrieves a list of USER models for all users.
 	 * @return CActiveDataProvider the data provider that can return the User models.
 	 */
-	public function students()
+	public function users()
 	{
 		$criteria=new CDbCriteria;
-		$criteria->with = array( 'drcRequests', 'drcRequests.course');
-		$criteria->compare('drcRequests.term_code', $this->term_code);
-		//$criteria->addCondition("AuthAssignment.userid=t.username");
-		//$criteria->join = 'JOIN drcRequests USING (emplid)';
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -204,30 +193,6 @@ class User extends UCSCModel
 		));
 	}
 
-	
-	/**
-	 * Retrieves a list of course Models associated with the user and term defined by the current $this object.
-	 * @return CActiveDataProvider the data provider that can return the Course models.
-	 */
-	public function courses()
-	{
-		$criteria=new CDbCriteria; 
-		if (!isset($this->term_code)) {
-			$this->term_code = Term::currentTermCode();
-		}
-		$criteria->compare('t.term_code',$this->term_code);
-		if ($this->emplid && strlen($this->emplid)>0) {
-			$criteria->with = array( 'drcRequests' );
-			$criteria->together = true;
-			$criteria->compare('drcRequests.emplid',$this->emplid);
-			$criteria->compare('drcRequests.term_code',$this->term_code);
-		}
-		
-		return new CActiveDataProvider('Course', array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
 
 	/**
 	 * Overrides parent to assign non input values.
@@ -248,55 +213,6 @@ class User extends UCSCModel
 		return parent::afterSave();
 	}
 	
-	/**
-	 * Returns the data model based on the passed attributes.
-	 * Persues various ways of finding and creating the model
-	 * Adds functionality to arent class method to insure term_code is set.
-	 * @param array of parameters
-	 * @return model instance of a UCSCModel subclass built using the url params.
-	 */
-	public static function loadModel($params=null)
-	{
-		$aModel = parent::loadModel($params);
-		if (!$aModel->term_code){
-			$aModel->term_code = Term::currentTermCode();
-		}
-		return $aModel;
-	}
-	
-	/**
-	 * Retrieves a list of course names for the courses associate with a users.
-	 * @return string, the names of faculty for this course.
-	 */
-	public function drcRequestCourseNames()
-	{
-		//$names = '';
-		$names = array();
-		foreach($this->drcRequests as $request)
-		{
-			$names[] = $request->course->title;
-		}
-		foreach($this->coursesAsInstructor as $instructedCourse)
-		{
-			$names[] = $instructedCourse->course->title;
-		}
-		return $names;
-	}
-	
-	/**
-	 * Returns true if all assignemtns for this course are complete.
-	 * @return boolean, true if all assignemtns for this course are complete.
-	 */
-	public function drcRequestsCompleted()
-	{
-		foreach($this->drcRequests as $request)
-		{
-			foreach($request->course->assignments as $assignment){
-				if (!$assignment->is_complete) return false;
-			}
-		}
-		return true;
-	}
 	
 	/**
 	 * Retrieves a list of authentication roles assigned to the user defined by $this object.
@@ -321,36 +237,5 @@ class User extends UCSCModel
 		return Yii::app()->createUrl('user/update', array('username'=>$this->username));
 	} 
 
-		/**
-	 * Retrieves an array of file types needed for this user.
-	 * @return array, the names of file types for this course.
-	 */
-	public function types()
-	{
-		$types = array();
-		foreach($this->drcRequests as $request)
-		{
-			$types[$request->type] = $request->type; // use value as key to prevent duplicates
-		}
-		return $types;
-	}
-	
-	/**
-	 * Retrieves an array of file types needed for this assignment.
-	 * @return array, the names of file types for this course.
-	 */
-	public function typesString()
-	{
-		$types = '';
-		foreach($this->drcRequests as $request)
-		{
-			if($types != ''){
-				$types .= ', ';
-			}
-			$types .= $request->type; // use value as key to prevent duplicates
-		}
-		return $types;
-	}
-	
 	
 }

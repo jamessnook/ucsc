@@ -480,6 +480,9 @@ INSERT INTO wordSubjects (wordId, subjectId, definition, defSourceId)
 UPDATE wordSubjects SET definition=TRIM(BOTH '"' FROM definition) where definition LIKE '"%';
 UPDATE wordSubjects SET definition=REPLACE(definition, '\n', ' ');
 UPDATE wordSubjects SET definition=REPLACE(definition, '\r', ' ');
+UPDATE wordSubjects SET definition=REPLACE(definition, '(plural)', '');
+UPDATE words SET definition=REPLACE(definition, '(plural)', '');
+UPDATE words SET definition=TRIM(BOTH '"' FROM definition) where definition LIKE '"%';
 
 -- Assign zeno word frequency to each word
 UPDATE words SET zenoFreq = (SELECT U FROM zeno.rwords WHERE words.word = rwords.Word);
@@ -587,6 +590,7 @@ Alter table topics add inSubjectMap  BOOL DEFAULT FALSE;
 Alter table topics add inPageMap  BOOL DEFAULT FALSE;
 Alter table topics add inUse  BOOL DEFAULT TRUE;
 INSERT INTO topics (id, topic, lower, typeId) VALUES(-1, "All Topics",  "all topics", -1);
+ALTER TABLE topics DROP INDEX lower;
 
 DROP TABLE IF EXISTS topicWordMap;
 CREATE TABLE TopicWordMap (
@@ -970,6 +974,8 @@ UPDATE words SET lemmaId= 50493 WHERE id= 2538;
 
 UPDATE words SET senseNum=1 WHERE id= 1840;
 UPDATE words SET senseNum=1 WHERE id= 531;
+UPDATE words SET senseNum=1 WHERE id= 1839;
+UPDATE words SET senseNum=1 WHERE id= 530;
 
 UPDATE words SET pos='v' WHERE id= 775 ;
 
@@ -1077,9 +1083,9 @@ ON DUPLICATE KEY UPDATE topic=rawTopicPage.topic;
 
 -- Trim unneeded quotes and carriage returns from topic
 UPDATE topics SET lower=TRIM(BOTH '"' FROM lower);
+UPDATE topics SET topic=TRIM(BOTH '"' FROM topic);
 UPDATE topics SET lower=REPLACE(lower, '\n', ' ');
 UPDATE topics SET lower=REPLACE(lower, '\r', ' ');
-UPDATE topics SET topic=TRIM(BOTH '"' FROM topic);
 UPDATE topics SET topic=REPLACE(topic, '\n', ' ');
 UPDATE topics SET topic=REPLACE(topic, '\r', ' ');
 
@@ -1264,6 +1270,8 @@ CREATE TABLE topicsKms (
     lower VARCHAR(255) NOT NULL,
     typeId INT
 );
+UPDATE topics set topic = (select topic from topicsKms WHERE topicsKms.id = topics.id) WHERE topics.id IN (SELECT id FROM topicsKms WHERE length(notes)>1);
+UPDATE topics set lower = (select lower from topicsKms WHERE topicsKms.id = topics.id) WHERE topics.id IN (SELECT id FROM topicsKms WHERE length(notes)>1);
 
 LOAD DATA INFILE 'c:/users/jim/documents/vase/wordBank/topicsKms.txt' INTO TABLE topicsKms
 LINES TERMINATED BY '\r\n' (id, notes, metaID, metaTopic, topic, lower, typeId);

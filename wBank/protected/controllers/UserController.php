@@ -95,17 +95,17 @@ class UserController extends Controller
 	
 
 	/**
-	 * Displays a list of students for a specific term.
+	 * Displays a list of all users
 	 */
-	public function actionStudents()
+	public function actionUsers()
 	{
 		//$this->model = User::loadModel();
 		$this->renderView(array(
 			'contentView' => '../user/_list',
-			'dataProvider' => $this->model->students(),
+			'dataProvider' => $this->model->users(),
 			'contentTitle' => 'DRC Students',
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
-			'menuView' => '../layouts/_termMenu',
+			'menuView' => '../layouts/_userMenu',
 			'menuRoute' => 'user/students',
 		));
 	}
@@ -203,20 +203,13 @@ class UserController extends Controller
 	 */
 	public function setDefaultViewOptions()
 	{
-		if (!isset($this->model->term_code)){
-			$this->model->term_code = Term::currentTermCode();
-		}
 		//echo 'tc: ' . $this->model->term_code;
 		$model = $this->model;
 		$this->viewOptions['title']="($model->username) $model->first_name $model->last_name";
 		if (!$model->username || $model->username ==''){
 			$this->viewOptions['title'] = "Users";
-			if ($model->term_code){
-				//$term=Term::model()->findByPk($model->term_code);
-				//$this->viewOptions['title'] = $term->description;
-			}
 		}
-		$this->viewOptions['activeTab'] = "students";
+		$this->viewOptions['activeTab'] = "users";
 		if ($model->username){
 			if(Yii::app()->authManager->checkAccess('staff', $model->username))
 				$this->viewOptions['activeTab'] = "staff";

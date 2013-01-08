@@ -10,15 +10,14 @@
 ?>
 
 <?php 
-	$url = array('user/courses');
+	$url = array('user/create');
 	// add parameters only if they exist
 	//if ($model->username && strlen($model->username)>1) $url['username'] = $model->username;
 	//if ($model->term_code && strlen($model->term_code)>1) $url['term_code'] = $model->term_code;  // make general code to do this....
 	$url['username'] = $model->username;
 	$url['term_code'] = $model->term_code;  // make general code to do this....
 	$menuItems=array(
-		array('label'=>'Courses', 'url'=>$url),
-		array('label'=>'Profile', 'url'=>'#'),
+		array('label'=>'Add User', 'url'=>$url),
 		);
 
 	// build up the side bar menu
