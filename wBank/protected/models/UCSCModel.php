@@ -62,7 +62,7 @@ class UCSCModel extends CActiveRecord
 		if (!$params) $params = $_REQUEST;
 		// check for array of parrams
 		if (isset($params[$className]) && is_array($params[$className])){
-			$params = $params[$className];
+			$params = array_merge($params, $params[$className]);
 		}
 		$aModel->unsetAttributes();  // clear any default values .. is this needed?
 		if ($params){
@@ -71,7 +71,7 @@ class UCSCModel extends CActiveRecord
 				if ($value=='all' || $value=='All'|| $value=='-1'|| $value==-1 ){
 	        		$value = "";
 				}
-				$aModel->$name=$value;
+				@$aModel->$name=$value;  // @ = ignore errors
 			}
 			$aModel->setIsNewRecord(true);
 			$key = $aModel->getTableSchema()->primaryKey;

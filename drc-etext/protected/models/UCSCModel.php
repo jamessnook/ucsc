@@ -57,12 +57,22 @@ class UCSCModel extends CActiveRecord
 	 */
 	public static function loadModel($params=null)
 	{
-		if (!$params) $params = $_REQUEST;
 		$className=get_called_class();
 		$aModel=new $className(null);
+		if (!$params) $params = $_REQUEST;
+		// check for array of parrams
+		if (isset($params[$className]) && is_array($params[$className])){
+			$params = array_merge($params, $params[$className]);
+		}
 		$aModel->unsetAttributes();  // clear any default values .. is this needed?
 		if ($params){
-			$aModel->attributes =$params; // or use setAttributes()
+			// change alls to blanks and set values
+			foreach($params AS $name=>$value){
+				if ($value=='all' || $value=='All'|| $value=='-1'|| $value==-1 ){
+	        		$value = "";
+				}
+				@$aModel->$name=$value;  // @ = ignore errors
+			}
 			$aModel->setIsNewRecord(true);
 			$key = $aModel->getTableSchema()->primaryKey;
 			$tableParams = array();
@@ -80,10 +90,7 @@ class UCSCModel extends CActiveRecord
 				}
 			}
 		}
-		if(isset($_POST[$className])){
-			$aModel->attributes=$_POST[$className];
-		}
 		return $aModel;
 	}
-
+	
 }

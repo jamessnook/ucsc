@@ -5,22 +5,6 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
-$username = 'wbank';
-$password = '1Xbank';
-$hostname = 'localhost';
-$port = 3306;
-$db = 'wordBankDeploy';
-if ($dbEnv = getenv("VCAP_SERVICES")){
-	$services_json = json_decode($dbEnv,true);
-	$mysql_config = $services_json["mysql-5.1"][0]["credentials"];
-	$username = $mysql_config["username"];
-	$password = $mysql_config["password"];
-	$hostname = $mysql_config["hostname"];
-	$port = $mysql_config["port"];
-	$db = $mysql_config["name"];
-	//$link = mysql_connect("$hostname:$port", $username, $password);
-	//$db_selected = mysql_select_db($db, $link);
-}
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Vase Word Lists',
@@ -77,33 +61,11 @@ return array(
 		),
 		// uncomment the following to use a MySQL database
 		*/
-		//        self::$sql = new mysqli('localhost', 'wbank', '1Xbank', 'wordBankDeploy');
-		/*
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=wordBankDeploy',
 			'emulatePrepare' => true,
 			'username' => 'wbank',
 			'password' => '1Xbank',
-			'charset' => 'utf8',
-		),
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dea9019de8a924cb68da744cddc6d19db',
-			'emulatePrepare' => true,
-			'username' => 'u9WnUzhdw1Umf',
-			'password' => 'pK5UtdeHbHRdT',
-			'charset' => 'utf8',
-		),
-		$password = '1Xbank';
-		$hostname = 'localhost';
-		$port = 3306;
-		$db = 'wordBankDeploy';
-		*/
-		'db'=>array(
-			'connectionString' => "mysql:host=$hostname;dbname=$db",
-			'emulatePrepare' => true,
-			'username' => $username,
-			'password' => $password,
-			//'port' => $port,
 			'charset' => 'utf8',
 		),
 		'authManager'=>array(

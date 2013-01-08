@@ -34,7 +34,7 @@ class Controller extends CController
 	public $viewOptions = array();
 	
 	/**
-	 * @var UCSCModel default model object for this controller, used fore most views.
+	 * @var UCSCModel default model object for this controller, used for most views.
 	 */
 	public $_model;
 	
@@ -44,6 +44,24 @@ class Controller extends CController
 	 */
 	public $_contentModel;
 		
+	/**
+	 * Override parent empty method to provide needed initialization.
+	 */
+	public function init()
+	{
+		// check for appFog dynbamic database config
+		if ($dbEnv = getenv("VCAP_SERVICES") && isset(Yii::app()->db->connectionString) && stripos(Yii::app()->db->connectionString, 'mysql') !== false){
+			$services_json = json_decode($dbEnv,true);
+			$mysql_config = $services_json["mysql-5.1"][0]["credentials"];
+			Yii::app()->db->username = $mysql_config["username"];
+			Yii::app()->db->password = $mysql_config["password"];
+			$hostname = $mysql_config["hostname"];
+			//$port = $mysql_config["port"];
+			$db = $mysql_config["name"];
+			Yii::app()->db->connectionString = "mysql:host=$hostname;dbname=$db";
+		}
+	}
+
 	/**
 	 * A generic entry point for very similar actions.
 	 * Not currently used this is an laternative approach 
