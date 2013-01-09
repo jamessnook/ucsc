@@ -33,7 +33,7 @@ $options = $this->viewOptions;
 						),
 						array(
 							'label'=>'Words', 
-							'url'=>array('/wordse/list', 
+							'url'=>array('/words/list'), 
 							'active'=> get_class($model) == 'Words',
 							'visible'=>true,
 						),
@@ -55,7 +55,7 @@ $options = $this->viewOptions;
 						),
 						array(
 							'label'=>'<i class="icon-user"></i>Users', 
-							'url'=>array('/user/users', 'term_code'=>$model->term_code,), 
+							'url'=>array('/user/users',), 
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'), 
 							'active'=> $activeTab == 'users',

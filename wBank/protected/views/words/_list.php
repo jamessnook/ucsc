@@ -30,12 +30,23 @@
 		'pager'=>array('class'=>'CLinkPager', 'header'=>''), 
 		'pagerCssClass'=>"pagination", 
 		'columns'=>array(
-			array( 
+			/*array( 
 				'header'=>'Word Id', 
 				'name'=>'idString', 
 				//'value'=>'$data->id . CHtml::hiddenField("Words[wid][$row]", $data->id)', 
 				'value'=>'$data->id', 
 				'type'=> 'raw',
+			),*/
+			array( 
+				'header'=>'<a href="#" class="btn">Remove Unchecked</a>',  
+				'name'=>'check', 
+				'value'=>'false',
+				//'value'=>'$data->id . CHtml::hiddenField("Words[wid][$row]", $data->id)', 
+				//'value'=>'$data->id', 
+				//'value'=>'CHtml::checkBox("stopPublish",$data->stopPublish,array("id"=>"chkPublish_".$data->id))'),
+				'class'=>'CCheckBoxColumn',
+				'selectableRows'=>2,
+				//'type'=> 'raw',
 			),
 			array( 
 				'header'=>'Word', 
@@ -91,6 +102,7 @@
 			 ),
 		),
 	)); 
+	echo CHtml::button('Remove Checked', array( 'class'=>"btn", 'onclick' => "$('wordListGrid').yiiGridView.('getChecked', 'check').remove()", )); 
 	?>
     <div class="list-actions">
 	    <div>
