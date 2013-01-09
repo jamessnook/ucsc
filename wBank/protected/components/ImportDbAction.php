@@ -36,7 +36,7 @@
  **************************************************************************
  *
  * @author JSnook 
- * @package drc-etext.protected.components
+ * @package drc-etext.protected.extensions.components
  */
 class ImportDBAction extends CAction {
     /**

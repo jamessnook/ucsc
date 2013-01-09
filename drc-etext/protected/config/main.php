@@ -17,7 +17,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'application.controllers.*',
-),
+	),
 
 	'aliases' => array(
 	    //assuming you extracted the files to the extensions folder
@@ -59,7 +59,8 @@ return array(
 		// uncomment the following to use a MySQL database
 		/*
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+ 			'class'=>'ext.base.CloudDbConnection',			
+ 			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
