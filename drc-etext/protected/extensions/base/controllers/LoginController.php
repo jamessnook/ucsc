@@ -9,6 +9,41 @@
  */
 class LoginController extends Controller
 {
+	/**
+	 * Override parent empty method to provide needed initialization.
+	 */
+	public function init()
+	{
+		// set up for simple saml
+		require_once('../../lib/_autoload.php');
+		$as = new SimpleSAML_Auth_Simple('default-sp');
+		$as->requireAuth();
+		// or to specify login params
+		//$as->requireAuth($params);
+		/*
+		 * Return the user to the frontpage after authentication, don't post
+		 * the current POST data.
+		 */
+		$as->requireAuth(array(
+		    'ReturnTo' => 'https://sp.example.org/',
+		    'KeepPost' => FALSE,
+		));
+		print("Hello, authenticated user!");
+		// test
+		$attributes = $as->getAttributes();
+		print_r($attributes);
+		// test
+		if (!$as->isAuthenticated()) {
+		    /* Show login link. */
+		    print('<a href="/login">Login</a>');
+		}
+		// option use specific idp
+		$as->login(array(
+    		'saml:idp' => 'https://idp.example.org/',
+		));
+		
+	}
+	
 	public function actionIndex()
 	{
 			$this->actionLogin();
