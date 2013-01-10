@@ -121,7 +121,7 @@ class SiteController extends Controller
 	public function actionImport($fileName='wBank20130105.bak', $sqlPath='c:/xampp/mysql/bin/')
 	{
 		$fileRoot =dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..';
-	   	$filePath = realpath( Yii::app( )->getBasePath( )."/../files/uploads/" )."/";
+	   	//$filePath = realpath( Yii::app( )->getBasePath( )."/../files/uploads/" )."/";
 		$connection=Yii::app()->db;   
 		//$command=$connection->createCommand("SOURCE $fileRoot/$fileName");
 		//$command->execute(); 

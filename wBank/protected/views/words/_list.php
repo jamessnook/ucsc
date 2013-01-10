@@ -38,10 +38,11 @@
 				'type'=> 'raw',
 			),*/
 			array( 
-				'header'=>'<a href="#" class="btn">Remove Unchecked</a>',  
+				//'header'=>'<a href="#" class="btn">Remove Unchecked</a>',  
 				'name'=>'check', 
-				'value'=>'false',
-				//'value'=>'$data->id . CHtml::hiddenField("Words[wid][$row]", $data->id)', 
+				'htmlOptions'=>array('class'=>"cbs"),
+				'value'=>'"dtr$row"',
+			//'value'=>'$data->id . CHtml::hiddenField("Words[wid][$row]", $data->id)', 
 				//'value'=>'$data->id', 
 				//'value'=>'CHtml::checkBox("stopPublish",$data->stopPublish,array("id"=>"chkPublish_".$data->id))'),
 				'class'=>'CCheckBoxColumn',
@@ -94,15 +95,34 @@
 			 	'linkHtmlOptions'=>array('class'=>"btn"),
 				'labelExpression'=>'\'Remove\'', 
 				//'urlExpression'=>'array(\'course/manageBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
-				'urlExpression'=>'"javascript:$(\'.dtr$row\').remove()"', 
-				//'name'=>'delete', 
+				//'urlExpression'=>'"javascript:$(\'.dtr$row\').remove(); javascript:$(\'#DataTables_Table_0\').dataTable().fnDeleteRow($(\'.dtr$row\')));"', 
+				'urlExpression'=>'"javascript:$(\'.dtr$row\').remove(); void(0);"', 
+			 //'name'=>'delete', 
 				//'type'=>'raw',
 				//'value'=>"'Remove'", 
 			 	//'htmlOptions'=>array('class'=>"btn", 'onclick'=>'$(".dtr$row").delete()'),
 			 ),
+			 /*array( 
+				'header'=>'', 
+				'name'=>'remove', 
+				'htmlOptions'=>array('class'=>"btn", 'onclick'=>'"$(\'.dtr$row\').remove(); $(\'#DataTables_Table_0\').dataTable().fnDeleteRow($(\'.dtr$row\')));"'),
+				'value'=>'"dtr$row"',
+			 	//'class'=>'LinksColumn',
+			 	//'linkHtmlOptions'=>array('class'=>"btn"),
+				//'labelExpression'=>'\'Remove\'', 
+				//'urlExpression'=>'array(\'course/manageBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
+				//'urlExpression'=>'"javascript:$(\'.dtr$row\').remove(); $(\'#DataTables_Table_0\').dataTable().fnDeleteRow($(\'.dtr$row\')));"', 
+				//'name'=>'delete', 
+				//'type'=>'raw',
+				'value'=>"'Remove'", 
+			 	//'htmlOptions'=>array('class'=>"btn", 'onclick'=>'$(".dtr$row").delete()'),
+			 ),*/
 		),
 	)); 
-	echo CHtml::button('Remove Checked', array( 'class'=>"btn", 'onclick' => "$('wordListGrid').yiiGridView.('getChecked', 'check').remove()", )); 
+	echo CHtml::button('Remove Checked', array( 'class'=>"btn", 
+		'onclick' => '$(".cbs input:checked").each(function ( index, domEle) { $("#DataTables_Table_0").dataTable().fnDeleteRow($("."+$(this).val())); $("."+$(this).val()).remove();});', )); 
+	echo CHtml::button('Remove Unchecked', array( 'class'=>"btn", 
+		'onclick' => '$(".cbs input:not(:checked)").each(function ( index, domEle) {oTable.$("."+$(this).val()).remove();});', )); 
 	?>
     <div class="list-actions">
 	    <div>
@@ -133,6 +153,11 @@
 		
 		echo CHtml::submitButton('Download tsv List', array( 'class'=>"btn btn-success pull-right", 'name' => 'Words[downloadTsv]', )); 
 	 	
+		// possible js to add from http://www.datatables.net/forums/discussion/185/submitting-forms-with-fields-on-hidden-pages/p1
+		// $('form').submit(function(){
+        //$(oTable.fnGetHiddenNodes()).find('input:checked').appendTo(this);
+   		//});
+ 
 		?>
 	    </div>
     </div>
