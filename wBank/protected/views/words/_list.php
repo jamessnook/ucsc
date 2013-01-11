@@ -41,9 +41,9 @@
 				//'header'=>'<a href="#" class="btn">Remove Unchecked</a>',  
 				'name'=>'check', 
 				//'headerHtmlOptions'=>array('onclick'=>'if ($("#wordListGrid_c0_all").attr("checked")) $(".chk").val($(".chk5").attr("checked") ? 1 : 0 )', ),
-				'headerHtmlOptions'=>array('onclick'=>'if ($("#wordListGrid_c0_all").attr("checked")) $(".chk").val($(".cbc"+$(this)).attr("checked") ? 1 : 0 )', ),
+				'headerHtmlOptions'=>array('onclick'=>'$(".cbs").each(function ( i, el) {var vl=$(el).val();  $(".chk"+vl).val($(el).attr("checked") ? 1 : 0 );});', ),
 				'checkBoxHtmlOptions'=>array('class'=>"cbs", 'onclick'=>'$(".chk"+$(this).val()).val($(this).attr("checked") ? 1 : 0 )', ),
-				'cssClassExpression'=>'cbc$row',
+				'cssClassExpression'=>'"cbc cbc$row"',
 				'value'=>'$row',
 				//'value'=>'"dtr$row"',
 				//'value'=>'$data->id . CHtml::hiddenField("Words[wid][$row]", $data->id)', 
@@ -135,6 +135,15 @@
 	echo CHtml::submitButton('Remove Checked', array( 'class'=>"btn btn-success", 'name' => 'removeChecked', )); 
 	echo CHtml::submitButton('Remove Unchecked', array( 'class'=>"btn btn-success", 'name' => 'removeUnchecked', )); 
 	?>
+	 <script type="text/javascript">
+	 	// link click action to top checkbox
+		//$("#wordListGrid_c0").click(function(event) {
+		//	$(".cbs").each(function ( i, el) {
+		//		var vl=$(el).val();  
+		//		$(".chk"+vl).val($(el).attr("checked") ? 1 : 0 );
+		//	});		
+		//});
+   	</script>
     <div class="list-actions">
 	    <div>
 	
