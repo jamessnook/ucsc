@@ -40,7 +40,10 @@
 			array( 
 				//'header'=>'<a href="#" class="btn">Remove Unchecked</a>',  
 				'name'=>'check', 
-				'htmlOptions'=>array('class'=>"cbs"),
+				//'headerHtmlOptions'=>array('onclick'=>'if ($("#wordListGrid_c0_all").attr("checked")) $(".chk").val($(".chk5").attr("checked") ? 1 : 0 )', ),
+				'headerHtmlOptions'=>array('onclick'=>'if ($("#wordListGrid_c0_all").attr("checked")) $(".chk").val($(".cbc"+$(this)).attr("checked") ? 1 : 0 )', ),
+				'checkBoxHtmlOptions'=>array('class'=>"cbs", 'onclick'=>'$(".chk"+$(this).val()).val($(this).attr("checked") ? 1 : 0 )', ),
+				'cssClassExpression'=>'cbc$row',
 				'value'=>'$row',
 				//'value'=>'"dtr$row"',
 				//'value'=>'$data->id . CHtml::hiddenField("Words[wid][$row]", $data->id)', 
@@ -98,8 +101,8 @@
 				//'urlExpression'=>'array(\'course/manageBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
 				//'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); var row = $(this).closest(\'tr\').get(0); dt.fnDeleteRow(dt.fnGetPosition( row, 0, 1 ));"', 
 				//'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); var row = $(\'.dtr$row\'); dt.fnDeleteRow(dt.fnGetPosition( row ));"', 
-			 //'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); var aPos = dt.fnGetPosition( this ); dt.fnDeleteRow(apos[0]);"', 
-			 'urlExpression'=>'"javascript:$(\'#DataTables_Table_0\').dataTable().fnDeleteRow($(\'.dtr$row\'), null, true);"', 
+			 //'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); var aPos = dt.fnGetPosition($(\'tr.dtr$row\').get()); dt.fnDeleteRow(apos);"', 
+			 'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); dt.fnDeleteRow($(\'.dtr$row\').get());"', 
 			 //'urlExpression'=>'"javascript:$(\'.dtr$row\').remove(); void(0);"', 
 			 //'name'=>'delete', 
 				//'type'=>'raw',
@@ -123,10 +126,14 @@
 			 ),*/
 		),
 	)); 
+	/*
 	echo CHtml::button('Remove Checked', array( 'class'=>"btn", 
 		'onclick' => '$(".cbs input:checked").each(function ( index, domEle) { $("#DataTables_Table_0").dataTable().fnDeleteRow($("."+$(this).val())); $("."+$(this).val()).remove();});', )); 
 	echo CHtml::button('Remove Unchecked', array( 'class'=>"btn", 
 		'onclick' => '$(".cbs input:not(:checked)").each(function ( index, domEle) {oTable.$("."+$(this).val()).remove();});', )); 
+	*/
+	echo CHtml::submitButton('Remove Checked', array( 'class'=>"btn btn-success", 'name' => 'removeChecked', )); 
+	echo CHtml::submitButton('Remove Unchecked', array( 'class'=>"btn btn-success", 'name' => 'removeUnchecked', )); 
 	?>
     <div class="list-actions">
 	    <div>
@@ -134,7 +141,8 @@
 		<?php 
 		// add hidden elemts with word ids for further requests:
 		foreach ($model->search()->getData() as $i=>$row){
-			echo CHtml::hiddenField("Words[wid][$i]", $row['id'], array('class'=>"dtr$i"));
+			//echo CHtml::hiddenField("Words[wid][$i]", $row['id'], array('class'=>"dtr$i"));
+			echo CHtml::hiddenField("chk[{$row['id']}]", 0, array('class'=>"chk chk$i"));
 		} 
 		
 		echo $form->labelEx($model,'listName'); 

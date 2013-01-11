@@ -23,6 +23,7 @@
 class Words extends UCSCModel
 {
 	public $wid = array();  // for passed in list of word ids to include in new list
+	public $chk = array();  // for passed in list of checked or not checked word ids
 	public $tid = array();  // for passed in list of topic ids to use to create new list
 	public $exp = 0;        // expansion level to expand page range matches by
 	public $subjectId;      // class subject
@@ -37,6 +38,8 @@ class Words extends UCSCModel
 	public $downloadTsv = false;    // download file to users pc
 	public $viewInflections = false;    // display page of inflected forms of words in list
 	public $downloadInflections = false;    // display page of inflected forms of words in list
+	public $removeChecked = false;    // remove checked words from list
+	public $removeUnchecked = false;    // remove unchecked words from list
 	public $listName = "default";    // save list as
 	public $listId = 0;    // save list as
 	/**
@@ -179,6 +182,26 @@ class Words extends UCSCModel
 			} else {
 				$criteria->addCondition("id IN (SELECT wordId FROM wordList JOIN lists ON (id=listId) WHERE name ='$this->listName')");   
 			}       
+		}
+		
+		if($this->removeChecked) {
+			$criteria=new CDbCriteria;
+			$criteria->compare('id',-1, false, 'OR'); // base for OR so if no checked words we doen't get all fo the records
+			foreach ($this->chk as $id=>$checked){
+				if (!$checked){
+					$criteria->compare('id',$id, false, 'OR');
+				}
+			}
+		}
+		
+		if($this->removeUnchecked) {
+			$criteria=new CDbCriteria;
+			$criteria->compare('id',-1, false, 'OR'); // base for OR so if no checked words we doen't get all fo the records
+			foreach ($this->chk as $id=>$checked){
+				if ($checked){
+					$criteria->compare('id',$id, false, 'OR');
+				}
+			}
 		}
 		
 		return new CActiveDataProvider($this, array(
