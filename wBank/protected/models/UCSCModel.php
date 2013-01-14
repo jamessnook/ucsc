@@ -63,21 +63,12 @@ class UCSCModel extends CActiveRecord
 		// check for array of parrams
 		if (isset($params[$className]) && is_array($params[$className])){
 			$params = array_merge($params, $params[$className]);
-			unset($params[$className]);
+			//unset($params[$className]);
+			//echo $params[$className]['first_name'];
+			//echo $params['first_name'];
 		}
 		$aModel->unsetAttributes();  // clear any default values .. is this needed?
 		if ($params){
-			// change alls to blanks and set values
-			foreach($params AS $name=>$value){
-				if ($value=='all' || $value=='All'|| $value=='-1'|| $value==-1 ){
-	        		$value = "";
-				}
-				try {
-					@$aModel->$name=$value;  // @ = ignore errors
-				} catch (Exception $e) {
-					// ignore
-				}
-			}
 			$aModel->setIsNewRecord(true);
 			$key = $aModel->getTableSchema()->primaryKey;
 			$tableParams = array();
@@ -92,6 +83,19 @@ class UCSCModel extends CActiveRecord
 				if($newModel){
 					$aModel->attributes = $newModel->attributes;
 					$aModel->setIsNewRecord(false);
+				}
+			}
+			// change alls to blanks and set values
+			foreach($params AS $name=>$value){
+				if ($value=='all' || $value=='All'|| $value=='-1'|| $value==-1 ){
+	        		$value = "";
+				}
+				try {
+					//echo " $name=$value, ";
+					$aModel->$name=$value;  // @ = ignore errors
+				} catch (Exception $e) {
+					//echo ' trouble.. ';
+					// ignore
 				}
 			}
 		}

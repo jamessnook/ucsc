@@ -1308,15 +1308,20 @@ CREATE TABLE inflectedWord (
     inflection     VARCHAR(15),        -- the inflection
     celexWordId  INT DEFAULT 0,        -- word id from Celex or Vase if not in Celex
     lemmaId  INT DEFAULT 0,            -- lemma id from Celex or Vase if not in Celex
+    transDer  VARCHAR(63),           -- lemma data
+    immSubCat  VARCHAR(63),          -- lemma data
+    strucLab  VARCHAR(63),           -- lemma data
     zenoFreq  FLOAT DEFAULT 0,         -- zeno word frequency
     PRIMARY KEY (id), 
     UNIQUE (celexWordId) 
 );
 
 -- data to inflected words
-INSERT INTO inflectedWord (word, flectType, transInfl, celexWordId, lemmaId)
-  SELECT DISTINCT celex.WordMorph.word, celex.WordMorph.FlectType, celex.WordMorph.TransInfl, celex.WordMorph.IdNum, celex.WordMorph.IdNumLemma 
-    FROM words JOIN celex.WordMorph ON(words.lemmaId = celex.WordMorph.IdNumLemma)
+INSERT INTO inflectedWord (word, flectType, transInfl, celexWordId, lemmaId, transDer, immSubCat, strucLab)
+  SELECT DISTINCT celex.WordMorph.word, celex.WordMorph.FlectType, celex.WordMorph.TransInfl, celex.WordMorph.IdNum, celex.WordMorph.IdNumLemma,
+      celex.LemmaMorphParse.TransDer, celex.LemmaMorphParse.StrucLab, celex.LemmaMorphParse.ImmSubCat 
+    FROM words JOIN celex.WordMorph ON(words.lemmaId = celex.WordMorph.IdNumLemma) 
+      JOIN celex.LemmaMorphParse ON(LemmaMorphParse.IdNum = words.lemmaId)
 ON DUPLICATE KEY UPDATE word=celex.WordMorph.word;
 
 UPDATE inflectedWord SET inflection = SUBSTRING_INDEX(transInfl, '+', -1);

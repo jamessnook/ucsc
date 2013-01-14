@@ -102,9 +102,9 @@ $(document).ready(function() {
 		//"bPaginate": false,
 		"bStateSave": true,
 		"aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-		"aoColumns": [
-			{ "bSortable": false },
-		]
+        "aoColumnDefs": [ 
+            { "bSortable": false, "aTargets": [ 0 ] }
+         ],
 		"oLanguage": {
 			"sLengthMenu": "_MENU_ records per page"
 		}

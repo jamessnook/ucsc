@@ -31,11 +31,11 @@ class WordsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'list'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','admin','list'),
+				'actions'=>array('create','update', 'admin','delete'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -179,6 +179,10 @@ class WordsController extends Controller
 	 */
 	public function actionList()
 	{
+		// set default word
+		if (!isset($_REQUEST['word'])){
+			$_REQUEST['word']='a*';
+		}
 		if($this->model->saveNewList){
 			$this->model->createList();
 		}
@@ -204,6 +208,13 @@ class WordsController extends Controller
 				'menuView' => '../words/_select',
 				'contentTitle' => 'Inflected Word List',
 			));
+		} else if($this->model->viewLemmaMorph){
+			$this->renderView(array(
+				'title' => 'List Builder',
+				'contentView' => '../words/_lemmaMorphList',
+				'menuView' => '../words/_select',
+				'contentTitle' => 'Lemma Morpology and Derivation',
+			));
 		} else {
 			$this->renderView(array(
 				'title' => 'List Builder',
@@ -222,6 +233,7 @@ class WordsController extends Controller
 		$this->viewOptions['menuView'] = '../words/_select';  // default
 		$this->viewOptions['title'] = 'Title';
 		$this->viewOptions['activeTab'] = "courses";
+		$this->viewOptions['action'] = Yii::app()->createUrl("words/list");
 	}
 
 }

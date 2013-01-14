@@ -40,7 +40,7 @@
 
             </div>
         </div>
-        <div class="control-group">
+         <div class="control-group">
 			<?php echo $form->labelEx($model, 'grade', array('class'=>"control-label")); ?>
             <div class="controls">
 				
@@ -52,13 +52,13 @@
             </div>
         </div>
         <div class="control-group">
-			<?php echo $form->labelEx($model, 'concrete', array('class'=>"control-label")); ?>
+			<?php //echo $form->labelEx($model, 'concrete', array('class'=>"control-label")); ?>
             <div class="controls">
 				
-		        <?php 	$options = CHtml::listData(Concrete::model()->findAll(array('distinct'=>true,)), 'id', 'name');
-	        		echo $form->dropDownList($model,'concrete', $options, array('class'=>"input-mmlarge"));
+		        <?php 	//$options = CHtml::listData(Concrete::model()->findAll(array('distinct'=>true,)), 'id', 'name');
+	        		//echo $form->dropDownList($model,'concrete', $options, array('class'=>"input-mmlarge"));
 	        	?>
-				<?php echo $form->error($model,'concrete'); ?>
+				<?php //echo $form->error($model,'concrete'); ?>
 
             </div>
         </div>

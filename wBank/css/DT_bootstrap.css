@@ -88,4 +88,6 @@ table .btn{
   width: 100%;
   *width: 100%;
 }
-
+input[type="text"], input[type="password"]{
+  height: 24px;
+}

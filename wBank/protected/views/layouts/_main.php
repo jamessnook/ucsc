@@ -59,7 +59,6 @@ $options = $this->viewOptions;
 							'itemOptions'=>array('class'=>'pull-right'), 
 							'visible'=>Yii::app()->user->checkAccess('admin'), 
 							'active'=> $activeTab == 'users',
-							'visible'=>true,
 						),
 						
 						array(
@@ -98,7 +97,7 @@ $options = $this->viewOptions;
  	<?php $form=$this->beginWidget('CActiveForm', array(
 		'id'=>'wordlistmenu-form',
 		'enableAjaxValidation'=>false,
-		//'action'=> $action,
+		'action'=> $action,
 		//'htmlOptions' => array('enctype' => 'multipart/form-data'),
 	)); 
 	$options['form'] = $form; // make accessible in contained views

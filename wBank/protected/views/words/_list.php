@@ -38,20 +38,13 @@
 				'type'=> 'raw',
 			),*/
 			array( 
-				//'header'=>'<a href="#" class="btn">Remove Unchecked</a>',  
 				'name'=>'check', 
-				//'headerHtmlOptions'=>array('onclick'=>'if ($("#wordListGrid_c0_all").attr("checked")) $(".chk").val($(".chk5").attr("checked") ? 1 : 0 )', ),
-				'headerHtmlOptions'=>array('onclick'=>'$(".cbs").each(function ( i, el) {var vl=$(el).val();  $(".chk"+vl).val($(el).attr("checked") ? 1 : 0 );});', ),
+				'headerHtmlOptions'=>array('onclick'=>'$(".cbs").each(function ( i, el) {var vl=$(el).val();  $(".chk"+vl).val($("#wordListGrid_c0_all").attr("checked") ? 1 : 0 );});', ),
 				'checkBoxHtmlOptions'=>array('class'=>"cbs", 'onclick'=>'$(".chk"+$(this).val()).val($(this).attr("checked") ? 1 : 0 )', ),
 				'cssClassExpression'=>'"cbc cbc$row"',
 				'value'=>'$row',
-				//'value'=>'"dtr$row"',
-				//'value'=>'$data->id . CHtml::hiddenField("Words[wid][$row]", $data->id)', 
-				//'value'=>'$data->id', 
-				//'value'=>'CHtml::checkBox("stopPublish",$data->stopPublish,array("id"=>"chkPublish_".$data->id))'),
 				'class'=>'CCheckBoxColumn',
 				'selectableRows'=>2,
-				//'type'=> 'raw',
 			),
 			array( 
 				'header'=>'Word', 
@@ -68,11 +61,11 @@
 				'name'=>'senseNum', 
 				'value'=>'$data->senseNum', 
 			 ),
-			 array( 
+			 /*array( 
 				'header'=>'Concrete', 
 				'name'=>'concrete', 
 				'value'=>'$data->concrete', 
-			),
+			),*/
 			 array( 
 				'header'=>'Lemma', 
 				'name'=>'head', 
@@ -93,7 +86,7 @@
 				'name'=>'definition', 
 				'value'=>'$data->definition', 
 			),
-			 array( 
+			 /*array( 
 				'header'=>'', 
 				'class'=>'LinksColumn',
 			 	'linkHtmlOptions'=>array('class'=>"btn"),
@@ -101,49 +94,15 @@
 				//'urlExpression'=>'array(\'course/manageBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
 				//'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); var row = $(this).closest(\'tr\').get(0); dt.fnDeleteRow(dt.fnGetPosition( row, 0, 1 ));"', 
 				//'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); var row = $(\'.dtr$row\'); dt.fnDeleteRow(dt.fnGetPosition( row ));"', 
-			 //'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); var aPos = dt.fnGetPosition($(\'tr.dtr$row\').get()); dt.fnDeleteRow(apos);"', 
-			 'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); dt.fnDeleteRow($(\'.dtr$row\').get());"', 
-			 //'urlExpression'=>'"javascript:$(\'.dtr$row\').remove(); void(0);"', 
-			 //'name'=>'delete', 
-				//'type'=>'raw',
-				//'value'=>"'Remove'", 
-			 	//'htmlOptions'=>array('class'=>"btn", 'onclick'=>'$(".dtr$row").delete()'),
-			 ),
-			 /*array( 
-				'header'=>'', 
-				'name'=>'remove', 
-				'htmlOptions'=>array('class'=>"btn", 'onclick'=>'"$(\'.dtr$row\').remove(); $(\'#DataTables_Table_0\').dataTable().fnDeleteRow($(\'.dtr$row\')));"'),
-				'value'=>'"dtr$row"',
-			 	//'class'=>'LinksColumn',
-			 	//'linkHtmlOptions'=>array('class'=>"btn"),
-				//'labelExpression'=>'\'Remove\'', 
-				//'urlExpression'=>'array(\'course/manageBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
-				//'urlExpression'=>'"javascript:$(\'.dtr$row\').remove(); $(\'#DataTables_Table_0\').dataTable().fnDeleteRow($(\'.dtr$row\')));"', 
-				//'name'=>'delete', 
-				//'type'=>'raw',
-				'value'=>"'Remove'", 
+			 	//'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); var aPos = dt.fnGetPosition($(\'tr.dtr$row\').get()); dt.fnDeleteRow(apos);"', 
+			 	'urlExpression'=>'"javascript:var dt = $(\'#DataTables_Table_0\').dataTable(); dt.fnDeleteRow($(\'.dtr$row\').get());"', 
 			 	//'htmlOptions'=>array('class'=>"btn", 'onclick'=>'$(".dtr$row").delete()'),
 			 ),*/
 		),
 	)); 
-	/*
-	echo CHtml::button('Remove Checked', array( 'class'=>"btn", 
-		'onclick' => '$(".cbs input:checked").each(function ( index, domEle) { $("#DataTables_Table_0").dataTable().fnDeleteRow($("."+$(this).val())); $("."+$(this).val()).remove();});', )); 
-	echo CHtml::button('Remove Unchecked', array( 'class'=>"btn", 
-		'onclick' => '$(".cbs input:not(:checked)").each(function ( index, domEle) {oTable.$("."+$(this).val()).remove();});', )); 
-	*/
 	echo CHtml::submitButton('Remove Checked', array( 'class'=>"btn btn-success", 'name' => 'removeChecked', )); 
 	echo CHtml::submitButton('Remove Unchecked', array( 'class'=>"btn btn-success", 'name' => 'removeUnchecked', )); 
 	?>
-	 <script type="text/javascript">
-	 	// link click action to top checkbox
-		//$("#wordListGrid_c0").click(function(event) {
-		//	$(".cbs").each(function ( i, el) {
-		//		var vl=$(el).val();  
-		//		$(".chk"+vl).val($(el).attr("checked") ? 1 : 0 );
-		//	});		
-		//});
-   	</script>
     <div class="list-actions">
 	    <div>
 	
@@ -160,6 +119,7 @@
 		echo CHtml::submitButton('Save New List', array( 'class'=>"btn btn-success", 'name' => 'Words[saveNewList]', )); 
 		
 		echo CHtml::submitButton('View Inflections', array( 'class'=>"btn btn-success pull-right", 'name' => 'Words[viewInflections]', )); 
+		echo CHtml::submitButton('View Lemma Morphology', array( 'class'=>"btn btn-success pull-right", 'name' => 'Words[viewLemmaMorph]', )); 
 		?>
 	    </div>
 	    <div >

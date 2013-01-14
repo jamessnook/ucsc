@@ -39,7 +39,7 @@ class UserController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete','save','update', 'courses', 'index', 'view', 'create', 'students', 'faculty', 'staff'),
+				'actions'=>array('delete','save','update', 'courses', 'index', 'view', 'create', 'users', 'faculty', 'staff'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -57,10 +57,12 @@ class UserController extends Controller
 		$model = User::loadModel();
 
 		if(isset($_POST['User'])){
+			//echo $model->first_name . '  ' . $_POST['User']['first_name'];
 			if(!$model->save()) {
 				throw new CHttpException(404,'ERROR could not save user data.'); // temporary error code
 			}
 		}
+		//echo "save";
 		$this->redirect(Yii::app()->request->getUrlReferrer()); // back from wence yee came
 	}
 
@@ -103,7 +105,7 @@ class UserController extends Controller
 		$this->renderView(array(
 			'contentView' => '../user/_list',
 			'dataProvider' => $this->model->users(),
-			'contentTitle' => 'DRC Students',
+			'contentTitle' => 'All Word List Users',
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'menuView' => '../layouts/_userMenu',
 			'menuRoute' => 'user/students',
@@ -150,7 +152,8 @@ class UserController extends Controller
 	    if (!Yii::app()->user->checkAccess('admin')){
 			return $this->actionView();
 	    }
-		$this->model = User::loadModel();
+		echo "update";
+	    $this->model = User::loadModel();
 		if($this->model===null)
 			throw new CHttpException(404,'The requested user does not exist.');
 		$this->renderView(array(
@@ -210,6 +213,7 @@ class UserController extends Controller
 			$this->viewOptions['title'] = "Users";
 		}
 		$this->viewOptions['activeTab'] = "users";
+		$this->viewOptions['action'] = Yii::app()->createUrl("user/save", array('username'=>$this->model->username));
 		if ($model->username){
 			if(Yii::app()->authManager->checkAccess('staff', $model->username))
 				$this->viewOptions['activeTab'] = "staff";

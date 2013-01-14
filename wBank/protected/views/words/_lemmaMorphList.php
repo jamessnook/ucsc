@@ -19,7 +19,7 @@
 	
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'wordListGrid',
-		'dataProvider'=>$model->inflections(),
+		'dataProvider'=>$model->lemmaMorph(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,
 		'summaryText'=>'',
@@ -45,36 +45,6 @@
 				//'value'=>'$data->words[0]->head', 
 				'value'=>'$data[\'head\']', 
 			),
-			array( 
-				'header'=>'Inflected Word', 
-				'name'=>'word', 
-				//'value'=>'$data->word', 
-				'value'=>'$data[\'word\']', 
-			),
-			/* array( 
-				'header'=>'Type', 
-				'name'=>'type', 
-				//'value'=>'$data->flectType', 
-				'value'=>'$data[\'flectType\']', 
-			 ),*/
-			  array( 
-				'header'=>'inflection', 
-				'name'=>'inflection', 
-				//'value'=>'$data->inflection', 
-				'value'=>'$data[\'inflection\']', 
-			 ),
-			 array( 
-				'header'=>'Frequency', 
-				'name'=>'zenoFreq', 
-				//'value'=>'$data->zenoFreq', 
-				'value'=>'$data[\'zenoFreq\']', 
-			 ),
-			 /*array( 
-				'header'=>'Trans Infl', 
-				'name'=>'transInfl', 
-				//'value'=>'$data->transInfl', 
-				'value'=>'$data[\'transInfl\']', 
-			 ),*/
 			 array( 
 				'header'=>'Subcat', 
 				'name'=>'subcat', 
@@ -93,18 +63,6 @@
 				//'value'=>'$data->inflection', 
 				'value'=>'$data[\'strucLab\']', 
 			 ),
-			/* array( 
-				'header'=>'', 
-				'class'=>'LinksColumn',
-			 	'linkHtmlOptions'=>array('class'=>"btn"),
-				'labelExpression'=>'\'Remove\'', 
-				//'urlExpression'=>'array(\'course/manageBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
-				'urlExpression'=>'"javascript:$(\'.dtr$row\').remove()"', 
-				//'name'=>'delete', 
-				//'type'=>'raw',
-				//'value'=>"'Remove'", 
-			 	//'htmlOptions'=>array('class'=>"btn", 'onclick'=>'$(".dtr$row").delete()'),
-			 ),*/
 		),
 	)); 
 	?>

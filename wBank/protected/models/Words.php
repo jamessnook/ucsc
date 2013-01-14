@@ -22,21 +22,22 @@
  */
 class Words extends UCSCModel
 {
-	public $wid = array();  // for passed in list of word ids to include in new list
+	//public $wid = array();  // for passed in list of word ids to include in new list
 	public $chk = array();  // for passed in list of checked or not checked word ids
 	public $tid = array();  // for passed in list of topic ids to use to create new list
 	public $exp = 0;        // expansion level to expand page range matches by
 	public $subjectId;      // class subject
 	public $grade;          // class grade
 	public $maxFrequency=1000000;   // word frequency
-	public $minFrequency=100;   // word frequency
+	public $minFrequency=0;   // word frequency
 	public $topicId;   		// word frequency
 	public $addToList = false;    // true if add new search results to previous list
 	public $saveOldList = false;    // true if save list
 	public $saveNewList = false;    // true if save list to new name and Id
 	public $loadList = false;    // true if load old list from db
 	public $downloadTsv = false;    // download file to users pc
-	public $viewInflections = false;    // display page of inflected forms of words in list
+	public $viewInflections = false;    // display page of inflected forms of words in list 
+	public $viewLemmaMorph = false;    // display page of lemma Morpology and Derivation info
 	public $downloadInflections = false;    // display page of inflected forms of words in list
 	public $removeChecked = false;    // remove checked words from list
 	public $removeUnchecked = false;    // remove unchecked words from list
@@ -168,7 +169,8 @@ class Words extends UCSCModel
 		}
 		//if(isset($_POST['addToList'])) {
 		if($this->addToList) {
-			foreach ($this->wid as $id){
+			//foreach ($this->wid as $id){
+			foreach ($this->chk as $id=>$checked){
 				$criteria->compare('id',$id, false, 'OR');
 			}
 		}
@@ -218,12 +220,12 @@ class Words extends UCSCModel
 	public function inflections()
 	{
 		$where = " WHERE inflection!='' AND inflection!='IRR' AND (";
-		foreach ($this->wid as $id){
-			$where .= "words.id=$id OR ";
-		} 
+		foreach ($this->chk as $id=>$checked){
+				$where .= "words.id=$id OR ";
+		}
 		$where .= "words.id=-2)"; // terminate list with extra special case
 		// create sql to retieve emails sent or available to be sent ot istructors for this course.
-		$sql = "SELECT DISTINCT inflectedWord.word, head, transInfl, inflection, inflectedWord.zenoFreq
+		$sql = "SELECT DISTINCT inflectedWord.word, head, transInfl, inflection, transDer, strucLab, immSubCat, inflectedWord.zenoFreq
 			FROM words JOIN inflectedWord USING (lemmaId)" . $where;
 		
 		return new CSqlDataProvider($sql, array(
@@ -232,43 +234,28 @@ class Words extends UCSCModel
 		));
 	}
 
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
-	public function inflectionsOld1()
-	{
-		$criteria=new CDbCriteria;
-		foreach ($this->wid as $id){
-			$criteria->compare('words.id',$id, false, 'OR');
-		} 
-		$criteria->with = array( 'words' );
-		//$criteria->join = 'JOIN inflectedWord USING (lemmaId)';
-		//$criteria->select = 't.word, inflectedWord.word AS iWord, head, flectType, transInfl, inflection, lemmaId, celexWordId, inflectedWord.zenoFreq';
-		return new CActiveDataProvider('InflectedWord', array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
 	
 	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+	 * Retrieves a data provider that can provide list of emails for this Course.
+	 * @return CActiveDataProvider the data provider that can return a list of Email models.
 	 */
-	public function inflectionsOld()
+	public function lemmaMorph()
 	{
-		$criteria=new CDbCriteria;
-		foreach ($this->wid as $id){
-			$criteria->compare('t.id',$id, false, 'OR');
-		} 
-		$criteria->join = 'JOIN inflectedWord USING (lemmaId)';
-		$criteria->select = 't.word, inflectedWord.word AS iWord, head, flectType, transInfl, inflection, lemmaId, celexWordId, inflectedWord.zenoFreq';
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+		$where = " WHERE ";
+		foreach ($this->chk as $id=>$checked){
+				$where .= "words.id=$id OR ";
+		}
+		$where .= "words.id=-2"; // terminate list with extra special case
+		// create sql to retieve emails sent or available to be sent ot istructors for this course.
+		$sql = "SELECT DISTINCT head, transDer, strucLab, immSubCat
+			FROM words JOIN inflectedWord USING (lemmaId)" . $where;
+		
+		return new CSqlDataProvider($sql, array(
 		 	'pagination' => false,
+		 	'keyField' => 'head',
 		));
 	}
-	
+
 	
 	/**
 	 * ---
@@ -279,7 +266,8 @@ class Words extends UCSCModel
 		$list->name = $this->listName;
 		$list->username = Yii::app()->user->name;
 		$list->save();
-		foreach ($this->wid as $id){
+		//foreach ($this->wid as $id){
+		foreach ($this->chk as $id=>$checked){
 			$item = new WordList();
 			$item->wordId = $id;
 			$item->listId = $list->id;
@@ -307,7 +295,8 @@ class Words extends UCSCModel
 		foreach ($list->wordList as $item){ // delete old entries
 			$item->delete();
 		}
-		foreach ($this->wid as $id){
+		//foreach ($this->wid as $id){
+		foreach ($this->chk as $id=>$checked){
 			$item = new WordList();
 			$item->wordId = $id;
 			$item->listId = $list->id;
@@ -317,7 +306,7 @@ class Words extends UCSCModel
 
 
 	/**
-	 * Retrieves a data provider that can provide list of students for this Book.
+	 * Retrieves a data provider that can provide list of word lists.
 	 * @return CActiveDataProvider the data provider that can return a list of User models.
 	 */
 	public function lists()

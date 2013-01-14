@@ -64,14 +64,16 @@ class User extends UCSCModel
 		// will receive user inputs.
 		return array(
 			//array('username', 'required'),
-			array('username, emplid, first_name, middle_name, last_name, modified_by', 'length', 'max'=>64),
-			array('email, password, salt', 'length', 'max'=>128),
+			//array('username, emplid, first_name, middle_name, last_name, modified_by', 'length', 'max'=>64),
+			array('username, first_name, last_name,', 'length', 'max'=>64),
+			//array('email, password, salt', 'length', 'max'=>128),
 			array('phone', 'length', 'max'=>32),
-			array('created, modified, term_code', 'safe'),
+			//array('created, modified, term_code', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			//array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by', 'safe', 'on'=>'search'),
-			array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by, term_code, role', 'safe'),
+			//array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by, term_code, role', 'safe'),
+			array('username, emplid, first_name, last_name, email, phone, role', 'safe'),
 			);
 	}
 
@@ -96,15 +98,15 @@ class User extends UCSCModel
 			'username' => 'Username',
 			'emplid' => 'Emplid',
 			'first_name' => 'First Name',
-			'middle_name' => 'Middle Name',
+			//'middle_name' => 'Middle Name',
 			'last_name' => 'Last Name',
 			'email' => 'Email',
 			'phone' => 'Phone',
-			'created' => 'Created',
-			'modified' => 'Modified',
-			'password' => 'Password',
-			'salt' => 'Salt',
-			'modified_by' => 'Modified By',
+			//'created' => 'Created',
+			//'modified' => 'Modified',
+			//'password' => 'Password',
+			//'salt' => 'Salt',
+			//'modified_by' => 'Modified By',
 		);
 	}
 
@@ -122,15 +124,15 @@ class User extends UCSCModel
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('emplid',$this->emplid,true);
 		$criteria->compare('first_name',$this->first_name,true);
-		$criteria->compare('middle_name',$this->middle_name,true);
+		//$criteria->compare('middle_name',$this->middle_name,true);
 		$criteria->compare('last_name',$this->last_name,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('phone',$this->phone,true);
-		$criteria->compare('created',$this->created,true);
-		$criteria->compare('modified',$this->modified,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('salt',$this->salt,true);
-		$criteria->compare('modified_by',$this->modified_by,true);
+		//$criteria->compare('created',$this->created,true);
+		//$criteria->compare('modified',$this->modified,true);
+		//$criteria->compare('password',$this->password,true);
+		//$criteria->compare('salt',$this->salt,true);
+		//$criteria->compare('modified_by',$this->modified_by,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -224,6 +226,22 @@ class User extends UCSCModel
 		$items = Yii::app()->authManager->getRoles($this->username);
 		foreach($items as $name=>$item){
 			$roles[]=$name;
+		}
+		return $roles;
+	}
+	/**
+	 * Retrieves a list of authentication roles assigned to the user defined by $this object.
+	 * @return array, the roles for this user.
+	 */
+	public function getRolesStr()
+	{
+		$roles = "";
+		$items = Yii::app()->authManager->getRoles($this->username);
+		foreach($items as $name=>$item){
+			if($roles != ''){
+				$roles .= ', ';
+			}
+			$roles .= $name;
 		}
 		return $roles;
 	}

@@ -5118,3 +5118,520 @@ REQUEST_URI=/ucsc/wBank/index.php/words/list
 in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\words\_list.php (104)
 in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php (142)
 in C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php (104)
+2013/01/12 03:11:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('users')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/users')
+#9 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/wBank/index.php/user/users
+HTTP_REFERER=http://localhost/ucsc/wBank/index.php/words/list
+---
+2013/01/12 03:13:19 [error] [exception.CException] exception 'CException' with message 'Property "User.term_code" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('term_code')
+#1 C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_userMenu.php(18): CActiveRecord->__get('term_code')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php(114): CController->renderPartial('../layouts/_use...', Array)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('../layouts/_mai...', Array, true)
+#10 C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php(104): CController->render('../layouts/_mai...', Array)
+#11 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php(110): Controller->renderView(Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionUsers()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('users')
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/users')
+#23 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/ucsc/wBank/index.php/user/users
+HTTP_REFERER=http://localhost/ucsc/wBank/index.php/words/list
+---
+2013/01/12 03:14:02 [error] [exception.CException] exception 'CException' with message 'Property "User.term_code" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('term_code')
+#1 C:\Users\Jim\phpFog\ucsc\wBank\protected\views\user\_list.php(46): CActiveRecord->__get('term_code')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php(142): CController->renderPartial('../user/_list', Array)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('../layouts/_mai...', Array, true)
+#10 C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php(104): CController->render('../layouts/_mai...', Array)
+#11 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php(110): Controller->renderView(Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionUsers()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('users')
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/users')
+#23 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/ucsc/wBank/index.php/user/users
+HTTP_REFERER=http://localhost/ucsc/wBank/index.php/words/list
+---
+2013/01/12 03:19:10 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (153)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:19:23 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (153)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:21:56 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (153)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:26:11 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:26:27 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:29:47 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:30:22 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:30:28 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:53:31 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:59:22 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 03:59:32 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:05:30 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:07:49 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:18:11 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:18:25 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:18:25 [error] [exception.CException] exception 'CException' with message 'Property "User.middle_name" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('middle_name')
+#1 C:\Users\Jim\phpFog\ucsc\framework\validators\CStringValidator.php(80): CActiveRecord->__get('middle_name')
+#2 C:\Users\Jim\phpFog\ucsc\framework\validators\CValidator.php(197): CStringValidator->validateAttribute(Object(User), 'middle_name')
+#3 C:\Users\Jim\phpFog\ucsc\framework\base\CModel.php(158): CValidator->validate(Object(User), NULL)
+#4 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php(60): CActiveRecord->save()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionSave()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('save')
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/save/usern...')
+#17 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/ucsc/wBank/index.php/user/save/username/admin
+HTTP_REFERER=http://localhost/ucsc/wBank/index.php/user/update/username/admin
+---
+2013/01/12 04:19:38 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:20:09 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (155)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:20:18 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:21:47 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:21:51 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:23:32 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:23:35 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:25:58 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:26:03 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:27:00 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:27:02 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (93)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:29:44 [error] [php] Undefined index: first_name (C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php:68)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/wBank/index.php/user/update/username/admin
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (68)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:30:50 [error] [php] Undefined index: User (C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php:68)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/wBank/index.php/user/update/username/admin
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (68)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:32:04 [error] [php] Undefined index: User (C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php:63)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/wBank/index.php/user/update/username/admin
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (63)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:33:48 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (95)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:33:55 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (95)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:36:34 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (95)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:38:36 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (96)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 04:40:00 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (97)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 07:00:00 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 07:02:26 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 07:02:57 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (57)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 07:02:57 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 07:03:09 [error] [php] Undefined variable: action (C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php:101)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php(104): UserController->render()
+#3 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php(112): UserController->renderView()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionUsers()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/wBank/index.php/user/users
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php (101)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php (104)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (112)
+2013/01/12 07:20:19 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (194)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 07:20:19 [error] [exception.CException] exception 'CException' with message 'Property "User.term_code" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('term_code')
+#1 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php(200): CActiveRecord->__get('term_code')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionCourses()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/courses/us...')
+#13 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/ucsc/wBank/index.php/user/courses/username/admin
+HTTP_REFERER=http://localhost/ucsc/wBank/index.php/user/users
+---
+2013/01/12 07:21:35 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 07:23:21 [error] [php] Undefined variable: action (C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php:101)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): WordsController->renderFile()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): WordsController->renderPartial()
+#2 C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php(104): WordsController->render()
+#3 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\WordsController.php(213): WordsController->renderView()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): WordsController->actionList()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): WordsController->runAction()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): WordsController->filterAccessControl()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): WordsController->runActionWithFilters()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): WordsController->run()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/wBank/index.php/words/list
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php (101)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php (104)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\WordsController.php (213)
+2013/01/12 07:26:16 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 07:29:26 [warning] [application] Failed to set unsafe attribute "emplId" of "User".
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\UserController.php (156)
+in C:\Users\Jim\phpFog\ucsc\wBank\index.php (13)
+2013/01/12 07:31:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('list')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('words/list')
+#9 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/wBank/index.php/words/list
+HTTP_REFERER=http://localhost/ucsc/wBank/index.php/login/login
+---
+2013/01/12 07:35:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('users')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/users')
+#9 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ucsc/wBank/index.php/user/users
+HTTP_REFERER=http://localhost/ucsc/wBank/index.php/words/list
+---
+2013/01/13 12:42:47 [error] [php] Undefined variable: i (C:\Users\Jim\phpFog\ucsc\wBank\protected\views\words\_inflectionList.php:117)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): WordsController->renderFile()
+#1 C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php(141): WordsController->renderPartial()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): WordsController->renderInternal()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): WordsController->renderFile()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): WordsController->renderPartial()
+#6 C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php(104): WordsController->render()
+#7 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\WordsController.php(210): WordsController->renderView()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): WordsController->actionList()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): WordsController->runAction()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): WordsController->filterAccessControl()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): WordsController->runActionWithFilters()
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): WordsController->run()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/wBank/index.php/words/list
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\words\_inflectionList.php (117)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php (141)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php (104)
+2013/01/13 13:17:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'words.id=1022 OR words.id=1023 OR words.id=1027 OR words.id=1 OR words.id=1030 O' at line 2. The SQL statement executed was: SELECT DISTINCT head, transDer, strucLab, immSubCat
+			FROM words JOIN inflectedWord USING (lemmaId) words.id=1022 OR words.id=1023 OR words.id=1027 OR words.id=1 OR words.id=1030 OR words.id=1031 OR words.id=1034 OR words.id=1037 OR words.id=1040 OR words.id=1041 OR words.id=1042 OR words.id=1043 OR words.id=1044 OR words.id=1045 OR words.id=1046 OR words.id=1047 OR words.id=1048 OR words.id=1051 OR words.id=1062 OR words.id=1068 OR words.id=1069 OR words.id=1072 OR words.id=32 OR words.id=1077 OR words.id=44 OR words.id=45 OR words.id=46 OR words.id=1093 OR words.id=1094 OR words.id=55 OR words.id=1100 OR words.id=56 OR words.id=1103 OR words.id=58 OR words.id=59 OR words.id=1106 OR words.id=1107 OR words.id=1109 OR words.id=1111 OR words.id=1115 OR words.id=-2.
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\words\_lemmaMorphList.php (67)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php (141)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php (104)
+2013/01/13 13:17:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'words.id=1022 OR words.id=1023 OR words.id=1027 OR words.id=1 OR words.id=1030 O' at line 2. The SQL statement executed was: SELECT DISTINCT head, transDer, strucLab, immSubCat
+			FROM words JOIN inflectedWord USING (lemmaId) words.id=1022 OR words.id=1023 OR words.id=1027 OR words.id=1 OR words.id=1030 OR words.id=1031 OR words.id=1034 OR words.id=1037 OR words.id=1040 OR words.id=1041 OR words.id=1042 OR words.id=1043 OR words.id=1044 OR words.id=1045 OR words.id=1046 OR words.id=1047 OR words.id=1048 OR words.id=1051 OR words.id=1062 OR words.id=1068 OR words.id=1069 OR words.id=1072 OR words.id=32 OR words.id=1077 OR words.id=44 OR words.id=45 OR words.id=46 OR words.id=1093 OR words.id=1094 OR words.id=55 OR words.id=1100 OR words.id=56 OR words.id=1103 OR words.id=58 OR words.id=59 OR words.id=1106 OR words.id=1107 OR words.id=1109 OR words.id=1111 OR words.id=1115 OR words.id=-2' in C:\Users\Jim\phpFog\ucsc\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CSqlDataProvider.php(105): CDbCommand->queryAll()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CDataProvider.php(137): CSqlDataProvider->fetchData()
+#3 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#4 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(148): CGridView->init()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#7 C:\Users\Jim\phpFog\ucsc\wBank\protected\views\words\_lemmaMorphList.php(67): CBaseController->widget('zii.widgets.gri...', Array)
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#11 C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php(141): CController->renderPartial('../words/_lemma...', Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('../layouts/_mai...', Array, true)
+#16 C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php(104): CController->render('../layouts/_mai...', Array)
+#17 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\WordsController.php(217): Controller->renderView(Array)
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): WordsController->actionList()
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('list')
+#28 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('words/list')
+#29 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/ucsc/wBank/index.php/words/list
+HTTP_REFERER=http://localhost/ucsc/wBank/index.php/words/list
+---
+2013/01/13 13:18:14 [error] [php] Undefined index: word (C:\Users\Jim\phpFog\ucsc\framework\web\CSqlDataProvider.php:116)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(127): CGridView->renderKeys()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(174): CGridView->run()
+#2 C:\Users\Jim\phpFog\ucsc\wBank\protected\views\words\_lemmaMorphList.php(67): WordsController->widget()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): WordsController->renderInternal()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): WordsController->renderFile()
+#6 C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php(141): WordsController->renderPartial()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): WordsController->renderInternal()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): WordsController->renderFile()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): WordsController->renderPartial()
+#11 C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php(104): WordsController->render()
+#12 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\WordsController.php(217): WordsController->renderView()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): WordsController->actionList()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): WordsController->runAction()
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): WordsController->filterAccessControl()
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): WordsController->runActionWithFilters()
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): WordsController->run()
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#24 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/ucsc/wBank/index.php/words/list
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\words\_lemmaMorphList.php (67)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php (141)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php (104)
