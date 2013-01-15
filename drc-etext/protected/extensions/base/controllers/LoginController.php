@@ -1,4 +1,7 @@
 <?php
+Yii::import('application.vendors.simplesamlphp.*');		
+Yii::import('application.vendors.simplesamlphp.lib.*');		
+require_once('_autoload.php');
 
 /**
  * AssignmentController is the controller class for managing user login and logout.
@@ -12,10 +15,17 @@ class LoginController extends Controller
 	/**
 	 * Override parent empty method to provide needed initialization.
 	 */
-	public function init()
+	public function actionLoginSimpleSaml()
 	{
 		// set up for simple saml
-		require_once('../../lib/_autoload.php');
+	    // temporary disable Yii autoloader
+	    spl_autoload_unregister(array('YiiBase','autoload'));
+	
+	    // create 3rd-party object
+	    require_once('_autoload.php');
+	    // enable Yii autoloader
+	    spl_autoload_register(array('YiiBase','autoload'));
+	
 		$as = new SimpleSAML_Auth_Simple('default-sp');
 		$as->requireAuth();
 		// or to specify login params
