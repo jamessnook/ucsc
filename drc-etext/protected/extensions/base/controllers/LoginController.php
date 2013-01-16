@@ -1,4 +1,6 @@
 <?php
+Yii::import('application.extensions.*');
+require_once('base/components/UserIdentity.php');
 Yii::import('application.vendors.simplesamlphp.*');		
 Yii::import('application.vendors.simplesamlphp.lib.*');		
 require_once('_autoload.php');

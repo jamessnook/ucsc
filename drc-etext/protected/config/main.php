@@ -17,7 +17,9 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'application.controllers.*',
-	),
+		'ext.base.components.*',
+		'ext.base.controllers.*',
+),
 
 	'aliases' => array(
 	    //assuming you extracted the files to the extensions folder
@@ -33,7 +35,21 @@ return array(
 		),
     ),
 	
-	// application components
+    // application coontrollers from base extension etc.
+    'controllerMap'=>array(
+        'login'=>array(
+            'class'=>'ext.base.controllers.LoginController',
+        ),
+        'user'=>array(
+            'class'=>'ext.base.controllers.UserController',
+        ),
+        'site'=>array(
+            'class'=>'ext.base.controllers.SiteController',
+        ),
+        // other controllers
+    ),
+    
+    // application components
 	'components'=>array(
 		'user'=>array(
 			// enable cookie-based authentication
@@ -93,7 +109,7 @@ return array(
 		),
 		'updater'=>array(
 			//.....
-			'class'=>'XMLUpdater',
+			'class'=>'ext.base.components.XMLUpdater',
 			'servers'=>array(
 				// could get feeds from multiple servers or addresses
 				'AIS' => array(
@@ -157,7 +173,7 @@ return array(
 			),
 		),
 		'saml'=>array(
-			'class'=>'SamlLogin',
+			'class'=>'ext.base.components.SamlLogin',
 			// the next steps set up Shibboleth Authentication if we are sing it
 			// the entity id for this app as registered with the Shibboleth 
 			//identity provider (authentication server):
