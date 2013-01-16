@@ -3,7 +3,7 @@ Yii::import('application.extensions.*');
 require_once('base/components/UserIdentity.php');
 Yii::import('application.vendors.simplesamlphp.*');		
 Yii::import('application.vendors.simplesamlphp.lib.*');		
-require_once('_autoload.php');
+//require_once('_autoload.php');
 
 /**
  * AssignmentController is the controller class for managing user login and logout.

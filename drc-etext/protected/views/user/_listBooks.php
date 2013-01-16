@@ -48,20 +48,20 @@
 			 array( 
 				'header'=>'Term', 
 				'name'=>'term', 
-				'value'=>'$data[\'courseTerm\']', 
+				'value'=>'$data[\'term\']', 
 			 ),
 			 array( 
 				'header'=>'Status', 
 			 	'name'=>'purchased', 
 				'type'=>'raw',
-			 	'value'=>'$data[\'purchased\']? \'<span class="badge badge-success">Purchased</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
+			 	'value'=>'$data[\'purchased\']? \'<span class="badge badge-success">Purchased</span>\' : \'<span class="badge badge-warning">Not Purchased</span>\'', 
 			 ),
 			 array( 
 				'header'=>'', 
 				'class'=>'LinksColumn',
 			 	'linkHtmlOptions'=>array('class'=>"btn"),
 			 	'labelExpression'=>'$data[\'purchased\']? \'Set Not Purchased\' : \'Set Purchased\'', 
-			 	'urlExpression'=>'array(\'book/togglePurchased\', \'username\'=>$data[\'username\'], \'book_id\'=>$data[\'book_id\'],)',  
+			 	'urlExpression'=>'array(\'book/togglePurchased\', \'username\'=>$data[\'username\'], \'book_id\'=>$data[\'id\'],)',  
 			 ),
 		),
 	)); 

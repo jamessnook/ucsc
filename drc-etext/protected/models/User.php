@@ -230,6 +230,70 @@ class User extends UCSCModel
 	}
 
 	/**
+	 * Retrieves a list of book Models associated with the user and term defined by the current $this object.
+	 * @return CActiveDataProvider the data provider that can return the Course models.
+	 */
+	public function xbooks()
+	{
+		$criteria=new CDbCriteria; 
+		if (!isset($this->term_code)) {
+			$this->term_code = Term::currentTermCode();
+		}
+		$criteria->compare('t.term_code',$this->term_code);
+		if ($this->emplid && strlen($this->emplid)>0) {
+			$criteria->with = array( 'drcRequests' );
+			$criteria->together = true;
+			$criteria->compare('drcRequests.emplid',$this->emplid);
+			$criteria->compare('drcRequests.term_code',$this->term_code);
+		}
+		
+		return new CActiveDataProvider('Book', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+	
+	/**
+	 * Retrieves a list of books for this course based on the current request parameters.
+	 * @return CActiveDataProvider the data provider that can return the models based on the request parameters.
+	 */
+	public function xxbooks()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->addCondition("id IN (SELECT book_id FROM bookUser WHERE term_code ='$this->term_code' AND class_num='$this->class_num')");          
+		
+		return new CActiveDataProvider('Book', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+	
+	
+	/**
+	 * Retrieves a data provider that can provide list of emails for this Course.
+	 * @return CActiveDataProvider the data provider that can return a list of Email models.
+	 */
+	public function books()
+	{
+		// create sql to retieve emails sent or available to be sent ot istructors for this course.
+		$sql = "SELECT DISTINCT user.username, book.id, book.title, book.author, course.title AS courseTitle, term.description AS term, book_user.purchased
+			FROM drc_request JOIN assignment USING(term_code, class_num) 
+			JOIN course USING(term_code, class_num)
+			JOIN term USING(term_code)
+			JOIN user USING(emplid)
+			JOIN book  ON (book.id = assignment.book_id)  
+			LEFT JOIN book_user USING (book_id, username) 
+			WHERE drc_request.emplid='$this->emplid'";
+			//WHERE drc_request.emplid='$this->emplid' AND drc_request.term_code = $this->term_code";
+		
+		return new CSqlDataProvider($sql, array(
+		 	'pagination' => false,
+		 	'keyField' => 'id',
+		));
+	}
+
+	
+	/**
 	 * Overrides parent to assign non input values.
 	 * @return boolean whether the saving should be executed. Defaults to true.
 	 */
@@ -266,9 +330,9 @@ class User extends UCSCModel
 	
 	/**
 	 * Retrieves a list of course names for the courses associate with a users.
-	 * @return string, the names of faculty for this course.
+	 * @return array, the names of courses for this user.
 	 */
-	public function drcRequestCourseNames()
+	public function courseNames()
 	{
 		//$names = '';
 		$names = array();
@@ -279,6 +343,49 @@ class User extends UCSCModel
 		foreach($this->coursesAsInstructor as $instructedCourse)
 		{
 			$names[] = $instructedCourse->course->title;
+		}
+		return $names;
+	}
+	
+	/**
+	 * Retrieves a list of course objects for the courses associate with a users.
+	 * @return array, the names of courses for this user.
+	 */
+	public function courseList()
+	{
+		//$names = '';
+		$courses = array();
+		foreach($this->drcRequests as $request)
+		{
+			$courses[] = $request->course;
+		}
+		foreach($this->coursesAsInstructor as $instructedCourse)
+		{
+			$courses[] = $instructedCourse->course;
+		}
+		return $courses;
+	}
+	
+	/**
+	 * Retrieves a list of course names for the courses associate with a users.
+	 * @return string, the names of courses for this user.
+	 */
+	public function courseNamesString()
+	{
+		$names = '';
+		foreach($this->drcRequests as $request)
+		{
+			if($names != ''){
+				$names .= ', ';
+			}
+			$names .= $request->course->title;
+		}
+		foreach($this->coursesAsInstructor as $instructedCourse)
+		{
+			if($names != ''){
+				$names .= ', ';
+			}
+			$names .= $instructedCourse->course->title;
 		}
 		return $names;
 	}

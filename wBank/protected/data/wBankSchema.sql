@@ -1327,5 +1327,6 @@ ON DUPLICATE KEY UPDATE word=celex.WordMorph.word;
 UPDATE inflectedWord SET inflection = SUBSTRING_INDEX(transInfl, '+', -1);
 UPDATE inflectedWord SET inflection = '' WHERE inflection ='@';
 -- Assign zeno word frequency to each word
-UPDATE inflectedWord SET zenoFreq = (SELECT U FROM zeno.rwords WHERE inflectedWord.word = rwords.Word);
+UPDATE inflectedWord SET zenoFreq = (SELECT U FROM zeno.rwords WHERE rwords.Word = inflectedWord.word );
+UPDATE inflectedWord SET zenoFreq = (SELECT U FROM zeno.rwords WHERE rwords.Word = inflectedWord.word ) WHERE zenoFreq=0;
 UPDATE inflectedWord SET zenoFreq =0 WHERE zenoFreq IS NULL;
