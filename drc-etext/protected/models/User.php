@@ -283,8 +283,8 @@ class User extends UCSCModel
 			JOIN user USING(emplid)
 			JOIN book  ON (book.id = assignment.book_id)  
 			LEFT JOIN book_user USING (book_id, username) 
-			WHERE drc_request.emplid='$this->emplid'";
-			//WHERE drc_request.emplid='$this->emplid' AND drc_request.term_code = $this->term_code";
+			WHERE drc_request.emplid='$this->emplid' AND drc_request.term_code = $this->term_code";
+			//WHERE drc_request.emplid='$this->emplid'";
 		
 		return new CSqlDataProvider($sql, array(
 		 	'pagination' => false,

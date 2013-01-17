@@ -7,11 +7,13 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.views.book
  */
+
+
 ?>
 
   
-<div class="page-header">
-   <h2>Upload Filess for this Book</h2>
+<div class="section-header">
+   <h3>Upload Files for this Book</h3>
 </div>
           
    <?php

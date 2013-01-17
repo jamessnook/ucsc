@@ -97,17 +97,26 @@
 			            </div>
 			          </div>
 
-					  <div class="alert alert-info">
-						    <button type="button" class="close" data-dismiss="alert">×</button>
-							<strong>Looking to upload book files or record book purchase?</strong> Please select manage from the book list once this request is saved.
-					  </div>
-
 			          <div class="form-actions">
 			          
 						<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" )); ?>
 						<?php echo CHtml::button('Cancel', array( 'class'=>"btn", 'onclick'=> "history.back()" )); ?>
 			            
 			          </div>
+			          <hr/>
+			          <?php 
+			            // file upload section
+			          	if ($createNew){
+							echo $this->renderPartial('../file/_uploadAlert', array('model'=>$model)); 
+			          	} else {
+				          	echo $this->renderPartial('../file/_listFiles', array('model'=>$model)); 
+			          		echo $this->renderPartial('../book/_uploadFiles', array('model'=>$model)); 
+				            // student purchase section
+			          		echo $this->renderPartial('../book/_listStudents', array('model'=>$model)); 
+			          	}
+		          		?>
+					  <?php echo $form->hiddenField($model,'id'); ?>
+			          
 			        </fieldset>
 			      </form>
 		

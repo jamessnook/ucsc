@@ -100,7 +100,9 @@
 			          </div>
 			          <?php 
 			            // book purchase section
-		          		echo $this->renderPartial('../user/_listBooks', array('model'=>$model)); 
+			          	if (!$createNew){
+			          		echo $this->renderPartial('../user/_listBooks', array('model'=>$model)); 
+			          	}
 					  ?>
 			        </fieldset>
 			      </form>

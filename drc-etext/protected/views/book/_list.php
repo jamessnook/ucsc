@@ -73,13 +73,13 @@
 				'labelExpression'=>'\'Edit\'', 
 				'urlExpression'=>'array(\'course/updateBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
 			 ),
-			 array( 
+			 /*array( 
 				'header'=>'', 
 				'class'=>'LinksColumn',
 			 	'linkHtmlOptions'=>array('class'=>"btn"),
 				'labelExpression'=>'\'Manage\'', 
 				'urlExpression'=>'array(\'course/manageBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
-			 ),
+			 ),*/
 			 array( 
 				'header'=>'', 
 				'name'=>'delete', 

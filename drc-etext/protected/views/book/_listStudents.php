@@ -41,14 +41,27 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'name'=>'name', 
 			'value'=> '$data[\'last_name\'] . \', \' . $data[\'first_name\']',
 		), 
-		array( 
+		/*array( 
 			'header'=>'Status, click to change', 
 			'class'=>'LinksColumn',
 		 	//'type'=>'raw',
 		 	//'urlExpression'=>'array(\'book/togglePurchased\', \'username\'=>$data->username, \'id\'=>$data->id, \'purchased\'=>$data->purchased)',  
 		 	'urlExpression'=>'array(\'book/togglePurchased\', \'username\'=>$data[\'username\'], \'book_id\'=>' .$model->id. ')',  
 		 	'labelExpression'=>'$data[\'purchased\']? \'<span class="badge badge-success">Purchased</span>\' : \'<span class="badge badge-warning">Not Purchased</span>\'', 
-		),
+		),*/
+		array( 
+			'header'=>'Status', 
+		 	'name'=>'purchased', 
+			'type'=>'raw',
+		 	'value'=>'$data[\'purchased\']? \'<span class="badge badge-success">Purchased</span>\' : \'<span class="badge badge-warning">Not Purchased</span>\'', 
+		 ),
+		 array( 
+			'header'=>'', 
+			'class'=>'LinksColumn',
+		 	'linkHtmlOptions'=>array('class'=>"btn"),
+		 	'labelExpression'=>'$data[\'purchased\']? \'Set Not Purchased\' : \'Set Purchased\'', 
+		 	'urlExpression'=>'array(\'book/togglePurchased\', \'username\'=>$data[\'username\'], \'book_id\'=>' .$model->id. ')',   
+		 ),
 	),
 ));
 

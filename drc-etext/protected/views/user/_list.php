@@ -31,7 +31,7 @@
 				'header'=>'Cruz Id', 
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->username',
-				'urlExpression'=>'array(\'user/update\', \'username\'=>$data->username)', 
+				'urlExpression'=>'array(\'user/update\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')', 
 			),
 			array( 
 				'header'=>'EmplId', 

@@ -48,3 +48,7 @@ table.dataTable th:active {
 .row{
 	margin-left: 0px;
 }
+.section-header {
+  padding-bottom: 7px;
+  margin: 8px 0;
+}

@@ -1,9 +1,16 @@
 <?php
 Yii::import('application.extensions.*');
 require_once('base/components/UserIdentity.php');
-Yii::import('application.vendors.simplesamlphp.*');		
-Yii::import('application.vendors.simplesamlphp.lib.*');		
-//require_once('_autoload.php');
+Yii::import('application.vendors.simplesaml.*');		
+Yii::import('application.vendors.simplesaml.lib.*');		
+Yii::import('application.vendors.simplesaml.lib.SimpleSAML.*');		
+Yii::import('application.vendors.simplesaml.lib.SimpleSAML.Auth.*');		
+Yii::import('application.vendors.simplesaml.config.*');		
+require_once('_autoload.php');
+require_once('Simple.php');
+require_once('Session.php');
+require_once('SessionHandler.php');
+require_once('Store.php');
 
 /**
  * AssignmentController is the controller class for managing user login and logout.
@@ -17,7 +24,7 @@ class LoginController extends Controller
 	/**
 	 * Override parent empty method to provide needed initialization.
 	 */
-	public function actionLoginSimpleSaml()
+	public function actionSimpleSaml()
 	{
 		// set up for simple saml
 	    // temporary disable Yii autoloader
@@ -28,8 +35,8 @@ class LoginController extends Controller
 	    // enable Yii autoloader
 	    spl_autoload_register(array('YiiBase','autoload'));
 	
-		$as = new SimpleSAML_Auth_Simple('default-sp');
-		$as->requireAuth();
+		$as = new SimpleSAML_Auth_Simple('ucsc-sp');
+		//$as->requireAuth();
 		// or to specify login params
 		//$as->requireAuth($params);
 		/*
@@ -37,7 +44,7 @@ class LoginController extends Controller
 		 * the current POST data.
 		 */
 		$as->requireAuth(array(
-		    'ReturnTo' => 'https://sp.example.org/',
+		    'ReturnTo' => $this->createUrl('user/students'),
 		    'KeepPost' => FALSE,
 		));
 		print("Hello, authenticated user!");
@@ -45,14 +52,14 @@ class LoginController extends Controller
 		$attributes = $as->getAttributes();
 		print_r($attributes);
 		// test
-		if (!$as->isAuthenticated()) {
+		//if (!$as->isAuthenticated()) {
 		    /* Show login link. */
-		    print('<a href="/login">Login</a>');
-		}
+		//    print('<a href="/login">Login</a>');
+		//}
 		// option use specific idp
-		$as->login(array(
-    		'saml:idp' => 'https://idp.example.org/',
-		));
+		//$as->login(array(
+    	//	'saml:idp' => 'https://idp.example.org/',
+		//));
 		
 	}
 	
