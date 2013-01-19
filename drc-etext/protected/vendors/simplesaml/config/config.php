@@ -69,7 +69,7 @@ $config = array (
 	 * metadata listing and diagnostics pages.
 	 * You can also put a hash here; run "bin/pwgen.php" to generate one.
 	 */
-	'auth.adminpassword'		=> '123',
+	'auth.adminpassword'		=> 'ad123',
 	'admin.protectindexpage'	=> false,
 	'admin.protectmetadata'		=> false,
 
@@ -81,7 +81,7 @@ $config = array (
 	 * A possible way to generate a random salt is by running the following command from a unix shell:
 	 * tr -c -d '0123456789abcdefghijklmnopqrstuvwxyz' </dev/urandom | dd bs=32 count=1 2>/dev/null;echo
 	 */
-	'secretsalt' => 'defaultsecretsalt',
+	'secretsalt' => 'dxt45gh8dc3t',
 	
 	/*
 	 * Some information about the technical persons running this installation.
@@ -98,7 +98,7 @@ $config = array (
 	 *
 	 * See this page for a list of valid timezones: http://php.net/manual/en/timezones.php
 	 */
-	'timezone' => NULL,
+	'timezone' => 'America/Los_Angeles',
 
 	/*
 	 * Logging.

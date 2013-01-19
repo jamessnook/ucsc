@@ -1,0 +1,125 @@
+<EntityDescriptor entityID="https://login.ucsc.edu/idp/shibboleth"
+                  xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+                  xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+                  xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  cacheDuration="P0Y0M2DT0H0M0S">
+
+    <IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">ucsc.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIEhTCCA22gAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjTELMAkGA1UEBhMCVVMx
+EzARBgNVBAgTCkNhbGlmb3JuaWExEzARBgNVBAcTClNhbnRhIENydXoxLTArBgNV
+BAoTJFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYSwgU2FudGEgQ3J1ejEMMAoGA1UE
+CxMDSVRTMRcwFQYDVQQDEw5sb2dpbi51Y3NjLmVkdTAeFw0xMDExMzAxNzI4MTBa
+Fw0xNTExMjkxNzI4MTBaMIGNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZv
+cm5pYTETMBEGA1UEBxMKU2FudGEgQ3J1ejEtMCsGA1UEChMkVW5pdmVyc2l0eSBv
+ZiBDYWxpZm9ybmlhLCBTYW50YSBDcnV6MQwwCgYDVQQLEwNJVFMxFzAVBgNVBAMT
+DmxvZ2luLnVjc2MuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
++EvXogDySR+Ue3QdUNMCmiZKFJwY/ssWfImrb7HmrqNFtvK+RZ/iaUk61uv+EKGg
+ovE66IgQkl/X0oz7i/RkJlDWce4PhJlJ478ZUv0rA30BW29nTZZfT926kNukxlnN
+bVLCWfG1eVV5wvZOaCWTzClxLRs3Da/ye2BfFvnaAI0xPk2+f5mZ+XLKvUD/e7cA
+/PFrX6AUQ9J2hssjUZE2KYjIst8So+shiRQdcCcIr8tG+O4SapMlnhQQsTWUNJiz
+4eJmzjcjy7hsz+uqQP6nxMyDYQsmVIUINnPiT6in4WgBn82EkqU0PBgr0rKJVIQQ
+DinIWFwVROPzTkw3qu3J5wIDAQABo4HtMIHqMB0GA1UdDgQWBBQYh+8P6YBPEGqR
+vsFZCYL4RTAE7DCBugYDVR0jBIGyMIGvgBQYh+8P6YBPEGqRvsFZCYL4RTAE7KGB
+k6SBkDCBjTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExEzARBgNV
+BAcTClNhbnRhIENydXoxLTArBgNVBAoTJFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5p
+YSwgU2FudGEgQ3J1ejEMMAoGA1UECxMDSVRTMRcwFQYDVQQDEw5sb2dpbi51Y3Nj
+LmVkdYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQAhY3T2imQZ
+o9YqfC0eJJPIQFnMXSgeKBNiIZWG1eBJcZLbLQ3zbmvwNmaUBt+rkjNGjzrEaVkI
+zPJfVRmW1E5oFKc1xjW8LxNvCgh7QCCFFqq2dVD1fZCfDYRiDcIWSnJZ+4tUjVco
+Lh0sZShx1vsKzhSZ7ZdeAEh/RXfhDtS1RDmUxyRKFRznW+wyYB33K4j9lllR9wCU
+kgqrF+iWn6GPa5SeVdgBzaHV9vH2Wxy+mm2X0o2CKLbXweSmU9UVex44bcq2CCNi
+kUI95P/3oKya5oagwSgrm3VcjYoo0NdH8fkd7TmquBGXr7afpD2gclZ/Mh8sbRFZ
+ZkyBB6hxis5f
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding"
+                                   Location="https://login.ucsc.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" 
+                                   index="1"/>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                                   Location="https://login.ucsc.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" 
+                                   index="2"/>
+                                   
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" 
+                             Location="https://login.ucsc.edu/idp/profile/Shibboleth/SSO" />
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" 
+                             Location="https://login.ucsc.edu/idp/profile/SAML2/POST/SSO" />
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" 
+                             Location="https://login.ucsc.edu/idp/profile/SAML2/POST-SimpleSign/SSO" />
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" 
+                             Location="https://login.ucsc.edu/idp/profile/SAML2/Redirect/SSO" />
+    </IDPSSODescriptor>
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">ucsc.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIEhTCCA22gAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjTELMAkGA1UEBhMCVVMx
+EzARBgNVBAgTCkNhbGlmb3JuaWExEzARBgNVBAcTClNhbnRhIENydXoxLTArBgNV
+BAoTJFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5pYSwgU2FudGEgQ3J1ejEMMAoGA1UE
+CxMDSVRTMRcwFQYDVQQDEw5sb2dpbi51Y3NjLmVkdTAeFw0xMDExMzAxNzI4MTBa
+Fw0xNTExMjkxNzI4MTBaMIGNMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZv
+cm5pYTETMBEGA1UEBxMKU2FudGEgQ3J1ejEtMCsGA1UEChMkVW5pdmVyc2l0eSBv
+ZiBDYWxpZm9ybmlhLCBTYW50YSBDcnV6MQwwCgYDVQQLEwNJVFMxFzAVBgNVBAMT
+DmxvZ2luLnVjc2MuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
++EvXogDySR+Ue3QdUNMCmiZKFJwY/ssWfImrb7HmrqNFtvK+RZ/iaUk61uv+EKGg
+ovE66IgQkl/X0oz7i/RkJlDWce4PhJlJ478ZUv0rA30BW29nTZZfT926kNukxlnN
+bVLCWfG1eVV5wvZOaCWTzClxLRs3Da/ye2BfFvnaAI0xPk2+f5mZ+XLKvUD/e7cA
+/PFrX6AUQ9J2hssjUZE2KYjIst8So+shiRQdcCcIr8tG+O4SapMlnhQQsTWUNJiz
+4eJmzjcjy7hsz+uqQP6nxMyDYQsmVIUINnPiT6in4WgBn82EkqU0PBgr0rKJVIQQ
+DinIWFwVROPzTkw3qu3J5wIDAQABo4HtMIHqMB0GA1UdDgQWBBQYh+8P6YBPEGqR
+vsFZCYL4RTAE7DCBugYDVR0jBIGyMIGvgBQYh+8P6YBPEGqRvsFZCYL4RTAE7KGB
+k6SBkDCBjTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExEzARBgNV
+BAcTClNhbnRhIENydXoxLTArBgNVBAoTJFVuaXZlcnNpdHkgb2YgQ2FsaWZvcm5p
+YSwgU2FudGEgQ3J1ejEMMAoGA1UECxMDSVRTMRcwFQYDVQQDEw5sb2dpbi51Y3Nj
+LmVkdYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQAhY3T2imQZ
+o9YqfC0eJJPIQFnMXSgeKBNiIZWG1eBJcZLbLQ3zbmvwNmaUBt+rkjNGjzrEaVkI
+zPJfVRmW1E5oFKc1xjW8LxNvCgh7QCCFFqq2dVD1fZCfDYRiDcIWSnJZ+4tUjVco
+Lh0sZShx1vsKzhSZ7ZdeAEh/RXfhDtS1RDmUxyRKFRznW+wyYB33K4j9lllR9wCU
+kgqrF+iWn6GPa5SeVdgBzaHV9vH2Wxy+mm2X0o2CKLbXweSmU9UVex44bcq2CCNi
+kUI95P/3oKya5oagwSgrm3VcjYoo0NdH8fkd7TmquBGXr7afpD2gclZ/Mh8sbRFZ
+ZkyBB6hxis5f
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" 
+                          Location="https://login.ucsc.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery" />
+        
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                          Location="https://login.ucsc.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery" />
+        
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        
+    </AttributeAuthorityDescriptor>
+    
+</EntityDescriptor>    

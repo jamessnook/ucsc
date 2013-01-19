@@ -35,7 +35,7 @@ class LoginController extends Controller
 	    // enable Yii autoloader
 	    spl_autoload_register(array('YiiBase','autoload'));
 	
-		$as = new SimpleSAML_Auth_Simple('ucsc-sp');
+		$as = new SimpleSAML_Auth_Simple('ucsc-test--sp');
 		//$as->requireAuth();
 		// or to specify login params
 		//$as->requireAuth($params);

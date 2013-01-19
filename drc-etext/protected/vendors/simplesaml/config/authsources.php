@@ -12,7 +12,10 @@ $config = array(
 
 	'ucsc-sp' => array(
 	    'saml:SP',
-    	'idp' => 'https://test-idp.ucsc.edu:444/idp/profile/SAML2/Redirect/SSO',
+	    'privatekey' => 'saml.pem',
+	    'certificate' => 'saml.crt',
+  		//'idp' => 'https://test-idp.ucsc.edu:8443/idp/shibboleth',
+		'idp' => 'https://login.ucsc.edu/idp/shibboleth',
 		//'certificate'=> 'cert.txt',
 		'entityID'=>'ucsc.phpfogapp.com/drc-etext',
 		'url'=>'login/samlResponse',
@@ -25,43 +28,36 @@ $config = array(
 	    ),
 	    'attributes.NameFormat' => 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic',
 	    //'userEmailTag'=>'urn:oid:1.3.6.1.4.1.5923.1.1.1.6',
-		'certData'=><<<CERTIFICATE
------BEGIN CERTIFICATE-----
-MIIEnjCCA4agAwIBAgIJAN/oJ2XPfzjhMA0GCSqGSIb3DQEBBQUAMIGQMQswCQYD
-VQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTETMBEGA1UEBxMKU2FudGEgQ3J1
-ejEtMCsGA1UEChMkVW5pdmVyc2l0eSBvZiBDYWxpZm9ybmlhLCBTYW50YSBDcnV6
-MQwwCgYDVQQLEwNJVFMxGjAYBgNVBAMTEXRlc3QtaWRwLnVjc2MuZWR1MB4XDTEw
-MTEyMjE5MDIyNloXDTEzMTEyMTE5MDIyNlowgZAxCzAJBgNVBAYTAlVTMRMwEQYD
-VQQIEwpDYWxpZm9ybmlhMRMwEQYDVQQHEwpTYW50YSBDcnV6MS0wKwYDVQQKEyRV
-bml2ZXJzaXR5IG9mIENhbGlmb3JuaWEsIFNhbnRhIENydXoxDDAKBgNVBAsTA0lU
-UzEaMBgGA1UEAxMRdGVzdC1pZHAudWNzYy5lZHUwggEiMA0GCSqGSIb3DQEBAQUA
-A4IBDwAwggEKAoIBAQCt4Tlynjhy5iISkopIGFR1H6lqcM1FTM4sS75w+dm8Tzm5
-SVVvY0K+Gc7nDmUEIu5Ri9MPemCWlbqOvLIsGpBOEh1IU8/lRDFK335iHdYAHj7G
-5aL3BzxLDrtyeRUQVf3XqaxABW85/AUlv4L8UqcjQxezHJi8Kw4pcd1gbeHbSE2A
-m6H3EDQIqGrBCtVv4bqpe1nCX5QKPi9xpWlF7cLMT6VcYSxvClIesMXI3O6iXKIX
-UnpN94Vi79ukY7kDGLpWdr2pF5E1pvbYMbDSDUdp1OkYXHE8d1LtRVEFt/gcb+yh
-mQbr40AOYnPt9e6aa9SG226GpG2ecPMUt8rwlirZAgMBAAGjgfgwgfUwHQYDVR0O
-BBYEFO25eNbR0EHwf6HR0ioZ3j38egveMIHFBgNVHSMEgb0wgbqAFO25eNbR0EHw
-f6HR0ioZ3j38egveoYGWpIGTMIGQMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2Fs
-aWZvcm5pYTETMBEGA1UEBxMKU2FudGEgQ3J1ejEtMCsGA1UEChMkVW5pdmVyc2l0
-eSBvZiBDYWxpZm9ybmlhLCBTYW50YSBDcnV6MQwwCgYDVQQLEwNJVFMxGjAYBgNV
-BAMTEXRlc3QtaWRwLnVjc2MuZWR1ggkA3+gnZc9/OOEwDAYDVR0TBAUwAwEB/zAN
-BgkqhkiG9w0BAQUFAAOCAQEAYOA6H6AYWzJqgdaCFvNuDhMZ0yO/U9VgbS0Uhyu4
-feBQA2QZBt8KAlIlk0Gu7mDoUQNTd3C9kzUq/LgtfJ1oXfEVM1uEtHbEdAsW+FsS
-fY220DOcGaJ92VGORRiQGWMOstX56uQvah7IiRBIYGO0YL56zqVlBB6k0ynF/tik
-LETdvPF6zKpRvY1ghr/0kL4nYYKvlG9W+05lLXCMt75J0WGHzSoQe8BO8k3lKpz6
-jTcjJdbG19DaAjd7ejPVWCh+tj5QdLCrMcJH0eGdkdEqvbX5yJ1X3hQA5ZfqXSzo
-rUJJPkOD/6nCS4sMeXfVzQXoyj67v00xiNwRo2h7/qnAUQ==
------END CERTIFICATE-----
-CERTIFICATE
-			,
+	),
+	
+
+	'ucsc-test--sp' => array(
+	    'saml:SP',
+	    'privatekey' => 'saml.pem',
+	    'certificate' => 'saml.crt',
+  		'idp' => 'https://test-idp.ucsc.edu:8443/idp/shibboleth',
+		//'idp' => 'https://login.ucsc.edu/idp/shibboleth',
+		//'certificate'=> 'cert.txt',
+		'entityID'=>'ucsc.phpfogapp.com/drc-etext',
+		'url'=>'login/samlResponse',
+	    'attributes' => array(
+	        'eduPersonPrincipalName',
+	        'mail',
+	    ),
+	    'attributes.required' => array (
+	        'eduPersonPrincipalName',
+	    ),
+	    'attributes.NameFormat' => 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic',
+	    //'userEmailTag'=>'urn:oid:1.3.6.1.4.1.5923.1.1.1.6',
 	),
 	
 	// An authentication source which can authenticate against both SAML 2.0
 	// and Shibboleth 1.3 IdPs.
 	'default-sp' => array(
 		'saml:SP',
-
+	    'privatekey' => 'saml.pem',
+	    'certificate' => 'saml.crt',
+	
 		// The entity ID of this SP.
 		// Can be NULL/unset, in which case an entity ID is generated based on the metadata URL.
 		'entityID' => NULL,
