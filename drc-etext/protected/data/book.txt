@@ -1,0 +1,6 @@
+1	1234234890	ISBN	A Good Book	J Smith	Wiley	1.1	2007		2012-12-08 07:24:46	jsnook
+2	1134567890	isbn	Another Good Book	J Smith	Wiley	1	2011			
+3	2147483647	isbn	A Really Good Book	J Jones	Putnam	3	1904			
+4	2147483647	isbn	A Tall Tale	Bat Mann	Winston	2	2001			
+5	2147483647	isbn	Once Upon a Time	Ludwig WIlson	Northern Star	1	2002			
+6	2147483647	isbn	Best Cellar	Ubie Whin	Arachnos	1	2012			

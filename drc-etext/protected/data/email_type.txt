@@ -1,0 +1,5 @@
+First	1	Nice
+Second	2	Firm
+Third	3	Pleading
+Fourth	4	Desperate
+Other	9	Other

@@ -1,0 +1,408 @@
+2118	19652	07	022280	KRSG		Independent Study	99F					
+2118	20097	01	015878	ANTH		Intr Humn Evolution	1					
+2118	20105	01H	015878	ANTH		Intr Humn Evolution	1					
+2118	20113	01	015914	ANTH		Cltr Power Lat Amer	80I					
+2118	20114	01	015939	ANTH		Human Evolution	101					
+2118	20120	01	016023	ANTH		Native Peoples N Am	130N					
+2118	20123	01C	016023	ANTH		Native Peoples N Am	130N					
+2118	20124	01	016031	ANTH		Women Xcultrl Persp	131					
+2118	20125	01	016046	ANTH		Intro Medical Anthro	134					
+2118	20131	01	016089	ANTH		Communicating Anth	150					
+2118	20170	01	016588	ART		SpecialTopicsSculpture	148					
+2118	20191	01	017252	BIOL		Cell & Molecular Bi	20A					
+2118	20192	01A	017252	BIOL		Cell & Molecular Bi	20A					
+2118	20195	01D	017252	BIOL		Cell & Molecular Bi	20A					
+2118	20213	01	017254	BIOE		Ecology & Evolution	20C					
+2118	20244	01	017359	BIOL		Cell Biology	110					
+2118	20250	01F	017359	BIOL		Cell Biology	110					
+2118	20365	02	017945	CHEM		General Chemistry	1A					
+2118	20368	02C	017945	CHEM		General Chemistry	1A					
+2118	20422	01	018003	BME		Bioethics 21st Cent	80G					
+2118	20424	01B	018003	BME		Bioethics 21st Cent	80G					
+2118	20440	01	018012	CHEM		Organic Chemistry	108A					
+2118	20443	01C	018012	CHEM		Organic Chemistry	108A					
+2118	20445	01E	018012	CHEM		Organic Chemistry	108A					
+2118	20455	01	018014	CHEM		Organic Chem Lab	108L					
+2118	20456	01A	018014	CHEM		Organic Chem Lab	108L					
+2118	20464	01I	018014	CHEM		Organic Chem Lab	108L					
+2118	20527	01C	018851	CMPE		Personal Computers	3					
+2118	20530	02	018855	CMPE		Comp Sys/Lang Lab	12L					
+2118	20582	01	019007	CMPS		Intro to Prog Java	5J					
+2118	20584	01B	019007	CMPS		Intro to Prog Java	5J					
+2118	20588	01	019020	CMPS		Abstract Data Types	101					
+2118	20592	01D	019020	CMPS		Abstract Data Types	101					
+2118	20600	01	019040	CMPS		Intro Comp Graphics	160					
+2118	20667	01	019660	ECON		Intro Macroeconomic	2					
+2118	20673	01F	019660	ECON		Intro Macroeconomic	2					
+2118	20680	01	019668	ECON		Econ of Accounting	10A					
+2118	20707	01	019671	AMS		Math Methd for Econ	11A					
+2118	20710	01C	019671	AMS		Math Methd for Econ	11A					
+2118	20795	01	019788	ECON		East&Southeast Asia	149					
+2118	20796	01A	019788	ECON		East&Southeast Asia	149					
+2118	20882	01	020278	AMS		Intro Prob Theory	131					
+2118	20919	01	020550	ENVS		Fresh Water Policy	165					
+2118	20946	01	020748	FILM		Intro Film Studies	20A					
+2118	20953	01	020751	FILM		Productn Technique	20P					
+2118	20954	01A	020751	FILM		Productn Technique	20P					
+2118	20958	01	020775	FILM		Amer Film:1960-Pres	134B					
+2118	20961	01C	020775	FILM		Amer Film:1960-Pres	134B					
+2118	20979	02	020852	FREN		Instr French Lang	1					
+2118	21015	01	021167	HIS		L.Amer ColonlPeriod	11A					
+2118	21019	01D	021167	HIS		L.Amer ColonlPeriod	11A					
+2118	21035	01	021388	HIS		Afro-Amer to 1877	121A					
+2118	21036	01A	021388	HIS		Afro-Amer to 1877	121A					
+2118	21100	01	022887	LING		Semantics I	53					
+2118	21103	01C	022887	LING		Semantics I	53					
+2118	21157	01	025130	LTWL		Topics in World Lit	190A					
+2118	21231	01	025315	MATH		Calc:Sci,Engin,Math	19A					
+2118	21249	01	025319	MATH		Linear Algebra	21					
+2118	21255	01A	025325	MATH		Multivariable Calc	23A					
+2118	21259	01	025326	MATH		Multivariable Calc	23B					
+2118	21260	01A	025326	MATH		Multivariable Calc	23B					
+2118	21265	01	025343	MATH		Intr Proof/Prb Solv	100					
+2118	21269	01D	025343	MATH		Intr Proof/Prb Solv	100					
+2118	21301	01	025833	MUSC		Classical/MidAges/Pres	11A					
+2118	21305	01	025909	MUSC		Hist Electronic Mus	80C					
+2118	21317	01	026238	OCEA		The Oceans	1					
+2118	21318	01A	026238	OCEA		The Oceans	1					
+2118	21350	01	026311	PHIL		Intro To Philosophy	11					
+2118	21352	01B	026311	PHIL		Intro To Philosophy	11					
+2118	21367	01	026743	PHYS		Intro Physics I	5A					
+2118	21380	02	026753	PHYS		Intro Physics I	6A					
+2118	21395	14	026759	PHYS		Intro Phys I Lab	6L					
+2118	21396	15	026759	PHYS		Intro Phys I Lab	6L					
+2118	21456	01	027184	POLI		Race:His of Concept	190P					
+2118	21466	01	027389	PSYC		Intro Psychology	1					
+2118	21473	01G	027389	PSYC		Intro Psychology	1					
+2118	21505	01	027450	PSYC		Psych and Religion	80A					
+2118	21507	01B	027450	PSYC		Psych and Religion	80A					
+2118	21510	01E	027450	PSYC		Psych and Religion	80A					
+2118	21515	01	027535	PSYC		Dev Psychopathology	115					
+2118	21520	01E	027535	PSYC		Dev Psychopathology	115					
+2118	21527	01	027606	PSYC		Feelings & Emotions	135					
+2118	21528	01A	027606	PSYC		Feelings & Emotions	135					
+2118	21534	01	027629	PSYC		Women's Lives	140G					
+2118	21545	01	027720	PSYC		Freud	163					
+2118	21546	01A	027720	PSYC		Freud	163					
+2118	21553	01	027730	PSYC		Commun Mental Health	169					
+2118	21581	01	028107	SOCY		Intro Sociology	1					
+2118	21584	01C	028107	SOCY		Intro Sociology	1					
+2118	21594	01	028115	SOCY		World Society	15					
+2118	21600	01F	028115	SOCY		World Society	15					
+2118	21615	01	028190	SOCY		Classical Soc Theor	105A					
+2118	21620	01E	028190	SOCY		Classical Soc Theor	105A					
+2118	21624	01	028203	SOCY		Family & Society	111					
+2118	21626	01	028243	SOCY		Health & Medicine	121					
+2118	21686	01	029327	FMST		Race/Gender Formatn	145					
+2118	21708	01	100453	ENVS		Agroecosys Analysis	166					
+2118	21720	01	100941	CMPE		Com Sys/Assmbly Lan	12					
+2118	21740	03	101120	CMPS		Comp Graphics Lab	160L					
+2118	21755	01	101726	SOCY		Latinos/AmerGlobCty	177A					
+2118	21766	01	102147	HIS		Power/Culture in US	190U					
+2118	21782	01	102496	COWL		RI:Imagining Justice	80B					
+2118	21888	17	102556	CLNI		UD:Intl/Global Issues	80A					
+2118	21970	18	102649	OAKS		UD:CommunicatingDiversity	80A					
+2118	22015	01	103914	FMST		Technol/Americas	124					
+2118	22037	01	104638	CMPE		Universal Access	80A					
+2118	22056	01	105975	MERR		Classrm Connection	85C					
+2118	22083	01	106160	POLI		Concepts/Politics	3					
+2118	22084	01A	106160	POLI		Concepts/Politics	3					
+2118	22168	01	107983	AMS		Gambling and Gaming	80A					
+2118	22189	01	108932	EDUC		Intro to Education	60					
+2118	22203	01	109069	FMST		Feminism/SocJust	80A					
+2118	22229	01	109392	ASTR		The Cosmos	1					
+2118	22242	01	110087	POLI		Andean Politics	144					
+2118	22243	01	110242	SOCY		Glbl Islam Politics	188G					
+2118	22292	01	110787	AMST		Reading Culture	102					
+2118	22367	01	024798	LTPR		Idea of Poetry	134					
+2118	22404	01A	020550	ENVS		Fresh Water Policy	165					
+2118	22412	01	111980	HUMN		Intro to the Sikhs	70S					
+2118	22439	01	112034	COWL		Higher Ed	138A					
+2118	22450	01	028428	SOCY		Social Movements	172					
+2118	22466	01	020784	FILM		Film Genres	160					
+2118	22472	01	027025	POLI		Ca Water Law/Policy	132					
+2118	22477	01	112066	PSYC		Psych Interpretation	179D					
+2118	22530	01	015943	ANTH		Human Skeletal Biol	102A					
+2118	22649	01	105341	POLI		PoliticalOrganizatns	125					
+2118	22705	01	019045	CMPS		Hypermedia/Web	183					
+2118	22709	01	110800	MATH		Col Algbra/Calculus	2S					
+2118	22775	01S	018014	CHEM		Organic Chem Lab	108L					
+2118	22785	01F	027629	PSYC		Women's Lives	140G					
+2118	22802	01A	019045	CMPS		Hypermedia/Web	183					
+2120	33514	01	020092	EDUC		Group Projects	194F					
+2120	37044	06	027249	POLI		Thesis Research	299A					
+2120	40075	01	015885	ANTH		Intro Archaeology	3					
+2120	40087	01L	015885	ANTH		Intro Archaeology	3					
+2120	40096	01	015949	ANTH		Primate Behavior	106					
+2120	40105	01	016009	ANTH		Brazil	130B					
+2120	40118	01	016126	ANTH		Archaeol Res Design	172					
+2120	40177	01	017138	ASTR		Planetary Systems	118					
+2120	40199	01	017253	BIOE		Developmt & Physiol	20B					
+2120	40220	01	017304	BME		The Human Genome	80H					
+2120	40248	01	017393	BIOL		Development	120					
+2120	40254	01	017430	BIOL		Human Physiology	130					
+2120	40257	01	017433	BIOL		Human Physiolgy Lab	130L					
+2120	40326	01	017948	CHEM		General Chemistry	1B					
+2120	40383	01	018012	CHEM		Organic Chemistry	108A					
+2120	40390	01G	018012	CHEM		Organic Chemistry	108A					
+2120	40409	01	018014	CHEM		Organic Chem Lab	108L					
+2120	40415	01F	018014	CHEM		Organic Chem Lab	108L					
+2120	40449	01	018060	CHEM		Chem Thermodynamics	163B					
+2120	40487	04	018400	CLTE		Social Justice Work	85					
+2120	40489	01	018507	CMMU		Public Health	160					
+2120	40490	01A	018507	CMMU		Public Health	160					
+2120	40493	02	018668	CMMU		Analys Fld Material	194					
+2120	40527	01	018998	CMPS		Intro Computer Sci	10					
+2120	40555	01	019041	CMPS		Intro Data Visual	161					
+2120	40581	01	019442	EART		Earth as Chem Systm	110B					
+2120	40583	02	019445	EART		Chem System Lab	110M					
+2120	40618	01	019660	ECON		Intro Macroeconomic	2					
+2120	40623	01E	019660	ECON		Intro Macroeconomic	2					
+2120	40631	01	019668	ECON		Econ of Accounting	10A					
+2120	40806	01	020034	EDUC		Bilingual & School	141					
+2120	40841	01	020269	AMS		Statistics	5					
+2120	40847	01F	020269	AMS		Statistics	5					
+2120	40848	01	020270	AMS		StatMthdsBio/Env/Hlth	7					
+2120	40849	01A	020270	AMS		StatMthdsBio/Env/Hlth	7					
+2120	40895	01	020749	FILM		Intro TV Studies	20B					
+2120	40901	01F	020749	FILM		Intro TV Studies	20B					
+2120	40902	01	020767	FILM		Intro Film Theory	120					
+2120	40903	01A	020767	FILM		Intro Film Theory	120					
+2120	40953	01	020957	HAVC		Intro Visual Europe	30					
+2120	40958	01	021037	HAVC		Camera And Body	141F					
+2120	40989	01	021208	HIS		Making of Mod Africa	30					
+2120	40993	01D	021208	HIS		Making of Mod Africa	30					
+2120	41000	01	021389	HIS		African-Am1877-Pres	121B					
+2120	41001	01A	021389	HIS		African-Am1877-Pres	121B					
+2120	41003	01	021422	HIS		Revolutionary China	140C					
+2120	41029	01	022482	LALS		Intro Latin Amer St	1					
+2120	41030	01A	022482	LALS		Intro Latin Amer St	1					
+2120	41053	01	022879	LING		Intr To Linguistics	50					
+2120	41054	01A	022879	LING		Intr To Linguistics	50					
+2120	41132	01	025098	LTWL		Global Fiction	115A					
+2120	41133	01A	025098	LTWL		Global Fiction	115A					
+2120	41162	01	025271	MATH		Calculus with Apps	11A					
+2120	41180	01	025315	MATH		Calc:Sci,Engin,Math	19A					
+2120	41185	01E	025315	MATH		Calc:Sci,Engin,Math	19A					
+2120	41196	01	025319	MATH		Linear Algebra	21					
+2120	41200	01D	025319	MATH		Linear Algebra	21					
+2120	41206	01	025325	MATH		Multivariable Calc	23A					
+2120	41209	01C	025325	MATH		Multivariable Calc	23A					
+2120	41265	01	025918	MUSC		Artif Intell & Musc	80L					
+2120	41407	01	026977	POLI		EarlyMod Pol Thought	105B					
+2120	41408	01A	026977	POLI		EarlyMod Pol Thought	105B					
+2120	41424	01	026990	FMST		Women and the Law	112					
+2120	41431	01	026999	POLI		Democ Amer Pol Dev	120B					
+2120	41441	01	027044	POLI		Industrialized Society	140A					
+2120	41445	01D	027044	POLI		Industrialized Society	140A					
+2120	41460	01	027389	PSYC		Intro Psychology	1					
+2120	41461	01A	027389	PSYC		Intro Psychology	1					
+2120	41494	01	027404	PSYC		Intro Develop Psych	10					
+2120	41500	01	027493	PSYC		Adolescent Develop	102					
+2120	41504	01D	027493	PSYC		Adolescent Develop	102					
+2120	41506	01	027507	PSYC		Soc Emotional Devel	106					
+2120	41507	01A	027507	PSYC		Soc Emotional Devel	106					
+2120	41521	01	027582	PSYC		Psych of Reading	124					
+2120	41524	01	027610	PSYC		Mind,Body, World	137					
+2120	41526	01B	027610	PSYC		Mind,Body, World	137					
+2120	41528	01	027660	PSYC		Psych and Law	147A					
+2120	41593	01	028180	SOCY		Statistical Methods	103A					
+2120	41594	01A	028180	SOCY		Statistical Methods	103A					
+2120	41602	01	028191	SOCY		Contem Soc Theory	105B					
+2120	41603	01A	028191	SOCY		Contem Soc Theory	105B					
+2120	41604	01B	028191	SOCY		Contem Soc Theory	105B					
+2120	41605	01C	028191	SOCY		Contem Soc Theory	105B					
+2120	41625	01	028325	SOCY		Social Psychology	136					
+2120	41627	01B	028325	SOCY		Social Psychology	136					
+2120	41630	01	028329	SOCY		Deviance & Conform	137					
+2120	41631	01	028346	SOCY		Lang & Soc Interact	142					
+2120	41656	01	028653	SPAN		Intermed/Adv Span	6					
+2120	41693	01	029197	FMST		Fminist Stds intro	1					
+2120	41694	01A	029197	FMST		Fminist Stds intro	1					
+2120	41717	01	100335	PRTR		Gospel Choir	21C					
+2120	41723	01	100707	CMMU		Pol Econ Food & Ag	149					
+2120	41748	02	101134	CMPS		Data Visual Lab	161L					
+2120	41774	03	102565	WRIT		Rhetoric & Inquiry	2					
+2120	41861	01	103904	CMPS		Game AI	146					
+2120	41921	01	106071	EDUC		CAL Teach1: Science	50C					
+2120	41926	01	106092	MUSC		Hollywood Musical	80H					
+2120	41946	01	106318	SOCY		Soc Chng Globl Econ	188A					
+2120	41956	01	106761	OAKS		Gays/Lesbians in US	150					
+2120	41958	01	107078	HAVC		Greek Myths	151					
+2120	41991	01	107937	BME		Stem Cell Biology	178					
+2120	42008	01	108304	PSYC		Women's Bodies	140L					
+2120	42012	01	108366	HAVC		Video Games	81					
+2120	42040	01	109075	LTMO		Detective Fiction	145H					
+2120	42041	01A	109075	LTMO		Detective Fiction	145H					
+2120	42051	01	109214	CMMU		Soc Mvmts/3rd Sectr	101					
+2120	42052	01A	109214	CMMU		Soc Mvmts/3rd Sectr	101					
+2120	42107	01	110048	FMST		Gender & Development	148					
+2120	42136	01	110744	COWL		Mock Trial Workshop	111					
+2120	42137	01	110786	AMST		Power, ID & Soc Form	101					
+2120	42146	01	111429	ANTH		Human Paleopathology	105					
+2120	42188	01	112086	FMST		Science & Sexuality	135					
+2120	42189	01	112087	HIS		Global Cold War	118					
+2120	42194	01	112091	HAVC		Intro to U.S. Art	46					
+2120	42206	01	112175	COWL		Social Change	168A					
+2120	42263	01	017945	CHEM		General Chemistry	1A					
+2120	42271	01H	017945	CHEM		General Chemistry	1A					
+2120	42276	01	018851	CMPE		Personal Computers	3					
+2120	42315	01	106411	CMPS		Game Design Exp	20					
+2120	42316	01A	106411	CMPS		Game Design Exp	20					
+2120	42332	01	027728	PSYC		Study of Dreams	168					
+2120	42333	01	112136	CHEM		Physical Chem Lab	164					
+2120	42335	01B	112136	CHEM		Physical Chem Lab	164					
+2120	42352	01	105535	CRWN		Cyborg Society	80J					
+2120	42353	01	027130	POLI		International Law	160B					
+2120	42388	01	112660	ANTH		Evolution of Sex	109					
+2120	42405	01D	112087	HIS		Global Cold War	118					
+2120	42413	01	112665	POLI		Intro to Intl Relations	65					
+2120	42415	01B	112665	POLI		Intro to Intl Relations	65					
+2120	42416	01	019083	CMPS		Seminar Compsci Res	280A					
+2120	42422	02	025250	MATH		Col Algbra/Calculus	2					
+2120	42424	02B	025250	MATH		Col Algbra/Calculus	2					
+2120	42443	01G	018060	CHEM		Chem Thermodynamics	163B					
+2120	42487	01H	027660	PSYC		Psych and Law	147A					
+2122	56653	01	026543	PHIL		Independent Study	199F					
+2122	60172	01	015752	AMST		Jazz Cultures	125E					
+2122	60198	01	015946	ANTH		Forensic Anthro	103					
+2122	60199	01A	015946	ANTH		Forensic Anthro	103					
+2122	60201	01C	015946	ANTH		Forensic Anthro	103					
+2122	60203	01	015988	ANTH		Psychological Anth	123					
+2122	60204	01	016030	ANTH		Top In Ethnography	130X					
+2122	60246	01	017102	ASTR		Overview Universe	2					
+2122	60247	01A	017102	ASTR		Overview Universe	2					
+2122	60255	01	017134	ASTR		Intro Cosmology	113					
+2122	60297	01	017292	BIOL		Female Physiology	80A					
+2122	60298	01	017304	BME		The Human Genome	80H					
+2122	60299	01	017310	BIOE		Human Health/Nutrit	80N					
+2122	60300	01	017311	BIOE		Infec Disease & Pop	80P					
+2122	60312	01	017359	BIOL		Cell Biology	110					
+2122	60319	01	017369	BIOL		Mammalian Endocrnol	113					
+2122	60322	01	017374	BIOL		Eukaryotc Molec Bio	115					
+2122	60407	01	017915	BME		Comp Bio Tools	110					
+2122	60408	01A	017915	BME		Comp Bio Tools	110					
+2122	60423	01	017948	CHEM		General Chemistry	1B					
+2122	60436	01	017952	CHEM		General Chemistry	1C					
+2122	60438	01B	017952	CHEM		General Chemistry	1C					
+2122	60554	01	018526	CMMU		Prep Field Studies	102					
+2122	60556	01B	018526	CMMU		Prep Field Studies	102					
+2122	60562	01	018851	CMPE		Personal Computers	3					
+2122	60617	01	019027	CMPS		Adv Programming	109					
+2122	60620	01C	019027	CMPS		Adv Programming	109					
+2122	60633	01	019374	EART		Geology Natl Parks	3					
+2122	60640	01	019383	EART		Geologic Principles	10					
+2122	60641	01A	019383	EART		Geologic Principles	10					
+2122	60651	01	019408	EART		Intr Weathr/Climate	12					
+2122	60652	01A	019408	EART		Intr Weathr/Climate	12					
+2122	60677	01	019522	OCEA		Geophys Fluid Dynam	172					
+2122	60695	01	019653	ECON		Intro Microeconomic	1					
+2122	60696	01A	019653	ECON		Intro Microeconomic	1					
+2122	60708	01	019660	ECON		Intro Macroeconomic	2					
+2122	60717	01I	019660	ECON		Intro Macroeconomic	2					
+2122	60811	01	019747	ECON		Econ History Of US	125					
+2122	60901	01	020278	AMS		Intro Prob Theory	131					
+2122	60909	01	020325	ENVS		Physcl & Chem Envir	23					
+2122	60910	01A	020325	ENVS		Physcl & Chem Envir	23					
+2122	60973	01	020798	FILM		Film/Video Productn	170B					
+2122	60994	01	020974	HAVC		Body Art: Oceania	170					
+2122	60995	01	020982	HAVC		Pacific Islands Art	70					
+2122	60998	01C	020982	HAVC		Pacific Islands Art	70					
+2122	61002	01	021038	HAVC		Envir/Install/Sites	141I					
+2122	61025	01	021178	HIS		Film and Holocaust	75					
+2122	61026	01A	021178	HIS		Film and Holocaust	75					
+2122	61088	01	022868	LGST		Senior Capstone	196					
+2122	61208	01	025274	MATH		Calculus with Apps	11B					
+2122	61212	01D	025274	MATH		Calculus with Apps	11B					
+2122	61232	01	025321	MATH		Calc of Several Var	22					
+2122	61235	01C	025321	MATH		Calc of Several Var	22					
+2122	61244	01	025326	MATH		Multivariable Calc	23B					
+2122	61246	01B	025326	MATH		Multivariable Calc	23B					
+2122	61302	01	025920	MUSC		Music/Grateful Dead	80N					
+2122	61338	01	026308	PHIL		Intro To Logic	9					
+2122	61341	01C	026308	PHIL		Intro To Logic	9					
+2122	61345	01	026311	PHIL		Intro To Philosophy	11					
+2122	61361	01	026368	PHIL		The Empiricists	100C					
+2122	61364	01C	026368	PHIL		The Empiricists	100C					
+2122	61386	01	026753	PHYS		Intro Physics I	6A					
+2122	61387	01	026755	PHYS		Intro Physics II	6B					
+2122	61389	01	026759	PHYS		Intro Phys I Lab	6L					
+2122	61399	03	026760	PHYS		Intro Phys II Lab	6M					
+2122	61432	01	026975	POLI		Ancient Pol Thought	105A					
+2122	61436	01D	026975	POLI		Ancient Pol Thought	105A					
+2122	61437	01	026975	LGST		Ancient Pol Thought	105A					
+2122	61438	01A	026975	LGST		Ancient Pol Thought	105A					
+2122	61449	01	026989	LGST		Constitutional Law	111A					
+2122	61452	01C	026989	LGST		Constitutional Law	111A					
+2122	61507	01	027397	PSYC		Research Methods	100					
+2122	61508	01A	027397	PSYC		Research Methods	100					
+2122	61512	01E	027397	PSYC		Research Methods	100					
+2122	61525	01	027410	PSYC		Intr Cognitive Psyc	20					
+2122	61529	01D	027410	PSYC		Intr Cognitive Psyc	20					
+2122	61535	01	027448	PSYC		Intro Humanist Psyc	65					
+2122	61539	01D	027448	PSYC		Intro Humanist Psyc	65					
+2122	61543	01	027513	PSYC		Adult Devel & Aging	103					
+2122	61544	01A	027513	PSYC		Adult Devel & Aging	103					
+2122	61552	01	027593	PSYC		Learning and Memory	129					
+2122	61555	01	027601	PSYC		Evolutionary Theory	139F					
+2122	61559	01	027661	PSYC		Psych and Law	147B					
+2122	61560	01A	027661	PSYC		Psych and Law	147B					
+2122	61623	01	028181	SOCY		Logic Soc Inquiry	103B					
+2122	61627	01D	028181	SOCY		Logic Soc Inquiry	103B					
+2122	61628	01E	028181	SOCY		Logic Soc Inquiry	103B					
+2122	61638	01	028275	LGST		Drugs in Society	127					
+2122	61640	01B	028275	LGST		Drugs in Society	127					
+2122	61643	01	028351	SOCY		Sociology of Women	144					
+2122	61644	01	028365	SOCY		Sex and Gender	149					
+2122	61645	01	028369	SOCY		Socy Death & Dying	150					
+2122	61672	01	028841	THEA		Intro to Design	10					
+2122	61713	01	100010	TIM		Starting New Tech	80C					
+2122	61714	01	100280	PSYC		Visual/Spatial Cogn	120					
+2122	61716	01B	100280	PSYC		Visual/Spatial Cogn	120					
+2122	61719	01	100335	PRTR		Gospel Choir	21C					
+2122	61726	01	100851	LTEL		Individual Authors	190A					
+2122	61760	01	101839	SOCY		Urban Sociology	177					
+2122	61898	01	104594	POLI		Political Economy	115					
+2122	61901	01	104636	CMPS		Game Engines	164					
+2122	61902	01	104637	CMPS		Game Engines Lab	164L					
+2122	61904	01	104638	CMPE		Universal Access	80A					
+2122	61933	01	105343	SOCY		Media/Market/Culture	131					
+2122	61947	01	106076	EDUC		Cal Teach2: Science	100C					
+2122	61949	01	106104	SOCY		Soc:PublicIntellectl	196A					
+2122	61954	01	106131	CHEM		Organic Chemistry	108C					
+2122	61962	01H	106131	CHEM		Organic Chemistry	108C					
+2122	61974	01	106317	SOCY		Work and Society	176A					
+2122	61989	01	107395	HAVC		NorthernRenaissance	137A					
+2122	61993	01	107710	ANTH		Socio-Cultural Anth	145X					
+2122	62042	01	108651	POLI		ComparativePolitics	60					
+2122	62044	01B	108651	POLI		ComparativePolitics	60					
+2122	62055	01	108695	THEA		Tragedy	61B					
+2122	62061	01	108796	BIOE		IntroScienceWriting	188					
+2122	62124	01	110640	BIOL		Biochemistry Lab	100K					
+2122	62139	01O	110640	BIOL		Biochemistry Lab	100K					
+2122	62141	01	110693	HAVC		Photography SE Asia	124B					
+2122	62144	01C	110693	HAVC		Photography SE Asia	124B					
+2122	62158	01	111374	POLI		Nationalism	10					
+2122	62167	01	111445	FILM		Documentary Animation	161B					
+2122	62376	01	112793	CMPS		Software for Society	119					
+2122	62390	01	112140	ANTH		Colonial Contexts	187					
+2122	62461	01	017328	BIOL		Biochemistry	100					
+2122	62465	01	112845	CMPS		Mobile Applications	121					
+2122	62470	01	112846	CMPS		3D Animation	26					
+2122	62471	01A	112846	CMPS		3D Animation	26					
+2122	62478	01G	020982	HAVC		Pacific Islands Art	70					
+2122	62480	06	026693	PHYE		Yoga Exercises	30L					
+2122	62517	01A	025920	MUSC		Music/Grateful Dead	80N					
+2122	62518	01A	020974	HAVC		Body Art: Oceania	170					
+2122	62562	01	112949	BIOL		MolBio Techniques	187					
+2122	62571	01	112950	CLTE		Social Justice Issues	92					
+2122	62573	01	020772	FILM		Gender Globl Cinema	132C					
+2122	62578	01E	020772	FILM		Gender Globl Cinema	132C					
+2122	62603	01	112987	POLI		Politics Intl Trade	167					
+2122	62732	01D	027593	PSYC		Learning and Memory	129					
+2124	70008	01	017102	ASTR		Overview Universe	2					
+2124	70193	01	019653	ECON		Intro Microeconomic	1					
+2124	70339	01	025328	MATH		Ordinary Diff Equas	24					
+2124	70408	01	027389	PSYC		Intro Psychology	1					
+2124	70574	01	017341	BIOL		Genetics	105					
+2124	71142	01	021028	HAVC		High Renaissance	137C					

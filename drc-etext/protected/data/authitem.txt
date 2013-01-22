@@ -1,0 +1,6 @@
+admin	2			
+maint	2			
+student	2			
+guest	2			
+staff	2			
+faculty	2			
