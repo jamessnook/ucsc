@@ -398,5 +398,11 @@ LOAD DATA INFILE 'c:/users/jim/phpFog/ucsc/drc-etext/protected/data/file_associa
 LOAD DATA INFILE 'c:/users/jim/phpFog/ucsc/drc-etext/protected/data/instructor_files.txt' 
   INTO TABLE instructor_files LINES TERMINATED BY '\n' ;
 
+ALTER TABLE drc_request ADD CONSTRAINT
+
+ALTER TABLE drc_request ADD CONSTRAINT drt foreign key (type) references file_type (name);
+ALTER TABLE drc_request ADD CONSTRAINT dreu foreign key (emplid) references user (emplid);
+ALTER TABLE drc_request ADD CONSTRAINT drctccn foreign key (term_code, class_num) references course (term_code, class_num);
+ALTER TABLE drc_request ADD CONSTRAINT drttc foreign key (term_code) references term (term_code);
 
 
