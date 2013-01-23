@@ -25,6 +25,11 @@ class SiteController extends Controller
 			'page'=>array(
 				'class'=>'CViewAction',
 			),
+			// import databases to mysql
+			'import'=>array(
+				'class'=>'ext.base.actions.ImportDbAction',
+                'fileName'=>'etext.sql',
+			),
 		);
 	}
 

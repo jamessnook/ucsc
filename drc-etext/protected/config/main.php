@@ -69,12 +69,11 @@ return array(
 				//'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		/*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/etext.db',
 		),
-		*/
 		// uncomment the following to use a MySQL database
+		/*
 		'db'=>array(
  			//'class'=>'ext.base.CloudDbConnection',			
  			'connectionString' => 'mysql:host=localhost;dbname=etext',
@@ -83,6 +82,7 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+		*/
 		'authManager'=>array(
             'class'=>'CDbAuthManager',
             'connectionID'=>'db',
