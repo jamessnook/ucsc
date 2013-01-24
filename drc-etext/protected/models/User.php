@@ -338,11 +338,15 @@ class User extends UCSCModel
 		$names = array();
 		foreach($this->drcRequests as $request)
 		{
-			$names[] = $request->course->title;
+			if ($request->course){
+				$names[] = $request->course->title;
+			}
 		}
 		foreach($this->coursesAsInstructor as $instructedCourse)
 		{
-			$names[] = $instructedCourse->course->title;
+			if ($instructedCourse->course){
+				$names[] = $instructedCourse->course->title;
+			}
 		}
 		return $names;
 	}
@@ -357,11 +361,15 @@ class User extends UCSCModel
 		$courses = array();
 		foreach($this->drcRequests as $request)
 		{
-			$courses[] = $request->course;
+			if ($request->course){
+				$courses[] = $request->course;
+			}
 		}
 		foreach($this->coursesAsInstructor as $instructedCourse)
 		{
-			$courses[] = $instructedCourse->course;
+			if ($instructedCourse->course){
+				$courses[] = $instructedCourse->course;
+			}
 		}
 		return $courses;
 	}
@@ -398,8 +406,10 @@ class User extends UCSCModel
 	{
 		foreach($this->drcRequests as $request)
 		{
-			foreach($request->course->assignments as $assignment){
-				if (!$assignment->is_complete) return false;
+			if ($request->course){
+				foreach($request->course->assignments as $assignment){
+					if (!$assignment->is_complete) return false;
+				}
 			}
 		}
 		return true;

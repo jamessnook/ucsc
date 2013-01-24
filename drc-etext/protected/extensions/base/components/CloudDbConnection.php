@@ -8,7 +8,9 @@
  */
 class CloudDbConnection extends CDbConnection
 {
-		
+
+	public $dbName=0;
+	
 	/**
 	 * Override parent method to provide needed initialization.
 	 */
@@ -18,7 +20,7 @@ class CloudDbConnection extends CDbConnection
 		// check for appFog dynamic database config
 		if ($dbEnv = getenv("VCAP_SERVICES") && isset(Yii::app()->db->connectionString) && stripos(Yii::app()->db->connectionString, 'mysql') !== false){
 			$services_json = json_decode($dbEnv,true);
-			$mysql_config = $services_json["mysql-5.1"][0]["credentials"];
+			$mysql_config = $services_json["mysql-5.1"][$dbName]["credentials"];
 			$this->username = $mysql_config["username"];
 			$this->password = $mysql_config["password"];
 			$hostname = $mysql_config["hostname"];

@@ -191,7 +191,8 @@ CREATE TABLE file (
     order_num    INTEGER,       -- display or list order if member of a group (chapters in a book)
     created      DATETIME,      -- when requested
     modified     DATETIME,      -- date and time of last change
-    modified_by   VARCHAR(64)   -- username of user who made last change 
+    modified_by  VARCHAR(64),   -- username of user who made last change 
+    type         VARCHAR(32)
     -- foreign key (modified_by) references user (username),
     -- foreign key (type_id) references file_type (id)
 );
@@ -398,11 +399,55 @@ LOAD DATA INFILE 'c:/users/jim/phpFog/ucsc/drc-etext/protected/data/file_associa
 LOAD DATA INFILE 'c:/users/jim/phpFog/ucsc/drc-etext/protected/data/instructor_files.txt' 
   INTO TABLE instructor_files LINES TERMINATED BY '\n' ;
 
-ALTER TABLE drc_request ADD CONSTRAINT
+ALTER TABLE AuthItemChild ADD CONSTRAINT aicaip foreign key (parent) references AuthItem (name) on delete cascade on update cascade;
+ALTER TABLE AuthItemChild ADD CONSTRAINT aicaic foreign key (child) references AuthItem (name) on delete cascade on update cascade;
+ALTER TABLE authAssignment ADD CONSTRAINT aaai foreign key (itemname) references authItem (name) on delete cascade on update cascade;
+ALTER TABLE authAssignment ADD CONSTRAINT aaun foreign key (userid) references user (username) on delete cascade on update cascade;
+ALTER TABLE course ADD CONSTRAINT cttc foreign key (term_code) references term (term_code);
 
 ALTER TABLE drc_request ADD CONSTRAINT drt foreign key (type) references file_type (name);
 ALTER TABLE drc_request ADD CONSTRAINT dreu foreign key (emplid) references user (emplid);
 ALTER TABLE drc_request ADD CONSTRAINT drctccn foreign key (term_code, class_num) references course (term_code, class_num);
 ALTER TABLE drc_request ADD CONSTRAINT drttc foreign key (term_code) references term (term_code);
 
+ALTER TABLE drc_accommodation ADD CONSTRAINT dceu foreign key (emplid) references user (emplid);
+
+ALTER TABLE course_instructor ADD CONSTRAINT ciee foreign key (emplid) references user (emplid);
+ALTER TABLE course_instructor ADD CONSTRAINT citccn foreign key (term_code, class_num) references course (term_code, class_num);
+
+-- ALTER TABLE file ADD CONSTRAINT fmbu foreign key (modified_by) references user (username);
+ALTER TABLE file ADD CONSTRAINT ftift foreign key (type_id) references file_type (id);
+
+-- ALTER TABLE book ADD CONSTRAINT bmbu foreign key (modified_by) references user (username);
+ALTER TABLE book ADD CONSTRAINT bitn foreign key (id_type ) references id_type (name);
+
+-- ALTER TABLE assignment ADD CONSTRAINT ambu foreign key (modified_by) references user (username);
+ALTER TABLE assignment ADD CONSTRAINT atct foreign key (term_code ) references term (term_code);
+-- ALTER TABLE assignment ADD CONSTRAINT abib foreign key (book_id ) references book (id);
+ALTER TABLE assignment ADD CONSTRAINT atccnc foreign key (term_code, class_num) references course (term_code, class_num);
+
+ALTER TABLE assignment_type ADD CONSTRAINT ataia foreign key (assignment_id ) references assignment (id);
+ALTER TABLE assignment_type ADD CONSTRAINT atdrt foreign key (type ) references drc_request (type);
+
+ALTER TABLE file_association ADD CONSTRAINT fafif foreign key (file_id) references file (id);
+
+ALTER TABLE book_user ADD CONSTRAINT bubib foreign key (book_id) references book (id);
+ALTER TABLE book_user ADD CONSTRAINT buuu foreign key (username) references user (username);
+-- ALTER TABLE book_user ADD CONSTRAINT bumbu  foreign key (modified_by) references user (username);
+
+ALTER TABLE instructor_files ADD CONSTRAINT iffif foreign key (file_id) references file (id);
+-- ALTER TABLE instructor_files ADD CONSTRAINT iftct foreign key (term_code ) references term (term_code);
+-- ALTER TABLE instructor_files ADD CONSTRAINT iftccnc foreign key (term_code, class_num) references course (term_code, class_num);
+ALTER TABLE instructor_files ADD CONSTRAINT ifeiu foreign key (emplId) references user (emplId);
+
+-- ALTER TABLE email ADD CONSTRAINT emmbu foreign key (modified_by) references user (username);
+ALTER TABLE email ADD CONSTRAINT emtet foreign key (type) references email_type (name);
+
+ALTER TABLE email_sent ADD CONSTRAINT esuu foreign key (username) references user (username);
+ALTER TABLE email_sent ADD CONSTRAINT eseie foreign key (email_id) references email (id);
+ALTER TABLE email_sent ADD CONSTRAINT estct foreign key (term_code ) references term (term_code);
+ALTER TABLE email_sent ADD CONSTRAINT estccnc foreign key (term_code, class_num) references course (term_code, class_num);
+-- ALTER TABLE email_sent ADD CONSTRAINT esmbu foreign key (modified_by) references user (username);
+
+UPDATE file SET type = SUBSTRING_INDEX(name, '.', -1);
 
