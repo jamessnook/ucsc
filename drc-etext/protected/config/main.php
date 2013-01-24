@@ -82,7 +82,7 @@ return array(
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
-			'dbName' => 'etext',
+			'serviceName' => 'etext',
 		),
 		'authManager'=>array(
             'class'=>'CDbAuthManager',

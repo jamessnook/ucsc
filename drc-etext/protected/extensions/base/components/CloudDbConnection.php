@@ -9,25 +9,31 @@
 class CloudDbConnection extends CDbConnection
 {
 
-	public $dbName=0;
+	public $serviceName='db';
 	
 	/**
 	 * Override parent method to provide needed initialization.
 	 */
 	public function init()
 	{
-		parent::init();
 		// check for appFog dynamic database config
-		if ($dbEnv = getenv("VCAP_SERVICES") && isset(Yii::app()->db->connectionString) && stripos(Yii::app()->db->connectionString, 'mysql') !== false){
+		//if ($dbEnv = getenv("VCAP_SERVICES") && isset(Yii::app()->db->connectionString) && stripos(Yii::app()->db->connectionString, 'mysql') !== false){
+		if ($dbEnv = getenv("VCAP_SERVICES")){
 			$services_json = json_decode($dbEnv,true);
-			$mysql_config = $services_json["mysql-5.1"][$dbName]["credentials"];
-			$this->username = $mysql_config["username"];
-			$this->password = $mysql_config["password"];
-			$hostname = $mysql_config["hostname"];
-			//$port = $mysql_config["port"];
-			$db = $mysql_config["name"];
-			$this->connectionString = "mysql:host=$hostname;dbname=$db";
+			foreach($services_json["mysql-5.1"] as $service){
+				if ($service['name'] == $this->serviceName){
+					$mysql_config = $service["credentials"];
+					$this->username = $mysql_config["username"];
+					$this->password = $mysql_config["password"];
+					$hostname = $mysql_config["hostname"];
+					$db = $mysql_config["name"];
+					$this->connectionString = "mysql:host=$hostname;dbname=$db";
+					parent::init();
+					return;
+				}
+			}
 		}
+		parent::init();
 	}
 	
 }

@@ -64,11 +64,13 @@ return array(
 		// uncomment the following to use a MySQL database
 		*/
 		'db'=>array(
+ 			'class'=>'CloudDbConnection',			
 			'connectionString' => 'mysql:host=localhost;dbname=wordBankDeploy',
 			'emulatePrepare' => true,
 			'username' => 'wbank',
 			'password' => '1Xbank',
 			'charset' => 'utf8',
+			'serviceName' => 'ucscdb',
 		),
 		'authManager'=>array(
             'class'=>'CDbAuthManager',

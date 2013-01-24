@@ -4299,3 +4299,57 @@ Stack trace:
 REQUEST_URI=/ucsc/drc-etext/index.php/user/students/term_code/2122
 HTTP_REFERER=http://localhost/ucsc/drc-etext/index.php/user/students
 ---
+2013/01/24 08:28:47 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (128)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\User.php (324)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\extensions\base\controllers\UserController.php (153)
+2013/01/24 08:28:50 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\UCSCModel.php (128)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\User.php (324)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\extensions\base\controllers\UserController.php (191)
+2013/01/24 08:28:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'drcRequests.user.username' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`term_code` AS `t0_c1`, `t`.`class_num` AS `t0_c2`, `t`.`book_id` AS `t0_c3`, `t`.`description` AS `t0_c4`, `t`.`title` AS `t0_c5`, `t`.`due_date` AS `t0_c6`, `t`.`created` AS `t0_c7`, `t`.`modified` AS `t0_c8`, `t`.`modified_by` AS `t0_c9`, `t`.`notes` AS `t0_c10`, `t`.`is_complete` AS `t0_c11`, `t`.`has_zip_file` AS `t0_c12`, `drcRequests`.`term_code` AS `t1_c0`, `drcRequests`.`class_num` AS `t1_c1`, `drcRequests`.`course_id` AS `t1_c2`, `drcRequests`.`emplid` AS `t1_c3`, `drcRequests`.`type` AS `t1_c4`, `drcRequests`.`created` AS `t1_c5`, `drcRequests`.`modified` AS `t1_c6`, `user`.`count` AS `t2_c0`, `user`.`username` AS `t2_c1`, `user`.`emplid` AS `t2_c2`, `user`.`first_name` AS `t2_c3`, `user`.`middle_name` AS `t2_c4`, `user`.`last_name` AS `t2_c5`, `user`.`email` AS `t2_c6`, `user`.`phone` AS `t2_c7`, `user`.`created` AS `t2_c8`, `user`.`modified` AS `t2_c9`, `user`.`password` AS `t2_c10`, `user`.`salt` AS `t2_c11`, `user`.`modified_by` AS `t2_c12` FROM `assignment` `t`  LEFT OUTER JOIN `drc_request` `drcRequests` ON (`drcRequests`.`term_code`=`t`.`id`) AND (`drcRequests`.`class_num`=`t`.`id`)  LEFT OUTER JOIN `user` `user` ON (`drcRequests`.`emplid`=`user`.`emplid`)  WHERE (((drcRequests.user.username=:ycp0) AND (t.term_code=:ycp1)) AND (t.class_num=:ycp2)).
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\assignment\_list.php (66)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\layouts\_main.php (135)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\extensions\base\controllers\Controller.php (86)
+2013/01/24 08:28:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'drcRequests.user.username' in 'where clause'. The SQL statement executed was: SELECT `t`.`id` AS `t0_c0`, `t`.`term_code` AS `t0_c1`, `t`.`class_num` AS `t0_c2`, `t`.`book_id` AS `t0_c3`, `t`.`description` AS `t0_c4`, `t`.`title` AS `t0_c5`, `t`.`due_date` AS `t0_c6`, `t`.`created` AS `t0_c7`, `t`.`modified` AS `t0_c8`, `t`.`modified_by` AS `t0_c9`, `t`.`notes` AS `t0_c10`, `t`.`is_complete` AS `t0_c11`, `t`.`has_zip_file` AS `t0_c12`, `drcRequests`.`term_code` AS `t1_c0`, `drcRequests`.`class_num` AS `t1_c1`, `drcRequests`.`course_id` AS `t1_c2`, `drcRequests`.`emplid` AS `t1_c3`, `drcRequests`.`type` AS `t1_c4`, `drcRequests`.`created` AS `t1_c5`, `drcRequests`.`modified` AS `t1_c6`, `user`.`count` AS `t2_c0`, `user`.`username` AS `t2_c1`, `user`.`emplid` AS `t2_c2`, `user`.`first_name` AS `t2_c3`, `user`.`middle_name` AS `t2_c4`, `user`.`last_name` AS `t2_c5`, `user`.`email` AS `t2_c6`, `user`.`phone` AS `t2_c7`, `user`.`created` AS `t2_c8`, `user`.`modified` AS `t2_c9`, `user`.`password` AS `t2_c10`, `user`.`salt` AS `t2_c11`, `user`.`modified_by` AS `t2_c12` FROM `assignment` `t`  LEFT OUTER JOIN `drc_request` `drcRequests` ON (`drcRequests`.`term_code`=`t`.`id`) AND (`drcRequests`.`class_num`=`t`.`id`)  LEFT OUTER JOIN `user` `user` ON (`drcRequests`.`emplid`=`user`.`emplid`)  WHERE (((drcRequests.user.username=:ycp0) AND (t.term_code=:ycp1)) AND (t.class_num=:ycp2))' in C:\Users\Jim\phpFog\ucsc\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php(818): CDbCommand->queryAll()
+#2 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php(452): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php(70): CJoinElement->find(Object(CDbCriteria))
+#4 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1292): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CActiveDataProvider.php(150): CActiveRecord->findAll(Object(CDbCriteria))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#8 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#9 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(148): CGridView->init()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\assignment\_list.php(66): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#16 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\layouts\_main.php(135): CController->renderPartial('../assignment/_...', Array)
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('../layouts/_mai...', Array, true)
+#21 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\extensions\base\controllers\Controller.php(86): CController->render('../layouts/_mai...', Array)
+#22 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(263): Controller->renderView(Array)
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionAssignments()
+#24 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#25 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#26 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#27 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#28 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#29 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#30 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#31 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#32 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('assignments')
+#33 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/assignme...')
+#34 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#35 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#36 {main}
+REQUEST_URI=/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username/astudent
+HTTP_REFERER=http://localhost/drc-etext/index.php/user/courses/username/astudent/term_code/2122
+---

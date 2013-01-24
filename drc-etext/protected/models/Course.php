@@ -165,7 +165,7 @@ class Course extends UCSCModel
 		if ($this->username && strlen($this->username)>0) {
 			$criteria->with = array( 'drcRequests', 'drcRequests.user' );
 			$criteria->together = true;
-			$criteria->compare('drcRequests.user.username',$this->username);
+			$criteria->compare('user.username',$this->username);
 			$criteria->compare('drcRequests.term_code',$this->term_code);
 		}
 		
@@ -183,8 +183,9 @@ class Course extends UCSCModel
 	{
 		$criteria=new CDbCriteria;
 		if ($this->username && strlen($this->username)>0) {  // comment out untill we have type data
-			$criteria->with = array( 'drcRequests',  'drcRequests.user');
-			$criteria->compare('drcRequests.user.username',$this->username);
+			//$criteria->with = array( 'drcRequests',  'drcRequests.user');
+			//$criteria->together = true;
+			//$criteria->compare('user.username',$this->username);
 		}
 		$criteria->compare('t.term_code',$this->term_code);
 		$criteria->compare('t.class_num',$this->class_num);
