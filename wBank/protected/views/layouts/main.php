@@ -134,7 +134,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
 	<script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.dataTables.js"></script>
 	<script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/DT_bootstrap.js"></script>
