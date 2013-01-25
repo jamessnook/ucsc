@@ -5635,3 +5635,32 @@ REQUEST_URI=/ucsc/wBank/index.php/words/list
 in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\words\_lemmaMorphList.php (67)
 in C:\Users\Jim\phpFog\ucsc\wBank\protected\views\layouts\_main.php (141)
 in C:\Users\Jim\phpFog\ucsc\wBank\protected\components\Controller.php (104)
+2013/01/24 16:29:39 [error] [exception.CException] exception 'CException' with message 'Property "CloudDbConnection.serviceName" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(222): CComponent->__set('serviceName', 'ucscdb')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CModule.php(387): YiiBase::createComponent(Array)
+#2 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(431): CModule->getComponent('db')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#6 C:\Users\jsnook\phpFog\ucsc\wBank\protected\models\UCSCModel.php(22): CActiveRecord::model('User')
+#7 C:\Users\jsnook\phpFog\ucsc\wBank\protected\models\User.php(47): UCSCModel::model('User')
+#8 C:\Users\jsnook\phpFog\ucsc\wBank\protected\components\UserIdentity.php(21): User::model()
+#9 C:\Users\jsnook\phpFog\ucsc\wBank\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 C:\Users\jsnook\phpFog\ucsc\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#13 C:\Users\jsnook\phpFog\ucsc\wBank\protected\controllers\LoginController.php(74): CModel->validate()
+#14 C:\Users\jsnook\phpFog\ucsc\wBank\protected\controllers\LoginController.php(26): LoginController->loginLocal()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('login')
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('login/login')
+#21 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\jsnook\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/wBank/index.php/login/login
+HTTP_REFERER=http://localhost/wBank/index.php/login/login
+---
