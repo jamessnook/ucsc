@@ -36,17 +36,17 @@ class LoginController extends Controller
 	    spl_autoload_register(array('YiiBase','autoload'));
 	
 		$as = new SimpleSAML_Auth_Simple('ucsc-test--sp');
-		//$as->requireAuth();
+		$as->requireAuth();
 		// or to specify login params
 		//$as->requireAuth($params);
 		/*
 		 * Return the user to the frontpage after authentication, don't post
 		 * the current POST data.
 		 */
-		$as->requireAuth(array(
-		    'ReturnTo' => $this->createUrl('user/students'),
-		    'KeepPost' => FALSE,
-		));
+		//$as->requireAuth(array(
+		    //'ReturnTo' => $this->createUrl('user/students'),
+		    //'KeepPost' => FALSE,
+		//));
 		print("Hello, authenticated user!");
 		// test
 		$attributes = $as->getAttributes();
