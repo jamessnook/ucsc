@@ -185,10 +185,16 @@ class Words extends UCSCModel
 				$criteria->addCondition("id IN (SELECT wordId FROM wordList JOIN lists ON (id=listId) WHERE name ='$this->listName')");   
 			}       
 		}
+		if($this->downloadTsv) {
+			$criteria=new CDbCriteria;
+			foreach ($this->chk as $id=>$checked){
+				$criteria->compare('id',$id, false, 'OR');
+			}
+		}
 		
 		if($this->removeChecked) {
 			$criteria=new CDbCriteria;
-			$criteria->compare('id',-1, false, 'OR'); // base for OR so if no checked words we doen't get all fo the records
+			$criteria->compare('id',-1, false, 'OR'); // base for OR so if no checked words we doen't get all of the records
 			foreach ($this->chk as $id=>$checked){
 				if (!$checked){
 					$criteria->compare('id',$id, false, 'OR');
@@ -198,7 +204,7 @@ class Words extends UCSCModel
 		
 		if($this->removeUnchecked) {
 			$criteria=new CDbCriteria;
-			$criteria->compare('id',-1, false, 'OR'); // base for OR so if no checked words we doen't get all fo the records
+			$criteria->compare('id',-1, false, 'OR'); // base for OR so if no checked words we doen't get all of the records
 			foreach ($this->chk as $id=>$checked){
 				if ($checked){
 					$criteria->compare('id',$id, false, 'OR');
@@ -305,36 +311,5 @@ class Words extends UCSCModel
 	}
 
 
-	/**
-	 * Retrieves a data provider that can provide list of word lists.
-	 * @return CActiveDataProvider the data provider that can return a list of User models.
-	 */
-	public function lists()
-	{
-		// create sql to retieve students who will use this book and whether they have purchased it.
-		$sql = "SELECT DISTINCT user.username, user.first_name, user.last_name, book_user.purchased
-			FROM user JOIN drc_request USING (emplid) JOIN assignment USING (term_code, class_num) LEFT JOIN book_user USING (username, book_id)
-			WHERE assignment.book_id=" . $this->id;
-		
-		return new CSqlDataProvider($sql, array(
-		 	'pagination' => false,
-		 	'keyField' => 'username',
-		));
-	}
-
-	/**
-	 * Retrieves a list of books for this course based on the current request parameters.
-	 * @return CActiveDataProvider the data provider that can return the models based on the request parameters.
-	 */
-	public function books()
-	{
-		$criteria=new CDbCriteria;
-		$criteria->addCondition("id IN (SELECT book_id FROM assignment WHERE term_code ='$this->term_code' AND class_num='$this->class_num')");          
-		
-		return new CActiveDataProvider('Book', array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
 	
 }

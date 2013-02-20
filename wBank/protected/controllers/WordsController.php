@@ -175,7 +175,7 @@ class WordsController extends Controller
 	}
 
 	/**
-	 * Displays a page to allow editing of an existing Book model. 
+	 * 
 	 */
 	public function actionList()
 	{
