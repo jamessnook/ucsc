@@ -231,8 +231,8 @@ CERTIFICATE
 		'adminEmail'=>'webmaster@example.com',
 
 		// the next two set up the type of user authentication we are using
-		'samlLogin'=>false,  // true if using shibboleth authentication
-		'localLogin'=>true,	// true if using local authentication
+		'samlLogin'=>true,  // true if using shibboleth authentication
+		'localLogin'=>false,	// true if using local authentication
 		
 		// location for uploaded files
 		'fileRoot'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'../files',
