@@ -4353,3 +4353,14 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username/astudent
 HTTP_REFERER=http://localhost/drc-etext/index.php/user/courses/username/astudent/term_code/2122
 ---
+2013/02/24 21:04:15 [error] [exception.CException] exception 'CException' with message 'Alias "ext.base.controllers.SiteController" is invalid. Make sure it points to an existing PHP file.' in C:\Users\Jim\phpFog\ucsc\framework\YiiBase.php:318
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\YiiBase.php(198): YiiBase::import('ext.base.contro...', true)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(326): YiiBase::createComponent(Array, 'site', NULL)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(270): CWebApplication->createController('')
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#4 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#6 {main}
+REQUEST_URI=/drc-etext/index.php?r=gii
+---

@@ -17,8 +17,10 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'application.controllers.*',
-		'ext.base.components.*',
-		'ext.base.controllers.*',
+		'application.modules.base.models.*',
+		'application.modules.base.controllers.*',
+		'application.modules.base.ccomponents.*',
+
 ),
 
 	'aliases' => array(
@@ -33,9 +35,11 @@ return array(
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			//'ipFilters'=>array('127.0.0.1','::1'),
 		),
-    ),
-	
-    // application coontrollers from base extension etc.
+        'base'=>array(
+		),
+    
+    // application controllers from base extension etc.
+    /*
     'controllerMap'=>array(
         'login'=>array(
             'class'=>'ext.base.controllers.LoginController',
@@ -48,13 +52,14 @@ return array(
         ),
         // other controllers
     ),
-    
+    */
+		
     // application components
 	'components'=>array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-			'loginUrl'=>array('/login/login'),
+			'loginUrl'=>array('/base/login/login'),
     	),
 		// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(
@@ -91,7 +96,7 @@ return array(
         ),		
         'errorHandler'=>array(
 			// use 'site/error' action to display errors
-            'errorAction'=>'site/error',
+            'errorAction'=>'base/site/error',
         ),
 		'log'=>array(
 			'class'=>'CLogRouter',

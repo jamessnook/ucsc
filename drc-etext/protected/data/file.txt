@@ -1,7 +1,0 @@
-8	DRC-EText_Functional_Spec_v5 (1).doc	t2122/c60423/a6		6	2					doc
-9	DRC EText AIS Requirements_JK.docx	t2122/c60423/a6		6	1					doc
-10	give-to-ucsc.gif	t2122/c60423/a								gif
-28	bootstrap.css	/../files/assignments/								css
-29	JeremyFisher.htm	/../files/assignments/								htm
-30	BenjaminBunny.htm	/../files/assignments/6/								htm
-31	Andalucia.docx	/../files/books/1/								docx

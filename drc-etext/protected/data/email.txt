@@ -1,5 +1,0 @@
-1	Please send us more course materials for #course#.	Need MOre Material for #course#	Second	0	2012-12-07 07:34:37	2012-12-07 08:28:52	jsnook
-2	Come on now, give us waht we need for #course#.	We Need Materials	Third	0	2012-12-07 07:35:59	2012-12-08 06:39:44	jsnook
-3	Please send us more course materials for #course#.	Need More Nice Material for #course#	Second	0	2012-12-07 08:28:30	2012-12-07 08:33:16	jsnook
-4	Come on now, give us what we need for #course#.	We Need Materials	Third	0	2012-12-08 06:39:44	2012-12-13 19:49:31	jsnook
-5	Come on now, give us what we need for #course#. ....please.	We Need Materials	Third	1	2012-12-13 19:49:31	2012-12-13 19:49:31	jsnook

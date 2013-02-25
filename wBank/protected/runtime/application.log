@@ -5664,3 +5664,43 @@ Stack trace:
 REQUEST_URI=/wBank/index.php/login/login
 HTTP_REFERER=http://localhost/wBank/index.php/login/login
 ---
+2013/02/24 12:05:11 [error] [php] PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: [2002] No connection could be made because the target machine actively refused it.
+ (trying to connect via tcp://localhost:3306) (C:\Users\Jim\phpFog\ucsc\framework\db\CDbConnection.php:422)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\CDbConnection.php(331): CloudDbConnection->open()
+#1 C:\Users\Jim\phpFog\ucsc\framework\db\CDbConnection.php(309): CloudDbConnection->setActive()
+#2 C:\Users\Jim\phpFog\ucsc\wBank\protected\components\CloudDbConnection.php(36): CloudDbConnection->init()
+#3 C:\Users\Jim\phpFog\ucsc\framework\base\CModule.php(388): CloudDbConnection->init()
+#4 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(431): CWebApplication->getComponent()
+#5 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(615): CWebApplication->getDb()
+#6 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(2263): User->getDbConnection()
+#7 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct()
+#8 C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php(22): model()
+#9 C:\Users\Jim\phpFog\ucsc\wBank\protected\models\User.php(47): model()
+#10 C:\Users\Jim\phpFog\ucsc\wBank\protected\components\UserIdentity.php(21): model()
+#11 C:\Users\Jim\phpFog\ucsc\wBank\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#12 C:\Users\Jim\phpFog\ucsc\framework\validators\CInlineValidator.php(43): LoginForm->authenticate()
+#13 C:\Users\Jim\phpFog\ucsc\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CModel.php(158): CInlineValidator->validate()
+#15 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\LoginController.php(74): LoginForm->validate()
+#16 C:\Users\Jim\phpFog\ucsc\wBank\protected\controllers\LoginController.php(26): LoginController->loginLocal()
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CWebApplication->run()
+REQUEST_URI=/wBank/index.php/login/login
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\components\CloudDbConnection.php (36)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\UCSCModel.php (22)
+in C:\Users\Jim\phpFog\ucsc\wBank\protected\models\User.php (47)
+2013/02/24 12:06:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "r=gii".' in C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('r=gii')
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\Jim\phpFog\ucsc\wBank\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/wBank/index.php/r=gii
+---

@@ -1,4 +1,0 @@
-28	6	Assignment
-29	6	Assignment
-30	6	Assignment
-31	1	Book
