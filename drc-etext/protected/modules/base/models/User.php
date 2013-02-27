@@ -85,12 +85,6 @@ class User extends BaseModel
 		// class name for the relations automatically generated below.
 		return array(
 			'authAssignments' => array(self::HAS_MANY,'AuthAssignment', 'userid, itemname'),
-			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'emplid'),
-			'coursesAsInstructor' => array(self::HAS_MANY, 'CourseInstructor', 'emplid'),
-			'assignments' => array(self::HAS_MANY, 'Assignment', 'modified_by'),
-			'books' => array(self::MANY_MANY, 'Book', 'book_user(username, book_id)'),
-			'files' => array(self::HAS_MANY, 'File', 'modified_by'),
-			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'emplId'),
 		);
 	}
 
@@ -144,24 +138,6 @@ class User extends BaseModel
 		));
 	}
 
-	/**
-	 * Retrieves a list of USER models for students with active DRC requests for the term identified by $this->term_code.
-	 * @return CActiveDataProvider the data provider that can return the User models.
-	 */
-	public function students()
-	{
-		$criteria=new CDbCriteria;
-		$criteria->with = array( 'drcRequests', 'drcRequests.course');
-		$criteria->compare('drcRequests.term_code', $this->term_code);
-		//$criteria->addCondition("AuthAssignment.userid=t.username");
-		//$criteria->join = 'JOIN drcRequests USING (emplid)';
-		
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
-
 	
 	/**
 	 * Retrieves a list of USER models for faculty with active DRC requests for their courses in the term identified by $this->term_code.
@@ -205,93 +181,6 @@ class User extends BaseModel
 	}
 
 	
-	/**
-	 * Retrieves a list of course Models associated with the user and term defined by the current $this object.
-	 * @return CActiveDataProvider the data provider that can return the Course models.
-	 */
-	public function courses()
-	{
-		$criteria=new CDbCriteria; 
-		if (!isset($this->term_code)) {
-			$this->term_code = Term::currentTermCode();
-		}
-		$criteria->compare('t.term_code',$this->term_code);
-		if ($this->emplid && strlen($this->emplid)>0) {
-			$criteria->with = array( 'drcRequests' );
-			$criteria->together = true;
-			$criteria->compare('drcRequests.emplid',$this->emplid);
-			$criteria->compare('drcRequests.term_code',$this->term_code);
-		}
-		
-		return new CActiveDataProvider('Course', array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
-
-	/**
-	 * Retrieves a list of book Models associated with the user and term defined by the current $this object.
-	 * @return CActiveDataProvider the data provider that can return the Course models.
-	 */
-	public function xbooks()
-	{
-		$criteria=new CDbCriteria; 
-		if (!isset($this->term_code)) {
-			$this->term_code = Term::currentTermCode();
-		}
-		$criteria->compare('t.term_code',$this->term_code);
-		if ($this->emplid && strlen($this->emplid)>0) {
-			$criteria->with = array( 'drcRequests' );
-			$criteria->together = true;
-			$criteria->compare('drcRequests.emplid',$this->emplid);
-			$criteria->compare('drcRequests.term_code',$this->term_code);
-		}
-		
-		return new CActiveDataProvider('Book', array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
-	
-	/**
-	 * Retrieves a list of books for this course based on the current request parameters.
-	 * @return CActiveDataProvider the data provider that can return the models based on the request parameters.
-	 */
-	public function xxbooks()
-	{
-		$criteria=new CDbCriteria;
-		$criteria->addCondition("id IN (SELECT book_id FROM bookUser WHERE term_code ='$this->term_code' AND class_num='$this->class_num')");          
-		
-		return new CActiveDataProvider('Book', array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-	}
-	
-	
-	/**
-	 * Retrieves a data provider that can provide list of emails for this Course.
-	 * @return CActiveDataProvider the data provider that can return a list of Email models.
-	 */
-	public function books()
-	{
-		// create sql to retieve emails sent or available to be sent ot istructors for this course.
-		$sql = "SELECT DISTINCT user.username, book.id, book.title, book.author, course.title AS courseTitle, term.description AS term, book_user.purchased
-			FROM drc_request JOIN assignment USING(term_code, class_num) 
-			JOIN course USING(term_code, class_num)
-			JOIN term USING(term_code)
-			JOIN user USING(emplid)
-			JOIN book  ON (book.id = assignment.book_id)  
-			LEFT JOIN book_user USING (book_id, username) 
-			WHERE drc_request.emplid='$this->emplid' AND drc_request.term_code = $this->term_code";
-			//WHERE drc_request.emplid='$this->emplid'";
-		
-		return new CSqlDataProvider($sql, array(
-		 	'pagination' => false,
-		 	'keyField' => 'id',
-		));
-	}
-
 	
 	/**
 	 * Overrides parent to assign non input values.
@@ -328,92 +217,6 @@ class User extends BaseModel
 		return $aModel;
 	}
 	
-	/**
-	 * Retrieves a list of course names for the courses associate with a users.
-	 * @return array, the names of courses for this user.
-	 */
-	public function courseNames()
-	{
-		//$names = '';
-		$names = array();
-		foreach($this->drcRequests as $request)
-		{
-			if ($request->course){
-				$names[] = $request->course->title;
-			}
-		}
-		foreach($this->coursesAsInstructor as $instructedCourse)
-		{
-			if ($instructedCourse->course){
-				$names[] = $instructedCourse->course->title;
-			}
-		}
-		return $names;
-	}
-	
-	/**
-	 * Retrieves a list of course objects for the courses associate with a users.
-	 * @return array, the names of courses for this user.
-	 */
-	public function courseList()
-	{
-		//$names = '';
-		$courses = array();
-		foreach($this->drcRequests as $request)
-		{
-			if ($request->course){
-				$courses[] = $request->course;
-			}
-		}
-		foreach($this->coursesAsInstructor as $instructedCourse)
-		{
-			if ($instructedCourse->course){
-				$courses[] = $instructedCourse->course;
-			}
-		}
-		return $courses;
-	}
-	
-	/**
-	 * Retrieves a list of course names for the courses associate with a users.
-	 * @return string, the names of courses for this user.
-	 */
-	public function courseNamesString()
-	{
-		$names = '';
-		foreach($this->drcRequests as $request)
-		{
-			if($names != ''){
-				$names .= ', ';
-			}
-			$names .= $request->course->title;
-		}
-		foreach($this->coursesAsInstructor as $instructedCourse)
-		{
-			if($names != ''){
-				$names .= ', ';
-			}
-			$names .= $instructedCourse->course->title;
-		}
-		return $names;
-	}
-	
-	/**
-	 * Returns true if all assignemtns for this course are complete.
-	 * @return boolean, true if all assignemtns for this course are complete.
-	 */
-	public function drcRequestsCompleted()
-	{
-		foreach($this->drcRequests as $request)
-		{
-			if ($request->course){
-				foreach($request->course->assignments as $assignment){
-					if (!$assignment->is_complete) return false;
-				}
-			}
-		}
-		return true;
-	}
 	
 	/**
 	 * Retrieves a list of authentication roles assigned to the user defined by $this object.
@@ -438,36 +241,5 @@ class User extends BaseModel
 		return Yii::app()->createUrl('user/update', array('username'=>$this->username));
 	} 
 
-		/**
-	 * Retrieves an array of file types needed for this user.
-	 * @return array, the names of file types for this course.
-	 */
-	public function types()
-	{
-		$types = array();
-		foreach($this->drcRequests as $request)
-		{
-			$types[$request->type] = $request->type; // use value as key to prevent duplicates
-		}
-		return $types;
-	}
-	
-	/**
-	 * Retrieves an array of file types needed for this assignment.
-	 * @return array, the names of file types for this course.
-	 */
-	public function typesString()
-	{
-		$types = '';
-		foreach($this->drcRequests as $request)
-		{
-			if($types != ''){
-				$types .= ', ';
-			}
-			$types .= $request->type; // use value as key to prevent duplicates
-		}
-		return $types;
-	}
-	
 	
 }
