@@ -86,15 +86,15 @@ $options = $this->viewOptions;
 							'items'=>array(
 								array(
 									'label'=>'Students', 
-									'url'=>array('/user/students', 'term_code'=>$model->term_code,),
+									'url'=>array('user/students', 'term_code'=>$model->term_code,),
 								),
 								array(
 									'label'=>'Faculty', 
-									'url'=>array('/user/faculty', 'term_code'=>$model->term_code,), 
+									'url'=>array('user/faculty', 'term_code'=>$model->term_code,), 
 								),
 								array(
 									'label'=>'Staff', 
-									'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
+									'url'=>array('user/staff', 'term_code'=>$model->term_code,), 
 								),
 							),
 							

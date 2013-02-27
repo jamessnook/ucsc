@@ -17,7 +17,7 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.models
  */
-class BookUser extends UCSCModel
+class BookUser extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

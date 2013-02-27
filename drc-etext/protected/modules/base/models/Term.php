@@ -22,7 +22,7 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.models
  */
-class Term extends UCSCModel
+class Term extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

@@ -26,7 +26,7 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.models
  */
-class EmailSent extends UCSCModel
+class EmailSent extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

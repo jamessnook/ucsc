@@ -4364,3 +4364,159 @@ Stack trace:
 #6 {main}
 REQUEST_URI=/drc-etext/index.php?r=gii
 ---
+2013/02/26 23:49:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php?r=login/login
+---
+2013/02/26 23:49:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php
+---
+2013/02/26 23:57:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php
+---
+2013/02/26 23:58:59 [error] [php] require_once(base/components/UserIdentity.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:3)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(332): CWebApplication->createController()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(270): CWebApplication->createController()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (3)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (3)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/02/27 00:00:02 [error] [php] require_once(modules/base/components/UserIdentity.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:3)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(332): CWebApplication->createController()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(270): CWebApplication->createController()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (3)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (3)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/02/27 00:01:44 [error] [php] require_once(_autoload.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:10)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(332): CWebApplication->createController()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(270): CWebApplication->createController()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (10)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (10)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/02/27 00:21:36 [error] [php] include(UCSCModel.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php(37): spl_autoload_call()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(418): include()
+#2 unknown(0): autoload()
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\UserIdentity.php(21): spl_autoload_call()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\validators\CInlineValidator.php(43): LoginForm->authenticate()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\base\CModel.php(158): CInlineValidator->validate()
+#8 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(88): LoginForm->validate()
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(41): LoginController->loginLocal()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (37)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\UserIdentity.php (21)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\LoginForm.php (52)
+2013/02/27 01:03:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/staff/term_code/2122".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/staff/term...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/user/staff/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/students/term_code/2122
+---
+2013/02/27 02:22:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/staff/term_code/2120".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/staff/term...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/user/staff/term_code/2120
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/students/term_code/2120
+---
+2013/02/27 02:24:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/staff/term_code/2120".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/staff/term...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/user/staff/term_code/2120
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/students/term_code/2120
+---
+2013/02/27 02:25:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "base/base/user/staff/term_code/2122".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/base/user/...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/base/base/user/staff/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/students/term_code/2122
+---
+2013/02/27 02:27:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "base/base/user/faculty/term_code/2122".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/base/user/...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/base/base/user/faculty/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/staff/term_code/2122
+---
+2013/02/27 02:28:08 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (324)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php (191)
+2013/02/27 02:28:08 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "../course/_list".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(135): CController->renderPartial('../course/_list', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('../layouts/_mai...', Array, true)
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(86): CController->render('../layouts/_mai...', Array)
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php(198): Controller->renderView(Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionCourses()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/user/cours...')
+#18 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/drc-etext/index.php/base/user/courses/username/aaelsey/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/faculty/term_code/2122
+---

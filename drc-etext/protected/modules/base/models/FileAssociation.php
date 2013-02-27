@@ -18,7 +18,7 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.models
  */
-class FileAssociation extends UCSCModel
+class FileAssociation extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.

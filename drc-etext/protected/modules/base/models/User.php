@@ -33,7 +33,7 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.models
  */
-class User extends UCSCModel
+class User extends BaseModel
 {
 	public $term_code; // for non emplid matches
 	public $role;      // for authentication, to set user roles

@@ -33,7 +33,7 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.models
  */
-class Course extends UCSCModel
+class Course extends BaseModel
 {
 	/**
 	 * @var string (Non database atribute.)  Identifies optional user associated with the assignemt for the current action.

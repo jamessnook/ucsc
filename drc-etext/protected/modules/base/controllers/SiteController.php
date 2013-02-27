@@ -27,7 +27,7 @@ class SiteController extends Controller
 			),
 			// import databases to mysql
 			'import'=>array(
-				'class'=>'ext.base.actions.ImportDbAction',
+				'class'=>'modules.base.components.actions.ImportDbAction',
                 'fileName'=>'etext.sql',
 			),
 		);
