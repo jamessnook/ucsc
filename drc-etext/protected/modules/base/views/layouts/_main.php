@@ -25,6 +25,8 @@ $options = $this->viewOptions;
 					'htmlOptions'=>array('class'=>'nav nav-tabs'), 
 					'submenuHtmlOptions'=>array('class'=>'dropdown-menu'), 
 					'encodeLabel'=>false,
+					'items'=>$this->module->topNavItems,
+					/*
 					'items'=>array(
 						array(
 							'label'=>'<i class="icon-dashboard"></i> Dashboard', 
@@ -52,7 +54,7 @@ $options = $this->viewOptions;
 							'active'=> false,  // disable for now
 							'visible'=>false,
 						),
-						/*
+						
 						array(
 							'label'=>'<i class="icon-user"></i> Staff', 
 							'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
@@ -75,7 +77,6 @@ $options = $this->viewOptions;
 							'visible'=>Yii::app()->user->checkAccess('admin'), 
 							'active'=> $activeTab == 'students',
 						),
-						*/
 						array(
 							'itemOptions'=>array('class'=>'dropdown pull-right'), 
 							'url'=>'#',
@@ -100,6 +101,7 @@ $options = $this->viewOptions;
 							
 						),
 					), 
+					*/
 				));
 			  ?>
 			</div>

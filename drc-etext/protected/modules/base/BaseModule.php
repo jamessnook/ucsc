@@ -2,6 +2,12 @@
 
 class BaseModule extends CWebModule
 {
+	/**
+	 * @var array()
+	 * @desc top left menu items in _main layout
+	 */
+	public $topNavItems = array();
+	
 	public function init()
 	{
 		// this method is called when the module is being created

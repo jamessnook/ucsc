@@ -35,8 +35,58 @@ return array(
 			//'ipFilters'=>array('127.0.0.1','::1'),
 		),
         'base'=>array(
+			'topNavItems'=>array(
+				array(
+					'label'=>'<i class="icon-dashboard"></i> Dashboard', 
+					'url'=>array('/site/about'), 
+					'visible'=>false,
+				),
+				array(
+					'label'=>'Courses', 
+					'url'=>array('/course/courses', 
+						'term_code'=>$model->term_code, ), 
+					'active'=> get_class($model) == 'Course',
+				),
+				array(
+					'label'=>'Assignments', 
+					'url'=>array('/assignment/manage', 
+						'term_code'=>$model->term_code,), 
+					'visible'=>Yii::app()->user->checkAccess('admin'),
+					'active'=> get_class($model) == 'Assignment',
+				),
+				array(
+					'label'=>'<i class="icon-wrench"></i> Reports', 
+					'url'=>array('/course/courses'), 
+					'itemOptions'=>array('class'=>'pull-right'), 
+					'visible'=>Yii::app()->user->checkAccess('admin'),
+					'active'=> false,  // disable for now
+					'visible'=>false,
+				),
+				array(
+					'itemOptions'=>array('class'=>'dropdown pull-right'), 
+					'url'=>'#',
+					'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
+					'label'=>'<i class="icon-user"></i> Users <b class="caret"></b>', 
+					'visible'=>Yii::app()->user->checkAccess('admin'), 
+					'active'=>get_class($model) == 'User',
+					'items'=>array(
+						array(
+							'label'=>'Students', 
+							'url'=>array('user/students', 'term_code'=>$model->term_code,),
+						),
+						array(
+							'label'=>'Faculty', 
+							'url'=>array('user/faculty', 'term_code'=>$model->term_code,), 
+						),
+						array(
+							'label'=>'Staff', 
+							'url'=>array('user/staff', 'term_code'=>$model->term_code,), 
+						),
+					),
+				),
+			),
 		),
-    ),
+	),
     // application controllers from base extension etc.
     /*
     'controllerMap'=>array(
