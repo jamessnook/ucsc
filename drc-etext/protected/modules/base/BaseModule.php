@@ -3,10 +3,16 @@
 class BaseModule extends CWebModule
 {
 	/**
-	 * @var array()
-	 * @desc top left menu items in _main layout
+	 * @var object
+	 * @desc holds methods and attributes for dynamic configuration
 	 */
-	public $topNavItems = array();
+	public $dynamicConfig;
+	
+	/**
+	 * @var cwidget
+	 * @desc defines the top nav tab menu
+	 */
+	public $tabMenu;
 	
 	public function init()
 	{
@@ -18,6 +24,10 @@ class BaseModule extends CWebModule
 			'base.models.*',
 			'base.components.*',
 		));
+		
+		if (!$tabMenu){
+			$tabMenu = new TabMenu;
+		}
 	}
 
 	public function beforeControllerAction($controller, $action)

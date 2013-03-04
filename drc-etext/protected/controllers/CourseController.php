@@ -332,6 +332,7 @@ class CourseController extends Controller
 	 */
 	public function setDefaultViewOptions()
 	{
+		parent::setDefaultViewOptions();
 		$this->viewOptions['menuView'] = '../layouts/_courseMenu';  // default
 		$this->viewOptions['title'] = $this->model->title .' (' .$this->model->idString().')';
 		$this->viewOptions['activeTab'] = "courses";

@@ -1,7 +1,7 @@
 <?php
 /**
  * The base view component file for page layout.
- * This includes configurable content and is then contained in the main.php layout file whoch is just an outer non configurable frame
+ * This includes configurable content and is then contained in the main.php layout file which is just an outer non configurable frame
  * Can be included in a composite view 
  *
  * @author Jim Snook <jsnook@ucsc.edu>
@@ -21,88 +21,7 @@ $options = $this->viewOptions;
 		  <div class="row-fluid">
 			<div class="span12">
 			  <?php 
-				$this->widget('zii.widgets.CMenu',array(
-					'htmlOptions'=>array('class'=>'nav nav-tabs'), 
-					'submenuHtmlOptions'=>array('class'=>'dropdown-menu'), 
-					'encodeLabel'=>false,
-					'items'=>$this->module->topNavItems,
-					/*
-					'items'=>array(
-						array(
-							'label'=>'<i class="icon-dashboard"></i> Dashboard', 
-							'url'=>array('/site/about'), 
-							'visible'=>false,
-						),
-						array(
-							'label'=>'Courses', 
-							'url'=>array('/course/courses', 
-								'term_code'=>$model->term_code, ), 
-							'active'=> get_class($model) == 'Course',
-						),
-						array(
-							'label'=>'Assignments', 
-							'url'=>array('/assignment/manage', 
-								'term_code'=>$model->term_code,), 
-							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=> get_class($model) == 'Assignment',
-						),
-						array(
-							'label'=>'<i class="icon-wrench"></i> Reports', 
-							'url'=>array('/course/courses'), 
-							'itemOptions'=>array('class'=>'pull-right'), 
-							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=> false,  // disable for now
-							'visible'=>false,
-						),
-						
-						array(
-							'label'=>'<i class="icon-user"></i> Staff', 
-							'url'=>array('/user/staff', 'term_code'=>$model->term_code,), 
-							'itemOptions'=>array('class'=>'pull-right'), 
-							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=> $activeTab == 'staff',
-							//'active'=> get_class($model) == 'User' && (Yii::app()->authManager->checkAccess('staff', $model->username)||Yii::app()->authManager->checkAccess('admin', $model->username)),
-						),
-						array(
-							'label'=>'<i class="icon-user"></i> Faculty', 
-							'url'=>array('/user/faculty', 'term_code'=>$model->term_code,), 
-							'itemOptions'=>array('class'=>'pull-right'), 
-							'visible'=>Yii::app()->user->checkAccess('admin'),
-							'active'=>  $activeTab == 'faculty',
-						),
-						array(
-							'label'=>'<i class="icon-user"></i> Students', 
-							'url'=>array('/user/students', 'term_code'=>$model->term_code,), 
-							'itemOptions'=>array('class'=>'pull-right'), 
-							'visible'=>Yii::app()->user->checkAccess('admin'), 
-							'active'=> $activeTab == 'students',
-						),
-						array(
-							'itemOptions'=>array('class'=>'dropdown pull-right'), 
-							'url'=>'#',
-							'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
-							'label'=>'<i class="icon-user"></i> Users <b class="caret"></b>', 
-							'visible'=>Yii::app()->user->checkAccess('admin'), 
-							'active'=>get_class($model) == 'User',
-							'items'=>array(
-								array(
-									'label'=>'Students', 
-									'url'=>array('user/students', 'term_code'=>$model->term_code,),
-								),
-								array(
-									'label'=>'Faculty', 
-									'url'=>array('user/faculty', 'term_code'=>$model->term_code,), 
-								),
-								array(
-									'label'=>'Staff', 
-									'url'=>array('user/staff', 'term_code'=>$model->term_code,), 
-								),
-							),
-							
-						),
-					), 
-					*/
-				));
+			  	$tabMenu->run();
 			  ?>
 			</div>
 		  </div>

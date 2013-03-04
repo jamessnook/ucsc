@@ -203,6 +203,7 @@ class UserController extends Controller
 	 */
 	public function setDefaultViewOptions()
 	{
+		parent::setDefaultViewOptions();
 		if (!isset($this->model->term_code)){
 			$this->model->term_code = Term::currentTermCode();
 		}

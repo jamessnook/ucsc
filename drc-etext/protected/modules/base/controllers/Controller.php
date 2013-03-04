@@ -83,14 +83,18 @@ class Controller extends CController
 		$this->viewOptions = array_merge ( $this->viewOptions, $options ); // note $options overide defaults
 		$this->viewOptions['model'] = $this->model;  // for convenience of access
 		$this->viewOptions['contentModel'] = $this->contentModel;  // for convenience of access
-		$this->render('../layouts/_main',$this->viewOptions);
+		$this->viewOptions['tabMenu'] = Yii::app()->getModule("base")->tabMenu;
+		$this->render($this->viewOptions['mainView'], $this->viewOptions);
 	}
 	
 	/**
-	 * does nothing, override in subclass.
+	 * does, override in subclass as needed.
 	 */
 	public function setDefaultViewOptions()
 	{
+		// default assumes use of base app module
+		$this->viewOptions['tabMenu'] = Yii::app()->getModule("base")->tabMenu;
+		$this->viewOptions['mainView'] = 'base.views.layouts._main';
 	}
 	
 	/**
@@ -142,5 +146,5 @@ class Controller extends CController
 		$this->_contentModel = $model;
 	}
 	
-	
+
 }

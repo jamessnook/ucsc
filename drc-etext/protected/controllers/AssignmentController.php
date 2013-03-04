@@ -79,6 +79,7 @@ class AssignmentController extends Controller
 	 */
 	public function setDefaultViewOptions()
 	{
+		parent::setDefaultViewOptions();
 		$this->viewOptions['menuView'] = '../layouts/_termMenu';
 		$this->viewOptions['title'] = $this->model->title;
 		if (!$this->model->title || $this->model->title =='') {
