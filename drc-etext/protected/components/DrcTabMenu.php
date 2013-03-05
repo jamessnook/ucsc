@@ -24,7 +24,7 @@ class DrcTabMenu extends TabMenu
 				'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
 				'label'=>'<i class="icon-user"></i> Users <b class="caret"></b>', 
 				'visible'=>Yii::app()->user->checkAccess('admin'), 
-				'active'=>Yii::app()->controller->id == 'User',
+				'active'=>Yii::app()->controller->id == 'DrcUser',
 				'items'=>array(
 					array(
 						'label'=>'Students', 

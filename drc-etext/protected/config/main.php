@@ -35,7 +35,8 @@ return array(
 			//'ipFilters'=>array('127.0.0.1','::1'),
 		),
         'base'=>array(
-			'tabMenu' => new DrcTabMenu,
+			//'tabMenu' => new DrcTabMenu,
+			//'tabMenuClass' => 'DrcTabMenu',
 		),
 	),
 	// application controllers from base extension etc.
@@ -183,6 +184,12 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
+		// These are used by certain classes and views in the base module
+		'tabMenuClass' => 'DrcTabMenu',
+		'mainView' => 'base.views.layouts._main',
+		'homePage' => '/drcUser/courses',
+		'adminHomePage' => '/drcUser/students',
+	
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 

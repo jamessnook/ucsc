@@ -7,7 +7,7 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.controllers
  */
-class UserController extends Controller
+class DrcUserController extends UserController
 {
 	/**
 	 * @var string the default layout for the views.  Set to use file with no layout.
@@ -49,6 +49,55 @@ class UserController extends Controller
 	}
 
 	
+
+	/**
+	 * Displays a list of students for a specific term.
+	 */
+	public function actionStudents()
+	{
+		//$this->model = User::loadModel();
+		$this->renderView(array(
+			'contentView' => '../user/_list',
+			'dataProvider' => $this->model->students(),
+			'contentTitle' => 'DRC Students',
+			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'menuView' => '../layouts/_termMenu',
+			'menuRoute' => 'user/students',
+		));
+	}
+	
+	/**
+	 * Displays a list of staff.
+	 */
+	public function actionStaff()
+	{
+		//$this->model = User::loadModel();
+		$this->renderView(array(
+			'contentView' => '../user/_staff',
+			'title' => 'DRC User Accounts',
+			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'menuView' => '',
+			'activeTab' => 'staff',
+		));
+	}
+	
+	/**
+	 * Displays a list of faculty for a specific term.
+	 */
+	public function actionFaculty()
+	{
+		//$this->model = User::loadModel();
+		$this->renderView(array(
+			'contentView' => '../user/_list',
+			'dataProvider' => $this->model->faculty(),
+			'contentTitle' => 'Faculty',
+			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'menuView' => '../layouts/_termMenu',
+			'menuRoute' => 'user/faculty',
+			'activeTab' => 'faculty',
+		));
+	}
+	
 	/**
 	 * Displays a list of courses for a drc student or faculty and term.
 	 */
@@ -70,6 +119,7 @@ class UserController extends Controller
 	/**
 	 * sets up default view options for rendering, called by super class renderView and passed to views.
 	 */
+	/*
 	public function setDefaultViewOptions()
 	{
 		if (!isset($this->model->term_code)){
@@ -95,5 +145,5 @@ class UserController extends Controller
 				$this->viewOptions['activeTab'] = "faculty";
 		}
 	}
-	
+	*/
 }

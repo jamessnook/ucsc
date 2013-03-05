@@ -45,6 +45,16 @@ class Controller extends CController
 	public $_contentModel;
 		
 	/**
+	 * @var Site wide tab menu object to be used by all controllers for all views unless other wise set.
+	 */
+	public $tabMenu;
+	
+	/**
+	 * @var Class name for site wide tab menu object to be used by all controllers for all views unless other wise set.
+	 */
+	public $tabMenuClass;
+	
+	/**
 	 * A generic entry point for very similar actions.
 	 * Not currently used this is an laternative approach 
 	 * where the view to use (and other configuration) can be specified in the request parameters.
@@ -83,7 +93,6 @@ class Controller extends CController
 		$this->viewOptions = array_merge ( $this->viewOptions, $options ); // note $options overide defaults
 		$this->viewOptions['model'] = $this->model;  // for convenience of access
 		$this->viewOptions['contentModel'] = $this->contentModel;  // for convenience of access
-		$this->viewOptions['tabMenu'] = Yii::app()->getModule("base")->tabMenu;
 		$this->render($this->viewOptions['mainView'], $this->viewOptions);
 	}
 	
@@ -92,9 +101,19 @@ class Controller extends CController
 	 */
 	public function setDefaultViewOptions()
 	{
-		// default assumes use of base app module
-		$this->viewOptions['tabMenu'] = Yii::app()->getModule("base")->tabMenu;
-		$this->viewOptions['mainView'] = 'base.views.layouts._main';
+		// default assumes use of base app module named 'base'
+		$this->viewOptions['tabMenuClass'] = 'TabMenu';
+		if (isset(Yii::app()->params['tabMenuClass'])){
+			$this->viewOptions['tabMenuClass'] = Yii::app()->params['tabMenuClass'];
+		}
+		//$this->viewOptions['mainView'] = 'base.views.layouts._main';
+		$ModulePath = substr(__DIR__, 0, strrpos(__DIR__, "/"));
+		$ModuleId = substr($ModulePath, strrpos($ModulePath, "/"));
+		echo "DIR= " . __DIR__ . ",  Path= " . $ModulePath  . ",  Id= " . $ModuleId;
+		$this->viewOptions['mainView'] = $ModuleId . '.views.layouts._main';
+		if (isset(Yii::app()->params['mainView'])){
+			$this->viewOptions['mainView'] =  Yii::app()->params['mainView'];
+		}
 	}
 	
 	/**

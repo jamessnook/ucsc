@@ -21,7 +21,7 @@ $options = $this->viewOptions;
 		  <div class="row-fluid">
 			<div class="span12">
 			  <?php 
-			  	$tabMenu->run();
+				$this->widget($tabMenuClass);
 			  ?>
 			</div>
 		  </div>

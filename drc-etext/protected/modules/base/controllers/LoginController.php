@@ -95,9 +95,9 @@ class LoginController extends Controller
 			if($model->validate() && $model->login())
 				//$this->redirect(Yii::app()->user->returnUrl);
 				if (Yii::app()->user->checkAccess('admin')){
-					$this->redirect($this->createUrl('user/students'));
+					$this->redirect($this->createUrl( Yii::app()->params['adminHomePage']));
 				} else {
-					$this->redirect($this->createUrl('user/courses', array('username'=>Yii::app()->user->name,)));
+					$this->redirect($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
 				}
 		}
 		// display the login form

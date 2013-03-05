@@ -8,12 +8,7 @@ class BaseModule extends CWebModule
 	 */
 	public $dynamicConfig;
 	
-	/**
-	 * @var cwidget
-	 * @desc defines the top nav tab menu
-	 */
-	public $tabMenu;
-	
+
 	public function init()
 	{
 		// this method is called when the module is being created
@@ -24,10 +19,6 @@ class BaseModule extends CWebModule
 			'base.models.*',
 			'base.components.*',
 		));
-		
-		if (!$tabMenu){
-			$tabMenu = new TabMenu;
-		}
 	}
 
 	public function beforeControllerAction($controller, $action)

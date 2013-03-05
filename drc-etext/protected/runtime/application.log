@@ -4520,3 +4520,244 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/base/user/courses/username/aaelsey/term_code/2122
 HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/faculty/term_code/2122
 ---
+2013/03/05 02:28:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php?r=login/login
+---
+2013/03/05 02:29:38 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "students".' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(226): CComponent->__call('students', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php(105): CActiveRecord->__call('students', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php(105): User->students()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionStudents()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/user/stude...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/base/user/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 02:38:06 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "students".' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(226): CComponent->__call('students', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php(105): CActiveRecord->__call('students', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php(105): User->students()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionStudents()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/user/stude...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/base/user/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 02:42:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "base/drcUser/students".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/drcUser/st...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/base/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 02:43:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "drcUser/students".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 02:44:41 [error] [php] Undefined index: mainView (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php:96)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): DrcUserController->runAction()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): DrcUserController->filterAccessControl()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): DrcUserController->runActionWithFilters()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): DrcUserController->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (96)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (66)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/05 02:46:29 [error] [exception.CException] exception 'CException' with message 'DrcUserController cannot find the requested view ".views.layouts._main".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('.views.layouts....', Array, true)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('.views.layouts....', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): Controller->renderView(Array)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 02:49:07 [error] [exception.CException] exception 'CException' with message 'DrcUserController cannot find the requested view ".views.layouts._main".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('.views.layouts....', Array, true)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('.views.layouts....', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): Controller->renderView(Array)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 02:53:03 [error] [php] include(BaseController.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(11): spl_autoload_call()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(344): require()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(270): CWebApplication->createController()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (11)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/05 02:55:42 [error] [exception.CException] exception 'CException' with message 'DrcUserController cannot find the requested view ".views.layouts._main".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('.views.layouts....', Array, true)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('.views.layouts....', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): Controller->renderView(Array)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 02:58:49 [error] [exception.CException] exception 'CException' with message 'DrcUserController cannot find the requested view ".views.layouts._main".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('.views.layouts....', Array, true)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('.views.layouts....', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): Controller->renderView(Array)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 03:00:04 [error] [php] Undefined index: active (C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\CMenu.php:190)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(174): DrcTabMenu->run()
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(24): DrcUserController->widget()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): DrcUserController->renderInternal()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): DrcUserController->renderFile()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): DrcUserController->renderPartial()
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): DrcUserController->render()
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): DrcUserController->renderView()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): DrcUserController->runAction()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): DrcUserController->filterAccessControl()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): DrcUserController->runActionWithFilters()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): DrcUserController->run()
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php (24)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (96)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (66)
+2013/03/05 03:04:46 [error] [php] Undefined index: active (C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\CMenu.php:190)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(174): DrcTabMenu->run()
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(24): DrcUserController->widget()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): DrcUserController->renderInternal()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): DrcUserController->renderFile()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): DrcUserController->renderPartial()
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): DrcUserController->render()
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): DrcUserController->renderView()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): DrcUserController->runAction()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): DrcUserController->filterAccessControl()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): DrcUserController->runActionWithFilters()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): DrcUserController->run()
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php (24)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (96)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (66)
