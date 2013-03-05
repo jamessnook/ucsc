@@ -57,12 +57,11 @@ class DrcUserController extends UserController
 	{
 		//$this->model = User::loadModel();
 		$this->renderView(array(
-			'contentView' => '../user/_list',
+			'contentView' => '//drcUser/_list',
 			'dataProvider' => $this->model->students(),
 			'contentTitle' => 'DRC Students',
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
-			'menuView' => '../layouts/_termMenu',
-			'menuRoute' => 'user/students',
+			'menuView' => '/layouts/_termMenu',
 		));
 	}
 	
@@ -73,7 +72,7 @@ class DrcUserController extends UserController
 	{
 		//$this->model = User::loadModel();
 		$this->renderView(array(
-			'contentView' => '../user/_staff',
+			'contentView' => '../drcUser/_staff',
 			'title' => 'DRC User Accounts',
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'menuView' => '',
@@ -88,12 +87,12 @@ class DrcUserController extends UserController
 	{
 		//$this->model = User::loadModel();
 		$this->renderView(array(
-			'contentView' => '../user/_list',
+			'contentView' => '../drcUser/_list',
 			'dataProvider' => $this->model->faculty(),
 			'contentTitle' => 'Faculty',
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'menuView' => '../layouts/_termMenu',
-			'menuRoute' => 'user/faculty',
+			'menuRoute' => 'drcUser/faculty',
 			'activeTab' => 'faculty',
 		));
 	}
@@ -106,13 +105,13 @@ class DrcUserController extends UserController
 		//if (!Yii::app()->user->checkAccess('admin')){
 		//	$this->model=User::model()->findByPk(Yii::app()->user->name);
 		//} else {
-			$this->model = User::loadModel();
+			$this->model = DrcUser::loadModel();
 		//}
 		$this->renderView(array(
 			'contentView' => '../course/_list',
 			'menuView' => 'base.views.layouts._termMenu',
 			'menuRoute' => 'drcUser/courses',
-			'titleNavRight' => '<a href="' . $this->createUrl('base/user/update', array('term_code'=> $this->model->term_code, 'username'=>$this->model->username)) . '"><i class="icon-plus"></i> User Profile</a>',
+			'titleNavRight' => '<a href="' . $this->createUrl('drcUser/update', array('term_code'=> $this->model->term_code, 'username'=>$this->model->username)) . '"><i class="icon-plus"></i> User Profile</a>',
 		));
 	}
 	

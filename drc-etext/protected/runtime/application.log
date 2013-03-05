@@ -4761,3 +4761,297 @@ REQUEST_URI=/drc-etext/index.php/drcUser/students
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php (24)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (96)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (66)
+2013/03/05 05:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/
+---
+2013/03/05 05:05:22 [error] [php] Undefined index: active (C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CMenu.php:190)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(174): DrcTabMenu->run()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(24): DrcUserController->widget()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): DrcUserController->renderInternal()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): DrcUserController->renderFile()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): DrcUserController->renderPartial()
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): DrcUserController->render()
+#7 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): DrcUserController->renderView()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): DrcUserController->runAction()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): DrcUserController->filterAccessControl()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): DrcUserController->runActionWithFilters()
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): DrcUserController->run()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php (24)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (96)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (66)
+2013/03/05 05:19:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/students/term_code/2122".' in C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/students/t...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/user/students/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/students
+---
+2013/03/05 05:51:32 [error] [exception.CException] exception 'CException' with message 'DrcUserController cannot find the requested view "../drcUser/_list".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../drcUser/_lis...', Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('base.views.layo...', Array)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): Controller->renderView(Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#18 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 05:52:15 [error] [exception.CException] exception 'CException' with message 'DrcUserController cannot find the requested view "../drcUser/_list".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../drcUser/_lis...', Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('base.views.layo...', Array)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): Controller->renderView(Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#18 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 05:57:46 [error] [exception.CException] exception 'CException' with message 'DrcUserController cannot find the requested view "application/views/drcUser/_list".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('application/vie...', Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('base.views.layo...', Array)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): Controller->renderView(Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#18 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 05:58:54 [error] [exception.CException] exception 'CException' with message 'DrcUserController cannot find the requested view "application.views.drcUser._list".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('application.vie...', Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('base.views.layo...', Array)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): Controller->renderView(Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#18 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 06:04:36 [error] [exception.CException] exception 'CException' with message 'DrcUserController cannot find the requested view "//drcUser/_list".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('//drcUser/_list', Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('base.views.layo...', Array)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(66): Controller->renderView(Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#18 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/05 08:24:04 [error] [exception.CException] exception 'CException' with message 'Property "DrcTabMenu.model" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\DrcTabMenu.php(23): CComponent->__get('model')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(148): DrcTabMenu->init()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('DrcTabMenu', Array)
+#3 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(24): CBaseController->widget('DrcTabMenu')
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#8 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('base.views.layo...', Array)
+#9 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(65): Controller->renderView(Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#21 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/students/term_code/2120
+---
+2013/03/05 08:27:24 [error] [exception.CException] exception 'CException' with message 'Property "DrcTabMenu.model" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\components\DrcTabMenu.php(29): CComponent->__get('model')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(148): DrcTabMenu->init()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('DrcTabMenu', Array)
+#3 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(24): CBaseController->widget('DrcTabMenu')
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#8 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('base.views.layo...', Array)
+#9 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(65): Controller->renderView(Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionStudents()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#21 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/students/term_code/2120
+---
+2013/03/05 08:28:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/students/term_code/2122".' in C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/students/t...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/user/students/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/courses/term_code/2122
+---
+2013/03/05 08:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/students/term_code/2122".' in C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/students/t...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/user/students/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/courses/term_code/2122
+---
+2013/03/05 08:57:45 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (108)
+2013/03/05 08:57:45 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "courses".' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(226): CComponent->__call('courses', Array)
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_list.php(20): CActiveRecord->__call('courses', Array)
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_list.php(20): User->courses()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../course/_list', Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#11 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('base.views.layo...', Array)
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(115): Controller->renderView(Array)
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionCourses()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/courses...')
+#24 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/courses/username/achloe6d87/term_code/2120
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/students/term_code/2120
+---
+2013/03/05 09:01:06 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/05 09:01:20 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)

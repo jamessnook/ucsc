@@ -107,9 +107,7 @@ class Controller extends CController
 			$this->viewOptions['tabMenuClass'] = Yii::app()->params['tabMenuClass'];
 		}
 		//$this->viewOptions['mainView'] = 'base.views.layouts._main';
-		$ModulePath = substr(__DIR__, 0, strrpos(__DIR__, "/"));
-		$ModuleId = substr($ModulePath, strrpos($ModulePath, "/"));
-		echo "DIR= " . __DIR__ . ",  Path= " . $ModulePath  . ",  Id= " . $ModuleId;
+		$ModuleId = basename(dirname(__DIR__));
 		$this->viewOptions['mainView'] = $ModuleId . '.views.layouts._main';
 		if (isset(Yii::app()->params['mainView'])){
 			$this->viewOptions['mainView'] =  Yii::app()->params['mainView'];
