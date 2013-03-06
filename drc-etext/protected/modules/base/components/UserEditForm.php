@@ -1,32 +1,27 @@
 <?php
 /**
- * The base view component for displaying and editing a user model.
- * Can be included in a composite view 
- *
- * @author Jim Snook <jsnook@ucsc.edu>
- * @copyright Copyright &copy; 2012 University of California, Santa Cruz
- * @package drc-etext.protected.views.user
+ * UerEditFOrm class file.
+ * @author J Snook <jsnook@ucsc.edu>
+ * @package xx.widgets
  */
-?>
 
-<div class="form">
+Yii::import('zii.widgets.CActiveForm');
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'assignment-form',
-	'enableAjaxValidation'=>false,
-	'action'=> $action,
-	'htmlOptions' => array('enctype' => 'multipart/form-data'),
-)); ?>
-
-		<div class="row-fluid">
-            <div class="span12">
-				<h2><?php echo $contentTitle; ?></h2>
-				<br />
-				
-            	<form class="" action="request-edit.html">
-            	
-					<fieldset>
-			          <div class="control-group">
+class UserEditForm extends CActiveForm
+{
+	public function init()
+	{
+		parent::init();
+		$this->id = 'assignment-form';
+		$this->action = $action;
+	}
+	
+	/**
+	 * Puts contetn in the middle of the widget.
+	 */
+	public function displayContent()
+	{
+				          <div class="control-group">
 						<?php echo $form->labelEx($model,'username'); ?>
 			            <div class="controls">
 			            
@@ -100,11 +95,7 @@
 			          </div>
 			        </fieldset>
 			      </form>
-		
-            </div><!--/span-->
-        </div><!--/row-->
-
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
-        
+		echo '';
+	}
+	
+}

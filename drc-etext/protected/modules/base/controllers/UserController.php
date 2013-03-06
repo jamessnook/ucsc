@@ -89,7 +89,6 @@ class UserController extends Controller
 		//$this->model = User::loadModel();
 		$this->renderView(array(
 			'contentView' => '../user/_view',
-			'menuView' => '../layouts/_userMenu',
 		));
 	}
 	
@@ -110,7 +109,6 @@ class UserController extends Controller
 			'createNew'=>false,
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'action'=>Yii::app()->createUrl("user/save", array('username'=>$this->model->username)),
-			'menuView' => '../layouts/_userMenu',
 		));
 	}
 	
@@ -127,25 +125,6 @@ class UserController extends Controller
 			'activeTab'=>'staff',
 			'action'=>$this->createUrl("user/save"),
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
-			'menuView' => '../layouts/_userMenu',
-		));
-	}
-	
-	/**
-	 * Displays a list of courses for a drc student or faculty and term.
-	 */
-	public function actionCourses()
-	{
-		//if (!Yii::app()->user->checkAccess('admin')){
-		//	$this->model=User::model()->findByPk(Yii::app()->user->name);
-		//} else {
-			$this->model = User::loadModel();
-		//}
-		$this->renderView(array(
-			'contentView' => '../course/_list',
-			'menuView' => '../layouts/_termMenu',
-			'menuRoute' => 'user/courses',
-			'titleNavRight' => '<a href="' . $this->createUrl('user/update', array('term_code'=> $this->model->term_code, 'username'=>$this->model->username)) . '"><i class="icon-plus"></i> User Profile</a>',
 		));
 	}
 	
@@ -160,6 +139,7 @@ class UserController extends Controller
 		}
 		//echo 'tc: ' . $this->model->term_code;
 		$model = $this->model;
+		$this->viewOptions['menuView']='../layouts/_userMenu';
 		$this->viewOptions['title']="($model->username) $model->first_name $model->last_name";
 		if (!$model->username || $model->username ==''){
 			$this->viewOptions['title'] = "Users";
@@ -167,15 +147,6 @@ class UserController extends Controller
 				//$term=Term::model()->findByPk($model->term_code);
 				//$this->viewOptions['title'] = $term->description;
 			}
-		}
-		$this->viewOptions['activeTab'] = "students";
-		if ($model->username){
-			if(Yii::app()->authManager->checkAccess('staff', $model->username))
-				$this->viewOptions['activeTab'] = "staff";
-			if (Yii::app()->authManager->checkAccess('admin', $model->username)) 
-				$this->viewOptions['activeTab'] = "staff";
-			if (Yii::app()->authManager->checkAccess('faculty', $model->username)) 
-				$this->viewOptions['activeTab'] = "faculty";
 		}
 	}
 	

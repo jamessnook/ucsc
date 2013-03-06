@@ -49,7 +49,27 @@ class DrcUserController extends UserController
 	}
 
 	
-
+	/**
+	 * Displays form to update data for an existing user.
+	 */
+	public function actionUpdate()
+	{
+	    if (!Yii::app()->user->checkAccess('admin')){
+			return $this->actionView();
+	    }
+		$this->model = User::loadModel();
+		if($this->model===null)
+			throw new CHttpException(404,'The requested user does not exist.');
+		$this->renderView(array(
+			'contentView' => '../user/_edit',
+			'contentTitle' => 'Update User Data',
+			'createNew'=>false,
+			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'action'=>Yii::app()->createUrl("user/save", array('username'=>$this->model->username)),
+		));
+	}
+	
+	
 	/**
 	 * Displays a list of students for a specific term.
 	 */
@@ -61,7 +81,7 @@ class DrcUserController extends UserController
 			'dataProvider' => $this->model->students(),
 			'contentTitle' => 'DRC Students',
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
-			'menuView' => '/layouts/_termMenu',
+			'menuView' => 'base.views.layouts._termMenu',
 		));
 	}
 	
@@ -91,7 +111,7 @@ class DrcUserController extends UserController
 			'dataProvider' => $this->model->faculty(),
 			'contentTitle' => 'Faculty',
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
-			'menuView' => '../layouts/_termMenu',
+			'menuView' => 'base.views.layouts._termMenu',
 			'menuRoute' => 'drcUser/faculty',
 			'activeTab' => 'faculty',
 		));
@@ -118,23 +138,13 @@ class DrcUserController extends UserController
 	/**
 	 * sets up default view options for rendering, called by super class renderView and passed to views.
 	 */
-	/*
+	
 	public function setDefaultViewOptions()
 	{
-		if (!isset($this->model->term_code)){
-			$this->model->term_code = Term::currentTermCode();
-		}
-		//echo 'tc: ' . $this->model->term_code;
-		$model = $this->model;
-		$this->viewOptions['title']="($model->username) $model->first_name $model->last_name";
-		if (!$model->username || $model->username ==''){
-			$this->viewOptions['title'] = "Users";
-			if ($model->term_code){
-				//$term=Term::model()->findByPk($model->term_code);
-				//$this->viewOptions['title'] = $term->description;
-			}
-		}
+		parent::setDefaultViewOptions();
+		$this->viewOptions['menuView']='//layouts/_userMenu';
 		$this->viewOptions['activeTab'] = "students";
+		$model = $this->model;
 		if ($model->username){
 			if(Yii::app()->authManager->checkAccess('staff', $model->username))
 				$this->viewOptions['activeTab'] = "staff";
@@ -144,5 +154,5 @@ class DrcUserController extends UserController
 				$this->viewOptions['activeTab'] = "faculty";
 		}
 	}
-	*/
+	
 }
