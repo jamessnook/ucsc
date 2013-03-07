@@ -11,23 +11,56 @@ class BaseForm extends CActiveForm
 {
 	/**
 	 * Form Content
-	 * optional, the content of this attribute is echoed as the box content
+	 * optional, the content of this form
 	 * @var string
 	 */
-	public $content = '';
+	public $contentHTML = '';
+	
+	/**
+	 * Form Content
+	 * optional, the content of this form
+	 * @var string
+	 */
+	public $widgetClass = null;
+	
+	/**
+	 * Form Content
+	 * optional, the content of this form
+	 * @var string
+	 */
+	public $widgetProperties = array();
+	
+	/**
+	 * Form Content
+	 * optional, the content of this form
+	 * @var string
+	 */
+	public $widgets = array();
+	
 	/**
 	 * box content HTML additional attributes
 	 * @var array
 	 */
 	public $htmlContentOptions = array();
 	
+	/**
+	 * Form Model
+	 * The data model object for the form content
+	 * @var string
+	 */
+	public $model = null;
+	
 	public function init()
 	{
-		parent::init();
 		$this->htmlOptions = array('enctype' => 'multipart/form-data'); 
 		$this->enableAjaxValidation = false; 
-		$this->id = 'assignment-form';
-		$this->action = $action;
+		parent::init();
+		echo '<form class="" action="request-edit.html">';
+		echo '<fieldset> ';
+		foreach ($this->widgets as $wConf ){
+			$this->widget($wConf['className'], $wConf);
+			//$this->controller->widget($wConf['className'], $wConf);
+		}
 	}
 	
 	/**
@@ -35,11 +68,10 @@ class BaseForm extends CActiveForm
 	 */
 	public function run()
 	{
-		echo '<form class="" action="request-edit.html">';
-			echo '<fieldset> ';
-				$this->displayContent();
-			echo '</fieldset>';
+		$this->displayContent();
+		echo '</fieldset>';
 		echo '</form>';
+		parent::run();
 	}
 	
 	/**
@@ -47,25 +79,27 @@ class BaseForm extends CActiveForm
 	 */
 	public function displayContent()
 	{
-		echo $this->content;
+		echo $this->contentHTML;
 	}
 	
 	/*
 	  * Renders the opening of the content element and the optional content
 	  */
+	/*
 	public function renderContentBegin()
 	{
 		echo CHtml::openTag('div', $this->htmlContentOptions);
 		if (!empty($this->content))
 			echo $this->content;
 	}
-
+	*/
 	/*
 	 * Closes the content element
 	 */
+	/*
 	public function renderContentEnd()
 	{
 		echo CHtml::closeTag('div');
 	}
-	
+	*/
 }

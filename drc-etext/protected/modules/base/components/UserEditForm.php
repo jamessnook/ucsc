@@ -7,95 +7,53 @@
 
 Yii::import('zii.widgets.CActiveForm');
 
-class UserEditForm extends CActiveForm
+class UserEditForm extends BaseForm
 {
 	public function init()
 	{
+		$this->id = 'user-edit-form';
+		$this->widgets = array(
+			/*
+			'username'=>array( 'className' => 'BaseControl', 'type' => 'textField',	),
+			'first_name'=>array( 'className' => 'BaseControl', 'type' => 'textField',	),
+			'last_name'=>array( 'className' => 'BaseControl', 'type' => 'textField',	),
+			'email'=>array( 'className' => 'BaseControl', 'type' => 'textField',	),
+			'phone'=>array( 'className' => 'BaseControl', 'type' => 'textField',	),
+			*/
+		);
 		parent::init();
-		$this->id = 'assignment-form';
-		$this->action = $action;
+		$this->controller->widget('BaseControl', array( 'name' => 'username', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, ));
+		$this->controller->widget('BaseControl', array( 'name' => 'first_name', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this,));
+		$this->controller->widget('BaseControl', array( 'name' => 'last_name', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, '$htmlContentOptions'=>array('maxlength'=>127)));
+		$this->controller->widget('BaseControl', array( 'name' => 'email', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, '$htmlContentOptions'=>array('maxlength'=>127)));
+		$this->controller->widget('BaseControl', array( 'name' => 'phone', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this,));
+		echo ' <div class="control-group">';
+        echo CHtml::label('Role', 'role');
+        echo '<div class="controls">';
+				
+		$username = $model->username;
+        $userRoles = Yii::app()->authManager->getRoles($username);
+        $selected = key($userRoles);
+        //if (!$username) $selected = rtrim($activeTab, 's');
+        if (!$username) $selected = 'staff';
+        $options = array();
+        $roles = array_keys (Yii::app()->authManager->getRoles());
+        foreach ($roles as $role){
+        	$options[$role]=$role;
+        }
+        echo CHtml::dropDownList('role', $selected, $options);
+
+        echo '</div>';
+        echo '</div>';
+
+        echo '<div class="form-actions">';
+          
+		echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" ));
+		echo CHtml::button('Cancel', array( 'class'=>"btn", 'onclick'=> "history.back()" )); 
+            
+        echo '</div>';
+		
 	}
 	
-	/**
-	 * Puts contetn in the middle of the widget.
-	 */
-	public function displayContent()
-	{
-				          <div class="control-group">
-						<?php echo $form->labelEx($model,'username'); ?>
-			            <div class="controls">
-			            
-							<?php echo $form->textField($model,'username',array('class'=>"input-xxlarge",'maxlength'=>63)); // also? id="input01", type="text" ?>
-							<?php echo $form->error($model,'username'); ?>
-			              
-			            </div>
-			          </div>
-			          <div class="control-group">
-						<?php echo $form->labelEx($model,'first_name'); ?>
-			            <div class="controls">
-			            
-							<?php echo $form->textField($model,'first_name',array('class'=>"input-xxlarge",'maxlength'=>63)); // also? id="input01", type="text" ?>
-							<?php echo $form->error($model,'first_name'); ?>
-			              
-			            </div>
-			          </div>
-			          <div class="control-group">
-						<?php echo $form->labelEx($model,'last_name'); ?>
-			            <div class="controls">
-			            
-							<?php echo $form->textField($model,'last_name',array('class'=>"input-xxlarge",'maxlength'=>127)); // also? id="input01", type="text" ?>
-							<?php echo $form->error($model,'last_name'); ?>
-			              
-			            </div>
-			          </div>
-			          <div class="control-group">
-						<?php echo $form->labelEx($model,'email'); ?>
-			            <div class="controls">
-			            
-							<?php echo $form->textField($model,'email',array('class'=>"input-xxlarge",'maxlength'=>127)); // also? id="input01", type="text" ?>
-							<?php echo $form->error($model,'email'); ?>
-			              
-			            </div>
-			          </div>
-			          <div class="control-group">
-						<?php echo $form->labelEx($model,'phone'); ?>
-			            <div class="controls">
-			            
-							<?php echo $form->textField($model,'phone',array('class'=>"input-xxlarge",'maxlength'=>31)); // also? id="input01", type="text" ?>
-							<?php echo $form->error($model,'phone'); ?>
-			              
-			            </div>
-			          </div>
-
-			          <div class="control-group">
-        				<?php 	echo CHtml::label('Role', 'role'); ?>
-			            <div class="controls">
-							
-					        <?php 	$username = $model->username;
-					        		$userRoles = Yii::app()->authManager->getRoles($username);
-					        		$selected = key($userRoles);
-					        		//if (!$username) $selected = rtrim($activeTab, 's');
-					        		if (!$username) $selected = 'staff';
-					        		$options = array();
-					        		$roles = array_keys (Yii::app()->authManager->getRoles());
-					        		foreach ($roles as $role){
-					        			$options[$role]=$role;
-					        		}
-					        		echo CHtml::dropDownList('role', $selected, $options);
-					        ?>
-
-			            </div>
-			          </div>
-
-			          <div class="form-actions">
-			          
-						<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" )); ?>
-						<?php echo CHtml::button('Cancel', array( 'class'=>"btn", 'onclick'=> "history.back()" )); ?>
-			            
-			          </div>
-			        </fieldset>
-			      </form>
-		echo '';
-	}
 	
 }

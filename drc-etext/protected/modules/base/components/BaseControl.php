@@ -28,18 +28,17 @@ class BaseControl extends CWidget
 	public $htmlContentOptions = array();
 	
 	/**
-	 * Form Content
-	 * optional, the content of this attribute is echoed as the box content
+	 * Form Model
+	 * The data model object for the form content
 	 * @var string
 	 */
-	public $model = '';
+	public $model = null;
 	
 	/**
-	 * Form object thois control goes in
-	 * optional, the content of this attribute is echoed as the box content
+	 * Form object this control goes in
 	 * @var string
 	 */
-	public $model = '';
+	public $form = '';
 	
 	/**
 	 * Control HTML additional attributes
@@ -71,19 +70,19 @@ class BaseControl extends CWidget
 	public function run()
 	{
 		echo '<div class="control-group">';
-		 	echo $form->labelEx($this->model, $this->name); 
+		 	echo $this->form->labelEx($this->model, $this->name); 
 			echo '<div class="controls"> ';
 				if ($type){
-					echo $form->$type($this->model, $this->name, $this->$htmlContentOptions); 
+					echo $this->form->$type($this->model, $this->name, $this->$htmlContentOptions); 
 				}
 				$this->displayContent();
-				echo $form->error($this->model, $this->name); 
+				echo $this->form->error($this->model, $this->name); 
 			echo '</div>';
 		echo '</div>';
 	}
 	
 	/**
-	 * Puts contetn in the middle of the widget, override in subclass.
+	 * Puts content in the middle of the widget, override in subclass.
 	 */
 	public function displayContent()
 	{
