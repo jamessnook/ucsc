@@ -38,7 +38,7 @@ class BaseControl extends CWidget
 	 * Form object this control goes in
 	 * @var string
 	 */
-	public $form = '';
+	public $form = null;
 	
 	/**
 	 * Control HTML additional attributes
@@ -61,7 +61,7 @@ class BaseControl extends CWidget
 	public function init()
 	{
 		parent::init();
-		$htmlContentOptions = array_merge($htmlContentDefaultOptions, $htmlContentOptions);
+		$this->htmlContentOptions = array_merge($this->htmlContentDefaultOptions, $this->htmlContentOptions);
 	}
 	
 	/**
@@ -72,8 +72,8 @@ class BaseControl extends CWidget
 		echo '<div class="control-group">';
 		 	echo $this->form->labelEx($this->model, $this->name); 
 			echo '<div class="controls"> ';
-				if ($type){
-					echo $this->form->$type($this->model, $this->name, $this->$htmlContentOptions); 
+				if ($this->type){
+					echo $this->form->{$this->type}($this->model, $this->name, $this->htmlContentOptions); 
 				}
 				$this->displayContent();
 				echo $this->form->error($this->model, $this->name); 

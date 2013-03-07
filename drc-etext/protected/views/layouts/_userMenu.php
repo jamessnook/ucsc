@@ -10,7 +10,7 @@
 ?>
 
 <?php 
-	$url = array('user/courses');
+	$url = array('drcUser/courses');
 	// add parameters only if they exist
 	//if ($model->username && strlen($model->username)>1) $url['username'] = $model->username;
 	//if ($model->term_code && strlen($model->term_code)>1) $url['term_code'] = $model->term_code;  // make general code to do this....

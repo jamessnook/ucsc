@@ -5,7 +5,7 @@
  * @package xx.widgets
  */
 
-Yii::import('zii.widgets.CActiveForm');
+//Yii::import('zii.widgets.CActiveForm');
 
 class UserEditForm extends BaseForm
 {
@@ -24,14 +24,14 @@ class UserEditForm extends BaseForm
 		parent::init();
 		$this->controller->widget('BaseControl', array( 'name' => 'username', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, ));
 		$this->controller->widget('BaseControl', array( 'name' => 'first_name', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this,));
-		$this->controller->widget('BaseControl', array( 'name' => 'last_name', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, '$htmlContentOptions'=>array('maxlength'=>127)));
-		$this->controller->widget('BaseControl', array( 'name' => 'email', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, '$htmlContentOptions'=>array('maxlength'=>127)));
+		$this->controller->widget('BaseControl', array( 'name' => 'last_name', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, 'htmlContentOptions'=>array('maxlength'=>127)));
+		$this->controller->widget('BaseControl', array( 'name' => 'email', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, 'htmlContentOptions'=>array('maxlength'=>127)));
 		$this->controller->widget('BaseControl', array( 'name' => 'phone', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this,));
 		echo ' <div class="control-group">';
         echo CHtml::label('Role', 'role');
         echo '<div class="controls">';
 				
-		$username = $model->username;
+		$username = $this->model->username;
         $userRoles = Yii::app()->authManager->getRoles($username);
         $selected = key($userRoles);
         //if (!$username) $selected = rtrim($activeTab, 's');
@@ -48,7 +48,7 @@ class UserEditForm extends BaseForm
 
         echo '<div class="form-actions">';
           
-		echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" ));
+		echo CHtml::submitButton($this->model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" ));
 		echo CHtml::button('Cancel', array( 'class'=>"btn", 'onclick'=> "history.back()" )); 
             
         echo '</div>';

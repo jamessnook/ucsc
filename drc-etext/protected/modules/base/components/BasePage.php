@@ -5,10 +5,17 @@
  * @package xx.widgets
  */
 
-//Yii::import('zii.widgets.CMenu');
+Yii::import('zii.widgets.CMenu');
 
-class BaseForm extends CActiveForm
+class BasePage extends CWidget
 {
+	/**
+	 * Page title
+	 * optional, the title of this page
+	 * @var string
+	 */
+	public $title = null;
+	
 	/**
 	 * Form Content
 	 * optional, the content of this form
@@ -17,31 +24,10 @@ class BaseForm extends CActiveForm
 	public $contentHTML = '';
 	
 	/**
-	 * Form Content
-	 * optional, the content of this form
-	 * @var string
-	 */
-	public $widgetClass = null;
-	
-	/**
-	 * Form Content
-	 * optional, the content of this form
-	 * @var string
-	 */
-	public $widgetProperties = array();
-	
-	/**
-	 * Form Content
-	 * optional, the content of this form
-	 * @var string
-	 */
-	public $widgets = array();
-	
-	/**
 	 * box content HTML additional attributes
 	 * @var array
 	 */
-	public $htmlContentOptions = array();
+	public $htmlOptions = array();
 	
 	/**
 	 * Form Model
@@ -52,14 +38,11 @@ class BaseForm extends CActiveForm
 	
 	public function init()
 	{
-		$this->htmlOptions = array('enctype' => 'multipart/form-data'); 
-		$this->enableAjaxValidation = false; 
 		parent::init();
-		echo '<form class="" action="request-edit.html">';
-		echo '<fieldset> ';
-		foreach ($this->widgets as $wConf ){
-			$this->widget($wConf['className'], $wConf);
-			//$this->controller->widget($wConf['className'], $wConf);
+		echo CHtml::openTag('div', $this->htmlOptions);
+		echo '<div class="row-fluid"> <div class="span12">';
+        if ($this->title){ 
+			echo '<h2><?php echo $title; ?></h2><br />';
 		}
 	}
 	
@@ -69,9 +52,7 @@ class BaseForm extends CActiveForm
 	public function run()
 	{
 		$this->displayContent();
-		echo '</fieldset>';
-		echo '</form>';
-		parent::run();
+		echo '</div></div></div>';
 	}
 	
 	/**

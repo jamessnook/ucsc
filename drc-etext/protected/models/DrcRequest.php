@@ -78,7 +78,7 @@ class DrcRequest extends CActiveRecord
 			'assignments' => array(self::HAS_MANY, 'Assignment', 'term_code, class_num'),
 			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
 			'course' => array(self::BELONGS_TO, 'Course', 'term_code, class_num'),
-			'user' => array(self::BELONGS_TO, 'User', 'emplid'),
+			'user' => array(self::BELONGS_TO, 'DrcUser', 'emplid'),
 			'type0' => array(self::BELONGS_TO, 'FileType', 'type'),
 		);
 	}

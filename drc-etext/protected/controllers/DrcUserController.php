@@ -57,14 +57,14 @@ class DrcUserController extends UserController
 	    if (!Yii::app()->user->checkAccess('admin')){
 			return $this->actionView();
 	    }
-		$this->model = User::loadModel();
+		$this->model = DrcUser::loadModel();
 		if($this->model===null)
 			throw new CHttpException(404,'The requested user does not exist.');
 		$this->renderView(array(
-			'contentView' => '../user/_edit',
+			'contentView' => '../drcUser/_edit',
 			'contentTitle' => 'Update User Data',
 			'createNew'=>false,
-			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'titleNavRight' => '<a href="' . $this->createUrl('base/user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'action'=>Yii::app()->createUrl("user/save", array('username'=>$this->model->username)),
 		));
 	}

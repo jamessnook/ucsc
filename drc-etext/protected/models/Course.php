@@ -242,7 +242,7 @@ class Course extends BaseModel
 		$criteria->compare('drcRequests.term_code',$this->term_code);
 		$criteria->compare('drcRequests.class_num',$this->class_num);
 		
-		return new CActiveDataProvider('User', array(
+		return new CActiveDataProvider('DrcUser', array(
 			'criteria'=>$criteria,
 		 	'pagination' => false,
 		));

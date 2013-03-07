@@ -32,7 +32,7 @@
 </div>
           
    <?php
-	$this->widget('xupload.XUpload', array(
+	$this->widget('base.extensions.xupload.XUpload', array(
 	                    'url' => Yii::app()->createUrl("assignment/uploadFile", array("id"=>$model->id)),
 	                    'model' => $model,
 	                    'attribute' => 'file',

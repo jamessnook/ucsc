@@ -224,7 +224,7 @@ class CourseController extends Controller
 	public function actionStudents()
 	{
 		$this->renderView(array(
-			'contentView' => '../user/_list',
+			'contentView' => '../drcUser/_list',
 			'dataProvider' => $this->model->students(),
 			'contentTitle' => 'Course Students',
 		));

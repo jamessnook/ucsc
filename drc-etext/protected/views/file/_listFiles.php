@@ -34,7 +34,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'header'=>'Type', 
 			'name'=>'file.type', 
 			'type'=>'raw',
-			'value'=>'\'<span class="badge">\' . $data->file->type . \'</span>\'', 
+			'value'=>'\'<span class="badge">\' . $data->file->type_id . \'</span>\'', 
 		),
 		array( 
 			'header'=>'File', 
