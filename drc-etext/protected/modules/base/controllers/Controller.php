@@ -14,7 +14,7 @@ class Controller extends CController
 	 * Layout is instead provided by //layouts/_main which is container for all views in this app.
 	 * This is done so parameters can be passed to the layout without modifying standard Yii classes.
 	 */
-	public $layout='//layouts/noLayout';
+	public $layout = '//layouts/noLayout';
 	
 	/**
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
@@ -53,6 +53,15 @@ class Controller extends CController
 	 * @var Class name for site wide tab menu object to be used by all controllers for all views unless other wise set.
 	 */
 	public $tabMenuClass;
+	
+	/**
+	 * Initialization beforeteh controller starts.
+	 */
+	public function init()
+	{
+		parent::init();
+		$this->layout = $this->getModuleId() . '.views.layouts.noLayout';
+	}
 	
 	/**
 	 * A generic entry point for very similar actions.
@@ -107,8 +116,7 @@ class Controller extends CController
 			$this->viewOptions['tabMenuClass'] = Yii::app()->params['tabMenuClass'];
 		}
 		//$this->viewOptions['mainView'] = 'base.views.layouts._main';
-		$ModuleId = basename(dirname(__DIR__));
-		$this->viewOptions['mainView'] = $ModuleId . '.views.layouts._main';
+		$this->viewOptions['mainView'] = $this->getModuleId() . '.views.layouts._main';
 		if (isset(Yii::app()->params['mainView'])){
 			$this->viewOptions['mainView'] =  Yii::app()->params['mainView'];
 		}
@@ -163,5 +171,13 @@ class Controller extends CController
 		$this->_contentModel = $model;
 	}
 	
-
+	
+	/**
+	 * Assigns content model object.
+	 */
+	public function getModuleId()
+	{
+		return basename(dirname(__DIR__));
+	}
+		
 }

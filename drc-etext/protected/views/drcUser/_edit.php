@@ -13,11 +13,8 @@
 		'htmlOptions' => array('class' => 'form'),
 	)); 
 	$form=$this->beginWidget('UserEditForm', array(
-		'id'=>'assignment-form',
-		'enableAjaxValidation'=>false,
 		'model'=> $model,
 		'action'=> $action,
-		'htmlOptions' => array('enctype' => 'multipart/form-data'),
 	)); 
 			 
 	// book purchase section

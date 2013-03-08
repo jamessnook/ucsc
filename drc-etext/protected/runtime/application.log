@@ -5871,3 +5871,393 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/course/updateAssignment/id/6/username
 HTTP_REFERER=http://localhost/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423
 ---
+2013/03/07 20:42:26 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/07 21:01:18 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/07 21:01:18 [error] [exception.CException] exception 'CException' with message 'UserEditForm and its behaviors do not have a method or closure named "controlRow".' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\UserEditForm.php(25): CComponent->__call('controlRow', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\UserEditForm.php(25): UserEditForm->controlRow('username', 'textField', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(148): UserEditForm->init()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(190): CBaseController->createWidget('UserEditForm', Array)
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\drcUser\_edit.php(18): CBaseController->beginWidget('UserEditForm', Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#8 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../drcUser/_edi...', Array)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(96): CController->render('base.views.layo...', Array)
+#14 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(69): Controller->renderView(Array)
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionUpdate()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('update')
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/update/...')
+#26 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/update/username/apeter0585/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/students/term_code/2122
+---
+2013/03/07 21:01:36 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/07 21:02:07 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/07 21:04:35 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/07 23:29:19 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/07 23:29:56 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (88)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 00:15:41 [error] [exception.CException] exception 'CException' with message 'Property "User.User" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(160): CComponent->__set('User', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php(74): CActiveRecord->__set('User', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php(213): BaseModel::loadModel(NULL)
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php(57): User::loadModel()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionSave()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('save')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/user/save')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/drc-etext/index.php/base/user/save
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/create
+---
+2013/03/08 00:30:44 [error] [exception.CException] exception 'CException' with message 'Property "User.yt0" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(160): CComponent->__set('yt0', 'Save')
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php(75): CActiveRecord->__set('yt0', 'Save')
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php(213): BaseModel::loadModel(NULL)
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php(57): User::loadModel()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionSave()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('save')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/user/save')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/drc-etext/index.php/base/user/save
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/create
+---
+2013/03/08 00:37:38 [error] [exception.CException] exception 'CException' with message 'Property "User.yt0" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(160): CComponent->__set('yt0', 'Save')
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php(75): CActiveRecord->__set('yt0', 'Save')
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php(213): BaseModel::loadModel(NULL)
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php(57): User::loadModel()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionSave()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('save')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/user/save')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/drc-etext/index.php/base/user/save
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/create
+---
+2013/03/08 00:46:05 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php (57)
+2013/03/08 00:46:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "base/drcUser/staff/term_code/2124".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/drcUser/st...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/base/drcUser/staff/term_code/2124
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/create
+---
+2013/03/08 00:56:47 [error] [exception.CException] exception 'CException' with message 'Alias "modules.base.components.actions.UploadAction" is invalid. Make sure it points to an existing directory or file.' in C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:343
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(198): YiiBase::import('modules.base.co...', true)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): YiiBase::createComponent(Array, Object(AssignmentController), 'uploadFile')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): CController->createActionFromMap(Array, 'uploadFile', 'uploadFile')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): CController->createAction('uploadFile')
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('uploadFile')
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/uplo...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/drc-etext/index.php/assignment/uploadFile/id/2
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/updateAssignment/id/2
+---
+2013/03/08 01:02:38 [error] [php] include(modules.extensions.xupload\actions\XUploadAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:397)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\actions\UploadAction.php(47): spl_autoload_call()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(316): require()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(198): import()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): createComponent()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): AssignmentController->createActionFromMap()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): AssignmentController->createAction()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): AssignmentController->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/assignment/uploadFile/id/2
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\actions\UploadAction.php (47)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/08 01:05:48 [error] [php] include(C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\extenstions\xupload\actions\XUploadAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:397)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\actions\UploadAction.php(47): spl_autoload_call()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(316): require()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(198): import()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): createComponent()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): AssignmentController->createActionFromMap()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): AssignmentController->createAction()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): AssignmentController->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/assignment/uploadFile/id/2
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\actions\UploadAction.php (47)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/08 01:06:45 [error] [php] include(C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\extentions\xupload\actions\XUploadAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:397)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\actions\UploadAction.php(47): spl_autoload_call()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(316): require()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(198): import()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): createComponent()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): AssignmentController->createActionFromMap()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): AssignmentController->createAction()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): AssignmentController->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/assignment/uploadFile/id/2
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\actions\UploadAction.php (47)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/08 01:36:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/logout".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('site/logout')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/site/logout
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/faculty/term_code/2122
+---
+2013/03/08 01:40:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/logout".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('site/logout')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/site/logout
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/faculty/term_code/2122
+---
+2013/03/08 01:42:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/logout".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('site/logout')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/site/logout
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/faculty/term_code/2122
+---
+2013/03/08 02:37:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/faculty/term_code/2124
+---
+2013/03/08 02:38:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/faculty/term_code/2124
+---
+2013/03/08 02:45:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/08 02:48:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/08 02:51:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php
+---
+2013/03/08 02:56:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "base/base/login/login".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/base/login...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/base/base/login/login
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/login
+---
+2013/03/08 02:57:07 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 02:57:36 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 02:57:41 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:02:26 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:06:39 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:06:39 [error] [php] Undefined variable: terms (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_termMenu.php:31)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): DrcUserController->renderFile()
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(67): DrcUserController->renderPartial()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): DrcUserController->renderInternal()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): DrcUserController->renderFile()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): DrcUserController->renderPartial()
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): DrcUserController->render()
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php(135): DrcUserController->renderView()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): DrcUserController->actionCourses()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): DrcUserController->runAction()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): DrcUserController->filterAccessControl()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): DrcUserController->runActionWithFilters()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): DrcUserController->run()
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/drcUser/courses/username/asl
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_termMenu.php (31)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php (67)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (105)
+2013/03/08 03:08:09 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:09:34 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:09:58 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:10:16 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:10:50 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:11:17 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:11:52 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:12:40 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:12:58 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:13:10 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:13:23 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:14:24 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:15:36 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:15:56 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)
+2013/03/08 03:16:51 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (145)

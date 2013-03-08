@@ -22,11 +22,11 @@ class UserEditForm extends BaseForm
 			*/
 		);
 		parent::init();
-		$this->controller->widget('BaseControl', array( 'name' => 'username', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, ));
-		$this->controller->widget('BaseControl', array( 'name' => 'first_name', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this,));
-		$this->controller->widget('BaseControl', array( 'name' => 'last_name', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, 'htmlContentOptions'=>array('maxlength'=>127)));
-		$this->controller->widget('BaseControl', array( 'name' => 'email', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this, 'htmlContentOptions'=>array('maxlength'=>127)));
-		$this->controller->widget('BaseControl', array( 'name' => 'phone', 'type' => 'textField', 'model'=>$this->model, 'form'=>$this,));
+		$this->controlRow('username', 'textField', $htmlOptions = array());
+		$this->controlRow('first_name', 'textField', $htmlOptions = array());
+		$this->controlRow('last_name', 'textField', array('maxlength'=>127));
+		$this->controlRow('email', 'textField', array('maxlength'=>127));
+		$this->controlRow('phone', 'textField', $htmlOptions = array());
 		echo ' <div class="control-group">';
         echo CHtml::label('Role', 'role');
         echo '<div class="controls">';

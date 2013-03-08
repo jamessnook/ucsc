@@ -251,20 +251,21 @@ class DrcUser extends User
 	}
 	
 	/**
-	 * Retrieves an array of file types needed for this assignment.
+	 * Retrieves a string of file types needed for this user.
 	 * @return array, the names of file types for this course.
 	 */
 	public function typesString()
 	{
-		$types = '';
-		foreach($this->drcRequests as $request)
+		$types = $this->types();
+		$tString = '';
+		foreach($types as $type)
 		{
-			if($types != ''){
-				$types .= ', ';
+			if($tString != ''){
+				$tString .= ', ';
 			}
-			$types .= $request->type; // use value as key to prevent duplicates
+			$tString .= $type; // use value as key to prevent duplicates
 		}
-		return $types;
+		return $tString;
 	}
 	
 	

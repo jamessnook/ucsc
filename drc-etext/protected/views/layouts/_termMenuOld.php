@@ -12,8 +12,6 @@
 
 <?php 
 
-	echo 'test3';
-
 	$menuItems=array();
 
 	// make term list menu for use in CMenu
@@ -26,13 +24,11 @@
 		$params['username'] = $model->username;
 	//if ($model->emplid && strlen($model->emplid)>0)
 	//	$params['emplid'] = $model->emplid;
-	echo 'test4';
-		
+
 	// create menu item for each term
 	$terms = Term::terms($model);
 	//foreach($terms as $term_code => $description) { 
 	foreach($terms as $term) { 
-	echo 'test4A';
 		$params['term_code'] = $term->term_code;
 		$route = $this->route;
 		if (isset($menuRoute)) 
@@ -44,19 +40,16 @@
 			'active'=> $model->term_code == $term->term_code,
 		);
 	}
-	echo 'test5';
-	
+
 	// build up the side bar menu
     $this->beginWidget('zii.widgets.CPortlet', array(
 		'title'=>'Quarters Menu',
 		'contentCssClass'=>'nav-header',
 	));
-	//echo 'test6';
 	$this->widget('zii.widgets.CMenu', array(
 		'items'=>$menuItems,
 		'htmlOptions'=>array('class'=>'nav nav-list'),
 	));
-	//echo 'test7';
 	$this->endWidget();
 			
 ?>

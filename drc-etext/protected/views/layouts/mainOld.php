@@ -91,10 +91,10 @@
 						'label'=> '<i class="icon-user"></i>' . Yii::app()->user->name . '<b class="caret"></b>',
 						//'label'=> 'Joe',
 						'items'=>array(
-							array('label'=>'My Profile', 'url'=>array($this->getModuleId() . '/user/profile')),
+							array('label'=>'My Profile', 'url'=>array('/user/profile')),
 							//array('label'=>'My Groups', 'url'=>array('/user/groups')),
 							array('label'=>'', 'itemOptions'=>array('class'=>'divider')),
-							array('label'=>'Logout', 'url'=>array( '/' . $this->getModuleId() . '/site/logout')),
+							array('label'=>'Logout', 'url'=>array('/site/logout')),
 						),
 					),
 				), 

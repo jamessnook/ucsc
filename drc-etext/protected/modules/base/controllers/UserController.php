@@ -14,7 +14,7 @@ class UserController extends Controller
 	 * Layout is instead provided by //layouts/_main which is container for all views in this app.
 	 * This is done so parameters can be passed to the layout without modifying standard Yii classes.
 	 */
-	public $layout='//layouts/noLayout';
+	//public $layout='//layouts/noLayout';
 
 	/**
 	 * @return array action filters

@@ -48,15 +48,15 @@ class DrcTabMenu extends TabMenu
 				'items'=>array(
 					array(
 						'label'=>'Students', 
-						'url'=>array('drcUser/students', 'term_code'=>Yii::app()->controller->model->term_code,),
+						'url'=>array('/drcUser/students', 'term_code'=>Yii::app()->controller->model->term_code,),
 					),
 					array(
 						'label'=>'Faculty', 
-						'url'=>array('drcUser/faculty', 'term_code'=>Yii::app()->controller->model->term_code,), 
+						'url'=>array('/drcUser/faculty', 'term_code'=>Yii::app()->controller->model->term_code,), 
 					),
 					array(
 						'label'=>'Staff', 
-						'url'=>array('drcUser/staff', 'term_code'=>Yii::app()->controller->model->term_code,), 
+						'url'=>array('/drcUser/staff', 'term_code'=>Yii::app()->controller->model->term_code,), 
 					),
 				),
 			),

@@ -11,6 +11,6 @@
  */
 ?>
 
-<?php $this->beginContent('base.views.layouts.main'); ?>
+<?php $this->beginContent('//layouts/main'); ?>
 <?php echo $content; ?>
 <?php $this->endContent(); ?>

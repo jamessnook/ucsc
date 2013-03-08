@@ -49,7 +49,7 @@ class AssignmentController extends Controller
     {
         return array(
             'uploadFile'=>array(
-                'class'=>'modules.base.components.actions.UploadAction',
+                'class'=>'base.components.actions.UploadAction',
                 'modelName'=>'Assignment',
         		'path' =>'/../files/assignments',
         		'subfolderVar' =>'id',

@@ -8,6 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'eText Library',
+	'homeUrl'=>array('/base/login/login'),
 
 	// preloading 'log' component
 	'preload'=>array('log'),

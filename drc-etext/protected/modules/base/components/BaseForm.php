@@ -82,6 +82,17 @@ class BaseForm extends CActiveForm
 		echo $this->contentHTML;
 	}
 	
+	/**
+	 * Creates and outputs input row of a specific type.
+	 * @param string $name (id) the input element, used to look up labels in model
+	 * @param string $type the input type
+	 * @param array $htmlOptions additional HTML attributes
+	 */
+	public function controlRow($name, $type, $htmlOptions = array())
+	{
+		$this->controller->widget('BaseControl', array( 'name' => $name, 'type' => $type, 'model'=>$this->model, 'form'=>$this, 'htmlContentOptions'=>$htmlOptions));
+	}
+
 	/*
 	  * Renders the opening of the content element and the optional content
 	  */

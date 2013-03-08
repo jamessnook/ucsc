@@ -53,9 +53,62 @@ class BaseModel extends CActiveRecord
 	 * Returns the data model based on the passed attributes.
 	 * Persues various ways of finding and creating the model
 	 * @param array of parameters
-	 * @return model instance of a UCSCModel subclass built using the url params.
+	 * @return model instance of a BaseModel subclass built using the url params.
 	 */
 	public static function loadModel($params=null)
+	{
+		$className=get_called_class();
+		$aModel=new $className(null);
+		if (!$params) $params = $_REQUEST;
+		// check for array of parrams
+		if (isset($params[$className]) && is_array($params[$className])){
+			$params = array_merge($params, $params[$className]);
+			//unset($params[$className]);
+			//echo $params[$className]['first_name'];
+			//echo $params['first_name'];
+		}
+		$aModel->unsetAttributes();  // clear any default values .. is this needed?
+		if ($params){
+			$aModel->setIsNewRecord(true);
+			$key = $aModel->getTableSchema()->primaryKey;
+			$tableParams = array();
+			// find primary key params that are in table model
+			foreach($params as $name=>$value){
+				if ($name == $key || (is_array($key) && in_array($name, $key))){
+					$tableParams[$name]= $value;
+				}
+			}
+			if (count($tableParams)>0){
+				$newModel=$aModel->findByAttributes($tableParams);
+				if($newModel){
+					$aModel->attributes = $newModel->attributes;
+					$aModel->setIsNewRecord(false);
+				}
+			}
+			// change alls to blanks and set values
+			foreach($params AS $name=>$value){
+				if ($value=='all' || $value=='All'|| $value=='-1'|| $value==-1 ){
+	        		$value = "";
+				}
+				try {
+					//echo " $name=$value, ";
+					$aModel->$name=$value;  // @ = ignore errors
+				} catch (Exception $e) {
+					//echo ' trouble.. ';
+					// ignore
+				}
+			}
+		}
+		return $aModel;
+	}
+
+	/**
+	 * Returns the data model based on the passed attributes.
+	 * Persues various ways of finding and creating the model
+	 * @param array of parameters
+	 * @return model instance of a UCSCModel subclass built using the url params.
+	 */
+	public static function loadModelOld($params=null)
 	{
 		$className=get_called_class();
 		$aModel=new $className(null);
@@ -71,7 +124,9 @@ class BaseModel extends CActiveRecord
 				if ($value=='all' || $value=='All'|| $value=='-1'|| $value==-1 ){
 	        		$value = "";
 				}
-				@$aModel->$name=$value;  // @ = ignore errors
+				if (!is_array($value)){
+					@$aModel->$name=$value;  // @ = ignore errors
+				}
 			}
 			$aModel->setIsNewRecord(true);
 			$key = $aModel->getTableSchema()->primaryKey;

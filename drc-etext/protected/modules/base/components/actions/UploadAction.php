@@ -4,8 +4,8 @@
  *
  */
 
-Yii::import( "xupload.models.XUploadForm" );
-Yii::import("xupload.actions.XUploadAction");
+Yii::import("base.extensions.xupload.models.XUploadForm" );
+Yii::import("base.extensions.xupload.actions.XUploadAction");
 /**
  * UploadAction
  * =============

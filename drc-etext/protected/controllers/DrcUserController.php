@@ -14,8 +14,8 @@ class DrcUserController extends UserController
 	 * Layout is instead provided by //layouts/_main which is container for all views in this app.
 	 * This is done so parameters can be passed to the layout without modifying standard Yii classes.
 	 */
-	public $layout='//layouts/noLayout';
-
+	//public $layout='/modules/base/views/layouts/noLayout';
+	
 	/**
 	 * @return array action filters
 	 */
@@ -80,7 +80,7 @@ class DrcUserController extends UserController
 			'contentView' => '//drcUser/_list',
 			'dataProvider' => $this->model->students(),
 			'contentTitle' => 'DRC Students',
-			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'titleNavRight' => '<a href="' . $this->createUrl('base/user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'menuView' => 'base.views.layouts._termMenu',
 		));
 	}
@@ -94,7 +94,7 @@ class DrcUserController extends UserController
 		$this->renderView(array(
 			'contentView' => '../drcUser/_staff',
 			'title' => 'DRC User Accounts',
-			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'titleNavRight' => '<a href="' . $this->createUrl('base/user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'menuView' => '',
 			'activeTab' => 'staff',
 		));
@@ -110,7 +110,7 @@ class DrcUserController extends UserController
 			'contentView' => '../drcUser/_list',
 			'dataProvider' => $this->model->faculty(),
 			'contentTitle' => 'Faculty',
-			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
+			'titleNavRight' => '<a href="' . $this->createUrl('base/user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'menuView' => 'base.views.layouts._termMenu',
 			'menuRoute' => 'drcUser/faculty',
 			'activeTab' => 'faculty',
