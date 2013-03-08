@@ -12,7 +12,6 @@
 
 <?php 
 
-	echo 'test3';
 
 	$menuItems=array();
 

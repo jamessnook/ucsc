@@ -117,7 +117,8 @@ class Term extends BaseModel
 	public static function terms($model=null)
 	{
 		$criteria=new CDbCriteria;
-		$criteria->join = 'JOIN drc_request USING (term_code) JOIN user USING(emplid)';
+		$criteria->join = 'JOIN drc_request USING (term_code) JOIN course_instructor USING (term_code) ';
+		$criteria->join .= 'JOIN user ON(drc_request.emplid=user.emplid OR course_instructor.emplid=user.emplid)';
 		$criteria->distinct = true;
 		$criteria->select = 't.term_code, t.description';
 		if ($model && $model->username && strlen($model->username)>0){
@@ -154,7 +155,10 @@ class Term extends BaseModel
 	{
 		// get first ellement from array
 		$terms = Term::terms();
-		return reset($terms)->term_code;
+		if (count($terms)>0){
+			return reset($terms)->term_code;
+		}
+		return -1;
 	}
 
 }

@@ -331,5 +331,6 @@ INSERT INTO email_type (name, sequence, tone) VALUES ('Third', 3, 'Pleading');
 INSERT INTO email_type (name, sequence, tone) VALUES ('Fourth', 4, 'Desperate');
 INSERT INTO email_type (name, sequence, tone) VALUES ('Other', 9, 'Other');
 
+mysql> LOAD DATA INFILE 'c:/users/jim/phpfog/ucsc/drc-etext/protected/data/course_instructor.txt' INTO TABLE course_instructor;
 
 
