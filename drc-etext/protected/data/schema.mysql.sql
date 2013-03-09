@@ -451,3 +451,6 @@ ALTER TABLE email_sent ADD CONSTRAINT estccnc foreign key (term_code, class_num)
 
 UPDATE file SET type = SUBSTRING_INDEX(name, '.', -1);
 
+mysql> LOAD DATA INFILE 'c:/users/jim/phpfog/ucsc/drc-etext/protected/data/course_instructor.txt' INTO TABLE course_instructor  LINES TERMINATED BY '\n' ;
+mysql> alter table course_instructor add foreign key (emplid) references user (emplid);
+

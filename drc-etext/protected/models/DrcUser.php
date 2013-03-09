@@ -35,8 +35,8 @@
  */
 class DrcUser extends User
 {
-	public $term_code; // for non emplid matches
-	public $role;      // for authentication, to set user roles
+	//public $term_code; // for non emplid matches
+	//public $role;      // for authentication, to set user roles
 	
 	/**
 	 * Returns the static model of the specified AR class.
@@ -97,12 +97,13 @@ class DrcUser extends User
 		}
 		$criteria->compare('t.term_code',$this->term_code);
 		if ($this->emplid && strlen($this->emplid)>0) {
-			$criteria->with = array( 'drcRequests' );
+			$criteria->with = array( 'drcRequests', 'courseInstructors' );
 			$criteria->together = true;
 			$criteria->compare('drcRequests.emplid',$this->emplid);
 			$criteria->compare('drcRequests.term_code',$this->term_code);
+			$criteria->compare('courseInstructors.emplid',$this->emplid, false, 'OR');
+			$criteria->compare('courseInstructors.term_code',$this->term_code);
 		}
-		
 		return new CActiveDataProvider('Course', array(
 			'criteria'=>$criteria,
 		 	'pagination' => false,
@@ -133,22 +134,6 @@ class DrcUser extends User
 		));
 	}
 
-	/**
-	 * Returns the data model based on the passed attributes.
-	 * Persues various ways of finding and creating the model
-	 * Adds functionality to arent class method to insure term_code is set.
-	 * @param array of parameters
-	 * @return model instance of a UCSCModel subclass built using the url params.
-	 */
-	public static function loadModel($params=null)
-	{
-		$aModel = parent::loadModel($params);
-		if (!$aModel->term_code){
-			$aModel->term_code = Term::currentTermCode();
-		}
-		return $aModel;
-	}
-	
 	/**
 	 * Retrieves a list of course names for the courses associate with a users.
 	 * @return array, the names of courses for this user.

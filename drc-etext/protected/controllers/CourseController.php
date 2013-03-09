@@ -199,7 +199,7 @@ class CourseController extends Controller
 		}
 		$this->renderView(array(
 			'contentView' => '../course/_list',
-			'menuView' => '../layouts/_termMenu',
+			'menuView' => 'base.views.layouts._termMenu',
 			'menuRoute' => 'course/courses',
 			'title' => 'All Courses',
 		));

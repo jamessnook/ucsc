@@ -23,15 +23,11 @@
 	$params = array();
 	if ($model->username && strlen($model->username)>0)
 		$params['username'] = $model->username;
-	//if ($model->emplid && strlen($model->emplid)>0)
-	//	$params['emplid'] = $model->emplid;
-	echo 'test4';
 		
 	// create menu item for each term
 	$terms = Term::terms($model);
 	//foreach($terms as $term_code => $description) { 
 	foreach($terms as $term) { 
-	echo 'test4A';
 		$params['term_code'] = $term->term_code;
 		$route = $this->route;
 		if (isset($menuRoute)) 
@@ -43,7 +39,6 @@
 			'active'=> $model->term_code == $term->term_code,
 		);
 	}
-	echo 'test5';
 	
 	// build up the side bar menu
     $this->beginWidget('zii.widgets.CPortlet', array(

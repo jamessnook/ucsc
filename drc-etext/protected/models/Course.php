@@ -163,10 +163,12 @@ class Course extends BaseModel
 		$criteria=new CDbCriteria; 
 		$criteria->compare('t.term_code',$this->term_code);
 		if ($this->username && strlen($this->username)>0) {
-			$criteria->with = array( 'drcRequests', 'drcRequests.user' );
+			$criteria->with = array( 'drcRequests', 'drcRequests.user', 'courseInstructors', 'courseInstructors.instructor' );
 			$criteria->together = true;
-			$criteria->compare('user.username',$this->username);
-			$criteria->compare('drcRequests.term_code',$this->term_code);
+			$criteria->compare('user.username', $this->username);
+			$criteria->compare('drcRequests.term_code', $this->term_code);
+			$criteria->compare('instructor.username', $this->username, false, 'OR');
+			$criteria->compare('courseInstructors.term_code', $this->term_code);
 		}
 		
 		return new CActiveDataProvider('Course', array(
@@ -175,6 +177,33 @@ class Course extends BaseModel
 		));
 	}
 
+	/**
+	 * Retrieves a list of course Models associated with the user and term defined by the current $this object.
+	 * @return CActiveDataProvider the data provider that can return the Course models.
+	 */
+	/*
+	public function courses()
+	{
+		$criteria=new CDbCriteria; 
+		if (!isset($this->term_code)) {
+			$this->term_code = Term::currentTermCode();
+		}
+		$criteria->compare('t.term_code',$this->term_code);
+		if ($this->emplid && strlen($this->emplid)>0) {
+			$criteria->with = array( 'drcRequests', 'courseInstructors' );
+			$criteria->together = true;
+			$criteria->compare('drcRequests.emplid',$this->emplid);
+			$criteria->compare('drcRequests.term_code',$this->term_code);
+			$criteria->compare('courseInstructors.emplid',$this->emplid, false, 'OR');
+			$criteria->compare('courseInstructors.term_code',$this->term_code);
+		}
+		return new CActiveDataProvider('Course', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+*/
+	
 	/**
 	 *Provides an active data provider to provide a list of assignments for this course based on the request parameters.
 	 * @return CActiveDataProvider the data provider that can return the models based on the request parameters.
@@ -256,9 +285,17 @@ class Course extends BaseModel
 	{
 		//$names = '';
 		$names = array();
-		foreach($this->courseInstructors as $instructor)
+		foreach($this->courseInstructors as $cInstructor)
 		{
-			$names[] = $instructor->instructor->first_name . ' ' . $instructor->instructor->last_name;
+			if ($cInstructor->instructor){
+				$names[] = $cInstructor->instructor->first_name . ' ' . $cInstructor->instructor->last_name;
+			} else if ($cInstructor->course){
+				$names[] = 'T= ' . $cInstructor->course->title;
+			} else if ($cInstructor->emplid){
+				$names[] = $cInstructor->emplid;
+			} else {
+				$names[] = 'NA';
+			}
 		}
 		return $names;
 	}
@@ -270,10 +307,14 @@ class Course extends BaseModel
 	public function facultyUrls()
 	{
 		$urls = array();
-		foreach($this->courseInstructors as $instructor)
+		foreach($this->courseInstructors as $cInstructor)
 		{
-			//$urls[] = 'http://campusdirectory.ucsc.edu/detail.php?type=people&uid='.$instructor->user->username;
-			$urls[] = "http://campusdirectory.ucsc.edu/detail.php?type=people&uid=" . 'jsnook';
+			if ($cInstructor->instructor){
+				$urls[] = 'http://campusdirectory.ucsc.edu/detail.php?type=people&uid='.$cInstructor->instructor->username;
+			} else {
+				$urls[] = "http://campusdirectory.ucsc.edu/";
+			}
+				//$urls[] = "http://campusdirectory.ucsc.edu/detail.php?type=people&uid=" . 'jsnook';
 		}
 		return $urls;
 	}
