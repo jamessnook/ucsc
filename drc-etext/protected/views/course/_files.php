@@ -31,6 +31,14 @@
 						//'formView' => 'application.views.somemodel._form',
 						'formView' => 'base.views.file._xupload',
 						'htmlOptions' => array('id'=>'course-list'),
+						'options' => array(
+							//'redirect' => $this->createUrl('files', $_REQUEST),
+							//'onComplete' => 'window.location.href = ' . $this->createUrl('files', $_REQUEST) . ';',
+							'parseResponse' => 'js:function (event, files, index, xhr, handler, callBack) { 
+								//window.location.href = ' . $this->createUrl('files', $_REQUEST) . ';
+								alert ("Hello");
+							}',
+						),
 	));
     
     $this->endWidget(); 

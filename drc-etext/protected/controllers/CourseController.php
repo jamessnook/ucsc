@@ -60,6 +60,7 @@ class CourseController extends Controller
                 'modelName'=>'Course',
         		'path' =>'/../files/course',
         		'subfolderVar' =>'id',
+            	'redirectUrl' => $this->createUrl('files', $_REQUEST),
         	),
         );
     }

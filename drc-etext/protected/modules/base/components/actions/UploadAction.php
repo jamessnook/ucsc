@@ -59,7 +59,13 @@ class UploadAction extends XUploadAction {
      */
     private $_subfolder = "";
     
-	/**
+    /**
+     * The resolved subfolder to upload the file to
+     * @var string
+     */
+    public $redirectUrl = null;
+    
+    /**
 	 * Uploads files and Creates new models.
 	 * This version works with the yii xupload extension widget
      * @author JSnook
@@ -88,7 +94,7 @@ class UploadAction extends XUploadAction {
 	        }
 	    }
 		else {
-            $this->init( );
+			$this->init( );
 			$file = CUploadedFile::getInstanceByName('file' );
 	        //We check that the file was successfully uploaded
 	        if( $file !== null ) {
@@ -128,18 +134,23 @@ class UploadAction extends XUploadAction {
 	                //Now we need to tell our widget that the upload was succesfull
 	                //We do so, using the json structure defined in
 	                // https://github.com/blueimp/jQuery-File-Upload/wiki/Setup
-	                echo json_encode( array( array(
+	                $responseData = array(
 	                        "name" => $file_add->name,
 	                        "type" => $file->getType( ),
 	                        "size" => $file->getSize( ),
 	                        "url" => $publicPath.$file->getName(),
-	                        "thumbnail_url" => $publicPath."thumbs/$filename",
+	                        //"thumbnail_url" => $publicPath."thumbs/$filename",
 	                        "delete_url" => $this->controller->createUrl( "XUpload", array(
 	                            "_method" => "delete",
 	                            "file" => $filename
 	                        ) ),
-	                        "delete_type" => "POST"
-	                    ) ) );
+	                        "delete_type" => "POST",
+            				'redirect' => $this->controller->createUrl('files', $_REQUEST),
+	                );
+	                //if ($this->redirectUrl){
+	                //	$responseData["redirect"] = $this->redirectUrl;
+	                //}
+	                echo json_encode( array( $responseData  ) );
                 }
                 else {
 	                //If the upload failed for some reason we log some data and let the widget know

@@ -7356,3 +7356,77 @@ in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 18:53:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "XUpload".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php:484
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(271): CController->missingAction('XUpload')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('XUpload')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/XUpload/...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/drc-etext/index.php/course/XUpload/_method/delete/file/selecttutee2.cfm.cfm
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 21:15:52 [error] [exception.CException] exception 'CException' with message 'Property "UploadAction.redirectUrl" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(222): CComponent->__set('redirectUrl', '/drc-etext/inde...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): YiiBase::createComponent(Array, Object(CourseController), 'uploadFile')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): CController->createActionFromMap(Array, 'uploadFile', 'uploadFile')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): CController->createAction('uploadFile')
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('uploadFile')
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/uploadFi...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/drc-etext/index.php/course/uploadFile/term_+code/2118/class_num/21301/id/64
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 21:19:20 [error] [exception.CException] exception 'CException' with message 'Property "UploadAction.redirectUrl" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(222): CComponent->__set('redirectUrl', '/drc-etext/inde...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): YiiBase::createComponent(Array, Object(CourseController), 'uploadFile')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): CController->createActionFromMap(Array, 'uploadFile', 'uploadFile')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): CController->createAction('uploadFile')
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('uploadFile')
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/uploadFi...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/drc-etext/index.php/course/uploadFile/term_+code/2118/class_num/21301/id/64
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 21:24:25 [error] [exception.CException] exception 'CException' with message 'Property "UploadAction.redirectUrl" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(222): CComponent->__set('redirectUrl', '/drc-etext/inde...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): YiiBase::createComponent(Array, Object(CourseController), 'uploadFile')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): CController->createActionFromMap(Array, 'uploadFile', 'uploadFile')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): CController->createAction('uploadFile')
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('uploadFile')
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/uploadFi...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/drc-etext/index.php/course/uploadFile/term_+code/2118/class_num/21301/id/64
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 21:27:20 [error] [exception.CException] exception 'CException' with message 'UploadAction and its behaviors do not have a method or closure named "createUrl".' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\actions\UploadAction.php(148): CComponent->__call('createUrl', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\actions\UploadAction.php(148): UploadAction->createUrl('files', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(75): UploadAction->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CAction->runWithParams(Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(UploadAction))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(UploadAction), Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('uploadFile')
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/uploadFi...')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/drc-etext/index.php/course/uploadFile/term_+code/2118/class_num/21301/id/64
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
