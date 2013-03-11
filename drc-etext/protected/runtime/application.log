@@ -6716,3 +6716,643 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/course/courses/term_code/2118
 HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/asl/term_code/2118
 ---
+2013/03/10 23:04:27 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (128)
+2013/03/10 23:04:40 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (128)
+2013/03/10 23:04:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('files')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/files/te...')
+#9 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/asl/term_code/2118
+---
+2013/03/10 23:07:50 [error] [exception.CException] exception 'CException' with message 'CourseController cannot find the requested view "base.views.file._list".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_files.php(14): CController->renderPartial('base.views.file...', Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../course/_file...', Array)
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#9 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#10 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(283): Controller->renderView(Array)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionFiles()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('files')
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/files/te...')
+#22 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/asl/term_code/2118
+---
+2013/03/10 23:11:01 [error] [exception.CException] exception 'CException' with message 'Course and its behaviors do not have a method or closure named "files".' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(226): CComponent->__call('files', Array)
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\file\_list.php(21): CActiveRecord->__call('files', Array)
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\file\_list.php(21): Course->files()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_files.php(14): CController->renderPartial('base.views.file...', Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#10 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../course/_file...', Array)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#16 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(283): Controller->renderView(Array)
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionFiles()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('files')
+#27 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/files/te...')
+#28 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/asl/term_code/2118
+---
+2013/03/10 23:13:09 [error] [exception.CException] exception 'CException' with message 'Property "Course.id" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('id')
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\Course.php(287): CActiveRecord->__get('id')
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\file\_list.php(21): Course->files()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_files.php(14): CController->renderPartial('base.views.file...', Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#10 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../course/_file...', Array)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#16 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(283): Controller->renderView(Array)
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionFiles()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('files')
+#27 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/files/te...')
+#28 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/asl/term_code/2118
+---
+2013/03/11 01:08:32 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (388)
+2013/03/11 01:08:32 [error] [exception.CException] exception 'CException' with message 'CourseController cannot find the requested view "../course/_instructorCourseMenu".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(67): CController->renderPartial('../course/_inst...', Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(283): Controller->renderView(Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionFiles()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('files')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/files/te...')
+#18 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/asl/term_code/2118
+---
+2013/03/11 01:10:55 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (388)
+2013/03/11 01:22:32 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (403)
+2013/03/11 02:13:08 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (60)
+2013/03/11 02:13:51 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (128)
+2013/03/11 02:13:58 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (282)
+2013/03/11 02:14:08 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (381)
+2013/03/11 02:15:03 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (248)
+2013/03/11 02:15:21 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (128)
+2013/03/11 02:15:25 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (282)
+2013/03/11 02:15:30 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (77)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 02:24:42 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (128)
+2013/03/11 02:24:55 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (128)
+2013/03/11 02:24:57 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (403)
+2013/03/11 02:30:41 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (403)
+2013/03/11 02:33:31 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (403)
+2013/03/11 02:34:03 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (403)
+2013/03/11 02:38:09 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (403)
+2013/03/11 02:38:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(UploadAction), Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('uploadFile')
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/uploadFi...')
+#9 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/uploadFile/id
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 02:39:50 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (403)
+2013/03/11 02:39:55 [error] [exception.CException] exception 'CException' with message 'Property "File.type" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(160): CComponent->__set('type', 'txt')
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\components\actions\UploadAction.php(117): CActiveRecord->__set('type', 'txt')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CAction.php(75): UploadAction->run()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CAction->runWithParams(Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(UploadAction))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(UploadAction), Array)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('uploadFile')
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/uploadFi...')
+#13 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/drc-etext/index.php/course/uploadFile/id
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 05:06:38 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (403)
+2013/03/11 05:07:32 [warning] [application] Failed to set unsafe attribute "id" of "Course".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (403)
+2013/03/11 07:04:08 [error] [exception.CException] exception 'CException' with message 'Property "FileAssociation.id" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('id')
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('id')
+#2 C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php(607): eval()
+#3 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\components\LinksColumn.php(57): CComponent->evaluateExpression('array('course/u...', Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridColumn.php(138): LinksColumn->renderDataCellContent(0, Object(FileAssociation))
+#5 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(517): CGridColumn->renderDataCell(0)
+#6 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(490): CGridView->renderTableRow(0)
+#7 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(400): CGridView->renderTableBody()
+#8 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\file\_list.php(64): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#17 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_files.php(14): CController->renderPartial('base.views.file...', Array)
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#21 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../course/_file...', Array)
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#24 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#25 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#26 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#27 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(298): Controller->renderView(Array)
+#28 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionFiles()
+#29 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#30 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#31 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#32 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#33 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#34 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#35 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#36 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#37 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('files')
+#38 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/files/te...')
+#39 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#40 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#41 {main}
+REQUEST_URI=/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 07:08:31 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:08:31 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:08:31 [error] [exception.CException] exception 'CException' with message 'Property "File.label" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('label')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('label')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(File), 'label')
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(File), 'label', Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\widgets\CActiveForm.php(575): CHtml::activeTextField(Object(File), 'label', Array)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\components\BaseControl.php(76): CActiveForm->textField(Object(File), 'label', Array)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(174): BaseControl->run()
+#7 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\components\BaseForm.php(93): CBaseController->widget('BaseControl', Array)
+#8 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\components\FileEditForm.php(18): BaseForm->controlRow('label', 'textField', Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(148): FileEditForm->init()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(190): CBaseController->createWidget('FileEditForm', Array)
+#11 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_fileEdit.php(18): CBaseController->beginWidget('FileEditForm', Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../course/_file...', Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#20 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#21 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(314): Controller->renderView(Array)
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionUpdateFile()
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#24 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#25 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#26 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#27 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#28 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#29 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#30 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('updateFile')
+#32 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/updateFi...')
+#33 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#34 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#35 {main}
+REQUEST_URI=/drc-etext/index.php/course/updateFile/id/34/term_code/2118/class_num/21301
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 07:13:16 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:13:16 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:13:16 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:13:16 [error] [exception.CException] exception 'CException' with message 'CourseController cannot find the requested view "../course/_instructorCourseMenu".' in C:\Users\Jim\phpFog\ucsc\framework\web\CController.php:879
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(67): CController->renderPartial('../course/_inst...', Array)
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(314): Controller->renderView(Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionUpdateFile()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('updateFile')
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/updateFi...')
+#18 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/drc-etext/index.php/course/updateFile/id/34/term_code/2118/class_num/21301
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 07:14:13 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:14:13 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:14:13 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:14:55 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:14:55 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:14:55 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:27:18 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:27:18 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:27:18 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:27:18 [error] [php] Undefined variable: form (C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\components\FileEditForm.php:39)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_fileEdit.php(18): CourseController->beginWidget()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CourseController->renderInternal()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CourseController->renderFile()
+#4 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CourseController->renderPartial()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CourseController->renderInternal()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CourseController->renderFile()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CourseController->renderPartial()
+#9 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CourseController->render()
+#10 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(314): CourseController->renderView()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionUpdateFile()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#22 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/updateFile/id/34/term_code/2118/class_num/21301
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\components\FileEditForm.php (39)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_fileEdit.php (18)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php (56)
+2013/03/11 07:30:08 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:30:08 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:30:08 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:31:33 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:31:33 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:31:33 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:31:40 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:31:40 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:31:40 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:32:59 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:32:59 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:32:59 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:33:30 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:33:30 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:33:30 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:36:58 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:36:58 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:36:58 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:39:04 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:39:04 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:39:04 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:41:09 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:41:09 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:41:09 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:41:10 [error] [exception.CException] exception 'CException' with message 'Property "FileEditForm.form" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\components\FileEditForm.php(39): CComponent->__get('form')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(148): FileEditForm->init()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(190): CBaseController->createWidget('FileEditForm', Array)
+#3 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\course\_fileEdit.php(18): CBaseController->beginWidget('FileEditForm', Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#7 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('../course/_file...', Array)
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(314): Controller->renderView(Array)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionUpdateFile()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('updateFile')
+#24 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/updateFi...')
+#25 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/drc-etext/index.php/course/updateFile/id/34/term_code/2118/class_num/21301
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/11 07:42:16 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:42:16 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:42:16 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:50:01 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:50:01 [warning] [application] Failed to set unsafe attribute "type" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:50:01 [warning] [application] Failed to set unsafe attribute "label" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:58:43 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:59:05 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (322)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/11 07:59:09 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (306)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)

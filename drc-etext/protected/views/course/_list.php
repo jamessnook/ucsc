@@ -15,6 +15,12 @@
 		<h3>Courses: <?php if (isset($model->term_code) && $model->term_code > 0) echo Term::model()->findByPk($model->term_code)->description; ?></h3>
 
 	<?php 
+	$courseUrlExpression = '';
+	if (Yii::app()->user->checkAccess('faculty')){
+		$courseUrlExpression = 'array(\'course/files\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num, \'username\'=>$data->username,)';
+	} else {
+		$courseUrlExpression = 'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num,)';
+	}
 	$this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'coursesGrid',
 		'dataProvider'=>$model->courses(),
@@ -32,7 +38,8 @@
 				'header'=>'Course Name', 
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->title', 
-				'urlExpression'=>'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num,)', 
+				'urlExpression'=>$courseUrlExpression, 
+				// for instructors load the course files page
 			),
 			array( 
 				'header'=>'Class Id', 

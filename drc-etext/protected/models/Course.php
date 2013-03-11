@@ -77,10 +77,10 @@ class Course extends BaseModel
 			array('subject, catalog_num', 'length', 'max'=>64),
 			array('description', 'length', 'max'=>512),
 			array('title, schedule, room, dates', 'length', 'max'=>128),
-			array('created, modified, username, emplid', 'safe'),
+			array('id, created, modified, username, emplid', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('term_code, class_num, section, course_id, subject, description, title, catalog_num, schedule, room, dates, created, modified', 'safe', 'on'=>'search'),
+			array('id, term_code, class_num, section, course_id, subject, description, title, catalog_num, schedule, room, dates, created, modified', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -108,6 +108,7 @@ class Course extends BaseModel
 	public function attributeLabels()
 	{
 		return array(
+			'id' => 'ID',
 			'term_code' => 'Term Code',
 			'class_num' => 'Class Num',
 			'section' => 'Section',
@@ -135,6 +136,7 @@ class Course extends BaseModel
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('id',$this->id);
 		$criteria->compare('term_code',$this->term_code);
 		$criteria->compare('class_num',$this->class_num);
 		$criteria->compare('section',$this->section,true);
@@ -272,6 +274,22 @@ class Course extends BaseModel
 		$criteria->compare('drcRequests.class_num',$this->class_num);
 		
 		return new CActiveDataProvider('DrcUser', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+
+	/**
+	 * Retrieves a data provider that can provide a list of files uploaded for this Course.
+	 * @return CActiveDataProvider the data provider that can return a list of File Association models.
+	 */
+	public function files()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->compare('model_id',$this->id);
+		$criteria->compare('model_name','Course');
+		
+		return new CActiveDataProvider('FileAssociation', array(
 			'criteria'=>$criteria,
 		 	'pagination' => false,
 		));

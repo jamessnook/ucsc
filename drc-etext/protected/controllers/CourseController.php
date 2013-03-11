@@ -35,8 +35,13 @@ class CourseController extends Controller
 				'actions'=>array('createAssignment','updateAssignment', 'saveAssignment', 
 					'createBook','updateBook', 'saveBook', 'studentAssignments', 'description', 
 					'assignments', 'books', 'students', 'createAssignment', 'createBook', 'manageBook',
+					'files', 'updateFile', 'saveFile', 'uploadFile',
 					'emails', 'saveEmail', 'updateEmail', 'createEmail', 'sendEmail', 'removeEmail'),
 				'roles'=>array('admin'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('files', 'updateFile', 'saveFile', 'uploadFile'),
+				'roles'=>array('faculty'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -44,6 +49,21 @@ class CourseController extends Controller
 		);
 	}
 
+	/**
+	 * Defines actions for this controller that will be handeled by code in seperate action classes.
+	 */
+	public function actions()
+    {
+        return array(
+            'uploadFile'=>array(
+                'class'=>'base.components.actions.UploadAction',
+                'modelName'=>'Course',
+        		'path' =>'/../files/course',
+        		'subfolderVar' =>'id',
+        	),
+        );
+    }
+	
 	/**
 	 * Displays a page to alow editing of an existing Assignment model. 
 	 * Get and Post parameters are obtained from request. 
@@ -264,7 +284,53 @@ class CourseController extends Controller
 	}
 	
 	/**
-	 * display data for an assignemnt associated with a course course.
+	 * display a list of files associated with a course.
+	 */
+	public function actionFiles()
+	{
+		$this->renderView(array(
+			//'contentView' => 'base.views.file._list',
+			//'titleNavRight' => '<a href="' . $this->createUrl('course/createAssignment', array('content'=> 'assignment', 'term_code'=> $this->model->term_code, 'class_num'=>$this->model->class_num)) . '"><i class="icon-plus"></i> Add Assignment </a>',
+			'contentView' => '../course/_files',
+			'menuView' => '../layouts/_instructorCourseMenu',
+			//'menuRoute' => 'course/courses',
+			'contentTitle' => 'Course Files',
+		));
+	}
+	
+	/**
+	 * Displays a page to allow editing of an existing File model. 
+	 */
+	public function actionUpdateFile()
+	{
+		$this->contentModel=File::loadModel();
+		$this->renderView(array(
+			'contentView' => '../course/_fileEdit',
+			'contentTitle' => 'Edit File Data',
+			'createNew'=>false,
+			'menuView' => '../layouts/_instructorCourseMenu',
+			//'titleNavRight' => '<a href="' . $this->createUrl('course/createEmail', array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num,)) . '"><i class="icon-plus"></i> New Email</a>',
+			'action'=>Yii::app()->createUrl("course/saveFile", array('term_code'=>$this->model->term_code, 'class_num'=>$this->model->class_num, 'id'=>$this->contentModel->id)),
+		));
+	}
+
+	/**
+	 * Saves a new Book model or updates an old Book model in the database. 
+	 */
+	public function actionSaveFile()
+	{
+		$contentModel=File::loadModel();
+
+		if(isset($_POST['File']))
+		{
+			if(!$contentModel->save())
+				throw new CHttpException(404,'ERROR could not save book.'); // temporary error code
+		}
+		$this->redirect(array('files','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num, 'username'=>$this->model->username));
+	}
+
+	/**
+	 * display data for an assignemnt associated with a course.
 	 */
 	public function actionViewAssignment()
 	{

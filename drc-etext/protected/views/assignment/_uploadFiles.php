@@ -38,7 +38,7 @@
 	                    'attribute' => 'file',
 	                    'multiple' => true, 
 						//'formView' => 'application.views.somemodel._form',
-						'formView' => 'application.views.file._xupload',
+						'formView' => 'base.views.file._xupload',
 						'htmlOptions' => array('id'=>'assignment-form'),
 	));
 	?>      

@@ -26,7 +26,7 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.models
  */
-class File extends CActiveRecord
+class File extends BaseModel
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -57,13 +57,14 @@ class File extends CActiveRecord
 			array('name', 'required'),
 			array('parent_id, type_id, order_num', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>128),
+			array('title', 'length', 'max'=>128),
 			array('path', 'length', 'max'=>256),
 			array('description', 'length', 'max'=>512),
 			array('modified_by', 'length', 'max'=>32),
-			array('created, modified', 'safe'),
+			array('type, label, created, modified', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, path, description, parent_id, type_id, order_num, created, modified, modified_by', 'safe', 'on'=>'search'),
+			array('id, name, path, type, label, title, description, parent_id, type_id, order_num, created, modified, modified_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -90,9 +91,12 @@ class File extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'path' => 'Path',
+			'label' => 'Label',
+			'title' => 'Title',
 			'description' => 'Description',
 			'parent_id' => 'Parent',
-			'type_id' => 'Type',
+			'type_id' => 'Type Id',
+			'type' => 'Type',
 			'order_num' => 'Order Num',
 			'created' => 'Created',
 			'modified' => 'Modified',
@@ -115,8 +119,11 @@ class File extends CActiveRecord
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('path',$this->path,true);
 		$criteria->compare('description',$this->description,true);
+		$criteria->compare('label',$this->label,true);
+		$criteria->compare('title',$this->title,true);
 		$criteria->compare('parent_id',$this->parent_id);
 		$criteria->compare('type_id',$this->type_id);
+		$criteria->compare('type',$this->type);
 		$criteria->compare('order_num',$this->order_num);
 		$criteria->compare('created',$this->created,true);
 		$criteria->compare('modified',$this->modified,true);

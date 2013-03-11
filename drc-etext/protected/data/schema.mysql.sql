@@ -99,6 +99,7 @@ CREATE TABLE term(                 --  AIS feed, data for terms for display pupo
 
 drop table if exists course;
 CREATE TABLE course (  -- AIS feed
+    id           INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
     term_code INTEGER NOT NULL,         -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
     class_num INTEGER,                  -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     section VARCHAR(32),                -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.CLASS_SECTION?, for bookstore class books request
@@ -185,6 +186,8 @@ CREATE TABLE file (
     id           INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name         VARCHAR(128) NOT NULL, -- name of file
     path         VARCHAR(256) NOT NULL DEFAULT '', -- path for file on server under file root
+    title	 VARCHAR(128) NOT NULL, -- name of file
+    label	 VARCHAR(63) NOT NULL, -- name of file
     description  VARCHAR(512),  -- optional for display purposes
     parent_id    INTEGER,       -- optional parent object id, ie 'assignment' 
     type_id      INTEGER,       -- file type (redundant with extension on path?) not needed, use type
@@ -453,4 +456,9 @@ UPDATE file SET type = SUBSTRING_INDEX(name, '.', -1);
 
 mysql> LOAD DATA INFILE 'c:/users/jim/phpfog/ucsc/drc-etext/protected/data/course_instructor.txt' INTO TABLE course_instructor  LINES TERMINATED BY '\n' ;
 mysql> alter table course_instructor add foreign key (emplid) references user (emplid);
+
+ALTER TABLE file add title VARCHAR(128);
+ALTER TABLE course add id INTEGER NOT NULL UNIQUE AUTO_INCREMENT;
+ALTER TABLE file add type VARCHAR(8);
+ALTER TABLE file add label VARCHAR(63);
 
