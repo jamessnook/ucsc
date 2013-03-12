@@ -34,7 +34,7 @@
 						'options' => array(
 							//'redirect' => $this->createUrl('files', $_REQUEST),
 							//'onComplete' => 'window.location.href = ' . $this->createUrl('files', $_REQUEST) . ';',
-							'parseResponse' => 'js:function (event, files, index, xhr, handler, callBack) { 
+							'fileuploaddone' => 'js:function (event, files, index, xhr, handler, callBack) { 
 								//window.location.href = ' . $this->createUrl('files', $_REQUEST) . ';
 								alert ("Hello");
 							}',
@@ -44,5 +44,13 @@
     $this->endWidget(); 
     $this->endWidget(); 
     
+    Yii::app()->clientScript->registerScript("$('#xupload').bind('fileuploaddone', function (e, data) {
+    	alert ('Hello');
+    	window.location.href = 'http://example.org'; 
+    	})", CClientScript::POS_END);    
+    echo "<script> $('#xupload').bind('fileuploaddone', function (e, data) {
+  		alert ('Hello');
+    	window.location.href = 'http://example.org'; 
+   	})</script>";
 ?>
         

@@ -1,0 +1,7 @@
+Word	Definition	Part Of Speech	Head Word	Frequency(Zeno U)	Sense Number (WordNet)	Polysemy Count	Is Publisher Word	Spanish Cognate Status	Spanish Cognate	Grades	Subjects	
+
+altimeter	an instrument for measuring altitude	n	altimeter	0.5049	1	1	1	Spanish Cognate	altímetro	4	Math	
+area	the number of square units needed to cover a region	n	area	247	6	6	1	Spanish Cognate	área	4 5	Math	
+areas	the number of square units needed to cover a region (plural)	n	area	177	6	6	1	Spanish Cognate	áreas	4	Math	
+avocados	"a pulpy green, nutty flavored fruit from a tropical American tree (plural)"	n	avocado	0.2274	1	2	1			4 5	Math	
+axis	"in a coordinate plane, the horizontal or vertical line along which the coordinates are measured"	n	axis	15	7	6	1			4 5	Math	

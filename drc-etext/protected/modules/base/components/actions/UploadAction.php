@@ -130,7 +130,6 @@ class UploadAction extends XUploadAction {
 			            $fileAssociation->model_name = $modelName;
 			            $fileAssociation->save();
 			        //}
-                    
 	                //Now we need to tell our widget that the upload was succesfull
 	                //We do so, using the json structure defined in
 	                // https://github.com/blueimp/jQuery-File-Upload/wiki/Setup

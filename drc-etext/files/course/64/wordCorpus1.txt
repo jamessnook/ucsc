@@ -1,0 +1,1590 @@
+MATH WORDS		SOURCE #1--A MATH TEXT								SOURCE #2--A MATH TEXT								SOURCE #3--A MATH TEXT								SOURCE #4--A MATH TEXT								SOURCE #5--NOT A MATH TEXT								SOURCE #6--NOT A MATH TEXT								SOURCE #7--NOT A MATH TEXT								SOURCE #8--NOT A MATH TEXT							
+	id	PAGE #	MEANING CLARIFICATION	PUBLISHER-IDENTIFIED WORD?  [Enter x if so]	A NEW WORD FOR YOU?  [Enter x if so]	COMMENTS	SOURCE	SUBJECT	GRADE	PAGE #	MEANING CLARIFICATION	PUBLISHER-IDENTIFIED WORD?  [Enter x if so]	A NEW WORD FOR YOU?  [Enter x if so]	COMMENTS	SOURCE	SUBJECT	GRADE	PAGE #	MEANING CLARIFICATION	PUBLISHER-IDENTIFIED WORD?  [Enter x if so]	A NEW WORD FOR YOU?  [Enter x if so]	COMMENTS	SOURCE	SUBJECT	GRADE	PAGE #	MEANING CLARIFICATION	PUBLISHER-IDENTIFIED WORD?  [Enter x if so]	A NEW WORD FOR YOU?  [Enter x if so]	COMMENTS	SOURCE	SUBJECT	GRADE	PAGE #	MEANING CLARIFICATION	PUBLISHER-IDENTIFIED WORD?  [Enter x if so]	A NEW WORD FOR YOU?  [Enter x if so]	COMMENTS	SOURCE	SUBJECT	GRADE	PAGE #	MEANING CLARIFICATION	PUBLISHER-IDENTIFIED WORD?  [Enter x if so]	A NEW WORD FOR YOU?  [Enter x if so]	COMMENTS	SOURCE	SUBJECT	GRADE	PAGE #	MEANING CLARIFICATION	PUBLISHER-IDENTIFIED WORD?  [Enter x if so]	A NEW WORD FOR YOU?  [Enter x if so]	COMMENTS	SOURCE	SUBJECT	GRADE	PAGE #	MEANING CLARIFICATION	PUBLISHER-IDENTIFIED WORD?  [Enter x if so]	A NEW WORD FOR YOU?  [Enter x if so]	COMMENTS	SOURCE	SUBJECT	GRADE
+accuracy	1	216					4th math hm	math	4	32					4th math psf	math	4	146					5th math psf	math	5									8					5th science mmh	science	5																								
+accurate	2	147					4th math psf	math	4	159					5th math psf	math	5																	374					4th science mmh	science	4	250					5th science delta	science	5	278					5th science mmh	science	5								
+accurately	3	115					4th math psf	math	4																																																								
+acreage	4	404					4th math hm	math	4	377					5th math hm	math	5																																																
+acres	5	85	unit of land				4th math hm	math	4	18					4th math psf	math	4	56					5th math hm	math	5	22					5th math psf	math	5																																
+acute	6	560		x			4th math hm	math	4	201					4th math psf	math	4	394		x			5th math hm	math	5	178					5th math psf	math	5																																
+adapt	7	306					5th math psf	math	5																									116					4th science mmh	science	4																								
+adapted	8	304					4th math hm	math	4																																																								
+added	9	467					4th math psf	math	4																																																								
+addend	10	48		x			4th math hm	math	4	466					4th math psf	math	4																																																
+addends	11	48					4th math hm	math	4	466		x			4th math psf	math	4	ksh8					5th math hm	math	5	468					5th math psf	math	5																																
+adjacent	12	452		x			5th math hm	math	5	188					5th math psf	math	5																																																
+adjusting	13	469					5th math psf	math	5	469					4th math psf	math	4																																																
+adjustment	14	469					5th math psf	math	5																																																								
+adopt	15	207					4th math hm	math	4																																																								
+adopted	16	59					4th math psf	math	4	409					5th math psf	math	5																																																
+advertises	17	463					5th math hm	math	5																																																								
+advertising	18	544					4th math hm	math	4																																																								
+album	19	112					4th math psf	math	4	141					4th math hm	math	4																																																
+albums	20	457					4th math hm	math	4	112					4th math psf	math	4																																																
+algebra	21	33					5th math psf	math	5	31					4th math psf	math	4																																																
+algebraic	22	57		x			4th math hm	math	4	466		x			4th math psf	math	4	104		x			5th math hm	math	5	52					5th math psf	math	5																																
+algorithms	23	54					4th math hm	math	4	36					4th math psf	math	4																																																
+alternate	24	37	to take turns				4th math hm	math	4																																																								
+alternative	25	464					5th math hm	math	5																																																								
+altimeter	26	4		x			4th math psf	math	4																																																								
+altitude	27	10					4th math hm	math	4																									163					5th science delta	science	5	484		x			5th science mmh	science	5																
+amend	28	241					5th math psf	math	5																																																								
+amendment	29	241					5th math psf	math	5																																																								
+amplifier	30	86	device to make music louder				4th math hm	math	4																																																								
+analyze	31	17					4th math hm	math	4	16					4th math psf	math	4	ksh1					5th math hm	math	5	14					5th math psf	math	5	11					4th science mmh	science	4	3		x			5th science mmh	science	5																
+angle	32	468		x			5th math psf	math	5	560		x			4th math hm	math	4	466		x			4th math psf	math	4	389		x			5th math hm	math	5	201					5th science delta	science	5	243					5th science mmh	science	5																
+angles	33	557		x			4th math hm	math	4	192					4th math psf	math	4	ksh26		x			5th math hm	math	5	468					5th math psf	math	5																																
+annual	34	143					5th math psf	math	5	161					4th math hm	math	4																																																
+annually	35	432					4th math hm	math	4																																																								
+appropriate	36	126					4th math psf	math	4	126					4th math psf	math	4																	105	adjective				5th science delta	science	5	3	adjective				5th science mmh	science	5																
+approximate	37	470	close to actual				5th math psf	math	5	216	close to actual				4th math hm	math	4	32	close to actual				4th math psf	math	4	460	close to actual				5th math hm	math	5																																
+approximately	38	213		x			4th math hm	math	4	92					5th math hm	math	5	105					5th math psf	math	5																																								
+aquarium	39	282					4th math hm	math	4	16					4th math psf	math	4																	78					4th science delta	science	4																								
+arc	40	67					4th math psf	math	4	390					5th math hm	math	5																																																
+architect	41	396					4th math hm	math	4																																																								
+architectural	42	445					5th math hm	math	5																																																								
+architecture	43	590					4th math hm	math	4	268					4th math psf	math	4	172					5th math psf	math	5																																								
+area	44	126	2-dimensional space measured in square units	x			5th math psf	math	5	553	2-dimensional space measured in square units				4th math hm	math	4	466	2-dimensional space measured in square units	x			4th math psf	math	4	438	2-dimensional space measured in square units	x			5th math hm	math	5	92					4th science delta	science	4	187					5th science delta	science	5	101					5th science mmh	science	5								
+areas	45	10					4th math psf	math	4																									489					5th science mmh	science	5																								
+arrange	46	6					5th math hm	math	5																									254					4th science mmh	science	4																								
+arranged	47	296					4th math hm	math	4																																																								
+arrangement	48	121					4th math hm	math	4																																																								
+arrangements	49	6					5th math hm	math	5	195					5th math psf	math	5																																																
+arranges	50	141					4th math hm	math	4																																																								
+array	51	468		x			5th math psf	math	5	120		x			4th math hm	math	4	466		x			4th math psf	math	4	6				introduced 1st in 3rd grade	5th math hm	math	5																																
+arrays	52	301					4th math hm	math	4	193					5th math psf	math	5																																																
+associative	53	468	property of addition and multiplication	x			5th math psf	math	5	66		x			4th math hm	math	4	466		x			4th math psf	math	4	128		x			5th math hm	math	5																																
+astronaut	54	616					5th math hm	math	5	139					4th math psf	math	4																	162					5th science delta	science	5																								
+astronauts	55	36					5th math psf	math	5																									308		x			5th science mmh	science	5																								
+atmosphere	56	566					5th math hm	math	5																									255		x			5th science delta	science	5	484		x			5th science mmh	science	5																
+atmospheric	57	566					5th math hm	math	5																									23					5th science delta	science	5	235					5th science mmh	science	5																
+atomic	58	64					5th math hm	math	5																									65					5th science delta	science	5	485		x			5th science mmh	science	5																
+atoms	59	18					5th math hm	math	5																									20		x			4th science delta	science	4	141					4th science mmh	science	4	28		x			5th science delta	science	5	354					5th science mmh	science	5
+attend	60	42					4th math hm	math	4																																																								
+attendance	61	179					5th math hm	math	5																																																								
+attended	62	42					4th math hm	math	4																																																								
+attending	63	195					4th math hm	math	4																																																								
+average	64	468	the mean	x			5th math psf	math	5	265	the mean	x			4th math hm	math	4	466	the mean	x			4th math psf	math	4	342	the mean	x			5th math hm	math	5	49					4th science delta	science	4	86					4th science mmh	science	4	27		x			5th science delta	science	5	213		x			5th science mmh	science	5
+averages	65	195					4th math psf	math	4																									49					4th science delta	science	4																								
+avocado	66	158					5th math psf	math	5	244					4th math hm	math	4																																																
+avocados	67	244		x			4th math hm	math	4	153					5th math psf	math	5																																																
+axes	68	468	lines on a coordinate plane	x			5th math psf	math	5	461	lines on a coordinate plane	x			4th math hm	math	4	399	lines on a coordinate plane				4th math psf	math	4	349	lines on a coordinate plane				5th math hm	math	5	174	on a coordinate plane				5th science delta	science	5	207					4th science delta	science	4																
+axis	69	349	a line on a coordinate plane				5th math hm	math	5	468	a line on a coordinate plane	x			5th math psf	math	5	652	a line on a coordinate plane				4th math hm	math	4									17	a special line in a coordinate plane				5th science mmh	science	5	174	on a coordinate plane	x			5th science delta	science	5	335		x			4th science mmh	science	4								
+balance	70	318					4th math psf	math	4	339					4th math hm	math	4																	156	noun--balance of nature				4th science delta	science	4																								
+balanced	71	174	equal				4th math hm	math	4																									55					4th science mmh	science	4	121					5th science delta	science	5																
+balancing	72	131					4th math hm	math	4																																																								
+banquet	73	114					4th math psf	math	4	329					5th math hm	math	5																																																
+base	74	ksh5	the base of an exponential expression	x			5th math hm	math	5																									485	noun--a compound that is alkaline	x			5th science mmh	science	5																								
+base	75	467	the bottom of a figure				4th math psf	math	4	452	the bottom of a figure	x			5th math hm	math	5	468	the bottom of a figure	x			5th math psf	math	5									485	noun--a compound that is alkaline	x			5th science mmh	science	5																								
+bases	76	467	the matching bottom & top of a figure				4th math psf	math	4																																																								
+batch	77	113					4th math psf	math	4	115					5th math hm	math	5																																																
+batches	78	113					4th math psf	math	4																																																								
+beam	79	197	a long square board				5th math hm	math	5																																																								
+beams	80	289	boards				4th math hm	math	4																									489	noun: electron beams				5th science mmh	science	5																								
+benchmark	81	468	simple fractions used for estimating more complex fractional values--adjective	x			5th math psf	math	5	466	adjective--fractions commonly used for estimation	x			4th math psf	math	4																																																
+bilateral	82	582		x			4th math hm	math	4	440					4th math psf	math	4																																																
+billions	83	5					5th math psf	math	5																									138					4th science delta	science	4	16					5th science delta	science	5																
+billionth	84	456					5th math hm	math	5																									354					5th science mmh	science	5																								
+border	85	341					4th math hm	math	4																																																								
+bordered	86	459	adjective--forming the borders of				5th math hm	math	5																																																								
+bouquet	87	80					4th math psf	math	4	248					4th math hm	math	4																																																
+bouquets	88	248					4th math hm	math	4	xii					4th math psf	math	4																																																
+budget	89	521	noun--a spending plan				5th math hm	math	5																																																								
+budget	90	158	verb				5th math psf	math	5																																																								
+budgeted	91	70	verb				5th math psf	math	5																																																								
+budgets	92	521	verb				5th math hm	math	5																																																								
+builder	93	396					4th math hm	math	4																																																								
+buildings	94	396					4th math hm	math	4																																																								
+built	95	69					4th math hm	math	4																																																								
+bulbs	96	338	flower bulbs				4th math hm	math	4	72					4th math psf	math	4																	306	light bulbs				4th science mmh	science	4	103					4th science delta	science	4																
+bundle	97	81	noun--group of items				4th math psf	math	4	343	a group of something				4th math hm	math	4																																																
+bundles	98	55	noun plural				4th math hm	math	4																																																								
+bundling	99	81	verb				4th math psf	math	4																																																								
+bushels	100	361		x			4th math psf	math	4	464					5th math hm	math	5																																																
+calcium	101	36					4th math hm	math	4	150					5th math hm	math	5																	29					5th science delta	science	5	356					5th science mmh	science	5																
+calculated	102	220					4th math hm	math	4	94					4th math psf	math	4	146					5th math psf	math	5									92					4th science delta	science	4	299					5th science mmh	science	5																
+calculates	103	244					5th math hm	math	5	198					4th math hm	math	4																																																
+calculating	104	91					4th math psf	math	4																									323					5th science mmh	science	5																								
+calculation	105	29					4th math psf	math	4	402					5th math hm	math	5	87					5th math psf	math	5																																								
+calculations	106	xi					4th math psf	math	4	240					5th math hm	math	5	xi					5th math psf	math	5									252					5th science delta	science	5																								
+calorie	107	162					5th math hm	math	5																																																								
+calories	108	73					5th math psf	math	5																									134		x			5th science delta	science	5	167					5th science mmh	science	5																
+candidate	109	21					5th math hm	math	5																																																								
+candidates	110	135					4th math hm	math	4																																																								
+capacity	111	645		x			4th math hm	math	4	466		x			4th math psf	math	4	78					5th math hm	math	5	468		x			5th math psf	math	5																																
+carbohydrates	112	162					5th math hm	math	5																									117					5th science delta	science	5	486					5th science mmh	science	5																
+carbon	113	18					5th math hm	math	5																									24					4th science delta	science	4	141					4th science mmh	science	4	29					5th science delta	science	5	352					5th science mmh	science	5
+cashews	114	244					5th math hm	math	5	146					5th math psf	math	5																																																
+categorical	115	386	as in categorical data				4th math psf	math	4																																																								
+category	116	429					4th math psf	math	4																																																								
+cattle	117	310					4th math hm	math	4	167					4th math psf	math	4																																																
+cells	118	156	batteries				4th math psf	math	4																									64					4th science mmh	science	4	85					5th science delta	science	5	21		x			5th science mmh	science	5								
+cells	119	233	cells that make up the body				5th math psf	math	5																									64					4th science mmh	science	4	85					5th science delta	science	5	21		x			5th science mmh	science	5								
+center	120	468	noun--center of a circle	x			5th math psf	math	5	466	center of a circle	x			4th math psf	math	4																																																
+centerpiece	121	115					4th math psf	math	4																																																								
+centimeter	122	469		x			5th math psf	math	5	321					4th math hm	math	4	466		x			4th math psf	math	4									187					5th science delta	science	5																								
+centimeters	123	268					4th math hm	math	4	311					4th math psf	math	4	12					5th math psf	math	5									12					4th science delta	science	4	86					4th science mmh	science	4	15					5th science mmh	science	5								
+centuries	124	107					5th math hm	math	5																									43					4th science delta	science	4																								
+century	125	466		x			4th math psf	math	4	116		x			5th math psf	math	5																	164					5th science mmh	science	5																								
+ceramic	126	240					4th math hm	math	4	152					4th math psf	math	4																																																
+certain	127	469	adjective--sure to occur	x			5th math psf	math	5	466	sure to occur	x			4th math psf	math	4	532	sure	x			4th math hm	math	4																																								
+challenge	128	31	noun				4th math hm	math	4																																																								
+challenge	129	164	verb- to dispute				4th math hm	math	4																																																								
+chance	130	438	noun--likelihood				5th math psf	math	5	474					4th math psf	math	4																																																
+charity	131	222					4th math hm	math	4	b2					5th math hm	math	5																																																
+chart	132	354	a diagram				5th math hm	math	5	248	a diagram				4th math hm	math	4	382	a diagram				4th math psf	math	4									25					4th science mmh	science	4																								
+charts	133	248	noun plural--diagrams				4th math hm	math	4	44	noun plural--diagrams				4th math psf	math	4																	149					4th science delta	science	4																								
+chemicals	134	226					4th math hm	math	4																									102					4th science delta	science	4	194					4th science mmh	science	4	115					5th science mmh	science	5								
+chemist	135	377					5th math hm	math	5																									43					5th science delta	science	5																								
+chirping	136	606					5th math hm	math	5																																																								
+chirps	137	195	plural noun- sound a cricket makes				4th math hm	math	4	606	noun plural				5th math hm	math	5																																																
+circle	138	467		x			4th math psf	math	4																																																								
+circular	139	467	like a circle				4th math psf	math	4																									300					4th science mmh	science	4																								
+circulars	140	291	flyers				5th math hm	math	5																																																								
+circumference	141	626					5th math hm	math	5	18					5th math psf	math	5																																																
+classification	142	281					5th math hm	math	5																									138		x			5th science delta	science	5	47		x			5th science mmh	science	5																
+classified	143	202					4th math psf	math	4	184					5th math psf	math	5																	106					5th science delta	science	5	494					5th science mmh	science	5																
+classify	144	180					5th math psf	math	5	553					4th math hm	math	4	202					4th math psf	math	4									5		x			4th science mmh	science	4	138		x			5th science delta	science	5	3		x			5th science mmh	science	5								
+classifying	145	387					5th math hm	math	5																									337					5th science mmh	science	5																								
+climate	146	351					4th math hm	math	4																									85		x			4th science mmh	science	4	487		x			5th science mmh	science	5																
+closed	147	467	adjective--without an opening				4th math psf	math	4																																																								
+clubhouse	148	396					4th math hm	math	4																																																								
+coastline	149	85					4th math hm	math	4	593					5th math hm	math	5																																																
+collectable	150	87	able to be collected				4th math hm	math	4																																																								
+collection	151	49					4th math hm	math	4	132					5th math hm	math	5																																																
+colonies	152	281					5th math psf	math	5																									158					4th science delta	science	4	46					4th science mmh	science	4																
+colonists	153	105					5th math psf	math	5																																																								
+colony	154	xx					4th math psf	math	4	xx					5th math psf	math	5																	67		x			4th science mmh	science	4																								
+column	155	97	"column of a table, number, or problem"				5th math hm	math	5																																																								
+columns	156	466	"columns of a table, number, or problem"				4th math psf	math	4	419	"columns of a table, number, or problem"				5th math hm	math	5	15	"columns of a table, number, or problem"				5th math psf	math	5	300	"columns of a table, number, or problem"				4th math hm	math	4	389					4th science mmh	science	4	44					5th science delta	science	5																
+combination	157	194					5th math hm	math	5																									135					4th science delta	science	4	302					4th science mmh	science	4																
+combinations	158	531					4th math hm	math	4	xiv					4th math psf	math	4	xiv					5th math psf	math	5																																								
+combined	159	xiv					4th math psf	math	4	xiv					5th math psf	math	5																																																
+commercially	160	244					4th math hm	math	4	153					5th math psf	math	5																																																
+common	161	468	shared: as in common denominator	x			5th math psf	math	5	467	shared across 2 or more things or groups				4th math psf	math	4	5	shared	x			5th math hm	math	5																																								
+community	162	525					4th math hm	math	4	131					4th math psf	math	4																	170		x			4th science delta	science	4	214					5th science mmh	science	5																
+commutative	163	468	property of addition and multiplication	x			5th math psf	math	5	66		x			4th math hm	math	4	467		x			4th math psf	math	4	128		x			5th math hm	math	5																																
+commuting	164	443					5th math hm	math	5																																																								
+compare	165	392		x			4th math hm	math	4	10					4th math psf	math	4	6					5th math psf	math	5									8					4th science mmh	science	4	3		x			5th science mmh	science	5																
+compared	166	179					5th math hm	math	5																																																								
+comparing	167	10					4th math psf	math	4	3					5th math psf	math	5																																																
+comparison	168	8					5th math psf	math	5	498					4th math hm	math	4																																																
+comparisons	169	121					5th math psf	math	5																																																								
+compass	170	33					4th math hm	math	4	ksh27					5th math hm	math	5	451					5th math psf	math	5									71		x			4th science delta	science	4	336		x			4th science mmh	science	4																
+compatible	171	316	as in compatible numbers	x			5th math hm	math	5	467		x			4th math psf	math	4	25					5th math psf	math	5																																								
+compensate	172	24					5th math psf	math	5																																																								
+compensation	173	467		x			4th math psf	math	4	469		x			5th math psf	math	5																																																
+competition	174	161					4th math hm	math	4																									170		x			4th science delta	science	4	53		x			4th science mmh	science	4																
+competitors	175	69					5th math hm	math	5																																																								
+complex	176	609	complicated				4th math hm	math	4	150					4th math psf	math	4	438					5th math hm	math	5									63					5th science delta	science	5	501					5th science mmh	science	5																
+composite	177	5	as in composite number	x			5th math hm	math	5	468	a type of number	x			5th math psf	math	5	180					4th math psf	math	4	646		x			4th math hm	math	4																																
+computation	178	24	mental math				5th math psf	math	5	44					4th math hm	math	4																																																
+computations	179	215					4th math hm	math	4	469					5th math psf	math	5																																																
+compute	180	6					5th math psf	math	5	74					4th math hm	math	4	135					4th math psf	math	4																																								
+computing	181	642					4th math hm	math	4																																																								
+concept	182	270					5th math psf	math	5	196					4th math hm	math	4	118					4th math psf	math	4																																								
+concepts	183	5					4th math hm	math	4	388					4th math psf	math	4																																																
+conceptual	184	182					4th math psf	math	4																																																								
+conclude	185	195					4th math psf	math	4	627					4th math hm	math	4																	51	verb				4th science mmh	science	4																								
+concluded	186	215					4th math psf	math	4																									13					5th science mmh	science	5																								
+conclusions	187	127					4th math psf	math	4																									13	deductions based on evidence	x			4th science mmh	science	4	3					5th science mmh	science	5																
+concrete	188	248	adjective--real and explicit				5th math psf	math	5																									183	noun--cement				4th science delta	science	4	384	noun--cement				5th science mmh	science	5																
+concrete	189	396	made of concrete				4th math hm	math	4																									183	noun--cement				4th science delta	science	4	384	noun--cement				5th science mmh	science	5																
+conduct	190	b1	to carry out (a survey)				5th math hm	math	5	512	to carry out (a survey)				4th math hm	math	4																	47	verb--to carry electricity or heat				4th science delta	science	4	70	verb--to carry electricity or heat				5th science delta	science	5	488	verb--to carry electricity or heat	x			5th science mmh	science	5								
+conducted	191	515	carried out (a survey)				5th math hm	math	5																									28	"verb--to perform or do, as in an experiment"				4th science delta	science	4																								
+cone	192	646		x			4th math hm	math	4	467		x			4th math psf	math	4	469		x			5th math psf	math	5									74					5th science mmh	science	5																								
+congruence	193	436					4th math psf	math	4	579					4th math hm	math	4																																																
+congruent	194	469	having the same shape				5th math psf	math	5	467		x			4th math psf	math	4	420		x			5th math hm	math	5	579		x			4th math hm	math	4																																
+consecutive	195	61		x			4th math hm	math	4	470					4th math psf	math	4	11					5th math hm	math	5	251					5th math psf	math	5																																
+conservation	196	105					4th math hm	math	4																									222					5th science delta	science	5	488		x			5th science mmh	science	5																
+conservationists	197	b6					5th math hm	math	5																																																								
+construct	198	450	to make or build				5th math psf	math	5	ksh27					5th math hm	math	5																																																
+constructing	199	190					5th math hm	math	5	454					5th math psf	math	5																	488					5th science mmh	science	5																								
+construction	200	469	something made or built	x			5th math psf	math	5	396					4th math hm	math	4																	50					4th science delta	science	4	177					5th science mmh	science	5																
+constructions	201	450	things made or built	x			5th math psf	math	5																																																								
+container	202	332					4th math hm	math	4																																																								
+contains	203	470					4th math psf	math	4	40					5th math hm	math	5																																																
+contractor	204	286					5th math hm	math	5																																																								
+contractors	205	591	person in charge of a construction project				4th math hm	math	4																																																								
+contribute	206	30					4th math psf	math	4	463					4th math hm	math	4																	231					4th science delta	science	4	318					4th science mmh	science	4	71					5th science delta	science	5								
+contributed	207	222					4th math hm	math	4																																																								
+contributes	208	213					4th math hm	math	4																																																								
+conversion	209	361					4th math psf	math	4																									27		x			4th science delta	science	4																								
+conversions	210	350					4th math psf	math	4																									28					4th science delta	science	4																								
+convert	211	278	to change to something else				5th math psf	math	5	78					5th math hm	math	5	321	to change				4th math hm	math	4									71		x			4th science delta	science	4	345					4th science mmh	science	4	499					5th science mmh	science	5								
+converted	212	332					4th math hm	math	4																									27					4th science delta	science	4	311					4th science mmh	science	4	93					5th science delta	science	5								
+converting	213	329	changing				4th math hm	math	4	361					4th math psf	math	4																																																
+coordinate	214	363	x or y value  or a point  on a coordinate grid	x			5th math hm	math	5	474	point on a grid				4th math hm	math	4																																																
+coordinates	215	363	points on a coordinate grid				5th math hm	math	5	469	points on a grid	x			5th math psf	math	5	466	numbers				4th math hm	math	4																																								
+corresponding	216	642	adjective--that correspond to one another				4th math hm	math	4	420	adjective--that correspond to one another				5th math hm	math	5																																																
+counter	217	386	playing piece in a game				5th math hm	math	5																																																								
+counters	218	190	objects for counting				4th math hm	math	4																																																								
+coupon	219	75					5th math psf	math	5	426					4th math psf	math	4																																																
+coupons	220	69					5th math psf	math	5																																																								
+cricket	221	195					4th math hm	math	4																																																								
+crickets	222	127					4th math psf	math	4	606					5th math hm	math	5																																																
+crystal	223	126					4th math psf	math	4																									262		x			4th science delta	science	4	141					4th science mmh	science	4	78		x			5th science delta	science	5								
+crystals	224	126					4th math psf	math	4	544					5th math hm	math	5																	174					4th science mmh	science	4	10					5th science delta	science	5	434					5th science mmh	science	5								
+cube	225	647	a 3D square	x			4th math hm	math	4	467	noun	x			4th math psf	math	4	469	noun--a figure	x			5th math psf	math	5	471	noun	x			5th math hm	math	5																																
+cubed	226	469	adjective--to the 3rd power	x			5th math psf	math	5																																																								
+cubes	227	128	noun plural				5th math psf	math	5	622	noun plural				4th math hm	math	4	126					4th math psf	math	4	474	noun plural				5th math hm	math	5																																
+cubic	228	647		x			4th math hm	math	4	295					4th math psf	math	4	482		x			5th math hm	math	5	468		x			5th math psf	math	5																																
+cup	229	469	a measurement for fluids	x			5th math psf	math	5	350		x			4th math psf	math	4																																																
+cups	230	332	capacity measurement	x			4th math hm	math	4	267	noun plural				5th math psf	math	5																																																
+customary	231	325					4th math hm	math	4	350					4th math psf	math	4	469					5th math psf	math	5																																								
+cylinder	232	647		x			4th math hm	math	4	467		x			4th math psf	math	4	469		x			5th math psf	math	5									121					5th science mmh	science	5																								
+data	233	512		x			4th math hm	math	4	467		x			4th math psf	math	4	470		x			5th math psf	math	5									29					4th science delta	science	4	11		x			4th science mmh	science	4	256		x			5th science delta	science	5	484					5th science mmh	science	5
+decade	234	325		x			4th math psf	math	4																																																								
+decades	235	107					5th math hm	math	5	127					5th math psf	math	5																																																
+deciliter	236	627					5th math hm	math	5																																																								
+decimal	237	14	adjective--as in decimal point				4th math psf	math	4	434	adjective--decimal number	x			4th math hm	math	4	138	adjective--as in decimal point				5th math psf	math	5	54	adjective--as in decimal point	x			5th math hm	math	5	383	decimal point				4th science mmh	science	4	33					5th science mmh	science	5																
+decimal	238	434	noun--a number	x			4th math hm	math	4	14	noun--the number				4th math psf	math	4	138	noun--a number				5th math psf	math	5	54	noun--a number	x			5th math hm	math	5	383	decimal point				4th science mmh	science	4	33					5th science mmh	science	5																
+decimals	239	54	noun plural--numbers				5th math hm	math	5	8	noun plural				4th math hm	math	4	10	noun plural				4th math psf	math	4	6	noun plural				5th math psf	math	5	183					4th science mmh	science	4	165					5th science mmh	science	5																
+decimeter	240	648		x			4th math hm	math	4	467		x			4th math psf	math	4	627					5th math hm	math	5																																								
+decimeters	241	334	units of length	x			4th math hm	math	4																																																								
+decorate	242	440					4th math hm	math	4																																																								
+decorative	243	223					4th math hm	math	4	486					5th math hm	math	5																																																
+decrease	244	b6					5th math hm	math	5	409					4th math hm	math	4																																																
+decreases	245	328					4th math hm	math	4																																																								
+degree	246	648	unit measure in a scale or series	x			4th math hm	math	4	32					4th math psf	math	4	470		x			5th math psf	math	5																																								
+degrees	247	350	unit measures in a scale or series	x			4th math hm	math	4	471					4th math psf	math	4	342					5th math psf	math	5	390		x			5th math hm	math	5																																
+demonstrate	248	48					4th math hm	math	4																																																								
+demonstration	249	273					4th math hm	math	4																																																								
+denominator	250	470		x			5th math psf	math	5	367		x			4th math hm	math	4	468		x			4th math psf	math	4	38		x			5th math hm	math	5																																
+denominators	251	392					4th math hm	math	4	ksh12		x			5th math hm	math	5	472					5th math psf	math	5																																								
+derivation	252	182					4th math psf	math	4																																																								
+derive	253	456					5th math hm	math	5	304					5th math psf	math	5																																																
+deriving	254	336					4th math hm	math	4	182					4th math psf	math	4																																																
+destroyed	255	105					4th math hm	math	4	b6					5th math hm	math	5																	54					4th science mmh	science	4																								
+destructive	256	474					4th math hm	math	4																																																								
+determine	257	479					5th math hm	math	5	528					4th math hm	math	4	166					4th math psf	math	4									9					4th science mmh	science	4	485					5th science mmh	science	5																
+determined	258	56					5th math hm	math	5																																																								
+determining	259	190					4th math hm	math	4																																																								
+diagonal	260	173					5th math hm	math	5																																																								
+diagonally	261	339					4th math hm	math	4	186					5th math psf	math	5																																																
+diagonals	262	14					5th math psf	math	5																																																								
+diagram	263	16	noun--picture or depiction				4th math psf	math	4	49	noun--picture or depiction				4th math hm	math	4	471	noun				5th math psf	math	5	106	noun				5th math hm	math	5	4					4th science mmh	science	4	30					5th science mmh	science	5																
+diagrams	264	38	noun--pictures				4th math hm	math	4	44	noun--pictures				4th math psf	math	4																																																
+diameter	265	568		x			4th math hm	math	4	468		x			4th math psf	math	4	354					5th math hm	math	5	470		x			5th math psf	math	5	256		x			5th science delta	science	5	10					5th science mmh	science	5																
+differ	266	28					4th math hm	math	4																																																								
+difference	267	468	noun--answer to a subtraction problem	x			4th math psf	math	4	71	answer in a subtraction problem	x			4th math hm	math	4	470	answer to a subtraction problem	x			5th math psf	math	5																																								
+differences	268	30	answers to subtraction problems				5th math psf	math	5																									182					4th science mmh	science	4																								
+differentiate	269	296					5th math psf	math	5																									206					4th science delta	science	4																								
+digest	270	198	verb- break down food				4th math hm	math	4	510					5th math hm	math	5																	120	to eat and break down				5th science delta	science	5																								
+digestive	271	510					5th math hm	math	5																									90					5th science delta	science	5	107					5th science mmh	science	5																
+digit	272	8	number	x			4th math hm	math	4	469					4th math psf	math	4	471					5th math psf	math	5																																								
+digital	273	468	adjective--opposite of analog	x			4th math psf	math	4																																																								
+digits	274	1	numbers				4th math hm	math	4	468		x			4th math psf	math	4	ksh8					5th math hm	math	5	470		x			5th math psf	math	5																																
+dimensions	275	193					4th math psf	math	4	463					5th math hm	math	5	306					5th math psf	math	5																																								
+director	276	216	person in charge				4th math hm	math	4	452					5th math hm	math	5																																																
+discount	277	521	adjective--as in discount stores				5th math hm	math	5																																																								
+discount	278	69	noun--money off the regular price				5th math psf	math	5																																																								
+discounted	279	75	adjective--discounted price				5th math psf	math	5																																																								
+discovered	280	396					5th math hm	math	5	430					4th math hm	math	4																																																
+discovery	281	430					4th math hm	math	4																									40					4th science delta	science	4																								
+display	282	38	noun				5th math hm	math	5	272	noun				4th math hm	math	4																	335					4th science mmh	science	4																								
+displaying	283	466	to show or present				4th math psf	math	4																																																								
+distance	284	120		x			5th math psf	math	5	402					4th math hm	math	4	408					4th math psf	math	4									5					4th science mmh	science	4																								
+distances	285	30					4th math hm	math	4																									278					4th science mmh	science	4																								
+distinguishing	286	190					4th math hm	math	4	16					4th math psf	math	4	14					5th math psf	math	5																																								
+distribute	287	233		x			4th math hm	math	4	253					5th math psf	math	5																																																
+distributive	288	122	a property				5th math psf	math	5	122		x			5th math hm	math	5	468	distributive property	x			4th math psf	math	4																																								
+divide	289	119					4th math hm	math	4	468		x			4th math psf	math	4	470					5th math psf	math	5																																								
+divided	290	76					4th math psf	math	4	469					5th math psf	math	5																																																
+dividend	291	130		x			4th math hm	math	4	468		x			4th math psf	math	4	ksh8					5th math hm	math	5	470		x			5th math psf	math	5																																
+divides	292	151					4th math hm	math	4																																																								
+dividing	293	466					4th math psf	math	4																																																								
+divisibility	294	302					4th math hm	math	4	281					4th math psf	math	4	193					5th math psf	math	5																																								
+divisible	295	648		x			4th math hm	math	4	468		x			4th math psf	math	4	470		x			5th math psf	math	5																																								
+division	296	119					4th math hm	math	4	469					4th math psf	math	4	471					5th math psf	math	5																																								
+divisor	297	470		x			5th math psf	math	5	131		x			4th math hm	math	4	468		x			4th math psf	math	4	ksh10					5th math hm	math	5																																
+divisors	298	92					5th math psf	math	5																																																								
+donate	299	115					5th math hm	math	5																																																								
+donation	300	253					4th math hm	math	4																																																								
+double	301	215	take a value times two				4th math psf	math	4																																																								
+doubled	302	243	taken times two				4th math hm	math	4	xviii	taken times two				4th math psf	math	4	xviii					5th math psf	math	5																																								
+dowel	303	278					5th math psf	math	5																																																								
+dowels	304	80					4th math psf	math	4																																																								
+dozen	305	66					4th math psf	math	4	79					5th math psf	math	5																																																
+earn	306	245					4th math hm	math	4																																																								
+earned	307	118					5th math hm	math	5																																																								
+easel	308	74					4th math hm	math	4	297					4th math psf	math	4																																																
+edge	309	318	segment where 2 faces meet	x			5th math psf	math	5	619	segment where 2 faces meet	x			4th math hm	math	4	468	segment where 2 faces meet	x			4th math psf	math	4	471	segment where 2 faces meet	x			5th math hm	math	5																																
+edges	310	477	noun plural				5th math psf	math	5																																																								
+eighth	311	264					5th math psf	math	5																																																								
+eighths	312	253					4th math psf	math	4																																																								
+elapsed	313	468	adjective--elapsed time	x			4th math psf	math	4	470	already gone by				5th math psf	math	5																																																
+election	314	135					4th math hm	math	4	21					5th math hm	math	5																																																
+electric	315	542					4th math hm	math	4																									39					4th science delta	science	4																								
+electronics	316	105					4th math psf	math	4																																																								
+elevation	317	340					5th math psf	math	5	356					4th math hm	math	4	39		x			4th math psf	math	4	ksh34					5th math hm	math	5	256		x			5th science delta	science	5																								
+elevations	318	357					5th math psf	math	5																																																								
+emigrant	319	167					4th math psf	math	4																																																								
+enclose	320	439					5th math hm	math	5																																																								
+endangered	321	17					4th math hm	math	4	179					4th math psf	math	4																																																
+endpoint	322	468					5th math psf	math	5	558		x			4th math hm	math	4	196					4th math psf	math	4	ksh26		x			5th math hm	math	5																																
+endpoints	323	497					4th math hm	math	4	196					4th math psf	math	4	472					5th math psf	math	5																																								
+energy	324	496					4th math hm	math	4	224					5th math hm	math	5																	72		x			4th science delta	science	4	28					4th science mmh	science	4	139		x			5th science delta	science	5	50					5th science mmh	science	5
+equal	325	468					4th math psf	math	4																																																								
+equality	326	120					4th math psf	math	4																																																								
+equally	327	531					4th math hm	math	4	470					5th math psf	math	5																																																
+equals	328	182					4th math hm	math	4	129					4th math psf	math	4																																																
+equation	329	470		x			5th math psf	math	5	90		x			4th math hm	math	4	468		x			4th math psf	math	4	99		x			5th math hm	math	5	78		x			5th science delta	science	5	93					5th science mmh	science	5																
+equations	330	416					4th math psf	math	4	ksh14		x			5th math hm	math	5	472		x			5th math psf	math	5																																								
+equator	331	4					5th math psf	math	5																									86					4th science delta	science	4	201					5th science delta	science	5	490		x			5th science mmh	science	5								
+equilateral	332	470	having the same length sides				5th math psf	math	5	557		x			4th math hm	math	4	200					4th math psf	math	4	412		x			5th math hm	math	5																																
+equivalence	333	373					4th math hm	math	4	224					4th math psf	math	4	212					5th math psf	math	5																																								
+equivalent	334	ksh3	adjective: equal in value				5th math hm	math	5	10	adjective--having the same value	x			5th math psf	math	5	366	adjective	x			4th math hm	math	4																																								
+equivalent	335	424	noun				4th math hm	math	4	468	noun	x			4th math psf	math	4																																																
+equivalents	336	ksh3	numbers with equal values				5th math hm	math	5	298	things with the same value				5th math psf	math	5																																																
+estimate	337	25	noun	x			4th math hm	math	4																									148					4th science mmh	science	4	258					5th science delta	science	5	46					5th science mmh	science	5								
+estimate	338	xi	verb--to make a good guess				4th math psf	math	4	217	verb				4th math hm	math	4	b4	verb				5th math hm	math	5	470	verb	x			5th math psf	math	5	148					4th science mmh	science	4	258					5th science delta	science	5	46					5th science mmh	science	5								
+estimated	339	32	verb				5th math psf	math	5	12					4th math hm	math	4	147					4th math psf	math	4	57					5th math hm	math	5	251					4th science delta	science	4																								
+estimates	340	95	3rd person sing verb				4th math psf	math	4																																																								
+estimates	341	217	noun plural				4th math hm	math	4	468	noun plural				5th math psf	math	5																																																
+estimating	342	471	verb				5th math psf	math	5	217					4th math hm	math	4	259					5th math hm	math	5																																								
+estimation	343	6					4th math hm	math	4	466					4th math psf	math	4	276					5th math hm	math	5	46					5th math psf	math	5																																
+evaluate	344	92		x			4th math hm	math	4	147					4th math psf	math	4	104					5th math hm	math	5																																								
+evaluated	345	ksh15					5th math hm	math	5																																																								
+evaluating	346	104					4th math hm	math	4	114					5th math psf	math	5																																																
+even	347	650	as in even numbers				4th math hm	math	4	180	as in even numbers				4th math psf	math	4																																																
+evenly	348	185					4th math hm	math	4																																																								
+event	349	466		x			4th math psf	math	4	469		x			5th math psf	math	5																	495					5th science mmh	science	5																								
+evidence	350	154					4th math hm	math	4	126					4th math psf	math	4																	263		x			4th science delta	science	4	161					4th science mmh	science	4	3					5th science mmh	science	5								
+exact	351	216					4th math hm	math	4	472					4th math psf	math	4																																																
+examine	352	ksh5					5th math hm	math	5																									381					4th science mmh	science	4																								
+examining	353	497					4th math hm	math	4																									178					4th science mmh	science	4																								
+exhibit	354	41	a display in a museum or zoo				5th math hm	math	5	238					4th math hm	math	4																																																
+expanded	355	470	as in expanded form				5th math psf	math	5	5	as in expanded form	x			4th math hm	math	4	468	as in expanded form	x			4th math psf	math	4	56	as in expanded form	x			5th math hm	math	5																																
+expanding	356	228					4th math hm	math	4																																																								
+experiment	357	473	noun--a systematic inquiry				5th math psf	math	5	539	noun				4th math hm	math	4	471					4th math psf	math	4									21					4th science delta	science	4	6					4th science mmh	science	4	3		x			5th science mmh	science	5								
+exponent	358	471		x			5th math psf	math	5	102					5th math hm	math	5																																																
+exponential	359	66					5th math psf	math	5																																																								
+exponents	360	ksh5		x			5th math hm	math	5	471					5th math psf	math	5																																																
+express	361	36	verb--to communicate				5th math hm	math	5	432	to show				4th math hm	math	4																																																
+expressed	362	340	represented as  or stated as				5th math psf	math	5																																																								
+expresses	363	486					5th math hm	math	5																																																								
+expression	364	39	part of a formula or equation				5th math psf	math	5	92		x			4th math hm	math	4	466					4th math psf	math	4	ksh14	as in algebraic expression	x			5th math hm	math	5																																
+expressions	365	93					4th math hm	math	4	31					4th math psf	math	4	110					5th math psf	math	5																																								
+extend	366	7					4th math hm	math	4																																																								
+extending	367	452					5th math hm	math	5																																																								
+extends	368	467					4th math psf	math	4																																																								
+face	369	619	side of a figure	x			4th math hm	math	4	469	side of a figure	x			4th math psf	math	4	471	side of a figure	x			5th math hm	math	5	471	side of a figure	x			5th math psf	math	5																																
+faces	370	622	sides of a figure	x			4th math hm	math	4	195	sides of a figure				4th math psf	math	4	ksh22	sides of a figure	x			5th math hm	math	5	469	sides of a figure				5th math psf	math	5																																
+factor	371	468	a smaller number that can be evenly multiplied into a bigger number	x			5th math psf	math	5	300	a smaller number that can be evenly multiplied into a bigger number	x			4th math hm	math	4	469	a smaller number that can be evenly multiplied into a bigger number				4th math psf	math	4	5	a smaller number that can be evenly multiplied into a bigger number	x			5th math hm	math	5	78					4th science delta	science	4	15					4th science mmh	science	4																
+factor	372	300	verb- to factor				4th math hm	math	4																									78					4th science delta	science	4	15					4th science mmh	science	4																
+factorization	373	474		x			5th math psf	math	5																																																								
+factors	374	213	noun plural	x			4th math hm	math	4	469	noun plural	x			4th math psf	math	4	6	noun plural	x			5th math hm	math	5	471	noun plural	x			5th math psf	math	5	78					4th science delta	science	4																								
+factory	375	43					4th math hm	math	4	112					4th math psf	math	4																	183					4th science delta	science	4	53					5th science delta	science	5																
+features	376	312	verb:  displays				4th math hm	math	4																																																								
+features	377	3	noun				4th math hm	math	4																																																								
+feet	378	350	measures of 1 foot	x			4th math psf	math	4	101	more than 1 12-inch foot				5th math psf	math	5																																																
+ferret	379	452					4th math hm	math	4																																																								
+ferrets	380	133					5th math psf	math	5																																																								
+ferried	381	146	go on a ferry				4th math psf	math	4																																																								
+ferry	382	146	noun				4th math psf	math	4																																																								
+figure	383	469	a 2- or 3-dimensional shape				5th math psf	math	5	325	a 2- or 3-dimensional shape				4th math hm	math	4	193	a 2- or 3-dimensional shape				4th math psf	math	4	483	a 2- or 3-dimensional shape				5th math hm	math	5																																
+figures	384	472	more than one 2- or 3-dimensional shapes				4th math psf	math	4																																																								
+figures	385	172	small statues				4th math hm	math	4																																																								
+figurines	386	227					4th math hm	math	4	532					5th math hm	math	5																																																
+fleece	387	422					4th math hm	math	4	402					5th math hm	math	5																																																
+floor	388	356	bottom of canyon or valley				4th math hm	math	4																																																								
+floor	389	398	gymnastics event				4th math psf	math	4																																																								
+flute	390	129	a musical instrument				5th math psf	math	5	197	a musical instrument				5th math hm	math	5																																																
+foot	391	321	a 12-inch unit of measurement	x			4th math hm	math	4	350	1-foot measure	x			4th math psf	math	4	101	12 inches	x			5th math psf	math	5																																								
+formula	392	471		x			5th math psf	math	5	602		x			4th math hm	math	4	359					4th math psf	math	4	ksh20					5th math hm	math	5	78		x			5th science delta	science	5																								
+formulas	393	553					4th math hm	math	4	358					4th math psf	math	4	436					5th math hm	math	5	300					5th math psf	math	5	32					5th science delta	science	5																								
+formulate	394	382					4th math psf	math	4																																																								
+fossil	395	145					4th math psf	math	4																									263		x			4th science delta	science	4	160					4th science mmh	science	4																
+fossils	396	330					4th math hm	math	4	132					5th math hm	math	5	395					5th math psf	math	5									221					4th science delta	science	4	164		x			4th science mmh	science	4																
+fourth	397	363					4th math psf	math	4	372					4th math hm	math	4																																																
+fourths	398	373					4th math hm	math	4	237					4th math psf	math	4																																																
+fraction	399	471		x			5th math psf	math	5	386		x			4th math hm	math	4	469		x			4th math psf	math	4	ksh3		x			5th math hm	math	5	51					4th science delta	science	4	103		x			4th science mmh	science	4	180					5th science mmh	science	5								
+fractional	400	468					5th math psf	math	5																									114					4th science delta	science	4	385					5th science mmh	science	5																
+fractions	401	365					4th math hm	math	4	224					4th math psf	math	4	ksh7					5th math hm	math	5	6					5th math psf	math	5																																
+frequencies	402	352					5th math hm	math	5																																																								
+frequency	403	352	adjective--as in a frequency table	x			5th math hm	math	5	470	as in a frequency table				5th math psf	math	5																																																
+frequent	404	69					5th math hm	math	5																																																								
+function	405	189	adjective--as in function table	x			4th math hm	math	4	97	adjective--as in function table	x			5th math hm	math	5																	172		x			4th science delta	science	4	61					5th science delta	science	5	33					5th science mmh	science	5								
+functions	406	163	expressions involving one or more variables				4th math hm	math	4																									61	equations				5th science mmh	science	5	93					4th science delta	science	4	90					5th science delta	science	5								
+gallon	407	651		x			4th math hm	math	4	350		x			4th math psf	math	4	236					5th math hm	math	5	159		x			5th math psf	math	5																																
+gallons	408	332	capacity measurement	x			4th math hm	math	4	123					5th math psf	math	5																	0					4th science mmh	science	4	139					5th science mmh	science	5																
+gems	409	70					4th math psf	math	4																									196		x			4th science delta	science	4	146					4th science mmh	science	4																
+gemstones	410	126					4th math psf	math	4																									208					4th science delta	science	4																								
+generalization	411	471		x			5th math psf	math	5	214					4th math psf	math	4																																																
+generalizations	412	214					4th math psf	math	4	186					5th math psf	math	5																																																
+generalize	413	27					4th math hm	math	4	452					5th math hm	math	5																																																
+generating	414	618					5th math hm	math	5																																																								
+generations	415	19					5th math psf	math	5																																																								
+geometric	416	190					5th math psf	math	5	193					4th math psf	math	4	462					5th math hm	math	5																																								
+geometry	417	98					4th math psf	math	4																																																								
+govern	418	39					4th math psf	math	4																																																								
+governed	419	39					4th math psf	math	4																																																								
+governing	420	39					4th math psf	math	4																																																								
+government	421	39					4th math psf	math	4																									141					4th science delta	science	4	69					5th science delta	science	5																
+grainy	422	330					4th math hm	math	4																																																								
+gram	423	651	unit of weight	x			4th math hm	math	4	469		x			4th math psf	math	4	471		x			5th math psf	math	5									68					4th science mmh	science	4	111					5th science delta	science	5	342					5th science mmh	science	5								
+grams	424	336		x			4th math hm	math	4	44					4th math psf	math	4	116					5th math psf	math	5									69					4th science mmh	science	4	17					5th science delta	science	5	495					5th science mmh	science	5								
+granite	425	419					5th math hm	math	5	126					4th math psf	math	4	382					4th math hm	math	4									209		x			4th science delta	science	4	140		x			4th science mmh	science	4																
+granola	426	170					4th math psf	math	4																																																								
+graph	427	354	noun--a chart	x			5th math hm	math	5	654	a chart	x			4th math hm	math	4	466	a chart	x			4th math psf	math	4	468	a chart	x			5th math psf	math	5	17	a chart				4th science mmh	science	4	89	a chart				4th science delta	science	4																
+graphic	428	463					4th math hm	math	4	251					5th math hm	math	5																																																
+graphs	429	44	noun plural				4th math psf	math	4	248	noun--charts				4th math hm	math	4																																																
+grid	430	469					5th math psf	math	5	238					4th math hm	math	4	467					4th math psf	math	4	354		x			5th math hm	math	5																																
+grids	431	440					4th math hm	math	4																																																								
+grouping	432	516	a group				4th math hm	math	4																																																								
+gymnastic	433	286					4th math psf	math	4																																																								
+gymnastics	434	82					4th math psf	math	4																																																								
+gymnasts	435	229					4th math psf	math	4	26					5th math psf	math	5																																																
+half	436	214	adjective				4th math hm	math	4																																																								
+half	437	205	noun				4th math psf	math	4	166	noun				5th math psf	math	5																																																
+halfway	438	24	adjective				4th math psf	math	4																																																								
+halfway	439	237	adverb				5th math psf	math	5																																																								
+halves	440	276					4th math psf	math	4																																																								
+height	441	202					4th math hm	math	4	452		x			5th math hm	math	5	471		x			5th math psf	math	5																																								
+hexagon	442	471		x			5th math psf	math	5	557		x			4th math hm	math	4	469		x			4th math psf	math	4																																								
+hexagons	443	553					4th math hm	math	4																																																								
+highlighted	444	555					4th math hm	math	4																																																								
+histogram	445	352		x			5th math hm	math	5	471		x			5th math psf	math	5																																																
+homeless	446	46					5th math hm	math	5																																																								
+hometown	447	216					4th math hm	math	4																																																								
+horizontal	448	471					5th math psf	math	5	466					4th math hm	math	4	408					4th math psf	math	4	ksh16					5th math hm	math	5	243					4th science delta	science	4	260					5th science delta	science	5																
+horizontally	449	141					4th math hm	math	4																																																								
+housing	450	185	verb--providing a home for				4th math hm	math	4																																																								
+hundreds	451	5					4th math hm	math	4																																																								
+hundredth	452	469		x			4th math psf	math	4	471		x			5th math psf	math	5																																																
+hundredths	453	415		x			4th math hm	math	4	270					4th math psf	math	4	54					5th math hm	math	5	10					5th math psf	math	5																																
+hurricane	454	429		x			4th math psf	math	4	522					4th math hm	math	4																	257		x			5th science delta	science	5	492		x			5th science mmh	science	5																
+hurricanes	455	522					4th math hm	math	4																									106					4th science mmh	science	4	159					5th science delta	science	5	270					5th science mmh	science	5								
+hydrogen	456	18					5th math hm	math	5	240					5th math psf	math	5																	257		x			5th science delta	science	5	298					5th science mmh	science	5																
+identical	457	476					5th math hm	math	5																									124					4th science mmh	science	4																								
+identifies	458	39					5th math hm	math	5																																																								
+identifying	459	190					4th math hm	math	4	16					4th math psf	math	4																																																
+identity	460	128	"adjective--having to do with 0 or 1, identity elements"	x			5th math hm	math	5	470	adjective--having to do with an identity element	x			5th math psf	math	5	469	adjective--having to do with an identity element	x			4th math psf	math	4	652	adjective--having to do with an identity element	x			4th math hm	math	4																																
+immigrants	461	9					5th math psf	math	5																																																								
+improper	462	400					4th math hm	math	4	469		x			4th math psf	math	4	27		x			5th math hm	math	5																																								
+inch	463	652	unit of measurement	x			4th math hm	math	4																																																								
+inches	464	325	unit of measurement				4th math hm	math	4	350		x			4th math psf	math	4																																																
+increase	465	b6	to make greater				5th math hm	math	5	61	verb				4th math hm	math	4																																																
+increased	466	65	verb				4th math hm	math	4																																																								
+increments	467	ksh30					5th math hm	math	5																																																								
+indicate	468	124					4th math psf	math	4	340					4th math hm	math	4																	3					5th science mmh	science	5																								
+indicated	469	358					4th math hm	math	4	67					5th math hm	math	5																																																
+indicates	470	55					5th math hm	math	5																									493					5th science mmh	science	5																								
+indicating	471	600					5th math hm	math	5																																																								
+inequality	472	141	not equal	x			4th math hm	math	4	469		x			4th math psf	math	4	545					5th math hm	math	5																																								
+infinite	473	440					4th math psf	math	4	ksh11					5th math hm	math	5																																																
+input	474	190	noun--what is put into something				4th math hm	math	4	ksh18	noun				5th math hm	math	5	472	input value				5th math psf	math	5																																								
+input	475	ksh18	verb--to put into something				5th math hm	math	5																																																								
+installing	476	297					4th math psf	math	4																																																								
+installment	477	156					5th math psf	math	5																																																								
+installments	478	102					5th math psf	math	5																																																								
+integer	479	348					4th math hm	math	4	336		x			4th math psf	math	4	345					5th math psf	math	5	544		x			5th math hm	math	5																																
+integers	480	347		x			4th math hm	math	4	470		x			4th math psf	math	4	544		x			5th math hm	math	5	472		x			5th math psf	math	5																																
+interpret	481	54					4th math hm	math	4	206					4th math psf	math	4	ksh32					5th math hm	math	5	420					5th math psf	math	5	171					4th science mmh	science	4																								
+interpretations	482	373					4th math hm	math	4	224					4th math psf	math	4	212					5th math psf	math	5																																								
+interpreted	483	118					5th math psf	math	5																									112					4th science delta	science	4	10					4th science mmh	science	4																
+interpreting	484	384					4th math psf	math	4	349					5th math hm	math	5																	111					4th science delta	science	4	10					4th science mmh	science	4																
+intersect	485	471					4th math psf	math	4	ksh27					5th math hm	math	5	472					5th math psf	math	5																																								
+intersecting	486	559	adjective--intersecting lines	x			4th math hm	math	4	470	as in intersecting lines	x			4th math psf	math	4	398	as in intersecting lines	x			5th math hm	math	5																																								
+interval	487	518		x			4th math hm	math	4	470		x			4th math psf	math	4	339		x			5th math hm	math	5	472		x			5th math psf	math	5																																
+intervals	488	427					5th math hm	math	5	471					5th math psf	math	5																																																
+inverse	489	71	adjective--operations that undo one another				4th math hm	math	4	470	adjective--operations that undo one another				4th math psf	math	4	ksh9	adjective--operations that undo one another				5th math hm	math	5	472	adjective--operations that undo one another	x			5th math psf	math	5																																
+inverted	490	244					5th math hm	math	5																																																								
+iron	491	295	the element or metal				4th math psf	math	4	396	an element				5th math hm	math	5																	72		x			4th science delta	science	4	196					4th science mmh	science	4	29					5th science delta	science	5	354					5th science mmh	science	5
+irregular	492	364					4th math psf	math	4	180					5th math psf	math	5																																																
+irrelevant	493	190					4th math hm	math	4	16					4th math psf	math	4	14					5th math psf	math	5																																								
+isosceles	494	557		x			4th math hm	math	4	200					4th math psf	math	4	412		x			5th math hm	math	5	472		x			5th math psf	math	5																																
+jazz	495	130					4th math psf	math	4	238					5th math hm	math	5																																																
+justify	496	103					4th math hm	math	4	52					5th math psf	math	5																																																
+key	497	518	legend for a graph	x			4th math hm	math	4	470	legend for a graph	x			4th math psf	math	4																	216	legend--like on a map				5th science mmh	science	5	72		x			4th science delta	science	4																
+key	498	197	musical notes				5th math hm	math	5																									216	legend--like on a map				5th science mmh	science	5	72		x			4th science delta	science	4																
+kilogram	499	472		x			5th math psf	math	5	653		x			4th math hm	math	4	470		x			4th math psf	math	4									483					5th science mmh	science	5																								
+kilograms	500	336		x			4th math hm	math	4	302					4th math psf	math	4																	189					4th science delta	science	4	41					4th science mmh	science	4																
+kilometer	501	653		x			4th math hm	math	4	470		x			4th math psf	math	4	472		x			5th math psf	math	5									18					5th science mmh	science	5																								
+kilometers	502	334	units of length	x			4th math hm	math	4	xiv					4th math psf	math	4	xiv					5th math psf	math	5									51					4th science delta	science	4	86					4th science mmh	science	4	208					5th science delta	science	5	184					5th science mmh	science	5
+kilowatt	503	145					5th math psf	math	5																																																								
+kilowatts	504	145					5th math psf	math	5																																																								
+label	505	27	verb				4th math hm	math	4																																																								
+labeling	506	348					4th math hm	math	4																																																								
+labels	507	339	noun plural	x			5th math hm	math	5																																																								
+lead	508	456	in a pencil				5th math hm	math	5																									46					5th science delta	science	5	368					5th science mmh	science	5																
+lead	509	451	noun--first place				4th math hm	math	4																									46					5th science delta	science	5	368					5th science mmh	science	5																
+league	510	361		x			4th math psf	math	4	75					5th math hm	math	5																																																
+lecture	511	313					4th math hm	math	4																																																								
+lectures	512	132					5th math hm	math	5																																																								
+length	513	107					5th math psf	math	5	326					4th math hm	math	4																																																
+lengths	514	326					4th math hm	math	4																																																								
+lighthouse	515	200					4th math hm	math	4																																																								
+lightning	516	608					5th math hm	math	5																									291					4th science mmh	science	4	230					5th science delta	science	5	494		x			5th science mmh	science	5								
+like	517	654	adjective meaning the same--like denominators				4th math hm	math	4																																																								
+likelihood	518	472					4th math psf	math	4																																																								
+likely	519	532	probable	x			4th math hm	math	4	468	probable	x			4th math psf	math	4	470	probable				5th math psf	math	5																																								
+line	520	654		x			4th math hm	math	4	470		x			4th math psf	math	4	398					5th math hm	math	5	472		x			5th math psf	math	5																																
+linear	521	472	having to do with a line	x			5th math psf	math	5	424					4th math psf	math	4	614					5th math hm	math	5																																								
+lines	522	192					4th math psf	math	4																																																								
+liter	523	472		x			5th math psf	math	5	654		x			4th math hm	math	4	470		x			4th math psf	math	4									79					4th science delta	science	4	17					5th science delta	science	5	126					5th science mmh	science	5								
+liters	524	336		x			4th math hm	math	4	233					5th math psf	math	5																	387					4th science mmh	science	4	221					5th science delta	science	5																
+logically	525	126					4th math psf	math	4	ksh1					5th math hm	math	5																																																
+lunar	526	134					4th math hm	math	4	23					4th math psf	math	4																																																
+manipulate	527	4					5th math psf	math	5	180	to move around				4th math hm	math	4																																																
+marathon	528	353		x			4th math psf	math	4	427					5th math hm	math	5	46					5th math psf	math	5																																								
+mascot	529	95					4th math psf	math	4	329					5th math psf	math	5																																																
+mass	530	336	amount of matter in an object	x			4th math hm	math	4	470	the amount of something	x			4th math psf	math	4	472	quantity of matter of an object	x			5th math psf	math	5									189					4th science delta	science	4	5					4th science mmh	science	4	79		x			5th science delta	science	5	299		x			5th science mmh	science	5
+masses	531	44	plural of mass (meaning amount)				4th math psf	math	4	450	plural of mass				4th math hm	math	4																	148					4th science mmh	science	4	112					5th science delta	science	5	263					5th science mmh	science	5								
+mathematical	532	118					4th math psf	math	4	248					4th math hm	math	4																																																
+mathematician	533	268					4th math psf	math	4																																																								
+mathematics	534	5					4th math hm	math	4																																																								
+matter	535	146	noun--physical substance				4th math hm	math	4	472	noun--physical substance				5th math psf	math	5																	121		x			4th science delta	science	4	44					4th science mmh	science	4	79		x			5th science delta	science	5	495		x			5th science mmh	science	5
+matter	536	149	verb--have importance				4th math hm	math	4																									121		x			4th science delta	science	4	44					4th science mmh	science	4	79		x			5th science delta	science	5	495		x			5th science mmh	science	5
+mean	537	470	the average	x			4th math psf	math	4	468	noun--the average	x			5th math psf	math	5	341	the average	x			5th math hm	math	5									27		x			5th science delta	science	5	213		x			5th science mmh	science	5																
+measure	538	470	noun--measurement				5th math psf	math	5	467	noun--measurement				4th math psf	math	4																	5		x			4th science mmh	science	4	3		x			5th science mmh	science	5																
+measurement	539	321					4th math hm	math	4	348					4th math psf	math	4																																																
+measurer	540	150					5th math hm	math	5																																																								
+measures	541	68	noun plural--musical measures				4th math psf	math	4																																																								
+measuring	542	470					5th math psf	math	5																																																								
+median	543	470	a descriptive statistic	x			4th math psf	math	4	507	a descriptive statistic	x			4th math hm	math	4	473	a descriptive statistic	x			5th math psf	math	5	338	a descriptive statistic	x			5th math hm	math	5																																
+mental	544	46	of the mind				4th math hm	math	4																																																								
+mentally	545	55					4th math hm	math	4	92					4th math psf	math	4	303					5th math hm	math	5																																								
+meteorologist	546	553					5th math hm	math	5																									257		x			5th science delta	science	5	495		x			5th science mmh	science	5																
+meteorologists	547	522					4th math hm	math	4																									233					5th science delta	science	5	495					5th science mmh	science	5																
+meter	548	470	metric unit of length	x			4th math psf	math	4	655	a metric unit of length	x			4th math hm	math	4	473	a metric unit of length	x			5th math psf	math	5																																								
+meter	549	80	a device that measures electricity				4th math hm	math	4																																																								
+meters	550	334	metric units of length	x			4th math hm	math	4	280	metric units of length				4th math psf	math	4	472	metric units of length				5th math psf	math	5									83					4th science delta	science	4	92					5th science delta	science	5	181					5th science mmh	science	5								
+meterstick	551	339					4th math hm	math	4																																																								
+method	552	60					5th math hm	math	5	17					4th math hm	math	4	182					4th math psf	math	4									39					4th science delta	science	4																								
+methods	553	38					4th math hm	math	4	44					4th math psf	math	4																	206					4th science delta	science	4	208					4th science mmh	science	4																
+metric	554	655					4th math hm	math	4	354					4th math psf	math	4	469					5th math psf	math	5																																								
+microclimate	555	176					5th math hm	math	5																																																								
+microscope	556	198					4th math hm	math	4	150					5th math hm	math	5																	264		x			4th science delta	science	4	62					4th science mmh	science	4	64					5th science delta	science	5	495		x			5th science mmh	science	5
+migrate	557	2					5th math psf	math	5	264		x			4th math hm	math	4																	173		x			4th science delta	science	4	366					4th science mmh	science	4																
+migrated	558	95					5th math psf	math	5																																																								
+migrates	559	264					4th math hm	math	4																																																								
+migrating	560	264					4th math hm	math	4																									141					4th science delta	science	4																								
+migration	561	17					4th math hm	math	4																									139					4th science delta	science	4																								
+migrations	562	209					4th math hm	math	4																																																								
+mile	563	123		x			5th math psf	math	5	321		x			4th math hm	math	4	350		x			4th math psf	math	4																																								
+mileage	564	25					4th math psf	math	4																																																								
+miles	565	66					4th math psf	math	4	107					5th math psf	math	5																																																
+milligram	566	473		x			5th math psf	math	5																																																								
+milligrams	567	472					5th math psf	math	5																																																								
+milliliter	568	473		x			5th math psf	math	5	655		x			4th math hm	math	4	470		x			4th math psf	math	4									342					5th science mmh	science	5																								
+milliliters	569	336		x			4th math hm	math	4	472					5th math psf	math	5																	17					5th science delta	science	5	179					5th science mmh	science	5																
+millimeter	570	473		x			5th math psf	math	5	655		x			4th math hm	math	4	470		x			4th math psf	math	4									33					5th science mmh	science	5																								
+millimeters	571	311					4th math psf	math	4	13					5th math psf	math	5	334	units of length	x			4th math hm	math	4									148					4th science mmh	science	4																								
+million	572	655		x			4th math hm	math	4																									46					5th science mmh	science	5																								
+millions	573	4					4th math hm	math	4	8					4th math psf	math	4	5					5th math psf	math	5									48					5th science mmh	science	5																								
+miner	574	430					4th math hm	math	4																																																								
+mineral	575	239					4th math hm	math	4	295					4th math psf	math	4																	264		x			4th science delta	science	4	140		x			5th science delta	science	5	492					5th science mmh	science	5								
+minerals	576	238					4th math hm	math	4	126					4th math psf	math	4	368					5th math psf	math	5									179					4th science delta	science	4	140		x			4th science mmh	science	4	62					5th science delta	science	5	487					5th science mmh	science	5
+misinterpreted	577	240					5th math hm	math	5																																																								
+misleading	578	385					4th math psf	math	4	349					5th math hm	math	5																																																
+mission	579	139	operational task				4th math psf	math	4																																																								
+mission	580	310	building	x			4th math hm	math	4																																																								
+missions	581	310	buildings	x			4th math hm	math	4																																																								
+mix	582	411	noun--like a baking mix				4th math hm	math	4																																																								
+mixed	583	27	adjective--with different sorts assembled together	x			5th math hm	math	5																																																								
+mode	584	507	a descriptive statistic	x			4th math hm	math	4	471	a descriptive statistic	x			4th math psf	math	4	341	a descriptive statistic	x			5th math hm	math	5	473	a descriptive statistic	x			5th math psf	math	5																																
+model	585	225	noun--a template or example				4th math psf	math	4	ksh12	noun--an example or template				5th math hm	math	5																	9		x			4th science mmh	science	4	3		x			5th science mmh	science	5																
+model	586	54	to show				5th math hm	math	5	481	verb				4th math hm	math	4	82	verb				5th math psf	math	5									9		x			4th science mmh	science	4	3		x			5th science mmh	science	5																
+models	587	38	representations of something--noun plural				4th math hm	math	4	44	noun plural				4th math psf	math	4	82	noun plural				5th math psf	math	5									9					4th science delta	science	4																								
+multidigit	588	214					4th math hm	math	4	78					5th math psf	math	5																																																
+multigrain	589	253					4th math hm	math	4																																																								
+multiple	590	469	a larger number that can be evenly divided by a smaller number	x			5th math psf	math	5	128	a larger number that can be evenly divided by a smaller number	x			4th math hm	math	4	471	a larger number that can be evenly divided by a smaller number	x			4th math psf	math	4																																								
+multiples	591	60	larger numbers that can be evenly divided by a smaller number				4th math psf	math	4																																																								
+multiplication	592	472					4th math psf	math	4																																																								
+multiplicative	593	473		x			5th math psf	math	5																																																								
+multiplied	594	57					4th math psf	math	4	471					5th math psf	math	5																																																
+multiplies	595	55					4th math psf	math	4																																																								
+multiply	596	213		x			4th math hm	math	4	62					4th math psf	math	4	209		x			5th math hm	math	5																																								
+multiplying	597	214					4th math hm	math	4	470					4th math psf	math	4																																																
+mural	598	240					4th math hm	math	4	159					5th math hm	math	5	39					5th math psf	math	5																																								
+negative	599	337	adjective--negative number	x			4th math psf	math	4	347	less than zero	x			4th math hm	math	4	541	negative numbers	x			5th math hm	math	5	474	opposite of positive				5th math psf	math	5																																
+net	600	473	a surface area map used to teach about 3-dimensional figures	x			5th math psf	math	5	620	a surface area map used to teach about 3-dimensional figures	x			4th math hm	math	4	471	a surface area map used to teach about 3-dimensional figures	x			4th math psf	math	4	ksh22	a surface area map used to teach about 3-dimensional figures	x			5th math hm	math	5																																
+nets	601	620	surface area maps used to teach about 3-dimensional figures	x			4th math hm	math	4																																																								
+nickelodeon	602	132		x	x		4th math hm	math	4																																																								
+nickelodeons	603	132		x	x		4th math hm	math	4																																																								
+nickels	604	116	coins				5th math psf	math	5																																																								
+nonzero	605	472					5th math psf	math	5																																																								
+notation	606	5		x			4th math hm	math	4	126					4th math psf	math	4	54					5th math hm	math	5	66					5th math psf	math	5																																
+notations	607	276					4th math psf	math	4																																																								
+note	608	336	to make note of				4th math hm	math	4																																																								
+note	609	264	a note of music				5th math psf	math	5																																																								
+notes	610	68	notes of music				4th math psf	math	4																																																								
+numeral	611	18					4th math psf	math	4																																																								
+numeration	612	2					5th math psf	math	5																																																								
+numerator	613	367		x			4th math hm	math	4	471		x			4th math psf	math	4	28					5th math hm	math	5	473		x			5th math psf	math	5																																
+numerators	614	400					4th math hm	math	4	ksh12					5th math hm	math	5																																																
+numerical	615	471		x			4th math psf	math	4																																																								
+nutrients	616	610					4th math hm	math	4	110					5th math hm	math	5																	83					4th science delta	science	4	27					4th science mmh	science	4	120					5th science delta	science	5	115					5th science mmh	science	5
+object	617	2	of a game				4th math hm	math	4																									9					4th science mmh	science	4																								
+objective	618	3	what one will learn	x			4th math hm	math	4																																																								
+objects	619	466	things				4th math psf	math	4																									221					4th science mmh	science	4	105					5th science delta	science	5																
+obtuse	620	557		x			4th math hm	math	4	201					4th math psf	math	4	394		x			5th math hm	math	5	473		x			5th math psf	math	5																																
+octagon	621	557		x			4th math hm	math	4	471		x			4th math psf	math	4	473		x			5th math psf	math	5																																								
+odd	622	657	as in odd numbers	x			4th math hm	math	4	180	as in odd numbers				4th math psf	math	4																																																
+operation	623	94	mathematics process				4th math hm	math	4	468					4th math psf	math	4	87					5th math hm	math	5	34					5th math psf	math	5																																
+operational	624	159					4th math hm	math	4																																																								
+operations	625	71	mathematics process	x			4th math hm	math	4	56					4th math psf	math	4	ksh1					5th math hm	math	5	468					5th math psf	math	5																																
+opposite	626	ksh9		x			5th math hm	math	5	657		x			4th math hm	math	4	471					4th math psf	math	4									21					4th science delta	science	4	287					4th science mmh	science	4																
+opposites	627	347					4th math hm	math	4	337		x			4th math psf	math	4	472					5th math psf	math	5																																								
+orbit	628	318	noun				5th math hm	math	5	38	noun				4th math psf	math	4																	257		x			5th science delta	science	5	497		x			5th science mmh	science	5																
+orbit	629	305	verb				4th math hm	math	4																																																								
+orbiting	630	80	verb				5th math hm	math	5																									64					5th science delta	science	5																								
+orbits	631	138	noun				4th math psf	math	4	318	noun				5th math hm	math	5																	146					5th science delta	science	5																								
+order	632	471	noun--the order of things				4th math psf	math	4	6	noun--the order of things				5th math psf	math	5																	497	biological order--a smaller group within a class of organisms	x			5th science mmh	science	5																								
+order	633	25	verb--list from least to greatest or vice versa	x			4th math hm	math	4	6	verb--to put into order				5th math psf	math	5																	497	biological order--a smaller group within a class of organisms	x			5th science mmh	science	5																								
+ordered	634	112	adjective--as in ordered pairs	x			5th math hm	math	5	461	adjective--being in a determined order				4th math hm	math	4	473	adjective--ordered pair				5th math psf	math	5	471	as in ordered pair	x			4th math psf	math	4																																
+ordering	635	6	gerund				5th math psf	math	5																																																								
+ordinal	636	471		x			4th math psf	math	4																																																								
+organ	637	110	an organ in the body				5th math hm	math	5																									87					5th science delta	science	5	497		x			5th science mmh	science	5																
+organic	638	610					4th math hm	math	4																																																								
+organically	639	226					4th math hm	math	4																																																								
+organized	640	3	adjective--in order				5th math hm	math	5	39	ordered				4th math hm	math	4																	132					4th science delta	science	4																								
+organizer	641	463					4th math hm	math	4	251					5th math hm	math	5																																																
+organs	642	110	organs of the body				5th math psf	math	5																									60					5th science delta	science	5	484					5th science mmh	science	5																
+origin	643	473		x			5th math psf	math	5	472		x			4th math hm	math	4	354		x			5th math hm	math	5																																								
+original	644	105	adjective				4th math hm	math	4																																																								
+ounce	645	473		x			5th math psf	math	5	657		x			4th math hm	math	4	350		x			4th math psf	math	4																																								
+ounces	646	332	weight measurement	x			4th math hm	math	4	152		x			4th math psf	math	4	67					5th math hm	math	5	81					5th math psf	math	5																																
+outcome	647	473	result	x			5th math psf	math	5	507		x			4th math hm	math	4	471		x			4th math psf	math	4																																								
+outcomes	648	541					4th math hm	math	4	452					4th math psf	math	4	470					5th math psf	math	5																																								
+outlier	649	514		x			4th math hm	math	4	471		x			4th math psf	math	4																																																
+output	650	194	the outcome				4th math hm	math	4	ksh18	the outcome value				5th math hm	math	5	472	the outcome				5th math psf	math	5																																								
+overestimate	651	471		x			4th math psf	math	4	473		x			5th math psf	math	5																																																
+oxygen	652	72					4th math psf	math	4	110					5th math hm	math	5																	24					4th science delta	science	4	26		x			4th science mmh	science	4	140		x			5th science delta	science	5	115					5th science mmh	science	5
+panda	653	304		x			4th math hm	math	4																																																								
+pandas	654	304		x			4th math hm	math	4	223					4th math psf	math	4																																																
+par	655	355	the expected score in golf				4th math hm	math	4	131					4th math psf	math	4																																																
+parallel	656	469		x			5th math psf	math	5	559		x			4th math hm	math	4	194					4th math psf	math	4	429		x			5th math hm	math	5	28					4th science delta	science	4	219					4th science mmh	science	4	140		x			5th science delta	science	5								
+parallelogram	657	557		x			4th math hm	math	4	471		x			4th math psf	math	4	414		x			5th math hm	math	5	474		x			5th math psf	math	5																																
+parallelograms	658	555					4th math hm	math	4																																																								
+parentheses	659	90		x			4th math hm	math	4	471		x			4th math psf	math	4	102					5th math hm	math	5	472					5th math psf	math	5																																
+partial	660	122	not whole	x			5th math hm	math	5	473	having to do with a part of something				5th math psf	math	5	471		x			4th math psf	math	4																																								
+pastels	661	158					4th math psf	math	4	147					5th math psf	math	5																																																
+pasture	662	254					4th math psf	math	4	166					5th math psf	math	5																																																
+path	663	470	a general pathway				4th math psf	math	4																																																								
+path	664	542	electrical pathway				4th math hm	math	4																																																								
+pattern	665	xi	noun				5th math psf	math	5	xi					4th math psf	math	4	511					4th math hm	math	4									39					4th science delta	science	4																								
+patterns	666	14	noun plural				5th math psf	math	5	190					4th math hm	math	4	16					4th math psf	math	4									386					4th science mmh	science	4	487					5th science mmh	science	5																
+penguin	667	547					5th math hm	math	5	150					4th math hm	math	4																																																
+penguins	668	148					4th math hm	math	4	34					4th math psf	math	4																																																
+pentagon	669	474		x			5th math psf	math	5	557		x			4th math hm	math	4	61		x			4th math psf	math	4	419					5th math hm	math	5																																
+pentagons	670	553					4th math hm	math	4																																																								
+percent	671	474		x			5th math psf	math	5	ksh2		x			5th math hm	math	5																	82					4th science delta	science	4	58					4th science mmh	science	4	61					5th science delta	science	5	33					5th science mmh	science	5
+percentage	672	528					5th math hm	math	5																									136					5th science delta	science	5	179					5th science mmh	science	5																
+percentile	673	335					5th math hm	math	5																																																								
+percents	674	6					5th math psf	math	5																																																								
+perform	675	216	demonstrate a skill or talent				5th math hm	math	5	130	demonstrate a skill or talent				4th math hm	math	4																																																
+performances	676	220					5th math hm	math	5																																																								
+performed	677	ksh8					5th math hm	math	5																																																								
+performing	678	216					5th math hm	math	5																																																								
+perimeter	679	474		x			5th math psf	math	5	11		x			4th math hm	math	4	472		x			4th math psf	math	4	b5					5th math hm	math	5																																
+perimeters	680	321					4th math hm	math	4																																																								
+period	681	56	a group of 3 digits between commas in a number				5th math hm	math	5	474	a group of 3 digits in a number  separated off by a comma or commas	x			5th math psf	math	5	8	a group of 3 digits between commas in a number	x			4th math hm	math	4	472	a group of 3 digits between commas in a number	x			4th math psf	math	4	258		x			5th science delta	science	5																								
+periodic	682	64	as in periodic table				5th math hm	math	5																									368		x			5th science mmh	science	5																								
+periods	683	474	groups of 3 digits in a number  separated off by a comma or commas				5th math psf	math	5																									163					4th science mmh	science	4	369		x			5th science mmh	science	5																
+perpendicular	684	559		x			4th math hm	math	4	472		x			4th math psf	math	4	429		x			5th math hm	math	5	468					5th math psf	math	5																																
+perspectives	685	212					4th math psf	math	4	326					5th math psf	math	5																																																
+petunia	686	182					4th math psf	math	4																																																								
+petunias	687	341					4th math hm	math	4																																																								
+photographers	688	613					5th math hm	math	5																																																								
+photographs	689	613					5th math hm	math	5																																																								
+photography	690	613					5th math hm	math	5																																																								
+photos	691	23					4th math hm	math	4																																																								
+photosynthesis	692	524					5th math hm	math	5																									28		x			4th science mmh	science	4	140		x			5th science delta	science	5	498		x			5th science mmh	science	5								
+pictograph	693	472		x			4th math psf	math	4	10					5th math hm	math	5																																																
+picture	694	211	verb- to visualize				4th math hm	math	4																																																								
+pint	695	658	capacity measurement	x			4th math hm	math	4	350		x			4th math psf	math	4	474		x			5th math psf	math	5																																								
+pints	696	332	capacity measurement	x			4th math hm	math	4	475					5th math psf	math	5																																																
+place	697	ksh8	"reserved spot for something, as in place value--noun"	x			5th math hm	math	5	474	"adjective--ones, tens  etc.  place"				5th math psf	math	5																																																
+placeholder	698	40					5th math psf	math	5																																																								
+placing	699	273	setting down; putting into place				4th math hm	math	4																																																								
+plane	700	585	noun: a 2-dimensional space	x			5th math hm	math	5	472		x			4th math psf	math	4	485	flat surface	x			4th math hm	math	4	474	two-dimensional space	x			5th math psf	math	5																																
+platform	701	123	a framework with a flat or level surface at the top				4th math psf	math	4	289	a framework with a flat or level surface at the top				4th math hm	math	4																	24					4th science delta	science	4																								
+plot	702	472	noun--picture of coordinates located on a grid	x			5th math psf	math	5																									387					4th science mmh	science	4	259					5th science delta	science	5	61					5th science mmh	science	5								
+plot	703	472	to put an ordered pair on a grid	x			4th math psf	math	4	466	to locate points on a graph	x			4th math hm	math	4	ksh16	to locate points on a graph				5th math hm	math	5	346	verb				5th math psf	math	5	387					4th science mmh	science	4	259					5th science delta	science	5	61					5th science mmh	science	5								
+plotted	704	346	to put an ordered pair in place on a grid				5th math psf	math	5	404	put points on a grid				4th math psf	math	4	474	to put points on a grid				4th math hm	math	4									175					5th science delta	science	5																								
+point	705	558	a particular spot in space	x			4th math hm	math	4	472	a particular spot in space	x			4th math psf	math	4	474	a particular spot in space	x			5th math psf	math	5																																								
+points	706	469	particular spots in space				5th math psf	math	5	193	noun plural				4th math psf	math	4																																																
+polygon	707	474		x			5th math psf	math	5	556		x			4th math hm	math	4	472		x			4th math psf	math	4	419					5th math hm	math	5																																
+polygons	708	557		x			4th math hm	math	4																																																								
+population	709	8					4th math hm	math	4	21					5th math hm	math	5																	157					4th science delta	science	4	54		x			4th science mmh	science	4																
+position	710	474	noun--placement				4th math psf	math	4	29	noun--placement				5th math hm	math	5																																																
+positive	711	337	as in positive numbers	x			4th math psf	math	4	541	as in positive numbers	x			5th math hm	math	5	347	more than zero	x			4th math hm	math	4	474	adjective--opposite of negative	x			5th math psf	math	5	287					4th science mmh	science	4																								
+possibilities	712	51					5th math hm	math	5																																																								
+possible	713	243					4th math hm	math	4																																																								
+pottery	714	155					4th math hm	math	4	115					5th math hm	math	5																																																
+pound	715	152	unit of weight	x			4th math psf	math	4	474	unit of weight	x			5th math psf	math	5	659	weight measurement	x			4th math hm	math	4																																								
+pounds	716	476	units of weight				5th math psf	math	5	332	weight measurement	x			4th math hm	math	4	59					4th math psf	math	4																																								
+power	717	468	raising a number to a power--an exponent				5th math psf	math	5	72	raising a number to a power--an exponent				5th math hm	math	5																																																
+predict	718	408					5th math psf	math	5	101					4th math hm	math	4	275					4th math psf	math	4									39					4th science delta	science	4	92		x			4th science mmh	science	4																
+predicted	719	107					4th math psf	math	4																									158					4th science delta	science	4																								
+prediction	720	538		x			4th math hm	math	4	472		x			4th math psf	math	4																	260					5th science delta	science	5	491					5th science mmh	science	5																
+predictions	721	538					4th math hm	math	4																									180					5th science delta	science	5																								
+prescription	722	190	a rule				4th math hm	math	4	422	a rule				4th math psf	math	4																																																
+presentation	723	59					5th math hm	math	5																																																								
+preserved	724	32					5th math hm	math	5																									59					5th science mmh	science	5																								
+pressure	725	36	noun				4th math hm	math	4	566	noun				5th math hm	math	5																	208					4th science delta	science	4	172		x			4th science mmh	science	4	21					5th science delta	science	5								
+primary	726	496	adjective--major				4th math hm	math	4																									40	main or first (adjective)				4th science mmh	science	4	123	main				4th science delta	science	4																
+prime	727	6	adjective--divisible by itself and 1	x			5th math hm	math	5	659	adjective--like prime numbers				4th math hm	math	4	474	adjective--prime number	x			5th math psf	math	5	472	prime number	x			4th math psf	math	4																																
+prioritizing	728	190					4th math hm	math	4	16					4th math psf	math	4	14					5th math psf	math	5																																								
+prism	729	474		x			5th math psf	math	5	659		x			4th math hm	math	4	472		x			4th math psf	math	4	482		x			5th math hm	math	5																																
+prisms	730	205					4th math psf	math	4																																																								
+probabilities	731	551	mathematical sense of probability				4th math hm	math	4																									15					5th science delta	science	5																								
+probability	732	531	mathematical sense of probability	x			4th math hm	math	4																									15					5th science delta	science	5																								
+probably	733	470					4th math psf	math	4																																																								
+process	734	242	noun				4th math hm	math	4	xi	noun				4th math psf	math	4	xi	noun				5th math psf	math	5									132					5th science delta	science	5	483					5th science mmh	science	5																
+produce	735	340	collective noun--food				4th math hm	math	4																									31					4th science mmh	science	4	111					5th science delta	science	5																
+produce	736	112	verb				4th math psf	math	4																									31					4th science mmh	science	4	111					5th science delta	science	5																
+produced	737	444					4th math hm	math	4	112	verb				4th math psf	math	4																	111					5th science delta	science	5																								
+producer	738	1					5th math hm	math	5																									173		x			4th science delta	science	4																								
+produces	739	444					4th math hm	math	4																									288					4th science mmh	science	4																								
+product	740	213	quantity obtained by multiplying				4th math hm	math	4	472	multiplication answer	x			4th math psf	math	4	ksh4	quantity obtained by multiplying				5th math hm	math	5	474	answer to a multiplication problem	x			5th math psf	math	5	80		x			5th science delta	science	5	498		x			5th science mmh	science	5																
+products	741	216	quantities obtained by multiplying				4th math hm	math	4	471	answers to multiplication problems				4th math psf	math	4	122	answers to multiplication problems	x			5th math hm	math	5									28					5th science delta	science	5																								
+profit	742	54	noun				5th math psf	math	5	ksh33	noun				5th math hm	math	5																																																
+programmer	743	537	computer programmer				4th math hm	math	4	254	computer programmer				5th math hm	math	5																																																
+programs	744	537	verb--to get a computer to do what you want				4th math hm	math	4																																																								
+propelled	745	99					4th math psf	math	4																																																								
+properties	746	62	characteristics or traits				4th math psf	math	4	54	an attribute of something				4th math hm	math	4	472	characteristics or qualities				5th math psf	math	5									179	characteristics				4th science delta	science	4	5	characteristics				4th science mmh	science	4	3	characteristics				5th science delta	science	5	337	characteristics				5th science mmh	science	5
+property	747	123	a characteristic or trait				4th math psf	math	4	83	characteristic				4th math hm	math	4	122	characteristic or quality				5th math psf	math	5	128	characteristic or trait				5th math hm	math	5	264	a characteristic	x			4th science delta	science	4	8	a characteristic				5th science delta	science	5	498	a characteristic	x			5th science mmh	science	5								
+protractor	748	642					4th math hm	math	4	390		x			5th math hm	math	5	474		x			5th math psf	math	5																																								
+pyramid	749	660	geometric figure	x			4th math hm	math	4	472	geometric figure	x			4th math psf	math	4	474	geometric figure	x			5th math psf	math	5									58	energy pyramid	x			4th science mmh	science	4	207					4th science delta	science	4																
+quadrilateral	750	475	noun	x			5th math psf	math	5	660		x			4th math hm	math	4	472		x			4th math psf	math	4	ksh29		x			5th math hm	math	5																																
+quadrilaterals	751	184	noun plural				5th math psf	math	5	555					4th math hm	math	4	202					4th math psf	math	4																																								
+quantity	752	14					4th math hm	math	4	ksh14					5th math hm	math	5																																																
+quart	753	660		x			4th math hm	math	4	350		x			4th math psf	math	4	475		x			5th math psf	math	5																																								
+quarter	754	361	noun--a measurement	x			4th math psf	math	4																																																								
+quarter	755	660	adjective--meaning one fourth				4th math hm	math	4																																																								
+quarters	756	373	coins				4th math hm	math	4	116	coins				5th math psf	math	5																																																
+quarts	757	332	capacity measurement	x			4th math hm	math	4	172	capacity measurement				5th math hm	math	5	159	capacity measurement				5th math psf	math	5																																								
+quotient	758	119		x			4th math hm	math	4	472		x			4th math psf	math	4	ksh8					5th math hm	math	5	475		x			5th math psf	math	5																																
+radii	759	568		x			4th math hm	math	4																																																								
+radius	760	568		x			4th math hm	math	4	472		x			4th math psf	math	4																																																
+range	761	72	verb--fall into a range				5th math hm	math	5																									174		x			4th science delta	science	4	27		x			5th science delta	science	5																
+range	762	472	noun--from max to min	x			4th math psf	math	4	475	noun--from max to min	x			5th math psf	math	5	330	noun--from max to min				4th math hm	math	4									174		x			4th science delta	science	4	27		x			5th science delta	science	5																
+ranger	763	170					4th math hm	math	4	172					5th math hm	math	5																																																
+rate	764	120	noun--the pace at which something takes place				5th math psf	math	5	474	pace at which something takes place				4th math hm	math	4																	207					4th science mmh	science	4																								
+ray	765	472	geometric type of line	x			4th math psf	math	4	390	geometric type of line	x			5th math hm	math	5	475	an arrow with an endpoint	x			5th math psf	math	5	560	geometric type of line	x			4th math hm	math	4																																
+rays	766	196	geometric type of line				4th math psf	math	4	ksh26	geometric type of line	x			5th math hm	math	5	175	arrows with endpoints				5th math psf	math	5									51					5th science delta	science	5	51					5th science mmh	science	5																
+ream	767	485					5th math hm	math	5																																																								
+reams	768	152					4th math psf	math	4																																																								
+reasonable	769	17					4th math hm	math	4	xxi					4th math psf	math	4	158					5th math hm	math	5	xxi					5th math psf	math	5																																
+reasonableness	770	549					4th math hm	math	4	10					4th math psf	math	4	332					5th math hm	math	5	38					5th math psf	math	5																																
+reasoning	771	635	thinking				4th math hm	math	4	xi					4th math psf	math	4	58					5th math hm	math	5	xi					5th math psf	math	5																																
+reciprocal	772	230		x			5th math hm	math	5	475		x			5th math psf	math	5																																																
+record	773	84	noun--documented  known facts				4th math hm	math	4																									3	verb--keep a record of	x			5th science mmh	science	5																								
+record	774	7	to write				4th math hm	math	4																									3	verb--keep a record of	x			5th science mmh	science	5																								
+recording	775	2	adjective--sheets for keeping records				4th math hm	math	4																									10					4th science mmh	science	4																								
+rectangle	776	661		x			4th math hm	math	4	472		x			4th math psf	math	4	414		x			5th math hm	math	5	475		x			5th math psf	math	5																																
+rectangles	777	468					5th math psf	math	5																																																								
+rectangular	778	661		x			4th math hm	math	4	472		x			4th math psf	math	4	482		x			5th math hm	math	5	474					5th math psf	math	5																																
+redeem	779	161					4th math hm	math	4	124					5th math hm	math	5																																																
+reflecting	780	463	verb--like in a mirror				5th math psf	math	5																																																								
+reflection	781	473		x			4th math psf	math	4	661		x			4th math hm	math	4																																																
+reflections	782	438					4th math psf	math	4																																																								
+region	783	468					5th math psf	math	5	391					4th math hm	math	4	225					4th math psf	math	4	176					5th math hm	math	5	7					4th science delta	science	4	257					5th science delta	science	5	483					5th science mmh	science	5								
+regional	784	152					4th math psf	math	4																																																								
+regions	785	224					4th math psf	math	4																																																								
+regroup	786	186					5th math hm	math	5	62		x			4th math hm	math	4	36					4th math psf	math	4																																								
+regrouped	787	63					4th math hm	math	4	466					4th math psf	math	4	35					5th math psf	math	5																																								
+regrouping	788	213					4th math hm	math	4	37					4th math psf	math	4	ksh8					5th math hm	math	5																																								
+regular	789	180					5th math psf	math	5																																																								
+relate	790	553					4th math hm	math	4																																																								
+related	791	47					4th math hm	math	4	439					4th math psf	math	4	ksh1					5th math hm	math	5									73					4th science mmh	science	4																								
+relates	792	547					4th math hm	math	4																																																								
+relating	793	ksh3					5th math hm	math	5	322					5th math psf	math	5																																																
+relationship	794	202					4th math hm	math	4																									73					4th science mmh	science	4																								
+relationships	795	190					4th math hm	math	4																																																								
+relative	796	32	adjective- in relation to something else				4th math psf	math	4	340	adjective- in relation to something else				4th math hm	math	4	6	adjective- in relation to something else				5th math psf	math	5																																								
+relevant	797	190					4th math hm	math	4	16					4th math psf	math	4	14					5th math psf	math	5																																								
+remainder	798	475	division term--number left over	x			5th math psf	math	5	130	division term--number left over	x			4th math hm	math	4	473	division term--number left over	x			4th math psf	math	4																																								
+remainders	799	130	division term--numbers left over				4th math hm	math	4	164	division term--numbers left over				4th math psf	math	4																																																
+remaining	800	396	adjective				4th math hm	math	4	328	adjective				5th math hm	math	5																																																
+remains	801	466	verb				4th math psf	math	4																																																								
+repel	802	99					4th math psf	math	4																									73		x			4th science delta	science	4	287		x			4th science mmh	science	4																
+replacements	803	379					5th math psf	math	5																																																								
+represent	804	104					4th math hm	math	4																									9					4th science mmh	science	4																								
+representation	805	292					4th math hm	math	4																																																								
+represented	806	178					4th math hm	math	4	55					5th math hm	math	5																																																
+represents	807	201					4th math hm	math	4	ksh6					5th math hm	math	5																	36					4th science mmh	science	4																								
+require	808	329					5th math hm	math	5																																																								
+requires	809	343					4th math hm	math	4																																																								
+research	810	491					4th math hm	math	4																									68					4th science delta	science	4	7					4th science mmh	science	4	7					5th science mmh	science	5								
+researcher	811	41					5th math hm	math	5																																																								
+researchers	812	553					5th math hm	math	5																																																								
+reserve	813	85	place where things are protected				4th math hm	math	4																																																								
+reserved	814	277					5th math hm	math	5																																																								
+reservoir	815	482					5th math hm	math	5																									260					4th science delta	science	4	499		x			5th science mmh	science	5																
+resident	816	148	person living in a given place				5th math psf	math	5																																																								
+residents	817	60					4th math hm	math	4																																																								
+retile	818	151	to tile again				4th math psf	math	4																																																								
+revise	819	xiv					4th math psf	math	4	xiv					5th math psf	math	5																																																
+rewrite	820	102	to write again				4th math hm	math	4																																																								
+rewrote	821	250					4th math hm	math	4																																																								
+rhino	822	158	animal				4th math hm	math	4	105					4th math psf	math	4																																																
+rhombus	823	564		x			4th math hm	math	4	473		x			4th math psf	math	4	414		x			5th math hm	math	5	475		x			5th math psf	math	5																																
+rhombuses	824	189					5th math psf	math	5																																																								
+right	825	558	adjective--90 degrees	x			4th math hm	math	4	473	90 degrees--as in right angle	x			4th math psf	math	4	ksh26	adjective: equal to 90 degrees	x			5th math hm	math	5	475	at 90 degrees--adjective	x			5th math psf	math	5																																
+rigid	826	566					4th math hm	math	4	458					5th math psf	math	5																																																
+rotate	827	442					4th math psf	math	4																									15					4th science delta	science	4																								
+rotated	828	445					4th math psf	math	4																									40					4th science delta	science	4																								
+rotates	829	473					4th math psf	math	4																									257					5th science delta	science	5																								
+rotating	830	463	moving around				5th math psf	math	5																									41					4th science delta	science	4																								
+rotation	831	662					4th math hm	math	4	473		x			4th math psf	math	4																																																
+rotational	832	584					4th math hm	math	4	473		x			4th math psf	math	4																																																
+rotations	833	438					4th math psf	math	4																																																								
+round	834	24	adjective--round numbers				4th math psf	math	4	24	adjective--round numbers	x			4th math hm	math	4																	194	verb				4th science mmh	science	4																								
+round	835	2	division of a contest or game				4th math hm	math	4																									194	verb				4th science mmh	science	4																								
+round	836	51	verb; to round off	x			4th math hm	math	4	66	to round off			this concept is taught in 3rd	5th math hm	math	5	4	to round off				5th math psf	math	5									194	verb				4th science mmh	science	4																								
+rounded	837	26	rounded off to				5th math psf	math	5	444	bumped up or down slightly in value				4th math hm	math	4	24					4th math psf	math	4	66					5th math hm	math	5																																
+rounding	838	475	rounding off to	x			5th math psf	math	5	1	bumping up or down slightly in value				4th math hm	math	4	473		x			4th math psf	math	4	66					5th math hm	math	5																																
+rounds	839	2	divisions of a contest or game				4th math hm	math	4																																																								
+route	840	167	noun--pathway				4th math psf	math	4	259	noun--pathway				5th math hm	math	5																																																
+rows	841	300	noun-horizontal lines				4th math hm	math	4	466					4th math psf	math	4																																																
+salmon	842	265					4th math psf	math	4	32					5th math hm	math	5																																																
+scale	843	339	device to weigh				4th math hm	math	4	162	device for weighing things				5th math hm	math	5																	377	instrument for measuring weight				4th science mmh	science	4																								
+scale	844	475	noun--the scale in a bar graph--ticked unit marks	x			5th math psf	math	5	473	units on a graph	x			4th math psf	math	4																	377	instrument for measuring weight				4th science mmh	science	4																								
+scale	845	390	set of measures within a range	x			5th math hm	math	5																									377	instrument for measuring weight				4th science mmh	science	4																								
+scalene	846	557		x			4th math hm	math	4	473		x			4th math psf	math	4	412		x			5th math hm	math	5	475		x			5th math psf	math	5																																
+scales	847	390	sets of measures within a range				5th math hm	math	5																									343	instruments for measuring weight				5th science mmh	science	5																								
+scavenger	848	505					4th math hm	math	4	445					5th math hm	math	5																	174		x			4th science delta	science	4																								
+score	849	579	the number correct	x			5th math hm	math	5	426	the number correct				4th math hm	math	4																																																
+scorecard	850	355					4th math hm	math	4																																																								
+scores	851	426	number correct in more than 1 round				4th math hm	math	4																																																								
+screenings	852	59					5th math hm	math	5																																																								
+screenwriter	853	59					5th math hm	math	5																																																								
+second	854	473	a 60th of a minute	x			4th math psf	math	4	55	a fraction of a minute				5th math psf	math	5																																																
+seconds	855	102	time--part of a minute				4th math psf	math	4																																																								
+section	856	457	a part of something				4th math hm	math	4																																																								
+sections	857	457	a part of something				4th math hm	math	4	28					5th math hm	math	5																																																
+segment	858	492	noun--line segment				4th math hm	math	4	468	noun--line segment				4th math psf	math	4	238	noun--line segment				5th math hm	math	5	471	noun--line segment				5th math psf	math	5																																
+segments	859	196	noun plural--line segments				4th math psf	math	4	238	noun plural--line segments				5th math hm	math	5	188	noun plural--line segments				5th math psf	math	5									136					4th science delta	science	4																								
+selenite	860	170					4th math psf	math	4																																																								
+selenium	861	64					5th math hm	math	5																									46					5th science delta	science	5	368					5th science mmh	science	5																
+sequencing	862	190	gerund (noun)				4th math hm	math	4	16	gerund (noun)				4th math psf	math	4	14	gerund (noun)				5th math psf	math	5																																								
+sequins	863	108					4th math psf	math	4	312					5th math psf	math	5																																																
+set	864	347	verb- appear to move toward and below the earth's horizon as the earth rotates				4th math hm	math	4																																																								
+set	865	225	a mathematical group				4th math psf	math	4	433	a group				5th math psf	math	5																																																
+sets	866	224	mathematical groups				4th math psf	math	4																																																								
+shuffle	867	48	verb--mix up				4th math hm	math	4	50	verb--mix up				5th math hm	math	5																																																
+side	868	473	side of a polygon	x			4th math psf	math	4																																																								
+sides	869	475	the rays that form the 2 sides of an angle	x			5th math psf	math	5																																																								
+similar	870	473	identical in shape but not necessarily in size	x			4th math psf	math	4	475	having the same shape	x			5th math psf	math	5																	220					4th science delta	science	4	86					4th science mmh	science	4																
+simpler	871	385					4th math hm	math	4																																																								
+simplest	872	473		x			4th math psf	math	4	35		x			5th math hm	math	5																																																
+simplified	873	317					4th math hm	math	4	102					5th math hm	math	5	352					5th math psf	math	5																																								
+simplify	874	90		x			4th math hm	math	4	124					4th math psf	math	4	197					5th math hm	math	5	89					5th math psf	math	5																																
+simplifying	875	100					4th math hm	math	4	124					4th math psf	math	4	89					5th math psf	math	5																																								
+situation	876	21					4th math hm	math	4	108					5th math hm	math	5																																																
+skate	877	196	noun- recreational toy				4th math hm	math	4																																																								
+skateboard	878	102					4th math psf	math	4																																																								
+skates	879	196	plural noun- recreational toys 				4th math hm	math	4																									51					5th science mmh	science	5																								
+sketch	880	b5	noun--drawing				5th math hm	math	5	211	noun- drawing				4th math hm	math	4																																																
+sketch	881	65	verb--to draw				4th math hm	math	4																																																								
+sketched	882	442	verb--drew				5th math hm	math	5																																																								
+sketches	883	386	verb--draws				5th math hm	math	5																																																								
+solid	884	471	adjective--as in a  3-dimensional figure				5th math hm	math	5	662	adjective--solid figures	x			4th math hm	math	4	198	adjective--solid figures				4th math psf	math	4									81		x			5th science delta	science	5	500		x			5th science mmh	science	5																
+solid	885	475	noun--a solid	x			5th math psf	math	5																									81		x			5th science delta	science	5	500		x			5th science mmh	science	5																
+solidifies	886	630					4th math hm	math	4																																																								
+solids	887	192	noun plural--meaning solid figures				4th math psf	math	4	470	3-dimensional figures	x			5th math hm	math	5																	12					5th science delta	science	5	501					5th science mmh	science	5																
+solution	888	60	the right answer				4th math hm	math	4	475	the right answer	x			5th math psf	math	5	473	the value of a variable that makes an equation true	x			4th math psf	math	4									361		x			4th science mmh	science	4	81		x			5th science delta	science	5	500		x			5th science mmh	science	5								
+solutions	889	216	the right answers				4th math hm	math	4	126	answers				4th math psf	math	4																	1					5th science delta	science	5	379					5th science mmh	science	5																
+solve	890	174					4th math hm	math	4	473		x			4th math psf	math	4																																																
+souvenir	891	251					5th math hm	math	5																																																								
+souvenirs	892	256					4th math hm	math	4																																																								
+space	893	394	area				4th math hm	math	4																																																								
+spacecraft	894	80					5th math hm	math	5																																																								
+span	895	167	 noun--length of time				4th math psf	math	4																																																								
+spans	896	525	noun- as in arm spans				4th math hm	math	4																																																								
+specified	897	216					4th math hm	math	4	32					4th math psf	math	4	146					5th math psf	math	5																																								
+sphere	898	662					4th math hm	math	4	473		x			4th math psf	math	4	475		x			5th math psf	math	5																																								
+sponsor	899	115					5th math hm	math	5																																																								
+sponsors	900	463					4th math hm	math	4																																																								
+square	901	46	adjective--shaped like a square  as in square miles	x			5th math psf	math	5	473	adjective--as in a square corner or right angle				4th math psf	math	4	663	adjective--having to do with a square				4th math hm	math	4	628	adjective--square units determine the area				5th math hm	math	5	92	adjective (square mile)				4th science delta	science	4	110	adjective (square miles)				5th science delta	science	5																
+square	902	416	a quadrilateral	x			5th math hm	math	5	473	noun--a quadrilateral	x			4th math psf	math	4																	92	adjective (square mile)				4th science delta	science	4	110	adjective (square miles)				5th science delta	science	5																
+square	903	663	number taken times itself				4th math hm	math	4																									92	adjective (square mile)				4th science delta	science	4	110	adjective (square miles)				5th science delta	science	5																
+squared	904	476		x			5th math psf	math	5																																																								
+stack	905	366	noun--a pile				4th math hm	math	4																																																								
+stacked	906	482					5th math hm	math	5																																																								
+stadium	907	409					4th math hm	math	4	186					4th math psf	math	4	159					5th math hm	math	5	158					5th math psf	math	5																																
+standard	908	468	adjective--normal or uniform				4th math psf	math	4	245	adjective-- basic				4th math hm	math	4																																																
+standards	909	21	as in the California standards				4th math hm	math	4																																																								
+statement	910	544					4th math hm	math	4	179					5th math hm	math	5																	7					4th science mmh	science	4																								
+statistics	911	626					5th math hm	math	5	394					5th math psf	math	5																																																
+steer	912	22	a neutered male bull				5th math psf	math	5	167	a neutered male bull				4th math psf	math	4																																																
+straight	913	394	adjective--unbending  180 degree angle	x			5th math hm	math	5	473	unbending; 180 dgrees				4th math psf	math	4																																																
+straightedge	914	466					4th math hm	math	4	76					5th math hm	math	5	469					5th math psf	math	5																																								
+strategies	915	x					5th math psf	math	5	17					4th math hm	math	4	x					4th math psf	math	4	b3					5th math hm	math	5																																
+strategy	916	53					4th math hm	math	4	xi					4th math psf	math	4	b3					5th math hm	math	5	xi					5th math psf	math	5																																
+structure	917	32	a building				4th math psf	math	4																									174		x			4th science delta	science	4	124					4th science mmh	science	4	45					5th science delta	science	5	20					5th science mmh	science	5
+structures	918	396	buildings				4th math hm	math	4																									30					4th science mmh	science	4	86					5th science delta	science	5	488					5th science mmh	science	5								
+substitute	919	93	verb--replace				4th math psf	math	4	104	verb--replace				5th math hm	math	5	119	verb--replace				5th math psf	math	5																																								
+substituting	920	ksh19	gerund--replacing				5th math hm	math	5																																																								
+sum	921	473	noun--answer to an addition problem	x			4th math psf	math	4	51	answer to an addition problem				4th math hm	math	4	476	noun--answer to an addition problem	x			5th math psf	math	5																																								
+sums	922	52	answers to addition problems				4th math hm	math	4																																																								
+surface	923	476	adjective--surface area	x			5th math psf	math	5	ksh23	adjective--surface area	x			5th math hm	math	5																	187	adjective--as in surface area	x			5th science delta	science	5																								
+surface	924	468	noun				5th math psf	math	5	240	noun				4th math hm	math	4	195	noun				4th math psf	math	4									187	adjective--as in surface area	x			5th science delta	science	5																								
+surround	925	343	to enclose				4th math hm	math	4																																																								
+surrounded	926	439	verb				5th math hm	math	5																																																								
+survey	927	382	a poll with a questionnaire	x			4th math psf	math	4	512	noun--means to collect data	x			4th math hm	math	4	b1	a way to collect data from a questionnaire				5th math hm	math	5	476	noun--use of a questionnaire	x			5th math psf	math	5																																
+surveyed	928	b1	took or gave a survey				5th math hm	math	5	382					4th math psf	math	4																																																
+surveys	929	382	noun plural				4th math psf	math	4																																																								
+suspension	930	269	adjective--suspension bridge				5th math psf	math	5	381	adjective--suspension bridge				4th math psf	math	4																	502		x			5th science mmh	science	5																								
+symbol	931	83					5th math psf	math	5	25					4th math hm	math	4	469					4th math psf	math	4																																								
+symbolic	932						4th math hm	math	4	126					4th math psf	math	4																	165					5th science mmh	science	5																								
+symbolize	933	83					5th math psf	math	5																																																								
+symbols	934	248					4th math hm	math	4	44					4th math psf	math	4	83					5th math psf	math	5									486					5th science mmh	science	5																								
+symmetric	935	474		x			4th math psf	math	4	472		x			5th math psf	math	5																																																
+symmetry	936	472	noun--a property that says things can have to inversely identical parts	x			5th math psf	math	5	579		x			4th math hm	math	4	436					4th math psf	math	4																																								
+system	937	310					4th math hm	math	4																									87					5th science delta	science	5																								
+systematically	938	382					4th math psf	math	4																																																								
+table	939	382	a chart				4th math psf	math	4	301	a chart				4th math hm	math	4																	16					4th science mmh	science	4																								
+tables	940	7	charts--noun plural				4th math hm	math	4	44	noun plural--charts				4th math psf	math	4																	149	arrangement of numbers in columns				4th science delta	science	4																								
+tablespoon	941	476		x			5th math psf	math	5	474		x			4th math psf	math	4																																																
+tablespoons	942	469					4th math psf	math	4	471					5th math psf	math	5																																																
+tallies	943	382	noun plural				4th math psf	math	4																																																								
+tally	944	512	noun--the count of something				4th math hm	math	4	382	as in tally chart				4th math psf	math	4	354	a count of something				5th math hm	math	5																																								
+tax	945	26	noun--sales tax				5th math psf	math	5	290	noun				5th math hm	math	5	48	noun				4th math psf	math	4																																								
+taxes	946	274	noun plural				5th math hm	math	5																																																								
+teaspoon	947	476		x			5th math psf	math	5	474		x			4th math psf	math	4																																																
+teaspoons	948	476					5th math psf	math	5																																																								
+technology	949	554					5th math hm	math	5	51					5th math psf	math	5																	278					4th science mmh	science	4	38					5th science delta	science	5	32					5th science mmh	science	5								
+telescopes	950	596					5th math hm	math	5																									252					5th science delta	science	5	484					5th science mmh	science	5																
+tenth	951	476		x			5th math psf	math	5	474		x			4th math psf	math	4																																																
+tenths	952	415		x			4th math hm	math	4	270					4th math psf	math	4	10					5th math psf	math	5																																								
+thermometer	953	347					4th math hm	math	4	539					5th math hm	math	5																	xv					5th science mmh	science	5																								
+third	954	363	adjective				4th math psf	math	4																																																								
+thirds	955	373					4th math hm	math	4	223					4th math psf	math	4																																																
+thousands	956	5					4th math hm	math	4																																																								
+thousandth	957	476		x			5th math psf	math	5																																																								
+thousandths	958	54		x			5th math hm	math	5	10					5th math psf	math	5																																																
+tiles	959	535	noun				4th math hm	math	4																																																								
+tiling	960	604					4th math hm	math	4																																																								
+ton	961	663	weight measurement				4th math hm	math	4	350		x			4th math psf	math	4	476		x			5th math psf	math	5																																								
+tons	962	332	weight measurement	x			4th math hm	math	4	116					4th math psf	math	4																	251					4th science delta	science	4	182					4th science mmh	science	4																
+tornado	963	451					4th math psf	math	4																									259		x			5th science delta	science	5	502		x			5th science mmh	science	5																
+tornadoes	964	525	"variant of ""tornados"""				4th math hm	math	4																									207					5th science delta	science	5	268					5th science mmh	science	5																
+tornados	965	451	"variant of ""tornadoes"""				4th math psf	math	4																									502					5th science mmh	science	5																								
+tortoise	966	292					4th math hm	math	4	59					4th math psf	math	4																	87					4th science mmh	science	4																								
+tournament	967	62					4th math psf	math	4	81					5th math psf	math	5																																																
+trading	968	32	noun				5th math hm	math	5																																																								
+trading	969	113	adjective--like in trading cards or trading post				4th math hm	math	4																																																								
+translate	970	112					5th math psf	math	5																																																								
+translated	971	112					5th math psf	math	5																																																								
+translating	972	324					4th math psf	math	4	ksh14					5th math hm	math	5																																																
+translation	973	474		x			4th math psf	math	4																																																								
+translations	974	438					4th math psf	math	4																																																								
+trapezoid	975	476		x			5th math psf	math	5	564		x			4th math hm	math	4	474		x			4th math psf	math	4	414		x			5th math hm	math	5																																
+trapezoids	976	186					5th math psf	math	5																																																								
+trend	977	474	a pattern in the data	x			4th math psf	math	4	476	a pattern in the data	x			5th math psf	math	5																																																
+triangle	978	476		x			5th math psf	math	5	664					4th math hm	math	4	474		x			4th math psf	math	4	406		x			5th math hm	math	5																																
+triangular	979	664					4th math hm	math	4	474		x			4th math psf	math	4	426					5th math hm	math	5	319					5th math psf	math	5																																
+triathalon	980	305	"variant of ""triathlon"""				5th math hm	math	5																																																								
+triathlon	981	137	"variant of ""triathalon"""				4th math psf	math	4																																																								
+triathlons	982	137	"variant of ""triathalons"""				4th math psf	math	4																																																								
+unamplified	983	323					5th math psf	math	5																																																								
+underestimate	984	474	noun--a lowballed estimate	x			4th math psf	math	4	476	noun--a lowballed estimate	x			5th math psf	math	5																																																
+unequal	985	259		x			4th math hm	math	4																																																								
+unit	986	84	as in units of measure				5th math hm	math	5	325	as in units of measure				4th math hm	math	4	350	as in units of measure				4th math psf	math	4									486					5th science mmh	science	5																								
+units	987	321	as in units of measure				4th math hm	math	4	350	as in units of measure				4th math psf	math	4																	304					4th science mmh	science	4																								
+unlabeled	988	414					5th math hm	math	5																																																								
+unlike	989	664	adjective--not the same				4th math hm	math	4	ksh13	adjective--not the same	x			5th math hm	math	5	476	adjective--not the same				5th math psf	math	5																																								
+unlikely	990	532	improbable	x			4th math hm	math	4	477	improbable	x			4th math psf	math	4																																																
+unreasonable	991	240					5th math hm	math	5																																																								
+urban	992	525					5th math hm	math	5	22					5th math psf	math	5																																																
+value	993	5	numerical quantity				4th math hm	math	4	123	numerical quantity				4th math psf	math	4	476	numerical quantity	x			5th math psf	math	5	ksh15	numerical quantity				5th math hm	math	5																																
+values	994	93	numerical quantities				4th math hm	math	4	125	numerical quantities				4th math psf	math	4																																																
+variable	995	476	noun--math term	x			5th math psf	math	5	163	noun--math term	x			4th math hm	math	4	474	noun--math term	x			4th math psf	math	4	ksh14	noun--math term	x			5th math hm	math	5	8--9		x			4th science mmh	science	4	141		x			5th science delta	science	5	503		x			5th science mmh	science	5								
+variables	996	163	noun plural--math term				4th math hm	math	4	116	noun plural--math term				4th math psf	math	4	110	noun plural--math term				5th math psf	math	5									9					4th science mmh	science	4	169					5th science delta	science	5	3		x			5th science mmh	science	5								
+variety	997	38					4th math hm	math	4	156					5th math hm	math	5																	32					4th science mmh	science	4																								
+verify	998	63	to check				4th math hm	math	4	94					4th math psf	math	4	ksh5					5th math hm	math	5	38					5th math psf	math	5																																
+vertex	999	560		x			4th math hm	math	4	474		x			4th math psf	math	4	389		x			5th math hm	math	5	477		x			5th math psf	math	5																																
+vertical	1000	358	adjective				4th math hm	math	4	ksh16	adjective				5th math hm	math	5	477	adjective				5th math psf	math	5									260					5th science delta	science	5	501					5th science mmh	science	5																
+vertically	1001	288					4th math hm	math	4	76					5th math hm	math	5																																																
+vertices	1002	592		x			4th math hm	math	4	474		x			4th math psf	math	4	477		x			5th math psf	math	5																																								
+visualize	1003	71					4th math hm	math	4	xiv					4th math psf	math	4	51					5th math hm	math	5	xiv					5th math psf	math	5																																
+volume	1004	619	the number of cubic units needed to make up a solid figure	x			4th math hm	math	4	474	the number of cubic units needed to make up a solid figure	x			4th math psf	math	4	482	the number of cubic units needed to make up a solid figure	x			5th math hm	math	5	477	the number of cubic units needed to make up a solid figure	x			5th math psf	math	5	118					4th science delta	science	4	5					4th science mmh	science	4	81		x			5th science delta	science	5	236		x			5th science mmh	science	5
+warehouse	1005	224					4th math hm	math	4																																																								
+web	1006	116	noun--net or mesh				5th math hm	math	5	66	noun- net or mesh				4th math hm	math	4																	52	food web	x			4th science mmh	science	4																								
+webmaster	1007	15		x			4th math hm	math	4																																																								
+website	1008	329					5th math hm	math	5																																																								
+week	1009	88	7 days	x			5th math psf	math	5	474	7 days	x			4th math psf	math	4																																																
+weeks	1010	285	7 days	x			4th math psf	math	4																																																								
+weight	1011	665					4th math hm	math	4	474		x			4th math psf	math	4	616					5th math hm	math	5	477		x			5th math psf	math	5	5					4th science mmh	science	4	504		x			5th science mmh	science	5																
+wildlife	1012	218	noun				4th math hm	math	4	157	adjective				5th math hm	math	5																																																
+wool	1013	422					4th math hm	math	4																									20					4th science delta	science	4	285					4th science mmh	science	4																
+woolen	1014	402					5th math hm	math	5																																																								
+wooly	1015	292					4th math hm	math	4																																																								
+yard	1016	323	measure of 36 inches	x			4th math hm	math	4	350	measure of 36 inches	x			4th math psf	math	4	155	measure of 36 inches				5th math psf	math	5																																								
+yards	1017	237	measure of 36 inches				4th math psf	math	4	456	measure of 36 inches				4th math hm	math	4	267	measure of 36 inches				5th math psf	math	5																																								
+yardstick	1018	349					4th math psf	math	4																																																								
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	
+																																																																	

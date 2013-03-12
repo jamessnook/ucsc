@@ -1,0 +1,1007 @@
+// Word Bank Schema
+
+CREATE DATABASE wordBank;
+USE wordBank;
+
+-- Candidate Words
+DROP TABLE sourceWords;
+CREATE TABLE sourceWords (
+    id       INT NOT NULL AUTO_INCREMENT,           -- unique id for this lemma
+    word     VARCHAR(128) DEFAULT '',  
+    useWord  VARCHAR(128) DEFAULT '',    -- modified, corrected or substituted word if needed to be used for data processing   
+    sourceId INT,
+    page     VARCHAR(30) DEFAULT '',  
+    meaning  VARCHAR(512) DEFAULT '',  
+    pubWord  BOOL DEFAULT FALSE,  
+    newWord  BOOL DEFAULT FALSE,  
+    comments VARCHAR(512) DEFAULT '',  
+    pos      VARCHAR(16) DEFAULT '',   -- part of speech where known  
+    lemmaCnt INT DEFAULT 0,
+    lemmaStrCnt INT DEFAULT 0,
+    lemmaId  INT DEFAULT 0,  
+    lemma    VARCHAR(60) DEFAULT '',  
+    wordCnt INT DEFAULT 0,
+    posCnt INT DEFAULT 0,
+    meaningCnt INT DEFAULT 0,
+    celexWordId INT DEFAULT 0,
+    stemCnt INT DEFAULT 0,
+    isMultiWord     INT DEFAULT 0,  
+    PRIMARY KEY(id)
+);
+Alter table sourceWords add index (word);
+Alter table sourceWords add index (useWord);
+Alter table sourceWords add index (meaning);
+Alter table sourceWords add index (pos);
+Alter table sourceWords add index (stemCnt);
+Alter table sourceWords add index (lemmaStrCnt);
+Alter table sourceWords add index (isMultiWord);
+Alter table sourceWords add index (sourceId);
+
+-- Associate source words with possible lemmas 
+DROP TABLE wordLemmas;
+CREATE TABLE wordLemmas (
+    id       INT NOT NULL,           --  id from sourceWords table
+    lemmaId     INT  NOT NULL,          --  IdNum from celex.LemmaMorph table
+    PRIMARY KEY(id, lemmaId)
+);
+
+-- Associate source words with possible stems 
+DROP TABLE wordStems;
+CREATE TABLE wordStems (
+    id       INT NOT NULL,           --  id from sourceWords table
+    stem     VARCHAR(60) DEFAULT '',          --  IdNum from celex.LemmaMorph table
+    PRIMARY KEY(id, stem)
+);
+
+DROP TABLE multiWordData;
+CREATE TABLE multiWordData (
+    id       INT NOT NULL,           --  id from sourceWords table
+    word     VARCHAR(60) DEFAULT '',  
+    meaning     VARCHAR(500) DEFAULT '',  
+    oldMeaning     VARCHAR(500) DEFAULT '',  
+    wordEndPos INT DEFAULT 0,
+    firstBlankPos INT DEFAULT 0,
+    wordBreak1 INT DEFAULT 0,
+    wordBreak2 INT DEFAULT 0,
+    PRIMARY KEY(id)
+);
+
+-- Partial word data for parts of multi-words and compound words 
+DROP TABLE partWords;
+CREATE TABLE partWords (
+    id       INT NOT NULL,            --  id from sourceWords table
+    word     VARCHAR(60) DEFAULT '',
+    inCelex  INT DEFAULT 0,
+    wordPos    INT DEFAULT 0,
+    PRIMARY KEY(id, word, wordPos)
+);
+Alter table partWords add index (id);
+Alter table partWords add index (word);
+
+
+-- Non Celex Words from Candidate Words
+DROP TABLE nonCelexWords;
+CREATE TABLE nonCelexWords (
+    word     VARCHAR(60) DEFAULT '',  
+    lemma    VARCHAR(60) DEFAULT '',  
+    suggestion     VARCHAR(60) DEFAULT '',  
+    suggestion2     VARCHAR(60) DEFAULT '',  
+    suggestion3     VARCHAR(60) DEFAULT '',  
+    suggestion4     VARCHAR(60) DEFAULT '',  
+    altWord     VARCHAR(60) DEFAULT '',  
+    isMultiWord     INT DEFAULT 0,  
+    hasFeedback     INT DEFAULT 0,  -- if we have user data/feedback 
+    resolved     INT DEFAULT 0  -- if we have user data/feedback on this one that maps to celex
+);
+ 
+
+-- Non Celex Words processed by user and imported back to db
+DROP TABLE userWords;
+CREATE TABLE userWords (
+    word     VARCHAR(60) DEFAULT '',  
+    lemma    VARCHAR(60) DEFAULT '',  
+    altLemma    VARCHAR(60) DEFAULT '',  
+    part1    VARCHAR(60) DEFAULT '',  
+    part2    VARCHAR(60) DEFAULT '',  
+    inCelex  INT DEFAULT 0,
+    isMultiWord     INT DEFAULT 0  
+);
+Alter table userWords add index (word);
+Alter table userWords add index (part1);
+Alter table userWords add index (part2);
+
+-- Non Celex Words processed by user and imported back to db
+DROP TABLE userLemmas;
+CREATE TABLE userLemmas (
+    id       INT NOT NULL AUTO_INCREMENT,           -- unique id for this lemma
+    lemma     VARCHAR(60) DEFAULT '',  
+    pos     VARCHAR(30) DEFAULT '',  
+    PRIMARY KEY(id)
+);
+Alter table userLemmas AUTO_INCREMENT = 100000;
+Alter table userLemmas add index (lemma);
+
+
+-- Lemma Morph Options
+DROP TABLE LemmaOpts;
+CREATE TABLE LemmaOpts (
+    id       INT NOT NULL,           --  id from sourceWords table
+    lemmaOpt    VARCHAR(500) DEFAULT '',  
+    lemmaId     INT DEFAULT 0,  
+    lemma    VARCHAR(60) DEFAULT '',  
+    morph    VARCHAR(250) DEFAULT '',  
+    cob   FLOAT 
+);
+Alter table LemmaOpts add index (id);
+Alter table LemmaOpts add index (cob);
+
+DROP TABLE ambiguousWords;
+CREATE TABLE ambiguousWords (
+    id       INT NOT NULL,           --  id from sourceWords table
+    word     VARCHAR(128) DEFAULT '',  
+    meaning  VARCHAR(512) DEFAULT '',  
+    pos     VARCHAR(30) DEFAULT '',  
+    lemma    VARCHAR(60) DEFAULT '',  
+    lemmaId  INT DEFAULT 0,  
+    lemmaOpt1    VARCHAR(128) DEFAULT '',
+    lemmaOpt2    VARCHAR(128) DEFAULT '',
+    lemmaOpt3    VARCHAR(128) DEFAULT '',
+    lemmaOpt4    VARCHAR(128) DEFAULT '',
+    meaningCnt  INT, 
+    isMultiWord     INT DEFAULT 0  
+);
+Alter table ambiguousWords add index (word);
+
+DROP TABLE stems;
+CREATE TABLE stems (
+    stem     VARCHAR(60),  
+    wordCnt  INT DEFAULT 0,  
+    lemmaCnt  INT DEFAULT 0,  
+    PRIMARY KEY (stem)  
+);
+Alter table stems add index (stem);
+
+
+-- Selected Words
+DROP TABLE words;
+CREATE TABLE words (
+    id       INT NOT NULL AUTO_INCREMENT,           -- unique id for this word-meaning pair
+    word     VARCHAR(128) DEFAULT '',  
+    meaning  VARCHAR(512) DEFAULT '',  
+    lemma    VARCHAR(60) DEFAULT '',  
+    lemmaId    INT DEFAULT 0,  
+    stem     VARCHAR(60) DEFAULT '',  
+    stem2    VARCHAR(60) DEFAULT '',  
+    stem3    VARCHAR(60) DEFAULT '',  
+    lemmaMorph    VARCHAR(60),  
+    pos      VARCHAR(16) DEFAULT '',   -- part of speech where known  
+    sourceList  VARCHAR(120) DEFAULT '',  
+    wordSourceCnt  INT DEFAULT 0,  
+    wMeaningSrcCnt  INT DEFAULT 0,  
+    inflected  INT DEFAULT 0,  
+    derived  INT DEFAULT 0,  
+    meaningStrCnt  INT DEFAULT 0,  
+    wordFreqZenoU FLOAT,
+    wordFreqCob FLOAT,
+    lemmaFreqCob FLOAT,
+    wordFreqGoogle FLOAT,
+    PRIMARY KEY(id)
+);
+Alter table words add index (word);
+Alter table words add index (meaning);
+Alter table words add index (stem);
+
+-- Documents
+DROP TABLE sources;
+CREATE TABLE sources (
+    id       INT NOT NULL,           -- unique id for this lemma
+    name     VARCHAR(128),  
+    shortName    VARCHAR(32),   
+    abbreviation    VARCHAR(32),   
+    subject    VARCHAR(128),   
+    grade     	INT,  
+    PRIMARY KEY(id)
+);
+-- fill table
+INSERT INTO sources VALUES(1, "4th social studies hmh",  "SS 4 HMH",  "4HMH", "social studies", 4);
+INSERT INTO sources VALUES(2, "4th social studies psf",  "SS 4 PSF",  "4PSF", "social studies", 4);
+INSERT INTO sources VALUES(3, "5th social studies hmh",  "SS 5 HMH",  "5HMH", "social studies", 5);
+INSERT INTO sources VALUES(4, "5th social studies psf",  "SS 5 PSF",  "5PSF", "social studies", 5);
+INSERT INTO sources VALUES(5, "5th social studies oup1",  "SS 5 OUP1",  "5OUP1", "social studies", 5);
+INSERT INTO sources VALUES(6, "5th social studies oup2",  "SS 5 OUP2",  "5OUP2", "social studies", 5);
+INSERT INTO sources VALUES(7, "5th social studies oup3",  "SS 5 OUP3",  "5OUP3", "social studies", 5);
+INSERT INTO sources VALUES(8, "5th social studies oup4",  "SS 5 OUP4",  "5OUP4", "social studies", 5);
+INSERT INTO sources VALUES(9, "5th social studies oup5",  "SS 5 OUP5",  "5OUP5", "social studies", 5);
+
+-- import corpus data
+LOAD DATA INFILE '/soe/jsnook/vase/celex2/english/SS4HMH.txt' INTO TABLE sourceWords
+LINES TERMINATED BY '\r\n' (word, page, meaning, @pWord, @nWord, comments, @dummy, @dummy, @dummy) 
+SET sourceId=1, lemmaId=0, pubWord = @pWord = 'x', newWord = @nWord = 'x';
+
+LOAD DATA INFILE '/soe/jsnook/vase/celex2/english/SS4PSF.txt' INTO TABLE sourceWords
+LINES TERMINATED BY '\r\n' (word, page, meaning, @pWord, @nWord, comments, @dummy, @dummy, @dummy) 
+SET sourceId=2, lemmaId=0, pubWord = @pWord = 'x', newWord = @nWord = 'x';
+
+LOAD DATA INFILE '/soe/jsnook/vase/celex2/english/SS5HMH.txt' INTO TABLE sourceWords
+LINES TERMINATED BY '\r\n' (word, page, meaning, @pWord, @nWord, comments, @dummy, @dummy, @dummy) 
+SET sourceId=3, lemmaId=0, pubWord = @pWord = 'x', newWord = @nWord = 'x';
+
+LOAD DATA INFILE '/soe/jsnook/vase/celex2/english/SS5PSF.txt' INTO TABLE sourceWords
+LINES TERMINATED BY '\r\n' (word, page, meaning, @pWord, @nWord, comments, @dummy, @dummy, @dummy) 
+SET sourceId=4, lemmaId=0, pubWord = @pWord = 'x', newWord = @nWord = 'x';
+
+LOAD DATA INFILE '/soe/jsnook/vase/celex2/english/SS5OUP2.txt' INTO TABLE sourceWords
+LINES TERMINATED BY '\r\n' (word, page, meaning, @pWord, @nWord, comments, @dummy, @dummy, @dummy) 
+SET sourceId=6, lemmaId=0, pubWord = @pWord = 'x', newWord = @nWord = 'x';
+
+LOAD DATA INFILE '/soe/jsnook/vase/celex2/english/SS5OUP3.txt' INTO TABLE sourceWords
+LINES TERMINATED BY '\r\n' (word, page, meaning, @pWord, @nWord, comments, @dummy, @dummy, @dummy) 
+SET sourceId=7, lemmaId=0, pubWord = @pWord = 'x', newWord = @nWord = 'x';
+
+LOAD DATA INFILE '/soe/jsnook/vase/celex2/english/SS5OUP5.txt' INTO TABLE sourceWords
+LINES TERMINATED BY '\r\n' (word, page, meaning, @pWord, @nWord, comments, @dummy, @dummy, @dummy) 
+SET sourceId=9, lemmaId=0, pubWord = @pWord = 'x', newWord = @nWord = 'x';
+
+LOAD DATA INFILE '/soe/jsnook/vase/celex2/english/SS5OUP1.txt' INTO TABLE sourceWords
+LINES TERMINATED BY '\r\n' (word, page, meaning, @pWord, @nWord, comments, @dummy, @dummy, @dummy) 
+SET sourceId=5, lemmaId=0, pubWord = @pWord = 'x', newWord = @nWord = 'x';
+
+LOAD DATA INFILE '/soe/jsnook/vase/celex2/english/SS5OUP4.txt' INTO TABLE sourceWords
+LINES TERMINATED BY '\r\n' (word, page, meaning, @pWord, @nWord, comments, @dummy, @dummy, @dummy) 
+SET sourceId=8, lemmaId=0, pubWord = @pWord = 'x', newWord = @nWord = 'x';
+
+--------------------------------------------------------
+-- import and process user processed non celex words
+--------------------------------------------------------
+LOAD DATA INFILE '/soe/jsnook/vase/nonCelexSSWords.txt' INTO TABLE userWords
+LINES TERMINATED BY '\r\n' (word, lemma, part1, part2, altLemma, @dummy, @dummy, @dummy, @dummy, @dummy, @dummy);
+
+UPDATE wordBank.userWords SET isMultiWord = 1
+  WHERE NOT part1='';
+UPDATE wordBank.userWords SET lemma = altLemma
+  WHERE lemma='';
+UPDATE wordBank.userWords SET lemma = CONCAT(part1, part2)
+  WHERE lemma='';
+UPDATE wordBank.userWords SET lemma = word
+  WHERE lemma='';
+
+UPDATE wordBank.userWords SET inCelex = (SELECT COUNT(*)
+  FROM celex.WordOrthSpell
+  WHERE celex.WordOrthSpell.wordDia=userWords.lemma);
+
+INSERT INTO wordBank.userLemmas (lemma)
+  SELECT DISTINCT lemma
+  FROM  wordBank.userWords 
+  WHERE inCelex=0;
+
+INSERT INTO wordBank.partWords (id, word, wordPos)
+  SELECT sourceWords.id, userWords.part1, 1
+  FROM  wordBank.sourceWords JOIN wordBank.userWords USING (word)
+  WHERE NOT part1='';
+
+INSERT INTO wordBank.partWords (id, word, wordPos)
+  SELECT sourceWords.id, userWords.part2, 2
+  FROM  wordBank.sourceWords JOIN wordBank.userWords USING (word)
+  WHERE NOT part2='';
+
+------------------------
+-- Process source data
+------------------------
+
+-- clean off quotes
+UPDATE wordBank.sourceWordsTmp SET meaning=TRIM(BOTH '"' FROM meaning) where meaning LIKE '"%';
+-- fix one bad multi word meaning that could not be parsed as is
+UPDATE sourceWordsTmp SET meaning= 'armillary sphere  showed stars position' WHERE meaning LIKE 'armillary sphere%';
+
+-- Process multi words concepts to strip meanings from word concepts and extract single words 
+UPDATE wordBank.sourceWords SET isMultiWord = 1
+  WHERE word='';
+
+
+INSERT INTO wordBank.multiWordData (id, meaning)
+  SELECT sourceWords.id, sourceWords.meaning
+  FROM  wordBank.sourceWords 
+  WHERE isMultiWord=1;
+
+UPDATE multiWordData SET firstBlankPos = LOCATE(' ', meaning);
+UPDATE multiWordData SET wordEndPos = 0;
+UPDATE multiWordData SET wordEndPos = LOCATE(':', meaning) WHERE  wordEndPos=0;
+UPDATE multiWordData SET wordEndPos = LOCATE('--', meaning) WHERE wordEndPos=0;
+UPDATE multiWordData SET wordEndPos = LOCATE('- ', meaning) WHERE  wordEndPos=0;
+UPDATE multiWordData SET wordEndPos = LOCATE(' -', meaning) WHERE wordEndPos=0;
+UPDATE multiWordData SET wordEndPos = LOCATE('  ', meaning) WHERE wordEndPos=0;
+UPDATE multiWordData SET wordEndPos = LOCATE('-', meaning) WHERE wordEndPos=0 AND firstBlankPos>0 AND firstBlankPos<LOCATE('-', meaning);
+UPDATE multiWordData SET wordEndPos = LENGTH(meaning)+1 WHERE wordEndPos=0;
+UPDATE multiWordData SET oldMeaning = meaning;
+UPDATE multiWordData SET meaning = TRIM(':' FROM TRIM(TRIM('-' FROM TRIM(SUBSTR(oldMeaning, wordEndPos)))));
+UPDATE multiWordData SET word = TRIM(':' FROM TRIM(TRIM('-' FROM TRIM(SUBSTR(oldMeaning, 1, wordEndPos)))));
+UPDATE multiWordData SET wordBreak1 = firstBlankPos;
+UPDATE multiWordData SET wordBreak1 = LOCATE('-', word) WHERE LOCATE('-', word)>0 AND (wordBreak1=0 OR LOCATE('-', word)<wordBreak1);
+UPDATE multiWordData SET wordBreak2 = LOCATE(' ', word, wordBreak1+1);
+UPDATE multiWordData SET wordBreak2 = LOCATE('-', word, wordBreak1+1) WHERE LOCATE('-', word, wordBreak1+1)>0 AND (wordBreak2=0 OR LOCATE('-', word, wordBreak1+1)<wordBreak2);
+UPDATE multiWordData SET wordBreak2 = LENGTH(word)+1 WHERE wordBreak2=0;
+
+-- assign newly identified multi-words back to sourceWords table
+INSERT INTO wordBank.sourceWords (id, word)
+  SELECT id, @wrd:= word
+  FROM  wordBank.multiWordData 
+ON DUPLICATE KEY UPDATE word=@wrd;
+
+-- pick out part words
+INSERT INTO partWords (id, word, wordPos) 
+  SELECT id, SUBSTR(word, 1, wordBreak1-1), 1 
+  FROM multiWordData;
+INSERT INTO partWords (id, word, wordPos) 
+  SELECT id, SUBSTR(word, wordBreak1+1, wordBreak2-wordBreak1-1), 2 
+  FROM multiWordData;
+INSERT INTO partWords (id, word, wordPos) 
+  SELECT id, SUBSTR(word, wordBreak2+1), 3 
+  FROM multiWordData;
+DELETE FROM partWords WHERE word='';
+-- determine if partial words are in celex or not
+INSERT INTO partWords (id, word, wordPos, inCelex) SELECT id, word, wordPos, @cnt:= count(*)
+    FROM partWords
+    JOIN celex.WordOrthSpell On (partWords.word = WordOrthSpell.WordDia)
+	GROUP BY id, word, wordPos
+ON DUPLICATE KEY UPDATE inCelex=@cnt;
+
+-- we could  add in exact matching too
+
+-- done with multi word processing for now
+
+-- add in use words for actual matching 
+UPDATE wordBank.sourceWords SET useWord = word;
+
+-- handle non celex words processed by user
+INSERT INTO sourceWords (id, useWord) 
+  SELECT DISTINCT id, userWords.lemma
+    FROM wordBank.sourceWords 
+    JOIN wordBank.userWords USING (word)
+	WHERE NOT userWords.lemma =''
+ON DUPLICATE KEY UPDATE useWord=userWords.lemma;
+
+-- Find celex Word Id including matches against compound words where single word is not in celex.
+-- This will include non exact matches and the highest frequency match 
+-- for source words with more than one match 
+INSERT INTO wordBank.sourceWords (id, celexWordId)
+  SELECT sourceWords.id, celex.WordOrthSpell.IdNum
+  FROM  wordBank.sourceWords JOIN celex.WordOrthSpell 
+    ON (celex.WordOrthSpell.WordDia like CONCAT(TRIM(sourceWords.useWord), ' %'))
+    ORDER BY CobSpellFreq
+ON DUPLICATE KEY UPDATE celexWordId=celex.WordOrthSpell.IdNum;
+
+INSERT INTO wordBank.sourceWords (id, celexWordId)
+  SELECT sourceWords.id, celex.WordMorph.IdNum
+  FROM  wordBank.sourceWords JOIN celex.WordMorph 
+    ON (celex.WordMorph.Word like CONCAT(TRIM(sourceWords.useWord), ' %'))
+    ORDER BY Cob
+ON DUPLICATE KEY UPDATE celexWordId=celex.WordMorph.IdNum;
+
+INSERT INTO wordBank.sourceWords (id, celexWordId)
+  SELECT sourceWords.id, celex.WordOrthSpell.IdNum
+  FROM  wordBank.sourceWords JOIN celex.WordOrthSpell 
+    ON (celex.WordOrthSpell.WordDia = sourceWords.useWord)
+    ORDER BY CobSpellFreq
+ON DUPLICATE KEY UPDATE celexWordId=celex.WordOrthSpell.IdNum;
+
+INSERT INTO wordBank.sourceWords (id, celexWordId)
+  SELECT sourceWords.id, celex.WordMorph.IdNum
+  FROM  wordBank.sourceWords JOIN celex.WordMorph 
+    ON (celex.WordMorph.Word = sourceWords.useWord)
+    ORDER BY Cob
+ON DUPLICATE KEY UPDATE celexWordId=celex.WordMorph.IdNum;
+
+INSERT INTO wordBank.sourceWords (id, celexWordId)
+  SELECT sourceWords.id, celex.WordOrthSpell.IdNum
+  FROM  wordBank.sourceWords 
+    JOIN celex.WordOrthSpell ON(CONCAT('mid',TRIM(celex.WordOrthSpell.WordDia)) like sourceWords.useWord)
+    WHERE sourceWords.celexWordId=0
+    ORDER BY CobSpellFreq
+ON DUPLICATE KEY UPDATE celexWordId=celex.WordOrthSpell.IdNum;
+
+INSERT INTO wordBank.sourceWords (id, celexWordId)
+  SELECT sourceWords.id, celex.WordOrthSpell.IdNum
+  FROM  wordBank.sourceWords 
+    JOIN celex.WordOrthSpell ON(CONCAT('mis',TRIM(celex.WordOrthSpell.WordDia)) like sourceWords.useWord)
+    WHERE sourceWords.celexWordId=0
+    ORDER BY CobSpellFreq
+ON DUPLICATE KEY UPDATE celexWordId=celex.WordOrthSpell.IdNum;
+
+INSERT INTO wordBank.sourceWords (id, celexWordId)
+  SELECT sourceWords.id, celex.WordOrthSpell.IdNum
+  FROM  wordBank.sourceWords 
+    JOIN celex.WordOrthSpell ON(CONCAT('on',TRIM(celex.WordOrthSpell.WordDia)) like sourceWords.useWord)
+    WHERE sourceWords.celexWordId=0
+    ORDER BY CobSpellFreq
+ON DUPLICATE KEY UPDATE celexWordId=celex.WordOrthSpell.IdNum;
+
+INSERT INTO wordBank.sourceWords (id, celexWordId)
+  SELECT sourceWords.id, celex.WordOrthSpell.IdNum
+  FROM  wordBank.sourceWords 
+    JOIN celex.WordOrthSpell ON(CONCAT('un',TRIM(celex.WordOrthSpell.WordDia)) like sourceWords.useWord)
+    WHERE sourceWords.celexWordId=0
+    ORDER BY CobSpellFreq
+ON DUPLICATE KEY UPDATE celexWordId=celex.WordOrthSpell.IdNum;
+
+-- count number of words with exact matches in celex for each source word
+-- this is also the number of possible parts of speech for that word in celex
+INSERT INTO wordBank.sourceWords (id, wordCnt)
+  SELECT sourceWords.id, @cnt := count(DISTINCT WordOrthSpell.IdNum) 
+    FROM wordBank.sourceWords 
+    JOIN celex.WordOrthSpell ON(sourceWords.useWord=WordOrthSpell.WordDia)
+  GROUP BY id
+ON DUPLICATE KEY UPDATE wordCnt= @cnt;
+
+INSERT INTO wordBank.sourceWords (id, posCnt)
+  SELECT sourceWords.id, @cnt := count(DISTINCT LemmaSyntax.ClassNum) 
+    FROM wordBank.sourceWords 
+    JOIN celex.WordOrthSpell ON (sourceWords.useWord=WordOrthSpell.WordDia)
+    JOIN celex.WordMorph ON (WordMorph.IdNum=WordOrthSpell.IdNum ) 
+    JOIN celex.LemmaSyntax ON (celex.WordMorph.IdNumLemma = celex.LemmaSyntax.IdNum)
+  GROUP BY id
+ON DUPLICATE KEY UPDATE posCnt= @cnt;
+
+-- determine part of speech if only one is possible in celex for this word
+UPDATE wordBank.sourceWords SET pos = '';
+
+-- determine part of speech if in meaning field
+UPDATE wordBank.sourceWords SET pos='V' where meaning LIKE 'verb%';
+UPDATE wordBank.sourceWords SET pos='N' where meaning LIKE 'noun%';
+UPDATE wordBank.sourceWords SET pos='N' where meaning LIKE 'adjectivial noun%';
+UPDATE wordBank.sourceWords SET pos='A' where meaning LIKE 'adjective%';
+UPDATE wordBank.sourceWords SET pos='A' where meaning LIKE 'adj.%';
+UPDATE wordBank.sourceWords SET pos='ADV' where meaning LIKE 'adverb%';
+
+-- Find match for words with single match
+INSERT INTO sourceWords (id, pos) 
+SELECT DISTINCT id, Class
+    FROM sourceWords
+    JOIN celex.WordOrthSpell On (sourceWords.useWord = WordOrthSpell.WordDia)
+    JOIN celex.WordMorph USING (IdNum) 
+    JOIN celex.LemmaSyntax ON (celex.WordMorph.IdNumLemma = celex.LemmaSyntax.IdNum)
+    JOIN celex.LemmaClasses ON (LemmaSyntax.ClassNum=LemmaClasses.ClassNum)
+	WHERE posCnt=1
+ON DUPLICATE KEY UPDATE pos=Class;
+
+-- Where the user set pos is not in celex for that word and posCnt>1 set it to '' to prevent errors in later matching
+-- this is the case wher we know it is wrong according to celex and we can't match it 
+-- because we have more than one possibility
+UPDATE wordBank.sourceWords SET pos='' 
+  WHERE posCnt>1 AND NOT pos='' AND pos NOT IN (SELECT Class
+    FROM celex.WordOrthSpell 
+    JOIN celex.WordMorph USING (IdNum) 
+    JOIN celex.LemmaSyntax ON (celex.WordMorph.IdNumLemma = celex.LemmaSyntax.IdNum)
+    JOIN celex.LemmaClasses ON (LemmaSyntax.ClassNum=LemmaClasses.ClassNum)
+	WHERE sourceWords.useWord = WordOrthSpell.WordDia);
+
+-- get highest probability pos for words with 0 exact matches
+INSERT INTO sourceWords (id, pos) 
+SELECT DISTINCT id, Class
+    FROM sourceWords
+    JOIN celex.WordMorph ON (IdNum=celexWordId) 
+    JOIN celex.LemmaSyntax ON (WordMorph.IdNumLemma = LemmaSyntax.IdNum)
+    JOIN celex.LemmaClasses ON (LemmaSyntax.ClassNum=LemmaClasses.ClassNum)
+	WHERE posCnt=0
+ON DUPLICATE KEY UPDATE pos=Class;
+
+--------------------------------------
+-- Identify Word Lemmas
+--------------------------------------
+-- Fill wordLemmas and WordStems supplemental tables 
+-- (now that we know part of speech for as many words as possible)
+DELETE FROM wordLemmas;
+INSERT IGNORE INTO wordBank.wordLemmas (id, lemmaId)
+  SELECT DISTINCT sourceWords.id, IdNumLemma 
+    FROM wordBank.sourceWords 
+    JOIN celex.WordOrthSpell ON (sourceWords.useWord=WordOrthSpell.WordDia)
+    JOIN celex.WordMorph ON (WordMorph.IdNum=WordOrthSpell.IdNum ) 
+  WHERE sourceWords.pos='';
+INSERT IGNORE INTO wordBank.wordLemmas (id, lemmaId)
+  SELECT DISTINCT sourceWords.id, IdNumLemma 
+    FROM wordBank.sourceWords 
+    JOIN celex.WordOrthSpell ON (sourceWords.useWord=WordOrthSpell.WordDia)
+    JOIN celex.WordMorph ON (WordMorph.IdNum=WordOrthSpell.IdNum ) 
+    JOIN celex.LemmaSyntax ON (celex.WordMorph.IdNumLemma = celex.LemmaSyntax.IdNum)
+    JOIN celex.LemmaClasses ON (LemmaSyntax.ClassNum=LemmaClasses.ClassNum)
+  WHERE sourceWords.pos=LemmaClasses.Class;
+
+-- for the non exact match words
+INSERT IGNORE INTO wordBank.wordLemmas (id, lemmaId)
+  SELECT DISTINCT sourceWords.id, IdNumLemma 
+    FROM wordBank.sourceWords 
+    JOIN celex.WordMorph ON (WordMorph.IdNum=sourceWords.celexWordId ) 
+    JOIN celex.LemmaSyntax ON (celex.WordMorph.IdNumLemma = celex.LemmaSyntax.IdNum)
+    JOIN celex.LemmaClasses ON (LemmaSyntax.ClassNum=LemmaClasses.ClassNum)
+  WHERE sourceWords.wordCnt=0 AND sourceWords.pos=LemmaClasses.Class;
+
+-- for user words
+INSERT IGNORE INTO wordBank.wordLemmas (id, lemmaId)
+  SELECT DISTINCT sourceWords.id, userLemmas.id 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.userWords USING (word)
+    JOIN wordBank.userLemmas ON (userWords.lemma=userLemmas.lemma);
+
+-- for user words that are part words from a multi word concept
+INSERT IGNORE INTO wordBank.wordLemmas (id, lemmaId)
+  SELECT DISTINCT partWords.id, userLemmas.id
+    FROM wordBank.partWords
+    JOIN wordBank.userWords USING (word)
+    JOIN wordBank.userLemmas ON (userWords.lemma=userLemmas.lemma);
+
+-- For words that still have no lemma matches add a new lemma to the userLemmas table 
+-- and assign it to the word in the wordLemmas table
+-- This way the later logic can at least identify multiple occurances for rule 1
+INSERT INTO wordBank.userLemmas (lemma)
+  SELECT DISTINCT useWord
+  FROM  sourceWords 
+  LEFT JOIN wordLemmas USING (id) 
+  WHERE wordLemmas.lemmaId IS NULL;
+  
+-- do this again to get the new ones
+INSERT IGNORE INTO wordBank.wordLemmas (id, lemmaId)
+  SELECT DISTINCT sourceWords.id, userLemmas.id 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.userLemmas ON (sourceWords.useWord=userLemmas.lemma);
+
+
+--------------------------------------
+-- Identify Word Stems
+--------------------------------------
+DELETE FROM wordBank.wordStems;
+INSERT INTO wordBank.wordStems (id, stem)
+  SELECT DISTINCT sourceWords.id, LemmaStems.Stem 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.wordLemmas USING (id)
+    JOIN celex.LemmaStems ON (wordLemmas.lemmaId=IdNumLemma);
+
+-- add to wordStems table for multi-word part word stems
+INSERT IGNORE INTO wordBank.wordStems (id, stem)
+  SELECT DISTINCT sourceWords.id, LemmaStems.Stem 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.partWords USING (id)
+    JOIN celex.WordOrthSpell ON (partWords.word=WordOrthSpell.WordDia)
+    JOIN celex.WordMorph ON (WordMorph.IdNum=WordOrthSpell.IdNum ) 
+    JOIN celex.LemmaStems USING (IdNumLemma);
+
+-- add to wordStems table for user processed words
+INSERT IGNORE INTO wordBank.wordStems (id, stem)
+  SELECT DISTINCT partWords.id, LemmaStems.Stem 
+    FROM wordBank.partWords
+    JOIN wordBank.userWords USING (word)
+    JOIN celex.WordOrthSpell ON (userWords.lemma=WordOrthSpell.WordDia)
+    JOIN celex.WordMorph ON (WordMorph.IdNum=WordOrthSpell.IdNum ) 
+    JOIN celex.LemmaStems USING (IdNumLemma);
+
+-- If there are no matches we could assign the lemma as the stem  
+-- for user lemmas
+INSERT IGNORE INTO wordBank.wordStems (id, stem)
+  SELECT DISTINCT wordLemmas.id, userLemmas.lemma
+    FROM wordBank.userLemmas 
+    JOIN wordBank.wordLemmas ON (wordLemmas.lemmaId=userLemmas.id)
+    LEFT JOIN wordStems ON (wordLemmas.id=wordStems.id)
+  WHERE wordStems.stem IS NULL;
+-- for celex lemmas
+INSERT IGNORE INTO wordBank.wordStems (id, stem)
+  SELECT DISTINCT wordLemmas.id, LemmaMorph.Head
+    FROM celex.LemmaMorph 
+    JOIN wordBank.wordLemmas ON (wordLemmas.lemmaId=LemmaMorph.IdNum)
+    LEFT JOIN wordStems ON (wordLemmas.id=wordStems.id)
+  WHERE wordStems.stem IS NULL;
+
+
+---------------------------------------------
+-- Build additional source word data
+---------------------------------------------
+
+INSERT INTO wordBank.sourceWords (id, lemmaStrCnt)
+  SELECT wordLemmas.id, @cnt := count(DISTINCT Head) 
+    FROM wordBank.wordLemmas
+    JOIN celex.LemmaMorph ON(LemmaMorph.IdNum=wordLemmas.lemmaId) 
+  GROUP BY id
+ON DUPLICATE KEY UPDATE lemmaStrCnt= @cnt;
+
+INSERT INTO wordBank.sourceWords (id, lemmaCnt)
+  SELECT wordLemmas.id, @cnt := count(DISTINCT wordLemmas.lemmaId) 
+    FROM wordBank.wordLemmas 
+  GROUP BY id
+ON DUPLICATE KEY UPDATE lemmaCnt= @cnt;
+
+INSERT INTO wordBank.sourceWords (id, stemCnt)
+  SELECT wordStems.id, @cnt := count(DISTINCT wordStems.stem) 
+    FROM wordBank.wordStems 
+  GROUP BY id
+ON DUPLICATE KEY UPDATE stemCnt= @cnt;
+
+INSERT INTO wordBank.sourceWords (id, meaningCnt)
+  SELECT sourceWords.id, mCnt
+    FROM sourceWords JOIN (SELECT useWord, count(meaning) as mCnt
+      FROM wordBank.sourceWords 
+      GROUP BY useWord) AS tmp
+    ON (sourceWords.useWord=tmp.useWord)
+ON DUPLICATE KEY UPDATE meaningCnt= mCnt;
+
+INSERT INTO wordBank.sourceWords (id, lemmaId)
+  SELECT DISTINCT  wordLemmas.id, wordLemmas.lemmaId 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.wordLemmas USING (id)
+  WHERE wordBank.sourceWords.lemmaCnt=1
+ON DUPLICATE KEY UPDATE lemmaId= wordLemmas.lemmaId;
+
+UPDATE wordBank.sourceWords 
+  SET lemma = (SELECT lemma FROM userWords WHERE userWords.word = sourceWords.word);
+
+INSERT INTO wordBank.sourceWords (id, lemma)
+  SELECT DISTINCT  sourceWords.id, Head 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.wordLemmas USING (id)
+    JOIN celex.LemmaMorph ON(LemmaMorph.IdNum=wordLemmas.lemmaId) 
+  WHERE wordBank.sourceWords.lemmaStrCnt=1
+ON DUPLICATE KEY UPDATE lemma= Head;
+
+
+------------------------------------------------------------------------
+-- Identify Non Celex Words from Source Words and multi word part words
+------------------------------------------------------------------------
+
+DELETE FROM nonCelexWords;
+INSERT INTO nonCelexWords (word) 
+  SELECT DISTINCT word 
+  FROM sourceWords 
+  WHERE celexWordId=0  AND isMultiWord=0 Order By word;
+
+INSERT INTO nonCelexWords (word, isMultiWord) 
+  SELECT DISTINCT word, 1 
+  FROM partWords
+  WHERE inCelex=0 AND word NOT IN (SELECT word FROM nonCelexWords);
+
+UPDATE nonCelexWords SET lemma = (SELECT lemma FROM sourceWords 
+  WHERE nonCelexWords.word LIKE CONCAT('%', sourceWords.lemma, '%')
+  ORDER BY LENGTH(sourceWords.lemma) DESC LIMIT 1);
+
+UPDATE nonCelexWords SET resolved = (SELECT COUNT(*) 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.wordStems USING (id)
+    JOIN celex.LemmaStems USING (Stem)
+    WHERE sourceWords.word = nonCelexWords.word);
+
+UPDATE nonCelexWords SET hasFeedback = (SELECT COUNT(*) 
+    FROM wordBank.userWords 
+    WHERE userWords.word = nonCelexWords.word);
+      
+
+UPDATE nonCelexWords SET suggestion = (SELECT DISTINCT Head FROM celex.LemmaMorph 
+  WHERE nonCelexWords.word LIKE CONCAT('%', SUBSTRING(celex.LemmaMorph.Head, 1,LENGTH(celex.LemmaMorph.Head) ), '%')
+  AND NOT(nonCelexWords.lemma <=> celex.LemmaMorph.Head)
+  AND LENGTH(celex.LemmaMorph.Head)>2
+  ORDER BY LENGTH(celex.LemmaMorph.Head) DESC LIMIT 1);
+UPDATE nonCelexWords SET suggestion2 = (SELECT DISTINCT Head FROM celex.LemmaMorph 
+  WHERE nonCelexWords.word LIKE CONCAT('%', SUBSTRING(celex.LemmaMorph.Head, 1,LENGTH(celex.LemmaMorph.Head) ), '%')
+  AND NOT(nonCelexWords.lemma <=> celex.LemmaMorph.Head)
+  AND LENGTH(celex.LemmaMorph.Head)>2
+  ORDER BY LENGTH(celex.LemmaMorph.Head) DESC LIMIT 1,1);
+UPDATE nonCelexWords SET suggestion3 = (SELECT DISTINCT Head FROM celex.LemmaMorph 
+  WHERE nonCelexWords.word LIKE CONCAT('%', SUBSTRING(celex.LemmaMorph.Head, 1,LENGTH(celex.LemmaMorph.Head) ), '%')
+  AND NOT(nonCelexWords.lemma <=> celex.LemmaMorph.Head)
+  AND LENGTH(celex.LemmaMorph.Head)>2
+  ORDER BY LENGTH(celex.LemmaMorph.Head) DESC LIMIT 2,1);
+UPDATE nonCelexWords SET suggestion4 = (SELECT DISTINCT Head FROM celex.LemmaMorph 
+  WHERE nonCelexWords.word LIKE CONCAT('%', SUBSTRING(celex.LemmaMorph.Head, 1,LENGTH(celex.LemmaMorph.Head) ), '%')
+  AND NOT(nonCelexWords.lemma <=> celex.LemmaMorph.Head)
+  AND LENGTH(celex.LemmaMorph.Head)>2
+  ORDER BY LENGTH(celex.LemmaMorph.Head) DESC LIMIT 3,1);
+
+UPDATE nonCelexWords SET altWord = (SELECT DISTINCT WordDia FROM celex.WordOrthSpell 
+  WHERE nonCelexWords.word LIKE CONCAT('%',  celex.WordOrthSpell.WordDia, '%')
+  ORDER BY LENGTH(celex.WordOrthSpell.WordDia) DESC LIMIT 1);
+
+update nonCelexWords set lemma='' where lemma IS NULL;
+update nonCelexWords set suggestion='' where suggestion IS NULL;
+update nonCelexWords set suggestion2='' where suggestion2 IS NULL;
+update nonCelexWords set suggestion3='' where suggestion3 IS NULL;
+update nonCelexWords set suggestion4='' where suggestion4 IS NULL;
+update nonCelexWords set altWord='' where altWord IS NULL;
+
+
+--------------------------------------------------------------
+-- Identify Ambiguous Words with more than one possible lemma
+-- don't include multiple word part words
+--------------------------------------------------------------
+
+DELETE FROM wordBank.ambiguousWords;
+INSERT INTO ambiguousWords (id, word, meaning) SELECT DISTINCT id, word, meaning FROM sourceWords 
+Where (pos='' OR lemmaStrCnt > 1 )
+  AND NOT lemmaCnt<=>1 Order By word, meaning;
+
+UPDATE ambiguousWords SET meaningCnt = (SELECT count(DISTINCT meaning) FROM sourceWords WHERE sourceWords.word=ambiguousWords.word GROUP BY word LIMIT 1);
+
+DELETE FROM ambiguousWords WHERE word='';
+DELETE FROM ambiguousWords WHERE meaningCnt>1 and meaning = '';
+
+-- BUILD Lemma Morph Options
+DELETE FROM wordBank.LemmaOpts;
+INSERT INTO wordBank.LemmaOpts (id, lemmaId, lemma, morph, cob)
+  SELECT DISTINCT wordLemmas.id, LemmaMorph.IdNum, celex.LemmaMorph.Head, StrucLab, LemmaMorph.Cob
+      FROM wordBank.wordLemmas 
+      JOIN celex.LemmaMorph ON(wordLemmas.lemmaId=celex.LemmaMorph.IdNum) 
+      JOIN celex.LemmaMorphParse USING (IdNum);
+
+-- add lemma morphology options to ambiguous words table
+UPDATE wordBank.ambiguousWords SET lemmaOpt1=
+  (SELECT CONCAT(lemmaId,': ',lemma,': ',morph)
+  FROM wordBank.LemmaOpts
+  WHERE LemmaOpts.id = ambiguousWords.id 
+  ORDER BY LemmaOpts.cob LIMIT 1);
+
+UPDATE wordBank.ambiguousWords SET lemmaOpt2=
+  (SELECT CONCAT(lemmaId,': ',lemma,': ',morph)
+  FROM wordBank.LemmaOpts
+  WHERE LemmaOpts.id = ambiguousWords.id 
+  ORDER BY LemmaOpts.cob LIMIT 1,1);
+
+UPDATE wordBank.ambiguousWords SET lemmaOpt3=
+  (SELECT CONCAT(lemmaId,': ',lemma,': ',morph)
+  FROM wordBank.LemmaOpts
+  WHERE LemmaOpts.id = ambiguousWords.id 
+  ORDER BY LemmaOpts.cob LIMIT 2,1);
+
+UPDATE wordBank.ambiguousWords SET lemmaOpt4=
+  (SELECT CONCAT(lemmaId,': ',lemma,': ',morph)
+  FROM wordBank.LemmaOpts
+  WHERE LemmaOpts.id = ambiguousWords.id 
+  ORDER BY LemmaOpts.cob LIMIT 3,1);
+
+
+-----------------------------------------------------------------------
+-- generate stem data for each stem in source words 
+-- to use for identifying words derived from common stems for rule two
+-----------------------------------------------------------------------
+
+-- Initialize table with all stems
+DELETE FROM wordBank.stems;
+INSERT INTO wordBank.stems (stem)
+  SELECT DISTINCT stem FROM wordStems;
+
+-- generate word count for each stem 
+INSERT INTO wordBank.stems (stem, wordCnt)
+  SELECT DISTINCT stem, @cnt:=count(DISTINCT word)
+  FROM wordStems
+  JOIN sourceWords USING(id)
+  GROUP BY stem
+ON DUPLICATE KEY UPDATE wordCnt=@cnt;
+
+-- generate lemma count for each stem 
+INSERT INTO wordBank.stems (stem, lemmaCnt)
+  SELECT DISTINCT stem, @cnt:=count(wordLemmas.lemmaId)
+  FROM wordStems JOIN wordLemmas USING (id)
+  JOIN sourceWords USING(id)
+  WHERE isMultiWord=0
+  GROUP BY stem
+ON DUPLICATE KEY UPDATE lemmaCnt=@cnt;
+
+
+------------------------------------------ 
+-- CREATE wordBank words
+------------------------------------------  
+
+-- fill with word and meaning combinations
+DELETE FROM words;
+INSERT INTO words (word, meaning) 
+  SELECT DISTINCT word, meaning,  FROM sourceWords 
+  WHERE (meaningCnt=1 OR NOT meaning='') AND NOT word=''
+  Order By word, meaning;
+
+-- get data already derived or defined in wordSources table
+INSERT INTO wordBank.words (id, lemma, lemmaId, pos)
+  SELECT DISTINCT  words.id, sourceWords.lemma, sourceWords.lemmaId, sourceWords.pos 
+    FROM wordBank.sourceWords 
+    JOIN words USING (word, meaning)
+ON DUPLICATE KEY UPDATE lemma=sourceWords.lemma, lemmaId=sourceWords.lemmaId, pos=sourceWords.pos;
+
+-- get word frequency data
+INSERT INTO wordBank.words (id, WordFreqCob)
+  SELECT DISTINCT  words.id, @cnt:= SUM(WordMorph.Cob) 
+    FROM wordBank.words 
+    JOIN celex.WordOrthSpell ON(words.word=WordOrthSpell.WordDia)
+    JOIN celex.WordMorph ON (WordMorph.IdNum=WordOrthSpell.IdNum) 
+  GROUP BY id
+ON DUPLICATE KEY UPDATE WordFreqCob= @cnt;
+
+INSERT INTO wordBank.words (id, LemmaFreqCob)
+  SELECT DISTINCT  words.id, LemmaMorph.Cob 
+    FROM wordBank.words 
+    JOIN celex.WordOrthSpell ON(words.word=WordOrthSpell.WordDia)
+    JOIN celex.WordMorph ON (WordMorph.IdNum=WordOrthSpell.IdNum) 
+    JOIN celex.LemmaMorph ON (WordMorph.IdNumLemma=LemmaMorph.IdNum) 
+  WHERE NOT (words.lemma IS NUll  OR words.lemma='')
+ON DUPLICATE KEY UPDATE LemmaFreqCob= LemmaMorph.Cob;
+
+UPDATE wordBank.words SET WordFreqZenoU=(SELECT U 
+  FROM zeno.rwords 
+  WHERE zeno.rwords.Word = wordBank.words.word);
+
+UPDATE words SET wordFreqGoogle = 
+  (SELECT frequency FROM gFrequencies.word_only 
+   WHERE gFrequencies.word_only.word=words.word LIMIT 1);
+
+-- identify exact word and meaning matches
+INSERT INTO wordBank.words (id, wMeaningSrcCnt)
+  SELECT DISTINCT words.id, sources
+    FROM words JOIN (
+      SELECT word, meaning, count(sourceId) as sources
+      FROM sourceWords 
+      GROUP BY word, meaning
+      ) AS tmp
+    ON (words.word=tmp.word AND words.meaning=tmp.meaning)
+ON DUPLICATE KEY UPDATE wMeaningSrcCnt=sources;
+
+-- identify exact word matches
+INSERT INTO wordBank.words (id, wordSourceCnt)
+  SELECT DISTINCT words.id, sources
+    FROM words JOIN (
+      SELECT word, count(sourceId) as sources
+      FROM sourceWords 
+      GROUP BY word
+      ) AS tmp
+    USING (word)
+ON DUPLICATE KEY UPDATE wordSourceCnt=sources;
+
+
+-- for rule one identify inflections of the same word in multiple source documents
+-- we do this by finding how many sources each lemma is associated with 
+INSERT INTO wordBank.words (id, inflected)
+  SELECT DISTINCT words.id, sources
+    FROM wordBank.words 
+    JOIN wordBank.sourceWords USING(word, meaning)
+    JOIN wordLemmas ON(sourceWords.id=wordLemmas.id) 
+    JOIN (SELECT wordLemmas.lemmaId, count(DISTINCT sourceId) AS sources 
+      FROM sourceWords JOIN wordLemmas USING(id)
+      GROUP BY wordLemmas.lemmaId) 
+      AS counted 
+    ON (wordLemmas.lemmaId = counted.lemmaId)
+ON DUPLICATE KEY UPDATE inflected=sources;
+
+-- for rule two: use stem analysis data from the stems table 
+-- to determine if there are multiple words derived from same stem
+UPDATE wordBank.words SET derived=1;
+INSERT INTO wordBank.words (id, derived)
+  SELECT DISTINCT  words.id, @cnt:= MAX(stems.lemmaCnt) 
+    FROM wordBank.words 
+    JOIN wordBank.sourceWords USING(word, meaning)
+    JOIN wordBank.wordStems ON(sourceWords.id=wordStems.id)
+    JOIN wordBank.stems ON(stems.stem=wordStems.stem)
+  WHERE stems.wordCnt>1
+  GROUP BY id
+ON DUPLICATE KEY UPDATE derived= @cnt;
+select count(*) from words where derived>1;
+
+-- for rule three: identify words with multiple different non blank meaning
+INSERT INTO wordBank.words (id, meaningStrCnt)
+  SELECT DISTINCT  words.id, @cnt:= count(DISTINCT sourceWords.meaning) 
+    FROM wordBank.words 
+    JOIN wordBank.sourceWords USING(word)
+  WHERE sourceWords.meaning!=''
+  GROUP BY id
+ON DUPLICATE KEY UPDATE meaningStrCnt= @cnt;
+
+-- get stems
+UPDATE wordBank.words SET stem3=(SELECT DISTINCT Stem 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.wordStems USING(id) 
+  WHERE sourceWords.word = words.word AND sourceWords.meaning = words.meaning
+  ORDER BY Stem LIMIT 2,1)
+WHERE words.stem='';
+UPDATE wordBank.words SET stem2=(SELECT DISTINCT Stem 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.wordStems USING(id) 
+  WHERE sourceWords.word = words.word AND sourceWords.meaning = words.meaning
+  ORDER BY Stem LIMIT 1,1)
+WHERE words.stem='';
+UPDATE wordBank.words SET stem=(SELECT DISTINCT Stem 
+    FROM wordBank.sourceWords 
+    JOIN wordBank.wordStems USING(id) 
+  WHERE sourceWords.word = words.word AND sourceWords.meaning = words.meaning
+  ORDER BY Stem LIMIT 1)
+WHERE words.stem='';
+
+-- get lemma morphology
+INSERT INTO wordBank.words (id, lemmaMorph)
+  SELECT DISTINCT  words.id, StrucLab 
+    FROM wordBank.words 
+    JOIN celex.LemmaMorphParse ON (LemmaMorphParse.IdNum = words.lemmaId AND LemmaMorphParse.IndexNum=1)
+  WHERE words.lemmaId>0
+ON DUPLICATE KEY UPDATE lemmaMorph= StrucLab;
+
+-- Build source list for each word in bank
+UPDATE words SET sourceList=(SELECT DISTINCT abbreviation 
+  FROM wordBank.sourceWords JOIN sources ON (sources.id=sourceId)
+  WHERE words.word = sourceWords.word AND words.meaning = sourceWords.meaning
+  ORDER BY sourceId ASC LIMIT 1)
+  WHERE words.wMeaningSrcCnt>0;
+
+UPDATE words SET sourceList= CONCAT(sourceList, ', ', (SELECT DISTINCT abbreviation 
+  FROM wordBank.sourceWords JOIN sources ON (sources.id=sourceId)
+  WHERE words.word = sourceWords.word AND words.meaning = sourceWords.meaning
+  ORDER BY sourceId ASC LIMIT 1,1))
+  WHERE words.wMeaningSrcCnt>1;
+
+UPDATE words SET sourceList= CONCAT(sourceList, ', ', (SELECT DISTINCT abbreviation 
+  FROM wordBank.sourceWords JOIN sources ON (sources.id=sourceId)
+  WHERE words.word = sourceWords.word AND words.meaning = sourceWords.meaning
+  ORDER BY sourceId ASC LIMIT 2,1))
+  WHERE words.wMeaningSrcCnt>2;
+
+UPDATE words SET sourceList= CONCAT(sourceList, ', ', (SELECT DISTINCT abbreviation 
+  FROM wordBank.sourceWords JOIN sources ON (sources.id=sourceId)
+  WHERE words.word = sourceWords.word AND words.meaning = sourceWords.meaning
+  ORDER BY sourceId ASC LIMIT 3,1))
+  WHERE words.wMeaningSrcCnt>3;
+
+UPDATE words SET sourceList= CONCAT(sourceList, ', ', (SELECT DISTINCT abbreviation 
+  FROM wordBank.sourceWords JOIN sources ON (sources.id=sourceId)
+  WHERE words.word = sourceWords.word AND words.meaning = sourceWords.meaning
+  ORDER BY sourceId ASC LIMIT 4,1))
+  WHERE words.wMeaningSrcCnt>4;
+
+UPDATE words SET sourceList= CONCAT(sourceList, ', ', (SELECT DISTINCT abbreviation 
+  FROM wordBank.sourceWords JOIN sources ON (sources.id=sourceId)
+  WHERE words.word = sourceWords.word AND words.meaning = sourceWords.meaning
+  ORDER BY sourceId ASC LIMIT 5,1))
+  WHERE words.wMeaningSrcCnt>5;
+
+UPDATE words SET sourceList= CONCAT(sourceList, ', ', (SELECT DISTINCT abbreviation 
+  FROM wordBank.sourceWords JOIN sources ON (sources.id=sourceId)
+  WHERE words.word = sourceWords.word AND words.meaning = sourceWords.meaning
+  ORDER BY sourceId ASC LIMIT 6,1))
+  WHERE words.wMeaningSrcCnt>6;
+
+UPDATE words SET sourceList= CONCAT(sourceList, ', ', (SELECT DISTINCT abbreviation 
+  FROM wordBank.sourceWords JOIN sources ON (sources.id=sourceId)
+  WHERE words.word = sourceWords.word AND words.meaning = sourceWords.meaning
+  ORDER BY sourceId ASC LIMIT 7,1))
+  WHERE words.wMeaningSrcCnt>7;
+
+UPDATE words SET sourceList= CONCAT(sourceList, ', ', (SELECT DISTINCT abbreviation 
+  FROM wordBank.sourceWords JOIN sources ON (sources.id=sourceId)
+  WHERE words.word = sourceWords.word AND words.meaning = sourceWords.meaning
+  ORDER BY sourceId ASC LIMIT 8,1))
+  WHERE words.wMeaningSrcCnt>8;
+
+-- clean up nulls  
+update wordBank.words set word='' where word IS NULL;
+update wordBank.words set meaning='' where meaning IS NULL;
+update wordBank.words set lemma='' where lemma IS NULL;
+update wordBank.words set lemmaId='' where lemmaId IS NULL;
+update wordBank.words set stem='' where stem IS NULL;
+update wordBank.words set stem2='' where stem2 IS NULL;
+update wordBank.words set stem3='' where stem3 IS NULL;
+update wordBank.words set lemmaMorph='' where lemmaMorph IS NULL;
+update wordBank.words set pos='' where pos IS NULL;
+update wordBank.words set sourceList='' where sourceList IS NULL;
+update wordBank.words set meaningStrCnt=0 where meaningStrCnt IS NULL;
+update wordBank.words set wordFreqZenoU=0 where wordFreqZenoU IS NULL;
+update wordBank.words set wordFreqCob=0 where wordFreqCob IS NULL;
+update wordBank.words set lemmaFreqCob=0 where lemmaFreqCob IS NULL;
+update wordBank.words set wordFreqGoogle=0 where wordFreqGoogle IS NULL;
+
+-----------------------------
+-- Selection Rule and export
+-----------------------------
+SELECT COUNT(*) FROM wordBank.words;
+
+SELECT COUNT(*) FROM wordBank.words WHERE wordSourceCnt>1 OR inflected>1 
+  OR derived>1 OR meaningStrCnt>1;
+  
+SELECT COUNT(*) FROM wordBank.words WHERE inflected>1 
+  OR derived>1 OR meaningStrCnt>1;
+  
+SELECT * FROM wordBank.words WHERE wordSourceCnt>1 OR inflected>1 
+  OR derived>1 OR meaningStrCnt>1
+  LIMIT 30;
+
+SELECT * FROM wordBank.words WHERE inflected>1 
+  OR derived>1 OR meaningStrCnt>1
+  INTO OUTFILE '/soe/jsnook/vase/wordBankSS02.txt';
+
+ALTER TABLE wordBank.words DROP id;
+ALTER TABLE wordBank.words ADD id INT PRIMARY KEY AUTO_INCREMENT;
+          
