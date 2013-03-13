@@ -134,4 +134,18 @@ class File extends BaseModel
 		));
 	}
 
+	/**
+	 * Overrides parent to delet efile from file system.
+	 */
+	public function afterDelete(){
+    	$pathAndName = Yii::app()->getBasePath() . $this->path .  "/" . $this->name;
+	    if(!empty($pathAndName)){
+            if (file_exists( $pathAndName )){
+	    	   	unlink($pathAndName);
+			}
+ 	    }
+		return parent::afterDelete();
+	}
+	
+	
 }

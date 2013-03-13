@@ -35,12 +35,12 @@ class CourseController extends Controller
 				'actions'=>array('createAssignment','updateAssignment', 'saveAssignment', 
 					'createBook','updateBook', 'saveBook', 'studentAssignments', 'description', 
 					'assignments', 'books', 'students', 'createAssignment', 'createBook', 'manageBook',
-					'files', 'updateFile', 'saveFile', 'uploadFile',
+					'files', 'updateFile', 'saveFile', 'uploadFile', 'deleteFile',
 					'emails', 'saveEmail', 'updateEmail', 'createEmail', 'sendEmail', 'removeEmail'),
 				'roles'=>array('admin'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('files', 'updateFile', 'saveFile', 'uploadFile'),
+			array('allow', // allow faculty user to perform actions
+				'actions'=>array('files', 'updateFile', 'saveFile', 'uploadFile', 'deleteFile'),
 				'roles'=>array('faculty'),
 			),
 			array('deny',  // deny all users
@@ -326,6 +326,23 @@ class CourseController extends Controller
 		{
 			if(!$contentModel->save())
 				throw new CHttpException(404,'ERROR could not save book.'); // temporary error code
+		}
+		$this->redirect(array('files','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num, 'username'=>$this->model->username));
+	}
+
+	/**
+	 * Removes a file and its association with a course.
+	 */
+	public function actionDeleteFile($id=null)
+	{
+		if (isset($id)){  // mark previous version as disabled
+			// copy id param to fileId param
+			$params = $_REQUEST;
+			$params['file_id'] = $params['id'];
+			$association=FileAssociation::loadModel($params);
+			$association->delete();
+			$file=File::loadModel();
+			$file->delete();
 		}
 		$this->redirect(array('files','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num, 'username'=>$this->model->username));
 	}

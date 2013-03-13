@@ -7430,3 +7430,181 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/course/uploadFile/term_+code/2118/class_num/21301/id/64
 HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
 ---
+2013/03/12 21:54:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('deleteFile')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/deleteFi...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/deleteFile/id/50/term_code/2118/class_num/21301
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/12 21:55:49 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (339)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/12 21:55:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`etext`.`file_association`, CONSTRAINT `fafif` FOREIGN KEY (`file_id`) REFERENCES `file` (`id`)). The SQL statement executed was: DELETE FROM `file` WHERE `file`.`id`=50.
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (340)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/12 21:55:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`etext`.`file_association`, CONSTRAINT `fafif` FOREIGN KEY (`file_id`) REFERENCES `file` (`id`)). The SQL statement executed was: DELETE FROM `file` WHERE `file`.`id`=50' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1735): CDbCommand->execute()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1159): CActiveRecord->deleteByPk('50')
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(340): CActiveRecord->delete()
+#3 [internal function]: CourseController->actionDeleteFile('50')
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(CourseController), Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(CourseController), Object(ReflectionMethod), Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('deleteFile')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/deleteFi...')
+#16 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/drc-etext/index.php/course/deleteFile/id/50/term_code/2118/class_num/21301
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/12 21:56:40 [error] [exception.CDbException] exception 'CDbException' with message 'The active record cannot be deleted because it is new.' in C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php:1167
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(340): CActiveRecord->delete()
+#1 [internal function]: CourseController->actionDeleteFile('50')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(CourseController), Array)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(CourseController), Object(ReflectionMethod), Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('deleteFile')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/deleteFi...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/course/deleteFile/id/50/term_code/2118/class_num/21301
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/12 22:03:04 [error] [exception.CDbException] exception 'CDbException' with message 'The active record cannot be deleted because it is new.' in C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php:1167
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(342): CActiveRecord->delete()
+#1 [internal function]: CourseController->actionDeleteFile('50')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(CourseController), Array)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(CourseController), Object(ReflectionMethod), Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('deleteFile')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/deleteFi...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/course/deleteFile/id/50/term_code/2118/class_num/21301
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/12 22:04:11 [error] [exception.CDbException] exception 'CDbException' with message 'The active record cannot be deleted because it is new.' in C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php:1167
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(343): CActiveRecord->delete()
+#1 [internal function]: CourseController->actionDeleteFile('50')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(CourseController), Array)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(CourseController), Object(ReflectionMethod), Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('deleteFile')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/deleteFi...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/course/deleteFile/id/50/term_code/2118/class_num/21301
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/files/term_code/2118/class_num/21301/username
+---
+2013/03/12 22:09:01 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (344)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/12 22:11:34 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (344)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/12 22:11:35 [error] [php] unlink(C:\Users\jsnook\phpFog\ucsc\drc-etext\protected/../files/course/64//Apraisal Feb 2009.doc) [<a href='function.unlink'>function.unlink</a>]: No such file or directory (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\File.php:143)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(345): File->delete()
+#1 unknown(0): CourseController->actionDeleteFile()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/deleteFile/id/40/model_id/64/term_code/2118/class_num/21301
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\File.php (143)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (345)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/12 22:15:46 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (344)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/12 22:15:47 [error] [php] unlink(C:\Users\jsnook\phpFog\ucsc\drc-etext\protected/../files/course/64//Apraisal Feb 2009.doc) [<a href='function.unlink'>function.unlink</a>]: No such file or directory (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\File.php:144)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(345): File->delete()
+#1 unknown(0): CourseController->actionDeleteFile()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/deleteFile/id/46/model_id/64/term_code/2118/class_num/21301
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\File.php (144)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (345)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/12 22:18:31 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (344)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/12 22:18:45 [warning] [application] Failed to set unsafe attribute "id" of "File".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (344)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)

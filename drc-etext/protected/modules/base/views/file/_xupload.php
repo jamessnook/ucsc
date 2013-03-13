@@ -29,6 +29,9 @@
 			<i class="icon-upload icon-white"></i>
 			<span>Start upload</span>
 		</button>
+		<?php
+		/*
+		echo "
 		<button type="reset" class="btn btn-warning cancel">
 			<i class="icon-ban-circle icon-white"></i>
 			<span>Cancel upload</span>
@@ -38,6 +41,9 @@
 			<span>Delete</span>
 		</button>
 		<input type="checkbox" class="toggle">
+		";
+		*/
+        ?>
 	</div>
 	<div class="span5">
 		<!-- The global progress bar -->

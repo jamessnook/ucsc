@@ -61,9 +61,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		 ),
 		 array( 
 			'header'=>'', 
-			'name'=>'delete', 
-			'type'=>'raw',
-			'value'=>'\'<a href="#" class="btn">Remove</a>\'', 
+			'class'=>'LinksColumn',
+		 	'linkHtmlOptions'=>array('class'=>"btn"),
+			'labelExpression'=>'\'Remove\'', 
+			'urlExpression'=>'array(\'course/deleteFile\', \'id\'=>$data->file_id, \'model_id\'=>\'' . $model->id . '\', \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
 		 ),
 	 ),
 ));
