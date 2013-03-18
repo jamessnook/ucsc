@@ -28,9 +28,10 @@
 		'columns'=>array(
 			array( 
 				'header'=>'Class ID', 
-				'name'=>'idString()', 
-				'value'=>'$data->course->idString()', 
-			 ),
+				'name'=>'idString', 
+				//'value'=>'$data->course->idString()', 
+				'value'=>'$data->course? $data->course->idString() : \'No Course Data\'', 
+			),
 			array( 
 				'header'=>'Title', 
 				'class'=>'LinksColumn',

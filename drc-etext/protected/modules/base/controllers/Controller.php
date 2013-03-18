@@ -100,7 +100,7 @@ class Controller extends CController
 	{
 		$this->setDefaultViewOptions();
 		$this->viewOptions = array_merge ( $this->viewOptions, $options ); // note $options overide defaults
-		$this->viewOptions['model'] = $this->model;  // for convenience of access
+		$this->viewOptions['model'] = $this->getModel();  // for convenience of access
 		$this->viewOptions['contentModel'] = $this->contentModel;  // for convenience of access
 		$this->render($this->viewOptions['mainView'], $this->viewOptions);
 	}

@@ -63,6 +63,8 @@ class DrcUser extends User
 			'books' => array(self::MANY_MANY, 'Book', 'book_user(username, book_id)'),
 			'files' => array(self::HAS_MANY, 'File', 'modified_by'),
 			'instructorFiles' => array(self::HAS_MANY, 'InstructorFiles', 'emplId'),
+			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
+			'userBooks' => array(self::HAS_MANY, 'BookUser', 'username'),
 		);
 	}
 
@@ -93,7 +95,7 @@ class DrcUser extends User
 	{
 		$criteria=new CDbCriteria; 
 		if (!isset($this->term_code)) {
-			$this->term_code = Term::currentTermCode();
+			$this->term_code = DrcRequest::latestTermCodeforUser($this->emplid);
 		}
 		$criteria->compare('t.term_code',$this->term_code);
 		if ($this->emplid && strlen($this->emplid)>0) {
@@ -251,6 +253,22 @@ class DrcUser extends User
 			$tString .= $type; // use value as key to prevent duplicates
 		}
 		return $tString;
+	}
+	
+	/**
+	 * Returns the data model based on the passed attributes.
+	 * Persues various ways of finding and creating the model
+	 * Adds functionality to arent class method to insure term_code is set.
+	 * @param array of parameters
+	 * @return model instance of a UCSCModel subclass built using the url params.
+	 */
+	public static function loadModel($params=null)
+	{
+		$aModel = parent::loadModel($params);
+		if (!isset($_REQUEST['term_code'])){
+			$aModel->term_code = DrcRequest::latestTermCodeforUser($aModel->emplid);
+		}
+		return $aModel;
 	}
 	
 	

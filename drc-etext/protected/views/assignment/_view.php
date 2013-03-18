@@ -28,7 +28,7 @@
 				<br />
 			</p>
 			<p>
-				<?php echo $this->renderPartial('../file/_listFiles', array('model'=>$model)); ?>
+				<?php echo $this->renderPartial('base.views.file._listFiles', array('model'=>$model)); ?>
 			</p>
 		
         </div><!--/span-->

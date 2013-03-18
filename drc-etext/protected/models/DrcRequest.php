@@ -29,7 +29,8 @@
  */
 class DrcRequest extends CActiveRecord
 {
-	public $username; // for non emplid matches
+	public $username; // for non emplid matches 
+	public $max_term_code; // for finding most recent term_code for a user
 	
 	/**
 	 * Returns the static model of the specified AR class.
@@ -122,4 +123,28 @@ class DrcRequest extends CActiveRecord
 		));
 	}
 	
+	/**
+	 * Get the term_code for the most recent term (Quarter) with data in the database.
+	 * @return integer, the term code for the most recent term with data in the database.
+	 */
+	public static function latestTermCodeforUser($emplid)
+	{
+		$criteria=new CDbCriteria;
+		$term = 2134;
+
+		$criteria->select = 't.class_num, MAX(t.term_code) AS max_term_code';
+		$criteria->with=array('course', 'course.courseInstructors');
+		$criteria->together = true;
+		$criteria->compare('t.emplid',$emplid);
+		$criteria->compare('courseInstructors.emplid', $emplid, false, 'OR');
+		$criteria->group = 't.emplId';
+		$row = DrcRequest::model()->find($criteria);
+		if ($row){
+			$term = $row['max_term_code'];	
+		} else {
+			$term = Term::currentTermCode();
+		}
+		return $term;
+	}
+
 }

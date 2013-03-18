@@ -350,10 +350,11 @@ class Course extends BaseModel
 	 * Returns true if all assignemtns for this course are complete.
 	 * @return boolean, true if all assignemtns for this course are complete.
 	 */
-	public function completed()
+	public function completed($username = null)
 	{
 		foreach($this->assignments as $assignment){
-			if (!$assignment->is_complete) return false;
+			// currently we have no way of knowing if an assignment is complete for a particular file type
+			if (!$assignment->is_complete ) return false;
 		}
 		return true;
 	}

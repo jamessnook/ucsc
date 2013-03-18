@@ -21,14 +21,14 @@ class DrcTabMenu extends TabMenu
 				'label'=>'Courses', 
 				'url'=>array('/course/courses', 
 				'term_code'=>Yii::app()->controller->model->term_code, ), 
-				'active'=> Yii::app()->controller->id == 'Course',
+				'active'=> Yii::app()->controller->id == 'course',
 			),
 			array(
 				'label'=>'Assignments', 
 				'url'=>array('/assignment/manage', 
-					'term_code'=>Yii::app()->controller->model->term_code,), 
+				'term_code'=>Yii::app()->controller->model->term_code,), 
 				'visible'=>Yii::app()->user->checkAccess('admin'),
-				'active'=> Yii::app()->controller->id == 'Assignment',
+				'active'=> Yii::app()->controller->id == 'assignment',
 			),
 			array(
 				'label'=>'<i class="icon-wrench"></i> Reports', 
@@ -44,7 +44,7 @@ class DrcTabMenu extends TabMenu
 				'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
 				'label'=>'<i class="icon-user"></i> Users <b class="caret"></b>', 
 				'visible'=>Yii::app()->user->checkAccess('admin'), 
-				'active'=>Yii::app()->controller->id == 'DrcUser',
+				'active'=>Yii::app()->controller->id == 'drcUser',
 				'items'=>array(
 					array(
 						'label'=>'Students', 

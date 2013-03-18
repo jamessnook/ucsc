@@ -13,7 +13,8 @@ class FileEditForm extends BaseForm
 	{
 		$this->id = 'file-edit-form';
 		parent::init();
-		$this->controlRow('name', 'textField', array());
+		echo "<h3> Information for File: " . $this->model->name . " </h3><br />";
+		//$this->controlRow('name', 'textField', array('readonly'=>'true'));
 		$this->controlRow('title', 'textField', array());
 		$this->controlRow('label', 'textField', array());
 		$this->controlRow('description', 'textArea', array());

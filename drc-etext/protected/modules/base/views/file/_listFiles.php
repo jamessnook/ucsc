@@ -34,19 +34,19 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'header'=>'Type', 
 			'name'=>'file.type', 
 			'type'=>'raw',
-			'value'=>'\'<span class="badge">\' . $data->file->type . \'</span>\'', 
+			'value'=>'\'<span class="badge">\' . $data->file->getType() . \'</span>\'', 
 		),
 		array( 
 			'header'=>'File', 
 			'class'=>'LinksColumn',
 			'labelExpression'=>'$data->file->name', 
-			'urlExpression'=>'array(\'file/download\', \'id\'=>$data->file_id, )', 
+			'urlExpression'=>'array(\'downloadFile\', \'id\'=>$data->file_id, )', 
 		),
-		/*array( 
+		array( 
 			'header'=>'Description', 
 			'name'=>'file.description', 
 			'value'=> '$data->file->description', 
-		 ),*/
+		 ),
 	),
 ));
 

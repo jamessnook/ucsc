@@ -122,13 +122,24 @@ class DrcUserController extends UserController
 	 */
 	public function actionCourses()
 	{
+		if (!isset($_REQUEST['username'])){
+			$_REQUEST['username'] = Yii::app()->user->name;
+		}
 		//if (!Yii::app()->user->checkAccess('admin')){
 		//	$this->model=User::model()->findByPk(Yii::app()->user->name);
 		//} else {
 			$this->model = DrcUser::loadModel();
 		//}
+		$title = "({$this->model->username}) {$this->model->first_name} {$this->model->last_name}";
+		$contentTitle = "Courses: {$this->model->term->description}";
+		if (!Yii::app()->user->checkAccess('admin') && !Yii::app()->user->checkAccess('staff')){
+			$title = $this->model->term->description;
+			$contentTitle = "Courses";
+		}
 		$this->renderView(array(
+			'title' => $title,
 			'contentView' => '../course/_list',
+			'contentTitle' => $contentTitle,
 			'menuView' => 'base.views.layouts._termMenu',
 			'menuRoute' => 'drcUser/courses',
 			'titleNavRight' => '<a href="' . $this->createUrl('drcUser/update', array('term_code'=> $this->model->term_code, 'username'=>$this->model->username)) . '"><i class="icon-plus"></i> User Profile</a>',

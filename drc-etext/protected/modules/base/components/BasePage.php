@@ -42,7 +42,7 @@ class BasePage extends CWidget
 		echo CHtml::openTag('div', $this->htmlOptions);
 		echo '<div class="row-fluid"> <div class="span12">';
         if ($this->title){ 
-			echo '<h2><?php echo $title; ?></h2><br />';
+			echo "<h2> $this->title </h2><br />";
 		}
 	}
 	

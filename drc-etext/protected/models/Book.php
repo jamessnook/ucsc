@@ -73,6 +73,7 @@ class Book extends BaseModel
 		return array(
 			'idType' => array(self::BELONGS_TO, 'IdType', 'id_type'),
 			'users' => array(self::MANY_MANY, 'User', 'book_user(book_id, username)'),
+			'bookUsers' => array(self::HAS_MANY, 'BookUser', 'book_id'),
 		);
 	}
 

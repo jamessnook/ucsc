@@ -54,6 +54,9 @@ class AssignmentController extends Controller
         		'path' =>'/../files/assignments',
         		'subfolderVar' =>'id',
         	),
+            'downloadFile'=>array(
+                'class'=>'base.components.actions.DownloadAction',
+        	),
         );
     }
 	
@@ -80,7 +83,7 @@ class AssignmentController extends Controller
 	public function setDefaultViewOptions()
 	{
 		parent::setDefaultViewOptions();
-		$this->viewOptions['menuView'] = '../layouts/_termMenu';
+		$this->viewOptions['menuView'] = 'base.views.layouts._termMenu';
 		$this->viewOptions['title'] = $this->model->title;
 		if (!$this->model->title || $this->model->title =='') {
 			$this->viewOptions['title'] = "Assignments";
@@ -95,6 +98,7 @@ class AssignmentController extends Controller
 	{
 		$this->renderView(array(
 			'contentView' => '_adminList',
+			'title' => $this->model->term->description,
 		));
 	}
 	

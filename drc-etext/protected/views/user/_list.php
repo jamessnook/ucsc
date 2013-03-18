@@ -21,6 +21,7 @@
 		'dataProvider'=>$dataProvider,
 		'summaryText'=>'',
 		'showTableOnEmpty'=>false,
+		'emptyText'=>'No users found for the selected quarter.',
 		'enablePagination'=>false,
 		'itemsCssClass'=>"table table-striped table-bordered data-table", 
 		'loadingCssClass'=>'',

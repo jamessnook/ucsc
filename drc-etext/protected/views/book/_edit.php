@@ -107,9 +107,9 @@
 			          <?php 
 			            // file upload section
 			          	if ($createNew){
-							echo $this->renderPartial('../file/_uploadAlert', array('model'=>$model)); 
+							echo $this->renderPartial('base.views.file._uploadAlert', array('model'=>$model)); 
 			          	} else {
-				          	echo $this->renderPartial('../file/_listFiles', array('model'=>$model)); 
+				          	echo $this->renderPartial('base.views.file._listFiles', array('model'=>$model)); 
 			          		echo $this->renderPartial('../book/_uploadFiles', array('model'=>$model)); 
 				            // student purchase section
 			          		echo $this->renderPartial('../book/_listStudents', array('model'=>$model)); 

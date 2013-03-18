@@ -74,9 +74,9 @@
 			          
 			          <?php 
 			          	if ($createNew){
-							echo $this->renderPartial('../file/_uploadAlert', array('model'=>$model)); 
+							echo $this->renderPartial('base.views.file._uploadAlert', array('model'=>$model)); 
 			          	} else {
-			          		echo $this->renderPartial('../file/_listFiles', array('model'=>$model)); 
+			          		echo $this->renderPartial('base.views.file._listFiles', array('model'=>$model)); 
 			          		echo $this->renderPartial('../assignment/_uploadFiles', array('model'=>$model)); 
 			          	}
 					  ?>

@@ -90,7 +90,7 @@ class Assignment extends BaseModel
 			'modifiedBy' => array(self::BELONGS_TO, 'User', 'modified_by'),
 			'term' => array(self::BELONGS_TO, 'Term', 'term_code'),
 			'book' => array(self::BELONGS_TO, 'Book', 'book_id'),
-			'course' => array(self::BELONGS_TO, 'Course', 'class_num, term_code'),
+			'course' => array(self::BELONGS_TO, 'Course', 'term_code, class_num'),
 			'fileIds'=>array(self::HAS_MANY, 'FileAssociation', 'model_id'),
 			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'term_code, class_num'),
 		);
@@ -125,10 +125,11 @@ class Assignment extends BaseModel
 	{
 
 		$criteria=new CDbCriteria;
+		$criteria->with = array( 'course',);
+		
+		$criteria->compare('t. term_code',$this->term_code);
 
-		$criteria->compare('term_code',$this->term_code);
-
-		return new CActiveDataProvider($this, array(
+		return new CActiveDataProvider('Assignment', array(
 			'criteria'=>$criteria,
 		));
 	}
@@ -209,6 +210,65 @@ class Assignment extends BaseModel
 			$types .= $request->type; // use value as key to prevent duplicates
 		}
 		return $types;
+	}
+	
+	/**
+	 * Retrieves an array of file types needed for this assignment for this user.
+	 * @return array, the names of file types for this course.
+	 */
+	public function typesForUser($username=null)
+	{
+		if (!$username) $username = $this->username;
+		$types = array();
+		foreach($this->drcRequests as $request)
+		{
+			if($request->user->username == $username){
+				$types[$request->type] = $request->type; // use value as key to prevent duplicates
+			}
+		}
+		return $types;
+	}
+	
+	/**
+	 * Returns true if a user needs material for this assignment.
+	 * @return array, the names of file types for this course.
+	 */
+	public function isForUser($username=null)
+	{
+		return count($this->typesForUser($username));
+	}
+	
+	/**
+	 * Retrieves an array of file types needed for this assignment for this user.
+	 * @return array, the names of file types for this course.
+	 */
+	public function purchased()
+	{
+		if (!Yii::app()->user->checkAccess('admin') && !Yii::app()->user->checkAccess('staff')){
+			$username = $this->username;
+		} else{
+			$username=null;
+		}
+		if ($username){
+			foreach($this->book->bookUsers as $user) // for students
+			{
+				if ($user->purchased && ($username && $user->username == $username)){
+					return true;
+				}
+			}
+			return false;
+		}
+		foreach($this->drcRequests as $request) { // for staff and admin
+			$purchased = false;
+			foreach($request->user->userBooks as $book) // for every drc request the user must have purchased the book
+			{
+				if($book->book_id == $this->book_id){  // look at all of the books purchased by the user, replace with a query for speed
+					$purchased = true;
+				}
+			}
+			if (!$purchased) return false;
+		}
+		return $purchased;
 	}
 	
 }

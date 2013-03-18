@@ -28,19 +28,19 @@ class CourseController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform view type actions
-				'actions'=>array('index','assignments','books','courses','students','assignmentFiles', 'updateAssignment', 'description'),
+				'actions'=>array('index','assignments','books','courses','students','assignmentFiles', 'updateAssignment', 'description','downloadFile'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('createAssignment','updateAssignment', 'saveAssignment', 
 					'createBook','updateBook', 'saveBook', 'studentAssignments', 'description', 
 					'assignments', 'books', 'students', 'createAssignment', 'createBook', 'manageBook',
-					'files', 'updateFile', 'saveFile', 'uploadFile', 'deleteFile',
+					'files', 'updateFile', 'saveFile', 'uploadFile', 'deleteFile','downloadFile',
 					'emails', 'saveEmail', 'updateEmail', 'createEmail', 'sendEmail', 'removeEmail'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow faculty user to perform actions
-				'actions'=>array('files', 'updateFile', 'saveFile', 'uploadFile', 'deleteFile'),
+				'actions'=>array('files', 'updateFile', 'saveFile', 'uploadFile', 'deleteFile','downloadFile'),
 				'roles'=>array('faculty'),
 			),
 			array('deny',  // deny all users
@@ -61,6 +61,9 @@ class CourseController extends Controller
         		'path' =>'/../files/course',
         		'subfolderVar' =>'id',
             	'redirectUrl' => $this->createUrl('files', $_REQUEST),
+        	),
+            'downloadFile'=>array(
+                'class'=>'base.components.actions.DownloadAction',
         	),
         );
     }
@@ -216,8 +219,9 @@ class CourseController extends Controller
 	{
 		// if you are not staf or admin you can only see your own courses
 		if (!Yii::app()->user->checkAccess('admin') && !Yii::app()->user->checkAccess('staff')){
-			$this->model->username = Yii::app()->user->name;
+			$this->redirect(array('drcUser/courses','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num));
 		}
+		$title = 'All Courses';
 		$this->renderView(array(
 			'contentView' => '../course/_list',
 			'menuView' => 'base.views.layouts._termMenu',
@@ -278,9 +282,13 @@ class CourseController extends Controller
 	 */
 	public function actionAssignments()
 	{
+		$titleNavRight = '<a href="' . $this->createUrl('course/createAssignment', array('content'=> 'assignment', 'term_code'=> $this->model->term_code, 'class_num'=>$this->model->class_num)) . '"><i class="icon-plus"></i> Add Assignment </a>';
+		if (!Yii::app()->user->checkAccess('admin') && !Yii::app()->user->checkAccess('staff')){
+			$titleNavRight = '';
+		}
 		$this->renderView(array(
 			'contentView' => '../assignment/_list',
-			'titleNavRight' => '<a href="' . $this->createUrl('course/createAssignment', array('content'=> 'assignment', 'term_code'=> $this->model->term_code, 'class_num'=>$this->model->class_num)) . '"><i class="icon-plus"></i> Add Assignment </a>',
+			'titleNavRight' => $titleNavRight,
 		));
 	}
 	

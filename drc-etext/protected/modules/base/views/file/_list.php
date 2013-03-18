@@ -7,12 +7,9 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.views.file
  */
-?>
 
-							
-<h3>Curent Files for <?php echo $model->title ?></h3>
 
-<?php 
+// echo "<h3>Curent Files for {$model->title} </h3>";
 
 //$model->username = Yii::app()->user->name;  // set up for current user
 
@@ -22,6 +19,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	//'filter'=>$model,
 	//'hideHeader'=>true,
 	'summaryText'=>'',
+	'emptyText'=>'No files found for the selected course.',
 	'enablePagination'=>false,
 	'loadingCssClass'=>'',
 	'showTableOnEmpty'=>false,
@@ -40,7 +38,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'header'=>'File Name', 
 			'class'=>'LinksColumn',
 			'labelExpression'=>'$data->file->name', 
-			'urlExpression'=>'array(\'file/download\', \'id\'=>$data->file_id, )', 
+			'urlExpression'=>'array(\'base/file/download\', \'id\'=>$data->file_id, )', 
 		),
 		array( 
 			'header'=>'Label', 

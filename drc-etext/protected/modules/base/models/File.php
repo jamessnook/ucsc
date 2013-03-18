@@ -147,5 +147,16 @@ class File extends BaseModel
 		return parent::afterDelete();
 	}
 	
+	/**
+	 * if type not set get file extension.
+	 */
+	public function getType(){
+		$type = $this->type;
+		if (!$this->type || $this->type = ''){
+			$type = pathinfo($this->name, PATHINFO_EXTENSION);
+		}
+		return $type;
+	}
+	
 	
 }

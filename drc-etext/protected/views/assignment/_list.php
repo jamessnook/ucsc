@@ -60,7 +60,7 @@
 				'header'=>'Status', 
 			 	'name'=>'completed()', 
 				'type'=>'raw',
-			 	'value'=>'$data->is_complete? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
+			 	'value'=>'$data->is_complete? !$data->purchased()?  \'<span class="badge badge-warning">Need Proof of Purchase</span>\' : \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 			 ),
 		),
 	)); 
