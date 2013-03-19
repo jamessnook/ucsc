@@ -8782,3 +8782,7 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/assignment/manage/term_code/2122
 HTTP_REFERER=http://localhost/drc-etext/index.php/course/courses/term_code/2122
 ---
+2013/03/19 07:10:58 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (267)

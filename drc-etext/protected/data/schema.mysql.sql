@@ -462,3 +462,9 @@ ALTER TABLE course add id INTEGER NOT NULL UNIQUE AUTO_INCREMENT;
 ALTER TABLE file add type VARCHAR(8);
 ALTER TABLE file add label VARCHAR(63);
 
+select * from course_instructor into outfile 'c:/users/jim/phpfog/ucsc/drc-etext/protected/data/course_instructor.csv';
+
+SELECT * INTO OUTFILE 'c:/users/jim/phpfog/ucsc/drc-etext/protected/data/course_instructor.csv'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
+  FROM course_instructor;

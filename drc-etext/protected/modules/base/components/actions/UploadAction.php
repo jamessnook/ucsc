@@ -94,7 +94,7 @@ class UploadAction extends XUploadAction {
 	        }
 	    }
 		else {
-			$this->init( );
+			//$this->init( );
 			$file = CUploadedFile::getInstanceByName('file' );
 	        //We check that the file was successfully uploaded
 	        if( $file !== null ) {
