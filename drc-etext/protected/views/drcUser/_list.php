@@ -45,6 +45,7 @@
 				//'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username,' . $paramStr  .')', 
 				'urlExpression'=>'array(\'drcUser/courses\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')',  
 			 ),
+			 /*
 			 array( 
 				'header'=>'Courses', 
 				'class'=>'LinksColumn',
@@ -53,14 +54,14 @@
 			 	'labelExpression'=>'$data->courseNames()', 
 				'urlExpression'=>array('model'=>'$data->courseList()', 'route'=>'course/students', 'modelParams'=>array('term_code'=>'term_code', 'class_num'=>'class_num')), 
 			),
-			
+			*/
 			array( 
 				'header'=>'Type', 
 				'name'=>'drcRequests.type', 
 				'type'=>'raw',
 				'value'=>'\'<span class="badge">\' . $data->typesString() . \'</span>\'', 
 			 ),
-			 
+			 /*
 			 array( 
 				'header'=>'Status', 
 				'class'=>'LinksColumn',
@@ -68,6 +69,7 @@
 			 	'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')',  
 			 	'labelExpression'=>'$data->drcRequestsCompleted()? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
 			),
+			*/
 		),
 	)); 
 	?>
