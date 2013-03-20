@@ -129,7 +129,9 @@ class DrcUserController extends UserController
 		//	$this->model=User::model()->findByPk(Yii::app()->user->name);
 		//} else {
 			$this->model = DrcUser::loadModel();
-		//}
+			//}
+		//$title = "Title";
+		//$contentTitle = "Courses: title";
 		$title = "({$this->model->username}) {$this->model->first_name} {$this->model->last_name}";
 		$contentTitle = "Courses: {$this->model->term->description}";
 		if (!Yii::app()->user->checkAccess('admin') && !Yii::app()->user->checkAccess('staff')){

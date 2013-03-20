@@ -7,6 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
+	'defaultController'=> 'base/login',
 	'name'=>'eText Library',
 	'homeUrl'=>array('/base/login/login'),
 
@@ -61,7 +62,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-			'loginUrl'=>array('/base/login/login'),
+			'loginUrl'=>array('base/login/login'),
     	),
 		// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(

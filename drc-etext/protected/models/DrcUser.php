@@ -95,16 +95,15 @@ class DrcUser extends User
 	{
 		$criteria=new CDbCriteria; 
 		if (!isset($this->term_code)) {
-			$this->term_code = DrcRequest::latestTermCodeforUser($this->emplid);
+			//$this->term_code = DrcRequest::latestTermCodeforUser($this->emplid);
+			$this->term_code = 2120;
 		}
 		$criteria->compare('t.term_code',$this->term_code);
 		if ($this->emplid && strlen($this->emplid)>0) {
 			$criteria->with = array( 'drcRequests', 'courseInstructors' );
 			$criteria->together = true;
-			$criteria->compare('drcRequests.emplid',$this->emplid);
-			$criteria->compare('drcRequests.term_code',$this->term_code);
-			$criteria->compare('courseInstructors.emplid',$this->emplid, false, 'OR');
-			$criteria->compare('courseInstructors.term_code',$this->term_code);
+			$criteria->addCondition("drcRequests.emplid={$this->emplid} AND drcRequests.term_code={$this->term_code}");
+			$criteria->addCondition("courseInstructors.emplid={$this->emplid} AND courseInstructors.term_code={$this->term_code}", 'OR');
 		}
 		return new CActiveDataProvider('Course', array(
 			'criteria'=>$criteria,

@@ -8786,3 +8786,87 @@ HTTP_REFERER=http://localhost/drc-etext/index.php/course/courses/term_code/2122
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (267)
+2013/03/19 22:26:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/
+---
+2013/03/19 22:37:42 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (267)
+2013/03/19 22:41:13 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (267)
+2013/03/19 22:41:49 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (267)
+2013/03/19 22:42:35 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (267)
+2013/03/19 22:50:35 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (267)
+2013/03/20 01:02:19 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (269)
+2013/03/20 01:11:09 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (270)
+2013/03/20 01:11:48 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (270)
+2013/03/20 01:12:51 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (270)
+2013/03/20 01:13:53 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (272)
+2013/03/20 01:16:07 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (272)
+2013/03/20 01:16:24 [error] [php] Undefined variable: title (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php:140)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): DrcUserController->runAction()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): DrcUserController->filterAccessControl()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): DrcUserController->runActionWithFilters()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): DrcUserController->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/drcUser/courses/username/astudent
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\DrcUserController.php (140)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/03/20 01:17:44 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (272)
+2013/03/20 01:23:12 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (272)
+2013/03/20 01:24:43 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (266)
+2013/03/20 01:26:22 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (213)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (266)
