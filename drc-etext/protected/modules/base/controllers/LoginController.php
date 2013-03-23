@@ -162,7 +162,7 @@ class LoginController extends Controller
 	public function actionSamlResponse()
 	{
 		$as = $this->getSimpleSaml();
-		print("Hello, authenticated user!");
+		//print("Hello, authenticated user!");
 		// test
 		//$attributes = $as->getAttributes();
 		//print_r($attributes);
@@ -206,9 +206,10 @@ class LoginController extends Controller
 	/**
 	 * Provides he service provider SAML metadata for this app.
 	 */
+/*
 	public function actionSamlMetadata()
 	{
 		$this->renderPartial('xmlPage', array( 'xmlString'=>Yii::app()->saml->getMetadata(), ));
 	}
-		
+*/		
 }

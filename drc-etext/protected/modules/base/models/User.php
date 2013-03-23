@@ -151,6 +151,8 @@ class User extends BaseModel
 		// need to add term code criteria once we have real data
 		//$criteria->with = array( 'drcRequests', 'drcRequests.course');
 		//$criteria->compare('drcRequests.term_code',$this->term_code);
+		$criteria->with = array( 'drcRequests');
+		$criteria->together = true;
 		$criteria->join = "JOIN AuthAssignment ON (username=userid)";
 		$criteria->addCondition("AuthAssignment.userid=t.username");
 		$criteria->addCondition("(AuthAssignment.itemname='faculty')");          

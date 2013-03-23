@@ -21,6 +21,7 @@
 		'dataProvider'=>$dataProvider,
 		'summaryText'=>'',
 		'showTableOnEmpty'=>false,
+		'emptyText'=>'No users found for the selected quarter.',
 		'enablePagination'=>false,
 		'itemsCssClass'=>"table table-striped table-bordered data-table", 
 		'loadingCssClass'=>'',
@@ -31,7 +32,7 @@
 				'header'=>'Cruz Id', 
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->username',
-				'urlExpression'=>'array(\'drcUser/update\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')', 
+				'urlExpression'=>'array(\'user/update\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')', 
 			),
 			array( 
 				'header'=>'EmplId', 
@@ -43,20 +44,24 @@
 				'class'=>'LinksColumn',
 				'labelExpression'=>'$data->last_name . \', \' . $data->first_name', 
 				//'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username,' . $paramStr  .')', 
-				'urlExpression'=>'array(\'drcUser/courses\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')',  
+				'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')',  
 			 ),
-			  array( 
+			 array( 
 				'header'=>'Courses', 
 				'class'=>'LinksColumn',
+				//'labelExpression'=>'\'test\'', 
+				//'urlExpression'=>'\'test\'', 
 			 	'labelExpression'=>'$data->courseNames()', 
 				'urlExpression'=>array('model'=>'$data->courseList()', 'route'=>'course/students', 'modelParams'=>array('term_code'=>'term_code', 'class_num'=>'class_num')), 
 			),
+			
 			array( 
 				'header'=>'Type', 
 				'name'=>'drcRequests.type', 
 				'type'=>'raw',
 				'value'=>'\'<span class="badge">\' . $data->typesString() . \'</span>\'', 
-			),
+			 ),
+			 
 			 array( 
 				'header'=>'Status', 
 				'class'=>'LinksColumn',

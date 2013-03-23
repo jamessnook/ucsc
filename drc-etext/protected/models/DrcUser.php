@@ -75,8 +75,8 @@ class DrcUser extends User
 	public function students()
 	{
 		$criteria=new CDbCriteria;
-		$criteria->with = array( 'drcRequests');
-		//$criteria->with = array( 'drcRequests', 'drcRequests.course', 'coursesAsInstructor.course'=>array('alias'=>'course1'), 'drcRequests.assignments', );
+		//$criteria->with = array( 'drcRequests');
+		$criteria->with = array( 'drcRequests', 'drcRequests.course', 'coursesAsInstructor.course'=>array('alias'=>'course1'), 'drcRequests.assignments', );
 		$criteria->compare('drcRequests.term_code', $this->term_code);
 		//$criteria->addCondition("AuthAssignment.userid=t.username");
 		//$criteria->join = 'JOIN drcRequests USING (emplid)';
@@ -96,8 +96,7 @@ class DrcUser extends User
 	{
 		$criteria=new CDbCriteria; 
 		if (!isset($this->term_code)) {
-			//$this->term_code = DrcRequest::latestTermCodeforUser($this->emplid);
-			$this->term_code = 2120;
+			$this->term_code = DrcRequest::latestTermCodeforUser($this->emplid);
 		}
 		$criteria->compare('t.term_code',$this->term_code);
 		if ($this->emplid && strlen($this->emplid)>0) {

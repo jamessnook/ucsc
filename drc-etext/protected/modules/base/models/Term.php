@@ -117,7 +117,8 @@ class Term extends BaseModel
 	public static function terms($model=null)
 	{
 		$criteria=new CDbCriteria;
-		$criteria->join = 'JOIN drc_request USING (term_code) JOIN course_instructor USING (term_code) ';
+		$criteria->join = 'JOIN drc_request USING (term_code) JOIN course_instructor 
+			ON (drc_request.term_code=course_instructor.term_code AND drc_request.class_num=course_instructor.class_num )';
 		$criteria->join .= 'JOIN user ON(drc_request.emplid=user.emplid OR course_instructor.emplid=user.emplid)';
 		$criteria->distinct = true;
 		$criteria->select = 't.term_code, t.description';
