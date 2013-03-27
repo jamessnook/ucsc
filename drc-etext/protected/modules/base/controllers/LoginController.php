@@ -1,14 +1,7 @@
 <?php
-//Yii::import('application.modules.*');
-//require_once('modules/base/components/UserIdentity.php');
+
 require_once('UserIdentity.php');
-/*
-Yii::import('application.modules.base.vendors.simplesaml.*');		
-Yii::import('application.modules.base.vendors.simplesaml.lib.*');		
-Yii::import('application.modules.base.vendors.simplesaml.lib.SimpleSAML.*');		
-Yii::import('application.modules.base.vendors.simplesaml.lib.SimpleSAML.Auth.*');		
-Yii::import('application.modules.base.vendors.simplesaml.config.*');	
-*/	
+
 Yii::import('base.vendors.simplesaml.*');		
 Yii::import('base.vendors.simplesaml.lib.*');		
 Yii::import('base.vendors.simplesaml.lib.SimpleSAML.*');		
@@ -21,7 +14,7 @@ require_once('SessionHandler.php');
 require_once('Store.php');
 
 /**
- * AssignmentController is the controller class for managing user login and logout.
+ * LoginController is the controller class for managing user login and logout.
  *
  * @author JSnook <jsnook@ucsc.edu>
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
@@ -61,8 +54,6 @@ class LoginController extends Controller
 		$identity=new UserIdentity($username,'');
 		if ($identity->authenticate()){
 			Yii::app()->user->login($identity);
-			//$this->redirect(Yii::app()->homeUrl);
-			//$this->redirect($this->createUrl('user/students'));
 			if (Yii::app()->user->checkAccess('admin')){
 				$this->redirect($this->createUrl('user/students'));
 			} else {
@@ -115,7 +106,7 @@ class LoginController extends Controller
 	}
 	
 	/**
-	 * Override parent empty method to provide needed initialization.
+	 * returns a simpleSAML_Auth_Simple object
 	 */
 	public function getSimpleSaml()
 	{
@@ -132,7 +123,7 @@ class LoginController extends Controller
 	}
 	
 	/**
-	 * Override parent empty method to provide needed initialization.
+	 * Initiates SimpleSaml login and authentication 
 	 */
 	public function actionSimpleSaml()
 	{
@@ -145,42 +136,19 @@ class LoginController extends Controller
 	}
 	
 	/**
-	 * Redirects the user to the remote SAML2 authentication server.
-	 * for old version using onelogin library
-	 */
-	public function samlAuthRequest()
-	{
-		//Yii::app()->saml->settings->spReturnUrl = $this->createAbsoluteUrl('login/samlResponse');
-		$this->redirect(Yii::app()->saml->getRedirectUrl()); // create url 
-		//$this->renderPartial('dumpPage', array( 'data'=>Yii::app()->saml->settings->spReturnUrl, ));
-	}
-	
-	/**
 	 * Evaluates the response from the remote SAML2 authentication server
 	 * and logs the user on if they are OK.
 	 */
 	public function actionSamlResponse()
 	{
 		$as = $this->getSimpleSaml();
-		//print("Hello, authenticated user!");
-		// test
-		//$attributes = $as->getAttributes();
-		//print_r($attributes);
-		//echo "username = " . $this->getUsernameFromResponse($as);
-		// test
-		//if (!$as->isAuthenticated()) {
-		    /* Show login link. */
-		//    print('<a href="/login">Login</a>');
-		//}
-		// option use specific idp
-		//$as->login(array(
-    	//	'saml:idp' => 'https://idp.example.org/',
-		//));
-		//$username = Yii::app()->saml->getUsernameFromResponse($_POST['SAMLResponse']); // old way
-		// need to add user authorization and verification of account in this app
 		$this->login($this->getUsernameFromResponse($as));
 	}
 
+	/**
+	 * Parses the username (cruzid) from the response from the remote SAML2 authentication server
+	 * and logs the user on if they are OK.
+	 */
 	public function getUsernameFromResponse($auth)
 	{
 		$attrs = $auth->getAttributes();
@@ -189,27 +157,8 @@ class LoginController extends Controller
 		}
 		$email = $attrs[$this->userEmailTag][0];
 		
-		//print('Hello, ' . htmlspecialchars($email));		// load and parse response
+		// load and parse response
 		return substr($email, 0, strpos($email, "@"));
 	}
 
-	/**
-	 * Evaluates the response from the remote SAML2 authentication server
-	 * and logs the user on if they are OK.
-	 * Alias for actionSamlResponse
-	 */
-	public function actionShibbolethResponse()
-	{
-		$this->actionSamlResponse();
-	}
-
-	/**
-	 * Provides he service provider SAML metadata for this app.
-	 */
-/*
-	public function actionSamlMetadata()
-	{
-		$this->renderPartial('xmlPage', array( 'xmlString'=>Yii::app()->saml->getMetadata(), ));
-	}
-*/		
 }

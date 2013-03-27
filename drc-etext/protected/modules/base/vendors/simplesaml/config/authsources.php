@@ -41,25 +41,6 @@ $config = array(
 	    'attributes.NameFormat' => 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic',
 	),
 	
-	'ucsc-test-sp' => array(
-	    'saml:SP',
-	    'privatekey' => 'saml.pem',
-	    'certificate' => 'saml.crt',
-  		'idp' => 'https://test-idp.ucsc.edu:444/idp/shibboleth',
-		//'idp' => 'https://login.ucsc.edu/idp/shibboleth',
-		//'certificate'=> 'cert.txt',
-		'entityID'=>'ucsc.phpfogapp.com/drc-etext',
-		//'url'=>'login/samlResponse',
-	    'attributes' => array(
-	        'eduPersonPrincipalName',
-	        'mail',
-	    ),
-	    'attributes.required' => array (
-	        'eduPersonPrincipalName',
-	    ),
-	    'attributes.NameFormat' => 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic',
-	    //'userEmailTag'=>'urn:oid:1.3.6.1.4.1.5923.1.1.1.6',
-	),
 	
 	// An authentication source which can authenticate against both SAML 2.0
 	// and Shibboleth 1.3 IdPs.
