@@ -9102,3 +9102,11 @@ in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/03/27 01:38:20 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/03/27 01:50:40 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)

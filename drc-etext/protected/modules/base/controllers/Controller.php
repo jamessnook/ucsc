@@ -106,7 +106,7 @@ class Controller extends CController
 	}
 	
 	/**
-	 * does, override in subclass as needed.
+	 * override in subclass as needed.
 	 */
 	public function setDefaultViewOptions()
 	{
