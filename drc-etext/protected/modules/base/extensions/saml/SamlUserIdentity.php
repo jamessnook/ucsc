@@ -23,13 +23,6 @@ require_once('Store.php');
 class SamlUserIdentity extends CUserIdentity
 {
 
-	/**
-     * The resolved subfolder to upload the file to
-     * @var string
-     */
-    public $simplesamlPath= "";
-    
-    
     /**
 	 * Authenticates a user
 	 * against some persistent user identity storage (e.g. database).
@@ -68,11 +61,8 @@ class SamlUserIdentity extends CUserIdentity
 	    require_once('_autoload.php');
 	    // enable Yii autoloader
 	    spl_autoload_register(array('YiiBase','autoload'));
-	    return new SimpleSAML_Auth_Simple('ucsc-test--sp');
-	    
-		$className= $this->simplesamlPath . '/lib/SimpleSAML/Auth/Simple';
-		$aModel=new $className(null);
-	    return new SimpleSAML_Auth_Simple('ucsc-test--sp');
+	
+		return new SimpleSAML_Auth_Simple('ucsc-test--sp');
 	}
 	
 

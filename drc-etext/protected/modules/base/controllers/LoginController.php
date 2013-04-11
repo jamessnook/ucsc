@@ -35,10 +35,10 @@ class LoginController extends Controller
 	public function actionLogin()
 	{
 		if(Yii::app()->params['samlLogin'] == true){
-			$this->actionSimpleSaml();
+			$this->actionSamlLogin();
 		}
 		else if(Yii::app()->params['localLogin'] == true){
-			$this->loginLocal();
+			$this->actionLocalLogin();
 		}
 		else {
 			$this->login('guest');
@@ -67,7 +67,7 @@ class LoginController extends Controller
 	/**
 	 * Displays the login page
 	 */
-	public function loginLocal()
+	public function actionLocalLogin()
 	{
 		$model=new LoginForm;
 
@@ -106,59 +106,18 @@ class LoginController extends Controller
 	}
 	
 	/**
-	 * returns a simpleSAML_Auth_Simple object
-	 */
-	public function getSimpleSaml()
-	{
-		// set up for simple saml
-	    // temporary disable Yii autoloader
-	    spl_autoload_unregister(array('YiiBase','autoload'));
-	
-	    // create 3rd-party object
-	    require_once('_autoload.php');
-	    // enable Yii autoloader
-	    spl_autoload_register(array('YiiBase','autoload'));
-	
-		return new SimpleSAML_Auth_Simple('ucsc-test--sp');
-	}
-	
-	/**
 	 * Initiates SimpleSaml login and authentication 
 	 */
-	public function actionSimpleSaml()
+	public function actionSamlLogin()
 	{
-		$as = $this->getSimpleSaml();
-
-		$as->requireAuth(array(
-		    'ReturnTo' => $this->createUrl('login/samlResponse'),
-		    'KeepPost' => FALSE,
-		));
+		// login the user to yii app
+		$identity=new SamlUserIdentity($username,'');
+		if ($identity->authenticate()){
+			$this->login($identity->username);
+		} else {
+			$this->render('loginFail');
+		}
 	}
 	
-	/**
-	 * Evaluates the response from the remote SAML2 authentication server
-	 * and logs the user on if they are OK.
-	 */
-	public function actionSamlResponse()
-	{
-		$as = $this->getSimpleSaml();
-		$this->login($this->getUsernameFromResponse($as));
-	}
-
-	/**
-	 * Parses the username (cruzid) from the response from the remote SAML2 authentication server
-	 * and logs the user on if they are OK.
-	 */
-	public function getUsernameFromResponse($auth)
-	{
-		$attrs = $auth->getAttributes();
-		if (!isset($attrs[$this->userEmailTag][0])) {
-		    throw new Exception('eduPersonPrincipalName attribute missing.');
-		}
-		$email = $attrs[$this->userEmailTag][0];
-		
-		// load and parse response
-		return substr($email, 0, strpos($email, "@"));
-	}
 
 }

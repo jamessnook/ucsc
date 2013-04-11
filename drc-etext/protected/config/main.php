@@ -5,6 +5,9 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+
+Yii::setPathOfAlias('simplesaml', '../../../simplesaml/simplesaml/');
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'defaultController'=> 'base/login',
@@ -64,7 +67,11 @@ return array(
 			'allowAutoLogin'=>true,
 			'loginUrl'=>array('base/login/login'),
     	),
-		// uncomment the following to enable URLs in path-format
+        'saml'=>array(
+            'class'=>'base.extensions.saml.SamlUserIdentity',
+			'simplesamlPath' => '../../../simplesaml/simplesaml/',
+		),
+    	// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
