@@ -9110,3 +9110,51 @@ in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/04/13 02:28:01 [error] [php] require_once(_autoload.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:10)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(332): CWebApplication->createController()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(270): CWebApplication->createController()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (10)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (10)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/04/13 02:30:18 [error] [php] Missing argument 1 for CUserIdentity::__construct(), called in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\extensions\saml\SamlUserIdentity.php on line 41 and defined (C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CUserIdentity.php:44)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\base\CModule.php(387): createComponent()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CModule.php(104): CWebApplication->getComponent()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(104): CWebApplication->__get()
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(27): LoginController->actionSamlLogin()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\extensions\saml\SamlUserIdentity.php (41)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (104)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (27)
+2013/04/13 02:30:58 [error] [exception.CException] exception 'CException' with message 'SamlUserIdentity and its behaviors do not have a method or closure named "init".' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\base\CModule.php(388): CComponent->__call('init', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CModule.php(388): SamlUserIdentity->init()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\base\CModule.php(104): CModule->getComponent('saml')
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(104): CModule->__get('saml')
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(27): LoginController->actionSamlLogin()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('login')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/login/logi...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/drc-etext/index.php/base/login/login
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/students
+---

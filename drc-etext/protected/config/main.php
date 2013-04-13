@@ -6,7 +6,6 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 
-Yii::setPathOfAlias('simplesaml', '../../../simplesaml/simplesaml/');
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
@@ -69,7 +68,7 @@ return array(
     	),
         'saml'=>array(
             'class'=>'base.extensions.saml.SamlUserIdentity',
-			'simplesamlPath' => '../../../simplesaml/simplesaml/',
+			'simplesamlPath' => Yii::app()->request->baseUrl. '/../simplesaml/simplesaml',
 		),
     	// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(
@@ -203,8 +202,8 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 
 		// the next two set up the type of user authentication we are using
-		'samlLogin'=>false,  // true if using shibboleth authentication
-		'localLogin'=>true,	// true if using local authentication
+		'samlLogin'=>true,  // true if using shibboleth authentication
+		'localLogin'=>false,	// true if using local authentication
 		
 		// location for uploaded files
 		'fileRoot'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'../files',

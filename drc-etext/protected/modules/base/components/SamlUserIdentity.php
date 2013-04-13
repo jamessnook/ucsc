@@ -24,7 +24,7 @@ class SamlUserIdentity extends CUserIdentity
 {
 
 	/**
-     * The resolved subfolder to upload the file to
+     * The path to the simplsamlphp files
      * @var string
      */
     public $simplesamlPath= "";

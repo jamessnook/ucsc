@@ -2,17 +2,6 @@
 
 require_once('UserIdentity.php');
 
-Yii::import('base.vendors.simplesaml.*');		
-Yii::import('base.vendors.simplesaml.lib.*');		
-Yii::import('base.vendors.simplesaml.lib.SimpleSAML.*');		
-Yii::import('base.vendors.simplesaml.lib.SimpleSAML.Auth.*');		
-Yii::import('base.vendors.simplesaml.config.*');		
-require_once('_autoload.php');
-require_once('Simple.php');
-require_once('Session.php');
-require_once('SessionHandler.php');
-require_once('Store.php');
-
 /**
  * LoginController is the controller class for managing user login and logout.
  *
@@ -111,7 +100,8 @@ class LoginController extends Controller
 	public function actionSamlLogin()
 	{
 		// login the user to yii app
-		$identity=new SamlUserIdentity($username,'');
+		//$identity=new SamlUserIdentity();
+		$identity=Yii::app()->saml;
 		if ($identity->authenticate()){
 			$this->login($identity->username);
 		} else {
