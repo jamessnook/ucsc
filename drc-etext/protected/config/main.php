@@ -68,8 +68,10 @@ return array(
     	),
         'saml'=>array(
             'class'=>'base.extensions.saml.SamlUserIdentity',
-			'simplesamlPath' => Yii::app()->request->baseUrl. '/../simplesaml/simplesaml',
-		),
+			//'simplesamlPath' => Yii::app()->request->baseUrl . '/../simplesaml/simplesaml',
+			'simplesamlPath' => dirname(__FILE__) . '/../../../simplesaml/simplesaml',
+			'serviceProviderId' => 'ucsc-test--sp',
+    	),
     	// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(
 			'urlFormat'=>'path',

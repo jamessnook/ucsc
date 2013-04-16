@@ -12,12 +12,39 @@ require_once('UserIdentity.php');
  */
 class SamlUserIdentity extends CApplicationComponent
 {
-
 	/**
-     * The path to the simplsamlphp files
+     * The path to the simplsamlphp top directory (the directory which contains the 'lib' subdirectory.)
+     * This is required as a config setting for this component
      * @var string
      */
     public $simplesamlPath= "";
+	
+	/**
+     * The id string used in the simplesaml config/authsources file 
+     * to idnetify the service provider configurtion to use
+     * This is required as a config setting for this component
+     * @var string
+     */
+    public $serviceProviderId = 'default';
+	
+    /**
+     * The xml tag for user emali in saml response
+     * @var string
+     */
+	public $userEmailTag = 'urn:oid:1.3.6.1.4.1.5923.1.1.1.6';
+	
+    
+	/**
+     * The username of the authenticated user
+     * @var string
+     */
+    public $username= "";
+    
+	/**
+     * The error code for
+     * @var string
+     */
+    public $errorCode = 0;
     
     
     /**
@@ -27,22 +54,22 @@ class SamlUserIdentity extends CApplicationComponent
      */
     public function authenticate( ) 
 	{
+		$this->errorCode=CUserIdentity::ERROR_NONE;
 		$this->enableSimpleSamlAutoload();
-		$as = new SimpleSAML_Auth_Simple('ucsc-test--sp');
+		$as = new SimpleSAML_Auth_Simple($this->serviceProviderId);
 		// checks if user is authenticated, if not resopnds with redirect to saml idp server for authentication
 		$as->requireAuth(array(
 		    'ReturnTo' => Yii::app()->request->url, // the url used to get here
 		    'KeepPost' => FALSE,
 		));
 		// only returns if user is already authenticated
-		$this->username = $this->getUsernameFromResponse($as);
-		if (strlen($this->username>0)){
-            $this->errorCode=CUserIdentity::ERROR_NONE;
-		}else{
-            $this->errorCode=CUserIdentity::ERROR_USERNAME_INVALID;
-		}
 		$this->enableYiiAutoload();
-		return $this->errorCode==CUserIdentity::ERROR_NONE;
+		$this->username = $this->getUsernameFromResponse($as);
+		if (strlen($this->username)==0){
+            $this->errorCode=CUserIdentity::ERROR_USERNAME_INVALID;
+            return false;
+		}
+		return true;
 	}
 	    
 	/**

@@ -11,7 +11,6 @@ require_once('UserIdentity.php');
  */
 class LoginController extends Controller
 {
-	public $userEmailTag = 'urn:oid:1.3.6.1.4.1.5923.1.1.1.6';
 	
 	public function actionIndex()
 	{
@@ -44,10 +43,10 @@ class LoginController extends Controller
 		if ($identity->authenticate()){
 			Yii::app()->user->login($identity);
 			if (Yii::app()->user->checkAccess('admin')){
-				$this->redirect($this->createUrl('user/students'));
-			} else {
-				$this->redirect($this->createUrl('user/courses', array('username'=>Yii::app()->user->name,)));
-			}
+					$this->redirect($this->createUrl( Yii::app()->params['adminHomePage']));
+				} else {
+					$this->redirect($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
+											}
 		} else {
 			$this->render('loginFail');
 		}

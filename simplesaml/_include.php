@@ -24,7 +24,8 @@ if (get_magic_quotes_runtime()) {
 
 /* Initialize the autoloader. */
 //require_once(dirname(dirname(__FILE__)) . '/lib/_autoload.php');
-require_once(dirname(dirname(__FILE__)) . '/drc-etext/protected/modules/base/vendors/simplesaml/lib/_autoload.php');
+require_once(dirname(__FILE__) . '/simplesaml/lib/_autoload.php');
+//require_once(dirname(dirname(__FILE__)) . '/drc-etext/protected/modules/base/vendors/simplesaml/lib/_autoload.php');
 
 /* Enable assertion handler for all pages. */
 SimpleSAML_Error_Assertion::installHandler();
@@ -99,7 +100,8 @@ $SIMPLESAML_INCPREFIX = new SimpleSAML_IncPrefixWarn();
 
 
 //$configdir = dirname(dirname(__FILE__)) . '/config';
-$configdir = dirname(dirname(__FILE__)) . '/drc-etext/protected/modules/base/vendors/simplesaml/config';
+$configdir = dirname(__FILE__) . '/simplesaml/config';
+//$configdir = dirname(dirname(__FILE__)) . '/drc-etext/protected/modules/base/vendors/simplesaml/config';
 if (!file_exists($configdir . '/config.php')) {
 	header('Content-Type: text/plain');
 	echo("You have not yet created the simpleSAMLphp configuration files.\n");

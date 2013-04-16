@@ -9158,3 +9158,38 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/base/login/login
 HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/students
 ---
+2013/04/16 01:41:05 [error] [exception.CException] exception 'CException' with message 'Property "SamlUserIdentity.userEmailTag" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\extensions\saml\SamlUserIdentity.php(78): CComponent->__get('userEmailTag')
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\extensions\saml\SamlUserIdentity.php(39): SamlUserIdentity->getUsernameFromResponse(Object(SimpleSAML_Auth_Simple))
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(105): SamlUserIdentity->authenticate()
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(27): LoginController->actionSamlLogin()
+#4 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(18): LoginController->actionLogin()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionIndex()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/drc-etext/
+---
+2013/04/16 01:42:44 [error] [exception.Exception] exception 'Exception' with message 'eduPersonPrincipalName attribute missing.' in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\extensions\saml\SamlUserIdentity.php:84
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\extensions\saml\SamlUserIdentity.php(44): SamlUserIdentity->getUsernameFromResponse(Object(SimpleSAML_Auth_Simple))
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(105): SamlUserIdentity->authenticate()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(27): LoginController->actionSamlLogin()
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(18): LoginController->actionLogin()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionIndex()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/drc-etext/
+---
