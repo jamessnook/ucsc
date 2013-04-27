@@ -88,10 +88,25 @@
 						'itemOptions'=>array('class'=>'dropdown'), 
 						'url'=>'#',
 						'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
+						'label'=> '<i class="icon-user"></i>' . 'Switch To:' . '<b class="caret"></b>',
+						'visible'=>Yii::app()->user->checkAccess('admin'),
+						'items'=>User::userItems(),
+						
+					),
+					array(
+						'encodeLabel'=>false,
+						'url'=>'#',
+						'linkOptions'=>array('class'=>'dropdown-toggle', 'data-toggle'=>'dropdown'), 
 						'label'=> '<i class="icon-user"></i>' . Yii::app()->user->name . '<b class="caret"></b>',
 						//'label'=> 'Joe',
 						'items'=>array(
 							array('label'=>'My Profile', 'url'=>array($this->getModuleId() . '/user/profile')),
+							//array('label'=> CHtml::label('Switch:', 'switch') . CHtml::dropDownList('role', '', User::userOptions())),
+							array(
+								'label'=> CHtml::link('Switch To:', "javascript: window.location='" . $this->createUrl('/base/login/switchUser'). "?username=' +  $('#swUser').val();", array('class'=>'btn')) . CHtml::textField('swUser', 'enter username'),
+								'visible'=>Yii::app()->user->checkAccess('admin'),
+							),
+							
 							//array('label'=>'My Groups', 'url'=>array('/user/groups')),
 							array('label'=>'', 'itemOptions'=>array('class'=>'divider')),
 							array('label'=>'Logout', 'url'=>array( '/' . $this->getModuleId() . '/site/logout')),

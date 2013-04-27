@@ -86,6 +86,9 @@ INSERT INTO file_type (name) VALUES ('doc');
 INSERT INTO file_type (name) VALUES ('pdf');
 INSERT INTO file_type (name) VALUES ('txt');
 INSERT INTO file_type (name) VALUES ('gif');
+INSERT INTO file_type (name) VALUES ('mp3');
+INSERT INTO file_type (name) VALUES ('kes');
+INSERT INTO file_type (name) VALUES ('kesi');
 
 drop table if exists term;
 CREATE TABLE term(                 --  AIS feed, data for terms for display puposes
@@ -468,3 +471,21 @@ SELECT * INTO OUTFILE 'c:/users/jim/phpfog/ucsc/drc-etext/protected/data/course_
   FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
   LINES TERMINATED BY '\n'
   FROM course_instructor;
+  
+-- test data creation
+update course set description = 'This a description of this class.  I am sure it is a very interesting and important class full of worthwile knowledge.  Unfortunately we do not have a data feed for this data yet.  For now we will test the code with this made up desccription.';
+
+update course set schedule = 'MW 05:00PM-06:45PM';
+update course set room = 'Soc Sci 1 110';
+
+update course set dates = '09/27/12 - 12/07/12';
+
+update drc_request set type = 'mp3' where emplid % 2 = 0;
+update drc_request set type = 'kes' where emplid % 3 = 0;
+update drc_request set type = 'doc' where emplid % 5 = 0;
+update drc_request set type = 'txt' where emplid % 7 = 0;
+
+
+  
+  
+  

@@ -11,7 +11,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'defaultController'=> 'base/login',
 	'name'=>'eText Library',
-	'homeUrl'=>array('/base/login/login'),
+	'homeUrl'=>array('/base/login/intro'),
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -204,8 +204,8 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 
 		// the next two set up the type of user authentication we are using
-		'samlLogin'=>true,  // true if using shibboleth authentication
-		'localLogin'=>false,	// true if using local authentication
+		'samlLogin'=>false,  // true if using shibboleth authentication
+		'localLogin'=>true,	// true if using local authentication
 		
 		// location for uploaded files
 		'fileRoot'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'../files',

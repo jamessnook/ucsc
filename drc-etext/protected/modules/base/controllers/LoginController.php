@@ -14,9 +14,27 @@ class LoginController extends Controller
 	
 	public function actionIndex()
 	{
-			$this->actionLogin();
+			$this->actionIntro();
 	}
 
+	/**
+	 * Go to initial landing page if needed
+	 */
+	public function actionIntro()
+	{
+		// display the login form
+		$this->render('intro');
+	}
+	
+	/**
+	 * Go to initial landing page if needed
+	 */
+	public function actionSwitchUser()
+	{
+		// display the login form
+			$this->login($_REQUEST['username']);
+	}
+	
 	/**
 	 * Chooses the login method if any
 	 */
@@ -43,10 +61,10 @@ class LoginController extends Controller
 		if ($identity->authenticate()){
 			Yii::app()->user->login($identity);
 			if (Yii::app()->user->checkAccess('admin')){
-					$this->redirect($this->createUrl( Yii::app()->params['adminHomePage']));
-				} else {
-					$this->redirect($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
-											}
+				$this->redirect($this->createUrl( Yii::app()->params['adminHomePage']));
+			} else {
+				$this->redirect($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
+			}
 		} else {
 			$this->render('loginFail');
 		}

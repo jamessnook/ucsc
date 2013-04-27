@@ -243,5 +243,41 @@ class User extends BaseModel
 		return Yii::app()->createUrl('user/update', array('username'=>$this->username));
 	} 
 
+	/**
+	 * Retrieves a list of usernames for all users 
+	 * in option format for use in a dropdown list
+	 * @return an array of username options.
+	 */
+	public static function userOptions()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->order = 'username';
+		
+		$users =  User::model()->findAll($criteria);
+		$options = array();
+		foreach($users as $user){
+			$options[$user['username']]=$user['username'];
+		}
+		return $options;
+	}
+
+	/**
+	 * Retrieves a list of usernames for all users 
+	 * in item format for use in a dropdown menu
+	 * @return an array of username options.
+	 */
+	public static function userItems()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->order = 'username';
+		
+		$users =  User::model()->findAll($criteria);
+		$items = array();
+		foreach($users as $user){
+			$items[]=array('label'=>$user['username'], 'url'=>array('/base/login/switchUser', 'username'=>$user['username'],) );
+		}
+		return $items;
+	}
+
 	
 }
