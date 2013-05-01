@@ -57,7 +57,7 @@ class SamlUserIdentity extends CApplicationComponent
 		$this->errorCode=CUserIdentity::ERROR_NONE;
 		$this->enableSimpleSamlAutoload();
 		$as = new SimpleSAML_Auth_Simple($this->serviceProviderId);
-		// checks if user is authenticated, if not resopnds with redirect to saml idp server for authentication
+		// checks if user is authenticated, if not, responds with redirect to saml idp server for authentication
 		$as->requireAuth(array(
 		    'ReturnTo' => Yii::app()->request->url, // the url used to get here
 		    'KeepPost' => FALSE,
