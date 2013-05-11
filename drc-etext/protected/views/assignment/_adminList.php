@@ -16,7 +16,7 @@
 	<?php 
 	
 	$this->widget('zii.widgets.grid.CGridView', array(
-		'id'=>'assignmentGrid',
+		'id'=>'adminAssignmentGrid',
 		'dataProvider'=>$model->search(),
 		'summaryText'=>'',
 		'enablePagination'=>false,

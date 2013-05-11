@@ -186,7 +186,7 @@ class CourseController extends Controller
 	}
 
 	/**
-	 * Sends an email to the instructors of a course and records teh event in the database.
+	 * Sends an email to the instructors of a course and records the event in the database.
 	 */
 	public function actionSendEmail()
 	{

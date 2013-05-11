@@ -9438,3 +9438,188 @@ in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/10 01:44:56 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/10 01:47:45 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/10 01:48:06 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/10 19:33:03 [error] [exception.CException] exception 'CException' with message 'Alias "ext.select2.ESelect2" is invalid. Make sure it points to an existing PHP file.' in C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:318
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWidgetFactory.php(147): YiiBase::import('ext.select2.ESe...', true)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(CourseController), 'ext.select2.ESe...', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('ext.select2.ESe...', Array)
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\main.php(73): CBaseController->widget('ext.select2.ESe...', Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??<!--Main layo...')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??<!--Main layo...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\noLayout.php(16): CBaseController->endContent()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(785): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#16 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(292): Controller->renderView(Array)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionAssignments()
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('assignments')
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/assignme...')
+#28 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/astudent
+---
+2013/05/10 19:33:24 [error] [exception.CException] exception 'CException' with message 'Alias "base.ext.select2.ESelect2" is invalid. Make sure it points to an existing PHP file.' in C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:318
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWidgetFactory.php(147): YiiBase::import('base.ext.select...', true)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(CourseController), 'base.ext.select...', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('base.ext.select...', Array)
+#3 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\main.php(73): CBaseController->widget('base.ext.select...', Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??<!--Main layo...')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??<!--Main layo...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(207): COutputProcessor->run()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\noLayout.php(16): CBaseController->endContent()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(785): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#16 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(292): Controller->renderView(Array)
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionAssignments()
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('assignments')
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/assignme...')
+#28 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/astudent
+---
+2013/05/11 02:51:23 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.isAdmin" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CWebUser.php(141): CComponent->__get('isAdmin')
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\main.php(66): CWebUser->__get('isAdmin')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('??<h1>Welcome</...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('??<h1>Welcome</...')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\noLayout.php(16): CBaseController->endContent()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\jsnook...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\jsnook...', Array, true)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(785): CBaseController->renderFile('C:\Users\jsnook...', Array, true)
+#13 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(26): CController->render('intro')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionIntro()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('intro')
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/login/intr...')
+#20 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/drc-etext/index.php/base/login/intro
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/students
+---
+2013/05/11 02:57:16 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/11 02:58:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('students')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/student...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/students
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/students
+---
+2013/05/11 02:59:03 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/11 02:59:13 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/11 03:27:31 [error] [php] Undefined index: username (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:48)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (48)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/11 03:27:50 [error] [php] Undefined index: username (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:48)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (48)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/11 03:27:52 [error] [php] Undefined index: username (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:48)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (48)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/11 03:28:00 [error] [php] Undefined index: username (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:48)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (48)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)

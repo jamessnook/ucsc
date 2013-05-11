@@ -25,6 +25,9 @@ class UserIdentity extends CUserIdentity
         {
             $this->username=$user->username;
             $this->errorCode=self::ERROR_NONE;
+			if (Yii::app()->user->checkAccess('admin')){
+            	Yii::app()->user->setState('isAdmin', true);
+			}
         }
 	    return $this->errorCode==self::ERROR_NONE;
     }

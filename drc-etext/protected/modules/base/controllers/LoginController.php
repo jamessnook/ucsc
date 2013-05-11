@@ -43,8 +43,10 @@ class LoginController extends Controller
 		if(Yii::app()->params['samlLogin'] == true){
 			$this->actionSamlLogin();
 		}
-		else if(Yii::app()->params['localLogin'] == true){
-			$this->actionLocalLogin();
+		else if(Yii::app()->params['localLogin'] == true && isset($_POST['LoginForm'])){
+			//$this->actionLocalLogin();
+				$this->login($_POST['LoginForm']['username']);
+			
 		}
 		else {
 			$this->login('guest');

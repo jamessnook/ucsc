@@ -18,7 +18,7 @@
 	
 	//$model->username = Yii::app()->user->name;  // set up for current user
 	$this->widget('zii.widgets.grid.CGridView', array(
-		'id'=>'assignmentGrid',
+		'id'=>'userBookGrid',
 		'dataProvider'=>$model->books(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,

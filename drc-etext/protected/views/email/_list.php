@@ -7,7 +7,7 @@
 	
 	//$model->username = Yii::app()->user->name;  // set up for current user
 	$this->widget('zii.widgets.grid.CGridView', array(
-		'id'=>'assignmentGrid',
+		'id'=>'emailGrid',
 		'dataProvider'=>$model->emails(),
 		//'filter'=>$model,
 		//'hideHeader'=>true,

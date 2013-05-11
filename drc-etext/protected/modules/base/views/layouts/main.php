@@ -63,6 +63,21 @@
 					//array('label'=>'<i class="icon-envelope-alt"></i> Contact', 'url'=>array('/site/contact')),
 				), 
 			));
+			if (Yii::app()->user->getState('isAdmin')){
+	      		echo '<div class="nav pull-right">';
+				$form=$this->beginWidget('CActiveForm',array(
+					'action'=>Yii::app()->createUrl('/base/login/switchUser'),
+				)); 
+	 			echo CHtml::submitButton('Switch To: ');
+				$this->widget('base.extensions.select2.ESelect2',array(
+					'name'=>'username',
+				  	'data'=>User::userOptions(),
+				));
+	 			$this->endWidget();
+	 			// temporary hack sincre the registered code is at the end of the page but does not appear to execute 
+	 			echo '<script type="text/javascript"> jQuery("#username").select2({"formatNoMatches":function(){return "No matches found";},"formatInputTooShort":function(input,min){return "Please enter "+(min-input.length)+" more characters";},"formatInputTooLong":function(input,max){return "Please enter "+(input.length-max)+" less characters";},"formatSelectionTooBig":function(limit){return "You can only select "+limit+" items";},"formatLoadMore":function(pageNumber){return "Loading more results...";},"formatSearching":function(){return "Searching...";}}); </script>';
+	      		echo '</div >';
+			}
 			$this->widget('zii.widgets.CMenu',array(
 				'htmlOptions'=>array('class'=>'nav pull-right'), 
 				'submenuHtmlOptions'=>array('class'=>'dropdown-menu'), 
