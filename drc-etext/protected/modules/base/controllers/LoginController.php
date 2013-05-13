@@ -31,21 +31,32 @@ class LoginController extends Controller
 	 */
 	public function actionSwitchUser()
 	{
-		// display the login form
-			$this->login($_REQUEST['username']);
+		// re- login the user to yii app
+		if(isset($_POST['LoginForm']))
+		{
+			$username=$_POST['LoginForm']['username'];
+		} else {
+			$username = $_REQUEST['username'];
+		}
+		$identity=new UserIdentity($username,'');
+		if ($identity->authenticate()){
+			Yii::app()->user->login($identity);
+			$this->finishLogin();			
+		} else {
+			$this->render('loginFail');
+		}
 	}
 	
 	/**
-	 * Chooses the login method if any
+	 * Chooses the authentication method if any
 	 */
 	public function actionLogin()
 	{
 		if(Yii::app()->params['samlLogin'] == true){
 			$this->actionSamlLogin();
 		}
-		else if(Yii::app()->params['localLogin'] == true && isset($_POST['LoginForm'])){
-			//$this->actionLocalLogin();
-				$this->login($_POST['LoginForm']['username']);
+		else if(Yii::app()->params['localLogin'] == true ){
+			$this->actionLocalLogin();
 			
 		}
 		else {
@@ -56,7 +67,7 @@ class LoginController extends Controller
 	/**
 	 * Complete the login
 	 */
-	public function login($username)
+	public function authorize($username)
 	{
 		// login the user to yii app
 		$identity=new UserIdentity($username,'');
@@ -79,28 +90,30 @@ class LoginController extends Controller
 	{
 		$model=new LoginForm;
 
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				//$this->redirect(Yii::app()->user->returnUrl);
-				if (Yii::app()->user->checkAccess('admin')){
-					$this->redirect($this->createUrl( Yii::app()->params['adminHomePage']));
-				} else {
-					$this->redirect($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
-				}
+				$this->finishLogin();			
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
+	}
+
+			
+	/**
+	 * Complete the login and displays the login page
+	 */
+	public function finishLogin()
+	{
+		if (Yii::app()->user->checkAccess('admin')){
+            Yii::app()->user->setState('isAdmin', true);
+			$this->redirect($this->createUrl( Yii::app()->params['adminHomePage']));
+		} else {
+			$this->redirect($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
+		}
 	}
 
 			
@@ -122,10 +135,14 @@ class LoginController extends Controller
 		//$identity=new SamlUserIdentity();
 		$identity=Yii::app()->saml;
 		if ($identity->authenticate()){
-			$this->login($identity->username);
-		} else {
-			$this->render('loginFail');
+			$identity=new UserIdentity($username,'');
+			if ($identity->authenticate()){
+				Yii::app()->user->login($identity);
+				$this->finishLogin();			
+				return;
+			}
 		}
+		$this->render('loginFail');
 	}
 	
 

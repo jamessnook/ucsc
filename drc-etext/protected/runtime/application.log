@@ -9623,3 +9623,91 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/base/login/login
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (48)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/12 04:27:51 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 04:32:01 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 04:39:16 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 04:41:58 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 04:44:57 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 04:53:46 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 04:55:13 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 04:59:24 [error] [php] Undefined index: username (C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:35)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (35)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (90)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (53)
+2013/05/12 05:02:09 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 05:02:19 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 05:06:28 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 05:08:18 [error] [php] Undefined index: username (C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php:41)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (41)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (96)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php (59)
+2013/05/12 05:08:56 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 05:09:24 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 05:14:11 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 06:59:24 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/12 08:54:22 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
