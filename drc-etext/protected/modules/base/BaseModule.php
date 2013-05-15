@@ -8,6 +8,8 @@ class BaseModule extends CWebModule
 	 */
 	public $dynamicConfig;
 	
+    private $_assetsUrl;
+ 
 
 	public function init()
 	{
@@ -32,4 +34,15 @@ class BaseModule extends CWebModule
 		else
 			return false;
 	}
+
+    // getAssetsUrl()
+    //    return the URL for this module's assets, performing the publish operation
+    //    the first time, and caching the result for subsequent use.
+    public function getAssetsUrl()
+    {
+        if ($this->_assetsUrl === null)
+            $this->_assetsUrl = Yii::app()->getAssetManager()->publish(
+                Yii::getPathOfAlias('base.assets') );
+        return $this->_assetsUrl;
+    }
 }

@@ -19,26 +19,28 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
+	<?php $assetsUrl =  Yii::app()->getModule('base')->assetsUrl; ?>
+
     <!-- Le styles -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/DT_bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $assetsUrl; ?>/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $assetsUrl; ?>/css/admin.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $assetsUrl; ?>/css/DT_bootstrap.css" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-responsive.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin-responsive.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/font-awesome.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/DT_bootstrap-responsive.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $assetsUrl; ?>/css/bootstrap-responsive.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $assetsUrl; ?>/css/admin-responsive.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $assetsUrl; ?>/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $assetsUrl; ?>/css/DT_bootstrap-responsive.css" />
 
      <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/ico/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/ico/apple-touch-icon-144-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/ico/apple-touch-icon-114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/ico/apple-touch-icon-72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="<?php echo Yii::app()->request->baseUrl; ?>/assets/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="<?php echo $assetsUrl; ?>/assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $assetsUrl; ?>/assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php $assetsUrl; ?>/assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $assetsUrl; ?>/assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="<?php echo $assetsUrl; ?>/assets/ico/apple-touch-icon-57-precomposed.png" />
   </head>
 
   <body>
@@ -153,7 +155,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="span12">
-	    			<img src="<?php echo Yii::app()->request->baseUrl; ?>/img/ucsc_wordmark.png" />
+	    			<img src="<?php echo $assetsUrl; ?>/img/ucsc_wordmark.png" />
 				</div>
 			</div>
 			<div class="row">
@@ -169,9 +171,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
-	<script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.dataTables.js"></script>
-	<script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/DT_bootstrap.js"></script>
+    <script src="<?php echo $assetsUrl; ?>/js/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo $assetsUrl; ?>/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" charset="utf-8" language="javascript" src="<?php echo $assetsUrl; ?>/js/DT_bootstrap.js"></script>
 
   </body>
 </html>
