@@ -100,4 +100,14 @@ class FileType extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Retrieves an array of file types needed for this user.
+	 * @return array, the names of file types for this course.
+	 */
+	public static function options()
+	{
+		return CHtml::listData(FileType::model()->findAll(), 'id', 'name');	
+	}
+	
 }

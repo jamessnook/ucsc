@@ -69,7 +69,23 @@ if (!isset($contentTitle) || $contentTitle == ''){
 				'labelExpression'=>'\'<span class="badge">\' . $data->assignmentCount() . \'</span>\'', 
 				'urlExpression'=>'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num, \'username\'=>\''. $model->username . '\')', 
 			),
-			 array( 
+			array( 
+				'header'=>'File Type: Select to change', 
+				'type'=>'raw',
+				'name'=>'fileType', 
+				//'value'=>'$data->fileType()', 
+				//'value'=>'CHtml::dropDownList(\'fileTypeList\', \'html\', array(1=>\'html\', 2=>\'pdf\'), array())', 
+				'value'=>'$form=$this->beginWidget("CActiveForm",array(
+					"action"=>Yii::app()->createUrl("/base/login/switchUser"),
+					"htmlOptions"=>array("class"=>"nav pull-right", ),
+				));
+					$this->grid->controller->widget(\'base.extensions.select2.ESelect2\',array(
+					"name"=>"ftList",
+				  	"data"=>FileType::options(),
+					"htmlOptions"=>array("class"=>"input-large fileTypeList", ),
+				), true); $this->endWidget();', 
+			),
+			array( 
 				'header'=>'Status', 
 				'class'=>'LinksColumn',
 			 	'labelExpression'=>'$data->completed(\''. $model->username . '\')? \'<span class="badge badge-success">Completed</span>\' : \'<span class="badge badge-warning">Pending</span>\'', 
@@ -77,6 +93,7 @@ if (!isset($contentTitle) || $contentTitle == ''){
 			 ),
 		),
 	)); 
+	echo '<script type="text/javascript"> jQuery(".fileTypeList").select2({"formatNoMatches":function(){return "No matches found";},"formatInputTooShort":function(input,min){return "Please enter "+(min-input.length)+" more characters";},"formatInputTooLong":function(input,max){return "Please enter "+(input.length-max)+" less characters";},"formatSelectionTooBig":function(limit){return "You can only select "+limit+" items";},"formatLoadMore":function(pageNumber){return "Loading more results...";},"formatSearching":function(){return "Searching...";}}); </script>';
 	
 	?>
 

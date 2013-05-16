@@ -53,7 +53,8 @@ table.dataTable th:active {
   margin: 8px 0;
 }
 
-.navbar .select2-container {
+.select2-container {
 	display: inline-block;
 	margin-top: 5px;
+    width: 260px;
 }

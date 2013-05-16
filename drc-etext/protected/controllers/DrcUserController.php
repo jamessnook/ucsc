@@ -149,6 +149,16 @@ class DrcUserController extends UserController
 	}
 	
 	/**
+	 * Displays a list of courses for a drc student or faculty and term.
+	 */
+	public function actionSetFileType()
+	{
+		if (!isset($_REQUEST['username'])){
+			$_REQUEST['username'] = Yii::app()->user->name;
+		}
+	}
+	
+	/**
 	 * sets up default view options for rendering, called by super class renderView and passed to views.
 	 */
 	
