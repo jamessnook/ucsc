@@ -17,13 +17,13 @@
 </div>
           
    <?php
-	$this->widget('xupload.XUpload', array(
+	$this->widget('base.extensions.xupload.XUpload', array(
 	                    'url' => Yii::app()->createUrl("book/uploadFile", array("id"=>$model->id)),
 	                    'model' => $model,
 	                    'attribute' => 'file',
 	                    'multiple' => true, 
 						//'formView' => 'application.views.somemodel._form',
-						'formView' => 'application.views.file._xupload',
+						'formView' => 'base.views.file._xupload',
 						'htmlOptions' => array('id'=>'assignment-form'),
 	));
 	?>      
