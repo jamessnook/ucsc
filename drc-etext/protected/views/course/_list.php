@@ -69,21 +69,51 @@ if (!isset($contentTitle) || $contentTitle == ''){
 				'labelExpression'=>'\'<span class="badge">\' . $data->assignmentCount() . \'</span>\'', 
 				'urlExpression'=>'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num, \'username\'=>\''. $model->username . '\')', 
 			),
-			array( 
+			/*array( 
 				'header'=>'File Type: Select to change', 
 				'type'=>'raw',
 				'name'=>'fileType', 
 				//'value'=>'$data->fileType()', 
 				//'value'=>'CHtml::dropDownList(\'fileTypeList\', \'html\', array(1=>\'html\', 2=>\'pdf\'), array())', 
-				'value'=>'$form=$this->beginWidget("CActiveForm",array(
-					"action"=>Yii::app()->createUrl("/base/login/switchUser"),
+				'value'=>'$this->grid->controller->beginWidget("CForm", array(
+					"action"=>Yii::app()->createUrl("/drcUser/SetFileType" ),
 					"htmlOptions"=>array("class"=>"nav pull-right", ),
 				));
 					$this->grid->controller->widget(\'base.extensions.select2.ESelect2\',array(
 					"name"=>"ftList",
 				  	"data"=>FileType::options(),
 					"htmlOptions"=>array("class"=>"input-large fileTypeList", ),
-				), true); $this->endWidget();', 
+				), true); 
+				echo CHtml::hiddenField("username", "'. $model->username .  '");
+				$this->grid->controller->endWidget();', 
+			),
+			array( 
+				'header'=>'File Type: Select to change', 
+				'type'=>'raw',
+				'name'=>'fileType', 
+				//'value'=>'$data->fileType()', 
+				//'value'=>'CHtml::dropDownList(\'fileTypeList\', \'html\', array(1=>\'html\', 2=>\'pdf\'), array())', 
+				'value'=>'echo "<form action=" . Yii::app()->createUrl("/drcUser/SetFileType" ) . ">";
+					$this->grid->controller->widget(\'base.extensions.select2.ESelect2\',array(
+						"name"=>"ftList",
+				  		"data"=>FileType::options(),
+						"htmlOptions"=>array("class"=>"input-large fileTypeList", ),
+					), true); 
+					echo CHtml::hiddenField("username", "'. $model->username .  '");
+					echo "</form>";', 
+			),*/
+			array( 
+				'header'=>'File Type: Select to change', 
+				'type'=>'raw',
+				'name'=>'fileType', 
+				'value'=>'\' echo "<form >"
+					$this->grid->controller->widget(\'base.extensions.select2.ESelect2\',array(
+						"name"=>"ftList",
+				  		"data"=>FileType::options(),
+						"htmlOptions"=>array("class"=>"input-large fileTypeList", ),
+					), true); 
+					echo CHtml::hiddenField("username", "'. $model->username .  '");
+					echo "</form>"\'', 
 			),
 			array( 
 				'header'=>'Status', 
