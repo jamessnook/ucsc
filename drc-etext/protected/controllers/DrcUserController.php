@@ -154,11 +154,13 @@ class DrcUserController extends UserController
 	 */
 	public function actionSetFileType()
 	{
-		echo "In Set File Type";
-		return $this->actionStudents();
-		if (isset($_REQUEST['username']) && isset($_REQUEST['term_code']) && isset($_REQUEST['class_num']) && isset($_REQUEST['username'])){
-			echo "In Set File Type";
-			return $this->actionStudents();
+		$contentModel=DrcRequest::loadModel();
+		if (isset($_REQUEST['username']) && isset($_REQUEST['term_code']) && isset($_REQUEST['class_num'])){
+			if(!$contentModel->save())
+				throw new CHttpException(404,'ERROR could not update filetype.'); // temporary error code
+		}
+		$this->redirect(array('books','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num));
+		return $this->actionCourses();
 		}
 	}
 	

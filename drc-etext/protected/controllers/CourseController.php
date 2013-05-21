@@ -36,7 +36,7 @@ class CourseController extends Controller
 					'createBook','updateBook', 'saveBook', 'studentAssignments', 'description', 
 					'assignments', 'books', 'students', 'createAssignment', 'createBook', 'manageBook',
 					'files', 'updateFile', 'saveFile', 'uploadFile', 'deleteFile','downloadFile',
-					'emails', 'saveEmail', 'updateEmail', 'createEmail', 'sendEmail', 'removeEmail'),
+					'emails', 'saveEmail', 'updateEmail', 'createEmail', 'sendEmail', 'removeEmail', 'setFileType'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow faculty user to perform actions
@@ -418,6 +418,17 @@ class CourseController extends Controller
 		));
 	}
 	
+	
+	/**
+	 * Displays a list of courses for a drc student or faculty and term.
+	 */
+	public function actionSetFileType()
+	{
+		if (isset($_REQUEST['username']) && isset($_REQUEST['term_code']) && isset($_REQUEST['class_num'])){
+			echo "In Set File Type";
+			return $this->actionStudents();
+		}
+	}
 	
 	/**
 	 * sets up default view options for rendering, called by super class render and passed to view.
