@@ -106,14 +106,17 @@ if (!isset($contentTitle) || $contentTitle == ''){
 				'header'=>'File Type: Select to change', 
 				'type'=>'raw',
 				'name'=>'fileType', 
-				'value'=>'\' echo "<form >"
+				'value'=>'"<form id=\"ftForm" . $data->term_code . "-" . $data->class_num . "\" action=\"" . Yii::app()->createUrl("/drcUser/SetFileType" ) . "\" method= \"post\">" . 
 					$this->grid->controller->widget(\'base.extensions.select2.ESelect2\',array(
-						"name"=>"ftList",
+						"name"=>"fileType" . $data->term_code . "-" . $data->class_num,
 				  		"data"=>FileType::options(),
 						"htmlOptions"=>array("class"=>"input-large fileTypeList", ),
-					), true); 
-					echo CHtml::hiddenField("username", "'. $model->username .  '");
-					echo "</form>"\'', 
+						"events"=>array("change"=>"js:function(){ alert (\'Hello!\'); $(\"#ftForm" . $data->term_code . "-" . $data->class_num . "\").submit(); }",),
+					), true) . 
+					CHtml::hiddenField("username", "'. $model->username .  '") .
+					CHtml::hiddenField("term_code", $data->term_code ) .
+					CHtml::hiddenField("class_num", $data->class_num ) .
+					"</form>";', 
 			),
 			array( 
 				'header'=>'Status', 
@@ -123,8 +126,8 @@ if (!isset($contentTitle) || $contentTitle == ''){
 			 ),
 		),
 	)); 
-	echo '<script type="text/javascript"> jQuery(".fileTypeList").select2({"formatNoMatches":function(){return "No matches found";},"formatInputTooShort":function(input,min){return "Please enter "+(min-input.length)+" more characters";},"formatInputTooLong":function(input,max){return "Please enter "+(input.length-max)+" less characters";},"formatSelectionTooBig":function(limit){return "You can only select "+limit+" items";},"formatLoadMore":function(pageNumber){return "Loading more results...";},"formatSearching":function(){return "Searching...";}}); </script>';
-	
+	//echo '<script type="text/javascript"> jQuery(".fileTypeList").select2({"formatNoMatches":function(){return "No matches found";},"formatInputTooShort":function(input,min){return "Please enter "+(min-input.length)+" more characters";},"formatInputTooLong":function(input,max){return "Please enter "+(input.length-max)+" less characters";},"formatSelectionTooBig":function(limit){return "You can only select "+limit+" items";},"formatLoadMore":function(pageNumber){return "Loading more results...";},"formatSearching":function(){return "Searching...";}}); </script>';
+	//echo '<script type="text/javascript"> jQuery(".fileTypeList").on("change", function(e) {  $("#target").submit(); }); </script>';
 	?>
 
     </div><!--/span-->

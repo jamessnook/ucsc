@@ -39,7 +39,7 @@ class DrcUserController extends UserController
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('delete','save','update', 'courses', 'index', 'view', 'create', 'students', 'faculty', 'staff'),
+				'actions'=>array('delete','save','update', 'courses', 'index', 'view', 'create', 'students', 'faculty', 'staff', 'setFileType'),
 				'roles'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -122,6 +122,7 @@ class DrcUserController extends UserController
 	 */
 	public function actionCourses()
 	{
+		//echo "In Courses";
 		if (!isset($_REQUEST['username'])){
 			$_REQUEST['username'] = Yii::app()->user->name;
 		}
@@ -153,8 +154,11 @@ class DrcUserController extends UserController
 	 */
 	public function actionSetFileType()
 	{
-		if (!isset($_REQUEST['username'])){
-			$_REQUEST['username'] = Yii::app()->user->name;
+		echo "In Set File Type";
+		return $this->actionStudents();
+		if (isset($_REQUEST['username']) && isset($_REQUEST['term_code']) && isset($_REQUEST['class_num']) && isset($_REQUEST['username'])){
+			echo "In Set File Type";
+			return $this->actionStudents();
 		}
 	}
 	
