@@ -1,7 +1,7 @@
 <?php
 /**
  * The top level layout file for all views.
- * This is non configurable because of how hte Yii classes use it,
+ * This is non configurable because of how the Yii classes use it,
  * (You can pass it a model but no other options.)
  * so it is left empty and _main.php is used instead.
  *

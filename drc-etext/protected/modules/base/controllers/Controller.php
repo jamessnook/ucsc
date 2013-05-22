@@ -36,7 +36,7 @@ class Controller extends CController
 	/**
 	 * @var UCSCModel default model object for this controller, used for most views.
 	 */
-	public $_model;
+	protected  $_model;
 	
 	/**
 	 * @var UCSCModel contained data model object for this controller, used for content in an inner section of the view.

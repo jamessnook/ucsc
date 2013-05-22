@@ -23,7 +23,12 @@ class LoginController extends Controller
 	public function actionIntro()
 	{
 		// display the login form
-		$this->render('intro');
+		//$this->render('intro');
+		$this->renderView(array(
+			'title' => 'Welcome',
+			'contentView' => 'base.views.login.intro',
+			'menuView' => 'none',
+		));
 	}
 	
 	/**
@@ -43,7 +48,12 @@ class LoginController extends Controller
 			Yii::app()->user->login($identity);
 			$this->finishLogin();			
 		} else {
-			$this->render('loginFail');
+			//$this->render('loginFail');
+			$this->renderView(array(
+				'contentView' => 'base.views.login.loginFail',
+				'title' => 'Login Failed',
+				'menuView' => 'none',
+			));
 		}
 	}
 	
@@ -79,7 +89,12 @@ class LoginController extends Controller
 				$this->redirect($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
 			}
 		} else {
-			$this->render('loginFail');
+			//$this->render('loginFail');
+			$this->renderView(array(
+				'contentView' => 'base.views.login.loginFail',
+				'title' => 'Login Failed',
+				'menuView' => 'none',
+			));
 		}
 	}
 	
@@ -88,18 +103,21 @@ class LoginController extends Controller
 	 */
 	public function actionLocalLogin()
 	{
-		$model=new LoginForm;
-
 		// collect user input data
 		if(isset($_POST['LoginForm']))
 		{
-			$model->attributes=$_POST['LoginForm'];
+			$this->model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
+			if($this->model->validate() && $this->model->login())
 				$this->finishLogin();			
 		}
 		// display the login form
-		$this->render('login',array('model'=>$model));
+		//$this->render('login',array('model'=>$model));
+		$this->renderView(array(
+			'contentView' => 'base.views.login.login',
+			'title' => 'Login',
+			'menuView' => 'none',
+		));
 	}
 
 			
@@ -142,8 +160,24 @@ class LoginController extends Controller
 				return;
 			}
 		}
-		$this->render('loginFail');
+		//$this->render('loginFail');
+		$this->renderView(array(
+			'contentView' => 'base.views.login.loginFail',
+			'title' => 'Login Failed',
+			'menuView' => 'none',
+		));
 	}
 	
-
+	/**
+	 * Returns the model for this controller.
+	 * Creates model if not yet set.
+	 */
+	public function getModel()
+	{
+		if (!$this->_model){
+			$this->_model = new LoginForm;
+		}
+		return $this->_model;
+	}
+	
 }
