@@ -108,10 +108,11 @@ if (!isset($contentTitle) || $contentTitle == ''){
 				'name'=>'fileType', 
 				'value'=>'"<form id=\"ftForm" . $data->term_code . "-" . $data->class_num . "\" action=\"" . Yii::app()->createUrl("/drcUser/SetFileType" ) . "\" method= \"post\">" . 
 					$this->grid->controller->widget(\'base.extensions.select2.ESelect2\',array(
-						"name"=>"fileType" . $data->term_code . "-" . $data->class_num,
-				  		"data"=>FileType::options(),
+						"name"=>"type" . $data->term_code . "-" . $data->class_num,
+						"value"=>$data->typeForUser(),
+				  		"data"=>FileType::optionsWithNameAsValue(),
 						"htmlOptions"=>array("class"=>"input-large fileTypeList", ),
-						"events"=>array("change"=>"js:function(){ alert (\'Hello!\'); $(\"#ftForm" . $data->term_code . "-" . $data->class_num . "\").submit(); }",),
+						"events"=>array("change"=>"js:function(){ $(\"#ftForm" . $data->term_code . "-" . $data->class_num . "\").submit(); }",),
 					), true) . 
 					CHtml::hiddenField("username", "'. $model->username .  '") .
 					CHtml::hiddenField("term_code", $data->term_code ) .

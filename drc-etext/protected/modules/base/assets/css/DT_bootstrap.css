@@ -57,3 +57,6 @@ table.dataTable th:active {
 	display: inline-block;
 	margin-top: 5px;
 }
+table form, table form .select2-container {
+	margin: 0;
+}

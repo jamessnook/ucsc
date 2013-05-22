@@ -35,8 +35,12 @@ class DrcUserController extends UserController
 	{
 		return array(
 			array('allow', // allow authenticated user to perform 'courses' and 'view' actions
-				'actions'=>array('index', 'courses', 'view'),
+				'actions'=>array('index', 'view'),
 				'users'=>array('@'),
+			),
+			array('allow', // allow authenticated user to perform view type actions
+				'actions'=>array('courses',),
+				'expression'=>'$user->name == $_REQUEST["username"]',
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('delete','save','update', 'courses', 'index', 'view', 'create', 'students', 'faculty', 'staff', 'setFileType'),
@@ -159,9 +163,10 @@ class DrcUserController extends UserController
 			if(!$contentModel->save())
 				throw new CHttpException(404,'ERROR could not update filetype.'); // temporary error code
 		}
-		$this->redirect(array('books','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num));
-		return $this->actionCourses();
-		}
+		//throw new CHttpException(404,'Data saved: username = ' . $contentModel->username . ', term: '
+		//  . $contentModel->term_code . ', class: ' . $contentModel->class_num  . ', type: ' . $contentModel->type ); // temporary debug code
+		$this->redirect(array('drcUser/courses','username'=>$this->model->username,'term_code'=>$this->model->term_code));
+		//return $this->actionCourses();
 	}
 	
 	/**

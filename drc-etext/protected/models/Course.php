@@ -368,4 +368,25 @@ class Course extends BaseModel
 		return $this->subject . ' ' . $this->catalog_num . ' - ' . $this->section;
 	}
 	
+	/**
+	 * Retrieves file type for course and user
+	 * @return string, descriptive id string for this file type.
+	 */
+	public function typeForUser()
+	{
+		$criteria=new CDbCriteria; 
+		$criteria->with = array( 'user' );
+		$criteria->together = true;
+		$criteria->compare('term_code',$this->term_code);
+		$criteria->compare('class_num',$this->class_num);
+		$criteria->compare('user.username', $this->username);
+
+		//$request = Drcrequest::model()->findByAttributes(array('username'=>$this->username, 'term_code'=>$this->term_code, 'class_num'=>$this->class_num, ));
+		$request = Drcrequest::model()->find($criteria);
+		if ($request){
+			return $request->type;
+		}
+		return '';
+	}
+	
 }

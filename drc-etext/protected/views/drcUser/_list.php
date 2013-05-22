@@ -55,7 +55,13 @@
 				'header'=>'Type', 
 				'name'=>'drcRequests.type', 
 				'type'=>'raw',
-				'value'=>'\'<span class="badge">\' . $data->typesString() . \'</span>\'', 
+				'value'=>'eval(\'
+					$tString = ""; 
+					foreach($data->types() as $type){
+						$tString .= "<span class=\"badge\">" . $type . "</span> ";
+					}
+					return $tString;
+				\')',
 			),
 			 array( 
 				'header'=>'Status', 

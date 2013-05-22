@@ -5,8 +5,16 @@ $this->breadcrumbs=array(
 );
 ?>
 
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+		  <div class="page-unit">
+			<div class="page-head">
+				<div class="row-fluid">
 <h1>Login</h1>
 
+    </div><!--/span-->
+</div><!--/row-->
 <p>Please fill out the following form with your login credentials:</p>
 
 <div class="form">
@@ -47,3 +55,7 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+    </div><!--/span-->
+</div><!--/row-->
+    </div><!--/span-->
+</div><!--/row-->

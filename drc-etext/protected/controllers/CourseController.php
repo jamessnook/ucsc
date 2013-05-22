@@ -28,19 +28,23 @@ class CourseController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform view type actions
-				'actions'=>array('index','assignments','books','courses','students','assignmentFiles', 'updateAssignment', 'description','downloadFile'),
+				'actions'=>array('index','assignments','books','assignmentFiles', 'description','downloadFile'),
 				'users'=>array('@'),
+			),
+			array('allow', // allow authenticated user to perform view type actions
+				'actions'=>array('courses',),
+				'expression'=>'$user ==$_REQUEST["username"]',
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('createAssignment','updateAssignment', 'saveAssignment', 
 					'createBook','updateBook', 'saveBook', 'studentAssignments', 'description', 
-					'assignments', 'books', 'students', 'createAssignment', 'createBook', 'manageBook',
+					'assignments', 'books','courses', 'students', 'createAssignment', 'createBook', 'manageBook',
 					'files', 'updateFile', 'saveFile', 'uploadFile', 'deleteFile','downloadFile',
 					'emails', 'saveEmail', 'updateEmail', 'createEmail', 'sendEmail', 'removeEmail', 'setFileType'),
 				'roles'=>array('admin'),
 			),
 			array('allow', // allow faculty user to perform actions
-				'actions'=>array('files', 'updateFile', 'saveFile', 'uploadFile', 'deleteFile','downloadFile'),
+				'actions'=>array('files', 'updateFile', 'saveFile','courses', 'uploadFile', 'deleteFile','downloadFile','students', 'updateAssignment'),
 				'roles'=>array('faculty'),
 			),
 			array('deny',  // deny all users

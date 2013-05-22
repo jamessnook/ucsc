@@ -110,4 +110,13 @@ class FileType extends CActiveRecord
 		return CHtml::listData(FileType::model()->findAll(), 'id', 'name');	
 	}
 	
+		/**
+	 * Retrieves an array of file types needed for this user.
+	 * @return array, the names of file types for this course.
+	 */
+	public static function optionsWithNameAsValue()
+	{
+		return CHtml::listData(FileType::model()->findAll(), 'name', 'name');	
+	}
+	
 }

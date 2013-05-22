@@ -27,7 +27,7 @@
  * @copyright Copyright &copy; 2012 University of California, Santa Cruz
  * @package drc-etext.protected.models
  */
-class DrcRequest extends CActiveRecord
+class DrcRequest extends BaseModel
 {
 	public $username; // for non emplid matches 
 	public $max_term_code; // for finding most recent term_code for a user
@@ -146,6 +146,24 @@ class DrcRequest extends CActiveRecord
 			$term = Term::currentTermCode();
 		}
 		return $term;
+	}
+
+	/**
+	 * Returns the data model based on the passed attributes.
+	 * Persues various ways of finding and creating the model
+	 * @param array of parameters
+	 * @return model instance of a BaseModel subclass built using the url params.
+	 */
+	public static function loadModel($params=null)
+	{
+		if (isset($_REQUEST['username']) && !isset($_REQUEST['emplid'])){
+			$user = DrcUser::model()->findByAttributes(array('username'=>$_REQUEST['username']));
+			$_REQUEST['emplid'] = $user->emplid;
+		}	
+		if (isset($_REQUEST['term_code']) && isset($_REQUEST['class_num']) && isset($_REQUEST['type' . $_REQUEST['term_code'] . "-" . $_REQUEST['class_num']])){
+			$_REQUEST['type'] = $_REQUEST["type" . $_REQUEST['term_code'] . "-" . $_REQUEST['class_num']];
+		}	
+				return parent::loadModel($params);
 	}
 
 }
