@@ -178,6 +178,14 @@ class Assignment extends BaseModel
 	 */
 	public function fileTypes()
 	{
+		$criteria=new CDbCriteria; 
+		$criteria->select();
+		$criteria->compare('class_num',$this->class_num);
+
+		return new CActiveDataProvider('DrcRequest', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
 		$username = Yii::app()->user->name;
 		$criteria=new CDbCriteria;
 		$criteria->with = array( 'file');

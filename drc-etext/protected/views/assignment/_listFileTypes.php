@@ -31,10 +31,9 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'pagerCssClass'=>"pagination", 
 	'columns'=>array(
 		array( 
-			'header'=>'Cruz Id', 
-			'class'=>'LinksColumn',
-			'labelExpression'=>'$data[\'username\']',
-			'urlExpression'=>'array(\'drcUser/update\', \'username\'=>$data[\'username\'])', 
+			'header'=>'File Type', 
+			'name'=>'fileType', 
+			'value'=> '$data[\'last_name\'] . \', \' . $data[\'first_name\']',
 		),
 		array( 
 			'header'=>'Name', 
