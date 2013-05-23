@@ -47,12 +47,12 @@ class FileType extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('name', 'length', 'max'=>32),
-			array('description', 'length', 'max'=>128),
+			array('type', 'required'),
+			array('type', 'length', 'max'=>32),
+			array('caption', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description', 'safe', 'on'=>'search'),
+			array('id, type, caption', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +64,7 @@ class FileType extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'drcRequests' => array(self::HAS_MANY, 'DrcRequest', 'type'),
 			'files' => array(self::HAS_MANY, 'File', 'type_id'),
 		);
 	}
@@ -75,8 +76,8 @@ class FileType extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
+			'type' => 'Type',
+			'caption' => 'Caption',
 		);
 	}
 
@@ -92,8 +93,8 @@ class FileType extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('description',$this->description,true);
+		$criteria->compare('type',$this->type,true);
+		$criteria->compare('caption',$this->caption,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -333,4 +333,4 @@ INSERT INTO email_type (name, sequence, tone) VALUES ('Other', 9, 'Other');
 
 mysql> LOAD DATA INFILE 'c:/users/jim/phpfog/ucsc/drc-etext/protected/data/course_instructor.txt' INTO TABLE course_instructor  LINES TERMINATED BY '\n' ;
 
-
+ALTER TABLE drc_request ADD FOREIGN KEY (type) REFERENCES FileType(name);
