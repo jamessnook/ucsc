@@ -44,3 +44,5 @@ $this->breadcrumbs=array(
 	</div>
 
 <?php $this->endWidget(); ?>
+
+</div>

@@ -77,6 +77,8 @@
 							echo $this->renderPartial('base.views.file._uploadAlert', array('model'=>$model)); 
 			          	} else {
 			          		echo $this->renderPartial('base.views.file._listFiles', array('model'=>$model)); 
+				            // student file type section
+			          		echo $this->renderPartial('../book/_listFileTypes', array('model'=>$model)); 
 			          		echo $this->renderPartial('../assignment/_uploadFiles', array('model'=>$model)); 
 			          	}
 					  ?>

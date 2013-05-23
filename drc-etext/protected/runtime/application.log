@@ -934,3 +934,142 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/base/login/login
 HTTP_REFERER=http://localhost/drc-etext/index.php/base/login/intro
 ---
+2013/05/22 22:38:35 [error] [php] Undefined variable: termCode (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\DrcTabMenu.php:20)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(24): LoginController->widget()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): LoginController->renderInternal()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): LoginController->renderFile()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): LoginController->renderPartial()
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): LoginController->render()
+#6 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(120): LoginController->renderView()
+#7 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\LoginController.php(69): LoginController->actionLocalLogin()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\components\DrcTabMenu.php (20)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php (24)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (105)
+2013/05/22 22:43:04 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/22 22:43:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/courses...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/courses/username/astudent
+---
+2013/05/23 01:14:31 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/23 01:14:47 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/23 01:15:09 [error] [php] Undefined index: username (C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(244): CAccessRule->isExpressionMatched()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(116): CAccessRule->isUserAllowed()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/courses/term_code/2122
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:18:18 [warning] [application] Failed to set unsafe attribute "created" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:18:18 [warning] [application] Failed to set unsafe attribute "modified" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:18:18 [warning] [application] Failed to set unsafe attribute "modified_by" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/update/username/astudent".' in C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('user/update/use...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/user/update/username/astudent
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/updateBook/id/1/term_code/2122/class_num/60423
+---
+2013/05/23 01:19:33 [warning] [application] Failed to set unsafe attribute "created" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:19:33 [warning] [application] Failed to set unsafe attribute "modified" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:19:33 [warning] [application] Failed to set unsafe attribute "modified_by" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:19:52 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/23 01:21:32 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/23 01:22:03 [warning] [application] Failed to set unsafe attribute "created" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:22:03 [warning] [application] Failed to set unsafe attribute "modified" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:22:03 [warning] [application] Failed to set unsafe attribute "modified_by" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 01:22:11 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/23 01:28:57 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/23 02:32:05 [warning] [application] Failed to set unsafe attribute "created" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 02:32:05 [warning] [application] Failed to set unsafe attribute "modified" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/23 02:32:05 [warning] [application] Failed to set unsafe attribute "modified_by" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)

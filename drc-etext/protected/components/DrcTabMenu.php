@@ -9,8 +9,19 @@ Yii::import('zii.widgets.CMenu');
 
 class DrcTabMenu extends TabMenu
 {
+	/**
+	 * @var integer the term code used for urls for emnu options
+	 * Defaults to null,
+	 */
+	public $termCode;
+	
 	public function init()
 	{
+		if (!$this->termCode &&  isset(Yii::app()->controller->model->term_code)){
+			$this->termCode = Yii::app()->controller->model->term_code;
+		} else {
+			$this->termCode = Term::currentTermCode();
+		}
 		$this->items = array(
 			array(
 				'label'=>'<i class="icon-dashboard"></i> Dashboard', 
@@ -20,13 +31,13 @@ class DrcTabMenu extends TabMenu
 			array(
 				'label'=>'Courses', 
 				'url'=>array('/course/courses', 
-				'term_code'=>Yii::app()->controller->model->term_code, ), 
+				'term_code'=>$this->termCode, ), 
 				'active'=> Yii::app()->controller->id == 'course',
 			),
 			array(
 				'label'=>'Assignments', 
 				'url'=>array('/assignment/manage', 
-				'term_code'=>Yii::app()->controller->model->term_code,), 
+				'term_code'=>$this->termCode,), 
 				'visible'=>Yii::app()->user->checkAccess('admin'),
 				'active'=> Yii::app()->controller->id == 'assignment',
 			),
@@ -48,15 +59,15 @@ class DrcTabMenu extends TabMenu
 				'items'=>array(
 					array(
 						'label'=>'Students', 
-						'url'=>array('/drcUser/students', 'term_code'=>Yii::app()->controller->model->term_code,),
+						'url'=>array('/drcUser/students', 'term_code'=>$this->termCode,),
 					),
 					array(
 						'label'=>'Faculty', 
-						'url'=>array('/drcUser/faculty', 'term_code'=>Yii::app()->controller->model->term_code,), 
+						'url'=>array('/drcUser/faculty', 'term_code'=>$this->termCode,), 
 					),
 					array(
 						'label'=>'Staff', 
-						'url'=>array('/drcUser/staff', 'term_code'=>Yii::app()->controller->model->term_code,), 
+						'url'=>array('/drcUser/staff', 'term_code'=>$this->termCode,), 
 					),
 				),
 			),

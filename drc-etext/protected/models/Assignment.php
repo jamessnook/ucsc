@@ -173,6 +173,28 @@ class Assignment extends BaseModel
 	}
 	
 	/**
+	 * Retrieves a data provider that can provide a list of file types and associated students for this Assignment 
+	 * @return CActiveDataProvider the data provider that can return a list of File Association models.
+	 */
+	public function fileTypes()
+	{
+		$username = Yii::app()->user->name;
+		$criteria=new CDbCriteria;
+		$criteria->with = array( 'file');
+		//$criteria->addCondition("drcRequests.username = $username");         
+		$criteria->compare('model_id',$this->id);
+		//$criteria->compare('file.type',$this->id);
+		$criteria->compare('model_name','Assignment');
+		$criteria->addCondition("file.type IN(SELECT drc_request.type FROM drc_request JOIN user USING(emplid) 
+		      WHERE user.username = $this->username)");         
+		
+		return new CActiveDataProvider('FileAssociation', array(
+					'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+	
+	/**
 	 * Retrieves a count of the files for this assignment.
 	 * @return integer, a count of the assignemtns for this course.
 	 */

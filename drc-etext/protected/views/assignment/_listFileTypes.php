@@ -1,6 +1,6 @@
 <?php
 /**
- * The base view component file for displaying a list of students using a book.
+ * The base view component file for displaying a list of file types and students using an assignment.
  * Can be included in a composite view 
  *
  * @author Jim Snook <jsnook@ucsc.edu>
@@ -10,7 +10,7 @@
 ?>
 
 							
-<h3>Students using <?php echo $model->title ?></h3>
+<h3>Students requiring <?php echo $model->title ?></h3>
 
 <?php 
 
@@ -18,7 +18,7 @@
 
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'assignmentFilesGrid2',
-	'dataProvider'=>$model->students(),
+	'dataProvider'=>$model->fileTypes(),
 	//'filter'=>$model,
 	//'hideHeader'=>true,
 	'summaryText'=>'',
