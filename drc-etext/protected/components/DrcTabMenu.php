@@ -22,6 +22,11 @@ class DrcTabMenu extends TabMenu
 		} else {
 			$this->termCode = Term::currentTermCode();
 		}
+		if (Yii::app()->user->checkAccess('admin')){
+			$coursesUrl = array('/course/courses', 'term_code'=>$this->termCode, );
+		} else {
+			$coursesUrl = array('/drcUser/courses', 'term_code'=>$this->termCode, 'username'=>Yii::app()->user->name, );
+					}
 		$this->items = array(
 			array(
 				'label'=>'<i class="icon-dashboard"></i> Dashboard', 
@@ -30,8 +35,7 @@ class DrcTabMenu extends TabMenu
 			),
 			array(
 				'label'=>'Courses', 
-				'url'=>array('/course/courses', 
-				'term_code'=>$this->termCode, ), 
+				'url'=>$coursesUrl, 
 				'active'=> Yii::app()->controller->id == 'course',
 			),
 			array(

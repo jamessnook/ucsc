@@ -10,11 +10,12 @@
 ?>
 
     
-					          
+<!-- - 				          
 <div class="control-group">
   <label class="control-label" for="input01">Type</label>
-            
+-->	            
 	<?php 
+		/*
 		foreach ($model->types() as $type){
 			echo '<span class="label">' . $type . '</span>';
 		}
@@ -22,10 +23,12 @@
 			echo '<p class="help-block"><small>Based on the students enrolled in this class, that requested Alt media for this class, these file types need to be included with this assignment request.</small></p>';
 		} else{
 			echo '<p class="help-block"><small>No students have yet requested Alt media types for this class.</small></p>';
-											}
+		}
+		*/
 	?>
-
+<!-- - 				          
 </div>
+-->	            
   
 <div class="page-header">
    <h2>Upload Files for this Assignment</h2>

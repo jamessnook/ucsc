@@ -10,7 +10,7 @@
 ?>
 
 							
-<h3>Students requiring <?php echo $model->title ?></h3>
+<h3>File types required for <?php echo $model->title ?></h3>
 
 <?php 
 
@@ -33,34 +33,21 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		array( 
 			'header'=>'File Type', 
 			'name'=>'fileType', 
-			'value'=> '$data[\'last_name\'] . \', \' . $data[\'first_name\']',
+			'value'=> '$data->name',
 		),
 		array( 
-			'header'=>'Name', 
-			'name'=>'name', 
-			'value'=> '$data[\'last_name\'] . \', \' . $data[\'first_name\']',
-		), 
-		/*array( 
-			'header'=>'Status, click to change', 
-			'class'=>'LinksColumn',
-		 	//'type'=>'raw',
-		 	//'urlExpression'=>'array(\'book/togglePurchased\', \'username\'=>$data->username, \'id\'=>$data->id, \'purchased\'=>$data->purchased)',  
-		 	'urlExpression'=>'array(\'book/togglePurchased\', \'username\'=>$data[\'username\'], \'book_id\'=>' .$model->id. ')',  
-		 	'labelExpression'=>'$data[\'purchased\']? \'<span class="badge badge-success">Purchased</span>\' : \'<span class="badge badge-warning">Not Purchased</span>\'', 
-		),*/
-		array( 
-			'header'=>'Status', 
-		 	'name'=>'purchased', 
+			'header'=>'Students', 
+			'name'=>'students', 
+			'value'=> '$data->students()',
 			'type'=>'raw',
-		 	'value'=>'$data[\'purchased\']? \'<span class="badge badge-success">Purchased</span>\' : \'<span class="badge badge-warning">Not Purchased</span>\'', 
-		 ),
-		 array( 
-			'header'=>'', 
-			'class'=>'LinksColumn',
-		 	'linkHtmlOptions'=>array('class'=>"btn"),
-		 	'labelExpression'=>'$data[\'purchased\']? \'Set Not Purchased\' : \'Set Purchased\'', 
-		 	'urlExpression'=>'array(\'book/togglePurchased\', \'username\'=>$data[\'username\'], \'book_id\'=>' .$model->id. ')',   
-		 ),
+			'value'=>'eval(\'
+				$tString = ""; 
+				foreach($data->students() as $student){
+					$tString .= $student->nameLastFirst() ."; &nbsp; ";
+				}
+				return $tString;
+			\')',
+		), 
 	),
 ));
 

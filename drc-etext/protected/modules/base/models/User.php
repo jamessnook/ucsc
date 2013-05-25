@@ -279,5 +279,21 @@ class User extends BaseModel
 		return $items;
 	}
 
-	
+	/**
+	 * Retrieves a users full name in last, first format
+	 * @return string full name.
+	 */
+	public function nameLastFirst()
+	{
+		return 	$this->last_name . ', ' . $this->first_name;
+	}
+		
+	/**
+	 * Retrieves a users full name in last, first format
+	 * @return string full name.
+	 */
+	public function nameFirstLast()
+	{
+		return 	$this->first_name . ' ' . $this->last_name;
+	}
 }

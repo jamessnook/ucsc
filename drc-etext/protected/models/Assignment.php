@@ -179,25 +179,13 @@ class Assignment extends BaseModel
 	public function fileTypes()
 	{
 		$criteria=new CDbCriteria; 
-		$criteria->select();
-		$criteria->compare('class_num',$this->class_num);
 
-		return new CActiveDataProvider('DrcRequest', array(
-			'criteria'=>$criteria,
-		 	'pagination' => false,
-		));
-		$username = Yii::app()->user->name;
-		$criteria=new CDbCriteria;
-		$criteria->with = array( 'file');
-		//$criteria->addCondition("drcRequests.username = $username");         
-		$criteria->compare('model_id',$this->id);
-		//$criteria->compare('file.type',$this->id);
-		$criteria->compare('model_name','Assignment');
-		$criteria->addCondition("file.type IN(SELECT drc_request.type FROM drc_request JOIN user USING(emplid) 
-		      WHERE user.username = $this->username)");         
+		$criteria->with = array( 'drcRequests');
+		$criteria->compare('drcRequests.class_num',$this->class_num);
+		$criteria->compare('drcRequests.term_code',$this->term_code);
 		
-		return new CActiveDataProvider('FileAssociation', array(
-					'criteria'=>$criteria,
+		return new CActiveDataProvider('DrcFileType', array(
+			'criteria'=>$criteria,
 		 	'pagination' => false,
 		));
 	}

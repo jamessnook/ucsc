@@ -45,21 +45,40 @@ class DrcFileType extends FileType
 	}
 
 	/**
+	 * Retrieves a data provider that can provide a list of file types and associated students for this Assignment 
+	 * @return CActiveDataProvider the data provider that can return a list of File Association models.
+	 */
+	public function studentNames()
+	{
+		$criteria=new CDbCriteria;
+		$criteria->compare('class_num',$this->class_num);
+		$criteria->with = array( 'DrcRequest');
+		//$criteria->addCondition("drcRequests.username = $username");         
+		$criteria->compare('model_id',$this->id);
+		//$criteria->compare('file.type',$this->id);
+		$criteria->compare('model_name','Assignment');
+		$criteria->addCondition("file.type IN(SELECT drc_request.type FROM drc_request JOIN user USING(emplid) 
+		      WHERE user.username = $this->username)");         
+		
+		return new CActiveDataProvider('FileType', array(
+			'criteria'=>$criteria,
+		 	'pagination' => false,
+		));
+	}
+	/**
 	 * Retrieves an array of file types needed for this user.
 	 * @return array, the names of file types for this course.
 	 */
-	public static function options()
+	public function students()
 	{
-		return CHtml::listData(FileType::model()->findAll(), 'id', 'name');	
+		$students = array();
+		foreach($this->drcRequests as $request)
+		{
+			$students[] = $request->user; // use value as key to prevent duplicates
+		}
+		return $students;
 	}
 	
-		/**
-	 * Retrieves an array of file types needed for this user.
-	 * @return array, the names of file types for this course.
-	 */
-	public static function optionsWithNameAsValue()
-	{
-		return CHtml::listData(FileType::model()->findAll(), 'name', 'name');	
-	}
 	
+		
 }

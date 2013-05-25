@@ -65,8 +65,16 @@ class SiteController extends Controller
 	    {
 	    	if(Yii::app()->request->isAjaxRequest)
 	    		echo $error['message'];
-	    	else
-	        	$this->render('error', $error);
+	    	else {
+	        	//$this->render('error', $error);
+	        	$this->_model = $error;
+				$this->renderView(array(
+					'contentView' => 'base.views.site.error',
+					'title' => 'Error ' . $error['code'] ,
+					'message' =>  $error['message'] ,
+					'menuView' => 'none',
+				));
+	    	}
 	    }
 	}
 

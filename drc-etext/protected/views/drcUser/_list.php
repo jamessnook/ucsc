@@ -41,7 +41,7 @@
 			 array( 
 				'header'=>'Name', 
 				'class'=>'LinksColumn',
-				'labelExpression'=>'$data->last_name . \', \' . $data->first_name', 
+				'labelExpression'=>'$data->nameLastFirst()', 
 				//'urlExpression'=>'array(\'user/courses\', \'username\'=>$data->username,' . $paramStr  .')', 
 				'urlExpression'=>'array(\'drcUser/courses\', \'username\'=>$data->username, \'term_code\'=>\''. $model->term_code . '\')',  
 			 ),

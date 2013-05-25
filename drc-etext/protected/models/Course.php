@@ -381,12 +381,27 @@ class Course extends BaseModel
 		$criteria->compare('class_num',$this->class_num);
 		$criteria->compare('user.username', $this->username);
 
-		//$request = Drcrequest::model()->findByAttributes(array('username'=>$this->username, 'term_code'=>$this->term_code, 'class_num'=>$this->class_num, ));
-		$request = Drcrequest::model()->find($criteria);
+		//$request = DrcRequest::model()->findByAttributes(array('username'=>$this->username, 'term_code'=>$this->term_code, 'class_num'=>$this->class_num, ));
+		$request = DrcRequest::model()->find($criteria);
 		if ($request){
 			return $request->type;
 		}
 		return '';
 	}
+	
+	/**
+	 * Retrieves an array of file types needed for this course and its users.
+	 * @return array, the names of file types for this course.
+	 */
+	public function types()
+	{
+		$types = array();
+		foreach($this->drcRequests as $request)
+		{
+			$types[$request->type] = $request->type; // use value as key to prevent duplicates
+		}
+		return $types;
+	}
+	
 	
 }

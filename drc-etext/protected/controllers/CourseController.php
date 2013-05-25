@@ -28,7 +28,7 @@ class CourseController extends Controller
 	{
 		return array(
 			array('allow', // allow authenticated user to perform view type actions
-				'actions'=>array('index','assignments','books','assignmentFiles', 'description','downloadFile'),
+				'actions'=>array('index','assignments','books','assignmentFiles', 'description','downloadFile','updateAssignment'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform view type actions
@@ -105,6 +105,10 @@ class CourseController extends Controller
 		if(isset($_POST['Completed'])) {
 			$contentModel->is_complete=true; // because it is not a form field in the post data
 			$contentModel->attributes=$_POST['Completed'];
+		}
+		if(isset($_POST['NotCompleted'])) {
+			$contentModel->is_complete=false; // because it is not a form field in the post data
+			$contentModel->attributes=$_POST['NotCompleted'];
 		}
 		if(!$contentModel->save())
 			throw new CHttpException(404,'ERROR could not save assignment.'); // temporary error code

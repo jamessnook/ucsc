@@ -78,7 +78,7 @@
 			          	} else {
 			          		echo $this->renderPartial('base.views.file._listFiles', array('model'=>$model)); 
 				            // student file type section
-			          		echo $this->renderPartial('../book/_listFileTypes', array('model'=>$model)); 
+			          		echo $this->renderPartial('../assignment/_listFileTypes', array('model'=>$model)); 
 			          		echo $this->renderPartial('../assignment/_uploadFiles', array('model'=>$model)); 
 			          	}
 					  ?>
@@ -91,9 +91,14 @@
 						<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array( 'class'=>"btn btn-primary" )); ?>
 						<?php echo CHtml::button('Cancel', array( 'class'=>"btn", 'onclick'=> "history.back()" )); ?>
 						<?php 
-							if (!$createNew)
-								echo CHtml::submitButton('Request Completed', array( 'class'=>"btn btn-success pull-right", 'name' => 'Completed', )); 
-						?>
+							if (!$createNew){
+								if ($model->is_complete){
+									echo CHtml::submitButton('Mark Assignment As Not Completed', array( 'class'=>"btn btn-success pull-right", 'name' => 'NotCompleted', )); 
+								}else{
+									echo CHtml::submitButton('Mark Assignment As Completed', array( 'class'=>"btn btn-success pull-right", 'name' => 'Completed', )); 
+								}
+							}
+							?>
 			            
 			          </div>
 			        </fieldset>

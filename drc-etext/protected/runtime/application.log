@@ -1073,3 +1073,303 @@ in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/24 01:06:13 [warning] [application] Failed to set unsafe attribute "created" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/24 01:06:13 [warning] [application] Failed to set unsafe attribute "modified" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/24 01:06:13 [warning] [application] Failed to set unsafe attribute "modified_by" of "Book".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (119)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/05/24 01:06:26 [error] [php] Undefined variable: types (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcFileType.php:79)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php(607): eval()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\grid\CDataColumn.php(139): CDataColumn->evaluateExpression()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(517): CDataColumn->renderDataCell()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(490): CGridView->renderTableRow()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(400): CGridView->renderTableBody()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#7 unknown(0): CGridView->renderSection()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\zii\widgets\CBaseListView.php(126): CGridView->renderContent()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(174): CGridView->run()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\assignment\_listFileTypes.php(52): CourseController->widget()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CourseController->renderInternal()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CourseController->renderFile()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\assignment\_edit.php(81): CourseController->renderPartial()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CourseController->renderInternal()
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CourseController->renderFile()
+#19 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CourseController->renderPartial()
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): CourseController->renderInternal()
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): CourseController->renderFile()
+#23 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): CourseController->renderPartial()
+#24 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CourseController->render()
+#25 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(95): CourseController->renderView()
+#26 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionUpdateAssignment()
+#27 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#28 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#29 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#30 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#31 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#32 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#33 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#34 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#35 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#36 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#37 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#38 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/updateAssignment/id/6/username
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcFileType.php (79)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\assignment\_listFileTypes.php (52)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\views\assignment\_edit.php (81)
+2013/05/24 02:07:17 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/24 02:10:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/courses...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/courses/username/astudent
+---
+2013/05/24 02:11:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/courses...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/courses/username/astudent
+---
+2013/05/24 02:13:02 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('drcUser/courses...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/drcUser/courses/username/astudent
+---
+2013/05/24 02:25:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/courses/...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/courses/term_code/2124
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/astudent
+---
+2013/05/25 01:03:54 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 01:03:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/courses/...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/courses/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/astudent
+---
+2013/05/25 01:41:46 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 01:47:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/courses/...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/courses/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username
+---
+2013/05/25 01:49:00 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:02:22 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:02:38 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:03:03 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:03:53 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:04:20 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:04:49 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:05:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('courses')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/courses/...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/courses/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/drcUser/courses/username/astudent/term_code/2122
+---
+2013/05/25 02:06:01 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:06:33 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:09:19 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:46:24 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:47:39 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:48:41 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:48:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('updateAssignmen...')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/updateAs...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/updateAssignment/id/6/username
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username
+---
+2013/05/25 02:49:28 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 02:51:41 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 03:00:46 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/25 03:04:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('updateAssignmen...')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/updateAs...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/updateAssignment/id/6/username/astudent
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username/astudent
+---
+2013/05/25 03:06:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('updateAssignmen...')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/updateAs...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/drc-etext/index.php/course/updateAssignment/id/6/username/astudent
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username/astudent
+---

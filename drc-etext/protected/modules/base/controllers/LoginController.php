@@ -151,8 +151,11 @@ class LoginController extends Controller
 	{
 		// login the user to yii app
 		//$identity=new SamlUserIdentity();
+		// authenticate with SAML - Shiboleth
 		$identity=Yii::app()->saml;
 		if ($identity->authenticate()){
+			// authorize with local database
+			$username = $identity->username;
 			$identity=new UserIdentity($username,'');
 			if ($identity->authenticate()){
 				Yii::app()->user->login($identity);
