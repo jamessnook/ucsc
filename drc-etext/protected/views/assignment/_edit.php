@@ -30,7 +30,7 @@
 						<?php echo $form->labelEx($model,'title'); ?>
 			            <div class="controls">
 			            
-							<?php echo $form->textField($model,'title',array('class'=>"input-xxlarge",'maxlength'=>127)); // also? id="input01", type="text" ?>
+							<?php echo $form->textField($model,'title',array('class'=>"span3",'maxlength'=>127)); // also? id="input01", type="text" ?>
 							<?php echo $form->error($model,'title'); ?>
 			              
 			            </div>
@@ -38,9 +38,20 @@
 			          <div class="control-group">
 						<?php echo $form->labelEx($model,'book_id'); ?>
 			            <div class="controls">
-							
-					        <?php 	$options = CHtml::listData(Book::model()->findAll(), 'id', 'title');
-					        		echo $form->dropDownList($model,'book_id', $options, array('class'=>"input-xxlarge"));
+							<?php
+							$this->widget('base.extensions.select2.ESelect2', array(
+								'model'=>$model,
+  								'attribute'=>'book_id',								
+ 							    'data'=>CHtml::listData(Book::model()->findAll(), 'id', 'title'),
+							    'htmlOptions'=>array( 'style'=>'height:20px;',  ),  //, 'class'=>"input-xxlarge"
+								'options'=>array(
+								    'placeholder'=>'No Book Selected',
+								    'allowClear'=>true,
+									'width'=>'resolve',
+									//'containerCssClass'=>'span3',
+									//'dropdownCssClass'=>'span3',
+							),							
+							));
 					        ?>
 							<?php echo $form->error($model,'book_id'); ?>
 
@@ -63,7 +74,7 @@
 							$this->widget('zii.widgets.jui.CJuiDatePicker', array(
 								'model'=>$model,
 								'attribute'=>'due_date',	    
-							    'options'=>array( 'showAnim'=>'fold',  ),
+							    'options'=>array( 'showAnim'=>'fold',  "dateFormat"=>"yy-mm-dd" ),
 							    'htmlOptions'=>array( 'style'=>'height:20px;', 'class'=>"input-xxlarge" ),
 							));
 							?>

@@ -70,7 +70,20 @@
 				'header'=>'', 
 				'name'=>'delete', 
 				'type'=>'raw',
-				'value'=>'\'<a href="#" class="btn">Remove</a>\'', 
+				//'value'=>'\'<a href="#" class="btn">Remove</a>\'', 
+				//'class'=>'LinksColumn',
+				//'label'=>'Remove', 
+			 	//'linkHtmlOptions'=>array('class'=>"btn", "submit"=>array('assignment/delete', 'id'=>'$data->id'), 'confirm'=>'Are you sure you want to permanently delete this assignment?', 'title'=>'Asignment Delete'),
+				//'urlExpression'=>'array(\'#\', )', 
+				'value'=>'CHtml::link("Remove", "#", array("class"=>"btn", "submit"=>array("assignment/delete", "id"=>$data->id), "confirm"=>"Are you sure you want to permanently delete this assignment?", "title"=>"Asignment Delete"));',
+				//eval(\'
+				
+				//$tString = ""; 
+				//foreach($data->students() as $student){
+				//	$tString .= $student->nameLastFirst() ."; &nbsp; ";
+				//}
+				//return $tString;
+			//\')',
 			 ),
 		),
 	)); 

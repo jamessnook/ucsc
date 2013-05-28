@@ -1373,3 +1373,161 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/course/updateAssignment/id/6/username/astudent
 HTTP_REFERER=http://localhost/drc-etext/index.php/course/assignments/term_code/2122/class_num/60423/username/astudent
 ---
+2013/05/28 03:09:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assignent/delete/id/1".' in C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignent/delet...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/assignent/delete/id/1
+HTTP_REFERER=http://localhost/drc-etext/index.php/assignment/manage/term_code/2122
+---
+2013/05/28 03:10:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Invalid request. Please do not repeat this request again.' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\AssignmentController.php:77
+Stack trace:
+#0 [internal function]: AssignmentController->actionDelete('1')
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AssignmentController), Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AssignmentController), Object(ReflectionMethod), Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('delete')
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/dele...')
+#13 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/drc-etext/index.php/assignment/delete/id/1
+HTTP_REFERER=http://localhost/drc-etext/index.php/assignment/manage/term_code/2122
+---
+2013/05/28 03:23:41 [error] [php] Undefined variable: data (C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\assignment\_adminList.php:76)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): AssignmentController->renderFile()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): AssignmentController->renderPartial()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): AssignmentController->renderInternal()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): AssignmentController->renderFile()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): AssignmentController->renderPartial()
+#6 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): AssignmentController->render()
+#7 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\AssignmentController.php(102): AssignmentController->renderView()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): AssignmentController->actionManage()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): AssignmentController->runAction()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): AssignmentController->filterAccessControl()
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): AssignmentController->runActionWithFilters()
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): AssignmentController->run()
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#19 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/assignment/manage/term_code/2122
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\assignment\_adminList.php (76)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php (56)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (105)
+2013/05/28 03:27:24 [error] [exception.CDbException] exception 'CDbException' with message 'The active record cannot be deleted because it is new.' in C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php:1167
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\AssignmentController.php(73): CActiveRecord->delete()
+#1 [internal function]: AssignmentController->actionDelete('"$data->id"')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AssignmentController), Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AssignmentController), Object(ReflectionMethod), Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('delete')
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/dele...')
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/assignment/delete/id/%22%24data-%3Eid%22
+HTTP_REFERER=http://localhost/drc-etext/index.php/assignment/manage/term_code/2122
+---
+2013/05/28 04:43:47 [error] [exception.CDbException] exception 'CDbException' with message 'The active record cannot be deleted because it is new.' in C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php:1167
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\AssignmentController.php(73): CActiveRecord->delete()
+#1 [internal function]: AssignmentController->actionDelete('"$data->id"')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AssignmentController), Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AssignmentController), Object(ReflectionMethod), Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('delete')
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/dele...')
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/assignment/delete/id/%22%24data-%3Eid%22
+HTTP_REFERER=http://localhost/drc-etext/index.php/assignment/manage/term_code/2122
+---
+2013/05/28 04:45:51 [error] [exception.CDbException] exception 'CDbException' with message 'The active record cannot be deleted because it is new.' in C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php:1167
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\AssignmentController.php(73): CActiveRecord->delete()
+#1 [internal function]: AssignmentController->actionDelete('$data->id')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(AssignmentController), Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(AssignmentController), Object(ReflectionMethod), Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('delete')
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/dele...')
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/assignment/delete/id/%24data-%3Eid
+HTTP_REFERER=http://localhost/drc-etext/index.php/assignment/manage/term_code/2122
+---
+2013/05/28 04:47:03 [error] [exception.CException] exception 'CException' with message 'Property "LinksColumn.type" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\YiiBase.php(222): CComponent->__set('type', 'raw')
+#1 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(313): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\Users\Jim\phpFog\ucsc\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(148): CGridView->init()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\views\assignment\_adminList.php(80): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#9 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): CController->renderPartial('_adminList', Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(127): require('C:\Users\Jim\ph...')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\Users\Jim\ph...', Array, true)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(870): CBaseController->renderFile('C:\Users\Jim\ph...', Array, true)
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(783): CController->renderPartial('base.views.layo...', Array, true)
+#14 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): CController->render('base.views.layo...', Array)
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\AssignmentController.php(102): Controller->renderView(Array)
+#16 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): AssignmentController->actionManage()
+#17 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#19 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#21 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#24 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('manage')
+#26 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('assignment/mana...')
+#27 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#28 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/drc-etext/index.php/assignment/manage/term_code/2122
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/updateAssignment/id/6/username
+---
