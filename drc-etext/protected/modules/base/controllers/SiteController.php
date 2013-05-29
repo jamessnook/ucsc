@@ -79,6 +79,18 @@ class SiteController extends Controller
 	}
 
 	/**
+	 * This is the action to display an about page.
+	 */
+	public function actionAbout()
+	{
+		$this->renderView(array(
+			'contentView' => 'base.views.site.about',
+			'title' => 'About ' . Yii::app()->name,
+			'menuView' => 'none',
+		));
+	}
+
+	/**
 	 * Displays the contact page / not currently used
 	 */
 	public function actionContact()
@@ -126,5 +138,13 @@ class SiteController extends Controller
 		}
 		Yii::app()->updater->update($server, $service, $params);
 		//$this->redirect(Yii::app()->homeUrl);
+	}
+	/**
+	 * Returns the model for this controller.
+	 * Creates model if not yet set.
+	 */
+	public function getModel()
+	{
+		return $this->_model;
 	}
 }

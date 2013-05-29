@@ -63,7 +63,7 @@
 				'htmlOptions'=>array('class'=>'nav'), 
 				'encodeLabel'=>false,
 				'items'=>array(
-					array('label'=>'<i class="icon-info-sign"></i> About', 'url'=>array('/site/about')),
+					array('label'=>'<i class="icon-info-sign"></i> About', 'url'=>array('/base/site/about')),
 					//array('label'=>'<i class="icon-envelope-alt"></i> Contact', 'url'=>array('/site/contact')),
 				), 
 			));

@@ -1531,3 +1531,24 @@ Stack trace:
 REQUEST_URI=/drc-etext/index.php/assignment/manage/term_code/2122
 HTTP_REFERER=http://localhost/drc-etext/index.php/course/updateAssignment/id/6/username
 ---
+2013/05/28 22:35:49 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/29 03:29:55 [error] [php] include(Site.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(133): spl_autoload_call()
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(103): SiteController->getModel()
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php(90): SiteController->renderView()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): SiteController->actionAbout()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/site/about
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (103)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (90)

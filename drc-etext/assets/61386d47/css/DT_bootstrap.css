@@ -53,9 +53,12 @@ table.dataTable th:active {
   margin: 8px 0;
 }
 
-.select2-container {
+.navbar .select2-container {
 	display: inline-block;
 	margin-top: 5px;
+}
+.controls .select2-container {
+	margin-bottom: 9px;
 }
 table form, table form .select2-container {
 	margin: 0;
