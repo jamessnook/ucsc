@@ -25,8 +25,10 @@ if (!isset($contentTitle) || $contentTitle == ''){
 	<?php 
 	$courseUrlExpression = '';
 	$typeValue =  '';
+	$typeLabel = 'File Type';
 	if ((Yii::app()->user->checkAccess('staff') || Yii::app()->user->checkAccess('admin'))&& isset($model->username)){
 		$courseUrlExpression = 'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num,)';
+		$typeLabel = 'File Type: Select to change';
 		$typeValue = '"<form id=\"ftForm" . $data->term_code . "-" . $data->class_num . "\" action=\"" . Yii::app()->createUrl("/drcUser/SetFileType" ) . "\" method= \"post\">" . 
 					$this->grid->controller->widget(\'base.extensions.select2.ESelect2\',array(
 						"name"=>"type" . $data->term_code . "-" . $data->class_num,
@@ -134,7 +136,7 @@ if (!isset($contentTitle) || $contentTitle == ''){
 					echo "</form>";', 
 			),*/
 			array( 
-				'header'=>'File Type: Select to change', 
+				'header'=>$typeLabel, 
 				'type'=>'raw',
 				'name'=>'fileType', 
 				'value'=>$typeValue, 
