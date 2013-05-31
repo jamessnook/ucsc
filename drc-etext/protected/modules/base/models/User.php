@@ -64,7 +64,7 @@ class User extends BaseModel
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			//array('username', 'required'),
+			array('username, email, first_name, last_name, role', 'required'),
 			array('username, emplid, first_name, middle_name, last_name, modified_by', 'length', 'max'=>64),
 			array('email, password, salt', 'length', 'max'=>128),
 			array('phone', 'length', 'max'=>32),
@@ -106,6 +106,7 @@ class User extends BaseModel
 			'password' => 'Password',
 			'salt' => 'Salt',
 			'modified_by' => 'Modified By',
+			'role' => 'Role',
 		);
 	}
 

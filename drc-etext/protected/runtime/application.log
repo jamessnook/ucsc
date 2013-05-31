@@ -1552,3 +1552,97 @@ REQUEST_URI=/drc-etext/index.php/base/site/about
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (133)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php (103)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (90)
+2013/05/30 19:39:57 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/30 19:40:19 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/30 19:51:25 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/30 23:23:35 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/30 23:37:33 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/30 23:37:48 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/30 23:41:24 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/30 23:54:36 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/30 23:54:47 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/30 23:55:39 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/31 02:43:17 [warning] [application] Failed to set unsafe attribute "count" of "DrcUser".
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\BaseModel.php (84)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\models\User.php (215)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\DrcUser.php (264)
+2013/05/31 02:50:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR could not save user data.' in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php:61
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionSave()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('save')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/user/save')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/drc-etext/index.php/base/user/save
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/user/create
+---
+2013/05/31 02:57:54 [error] [php] Undefined variable: model (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\BaseForm.php:60)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(190): UserController->createWidget()
+#1 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\user\_edit.php(17): UserController->beginWidget()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): UserController->renderInternal()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): UserController->renderFile()
+#5 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\layouts\_main.php(56): UserController->renderPartial()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): UserController->renderInternal()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): UserController->renderFile()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): UserController->renderPartial()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\Controller.php(105): UserController->render()
+#11 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\controllers\UserController.php(128): UserController->renderView()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): UserController->actionCreate()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): UserController->filterAccessControl()
+#18 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): UserController->runActionWithFilters()
+#21 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): UserController->run()
+#22 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/base/user/create
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\BaseForm.php (60)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\UserEditForm.php (24)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\user\_edit.php (17)

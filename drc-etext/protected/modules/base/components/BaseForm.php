@@ -57,6 +57,7 @@ class BaseForm extends CActiveForm
 		parent::init();
 		echo '<form class="" action="request-edit.html">';
 		echo '<fieldset> ';
+   		echo $this->errorSummary($this->model); 
 		foreach ($this->widgets as $wConf ){
 			$this->widget($wConf['className'], $wConf);
 			//$this->controller->widget($wConf['className'], $wConf);

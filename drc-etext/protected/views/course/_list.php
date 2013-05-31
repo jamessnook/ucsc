@@ -25,16 +25,18 @@ if (!isset($contentTitle) || $contentTitle == ''){
 	<?php 
 	$courseUrlExpression = '';
 	$typeValue =  '';
+	$typeHtmlOptions = array();
 	$typeLabel = 'File Type';
 	if ((Yii::app()->user->checkAccess('staff') || Yii::app()->user->checkAccess('admin'))&& isset($model->username)){
 		$courseUrlExpression = 'array(\'course/assignments\', \'term_code\'=>$data->term_code, \'class_num\'=>$data->class_num,)';
+		$typeHtmlOptions = array('class'=>"input-col",);
 		$typeLabel = 'File Type: Select to change';
 		$typeValue = '"<form id=\"ftForm" . $data->term_code . "-" . $data->class_num . "\" action=\"" . Yii::app()->createUrl("/drcUser/SetFileType" ) . "\" method= \"post\">" . 
 					$this->grid->controller->widget(\'base.extensions.select2.ESelect2\',array(
 						"name"=>"type" . $data->term_code . "-" . $data->class_num,
 						"value"=>$data->typeForUser(),
 				  		"data"=>FileType::optionsWithNameAsValue(),
-						"htmlOptions"=>array("class"=>"input-large fileTypeList", ),
+						"htmlOptions"=>array("class"=>"input-large fileTypeList input-item", ),
 						"events"=>array("change"=>"js:function(){ $(\"#ftForm" . $data->term_code . "-" . $data->class_num . "\").submit(); }",),
 					), true) . 
 					CHtml::hiddenField("username", "'. $model->username .  '") .
@@ -139,6 +141,7 @@ if (!isset($contentTitle) || $contentTitle == ''){
 				'header'=>$typeLabel, 
 				'type'=>'raw',
 				'name'=>'fileType', 
+			 	'htmlOptions'=>$typeHtmlOptions,
 				'value'=>$typeValue, 
 			),
 			array( 

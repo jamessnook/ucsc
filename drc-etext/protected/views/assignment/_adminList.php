@@ -63,21 +63,21 @@
 				'header'=>'', 
 				'class'=>'LinksColumn',
 				'label'=>'Edit', 
-			 	'htmlOptions'=>array('class'=>"btn-col",),
-			 	'linkHtmlOptions'=>array('class'=>"btn",),
+			 	'htmlOptions'=>array('class'=>"input-col",),
+			 	'linkHtmlOptions'=>array('class'=>"btn input-item",),
 			 	'urlExpression'=>'array(\'course/updateAssignment\', \'id\'=>$data->id)', 
 			 ),
 			 array( 
 				'header'=>'', 
 				'name'=>'delete', 
-			 	'htmlOptions'=>array('class'=>"btn-col",),
+			 	'htmlOptions'=>array('class'=>"input-col",),
 			 	'type'=>'raw',
 				//'value'=>'\'<a href="#" class="btn">Remove</a>\'', 
 				//'class'=>'LinksColumn',
 				//'label'=>'Remove', 
 			 	//'linkHtmlOptions'=>array('class'=>"btn", "submit"=>array('assignment/delete', 'id'=>'$data->id'), 'confirm'=>'Are you sure you want to permanently delete this assignment?', 'title'=>'Asignment Delete'),
 				//'urlExpression'=>'array(\'#\', )', 
-				'value'=>'CHtml::link("Remove", "#", array("class"=>"btn", "submit"=>array("assignment/delete", "id"=>$data->id), "confirm"=>"Are you sure you want to permanently delete this assignment?", "title"=>"Asignment Delete"));',
+				'value'=>'CHtml::link("Remove", "#", array("class"=>"btn input-item", "submit"=>array("assignment/delete", "id"=>$data->id), "confirm"=>"Are you sure you want to permanently delete this assignment?", "title"=>"Asignment Delete"));',
 				//eval(\'
 				
 				//$tString = ""; 

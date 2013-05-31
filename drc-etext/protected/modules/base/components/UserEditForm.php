@@ -22,13 +22,14 @@ class UserEditForm extends BaseForm
 			*/
 		);
 		parent::init();
+		echo '<p class="note">Fields with <span class="required">*</span> are required.</p>';
 		$this->controlRow('username', 'textField', array());
 		$this->controlRow('first_name', 'textField', array());
 		$this->controlRow('last_name', 'textField', array('maxlength'=>127));
 		$this->controlRow('email', 'textField', array('maxlength'=>127));
 		$this->controlRow('phone', 'textField', array());
 		echo ' <div class="control-group">';
-        echo CHtml::label('Role', 'role');
+        echo CHtml::label('Role *', 'role');
         echo '<div class="controls">';
 				
 		$username = $this->model->username;

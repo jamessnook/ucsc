@@ -64,18 +64,10 @@ table form, table form .select2-container {
 	margin: 0;
 }
 
-.table td.btn-col { padding: 3px;}
-.table td.btn-col .btn { padding: 2px, 4px, 2px, 4px; line-height: 12px;}
-/* responsive tables from dbushell.com */
-@media only screen and (max-width: 40em) { /*640*/
+/* responsive tables from dbushell.com, etc */
+div.dataTables_wrapper { display: block; overflow-x: auto; }
 
-	#rt1 { display: block; position: relative; width: 100%; }
-	#rt1 thead { display: block; float: left; }
-	#rt1 tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
-	#rt1 thead tr { display: block; }
-	#rt1 th { display: block; }
-	#rt1 tbody tr { display: inline-block; vertical-align: top; }
-	#rt1 td { display: block; min-height: 1.25em; }
+@media only screen and (max-width: 50em) { /*800*/
 
 	#rt2 { display: block; position: relative; width: 100%; }
 	#rt2 thead { display: block; float: left; }
@@ -89,7 +81,7 @@ table form, table form .select2-container {
 	*:first-child+html .table { zoom: 1; }
 
 	.table th,
-	.table td { margin: 0; padding: 0.4166em;/*10*/ vertical-align: top; border: 1px solid #babcbf; background: #fff; }
+	.table td { margin: 0; padding: 5px;/*10*/ vertical-align: top; border: 1px solid #babcbf; background: #fff; }
 	.table th { text-align: left; background: #fff2b2; }
 	
 	.table { display: block; position: relative; width: 100%;}
@@ -108,13 +100,17 @@ table form, table form .select2-container {
 	.table th:last-child,
 	.table td:last-child { border-bottom: 1px solid #babcbf; }
 
+	/* added to work with buttons or selects in in column */
+	.table td.input-col { padding: 3px; max-height: 22px; min-height: 22px;}
+	.table td.input-col .input-item { padding: 2px, 4px, 2px, 4px; line-height: 12px;}
+	.table td.input-col .select2-container .select2-choice {height: 18px; line-height: 18px;}
+}	
 	/* added to work with bootstrap datatables and gridview */
 	.table { border: none;}
 	.table { width: 100%; border-collapse: collapse; border-spacing: 0; }
 	.table-bordered thead:first-child tr:first-child th,.table thead:first-child tr:first-child th {border-top: 1px solid #babcbf;}
 	.table td {min-height: 18px; max-height: 18px; }
-	.table th { padding-right: 15px; white-space: nowrap; max-height: 18px; }
-	
-}
+	.table th { padding-right: 15px; white-space: nowrap; max-height: 18px; min-height: 18px;}
+
 	
 	
