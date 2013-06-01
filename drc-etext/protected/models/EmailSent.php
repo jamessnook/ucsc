@@ -77,6 +77,8 @@ class EmailSent extends BaseModel
 			'classNum' => array(self::BELONGS_TO, 'Course', 'class_num'),
 			'email' => array(self::BELONGS_TO, 'Email', 'email_id'),
 			'username0' => array(self::BELONGS_TO, 'User', 'username'),
+            'courses'=>array(self::BELONGS_TO, 'Course', 'term_code, class_num'),
+		    'courseInstructors'=>array(self::HAS_MANY, 'CourseInstructor', 'term_code, class_num'),
 		);
 	}
 
@@ -119,4 +121,21 @@ class EmailSent extends BaseModel
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Sends emails to instructors.
+	 * @return boolean, true if saved to db.
+	 */
+	public function sendToInstructors()
+	{
+		//Yii::app()->email->send('drcEtext@email.address','jsnook@ucsc.edu','Test Email for: ','message');
+		//foreach($this->courseInstructors as $cInstructor)
+		foreach($this->courseInstructors as $cInstructor){
+			//Yii::app()->email->send('drcEtext@email.address','jsnook@ucsc.edu','Test Email for: ' . $cInstructor->instructor->email,$cInstructor->email->message);
+			Yii::app()->email->send('drcEtext@email.address','jsnook@ucsc.edu','Test Email for: ','message');
+		}
+		return $this->save();
+	}
+	
+		
 }

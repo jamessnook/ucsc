@@ -200,10 +200,12 @@ class CourseController extends Controller
 	{
 		$contentModel=EmailSent::loadModel();
 		// add code to actually send the email here
-		if(!$contentModel->save())
+		//Yii::app()->email->send('from@email.address','jsnook@ucsc.edu','Subject','Body');
+		if(!$contentModel->sendToInstructors())
 				throw new CHttpException(404,'ERROR could not send email.'); // temporary error code
 		$this->redirect(array('emails','term_code'=>$this->model->term_code,'class_num'=>$this->model->class_num));
 	}
+
 
 	/**
 	 * Saves a new Book model or updates an old Book model in the database. 

@@ -337,6 +337,7 @@ CREATE TABLE email_sent (               -- maps books and files to a course
     -- foreign key (email_id) references email (id),
     -- foreign key (term_code ) references term (term_code),
     -- foreign key (term_code, class_num) references course (term_code, class_num),
+    -- foreign key (term_code, class_num) references course_instructor (term_code, class_num),
     -- foreign key (modified_by) references user (username)
 );
 
@@ -453,6 +454,8 @@ ALTER TABLE email_sent ADD CONSTRAINT esuu foreign key (username) references use
 ALTER TABLE email_sent ADD CONSTRAINT eseie foreign key (email_id) references email (id);
 ALTER TABLE email_sent ADD CONSTRAINT estct foreign key (term_code ) references term (term_code);
 ALTER TABLE email_sent ADD CONSTRAINT estccnc foreign key (term_code, class_num) references course (term_code, class_num);
+ALTER TABLE email_sent DROP FOREIGN KEY estccnci;
+ALTER TABLE email_sent ADD CONSTRAINT estccnci foreign key (term_code, class_num) references course_instructor (term_code, class_num);
 -- ALTER TABLE email_sent ADD CONSTRAINT esmbu foreign key (modified_by) references user (username);
 
 UPDATE file SET type = SUBSTRING_INDEX(name, '.', -1);

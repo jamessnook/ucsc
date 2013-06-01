@@ -54,11 +54,12 @@ class UserController extends Controller
 	 */
 	public function actionSave()
 	{
-		$model = User::loadModel();
+		$this->model = User::loadModel();
 
 		if(isset($_POST['User'])){
-			if(!$model->save()) {
-				throw new CHttpException(404,'ERROR could not save user data.'); // temporary error code
+			if(!$this->model->save()) {
+				return $this->edit();
+				//throw new CHttpException(404,'ERROR could not save user data.'); // temporary error code
 			}
 		}
 		$this->redirect(Yii::app()->request->getUrlReferrer()); // back from wence yee came
@@ -93,14 +94,13 @@ class UserController extends Controller
 	}
 	
 	/**
-	 * Displays form to update data for an existing user.
+	 * Displays form to edit data for an existing user.
 	 */
-	public function actionUpdate()
+	public function edit()
 	{
-	    if (!Yii::app()->user->checkAccess('admin')){
-			return $this->actionView();
-	    }
-		$this->model = User::loadModel();
+		if ($this->Model->getIsNewRecord()){
+			return $this->actionCreate();
+		}
 		if($this->model===null)
 			throw new CHttpException(404,'The requested user does not exist.');
 		$this->renderView(array(
@@ -110,6 +110,23 @@ class UserController extends Controller
 			'titleNavRight' => '<a href="' . $this->createUrl('user/create') . '"><i class="icon-plus"></i> Add User </a>',
 			'action'=>Yii::app()->createUrl("user/save", array('username'=>$this->model->username)),
 		));
+	}
+	
+	/**
+	 * Displays form to update data for an existing user.
+	 */
+	public function actionUpdate()
+	{
+	    if (!Yii::app()->user->checkAccess('admin')){
+			return $this->actionView();
+	    }
+		$this->model = User::loadModel();
+		if ($this->Model->getIsNewRecord()){
+			return $this->actionCreate();
+		}
+		if($this->model===null)
+			throw new CHttpException(404,'The requested user does not exist.');
+		$this->edit();
 	}
 	
 	/**

@@ -79,7 +79,11 @@ return CMap::mergeArray(
 				'simplesamlPath' => dirname(__FILE__) . '/../../../simplesaml/simplesaml',
 				'serviceProviderId' => 'ucsc-test--sp',
 	    	),
-	    	// uncomment the following to enable URLs in path-format
+			'email'=>array(
+				'class'=>'base.extensions.KEmail.KEmail',
+				'host_name'=>'smtp.ucsc.edu', //Hostname or IP of smtp server
+			),	    	
+			// uncomment the following to enable URLs in path-format
 			'urlManager'=>array(
 				'urlFormat'=>'path',
 				'rules'=>array(

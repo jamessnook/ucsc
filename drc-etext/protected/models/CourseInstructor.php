@@ -66,6 +66,7 @@ class CourseInstructor extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'course' => array(self::BELONGS_TO, 'Course', 'term_code, class_num'),
+			'sentEmails' => array(self::HAS_MANY, 'EmailSent', 'term_code, class_num'),
 			'instructor' => array(self::BELONGS_TO, 'DrcUser', 'emplid'),
 		);
 	}
