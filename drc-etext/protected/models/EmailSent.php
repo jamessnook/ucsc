@@ -77,7 +77,7 @@ class EmailSent extends BaseModel
 			'classNum' => array(self::BELONGS_TO, 'Course', 'class_num'),
 			'email' => array(self::BELONGS_TO, 'Email', 'email_id'),
 			'username0' => array(self::BELONGS_TO, 'User', 'username'),
-            'courses'=>array(self::BELONGS_TO, 'Course', 'term_code, class_num'),
+            'course1'=>array(self::BELONGS_TO, 'Course', 'term_code, class_num'),
 		    'courseInstructors'=>array(self::HAS_MANY, 'CourseInstructor', 'term_code, class_num'),
 		);
 	}
@@ -128,11 +128,13 @@ class EmailSent extends BaseModel
 	 */
 	public function sendToInstructors()
 	{
-		//Yii::app()->email->send('drcEtext@email.address','jsnook@ucsc.edu','Test Email for: ','message');
-		//foreach($this->courseInstructors as $cInstructor)
-		foreach($this->courseInstructors as $cInstructor){
+		//throw new CHttpException(404,'ERROR: ' . $this->course1->term_code . " - " . $this->course1->class_num); // temporary error code
+		//throw new CHttpException(404,'ERROR: ' . $this->course1->title); // temporary error code
+		foreach($this->course1->courseInstructors as $cInstructor){
 			//Yii::app()->email->send('drcEtext@email.address','jsnook@ucsc.edu','Test Email for: ' . $cInstructor->instructor->email,$cInstructor->email->message);
-			Yii::app()->email->send('drcEtext@email.address','jsnook@ucsc.edu','Test Email for: ','message');
+			if (Yii::app()->email->send('drcEtext@email.address','jsnook@ucsc.edu','Test Email for: ','message') != 1){
+				throw new CHttpException(404,'ERROR could not send e-mail.'); // temporary error code
+			}
 		}
 		return $this->save();
 	}

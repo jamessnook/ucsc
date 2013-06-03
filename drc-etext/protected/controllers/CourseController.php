@@ -198,7 +198,10 @@ class CourseController extends Controller
 	 */
 	public function actionSendEmail()
 	{
+		//throw new CHttpException(404,'ERROR: ' . implode(" ",$this->model->primaryKey)); // temporary error code
+		//throw new CHttpException(404,'ERROR: ' . $this->model->title); // temporary error code
 		$contentModel=EmailSent::loadModel();
+		//throw new CHttpException(404,'ERROR: ' . $contentModel->term_code . " " . $contentModel->class_num); // temporary error code
 		// add code to actually send the email here
 		//Yii::app()->email->send('from@email.address','jsnook@ucsc.edu','Subject','Body');
 		if(!$contentModel->sendToInstructors())

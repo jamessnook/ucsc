@@ -139,6 +139,30 @@ class SiteController extends Controller
 		Yii::app()->updater->update($server, $service, $params);
 		//$this->redirect(Yii::app()->homeUrl);
 	}
+	
+	/**
+	 * Displays the login page
+	 */
+	public function actionCreateITR()
+	{
+		$this->_model = new ITRForm;
+		// collect user input data
+		if(isset($_POST['ITRForm']))
+		{
+			$this->model->attributes=$_POST['ITRForm'];
+			//validate user input and redirect to the previous page if valid
+			if($this->model->validate() && $this->model->createITR()){
+				$this->redirect($this->model->returnUrl);
+			}
+		}
+		// display the ITR form
+		$this->renderView(array(
+			'contentView' => 'base.views.site.createITR',
+			'title' => 'Create ITR Ticket',
+			'menuView' => 'none',
+		));
+	}
+
 	/**
 	 * Returns the model for this controller.
 	 * Creates model if not yet set.

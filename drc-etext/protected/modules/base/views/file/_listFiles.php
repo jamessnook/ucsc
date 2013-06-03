@@ -10,7 +10,7 @@
 ?>
 
 							
-<h3>Curent Files for <?php echo $model->title ?></h3>
+<h3>Curent Files:</h3>
 
 <?php 
 
@@ -45,8 +45,10 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		array( 
 			'header'=>'Description', 
 			'name'=>'file.description', 
-			'value'=> '$data->file->description', 
-		 ),
+		 	'htmlOptions'=>array('class'=>"input-col",),
+		 	'type'=>'raw',
+			'value'=>'CHtml::textField("d" . $data->file->id, $data->file->description, array("class"=>"input-item input-xxlarge",));',
+		),
 	),
 ));
 

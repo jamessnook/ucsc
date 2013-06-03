@@ -105,12 +105,12 @@ div.dataTables_wrapper { display: block; overflow-x: auto; }
 	.table td.input-col .input-item { padding: 2px, 4px, 2px, 4px; line-height: 12px;}
 	.table td.input-col .select2-container .select2-choice {height: 18px; line-height: 18px;}
 }	
-	/* added to work with bootstrap datatables and gridview */
-	.table { border: none;}
-	.table { width: 100%; border-collapse: collapse; border-spacing: 0; }
-	.table-bordered thead:first-child tr:first-child th,.table thead:first-child tr:first-child th {border-top: 1px solid #babcbf;}
-	.table td {min-height: 18px; max-height: 18px; }
-	.table th { padding-right: 15px; white-space: nowrap; max-height: 18px; min-height: 18px;}
+/* added to work with bootstrap datatables and gridview */
+.table { border: none;}
+.table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+.table-bordered thead:first-child tr:first-child th,.table thead:first-child tr:first-child th {border-top: 1px solid #babcbf;}
+.table td {min-height: 18px; max-height: 18px; }
+.table th { padding-right: 15px; white-space: nowrap; max-height: 18px; min-height: 18px;}
 
 	
 	

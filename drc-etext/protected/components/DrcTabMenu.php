@@ -46,6 +46,12 @@ class DrcTabMenu extends TabMenu
 				'active'=> Yii::app()->controller->id == 'assignment',
 			),
 			array(
+				'label'=>'Report Problems', 
+				'url'=>array('/base/site/createITR'), 
+				'visible'=>Yii::app()->user->checkAccess('admin'),
+				'active'=> Yii::app()->controller->id == 'site' && Yii::app()->controller->action == 'createITR',
+			),
+			array(
 				'label'=>'<i class="icon-wrench"></i> Reports', 
 				'url'=>array('/course/courses'), 
 				'itemOptions'=>array('class'=>'pull-right'), 

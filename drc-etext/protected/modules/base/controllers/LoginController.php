@@ -128,10 +128,13 @@ class LoginController extends Controller
 	{
 		if (Yii::app()->user->checkAccess('admin')){
             Yii::app()->user->setState('isAdmin', true);
-			$this->redirect($this->createUrl( Yii::app()->params['adminHomePage']));
+            Yii::app()->user->setReturnUrl($this->createUrl( Yii::app()->params['adminHomePage']));
+			//$this->redirect($this->createUrl( Yii::app()->params['adminHomePage']));
 		} else {
-			$this->redirect($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
+            Yii::app()->user->setReturnUrl($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
+			//$this->redirect($this->createUrl( Yii::app()->params['homePage'], array('username'=>Yii::app()->user->name,)));
 		}
+		$this->redirect(Yii::app()->user->returnUrl); 
 	}
 
 			

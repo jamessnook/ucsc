@@ -326,19 +326,20 @@ CREATE TABLE email (               -- maps books and files to a course
 
 drop table if exists email_sent;
 CREATE TABLE email_sent (               -- maps books and files to a course
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,  --  primary key to keep yii AR happy
     email_id     INTEGER NOT NULL,     -- drc library id for book
     username    VARCHAR(64),          -- identifies who sent to
     term_code   INTEGER NOT NULL,       -- AIS: SYSADMIN.PS_SCR_DRC_CLCLSV.STRM
     class_num   INTEGER,               -- AIS: SYSADMIN.PS_SCR_DRC_CNTCLS.CLASS_NBR, 
     created    DATETIME,                -- when sent
     modified    DATETIME,               -- date and time of last change
-    modified_by    VARCHAR(64)         -- username of user who sent it
+    modified_by    VARCHAR(64),         -- username of user who sent it
     -- foreign key (username) references user (username),
-    -- foreign key (email_id) references email (id),
+    foreign key (email_id) references email (id),
     -- foreign key (term_code ) references term (term_code),
-    -- foreign key (term_code, class_num) references course (term_code, class_num),
-    -- foreign key (term_code, class_num) references course_instructor (term_code, class_num),
-    -- foreign key (modified_by) references user (username)
+    foreign key (term_code, class_num) references course (term_code, class_num),
+    -- foreign key (term_code, class_num) references course_instructor (term_code, class_num)
+    foreign key (modified_by) references user (username)
 );
 
 

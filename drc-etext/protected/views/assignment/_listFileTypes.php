@@ -10,7 +10,7 @@
 ?>
 
 							
-<h3>File types required for <?php echo $model->title ?></h3>
+<h3>Required file types: </h3>
 
 <?php 
 

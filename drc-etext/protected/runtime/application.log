@@ -1646,3 +1646,570 @@ REQUEST_URI=/drc-etext/index.php/base/user/create
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\BaseForm.php (60)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\components\UserEditForm.php (24)
 in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\modules\base\views\user\_edit.php (17)
+2013/06/01 06:56:09 [error] [exception.CException] exception 'CException' with message 'Alias "base.extensions.KEmail.KEmail" is invalid. Make sure it points to an existing PHP file.' in C:\Users\Jim\phpFog\ucsc\framework\YiiBase.php:318
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\YiiBase.php(198): YiiBase::import('base.extensions...', true)
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CModule.php(387): YiiBase::createComponent(Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\base\CModule.php(104): CModule->getComponent('email')
+#3 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): CModule->__get('email')
+#4 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#15 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#16 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470/username
+---
+2013/06/01 07:18:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR could not send e-mail.' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:132
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/1/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/01 07:19:48 [error] [exception.CException] exception 'CException' with message 'Property "EmailSent.course" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('course')
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): CActiveRecord->__get('course')
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/01 07:20:19 [error] [php] Invalid argument supplied for foreach() (C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php:481)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(142): EmailSent->getRelated()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): EmailSent->__get()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php (131)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (204)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/01 07:25:52 [error] [php] Invalid argument supplied for foreach() (C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php:481)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(142): EmailSent->getRelated()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): EmailSent->__get()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php (131)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (204)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/01 07:30:52 [error] [php] Invalid argument supplied for foreach() (C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php:481)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(142): EmailSent->getRelated()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): EmailSent->__get()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php (131)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (204)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/01 07:32:47 [error] [php] Invalid argument supplied for foreach() (C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php:481)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(142): EmailSent->getRelated()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): EmailSent->__get()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php (131)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (204)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/01 07:36:47 [error] [php] Invalid argument supplied for foreach() (C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php:481)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(142): EmailSent->getRelated()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): EmailSent->__get()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php (131)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (204)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/01 07:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: 62470' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/01 07:40:08 [error] [php] Invalid argument supplied for foreach() (C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php:481)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(142): EmailSent->getRelated()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): EmailSent->__get()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php (131)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (204)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 01:13:21 [error] [php] Invalid argument supplied for foreach() (C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php:481)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(142): EmailSent->getRelated()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): EmailSent->__get()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(204): EmailSent->sendToInstructors()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php (131)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (204)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 01:28:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: Array' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:201
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#11 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 01:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: 2122 62470' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:201
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#11 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 01:32:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: ' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(205): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 01:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: ' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(205): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 01:34:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: 3D Animation' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:202
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#11 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 01:34:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: ' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(206): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 01:40:51 [error] [php] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed (C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:204)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (204)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 01:42:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: 2122 62470' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:204
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#11 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 01:45:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: 2122 62470' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(207): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 01:45:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: 2122 - 62470' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(207): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 01:46:04 [error] [php] Invalid argument supplied for foreach() (C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveFinder.php:481)
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\db\ar\CActiveRecord.php(142): EmailSent->getRelated()
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php(131): EmailSent->__get()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(207): EmailSent->sendToInstructors()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#12 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#13 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php (131)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (207)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 02:04:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR: 2122 - 62470' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(207): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 02:05:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR could not send e-mail.' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:136
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(207): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 08:02:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ERROR could not send e-mail.' in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\models\EmailSent.php:136
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(207): EmailSent->sendToInstructors()
+#1 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSendEmail()
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('sendEmail')
+#11 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/sendEmai...')
+#12 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/emails/term_code/2122/class_num/62470
+---
+2013/06/02 08:02:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site/createITR/term_code/2124".' in C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('site/createITR/...')
+#1 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/drc-etext/index.php/site/createITR/term_code/2124
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/sendEmail/email_id/5/term_code/2122/class_num/62470
+---
+2013/06/02 20:35:19 [error] [exception.CException] exception 'CException' with message 'Property "BaseModule.returnUrl" is not defined.' in C:\Users\Jim\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\Jim\phpFog\ucsc\framework\base\CModule.php(106): CComponent->__get('returnUrl')
+#1 C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php(156): CModule->__get('returnUrl')
+#2 C:\Users\Jim\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): SiteController->actionCreateITR()
+#3 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\Users\Jim\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('createITR')
+#7 C:\Users\Jim\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('base/site/creat...')
+#8 C:\Users\Jim\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\Users\Jim\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/drc-etext/index.php/base/site/createITR
+HTTP_REFERER=http://localhost/drc-etext/index.php/base/site/createITR
+---
+2013/06/02 21:17:48 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 21:19:07 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 21:19:18 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 21:20:03 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 21:21:53 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 21:24:50 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 21:25:36 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 21:27:54 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/02 22:11:39 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
+in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
+in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)

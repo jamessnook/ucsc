@@ -53,10 +53,64 @@ table.dataTable th:active {
   margin: 8px 0;
 }
 
-.select2-container {
+.navbar .select2-container {
 	display: inline-block;
 	margin-top: 5px;
+}
+.controls .select2-container {
+	margin-bottom: 9px;
 }
 table form, table form .select2-container {
 	margin: 0;
 }
+
+/* responsive tables from dbushell.com, etc */
+div.dataTables_wrapper { display: block; overflow-x: auto; }
+
+@media only screen and (max-width: 50em) { /*800*/
+
+	#rt2 { display: block; position: relative; width: 100%; }
+	#rt2 thead { display: block; float: left; }
+	#rt2 tbody { display: -webkit-box; overflow-x: auto; }
+	#rt2 th,
+	#rt2 tr,
+	#rt2 td { display: block; }
+
+	.table:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+	* html .table { zoom: 1; }
+	*:first-child+html .table { zoom: 1; }
+
+	.table th,
+	.table td { margin: 0; padding: 5px;/*10*/ vertical-align: top; border: 1px solid #babcbf; background: #fff; }
+	.table th { text-align: left; background: #fff2b2; }
+	
+	.table { display: block; position: relative; width: 100%;}
+	.table thead { display: block; float: left; }
+	.table tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+	.table thead tr { display: block; }
+	.table th { display: block; }
+	.table tbody tr { display: inline-block; vertical-align: top; }
+	.table td { display: block; min-height: 1.25em; }
+
+	/* sort out borders */
+
+	.table th { border-bottom: 0; }
+	.table td { border-left: 0; border-right: 0; border-bottom: 0; }
+	.table tbody tr { border-right: 1px solid #babcbf; }
+	.table th:last-child,
+	.table td:last-child { border-bottom: 1px solid #babcbf; }
+
+	/* added to work with buttons or selects in in column */
+	.table td.input-col { padding: 3px; max-height: 22px; min-height: 22px;}
+	.table td.input-col .input-item { padding: 2px, 4px, 2px, 4px; line-height: 12px;}
+	.table td.input-col .select2-container .select2-choice {height: 18px; line-height: 18px;}
+}	
+	/* added to work with bootstrap datatables and gridview */
+	.table { border: none;}
+	.table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+	.table-bordered thead:first-child tr:first-child th,.table thead:first-child tr:first-child th {border-top: 1px solid #babcbf;}
+	.table td {min-height: 18px; max-height: 18px; }
+	.table th { padding-right: 15px; white-space: nowrap; max-height: 18px; min-height: 18px;}
+
+	
+	

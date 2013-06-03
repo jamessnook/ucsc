@@ -105,5 +105,8 @@ $(document).ready(function() {
 		"oLanguage": {
 			"sLengthMenu": "_MENU_ records per page"
 		}
+		//"sScrollX": "100%",
+		//"sScrollXInner": "110%",
+		//"bScrollCollapse": true
 	} );
 } );

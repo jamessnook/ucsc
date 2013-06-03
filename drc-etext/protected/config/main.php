@@ -72,7 +72,8 @@ return CMap::mergeArray(
 				// enable cookie-based authentication
 				'allowAutoLogin'=>true,
 				'loginUrl'=>array('base/login/login'),
-	    	),
+				'returnUrl'=>array('base/login/login'),
+		),
 	        'saml'=>array(
 	            'class'=>'base.extensions.saml.SamlUserIdentity',
 				//'simplesamlPath' => Yii::app()->request->baseUrl . '/../simplesaml/simplesaml',
