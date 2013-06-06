@@ -102,6 +102,7 @@ class CourseController extends Controller
 	public function actionSaveAssignment()
 	{
 		$contentModel=Assignment::loadModel();
+			//throw new CHttpException(404,'data: ' . $contentModel->files[28]['description']); // temporary error code
 		if(isset($_POST['Completed'])) {
 			$contentModel->is_complete=true; // because it is not a form field in the post data
 			$contentModel->attributes=$_POST['Completed'];

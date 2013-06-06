@@ -39,6 +39,11 @@ class Assignment extends BaseModel
 	/**
 	 * @var string (Non database atribute.)  Identifies optional user associated with the assignemt for the current action.
 	 */
+	public $files;
+	
+	/**
+	 * @var string (Non database atribute.)  Identifies optional user associated with the assignemt for the current action.
+	 */
 	//public $emplid;
 	
 	/**
@@ -118,6 +123,21 @@ class Assignment extends BaseModel
 	}
 
 	/**
+	 * save any relation data
+	 */
+	public function beforeSave()
+	{
+		foreach($this->fileIds as $fileAssociation)
+		{
+			if (isset($this->files[$fileAssociation->file_id])){
+				$fileAssociation->file->description = $this->files[$fileAssociation->file_id]['description'];
+				$fileAssociation->file->save();
+			}
+		}
+		return parent::beforeSave();
+	}
+
+	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
@@ -151,7 +171,7 @@ class Assignment extends BaseModel
 	}
 
 	/**
-	 * Retrieves a data provider that can provide a list of files uploaded for this Assignment that are available to a prticular user.
+	 * Retrieves a data provider that can provide a list of files uploaded for this Assignment that are available to a particular user.
 	 * @return CActiveDataProvider the data provider that can return a list of File Association models.
 	 */
 	public function studentFiles()

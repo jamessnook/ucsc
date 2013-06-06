@@ -6,7 +6,7 @@ $test_uri = 'https://cs9-dev.ucsc.edu/PSIGW/HttpListeningConnector?service=class
 //$test_uri = 'https://cs9-qa.ucsc.edu/PSIGW/HttpListeningConnector?service=classes';
 //$test_uri = 'https://ais-dev-dmz-1.ucsc.edu:1811/PSIGW/HttpListeningConnector?service=classes';
 $url = parse_url($test_uri);
-$test_data = 'Operation=SCX_ETEXT.v1&From=SCX_ETEXT_NODE&To=PSFT_CSDEV&UserName=ETEXT&Password=xxxxx';
+$test_data = 'Operation=SCX_ETEXT.v1&From=SCX_ETEXT_NODE&To=PSFT_CSDEV&UserName=ETEXT&Password=borog0v3s';
 //$test_data = 'Operation=SCX_ETEXT&From=SCX_ETEXT_NODE&To=PSFT_CSDEV&UserName=ETEXT&Password=xxxxx';
 
 //$timeout=30;

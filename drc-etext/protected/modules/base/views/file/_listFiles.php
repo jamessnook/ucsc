@@ -47,7 +47,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'name'=>'file.description', 
 		 	'htmlOptions'=>array('class'=>"input-col",),
 		 	'type'=>'raw',
-			'value'=>'CHtml::textField("d" . $data->file->id, $data->file->description, array("class"=>"input-item input-xxlarge",));',
+			'value'=>'CHtml::textField("' .get_class($model) . '[files][" . $data->file->id ."][description]", $data->file->description, array("class"=>"input-item input-xxlarge",));',
 		),
 	),
 ));

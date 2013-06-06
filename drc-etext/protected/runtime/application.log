@@ -2213,3 +2213,118 @@ in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
 2013/06/02 22:11:39 [warning] [application] Failed to set unsafe attribute "returnUrl" of "ITRForm".
 in C:\Users\Jim\phpFog\ucsc\drc-etext\protected\modules\base\controllers\SiteController.php (153)
 in C:\Users\Jim\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/06 02:05:58 [error] [php] Use of undefined constant file - assumed 'file' (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:105)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/saveAssignment/term_code/2122/class_num/60423/id/6
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (105)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/06 02:08:24 [error] [php] Use of undefined constant file - assumed 'file' (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:105)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/saveAssignment/term_code/2122/class_num/60423/id/6
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (105)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
+2013/06/06 02:10:54 [error] [exception.CException] exception 'CException' with message 'Property "Assignment.file" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('file')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CModel.php(593): CActiveRecord->__get('file')
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(105): CModel->offsetGet('file')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSaveAssignment()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('saveAssignment')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/saveAssi...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/course/saveAssignment/term_code/2122/class_num/60423/id/6
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/updateAssignment/id/6/username
+---
+2013/06/06 02:12:15 [error] [exception.CException] exception 'CException' with message 'Property "Assignment.file" is not defined.' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(144): CComponent->__get('file')
+#1 C:\Users\jsnook\phpFog\ucsc\framework\base\CModel.php(593): CActiveRecord->__get('file')
+#2 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(105): CModel->offsetGet('file')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSaveAssignment()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('saveAssignment')
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/saveAssi...')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/drc-etext/index.php/course/saveAssignment/term_code/2122/class_num/60423/id/6
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/updateAssignment/id/6/username
+---
+2013/06/06 02:33:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'data: gdfagdfgd' in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php:105
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSaveAssignment()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('saveAssignment')
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('course/saveAssi...')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/drc-etext/index.php/course/saveAssignment/term_code/2122/class_num/60423/id/6
+HTTP_REFERER=http://localhost/drc-etext/index.php/course/updateAssignment/id/6/username
+---
+2013/06/06 02:54:37 [error] [php] Use of undefined constant description - assumed 'description' (C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\Assignment.php:133)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php(114): Assignment->save()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): CourseController->actionSaveAssignment()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(134): CourseController->runAction()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CInlineFilter.php(59): CourseController->filterAccessControl()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CourseController->runActionWithFilters()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CourseController->run()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php(13): CWebApplication->run()
+REQUEST_URI=/drc-etext/index.php/course/saveAssignment/term_code/2122/class_num/60423/id/6
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\models\Assignment.php (133)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\protected\controllers\CourseController.php (114)
+in C:\Users\jsnook\phpFog\ucsc\drc-etext\index.php (13)
