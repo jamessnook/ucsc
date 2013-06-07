@@ -146,6 +146,7 @@ class Assignment extends BaseModel
 
 		$criteria=new CDbCriteria;
 		$criteria->with = array( 'course',);
+		$criteria->order = 'is_complete';
 		
 		$criteria->compare('t. term_code',$this->term_code);
 
@@ -278,7 +279,7 @@ class Assignment extends BaseModel
 	
 	/**
 	 * Retrieves an array of file types needed for this assignment for this user.
-	 * @return array, the names of file types for this course.
+	 * @return boolean, true if all students for this assignment have purchased the source material.
 	 */
 	public function purchased()
 	{
