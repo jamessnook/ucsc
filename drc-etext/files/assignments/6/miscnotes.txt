@@ -1,0 +1,116 @@
+select * from (select sid, count(distinct sysid) as sysidcnt from dbo.bk_log  group by sid) as tt where sysidcnt < 1   
+       
+select * from (select sid, count(distinct sysid) as sysidcnt from dbo.bk_log  group by sid) as tt where sysidcnt > 1  
+null, empty string	9
+1083005 2
+0147615	2
+
+select * from (select sysid, count(distinct sid) as sidcnt from dbo.bk_log  group by sysid) as tt where sidcnt < 1 
+         
+select * from (select sysid, count(distinct sid) as sidcnt from dbo.bk_log  group by sysid) as tt where sidcnt > 1 
+20819	2
+11112381	2
+88705	4
+180103	2
+11112256	2
+188243	2
+11111118	2
+102299	2
+11111119	2
+11111117	4
+29983	2
+92605	2
+11112071	2
+11114195	2
+11111112	2
+ 
+select * from (select sid, count(distinct sysid) as sysidcnt from dbo.bk_log  where timestamp>'20110101' group by sid) as tt where sysidcnt > 1  
+
+select * from (select sid, count(distinct sysid) as sysidcnt from dbo.bk_log  where timestamp>'20080101' group by sid) as tt where sysidcnt > 1  
+null, empty string	8
+
+select * from (select sysid, count(distinct sid) as sidcnt from dbo.bk_log  where timestamp>'20110101' group by sysid) as tt where sidcnt > 1 
+88705	2
+11114195	2
+11111112	2
+
+select * from (select sysid, count(distinct sid) as sidcnt from dbo.bk_log  where timestamp>'20080101' group by sysid) as tt where sidcnt > 1 
+11112256	2
+188243	2
+11111118	2
+88705	4
+180103	2
+11112381	2
+11111119	2
+11111117	4
+29983	2
+11112071	2
+11114195	2
+11111112	2
+
+
+where sid = '0009999' char9 sysid int
+
+
+Ressources Minieres Pro-Or Inc
+
+staff2/TransactionLogs/*
+staff2\includes\inc_staff_head.cfm
+staff2/includes/inc_header.cfm (menu)
+staff2/includes/inc_banner.cfm
+staff2/style/style.css
+common/components/student/student.cfc
+common/components/udf.cfc
+common\scripts\jquery.multiselect.min.js
+common\style\jquery.multiselect.css
+
+delete staff2\Bookings renamed to TransactionLogs
+
+
+INC0073971
+in addition to all of \staff2\TransactionLogs
+staff2\Application.cfm
+common\scripts\jquery.multiselect.min.js
+common\style\jquery.multiselect.css
+staff2\includes\inc_staff_head.cfm
+
+INC0073837
+staff2/TransactionLogs/transaction_log_list.cfm
+staff2/TransactionLogs/Application.cfm
+
+INC0073852
+staff2/application.cfm
+students/application.cfm
+common/components/studentstudent.cfc
+common/components/udf.cfc
+staff2/TransactionLogs/*
+delete staff2\Bookings renamed to TransactionLogs
+
+INC0068136
+renamed staff2\Bookings to staff2\TransactionLogs
+
+staff2/bookings/bk_log.cfm
+staff2/bookings/bk_log_list.cfm
+staff2/includes/inc_header.cfm (menu)
+staff2/style/style.css
+staff2/includes/inc_banner.cfm
+\staff2\Bookings\* (everything in this folder has been changed - text changes from RC)
+
+INC0073827
+No List
+
+<script type="text/javascript" src="/shs/common/scripts/jquery-1.8.0.min.js"></script>
+<!--- <script type="text/javascript" src="/shs/common/scripts/jquery-1.7.1.js"></script> --->
+<!--- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script> --->
+<!--- <link type="text/css" href="/shs/common/style/jquery-ui-1.8.14.custom.css" rel="Stylesheet" /> --->
+<!--- <link type="text/css" href="/shs/common/style/dark-hive/jquery-ui-1.8.21.custom.css" rel="Stylesheet" /> for datepicker with dark-hive theme --->
+<link type="text/css" href="/shs/common/style/custom-theme/jquery-ui-1.8.23.custom.css" rel="Stylesheet" /> <!--- for datepicker with staff2 theme --->
+<link type="text/css" href="/shs/common/style/jquery.multiselect.css" rel="Stylesheet" /> <!--- for multiselect --->
+<script type="text/javascript" src="/shs/common/scripts/jquery-ui-1.8.23.custom.min.js"></script> <!--- for datepicker with custom theme --->
+<script type="text/javascript" src="/shs/common/scripts/jquery.multiselect.min.js"></script> <!--- for multiselect --->
+<!--- <script type="text/javascript" src="/shs/common/scripts/jquery-ui-1.8.14.custom.min.js"></script> --->
+<script type="text/javascript" src="#application.Staff2Directory#/includes/countdown.js"></script>
+
+
+common/scripts/jquery-1.8.0.min.js
+common/scripts/jquery-ui-1.8.23.custom.min.js

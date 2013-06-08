@@ -306,7 +306,7 @@ class Course extends BaseModel
 		foreach($this->courseInstructors as $cInstructor)
 		{
 			if ($cInstructor->instructor){
-				$names[] = $cInstructor->instructor->first_name . ' ' . $cInstructor->instructor->last_name;
+				$names[] = $cInstructor->instructor->first_name . ' ' . $cInstructor->instructor->last_name . ' <i class="icon-share-alt"></i>';
 			} else if ($cInstructor->course){
 				$names[] = 'T= ' . $cInstructor->course->title;
 			} else if ($cInstructor->emplid){

@@ -79,13 +79,13 @@
 			 	'linkHtmlOptions'=>array('class'=>"btn"),
 				'labelExpression'=>'\'Manage\'', 
 				'urlExpression'=>'array(\'course/manageBook\', \'id\'=>$data->id, \'term_code\'=>\'' . $model->term_code . '\', \'class_num\'=>\'' . $model->class_num . '\')', 
-			 ),*/
+			 ),
 			 array( 
 				'header'=>'', 
 				'name'=>'delete', 
 				'type'=>'raw',
 				'value'=>'\'<a href="#" class="btn">Remove</a>\'', 
-			 ),
+			 ),*/
 		),
 	)); 
 	?>
