@@ -73,7 +73,7 @@ return CMap::mergeArray(
 				'allowAutoLogin'=>true,
 				'loginUrl'=>array('base/login/login'),
 				'returnUrl'=>array('base/login/login'),
-		),
+			),
 	        'saml'=>array(
 	            'class'=>'base.extensions.saml.SamlUserIdentity',
 				//'simplesamlPath' => Yii::app()->request->baseUrl . '/../simplesaml/simplesaml',
@@ -136,7 +136,7 @@ return CMap::mergeArray(
 					*/
 				),
 			),
-	        'importer'=>array(
+	        'divDataImporter'=>array(
 	            'class'=>'DataImporter',
 				'feed' => array(
 	            	'class'=>'FileDataFeed',
@@ -144,31 +144,141 @@ return CMap::mergeArray(
 				),
 				'reader' => array(
 	            	'class'=>'CSVReader',
-					'modelClass'=>'User',
-					'fieldNames'=>array(
+					'model'=>'User',
+					'fields'=>array(
 						'fName',
 						'lName',
 					),
 				),
 			),
-	        'importerx'=>array(
-	            'class'=>'CSVFileImporter',
-				'location'=>'testFilePathAndName',
-				'modelClass'=>'User',
-				'fieldNames'=>array(
-					'fName',
-					'lName',
+			'AISCourseImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'classes',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'elements' => array(
+						'class' => array(  // element is named 'class'
+							'model'=>'Course',
+							//'mapper'=>'CourseMapper',  optional mapper class skips rest of config for this model class
+							'children' => array(
+								'emplid' => array(
+									'model'=>'CourseInstructor',
+									'thisAsAttribute'=>'emplid',
+									'parentAttributes' => array(
+										'termCode'=>'term_code',
+										'classNum'=>'class_num',
+									),
+								),
+							),
+						),
+					),
 				),
 			),
-			'importerxx'=>array(
-	            'class'=>'DataImporter',
-	            'feedClass'=>'FileDataFeed',
-				'readerClass'=>'CSVReader',
-				'location'=>'testFilePathAndName',
-				'modelClass'=>'User',
-				'fieldNames'=>array(
-					'fName',
-					'lName',
+			'AISTermImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'terms',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'elements'  => array(
+						'term' => array(  // element is named 'class'
+							'model'=>'Term',
+						),
+					),
+				),
+			),
+			'AISEnrollmentImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'enrollments',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+				),
+			),
+			'AISAccomodationImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'accommodations',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'elements' => array(
+						'drcAccommodation' => array(  // element is named 'person'
+							'model'=>'DrcAccommodation',
+						),
+					),
+				),
+			),
+			'AISStudentImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'students',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'students'  => array(
+					'elements' => array(
+						'person' => array(  // element is named 'person'
+							'model'=>'User',
+							'attributes' => array(
+								'cruzid'=>'username',
+							),
+							'defaults' => array(
+								'role'=>'student',
+							),
+						),
+					),
+						'instructors'  => array(
+							'person' => array(  // element is named 'person'
+								'model'=>'User',
+								'attributes' => array(
+									'cruzid'=>'username',
+								),
+								'defaults' => array(
+									'role'=>'faculty',
+								),
+							),
+						),
+					),
 				),
 			),
 			'updater'=>array(

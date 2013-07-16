@@ -1,9 +1,9 @@
 <?php
 /**
- * ServiceDataFeed collects stream data from an external web service as a string.
+ * FileDataFeed collects data from a file as a string.
  * 
  * @author JSnook <jsnook@ucsc.edu>
- * @copyright Copyright &copy; 2012 University of California, Santa Cruz
+ * @copyright Copyright &copy; 2013 University of California, Santa Cruz
  * @package drc-etext.protected.components
  */
 class FileDataFeed extends DataFeed
@@ -11,13 +11,12 @@ class FileDataFeed extends DataFeed
     
     /**
      * 
-	 * This is a genreral purpose update function used to read a file and get data.
-	 * @param array $params    parameters.
+	 * This is the function used to get data.
      * @return string holding the data.
 	 */
-    public function getData($location)
+    public function getData()
     {
-    	return file_get_contents($location);
+    	return file_get_contents($config['location']);
     }
     
 }

@@ -1,22 +1,27 @@
 <?php
 /**
- * XMLUpdater handels calls to XML services to retreive data and update local datastores.
+ * DataReader is the abstrtact super class of classes used to process data and load it into the applications data models.
  * 
  * @author JSnook <jsnook@ucsc.edu>
- * @copyright Copyright &copy; 2012 University of California, Santa Cruz
- * @package drc-etext.protected.components
+ * @copyright Copyright &copy; 2013 University of California, Santa Cruz
+ * @package base.components
  */
-abstract class DataReader extends DataReader
+abstract class DataReader extends CComponent
 {
 	
+    /**
+     * The configuration data.
+     * This data comes from the config/main.php file
+     * @var array
+     */
+     public $config = array();
+     
 	/**
 	 * 
-	 * This is a genreral purpose update function used to call an xml service and import and save data to the applications models.
-	 * @param string $server   Identifies the name of the server to call as used in the main/config.php file
-	 * @param string $service  Identifies the name of the service to call on the server as used in the main/config.php file
-	 * @param array $params    parameters to be added to service request sent to server.
+	 * This is a general purpose function used process data and load it into the applications data models.
+	 * @param $data    object holding data.
 	 */
-    abstract public function update($dataString, $modelClass, $fieldNames = null)
+    abstract public function processData($data)
     {
 	}
 
