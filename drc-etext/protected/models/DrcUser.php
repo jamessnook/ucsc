@@ -257,11 +257,14 @@ class DrcUser extends User
 	 * Persues various ways of finding and creating the model
 	 * Adds functionality to arent class method to insure term_code is set.
 	 * @param array of parameters
-	 * @return model instance of a UCSCModel subclass built using the url params.
+	 * @return model instance of a BaseModel subclass built using the url params.
 	 */
 	public static function loadModel($params=null)
 	{
 		$aModel = parent::loadModel($params);
+		if (!$aModel->term_code){
+			$aModel->term_code = Term::currentTermCode();
+		}
 		if (!isset($_REQUEST['term_code'])){
 			$aModel->term_code = DrcRequest::latestTermCodeforUser($aModel->emplid);
 		}

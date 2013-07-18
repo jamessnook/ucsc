@@ -1,0 +1,320 @@
+2013/07/17 22:31:34 [error] [php] include(DrcTabMenu.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\CWidgetFactory.php(147): import()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(147): CWidgetFactory->createWidget()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(173): LoginController->createWidget()
+#3 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\views\layouts\_main.php(24): LoginController->widget()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(127): require()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CBaseController.php(96): LoginController->renderInternal()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(870): LoginController->renderFile()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(783): LoginController->renderPartial()
+#8 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\controllers\Controller.php(105): LoginController->render()
+#9 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\controllers\LoginController.php(120): LoginController->renderView()
+#10 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\controllers\LoginController.php(69): LoginController->actionLocalLogin()
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): LoginController->runAction()
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#15 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): LoginController->run()
+#16 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/base/login/login
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\views\layouts\_main.php (24)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\controllers\Controller.php (105)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\controllers\LoginController.php (120)
+2013/07/18 00:05:27 [error] [php] Undefined variable: reader (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php:32)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php(43): CWebApplication->__get()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ImportController->actionDivData()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php (32)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php (43)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\index.php (13)
+2013/07/18 00:07:43 [error] [exception.CException] exception 'CException' with message 'DataImporter and its behaviors do not have a method or closure named "update".' in C:\Users\jsnook\phpFog\ucsc\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php(43): CComponent->__call('update', Array)
+#1 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php(43): DataImporter->update()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ImportController->actionDivData()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('divData')
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('import/divData')
+#8 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/ascorga/index.php/import/divData
+---
+2013/07/18 00:09:00 [error] [php] Undefined variable: config (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\FileDataFeed.php:19)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ImportController->actionDivData()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\FileDataFeed.php (19)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php (45)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php (43)
+2013/07/18 00:13:19 [error] [php] Undefined index: fieldNames (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php:21)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ImportController->actionDivData()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (21)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php (45)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php (43)
+2013/07/18 00:13:44 [error] [php] Undefined variable: i (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php:65)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php(43): DataImporter->update()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ImportController->actionDivData()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (65)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (21)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php (45)
+2013/07/18 00:14:24 [error] [php] array_combine() [<a href='function.array-combine'>function.array-combine</a>]: Both parameters should have an equal number of elements (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php:66)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php(45): CSVReader->processData()
+#1 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php(43): DataImporter->update()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ImportController->actionDivData()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (66)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (21)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php (45)
+2013/07/18 00:15:35 [error] [php] array_combine() [<a href='function.array-combine'>function.array-combine</a>]: Both parameters should have an equal number of elements (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php:66)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php(45): CSVReader->processData()
+#1 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php(43): DataImporter->update()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ImportController->actionDivData()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (66)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (21)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php (45)
+2013/07/18 00:15:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ascorga.term' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `term`.
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (21)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\Term.php (34)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\Term.php (130)
+2013/07/18 00:15:56 [error] [exception.CDbException] exception 'CDbException' with message 'The table "term" for active record class "Term" cannot be found in the database.' in C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Term))
+#1 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php(21): CActiveRecord::model('Term')
+#2 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\Term.php(34): BaseModel::model('Term')
+#3 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\Term.php(130): Term::model()
+#4 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\Term.php(158): Term::terms()
+#5 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php(218): Term::currentTermCode()
+#6 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php(27): User::loadModel(Array)
+#7 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php(45): CSVReader->processData('fjones, 12345, ...')
+#8 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php(43): DataImporter->update()
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ImportController->actionDivData()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('divData')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('import/divData')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ascorga/index.php/import/divData
+---
+2013/07/18 00:23:51 [error] [php] Object of class User could not be converted to string (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php:29)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CInlineAction.php(50): ImportController->actionDivData()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (29)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataImporter.php (45)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\controllers\ImportController.php (43)
+2013/07/18 00:51:28 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 00:51:28 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 00:51:28 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 00:52:22 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 00:52:22 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 00:52:22 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:04:49 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:04:49 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:04:49 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:05:37 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:05:37 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:05:37 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:09:39 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:09:39 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:09:39 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:12:09 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:12:09 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:12:09 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:13:23 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:13:23 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 01:13:23 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (27)
+2013/07/18 02:05:09 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 02:05:09 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 02:05:09 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 02:28:55 [error] [exception.CException] exception 'CException' with message 'Alias "modules.base.components.actions.ImportDataAction" is invalid. Make sure it points to an existing directory or file.' in C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:343
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(198): YiiBase::import('modules.base.co...', true)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): YiiBase::createComponent(Array, Object(ImportController), 'divData')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): CController->createActionFromMap(Array, 'divData', 'divData')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): CController->createAction('divData')
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('divData')
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('import/divData')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/ascorga/index.php/import/divData
+---
+2013/07/18 02:30:05 [error] [exception.CException] exception 'CException' with message 'Alias "modules.base.components.actions.ImportDataAction" is invalid. Make sure it points to an existing directory or file.' in C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:343
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(198): YiiBase::import('modules.base.co...', true)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): YiiBase::createComponent(Array, Object(ImportController), 'divData')
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): CController->createActionFromMap(Array, 'divData', 'divData')
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): CController->createAction('divData')
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('divData')
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('import/divData')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/ascorga/index.php/import/divData
+---
+2013/07/18 02:30:44 [error] [php] include(ImportDataAction.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\YiiBase.php(198): import()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(441): createComponent()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(418): ImportController->createActionFromMap()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(260): ImportController->createAction()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\index.php (13)
+2013/07/18 02:31:54 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 02:31:54 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 02:31:54 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 02:31:54 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)

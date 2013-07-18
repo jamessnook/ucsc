@@ -136,6 +136,150 @@ return CMap::mergeArray(
 					*/
 				),
 			),
+			'AISCourseImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'classes',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'elements' => array(
+						'class' => array(  // element is named 'class'
+							'model'=>'Course',
+							//'mapper'=>'CourseMapper',  optional mapper class skips rest of config for this model class
+							'children' => array(
+								'emplid' => array(
+									'model'=>'CourseInstructor',
+									'thisAsAttribute'=>'emplid',
+									'parentAttributes' => array(
+										'termCode'=>'term_code',
+										'classNum'=>'class_num',
+									),
+								),
+							),
+						),
+					),
+				),
+			),
+			'AISTermImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'terms',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'elements'  => array(
+						'term' => array(  // element is named 'class'
+							'model'=>'Term',
+						),
+					),
+				),
+			),
+			'AISEnrollmentImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'enrollments',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+				),
+			),
+			'AISAccomodationImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'accommodations',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'elements' => array(
+						'drcAccommodation' => array(  // element is named 'person'
+							'model'=>'DrcAccommodation',
+						),
+					),
+				),
+			),
+			'AISStudentImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'students',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'elements' => array(
+						'person' => array(  // element is named 'person'
+							'model'=>'User',
+							'attributes' => array(
+								'cruzid'=>'username',
+							),
+							'defaults' => array(
+								'role'=>'student',
+							),
+						),
+					),
+				),
+			),
+			'AISInstructorImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'instructors',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'elements'  => array(
+						'person' => array(  // element is named 'person'
+							'model'=>'User',
+							'attributes' => array(
+								'cruzid'=>'username',
+							),
+							'defaults' => array(
+								'role'=>'faculty',
+							),
+						),
+					),
+				),
+			),
 			'updater'=>array(
 				//.....
 				'class'=>'XMLUpdater',

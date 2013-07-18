@@ -17,7 +17,7 @@ return CMap::mergeArray(
 	array(
 		'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 		'defaultController'=> 'base/login',
-		'name'=>'eText Library',
+		'name'=>'ASCORGA dev',
 		'homeUrl'=>array('/base/login/intro'),
 	
 		// preloading 'log' component
@@ -31,6 +31,7 @@ return CMap::mergeArray(
 			'application.modules.base.models.*',
 			'application.modules.base.controllers.*',
 			'application.modules.base.components.*',
+			'application.modules.base.components.actions.*',
 		),
 	
 		'aliases' => array(
@@ -105,12 +106,12 @@ return CMap::mergeArray(
 			// uncomment the following to use a MySQL database
 			'db'=>array(
 	 			'class'=>'CloudDbConnection',			
-	 			'connectionString' => 'mysql:host=localhost;dbname=etext',
+	 			'connectionString' => 'mysql:host=localhost;dbname=ascorga',
 				'emulatePrepare' => true,
 				'username' => 'root',
 				'password' => '',
 				'charset' => 'utf8',
-				'serviceName' => 'etext',
+				'serviceName' => 'ascorga',
 			),
 			'authManager'=>array(
 	            'class'=>'CDbAuthManager',
@@ -140,14 +141,19 @@ return CMap::mergeArray(
 	            'class'=>'DataImporter',
 				'feed' => array(
 	            	'class'=>'FileDataFeed',
-					'location'=>'testFilePathAndName',
+					'location'=>'C:\Users\jsnook\phpfog\ucsc\ascorga\testusers.csv',
 				),
 				'reader' => array(
 	            	'class'=>'CSVReader',
 					'model'=>'User',
-					'fields'=>array(
-						'fName',
-						'lName',
+					/*'fields'=>array(
+						'username',
+						'emplid',
+						'first_name',
+						'last_name'
+					),*/
+					'defaults'=>array(
+						'role'=>'faculty',
 					),
 				),
 			),
@@ -255,7 +261,6 @@ return CMap::mergeArray(
 				),
 				'reader' => array(
 	            	'class'=>'XMLReader',
-					'students'  => array(
 					'elements' => array(
 						'person' => array(  // element is named 'person'
 							'model'=>'User',
@@ -267,15 +272,30 @@ return CMap::mergeArray(
 							),
 						),
 					),
-						'instructors'  => array(
-							'person' => array(  // element is named 'person'
-								'model'=>'User',
-								'attributes' => array(
-									'cruzid'=>'username',
-								),
-								'defaults' => array(
-									'role'=>'faculty',
-								),
+				),
+			),
+			'AISInstructorImporter'=>array(
+				'class'=>'DataImporter',
+				'feed' => array(
+	            	'class'=>'ServiceDataFeed',
+					'location'=>'https://ais-dev-dmz-6.ucsc.edu:1821/PSIGW/HttpListeningConnector',
+					'operation' => 'SCX_ETEXT.v1',
+					'from' => 'SCX_ETEXT_NODE',
+					'to' => 'PSFT_CSDEV',
+					'uName' => 'ETEXT',
+					'pWord' => 'xxxxx',
+					'serevice' => 'instructors',
+				),
+				'reader' => array(
+	            	'class'=>'XMLReader',
+					'elements'  => array(
+						'person' => array(  // element is named 'person'
+							'model'=>'User',
+							'attributes' => array(
+								'cruzid'=>'username',
+							),
+							'defaults' => array(
+								'role'=>'faculty',
 							),
 						),
 					),
@@ -352,10 +372,10 @@ return CMap::mergeArray(
 		// using Yii::app()->params['paramName']
 		'params'=>array(
 			// These are used by certain classes and views in the base module
-			'tabMenuClass' => 'DrcTabMenu',
+			//'tabMenuClass' => 'DrcTabMenu',
 			'mainView' => 'base.views.layouts._main',
-			'homePage' => '/drcUser/courses',
-			'adminHomePage' => '/drcUser/students',
+			//'homePage' => '/drcUser/courses',
+			//'adminHomePage' => '/drcUser/students',
 		
 			// this is used in contact page
 			'adminEmail'=>'webmaster@example.com',

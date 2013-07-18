@@ -64,7 +64,7 @@ class User extends BaseModel
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, email, first_name, last_name, role', 'required'),
+			array('username, first_name, last_name, role', 'required'),
 			array('username, emplid, first_name, middle_name, last_name, modified_by', 'length', 'max'=>64),
 			array('email, password, salt', 'length', 'max'=>128),
 			array('phone', 'length', 'max'=>32),
@@ -209,14 +209,14 @@ class User extends BaseModel
 	 * Persues various ways of finding and creating the model
 	 * Adds functionality to arent class method to insure term_code is set.
 	 * @param array of parameters
-	 * @return model instance of a UCSCModel subclass built using the url params.
+	 * @return model instance of a BaseModel subclass built using the url params.
 	 */
 	public static function loadModel($params=null)
 	{
 		$aModel = parent::loadModel($params);
-		if (!$aModel->term_code){
-			$aModel->term_code = Term::currentTermCode();
-		}
+		//if (!$aModel->term_code){
+		//	$aModel->term_code = Term::currentTermCode();
+		//}
 		return $aModel;
 	}
 	

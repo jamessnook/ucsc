@@ -128,19 +128,6 @@ class SiteController extends Controller
 	}
 
 	/**
-	 * Requests data from web service feed and updates local database.
-	 */
-	public function actionUpdate($server='AIS', $service='classes')
-	{
-		$params = array();
-		if (isset($_GET['emplid'])){
-			$params['emplid']=$_GET['emplid'];
-		}
-		Yii::app()->updater->update($server, $service, $params);
-		//$this->redirect(Yii::app()->homeUrl);
-	}
-	
-	/**
 	 * Displays the login page
 	 */
 	public function actionCreateITR()

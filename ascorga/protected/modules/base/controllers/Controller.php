@@ -173,7 +173,7 @@ class Controller extends CController
 	
 	
 	/**
-	 * Assigns content model object.
+	 * 
 	 */
 	public function getModuleId()
 	{

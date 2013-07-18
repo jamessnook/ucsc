@@ -63,7 +63,7 @@ CREATE TABLE user (    -- AIS feed and creation by admins
 );
 Alter table user add index (emplid);
 
--- INSERT INTO user (username) VALUES ('admin');
+INSERT INTO user (username) VALUES ('admin');
 
 -- Update user set first_name = (Select first_name from user t1 where user.username != t1.username order by RANDOM() limit 1);
 -- Update user set middle_name = (Select middle_name from user t1 where user.username != t1.username order by RANDOM() limit 1);
