@@ -318,3 +318,1943 @@ in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataRea
 in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
 in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
 in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:09:36 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:09:36 [warning] [application] Failed to set unsafe attribute "isCurrent" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:09:36 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:09:36 [warning] [application] Failed to set unsafe attribute "isCurrent" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:09:36 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:09:36 [warning] [application] Failed to set unsafe attribute "isCurrent" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:09:36 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:09:36 [warning] [application] Failed to set unsafe attribute "isCurrent" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (216)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:20 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:20 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:20 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:20 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:20 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:56 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:56 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:56 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:56 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:15:56 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:18:33 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:18:33 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:18:33 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/18 21:18:33 [warning] [application] Failed to set unsafe attribute "count" of "User".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (37)
+2013/07/20 02:03:43 [error] [php] array_combine() [<a href='function.array-combine'>function.array-combine</a>]: Both parameters should have an equal number of elements (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php:62)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\actions\ImportDataAction.php(45): CSVReader->processData()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(75): ImportDataAction->run()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): ImportDataAction->runWithParams()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (62)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (21)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\actions\ImportDataAction.php (45)
+2013/07/20 02:06:17 [error] [php] array_combine() [<a href='function.array-combine'>function.array-combine</a>]: Both parameters should have an equal number of elements (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php:62)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\actions\ImportDataAction.php(45): CSVReader->processData()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(75): ImportDataAction->run()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): ImportDataAction->runWithParams()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (62)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (21)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\actions\ImportDataAction.php (45)
+2013/07/20 02:06:21 [error] [php] array_combine() [<a href='function.array-combine'>function.array-combine</a>]: Both parameters should have an equal number of elements (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php:62)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\actions\ImportDataAction.php(45): CSVReader->processData()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(75): ImportDataAction->run()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): ImportDataAction->runWithParams()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (62)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (21)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\actions\ImportDataAction.php (45)
+2013/07/20 02:07:42 [error] [php] Undefined offset: 822 (C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php:63)
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(75): ImportDataAction->run()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): ImportDataAction->runWithParams()
+#2 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): ImportController->runAction()
+#3 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): ImportController->runActionWithFilters()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): ImportController->run()
+#5 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CWebApplication->run()
+REQUEST_URI=/ascorga/index.php/import/divData
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (63)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (25)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\actions\ImportDataAction.php (45)
+2013/07/20 02:26:41 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'userid' cannot be null. The SQL statement executed was: INSERT INTO `AuthAssignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES (:itemname, :userid, :bizrule, :data).
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (203)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (42)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (63)
+2013/07/20 02:26:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'userid' cannot be null. The SQL statement executed was: INSERT INTO `AuthAssignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES (:itemname, :userid, :bizrule, :data)' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php(1178): CDbCommand->execute(Array)
+#1 C:\Users\jsnook\phpFog\ucsc\framework\web\auth\CDbAuthManager.php(260): CDbCommand->insert('AuthAssignment', Array)
+#2 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php(203): CDbAuthManager->assign('faculty', NULL)
+#3 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1034): User->afterSave()
+#4 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#5 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php(42): CActiveRecord->save()
+#6 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php(63): DataReader->saveRow(Array)
+#7 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php(25): DataReader->save(Array)
+#8 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\actions\ImportDataAction.php(45): CSVReader->processData('Last?Name,First...')
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(75): ImportDataAction->run()
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CAction->runWithParams(Array)
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(ImportDataAction))
+#12 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(ImportDataAction), Array)
+#13 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('divData')
+#14 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('import/divData')
+#15 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/ascorga/index.php/import/divData
+---
+2013/07/20 03:07:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '10130' for key 'div_data_id'. The SQL statement executed was: INSERT INTO `user` (`count`, `username`, `div_data_id`, `emplid`, `first_name`, `middle_name`, `last_name`, `title`, `division`, `department`, `email`, `phone`, `isCurrent`, `eff_date`, `created`, `modified`, `password`, `salt`, `modified_by`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18).
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (45)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (66)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php (25)
+2013/07/20 03:07:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '10130' for key 'div_data_id'. The SQL statement executed was: INSERT INTO `user` (`count`, `username`, `div_data_id`, `emplid`, `first_name`, `middle_name`, `last_name`, `title`, `division`, `department`, `email`, `phone`, `isCurrent`, `eff_date`, `created`, `modified`, `password`, `salt`, `modified_by`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14, :yp15, :yp16, :yp17, :yp18)' in C:\Users\jsnook\phpFog\ucsc\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 C:\Users\jsnook\phpFog\ucsc\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php(45): CActiveRecord->save()
+#3 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php(66): DataReader->saveRow(Array)
+#4 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\CSVReader.php(25): DataReader->save(Array)
+#5 C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\actions\ImportDataAction.php(45): CSVReader->processData('Last?Name,First...')
+#6 C:\Users\jsnook\phpFog\ucsc\framework\web\actions\CAction.php(75): ImportDataAction->run()
+#7 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(309): CAction->runWithParams(Array)
+#8 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(287): CController->runAction(Object(ImportDataAction))
+#9 C:\Users\jsnook\phpFog\ucsc\framework\web\CController.php(266): CController->runActionWithFilters(Object(ImportDataAction), Array)
+#10 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(276): CController->run('divData')
+#11 C:\Users\jsnook\phpFog\ucsc\framework\web\CWebApplication.php(135): CWebApplication->runController('import/divData')
+#12 C:\Users\jsnook\phpFog\ucsc\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\Users\jsnook\phpFog\ucsc\ascorga\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/ascorga/index.php/import/divData
+---
+2013/07/20 03:20:30 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:34 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:35 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:36 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:36 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:36 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:36 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:36 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:36 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:36 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:36 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:36 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:39 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:40 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:41 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:41 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:41 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:41 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:42 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:42 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:42 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:42 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:42 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:42 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:42 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:43 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:43 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:43 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:43 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:43 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:43 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:43 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:43 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:43 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:44 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:44 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:44 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:44 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:44 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:44 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:44 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:44 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:45 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:46 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:47 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:48 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:49 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:50 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:51 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:52 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:53 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:53 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:53 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:53 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:53 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:54 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:55 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:56 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:57 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:58 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:20:59 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:00 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:01 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:02 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:03 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:04 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:04 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:04 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:04 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:04 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:04 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:05 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:06 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:07 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:09 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:12 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:12 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:13 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:15 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:17 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:19 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:19 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:20 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:20 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:21 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:21 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:24 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:24 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:27 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:27 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:27 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:28 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:28 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:28 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:29 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:29 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:29 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:29 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:29 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:29 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:29 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:31 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:32 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:33 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:37 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)
+2013/07/20 03:21:38 [warning] [application] Failed to set unsafe attribute "count" of "AscorgaUser".
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\BaseModel.php (83)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\models\User.php (217)
+in C:\Users\jsnook\phpFog\ucsc\ascorga\protected\modules\base\components\DataReader.php (43)

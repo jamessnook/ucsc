@@ -42,6 +42,7 @@ class DataImporter extends CApplicationComponent
 	 */
      public function update()
      {
+     	set_time_limit ( 600 );
     	return $this->myReader->processData($this->myFeed->getData());
      }
 

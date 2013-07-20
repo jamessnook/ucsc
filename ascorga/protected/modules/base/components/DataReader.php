@@ -33,9 +33,15 @@ abstract class DataReader extends CComponent
 	    foreach ($this->config['defaults'] as $name => $value){
 	    	$row[$name] = $value;
 	    }
-		$modelClass = $this->config['model'];
+	    foreach ($this->config['convert'] as $name => $function){
+	    	$row[$name] = $this->$function($row[$name]);
+	    }
+	    foreach ($this->config['replace'] as $name => $options){
+	    	$row[$name] = $this->replace($row, $options);
+	    }
+	    $modelClass = $this->config['model'];
 		$record = $modelClass::loadModel($row);
-		echo $record->username .', ';
+		echo $record->div_data_id .', ';
 		$record->save();
     }
 
@@ -46,11 +52,43 @@ abstract class DataReader extends CComponent
 	 */
     public function save($dataArray)
     {
-		foreach($dataArray as $row){
-			$this->saveRow($row);
+		$model = CActiveRecord ::model($this->config['model']);
+	    foreach ($this->config['setAllBefore'] as $name => $value){
+			$model->updateAll(array($name=>$value));
+	    }
+	    $start = 0;
+	    if ($this->config['skipFirstRow']){
+	    	$start = 1;
+	    }
+	    $end = count($dataArray);
+		//foreach($dataArray as $row){
+		for($i=$start; $i<$end; $i++){
+			$this->saveRow($dataArray[$i]);
 		}	
     }
 
-    
+ 	/**
+	 * 
+	 * This converts a date string to MySQL format for insert to DB.
+	 * @param array $value    date string.
+	 */
+    public function toMysqlDate($value)
+    {
+    	return date('Y-m-d H:i:s', strtotime($value));;
+    }
+
+     /**
+	 * 
+	 * This creates a new value based on other values in a data row (array).
+	 * @param array $row    row data.
+	 */
+    public function replace( $row, $options=array())
+    {
+    	$prepend = '';
+    	if (isset($options['prepend'])) $prepend = $options['prepend'];
+    	return $prepend . $row[$options['oldField']];
+    }
+
+     
 
 }

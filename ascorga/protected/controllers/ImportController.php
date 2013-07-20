@@ -25,19 +25,39 @@ class ImportController extends Controller
 				'class'=>'ImportDataAction',
 				'feed' => array(
 	            	'class'=>'FileDataFeed',
-					'location'=>'C:\Users\jsnook\phpfog\ucsc\ascorga\testusers.csv',
+					'location'=>'C:\Users\jsnook\phpfog\ucsc\ascorga\divdatatest.csv',
 				),
 				'reader' => array(
 	            	'class'=>'CSVReader',
-					'model'=>'User',
-					/*'fields'=>array(
-						'username',
-						'emplid',
+					'model'=>'AscorgaUser',
+					'skipFirstRow'=>true,
+					'fields'=>array(
+						'last_name',
 						'first_name',
-						'last_name'
-					),*/
+						'div_data_id',
+						'email',
+						'division',
+						'eff_date',
+						'IGNORE',
+						'IGNORE',
+						'IGNORE',
+						'IGNORE',
+						'IGNORE',
+						'title',
+						'department',
+					),
+					'convert'=>array(
+						'eff_date'=>'toMysqlDate',
+					),
+					'replace'=>array(
+						'username'=>array('oldField'=>'div_data_id', 'prepend'=>'dData'),
+					),
 					'defaults'=>array(
 						'role'=>'faculty',
+						'isCurrent'=>1,
+					),
+					'setAllBefore'=>array(
+						'isCurrent'=>0,
 					),
 				),
 			),

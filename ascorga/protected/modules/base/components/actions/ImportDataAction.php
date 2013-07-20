@@ -17,7 +17,8 @@ class ImportDataAction extends CAction {
      */
      public $feed = array();
      public $reader = array();
-          
+     public $timeout = 600;
+     
     /**
      * Member components built using above config
      */
@@ -34,6 +35,8 @@ class ImportDataAction extends CAction {
     	$this->myReader->config = $this->reader;
     	$this->myFeed = new $this->feed['class'];
     	$this->myFeed->config = $this->feed;
+    	set_time_limit ( $this->timeout );
+    	
 	}
 	
 

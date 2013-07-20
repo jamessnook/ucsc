@@ -72,7 +72,7 @@ class User extends BaseModel
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			//array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by', 'safe', 'on'=>'search'),
-			array('username, emplid, first_name, middle_name, last_name, email, phone, created, modified, password, salt, modified_by, term_code, role', 'safe'),
+			array('username, emplid, first_name, middle_name, last_name, email, phone, isCurrent, created, modified, password, salt, modified_by, term_code, role', 'safe'),
 			);
 	}
 
@@ -101,6 +101,7 @@ class User extends BaseModel
 			'last_name' => 'Last Name',
 			'email' => 'Email',
 			'phone' => 'Phone',
+			'isCurrent' => 'Is Current',
 			'created' => 'Created',
 			'modified' => 'Modified',
 			'password' => 'Password',

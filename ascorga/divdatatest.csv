@@ -1,0 +1,822 @@
+Last Name,First Name,Person ID,Email,Division,Date Of Initial Hire,Sal Effective Date,Sal End Date,Title Types,Title Code,Payroll Title,Working Title,Dept Name
+Springer,Melanie,10130,mjs@ucsc.edu,SSD,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Politics
+Felix,Adrian,9919,afelix4@ucsc.edu,SSD,7/1/2011,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Latin American and Latino Studies
+Birnbaum,Raoul,647,rbirnb@ucsc.edu,ARTS,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History of Art and Visual Culture
+Stone,Abe,6161,abestone@ucsc.edu,HUM,7/1/2005,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Philosophy
+Tamanoi,Hirotaka,1079,tamanoi@ucsc.edu,PB&S,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Dewey,Rachel,3201,dewey@ucolick.org,PB&S,8/10/1999,7/1/2013,,"SOE, SEN",1603,Senior Lecturer with SOE - Academic Year,Senior Lecturer w/SOE,Physics
+FitzSimmons,Margaret,760,fitzsim@ucsc.edu,SSD,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Szasz,Andrew,1074,szasz@ucsc.edu,SSD,7/1/1986,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Shapiro,Helen,1041,hshapiro@ucsc.edu,SSD,1/1/1997,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Sociology
+Montgomery,Richard,955,rmont@ucsc.edu,PB&S,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Dong,Chongying,731,dong@math.ucsc.edu,PB&S,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Bonett,Douglas,10203,dgbonett@ucsc.edu,SSD,1/4/2013,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Deal,Amy Rose,9662,ardeal@ucsc.edu,HUM,7/1/2011,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Linguistics
+Abadi,Martin,3801,abadi@cs.ucsc.edu,ENG,7/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Profumo,Stefano,7407,profumo@ucsc.edu,PB&S,9/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Physics
+Polansky,Larry,9739,lpolansk@ucsc.edu,ARTS,7/1/2011,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Aso,Noriko,2479,naso@ucsc.edu,HUM,7/1/1998,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History
+Ellis,Jonathan,4383,jellis@ucsc.edu,HUM,7/1/2002,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Philosophy
+Sahota,Guriqbal,9188,sahota@ucsc.edu,HUM,7/1/2010,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Literature
+Ladusaw,William,890,ladusaw@ucsc.edu,HUM,7/1/1984,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Linguistics
+Partch,Carrie,9647,cpartch@ucsc.edu,PB&S,7/1/2011,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Chemistry and Biochemistry
+Chen,Shaowei,5138,schen@chemistry.ucsc.edu,PB&S,7/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Ochoa,Marcia,6212,marcia8a@ucsc.edu,HUM,7/1/2005,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Feminist Studies
+Christy,Alan,696,achristy@ucsc.edu,HUM,7/1/1995,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History
+Hu,Minghui,6168,mhu@ucsc.edu,HUM,7/1/2005,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History
+Lonetree,Amy,4407,lonetree@ucsc.edu,HUM,10/1/2002,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History
+Gruesz,Kirsten,810,ksgruesz@ucsc.edu,HUM,7/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Cooppan,Vilashini,4848,vcooppan@ucsc.edu,HUM,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Literature
+Jones,Catherine,7425,catjones@ucsc.edu,HUM,7/1/2008,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History
+Fortney,Jonathan,7338,jfortney@ucsc.edu,PB&S,7/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Astronomy and Astrophysics
+Cioc-Ortega,Mark,699,cioc@ucsc.edu,HUM,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Shaikh,Juned,10615,juneds@gmail.com,HUM,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History
+Reinarman,Craig,1013,craigr@ucsc.edu,SSD,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Sociology
+Lu,Flora,7942,floralu@ucsc.edu,SSD,7/1/2008,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Environmental Studies
+Mosqueda,Eduardo,7314,mosqueda@ucsc.edu,SSD,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Education
+Einarsdottir,Olof,742,olof@chemistry.ucsc.edu,PB&S,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+McKay,Steven,7369,smckay@ucsc.edu,SSD,7/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Sociology
+Finnegan,Noah,8020,nfinnega@ucsc.edu,PB&S,7/1/2009,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Earth & Planetary Sciences
+Sison Mangus,Marilou,10580,msisonma@ucsc.edu,PB&S,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Ocean Sciences
+Camps,Manel,7366,mcamps@ucsc.edu,PB&S,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Microbiology and Environmental Toxicology
+Ginzburg,Viktor,791,ginzburg@ucsc.edu,PB&S,7/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Zyzik,Eve,8118,ezyzik@ucsc.edu,HUM,7/1/2008,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Languages
+Zhang,Yi,6232,yiz@ucsc.edu,ENG,7/1/2005,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Engineering School
+Sadjadpour,Hamid,3807,hamid@soe.ucsc.edu,ENG,7/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Rodriguez,Abel,7371,abel@soe.ucsc.edu,ENG,7/1/2007,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Applied Mathematics and Statistics
+Anthony,David,626,danthony@ucsc.edu,HUM,7/1/1988,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History
+Profumo,Tesla (Jeltema),7482,tesla@ucsc.edu,PB&S,9/1/2007,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Physics
+Marriott,David,4304,marriott@ucsc.edu,HUM,7/1/2003,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History of Consciousness
+Polecritti,Cynthia,996,clpolecr@ucsc.edu,HUM,7/1/1988,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History
+Sullivan,Elaine,10635,elainesullivan@ucla.edu,HUM,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History
+Laughlin,Gregory,3811,laughlin@ucolick.org,PB&S,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Astronomy and Astrophysics
+Donaldson,Bryan,10647,bdonaldson@austin.utexas.edu,HUM,7/1/2013,1/1/2014,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Languages
+Gould,Deborah,8571,dbgould@ucsc.edu,SSD,7/1/2009,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Sociology
+Padgett,Jaye,982,padgett@ucsc.edu,HUM,7/1/1992,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Linguistics
+Harrison,Helen,9472,hharris1@ucsc.edu,ARTS,,10/1/2013,12/31/2013,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,Digital Arts and New Media
+Harrison,Newton,7952,nharriso@ucsc.edu,ARTS,1/1/2008,10/1/2013,12/31/2013,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,Digital Arts and New Media
+Marion,Justin,6200,marion@ucsc.edu,SSD,7/1/2005,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Economics
+Poole,Jennifer,7387,jpoole@ucsc.edu,SSD,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Economics
+Chung,Sandra,698,schung@ucsc.edu,HUM,7/1/1986,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Linguistics
+Woosley,Stanford,1133,woosley@ucolick.org,PB&S,7/1/1975,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Astronomy and Astrophysics
+Evangelatou,Maria,7422,maevang@ucsc.edu,ARTS,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History of Art and Visual Culture
+Johnson,Robert,866,rjohnson@scipp.ucsc.edu,PB&S,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Bogomolni,Roberto,650,bogomol@ucsc.edu,PB&S,4/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+McCarthy,Matthew,3355,mdmccar@ucsc.edu,PB&S,7/1/2001,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Ocean Sciences
+Carr,Mark,680,carr@biology.ucsc.edu,PB&S,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Winther,Rasmus,7333,rgw@ucsc.edu,HUM,7/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Philosophy
+Toosarvandani,Maziar,10678,mtoosarv@ucsc.edu,HUM,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Linguistics
+Fairlie,Robert,751,rfairlie@ucsc.edu,SSD,7/1/1994,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Economics
+Spearot,Alan,7386,aspearot@ucsc.edu,SSD,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Economics
+Aladro Font,Jorge,618,jaladro@ucsc.edu,HUM,7/1/1992,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Delgado,Grace,10660,gracepenadelgado@gmail.com,HUM,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History
+Zahler,Alan,1141,zahler@biology.ucsc.edu,PB&S,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Kurniawan,Sri,7395,skurnia@ucsc.edu,ENG,7/1/2007,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Computer Engineering
+Young,Allan Peter,1138,petery@ucsc.edu,PB&S,7/1/1984,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Tzankova,Zdravka,7427,tzankova@ucsc.edu,SSD,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Environmental Studies
+Gorry,Christopher,8570,cgorry@ucsc.edu,SSD,7/1/2009,7/1/2013,6/30/2015,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Economics
+Najera-Ramirez,Olga,964,olga@ucsc.edu,SSD,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Thorne,Avril,1086,avril@ucsc.edu,SSD,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Bunch,George,5159,gbunch@ucsc.edu,SSD,7/1/2004,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Education
+Loik,Michael,1342,mloik@ucsc.edu,SSD,1/1/1998,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Environmental Studies
+Haddad,Brent,818,bhaddad@ucsc.edu,SSD,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Cheng,Weixin,2448,wxcheng@ucsc.edu,SSD,7/1/1999,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Ash,Doris,3181,dash5@ucsc.edu,SSD,7/1/2000,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Education
+Bettie,Julie,645,jbettie@ucsc.edu,SSD,7/1/1997,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Sociology
+Ralston,Amy,8594,ralston@biology.ucsc.edu,PB&S,7/1/2009,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,"Molecular, Cell, and Developmental Biology"
+Lau,Kimberly,6756,lau@ucsc.edu,HUM,7/1/2006,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Stone,Victoria,7971,vastone@ucsc.edu,PB&S,11/1/2008,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Microbiology and Environmental Toxicology
+Takagi,Dana,1077,takagi@ucsc.edu,SSD,7/1/1987,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Sociology
+Aguirre,Anthony,4715,aguirre@scipp.ucsc.edu,PB&S,7/1/2003,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Ramirez-Ruiz,Enrico,6067,enrico@ucolick.org,PB&S,7/1/2005,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Astronomy and Astrophysics
+Warmuth,Manfred,1106,manfred@cse.ucsc.edu,ENG,7/1/1983,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Schlag,Martine,1030,martine@cse.ucsc.edu,ENG,7/1/1988,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Lodha,Suresh,916,lodha@cse.ucsc.edu,ENG,7/1/1992,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Helmbold,David,832,dph@cse.ucsc.edu,ENG,7/1/1986,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Lee,Ju Hee,10685,jle297@ucsc.edu,ENG,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Applied Mathematics and Statistics
+Scott,Judith,2456,jascott@ucsc.edu,SSD,1/1/2000,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Education
+Ramirez,Catherine,3864,cathysue@ucsc.edu,SSD,7/16/2001,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Latin American and Latino Studies
+Elbaum,Bernard,743,lbaum@ucsc.edu,SSD,7/1/1986,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Economics
+Errington,Shelly,747,sherring@ucsc.edu,SSD,7/1/1972,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Wu,Thomas Yen Hon,6790,thomaswu@ucsc.edu,SSD,7/1/2006,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Economics
+Green,Richard Edward,8621,regreen@ucsc.edu,ENG,7/1/2009,7/1/2013,6/30/2015,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Biomolecular Engineering
+McGuire,Grant,8096,gmcguir1@ucsc.edu,HUM,7/1/2008,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Linguistics
+Wagers,Matthew,8002,mwagers@ucsc.edu,HUM,7/1/2008,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Linguistics
+Horne,Jennifer,9708,jhorne1@ucsc.edu,ARTS,7/1/2011,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Film and Digital Media
+Wilson,Ronaldo,9744,rvwilson@ucsc.edu,HUM,7/1/2011,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Literature
+Kellogg,Douglas,875,kellogg@biology.ucsc.edu,PB&S,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Stuart,Joshua,4824,jstuart@soe.ucsc.edu,ENG,7/1/2003,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Biomolecular Engineering
+Zuniga,Martha,1148,zuniga@biology.ucsc.edu,PB&S,1/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Kim,L.S.,4303,lskim@ucsc.edu,ARTS,7/1/2002,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Film and Digital Media
+Gwyn (Miller),Melissa,4403,mgwyn@ucsc.edu,ARTS,7/1/2002,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Art
+Kamakaka,Rohinton,6198,rohinton@ucsc.edu,PB&S,1/1/2006,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Lowe,Todd,3794,lowe@soe.ucsc.edu,ENG,7/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Biomolecular Engineering
+Forsberg,Camilla,7451,cforsber@soe.ucsc.edu,ENG,7/1/2007,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Biomolecular Engineering
+Mangel,Marc,926,msmangel@ucsc.edu,ENG,7/1/1996,7/1/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Applied Mathematics and Statistics
+Leaper,Campbell,898,cam@ucsc.edu,SSD,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Azmitia,Margarita,632,azmitia@ucsc.edu,SSD,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Monroe,J. Cameron,6811,jcmonroe@ucsc.edu,SSD,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Anthropology
+Burke,Edmund,673,eburke@ucsc.edu,HUM,7/1/1968,7/1/2013,6/30/2015,SEN,1707,Research Professor,Research Professor,History
+Hong,Christine,8583,cjhong@ucsc.edu,HUM,7/1/2009,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Literature
+Locks,Norman,914,norman@ucsc.edu,ARTS,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Art
+Aptheker,Bettina,627,bettinaf@ucsc.edu,HUM,7/1/1987,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Feminist Studies
+Warburton,Edward (Ted),5200,tedw@ucsc.edu,ARTS,7/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Theater Arts
+Hunter,Donna,856,dhunter@ucsc.edu,ARTS,7/1/1987,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History of Art and Visual Culture
+Li,Yat,7321,yatli@ucsc.edu,PB&S,7/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Chemistry and Biochemistry
+Linington,Roger,7307,rliningt@ucsc.edu,PB&S,7/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Chemistry and Biochemistry
+Clapham,Matthew,7490,mclapham@ucsc.edu,PB&S,7/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Earth & Planetary Sciences
+Zhang,Jin,1144,zhang@chemistry.ucsc.edu,PB&S,7/1/1992,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Zurbriggen,Eileen,3213,zurbrigg@ucsc.edu,SSD,7/1/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Stephens,Elizabeth,1062,estephe@ucsc.edu,ARTS,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Art
+Murray,Derek,7454,dcmurray@ucsc.edu,ARTS,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History of Art and Visual Culture
+Kahana,Jonathan,9706,jkahana@ucsc.edu,ARTS,7/1/2011,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Film and Digital Media
+Kim,Hi Kyung,877,hkim@ucsc.edu,ARTS,7/1/1992,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Merchant,Tanya,7411,merchant@ucsc.edu,ARTS,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Music
+Hester,Karlton,3235,hesteria@ucsc.edu,ARTS,7/1/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Andrews,Lawrence,625,landrews@ucsc.edu,ARTS,7/1/1991,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Film and Digital Media
+Yamashita,Karen,1135,ktyamash@ucsc.edu,HUM,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Brandt,Scott,2497,sbrandt@cse.ucsc.edu,ENG,7/1/1999,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Wolf-Meyer,Matthew,8104,mwolfmey@ucsc.edu,SSD,7/1/2008,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Anthropology
+Smith,Donald,1055,smith@etox.ucsc.edu,PB&S,7/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Microbiology and Environmental Toxicology
+Jordan,John,869,picasso@ucsc.edu,HUM,7/1/1968,7/1/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Epstein,Barbara,746,bepstein@ucsc.edu,HUM,7/1/1974,7/1/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Consciousness
+Tan,Wang-Chiew,4351,wctan@soe.ucsc.edu,ENG,10/1/2002,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Polyzotis,Neoklis,4810,alkis@cs.ucsc.edu,ENG,7/1/2003,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Casel,Gerald,10745,gcasel@ucsc.edu,ARTS,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Theater Arts
+Pourmand,Nader,7509,pourmand@soe.ucsc.edu,ENG,7/1/2007,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Biomolecular Engineering
+Bullock,Heather,2446,hbullock@ucsc.edu,SSD,7/1/1999,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Hamel,Gildas,1884,gweltaz@ucsc.edu,HUM,1/1/1984,7/1/2013,,SEN,1621,Senior Lecturer with SOE - Emeritus,Senior Lecturer w/SOE Emer,History
+Kenez,Peter,876,kenez@ucsc.edu,HUM,7/1/1966,10/1/2013,12/31/2013,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,History
+Burke,Edmund,673,eburke@ucsc.edu,HUM,7/1/1968,10/1/2013,12/31/2013,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,History
+Beecher,Jonathan,637,jbeecher@ucsc.edu,HUM,7/1/1970,4/1/2014,6/30/2014,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,History
+Elkaim,Gabriel,4781,elkaim@soe.ucsc.edu,ENG,7/1/2003,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Alonzo,Suzanne,3820,shalonzo@ucsc.edu,PB&S,9/1/1998,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Burman-Hall,Linda,675,lbh@ucsc.edu,ARTS,4/1/1976,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Anand,Pranav,6767,panand@ucsc.edu,HUM,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Linguistics
+Massoud,Mark,8579,mmassoud@ucsc.edu,SSD,7/1/2009,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Politics
+Chuang,Patrick,3764,pchuang@es.ucsc.edu,PB&S,7/1/2001,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Potts,Donald,998,potts@ucsc.edu,PB&S,7/1/1977,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Robinson,Jonathan,7389,jmrtwo@ucsc.edu,SSD,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Economics
+Kubby,Joel,5695,jkubby@soe.ucsc.edu,ENG,1/1/2005,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Mangel,Marc,926,msmangel@ucsc.edu,ENG,7/1/1996,8/1/2013,6/30/2016,SEN,1707,Research Professor,Research Professor,Applied Mathematics and Statistics
+Zavaleta,Erika,4344,zavaleta@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Wang,Yiman,6763,yw3@ucsc.edu,ARTS,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Film and Digital Media
+Pasotti,Eleonora,4710,pasotti@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Politics
+Pratkanis,Anthony,999,peitho@ucsc.edu,SSD,7/1/1987,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Pohl,Ira,995,pohl@cse.ucsc.edu,ENG,7/1/1970,7/1/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Computer Science
+Pedrotti,Kenneth,3094,kdp@cse.ucsc.edu,ENG,7/1/2000,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Jhala,Arnav,8089,ajhala@ucsc.edu,ENG,7/1/2009,7/1/2013,6/30/2015,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Computer Science
+Lee,Jimin,4792,jiminlee@ucsc.edu,ARTS,7/1/2003,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Art
+Nauert,Paul,967,dogsbark@ucsc.edu,ARTS,7/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Kobayashi,Nobuhiko,6835,nkobayas@ucsc.edu,ENG,7/1/2006,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Rivas,Cecilia,7311,cmrivas@ucsc.edu,SSD,7/1/2007,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Latin American and Latino Studies
+Abadi,Martin,3801,abadi@cs.ucsc.edu,ENG,7/1/2001,8/6/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Computer Science
+Wang,Zhu,10787,zw2103@columbia.edu,PB&S,,1/1/2014,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,"Molecular, Cell, and Developmental Biology"
+Moore,Andrew,6638,ammoore@ucsc.edu,PB&S,1/1/2006,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ocean Sciences
+Sumarna,Undang,1069,kumis@ucsc.edu,ARTS,7/1/1980,7/1/2013,,"SOE, SEN",1603,Senior Lecturer with SOE - Academic Year,Senior Lecturer w/SOE,Music
+Bruland,Kenneth,667,bruland@ucsc.edu,PB&S,7/1/1975,7/1/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ocean Sciences
+Schonbek,Maria,1033,schonbek@ucsc.edu,PB&S,7/1/1986,7/1/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Mathematics
+Schoenman,Roger,4933,rschoenm@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Politics
+Long,Darrell,918,darrell@cse.ucsc.edu,ENG,7/1/1988,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Rich,B. Ruby,5170,brrich@ucsc.edu,ARTS,7/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Film and Digital Media
+Sullivan,William,1068,sullivan@biology.ucsc.edu,PB&S,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Dine,Michael,726,dine@scipp.ucsc.edu,PB&S,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Levinson,Robert,906,levinson@cse.ucsc.edu,ENG,7/1/1985,7/1/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Computer Science
+Crosby,Faye,713,fjcrosby@ucsc.edu,SSD,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Millhauser,Glenn,950,glennm@chemistry.ucsc.edu,PB&S,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Mascharak,Pradip,932,mascharak@chemistry.ucsc.edu,PB&S,7/1/1984,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Fehren-Schmitz,Lars,10751,,SSD,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Anthropology
+Kaun,David,872,nuclear@ucsc.edu,SSD,7/1/1966,10/1/2013,3/31/2014,SEN,1148,Professor - Academic Year - 1/9 - Bus/Eng - Recalled,Professor Recalled,Economics
+Irion,Robert,3077,irion@ucsc.edu,PB&S,1/1/2000,7/1/2013,,"SOE, SEN",1603,Senior Lecturer with SOE - Academic Year,Senior Lecturer w/SOE,Science Communication
+Prelinger,Rick,10799,footage@panix.com,ARTS,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1207,Acting Associate Professor - Academic Year,Acting Associate Professor,Film and Digital Media
+Rosenblum,Bruce,1023,brucero@ucsc.edu,PB&S,7/1/1966,1/1/2014,3/31/2014,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,Porter College
+Deutsch,Nathaniel,8069,ndeutsch@ucsc.edu,HUM,7/1/2008,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Martin Shaw,Carolyn,930,cmclark@ucsc.edu,SSD,11/1/1975,1/1/2014,3/31/2014,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,History of Art and Visual Culture
+Murray,Soraya,7545,semurray@ucsc.edu,ARTS,10/1/2007,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Film and Digital Media
+Cruz,Cynthia,8065,ccruz3@ucsc.edu,SSD,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Education
+Gweon,Gey-Hong,6842,gweon@ucsc.edu,PB&S,7/1/2006,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Physics
+Bivens,Andrew,7982,abivens@ucsc.edu,HUM,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Literature
+Kilpatrick,Auston,7363,marm@biology.ucsc.edu,PB&S,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Ecology and Evolutionary Biology
+Ly,Boreth,8047,bjly@ucsc.edu,ARTS,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History of Art and Visual Culture
+Sher,Alexander,4461,sasha@scipp.ucsc.edu,PB&S,9/1/2002,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Physics
+O'Malley,Gregory,7883,gomalley@ucsc.edu,HUM,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History
+Pittermann,Jarmila,7357,jpitterm@ucsc.edu,PB&S,3/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Ecology and Evolutionary Biology
+Perla,Hector,7985,hperla@ucsc.edu,SSD,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Latin American and Latino Studies
+Bhalla,Needhi,7476,bhalla@biology.ucsc.edu,PB&S,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,"Molecular, Cell, and Developmental Biology"
+Lusztig,Irene,8061,ilusztig@ucsc.edu,ARTS,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Film and Digital Media
+Moodie,Megan,5941,mmoodie@ucsc.edu,SSD,10/1/2004,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Anthropology
+Stone,Michael,7968,mstone@chemistry.ucsc.edu,PB&S,11/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Chemistry and Biochemistry
+Kay,Kathleen,7358,kay@biology.ucsc.edu,PB&S,3/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Ecology and Evolutionary Biology
+Sanford,Jeremy,8001,jsanfor2@ucsc.edu,PB&S,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,"Molecular, Cell, and Developmental Biology"
+Conroy,Charles,9656,conroy@ucsc.edu,PB&S,5/1/2012,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Astronomy and Astrophysics
+Davidenko,Nicolas,10204,ndaviden@ucsc.edu,SSD,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Psychology
+Mehta,Rita,8580,rmehta2@ucsc.edu,PB&S,7/1/2010,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Ecology and Evolutionary Biology
+Millard-Ball,Adam,10138,adammb@ucsc.edu,SSD,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Environmental Studies
+Fletcher,Alyson,10268,akfletch@ucsc.edu,ENG,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Electrical Engineering
+Falcon,Sylvanna,9143,smfalcon@ucsc.edu,SSD,7/1/2010,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Latin American and Latino Studies
+Aldrich,Eric,10174,ealdrich@ucsc.edu,SSD,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Economics
+Palkovacs,Eric,9687,epalkova@ucsc.edu,PB&S,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Ecology and Evolutionary Biology
+Matera,Marc,10209,mmatera@ucsc.edu,HUM,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History
+Grabe,Shelly,8066,sgrabe@ucsc.edu,SSD,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Psychology
+Garrick-Bethell,Ian,8612,igarrick@ucsc.edu,PB&S,7/1/2010,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Earth & Planetary Sciences
+O'Riordan,Kate,10151,k.oriordan@sussex.ac.uk,ARTS,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1207,Acting Associate Professor - Academic Year,Acting Associate Professor,Art
+Hughey,Richard,852,rph@soe.ucsc.edu,ENG,7/1/1991,7/1/2013,6/30/2016,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Blackmore,Chelsea,9157,cblackmo@ucsc.edu,SSD,7/1/2010,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Anthropology
+Storm,Benjamin,10187,bcstorm@ucsc.edu,SSD,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Psychology
+Derr,Jennifer,10124,jderr@ucsc.edu,HUM,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History
+Chen,Christopher,10229,cche75@ucsc.edu,HUM,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Literature
+Fernando,Mayanthi,8082,mfernan3@ucsc.edu,SSD,7/1/2008,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Anthropology
+Bell,Dorian,9118,dbell1@ucsc.edu,HUM,7/1/2010,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Literature
+Peterson,Maya,10172,mkpeters@ucsc.edu,HUM,7/1/2012,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,History
+Hughey,Richard,852,rph@soe.ucsc.edu,ENG,7/1/1991,7/1/2013,6/30/2016,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Biomolecular Engineering
+Arredondo,Gabriela,631,gfarredo@ucsc.edu,SSD,7/1/1998,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Latin American and Latino Studies
+Blumenthal,George,648,george@ucolick.org,PB&S,4/1/1972,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Astronomy and Astrophysics
+Brodie,Jean,660,brodie@ucolick.org,PB&S,9/1/1987,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Carter,Sue,682,sacarter@ucsc.edu,PB&S,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Belanger,David,638,dave@dave.ucsc.edu,PB&S,7/1/1984,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Boltje,Robert,652,boltje@ucsc.edu,PB&S,1/1/1999,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Cooperstein,Bruce,707,coop@ucsc.edu,PB&S,7/1/1975,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Akhtar,Nameera,617,nakhtar@ucsc.edu,SSD,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Bernasconi,Claude,644,bernasconi@hydrogen.ucsc.edu,PB&S,7/1/1967,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Brenneis,Donald,657,brenneis@ucsc.edu,SSD,7/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Bassi,Karen,634,bassi@ucsc.edu,HUM,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Bolte,Michael,651,bolte@ucolick.org,PB&S,9/1/1993,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Brundage,David,668,brundage@ucsc.edu,HUM,7/1/1985,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Chen,Nancy,691,nchen@ucsc.edu,SSD,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Benjamin,Ilan,639,ilan@ucsc.edu,PB&S,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Brandwajn,Alexandre,655,alexb@cse.ucsc.edu,ENG,7/1/1985,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Ares,Manuel,629,ares@biology.ucsc.edu,PB&S,7/1/1987,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Bierman,James,646,lope@ucsc.edu,ARTS,7/1/1973,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Theater Arts
+Brodie,Jean,660,brodie@ucolick.org,PB&S,9/1/1987,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Baumgarten,Murray,636,dickens@ucsc.edu,HUM,7/1/1966,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Bolte,Michael,651,bolte@ucolick.org,PB&S,9/1/1993,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Callanan,Maureen,677,callanan@ucsc.edu,SSD,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Connery,Christopher,705,cconnery@ucsc.edu,HUM,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Bernardi,Giacomo,643,bernardi@biology.ucsc.edu,PB&S,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Braslau,Rebecca,656,braslau@chemistry.ucsc.edu,PB&S,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Lyon,Bruce,923,lyon@biology.ucsc.edu,PB&S,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Guhathakurta,Puragra,814,raja@ucolick.org,PB&S,11/5/1994,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Crichton,E.G.,712,egc@ucsc.edu,ARTS,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Art
+Miller,Leta,949,leta@ucsc.edu,ARTS,7/1/1987,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Hartzog,Grant,827,hartzog@biology.ucsc.edu,PB&S,7/1/1998,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Epps,Harland,745,epps@ucolick.org,PB&S,7/1/1989,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Illingworth,Garth,859,gdi@ucolick.org,PB&S,1/1/1988,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Foley,Kathy,763,kfoley@ucsc.edu,ARTS,11/1/1979,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Theater Arts
+Kletzer,Kenneth,882,kkletzer@ucsc.edu,SSD,7/1/1992,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Economics
+Fung,Kwok-Chiu,777,kcfung@ucsc.edu,SSD,7/1/1989,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Economics
+Lay,Thorne,896,thorne@earthsci.ucsc.edu,PB&S,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Gonzalez,Jennifer,798,jag@ucsc.edu,ARTS,7/1/1997,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History of Art and Visual Culture
+Gray,Herman,804,herman@ucsc.edu,SSD,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Sociology
+Mason,Geoff,933,gem@ucsc.edu,PB&S,7/1/1973,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Haber,Howard,816,haber@scipp.ucsc.edu,PB&S,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Delaney,Margaret,723,delaney@ucsc.edu,PB&S,7/1/1983,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ocean Sciences
+Hinck,Lindsay,840,hinck@biology.ucsc.edu,PB&S,7/1/1998,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Faber,Sandra,750,faber@ucolick.org,PB&S,1/1/1972,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Jones,David Evan,868,dej@ucsc.edu,ARTS,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Fox Tree,Jean,768,foxtree@ucsc.edu,SSD,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Kolaitis,Phokion,887,kolaitis@cse.ucsc.edu,ENG,7/1/1988,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Gamel,Mary-Kay,781,mkgamel@ucsc.edu,HUM,7/1/1973,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Letourneau,Deborah,904,dletour@ucsc.edu,SSD,7/1/1984,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Lipschutz,Ronnie,911,rlipsch@ucsc.edu,SSD,4/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Politics
+Gu,Claire,812,claire@cse.ucsc.edu,ENG,7/1/1997,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Meister,Robert,944,meister@ucsc.edu,SSD,7/1/1973,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Social Sciences Division
+Hankamer,Jorge,820,hank@ucsc.edu,HUM,7/1/1980,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Linguistics
+Dooley,Michael,732,mpd@ucsc.edu,SSD,1/1/1992,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Economics
+Honig,Emily,846,ehonig@ucsc.edu,HUM,1/1/1993,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Fisher,Andrew,759,afisher@ucsc.edu,PB&S,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Kinoshita,Sharon,879,sakinosh@ucsc.edu,HUM,7/1/1987,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Friedman,Daniel,774,dan@ucsc.edu,SSD,7/1/1985,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Economics
+Koo,David,889,koo@ucolick.org,PB&S,1/1/1988,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Gifford-Gonzalez,Diane,788,dianegg@ucsc.edu,SSD,7/1/1976,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Mantey,Patrick,927,mantey@soe.ucsc.edu,ENG,9/1/1984,7/1/2013,,"LR, SEN",1144,Professor - Fiscal Year - Bus/Eng,Professor,Computer Engineering
+Guhathakurta,Puragra,814,raja@ucolick.org,PB&S,11/5/1994,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Crow,Ben,714,bencrow@ucsc.edu,SSD,7/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Sociology
+Millman,Marcia,951,millman@ucsc.edu,SSD,7/1/1971,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Sociology
+Haussler,David,828,haussler@cse.ucsc.edu,ENG,7/1/1986,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Biomolecular Engineering
+Epps,Harland,745,epps@ucolick.org,PB&S,7/1/1989,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Illingworth,Garth,859,gdi@ucolick.org,PB&S,1/1/1988,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Fox,Jonathan,766,jafox@ucsc.edu,SSD,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Latin American and Latino Studies
+Knittle,Elise,885,elise@emerald.ucsc.edu,PB&S,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Galloway,Alison,779,gallow@ucsc.edu,SSD,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Leicester,H Marshall,902,hml@ucsc.edu,HUM,7/1/1967,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Gonzalez Pagani,Maria Victoria,799,vgpagani@ucsc.edu,HUM,7/1/1992,7/1/2013,,"SOE, SEN",1603,Senior Lecturer with SOE - Academic Year,Senior Lecturer w/SOE,Languages
+Lewis,Debra,907,lewis@ucsc.edu,PB&S,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Greene,Jody,805,jgreene@ucsc.edu,HUM,7/1/1998,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+McCloskey,James,938,mcclosk@ucsc.edu,HUM,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Linguistics
+Habicht-Mauche,Judith,817,judith@ucsc.edu,SSD,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Deutsch,Joshua,724,josh@ucsc.edu,PB&S,7/1/1986,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Holl,Karen,843,kholl@ucsc.edu,SSD,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Farkas,Donka,752,farkas@ucsc.edu,HUM,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Linguistics
+Karplus,Kevin,870,karplus@cse.ucsc.edu,ENG,7/1/1986,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Biomolecular Engineering
+Frank,Dana,769,dlfrank@ucsc.edu,HUM,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Konopelski,Joseph,888,joek@chemistry.ucsc.edu,PB&S,7/1/1984,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Garcia-Luna-Aceves,Jose Joaquin,783,jj@cse.ucsc.edu,ENG,1/1/1993,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Ludwig,Robert,921,ludwig@biology.ucsc.edu,PB&S,7/1/1979,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Guevara,Daniel,813,guevara@ucsc.edu,HUM,7/1/1991,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Philosophy
+Costa,Daniel,709,costa@biology.ucsc.edu,PB&S,1/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Mester,Armin,946,mester@ucsc.edu,HUM,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Linguistics
+Harding,Susan,824,hard@ucsc.edu,SSD,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+DuPuis,Melanie,738,emdupuis@ucsc.edu,SSD,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Sociology
+Hutchison,Michael,858,hutch@ucsc.edu,SSD,7/1/1985,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Economics
+Flegal,Russell,762,flegal@rupture.ucsc.edu,PB&S,7/1/1992,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Microbiology and Environmental Toxicology
+Klahn,Norma,880,nklahn@ucsc.edu,HUM,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Fukurai,Hiroshi,776,hfukurai@ucsc.edu,SSD,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Sociology
+Larrabee,Tracy,895,larrabee@cse.ucsc.edu,ENG,1/1/1990,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Gillman,Susan,790,sgillman@ucsc.edu,HUM,7/1/1986,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Martinez- Echazabal,Lourdes,931,lourdes@ucsc.edu,HUM,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Latin American and Latino Studies
+Haas,Lisbeth,815,lhaas@ucsc.edu,HUM,7/1/1987,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Daniel,Sharon,718,sdaniel@ucsc.edu,ARTS,7/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Film and Digital Media
+Narayan,Onuttom,965,onarayan@ucsc.edu,PB&S,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Hershatter,Gail,837,gbhers@ucsc.edu,HUM,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Faber,Sandra,750,faber@ucolick.org,PB&S,1/1/1972,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Ito,Junko,862,ito@ucsc.edu,HUM,7/1/1987,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Linguistics
+Fox,Laurel,767,fox@biology.ucsc.edu,PB&S,7/1/1977,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Koch,Paul,886,pkoch@earthsci.ucsc.edu,PB&S,7/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Galuszka,Frank,780,frgalusz@ucsc.edu,ARTS,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Art
+Leikin,Anatole,903,asl@ucsc.edu,ARTS,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Gordon,June,801,jagordon@ucsc.edu,SSD,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Education
+Lin,Douglas,909,lin@ucolick.org,PB&S,7/1/1979,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Astronomy and Astrophysics
+Griggs,Gary,809,griggs@ucsc.edu,PB&S,11/1/1968,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+McDowell,Charles,940,charlie@cs.ucsc.edu,ENG,7/1/1985,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Haney,Craig,819,psylaw@ucsc.edu,SSD,7/1/1978,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Diaz,Maria Elena,725,mediaz@ucsc.edu,HUM,7/1/1991,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History
+Holman,Theodore,845,tholman@chemistry.ucsc.edu,PB&S,7/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Ferguson,Joel,756,fjf@cse.ucsc.edu,ENG,7/1/1987,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Kawamoto,Alan,873,ahk@ucsc.edu,SSD,7/1/1986,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Psychology
+Freccero,Carla,771,freccero@ucsc.edu,HUM,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Koo,David,889,koo@ucolick.org,PB&S,1/1/1988,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Gibbs,Raymond,786,gibbs@ucsc.edu,SSD,7/1/1982,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Perks,Micah,2482,meperks@ucsc.edu,HUM,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Singaram,Bakthan,1050,singaram@chemistry.ucsc.edu,PB&S,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Arondekar,Anjali,3099,aarondek@ucsc.edu,HUM,7/1/2000,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Feminist Studies
+Tromba,Anthony,1093,tromba@ucsc.edu,PB&S,7/1/1970,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Westerkamp,Marilyn,1114,mjw@ucsc.edu,HUM,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Pang,Alex,985,pang@cse.ucsc.edu,ENG,7/1/1990,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Zavella,Patricia,1143,zavella@ucsc.edu,SSD,7/1/1984,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Latin American and Latino Studies
+Qing,Jie,1005,qing@ucsc.edu,PB&S,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Glatzmaier,Gary,2442,glatz@earthsci.ucsc.edu,PB&S,7/1/1998,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Schumm,Bruce,1034,schumm@scipp.ucsc.edu,PB&S,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Moschkovich,Judit,2492,jmoschko@ucsc.edu,SSD,7/1/1999,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Education
+Smith,Graeme,1056,graeme@ucolick.org,PB&S,11/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Astronomy and Astrophysics
+Miller,Ethan,3178,elm@cs.ucsc.edu,ENG,7/1/2000,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Varma,Anujan,1098,varma@cse.ucsc.edu,ENG,1/1/1991,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Neu,Jerome,970,neu@ucsc.edu,HUM,7/1/1973,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Humanities Division
+Williams,Terrie,1121,williams@biology.ucsc.edu,PB&S,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Poblete,Juan,993,jpoblete@ucsc.edu,HUM,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Croll,Donald,1619,dcroll@ucsc.edu,PB&S,8/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Robinson,Forrest,1017,robinson@ucsc.edu,HUM,7/1/1970,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Humanities Division
+Gilbert,Gregory,2450,ggilbert@ucsc.edu,SSD,1/1/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Selden,Daniel,1039,dselden@ucsc.edu,HUM,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Zehr,Jonathan,2461,zehrj@ucsc.edu,PB&S,7/1/1999,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ocean Sciences
+Silver,Eli,1045,silver@earthsci.ucsc.edu,PB&S,7/1/1973,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Thompson,John,3056,thompson@biology.ucsc.edu,PB&S,7/1/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Stoddart,Trish,1064,stoddart@ucsc.edu,SSD,7/1/1993,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Education
+TÃ©llez,Kip,3190,ktellez@ucsc.edu,SSD,7/1/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Education
+Walsh,Carl,1103,walshc@ucsc.edu,SSD,7/1/1987,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Economics
+Paiement,Nicole,983,nicole@ensembleparallele.com,ARTS,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Yang,Alice,1136,ayang@ucsc.edu,HUM,7/1/1993,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History
+Primack,Joel,1001,joel@scipp.ucsc.edu,PB&S,7/1/1973,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Anderson,Elliot,1905,ewanders@ucsc.edu,ARTS,7/1/1997,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Art
+Scheie,Daniel,1029,dscheie@ucsc.edu,ARTS,11/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Theater Arts
+Kudela,Raphael,2485,kudela@ucsc.edu,PB&S,7/1/1999,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ocean Sciences
+Singh,Nirvikar,1051,boxjenk@ucsc.edu,SSD,7/1/1982,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Economics
+Madau,Piero,3119,pmadau@ucolick.org,PB&S,7/1/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Astronomy and Astrophysics
+Tsing,Anna,1094,atsing@ucsc.edu,SSD,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Whitworth,Paul,1116,iago@ucsc.edu,ARTS,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Theater Arts
+Parker,Ingrid,986,parker@biology.ucsc.edu,PB&S,7/1/1998,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Asphaug,Erik,1552,asphaug@earthsci.ucsc.edu,PB&S,4/15/1998,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Raimondi,Peter,1007,raimondi@biology.ucsc.edu,PB&S,1/1/1996,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Vesecky,John,2444,vesecky@cse.ucsc.edu,ENG,3/1/1999,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Schwartz,Susan,1035,syschwar@ucsc.edu,PB&S,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Milanfar,Peyman,2455,milanfar@cse.ucsc.edu,ENG,7/1/1999,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Shemek,Deanna,1043,shemek@ucsc.edu,HUM,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Ottemann,Karen,2499,ottemann@ucsc.edu,PB&S,4/1/1999,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Microbiology and Environmental Toxicology
+Smith,Graeme,1056,graeme@ucolick.org,PB&S,11/1/1989,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Whitehead,James,3183,ejw@cse.ucsc.edu,ENG,7/1/2000,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Vogt,Steven,1100,vogt@ucolick.org,PB&S,11/1/1978,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Nygaard,Loisa,975,nygaard@ucsc.edu,HUM,7/1/1975,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Literature
+Wirls,Daniel,1126,wirls@ucsc.edu,SSD,7/1/1988,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Politics
+Pogson,Grant,994,pogson@ucsc.edu,PB&S,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Okamoto,Shigeko,1807,sokamoto@ucsc.edu,HUM,7/1/2008,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Languages
+Rofel,Lisa,1019,lrofel@ucsc.edu,SSD,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Miller,Tyrus,2477,tyrus@ucsc.edu,HUM,7/1/1999,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Sinervo,Barry,1049,sinervo@biology.ucsc.edu,PB&S,1/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ecology and Evolutionary Biology
+Ramirez,Renya,3060,renya@ucsc.edu,SSD,7/1/2000,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Anthropology
+Tamkun,John,1080,tamkun@biology.ucsc.edu,PB&S,7/1/1989,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+West,Candace,1113,west@ucsc.edu,SSD,7/1/1979,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Sociology
+Pandey,Triloki,984,pandey@ucsc.edu,SSD,7/1/1973,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Zachos,James,1140,jzachos@es.ucsc.edu,PB&S,7/1/1992,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Pudup,Mary Beth,1002,pudup@ucsc.edu,SSD,7/1/1989,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Social Sciences Division
+Parker,Jennifer,1919,parker1@ucsc.edu,ARTS,4/1/1999,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Art
+Schlesinger,Zack,1032,zack@physics.ucsc.edu,PB&S,7/1/1995,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Dent,Gina,2490,ginadent@ucsc.edu,HUM,7/1/1998,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Feminist Studies
+Sloan,Lisa Cirbus,1053,lcsloan@earthsci.ucsc.edu,PB&S,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Draper,David,3167,draper@ams.ucsc.edu,ENG,7/1/2000,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Applied Mathematics and Statistics
+Van Gelder,Allen,1097,avg@cse.ucsc.edu,ENG,7/1/1987,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Williams,Quentin,1120,qwilliams@pmc.ucsc.edu,PB&S,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Pease-Alvarez,Lucinda,989,pease@ucsc.edu,SSD,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Education
+Akeson,Mark,1591,makeson@soe.ucsc.edu,ENG,4/1/1996,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Biomolecular Engineering
+Rajan,Ravi,1008,srrajan@ucsc.edu,SSD,10/1/1997,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Environmental Studies
+Friedlander,Benjamin,2449,friedlan@cse.ucsc.edu,ENG,7/1/1999,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Scott,William,1037,wgscott@ucsc.edu,PB&S,7/1/1998,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Wang,Hongyun,2458,hongwang@cse.ucsc.edu,ENG,7/1/1999,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Applied Mathematics and Statistics
+Shennan,Carol,1044,cshennan@ucsc.edu,SSD,7/1/1997,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Banks,Thomas,2511,banks@scipp.ucsc.edu,PB&S,1/1/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Stamp,Shelley,1060,stamp@ucsc.edu,ARTS,7/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Film and Digital Media
+Tulaczyk,Slawek,3186,stulaczyk@es.ucsc.edu,PB&S,7/1/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Vogt,Steven,1100,vogt@ucolick.org,PB&S,11/1/1978,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Otte,Richard,980,otte@ucsc.edu,HUM,7/1/1982,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Philosophy
+Wittman,Donald,1127,wittman@ucsc.edu,SSD,7/1/1969,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Economics
+Press,Daniel,1000,dpress@ucsc.edu,SSD,7/1/1992,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Wilson,James,1861,jawilson@ucsc.edu,HUM,1/1/1985,7/1/2013,,"SOE, SEN",1607,Lecturer with SOE - Academic Year,Lecturer w/SOE,Writing Program
+Rogoff,Barbara,1020,brogoff@ucsc.edu,SSD,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Treadwell,Nina,5190,treadwel@ucsc.edu,ARTS,7/1/2004,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Music
+Prochaska,Xavier,3810,xavier@ucolick.org,PB&S,7/1/2002,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Bowin,John,6167,jbowin@ucsc.edu,HUM,7/1/2005,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Philosophy
+Sack,Warren,4305,wsack@ucsc.edu,ARTS,7/1/2002,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Film and Digital Media
+Saxton,William,6535,bsaxton@ucsc.edu,PB&S,8/17/2005,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Wang,Su-hua,4751,suhua@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Psychology
+Wilson,Robert,3206,rwilson@ucsc.edu,HUM,1/1/2001,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Mathiowetz,Dean,4815,dpmath@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Politics
+Lokey,Scott,3667,lokey@chemistry.ucsc.edu,PB&S,1/1/2002,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Renau,Jose,5144,renau@soe.ucsc.edu,ENG,7/1/2004,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Computer Engineering
+Porter,Eric,3757,ecporter@ucsc.edu,HUM,7/1/2001,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Roth,Paul Andrew,5194,paroth@ucsc.edu,HUM,7/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Philosophy
+Ogawa,Rodney,3845,rtogawa@ucsc.edu,SSD,7/1/2002,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Education
+Reardon,Jennifer,6221,reardon1@ucsc.edu,SSD,7/1/2005,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Sociology
+Garaud,Pascale,4433,pgaraud@soe.ucsc.edu,ENG,8/16/2002,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Applied Mathematics and Statistics
+Hammack,Phillip,6753,hammack@ucsc.edu,SSD,1/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Psychology
+Guthman,Julie,4767,jguthman@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Social Sciences Division
+Godzich,Wlad,3290,bogusz@ucsc.edu,HUM,8/7/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Literature
+Schaeffer-Grabiel,Felicity,4838,fsg@ucsc.edu,HUM,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Feminist Studies
+Seth,Vanita,3685,vseth@ucsc.edu,SSD,7/1/2001,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Politics
+Musacchio,John,5163,johnm@soe.ucsc.edu,ENG,1/1/2005,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Engineering School
+de Alfaro,Luca,3799,luca@soe.ucsc.edu,ENG,7/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Ross,Kevin,5174,kross@soe.ucsc.edu,ENG,7/1/2004,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Engineering School
+Wilson,Margaret,3805,mlwilson@ucsc.edu,SSD,7/1/2001,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Psychology
+Berger,Martin,5704,maberger@ucsc.edu,ARTS,7/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History of Art and Visual Culture
+Bertram,Eva,4287,ebertram@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Politics
+Boeger,Hinrich,6249,hboeger@ucsc.edu,PB&S,1/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,"Molecular, Cell, and Developmental Biology"
+Smith,David,4662,dsmith@scipp.ucsc.edu,PB&S,7/1/2003,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Shastry,B. Sriram,4784,sriram@physics.ucsc.edu,PB&S,7/1/2003,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Max,Claire,3596,max@ucolick.org,PB&S,2/1/2001,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Barad,Karen,5028,kbarad@ucsc.edu,HUM,7/1/2005,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Feminist Studies
+Cameron,Elisabeth,3727,ecameron@ucsc.edu,ARTS,7/1/2001,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History of Art and Visual Culture
+Rockosi,Constance,5193,crockosi@ucolick.org,PB&S,9/1/2004,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Prochaska,Xavier,3810,xavier@ucolick.org,PB&S,7/1/2002,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Rexach,Michael,6173,mrexach@ucsc.edu,PB&S,7/1/2005,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Kottas,Athanasios,4315,thanos@ams.ucsc.edu,ENG,7/1/2002,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Applied Mathematics and Statistics
+Strome,Susan,6536,sstrome@ucsc.edu,PB&S,8/17/2005,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Cuthbert,David Lee,4758,cuthbert@ucsc.edu,ARTS,7/1/2003,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Theater Arts
+Obraczka,Katia,3207,katia@cse.ucsc.edu,ENG,1/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Thomas,Megan,4820,mcthomas@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Politics
+Jannarone,Kimberly,3670,kmj@ucsc.edu,ARTS,7/1/2001,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Theater Arts
+Saltikov,Chad,5152,saltikov@etox.ucsc.edu,PB&S,7/1/2004,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Microbiology and Environmental Toxicology
+Porter,Eric,3757,ecporter@ucsc.edu,HUM,7/1/2001,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History of Consciousness
+Gamburd,Alexander,5169,agamburd@ucsc.edu,PB&S,7/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Manduchi,Roberto,3800,manduchi@soe.ucsc.edu,ENG,7/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Davis,James,5203,davis@soe.ucsc.edu,ENG,7/1/2004,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Computer Science
+Sanso,Bruno,4134,bruno@ams.ucsc.edu,ENG,7/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Applied Mathematics and Statistics
+Achlioptas,Dimitris,6240,optas@soe.ucsc.edu,ENG,11/14/2005,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Limbrick,Peter,4521,limbrick@ucsc.edu,ARTS,10/1/2002,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Film and Digital Media
+Weissman,Martin,6757,weissman@ucsc.edu,PB&S,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Mathematics
+Carson,Benjamin,4775,blc@ucsc.edu,ARTS,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Music
+Kang,Steve,3301,kang@cse.ucsc.edu,ENG,1/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Shaw,Jerome,4843,jmlshaw@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Education
+Yildiz (Gurcan),Fitnat,3703,yildiz@etox.ucsc.edu,PB&S,1/1/2002,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Microbiology and Environmental Toxicology
+Ehrhardt,Torsten,5186,ehrhardt@math.ucsc.edu,PB&S,7/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Mathematics
+Feldheim,David,3809,dfeldhei@ucsc.edu,PB&S,9/1/2001,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Nimmo,Francis,6049,fnimmo@es.ucsc.edu,PB&S,3/1/2005,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Lee,Herbert,4302,herbie@ams.ucsc.edu,ENG,7/1/2002,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Applied Mathematics and Statistics
+Balakrishnan,Gopal,6270,gopalb@ucsc.edu,HUM,9/1/2005,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History of Consciousness
+Dobkin,Carlos,4737,cdobkin@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Economics
+Abrams,Elizabeth,3204,esabrams@ucsc.edu,HUM,7/1/2000,7/1/2013,,"SOE, SEN",1603,Senior Lecturer with SOE - Academic Year,Senior Lecturer w/SOE,Writing Program
+Jurica,Melissa,4809,jurica@biology.ucsc.edu,PB&S,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,"Molecular, Cell, and Developmental Biology"
+Fregoso,Rosa-Linda,3604,rfregoso@ucsc.edu,SSD,7/1/2001,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Latin American and Latino Studies
+Oliver,Scott,5137,soliver@chemistry.ucsc.edu,PB&S,6/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Chemistry and Biochemistry
+Prado,Raquel,3732,raquel@ams.ucsc.edu,ENG,7/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Applied Mathematics and Statistics
+Rockosi,Constance,5193,crockosi@ucolick.org,PB&S,9/1/2004,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Gustafson,Irene,3838,ireneg@ucsc.edu,ARTS,7/1/2001,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Film and Digital Media
+Glass,Ronald,6199,rglass@ucsc.edu,SSD,7/1/2005,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Education
+Isaacson,Michael Saul,4401,msi@soe.ucsc.edu,ENG,1/1/2003,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Kalonji,Gretchen,6668,gkalonji@soe.ucsc.edu,ENG,7/1/2006,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Anderson,Mark,4761,mda@ucsc.edu,SSD,7/1/2003,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Anthropology
+Gallagher,Patricia,3282,pgallagh@ucsc.edu,ARTS,10/1/2000,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Theater Arts
+Akella,Ram,4833,akella@soe.ucsc.edu,ENG,7/1/2003,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Engineering School
+Watts,Lewis,3680,lewwatts@ucsc.edu,ARTS,7/1/2001,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Art
+Olsen,Brad,5153,bolsen@ucsc.edu,SSD,7/1/2004,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Education
+Edwards,Christopher,3761,cedwards@ucsc.edu,PB&S,7/1/2002,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ocean Sciences
+Bartlett,Lora,5173,lorab@ucsc.edu,SSD,7/1/2004,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Education
+Seymour,Travis,3802,nogard@ucsc.edu,SSD,7/1/2001,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Psychology
+Dunbar,William,5204,dunbar@soe.ucsc.edu,ENG,7/1/2004,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Computer Engineering
+Kamehiro,Stacy,4257,kamehiro@ucsc.edu,ARTS,7/1/2002,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History of Art and Visual Culture
+Brodsky,Emily,6246,brodskye@ucsc.edu,PB&S,1/1/2006,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Earth & Planetary Sciences
+Hibbert-Jones,Wendy (Dee),4566,hjdee@ucsc.edu,ARTS,10/1/2002,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Art
+Flanagan,Cormac,4776,cormac@cs.ucsc.edu,ENG,7/1/2003,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Max,Claire,3596,max@ucolick.org,PB&S,2/1/2001,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Caldwell,Melissa,4854,lissa@ucsc.edu,SSD,7/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Beal,Amy,3704,abeal@ucsc.edu,ARTS,7/1/2001,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Music
+Read,Benjamin,7364,bread@ucsc.edu,SSD,7/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Politics
+Gleeson,Shannon,7976,sgleeson@ucsc.edu,SSD,7/1/2008,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Latin American and Latino Studies
+Yager,David,8577,yager@ucsc.edu,ARTS,7/1/2009,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Art
+Rubin,Seth,6785,srubin@ucsc.edu,PB&S,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Chemistry and Biochemistry
+Berman,Phillip,6852,pwb@ucsc.edu,ENG,7/1/2006,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Biomolecular Engineering
+Bernstein,Rebecca,7453,rab@ucolick.org,PB&S,9/1/2007,7/1/2013,,SEN,3100,Astronomer,Astronomer,University of California Observatories
+Rosen,Jacob,8050,jrosen1@ucsc.edu,ENG,7/1/2008,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Engineering
+Shapiro,Beth,9685,bashapir@ucsc.edu,PB&S,7/1/2012,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Ecology and Evolutionary Biology
+Eaton,Kent,6806,keaton@ucsc.edu,SSD,7/1/2006,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Politics
+Kamieniecki,Sheldon,6861,sk1@ucsc.edu,SSD,7/1/2006,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Margon,Bruce,7049,margon@ucsc.edu,PB&S,9/1/2006,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Astronomy and Astrophysics
+Walker,Marilyn,7907,mawalker@ucsc.edu,ENG,12/5/2007,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Ritz,Steven,8136,ritz@scipp.ucsc.edu,PB&S,7/1/2009,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Physics
+Shearer,Heather,10176,hshearer@ucsc.edu,HUM,7/1/2012,7/1/2013,,"SOE, SEN",1607,Lecturer with SOE - Academic Year,Lecturer w/SOE,Writing Program
+O'Hara,Matthew,6775,mdohara@ucsc.edu,HUM,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,History
+Langhout,Regina Day,6827,langhout@ucsc.edu,SSD,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Psychology
+Mathews,Andrew,7390,amathews@ucsc.edu,SSD,7/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Anthropology
+Atanasoski,Neda,8019,natanaso@ucsc.edu,HUM,7/1/2008,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Feminist Studies
+Abrams,Zsuzsanna,8582,zabrams1@ucsc.edu,HUM,7/1/2009,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Languages
+Chen,Bin,6793,bchen@ucsc.edu,PB&S,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,"Molecular, Cell, and Developmental Biology"
+Nielsen,Jason,6854,jnielsen@ucsc.edu,PB&S,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Physics
+Zuo,Yi,6881,zuo@biology.ucsc.edu,PB&S,1/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,"Molecular, Cell, and Developmental Biology"
+Lee,Jeremy,7495,jeremy@biology.ucsc.edu,PB&S,7/1/2007,7/1/2013,,"SOE, SEN",1607,Lecturer with SOE - Academic Year,Lecturer w/SOE,"Molecular, Cell, and Developmental Biology"
+Wardrip-Fruin,Noah,8077,nwardrip@ucsc.edu,ENG,7/1/2008,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Computer Science
+Chemers,Michael,10164,chemers@ucsc.edu,ARTS,4/5/2012,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Theater Arts
+Nusbaum (Baron),Brandin,6809,baron@ucsc.edu,ARTS,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Theater Arts
+Krumholz,Mark,7337,mkrumhol@ucsc.edu,PB&S,8/6/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Astronomy and Astrophysics
+Dasgupta,Samit,7953,sdasgup2@ucsc.edu,PB&S,7/1/2008,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Mathematics
+Duane,Timothy,8546,tpduane@ucsc.edu,SSD,7/1/2009,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Environmental Studies
+Philpott,Stacy,10232,sphilpot@ucsc.edu,SSD,7/1/2012,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Environmental Studies
+Mateas,Michael,6779,mmateas@ucsc.edu,ENG,7/1/2006,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Computer Science
+Bury,Jeffrey,6844,jbury@ucsc.edu,SSD,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Environmental Studies
+Bernstein,Rebecca,7453,rab@ucolick.org,PB&S,9/1/2007,7/1/2013,,"LR, SEN",1110,Professor - Fiscal Year,Professor,Astronomy and Astrophysics
+Gong,Qi,8030,qigong@soe.ucsc.edu,ENG,7/1/2008,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Applied Mathematics and Statistics
+Ramirez,Arthur,8631,apr@soe.ucsc.edu,ENG,5/1/2009,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Brummell,Nicholas,6796,brummell@ucsc.edu,ENG,7/1/2006,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Applied Mathematics and Statistics
+Wilmers,Christopher,6858,cwilmers@ucsc.edu,SSD,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Environmental Studies
+Brasoveanu,Adrian,6882,abrasove@ucsc.edu,HUM,1/1/2007,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Linguistics
+Whittaker,Stephen,7903,swhittak@ucsc.edu,SSD,12/5/2007,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Psychology
+Rutherford,Danilyn,8126,druther1@ucsc.edu,SSD,7/1/2009,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Anthropology
+Keilen,Sean,10170,keilen@ucsc.edu,HUM,7/1/2012,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Literature
+Greenberg,Miriam,6764,miriam@ucsc.edu,SSD,7/1/2006,7/1/2013,,"LR, SEN",1200,Associate Professor - Academic Year,Associate Professor,Sociology
+Guthaus,Matthew,6812,mrg@soe.ucsc.edu,ENG,7/1/2006,7/1/2013,,"LR, SEN",1243,Associate Professor - Academic Year - Bus/Eng,Associate Professor,Computer Engineering
+Borrego,John,653,borrego@ucsc.edu,SSD,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Latin American and Latino Studies
+Burgin,Victor,671,burgin@ucsc.edu,HUM,7/1/1988,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Consciousness
+Cheung,Yin-Wong,692,cheung@ucsc.edu,SSD,7/1/1990,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Economics
+Crews,Phillip,711,crews@chemistry.ucsc.edu,PB&S,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Chemistry and Biochemistry
+Abraham,Ralph,612,rha@ucsc.edu,PB&S,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Mathematics
+Dorfan,David,733,dorfan@scipp.ucsc.edu,PB&S,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Archer,Dane,628,archer@ucsc.edu,SSD,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Sociology
+Bridges,Frank,659,bridges@ucsc.edu,PB&S,3/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Burton-Carvajal,Julianne,676,julianne@ucsc.edu,HUM,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Coe,Robert,701,rcoe@earthsci.ucsc.edu,PB&S,3/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Earth & Planetary Sciences
+Daniel,Charles,717,cwdaniel@ucsc.edu,PB&S,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Aherne,Patrick,615,paherne@ucsc.edu,ARTS,7/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Beecher,Jonathan,637,jbeecher@ucsc.edu,HUM,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Bodenheimer,Peter,649,peter@ucolick.org,PB&S,9/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Brown,George,663,gsbrown@ucsc.edu,PB&S,7/1/1990,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Chan,Pak,688,pak@cse.ucsc.edu,ENG,7/1/1987,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Computer Engineering
+Cope,David,708,howell@ucsc.edu,ARTS,7/1/1978,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Music
+Dizikes,John,727,jdizikes@ucsc.edu,HUM,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,American Studies
+Anderson,Roger,623,anderso@ucsc.edu,PB&S,11/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Chemistry and Biochemistry
+Bridgeman,Bruce,658,bruceb@ucsc.edu,SSD,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Burgoyne,Nicholas,672,sbrb@ucsc.edu,PB&S,10/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Mathematics
+Brown Childs,John,693,jbchilds@ucsc.edu,SSD,7/1/1987,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Sociology
+Crews,Phillip,711,crews@chemistry.ucsc.edu,PB&S,7/1/1970,,6/30/2015,SEN,1707,Research Professor,Research Professor,Chemistry and Biochemistry
+Abraham,W Emmanuel,613,abraham@ucsc.edu,HUM,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Philosophy
+Drake,Frank,735,fdrake@ucolick.org,PB&S,9/1/1984,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Aronson,Elliot,630,elliot@ucsc.edu,SSD,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Brodsky,Joyce,661,jebrodsk@ucsc.edu,ARTS,7/1/1992,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Cameron,Kenneth,678,rocks@ucsc.edu,PB&S,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Earth & Planetary Sciences
+Coe,Robert,701,rcoe@earthsci.ucsc.edu,PB&S,3/1/1968,,10/14/2014,SEN,1707,Research Professor,Research Professor,Earth & Planetary Sciences
+Davis,Angela,720,aydavis@ucsc.edu,HUM,7/1/1991,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Consciousness
+Aissen,Judith,616,aissen@ucsc.edu,HUM,7/1/1983,,6/30/2014,SEN,1707,Research Professor,Research Professor,Linguistics
+Berger,Harry,640,hberger@ucsc.edu,HUM,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Bodenheimer,Peter,649,peter@ucolick.org,PB&S,9/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,University of California Observatories
+Brown,Michael,665,popcorn@ucsc.edu,SSD,7/1/1982,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Politics
+Chemers,Martin,690,mchemers@ucsc.edu,SSD,7/1/1995,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Cowan,Michael,710,mhcowan@ucsc.edu,HUM,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,American Studies
+Domhoff,G. William,729,domhoff@ucsc.edu,SSD,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Sociology
+Andrews,Frank,624,andrews@chemistry.ucsc.edu,PB&S,7/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Chemistry and Biochemistry
+Bridges,Frank,659,bridges@ucsc.edu,PB&S,3/1/1970,,6/30/2014,SEN,1106,Professor - Academic Year - Recalled,Professor Recalled,Physics
+Burke,Edmund,673,eburke@ucsc.edu,HUM,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Clifford,James,700,jcliff@ucsc.edu,HUM,7/1/1978,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Consciousness
+Curry,Robert,715,curry@ucsc.edu,SSD,7/1/1979,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Environmental Studies
+Adams,Robert,614,radams@ucsc.edu,SSD,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Economics
+Basu,Dilip,635,dkbasu@ucsc.edu,HUM,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Berkhofer,Robert,642,berkhof@ucsc.edu,HUM,1/1/1991,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Brose,Margaret,662,mbrose@ucsc.edu,HUM,7/1/1978,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Castillo,Pedro,685,pcastle@ucsc.edu,HUM,7/1/1975,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Cooper,Catherine,706,ccooper@ucsc.edu,SSD,7/1/1987,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Davis,Jackson,721,davis@biology.ucsc.edu,PB&S,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Amis,George,621,amis@ucsc.edu,HUM,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Foreman,Doyle,764,dforeman@ucsc.edu,ARTS,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Gibson,Margaret,787,ggibson@ucsc.edu,SSD,7/1/1990,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Education
+Grieson,Ronald,808,grieson@ucsc.edu,SSD,7/1/1980,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Economics
+Heusch,Clemens,838,no email,PB&S,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Ishibashi,Chiyoko,861,chiyoko@ucsc.edu,HUM,7/1/1979,,,SEN,1620,Lecturer with SOE - Emeritus,Lecturer w/SOE Emeritus,Languages
+Freeman,Carol,772,freeman@ucsc.edu,HUM,7/1/1986,,,SEN,1621,Senior Lecturer with SOE - Emeritus,Senior Lecturer w/SOE Emer,Writing Program
+Gliessman,Stephen,794,gliess@ucsc.edu,SSD,11/1/1980,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Environmental Studies
+Hanson,Hardeman,822,hhanson@ucsc.edu,ARTS,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Houghton,Edward,847,houghtn@ucsc.edu,ARTS,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Music
+Jones,Burton,867,jones@ucolick.org,PB&S,9/1/1979,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,University of California Observatories
+Ellis,John,744,,HUM,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Feldman,Jerry,755,feldman@biology.ucsc.edu,PB&S,11/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Garrison,Robert,784,regarris@ucsc.edu,PB&S,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Earth & Planetary Sciences
+Goldfrank,Walter,797,wally@ucsc.edu,SSD,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Sociology
+Hay,John,829,ajh@ucsc.edu,ARTS,7/1/1988,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Art and Visual Culture
+Hunnicutt,Fred,855,fredh@ucsc.edu,ARTS,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Foster,Theodore,765,tfoster@ucsc.edu,PB&S,7/1/1977,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ocean Sciences
+Gill,James,789,jgill@earthsci.ucsc.edu,PB&S,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Earth & Planetary Sciences
+Gruhn,Isebill,811,ronnie@ucsc.edu,SSD,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Politics
+Hinegardner,Ralph,841,no email,PB&S,11/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Jansen,Virginia,864,goth@ucsc.edu,ARTS,7/1/1975,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Art and Visual Culture
+Frye,Hardy,775,hfrye@ucsc.edu,SSD,7/1/1978,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Sociology
+Goff,Lynda,795,goff@biology.ucsc.edu,PB&S,7/1/1975,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Haraway,Donna,823,haraway@ucsc.edu,HUM,7/1/1980,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Consciousness
+Hoy,David,849,hoy@ucsc.edu,HUM,7/1/1981,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Philosophy
+Kashap,Paul,871,skashap@ucsc.edu,HUM,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Philosophy
+Euben,Peter,749,euben@ucsc.edu,SSD,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Politics
+Fischer,Arthur,758,aef@ucsc.edu,PB&S,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Mathematics
+Gaspari,George,785,gdg@ucsc.edu,PB&S,7/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Goodman,David,800,hatters@ucsc.edu,SSD,7/1/1990,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Environmental Studies
+Hendricks,Margo,834,margoh@ucsc.edu,HUM,7/1/1990,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Isbister,John,860,isbister@ucsc.edu,SSD,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Economics
+Franko,Mark,770,mfranko@ucsc.edu,ARTS,7/1/1991,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Theater Arts
+Gjerde,Per,793,gjerde@ucsc.edu,SSD,7/1/1989,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Gruhn,Isebill,811,ronnie@ucsc.edu,SSD,7/1/1969,1/1/2014,,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,Politics
+Hollander,Eli,844,eli@ucsc.edu,ARTS,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Film and Digital Media
+Jones,Burton,867,jones@ucolick.org,PB&S,9/1/1979,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Dudley,Sherwood,739,sdudley@ucsc.edu,ARTS,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Music
+Faulkner,John,753,johnf@ucolick.org,PB&S,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Gaitet,Pascale,778,pascale@ucsc.edu,HUM,7/1/1986,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Goff,Robert,796,robtg@ucsc.edu,HUM,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Philosophy
+Harrington,David,826,harring@ucsc.edu,SSD,7/1/1979,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Hull,Akasha,854,akashah@ucsc.edu,HUM,7/1/1988,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Feminist Studies
+Ortiz,Leo,978,ortiz@biology.ucsc.edu,PB&S,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Kletzer,Lori,883,lkletzer@ucsc.edu,SSD,7/1/1993,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Economics
+Randolph,Richard,1009,bedouin@ucsc.edu,SSD,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Anthropology
+Levine,Bruce,905,blevine@ucsc.edu,HUM,7/1/1997,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Schleich,Thomas,1031,schleich@chemistry.ucsc.edu,PB&S,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Chemistry and Biochemistry
+Mathews,William,935,mathews@ucolick.org,PB&S,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Miller,Joseph,948,miller@ucolick.org,PB&S,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Nauenberg,Michael,966,michael@mike.ucsc.edu,PB&S,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Pepper,James,991,pepper@ucsc.edu,SSD,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Environmental Studies
+Landesman,Edward,891,elandesm@ucsc.edu,PB&S,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Mathematics
+Richards,Alan,1016,arr@ucsc.edu,SSD,7/1/1976,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Environmental Studies
+Lubeck,Paul,920,lubeck@ucsc.edu,SSD,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Sociology
+Mayer,Melanie,937,mjmayer@ucsc.edu,SSD,7/1/1972,,11/30/2013,SEN,1707,Research Professor,Research Professor,Psychology
+Moore,Casey,956,cmoore@pmc.ucsc.edu,PB&S,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Earth & Planetary Sciences
+Nelson,Jerry,969,jnelson@ucolick.org,PB&S,7/1/1994,,10/31/2013,SEN,1707,Research Professor,Research Professor,University of California Observatories
+Noller,Harry,973,harry@nuvolari.ucsc.edu,PB&S,11/1/1968,,6/30/2015,SEN,1707,Research Professor,Research Professor,"Molecular, Cell, and Developmental Biology"
+Kelley,Al,874,no email,PB&S,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Mathematics
+Poodry,Clifton,997,avcug@ucsc.edu,PB&S,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Larkin,Bruce,894,china@ucsc.edu,SSD,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Politics
+Rosenblum,Bruce,1023,brucero@ucsc.edu,PB&S,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Mackey,Nathaniel,925,mackey@ucsc.edu,HUM,7/1/1979,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+McNally,Karen,942,kmcnally@earthsci.ucsc.edu,PB&S,7/1/1981,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Earth & Planetary Sciences
+Morse,Margaret,959,morse@ucsc.edu,ARTS,7/1/1992,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Film and Digital Media
+Ortiz,Leo,978,ortiz@biology.ucsc.edu,PB&S,7/1/1973,,12/31/2014,SEN,1116,Professor - Fiscal Year - Recalled,Professor Recalled,Ecology and Evolutionary Biology
+Kliger,David,884,kliger@ucsc.edu,PB&S,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Chemistry and Biochemistry
+Rank,David,1010,drank@ucsc.edu,PB&S,10/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Linger,Daniel,910,touro@ucsc.edu,SSD,7/1/1989,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Anthropology
+Scott,Peter,1036,drip@ucsc.edu,PB&S,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Matute-Bianchi,Eugenia,936,gini@ucsc.edu,SSD,7/1/1979,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Education
+Moglen,Helene,954,moglen@ucsc.edu,HUM,7/1/1978,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Nauenberg,Michael,966,michael@mike.ucsc.edu,PB&S,7/1/1966,,1/8/2014,SEN,1707,Research Professor,Research Professor,Physics
+Pettigrew,Thomas,992,pettigr@ucsc.edu,SSD,7/1/1980,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Langdon,Glen,892,no email address,ENG,7/1/1987,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Computer Engineering
+Roos,Elaine Yokoyama,1021,eyr@ucsc.edu,ARTS,7/1/1987,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Theater Arts
+Lynch,John,922,jplynch@ucsc.edu,HUM,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+McDade,Jennie,939,jlmcdade@ucsc.edu,ARTS,7/1/1987,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Moore,Casey,956,cmoore@pmc.ucsc.edu,PB&S,7/1/1970,,7/31/2013,SEN,1707,Research Professor,Research Professor,Earth & Planetary Sciences
+Newberry,Todd,971,newberry@biology.ucsc.edu,PB&S,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Orlando,David,977,dorlando@ucsc.edu,HUM,7/1/1978,,,SEN,1620,Lecturer with SOE - Emeritus,Lecturer w/SOE Emeritus,Languages
+Kenez,Peter,876,kenez@ucsc.edu,HUM,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Pullum,Geoffrey,1004,gpullum@ling.ed.ac.uk,HUM,11/1/1981,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Linguistics
+LeBoeuf,Burney,897,LeBoeuf@ucsc.edu,PB&S,7/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Schechter,John,1028,jschech@ucsc.edu,ARTS,7/1/1986,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Music
+Martin Shaw,Carolyn,930,cmclark@ucsc.edu,SSD,11/1/1975,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Anthropology
+Miles,Gary,947,miles@ucsc.edu,HUM,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Mumma,Gordon,960,gmumma@ucsc.edu,ARTS,7/1/1975,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Music
+Pearse,John,988,pearse@biology.ucsc.edu,PB&S,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Kliger,David,884,kliger@ucsc.edu,PB&S,7/1/1971,,10/31/2013,SEN,1707,Research Professor,Research Professor,Chemistry and Biochemistry
+Ratiu,Tudor,1011,no email address,PB&S,1/1/1987,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Mathematics
+Lord,Charles,919,lord@ucsc.edu,ARTS,7/1/1989,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Film and Digital Media
+Mayer,Melanie,937,mjmayer@ucsc.edu,SSD,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Moglen,Helene,954,moglen@ucsc.edu,HUM,7/1/1978,,6/30/2014,SEN,1707,Research Professor,Research Professor,Literature
+Nelson,Jerry,969,jnelson@ucolick.org,PB&S,7/1/1994,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Noller,Harry,973,harry@nuvolari.ucsc.edu,PB&S,11/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Kaun,David,872,nuclear@ucsc.edu,SSD,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Economics
+Pettigrew,Thomas,992,pettigr@ucsc.edu,SSD,7/1/1980,,10/31/2013,SEN,1707,Research Professor,Research Professor,Psychology
+Laporte,Leo,893,laporte@ucsc.edu,PB&S,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Earth & Planetary Sciences
+Roos,Norvid,1022,nroos@ucsc.edu,ARTS,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Theater Arts
+Machotka,Pavel,924,cezanne@ucsc.edu,SSD,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+McLaughlin,Barry,941,mclaugh@ucsc.edu,SSD,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Moore,Madeline,957,marmoore@ucsc.edu,HUM,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Vogler,Thomas,1099,tavogler@ucsc.edu,HUM,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Widom,Harold,1117,widom@ucsc.edu,PB&S,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Mathematics
+Zihlman,Adrienne,1147,azihlman@ucsc.edu,SSD,7/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Anthropology
+Stegner,Page,1061,stegner@ucsc.edu,HUM,3/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Tanner,Michael,1081,tanner@cse.ucsc.edu,ENG,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Computer Science
+Warren,Michael,1107,mwarren@ucsc.edu,HUM,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Wilson,Carter,1123,georgec@ucsc.edu,SSD,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Community Studies
+Spafford,Roswell,1419,rozl@ucsc.edu,HUM,10/1/1978,,,SEN,1620,Lecturer with SOE - Emeritus,Lecturer w/SOE Emeritus,Writing Program
+Silver,Mary,1046,msilver@ucsc.edu,PB&S,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ocean Sciences
+Swanger,David,1070,dswanger@ucsc.edu,SSD,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Education
+Tharp,Roland,1083,rolandt@ucsc.edu,SSD,7/1/1990,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Education
+Traugott,Mark,1090,traugott@ucsc.edu,HUM,3/1/1976,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+White,Hayden,1115,haydenwhite@sbcglobal.net,HUM,7/1/1978,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Consciousness
+Yellin,Joel,1137,yellin@soe.ucsc.edu,PB&S,7/1/1984,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physical & Biological Sciences Division
+Soule,Michael,1058,msoule@ucsc.edu,SSD,7/1/1989,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Environmental Studies
+Taiz,Lincoln,1076,taiz@biology.ucsc.edu,PB&S,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Von der Muhll,George,1101,mozart@ucsc.edu,SSD,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Politics
+Widom,Harold,1117,widom@ucsc.edu,PB&S,7/1/1968,,6/30/2014,SEN,1707,Research Professor,Research Professor,Mathematics
+deLauretis,Teresa,1149,tdl@ucsc.edu,HUM,7/1/1985,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Consciousness
+Stoller,Nancy,1065,nancys@ucsc.edu,SSD,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Community Studies
+Terdiman,Richard,1082,dick@ucsc.edu,HUM,7/1/1987,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Wasserstrom,Richard,1108,wasser@ucsc.edu,HUM,7/1/1979,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Philosophy
+Wipke,Todd,1125,wipke@chemistry.ucsc.edu,PB&S,7/1/1975,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Chemistry and Biochemistry
+Skenazy,Paul,1052,pskenazy@ucsc.edu,HUM,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Sweet,David,1071,dgsweet@ucsc.edu,HUM,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Thomas,David,1084,dthomas@ucsc.edu,SSD,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Politics
+Urban,Michael,1095,urban47@ucsc.edu,SSD,7/1/1991,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Politics
+Widom,Harold,1117,widom@ucsc.edu,PB&S,7/1/1968,,6/30/2014,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,Mathematics
+Yung,Judy,1139,jyung1@ucsc.edu,HUM,7/1/1990,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,American Studies
+Soussloff,Catherine,1059,cmsoussl@ucsc.edu,ARTS,7/1/1987,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History of Art and Visual Culture
+Talamantes,Frank,1078,grddean@ucsc.edu,PB&S,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Wang,Howard,1104,wang@biology.ucsc.edu,PB&S,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Williamson,Stanley,1122,stanley@hydrogen.ucsc.edu,PB&S,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Chemistry and Biochemistry
+Shepherd,Robert,1412,shep@ucsc.edu,SSD,1/1/1983,,,SEN,1621,Senior Lecturer with SOE - Emeritus,Senior Lecturer w/SOE Emer,Economics
+Sharp,Buchanan,1042,bsharp@ucsc.edu,HUM,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,History
+Suckiel,Ellen,1067,suckiel@ucsc.edu,HUM,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Philosophy
+Terdiman,Richard,1082,dick@ucsc.edu,HUM,7/1/1987,,12/15/2014,SEN,1707,Research Professor,Research Professor,Literature
+Tobisch,Othmar,1088,otobisch@earthsci.ucsc.edu,PB&S,11/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Earth & Planetary Sciences
+Wellman,David,1111,wellman@ucsc.edu,SSD,7/1/1983,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Community Studies
+Woo,Deborah,1131,dwoo@ucsc.edu,SSD,7/1/1984,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Community Studies
+Solomon,Ruth,1057,ruthsol@ucsc.edu,ARTS,7/1/1971,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Theater Arts
+Sylvan,Marshall,1073,sylvan@ucsc.edu,PB&S,7/1/1965,,,SEN,1620,Lecturer with SOE - Emeritus,Lecturer w/SOE Emeritus,Mathematics
+Edgar,Robert,2612,redgar@ucsc.edu,PB&S,1/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Diaz,May,2674,mndiaz@ucsc.edu,SSD,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Anthropology
+Michaelsen,Jacob,2563,jake@ucsc.edu,SSD,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Economics
+Huskey,Harry,2584,hhuskey1@ucsc.edu,ENG,7/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Computer Science
+McClellan,Douglas,2618,douglasm@ucsc.edu,ARTS,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Zaustinsky,Julia,2568,jzaustin@ucsc.edu,ARTS,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Music
+Schlegel,Stuart,2593,schlegel@ucsc.edu,SSD,7/1/1968,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Anthropology
+Stanley,Audrey,2609,shake@ucsc.edu,ARTS,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Theater Arts
+Cota-Robles,Eugene,2653,ecotarob@ucsc.edu,PB&S,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Doyle,William,2558,doyle@biology.ucsc.edu,PB&S,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Langenheim,Jean,2575,lang@biology.ucsc.edu,PB&S,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Ecology and Evolutionary Biology
+Arndt,Sven,2613,sarndt@ucsc.edu,SSD,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Economics
+Doe,Andrew,2676,adoe@ucsc.edu,ARTS,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Theater Arts
+Rose,Jasper,2564,jasper@ucsc.edu,ARTS,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Shaw,Priscilla,2586,pshaw@ucsc.edu,HUM,7/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Marcum,John,2642,jmarcum@ucsc.edu,SSD,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Politics
+Pearl,Arthur,2464,apoilart@aol.com,SSD,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Education
+Bunnett,Joseph,2572,bunnett@chemistry.ucsc.edu,PB&S,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Chemistry and Biochemistry
+Friedland,William,2600,friedla@ucsc.edu,SSD,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Community Studies
+Weygandt,Donald,2611,weygandt@ucsc.edu,ARTS,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Niebank,Paul,2662,pniebank@ucsc.edu,SSD,7/1/1973,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Environmental Studies
+McElrath,Dennis,2562,mcelrath@ucsc.edu,SSD,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Sociology
+Greenberg,Marvin,2582,mjg@ucsc.edu,PB&S,7/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Mathematics
+Kahn,Michael,2616,no email address,SSD,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Psychology
+Farrell,Bryan,2678,farrell@ucsc.edu,SSD,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Environmental Studies
+Walker,Merle,2567,merlew@ucsc.edu,PB&S,7/1/1965,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Kraft,Robert,2589,kraft@ucolick.org,PB&S,8/1/1967,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Sands,Matthew,2606,mattsands@sbcglobal.net,PB&S,7/1/1969,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Metz,Katherine,2643,kmetz@ucsc.edu,ARTS,7/1/1972,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Schaar,John,2466,jhschaar@ucsc.edu,SSD,7/1/1970,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Politics
+Durling,Robert,2573,durling@ucsc.edu,HUM,7/1/1966,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Literature
+Musgrave,Peggy,2719,musgrave@ucsc.edu,SSD,7/1/1979,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Economics
+Lewis,Diane Chaney,2685,dklewis@ucsc.edu,SSD,7/1/1974,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Anthropology
+Wells,C. Gordon,3113,gwells@ucsc.edu,SSD,7/1/2000,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Education
+O'Connor,James,2707,jaroconn@ucsc.edu,SSD,7/1/1977,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Sociology
+Miller,Robert,4081,rcmiller@ucsc.edu,PB&S,7/1/2001,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Herbig,George,2743,gherbig@ucsc.edu,PB&S,7/1/1984,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Astronomy and Astrophysics
+Wynne,Shirley,2700,swynne@ucsc.edu,ARTS,7/1/1975,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Theater Arts
+Deamer,David,3383,deamer@hydrogen.ucsc.edu,PB&S,7/1/1994,,6/30/2014,SEN,1707,Research Professor,Research Professor,Biomolecular Engineering
+Sinsheimer,Robert,2708,sinsheim@ucsc.edu,PB&S,9/1/1977,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Moldave,Kivie,2746,kmoldave@ucsc.edu,PB&S,9/1/1984,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,"Molecular, Cell, and Developmental Biology"
+Zajac,Jack,2701,jzajac@ucsc.edu,ARTS,7/1/1975,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Art
+Martinez,Alma,3717,almamar@ucsc.edu,ARTS,7/1/2001,,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Theater Arts
+DuBois,Rebecca,10796,rmdubois@ucsc.edu,ENG,7/1/2013,7/1/2013,6/30/2015,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Biomolecular Engineering
+Switkes,Eugene,1072,switkes@chemistry.ucsc.edu,PB&S,7/1/1971,7/1/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Chemistry and Biochemistry
+Seiden,Abraham,1038,abs@scipp.ucsc.edu,PB&S,7/1/1978,7/1/2013,,SEN,1132,Professor Emeritus (W/O Salary),Professor Emeritus,Physics
+Epstein,Barbara,746,bepstein@ucsc.edu,HUM,7/1/1974,8/1/2013,6/30/2016,SEN,1707,Research Professor,Research Professor,History of Consciousness
+Jordan,John,869,picasso@ucsc.edu,HUM,7/1/1968,8/1/2013,6/30/2016,SEN,1707,Research Professor,Research Professor,Literature
+Hedrick,Charles,831,hedrick@ucsc.edu,HUM,7/1/1990,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History
+Ravelo,Christina,1012,acr@ucsc.edu,PB&S,4/1/1992,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Ocean Sciences
+Dean,Carolyn,722,csdean@ucsc.edu,ARTS,7/1/1991,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,History of Art and Visual Culture
+Yanik,Ahmet,10789,,ENG,10/1/2013,10/1/2013,6/30/2015,"LR, SEN",1345,Assistant Professor - Academic Year - 1/9 - Bus/Eng,Assistant Professor,Electrical Engineering
+Edmunds,Kate,5192,kmedmund@ucsc.edu,ARTS,7/1/2004,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Theater Arts
+Hollander,Eli,844,eli@ucsc.edu,ARTS,7/1/1974,1/1/2014,6/30/2014,SEN,1109,Professor - Academic Year - Recalled - 1/9,Professor Recalled,Film and Digital Media
+Leanos,John Jota,8613,jleanos@ucsc.edu,ARTS,7/1/2009,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Film and Digital Media
+Milutinovic,Dejan,8368,dejan@soe.ucsc.edu,ENG,7/1/2009,7/1/2013,6/30/2014,"LR, SEN",1343,Assistant Professor - Academic Year - Bus/Eng,Assistant Professor,Applied Mathematics and Statistics
+Neuman,Dard,5157,dneuman@ucsc.edu,ARTS,7/1/2004,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Music
+Hourigan,Jeremy,6278,hourigan@ucsc.edu,PB&S,1/1/2006,7/1/2013,6/30/2014,"LR, SEN",1300,Assistant Professor - Academic Year,Assistant Professor,Earth & Planetary Sciences
+Bowman,Barry,654,bowman@biology.ucsc.edu,PB&S,7/1/1979,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,"Molecular, Cell, and Developmental Biology"
+Brown,George,663,gsbrown@ucsc.edu,PB&S,7/1/1990,7/1/2013,6/30/2014,SEN,1106,Professor - Academic Year - Recalled,Professor Recalled,Physics
+Seiden,Abraham,1038,abs@scipp.ucsc.edu,PB&S,7/1/1978,8/1/2013,6/30/2017,SEN,1707,Research Professor,Research Professor,Physics
+Schonbek,Maria,1033,schonbek@ucsc.edu,PB&S,7/1/1986,8/1/2013,6/30/2016,SEN,1707,Research Professor,Research Professor,Mathematics
+Bruland,Kenneth,667,bruland@ucsc.edu,PB&S,7/1/1975,8/1/2013,6/30/2015,SEN,1707,Research Professor,Research Professor,Ocean Sciences
+Schmidt,Holger,3806,hschmidt@soe.ucsc.edu,ENG,7/1/2001,7/1/2013,,"LR, SEN",1143,Professor - Academic Year - Bus/Eng,Professor,Electrical Engineering
+Vazquez,Gustavo,1907,gvazquez@ucsc.edu,ARTS,1/1/1994,7/1/2013,,"LR, SEN",1100,Professor - Academic Year,Professor,Film and Digital Media
